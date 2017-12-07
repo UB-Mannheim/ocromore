@@ -61,7 +61,7 @@ def compare_coordinates(coordinates1, coordinates2):
     (x2_start, y2_start, x2_end, y2_end) = coordinates2
 
     if MODE == "ENDPOINT_TRESHOLD":
-        TRESHOLD_VALUE = 10
+        TRESHOLD_VALUE = 14
         y_start_diff = abs(y1_start - y2_start)
         y_end_diff = abs(y1_end - y2_end)
         if (y_start_diff < TRESHOLD_VALUE and y_end_diff < TRESHOLD_VALUE):
@@ -88,10 +88,67 @@ def compare_ocr_strings_cwise(ocr_string1,ocr_string2, ignore_case = False):
 
     final_string = ocr_string1
     for char in ocr_string2:
-        if final_string.find(char) >= 0:
-            final_string = final_string.replace(char, '')
+        foundindex = final_string.find(char)
+        if foundindex >= 0:
+            # final_string_old = final_string.replace(char, ' ') #erroronous replaces all strings
+            final_string = final_string.replace(char, ' ', 1)
 
     return final_string
+
+def linify_list(ocr_list):
+    """
+    Writes all elements which are in one line to the same line to the same list entry
+    :param ocr_list:
+    :return:
+    """
+    final_list = []
+
+    for base_line in ocr_list:
+        if not hasattr(base_line,'marked'):
+            base_line.marked = False
+        if not base_line.marked:
+            bl_coordinates = base_line.coordinates
+            list_for_baseline =[] # each baseline gets a list
+            list_for_baseline.append(base_line)
+            for comparison_line in ocr_list:
+                if base_line is comparison_line:
+                    # prevent same lines in array
+                    continue
+
+                cl_coordinates = comparison_line.coordinates
+
+                match = compare_coordinates(bl_coordinates,cl_coordinates)
+                if match:
+                    # line which already has been matched to a cluster can't be baseline anymore
+                    comparison_line.marked = True
+                    list_for_baseline.append(comparison_line)
+            final_list.append(list_for_baseline)
+
+    return final_list
+
+
+def unify_list_entries(ocr_listlist, mode="OCROPUS"):
+    final_list =[]
+    for entry in ocr_listlist:
+        if len(entry)==1:
+            final_list.append(entry[0])
+        else:
+            text_accu=""
+            for line in entry:
+                if mode is "OCROPUS":
+                    text_accu = text_accu +" "+ line._hocr_html.contents[0]
+                else:
+                    text_accu = text_accu +" "+ line.ocr_text
+
+            # refactor the first element with accumulated text
+            if mode is "OCROPUS":
+                entry[0]._hocr_html.contents[0] = text_accu
+            else:
+                entry[0].ocr_text = text_accu
+
+            final_list.append(entry[0])
+
+    return final_list
 
 
 def compare_lists(ocro_list,tess_list):
@@ -107,23 +164,29 @@ def compare_lists(ocro_list,tess_list):
             if cmpr_result:
                 """Extract and subtract text from boxes"""
                 tess_line_text = tess_line.ocr_text
-                print("Tesseract Box: \t", tess_line_text)
+                print("Tesseract Box:         ", tess_line_text)
                 ocro_line_text = ocro_line._hocr_html.contents[0]
-                print("Ocropus Box  : \t", ocro_line_text)
-
+                print("Ocropus Box  :         ", ocro_line_text)
+                if tess_line_text.find("Will")>=0:
+                    dothat = 1
                 result1 = compare_ocr_strings_cwise(tess_line_text, ocro_line_text)
-                print("tesseract-ocropus: \t", result1)
+                print("tesseract-ocropus:     ", result1)
                 result2 = compare_ocr_strings_cwise(ocro_line_text,tess_line_text)
-                print("ocropus-tesseract: \t", result2)
+                print("ocropus-tesseract:     ", result2)
                 result3 = compare_ocr_strings_cwise(tess_line_text, ocro_line_text, True)
-                print("tesseract-ocropus (ic): \t", result3)
+                print("tesseract-ocropus (ic):", result3)
                 result4 = compare_ocr_strings_cwise(ocro_line_text, tess_line_text, True)
-                print("ocropus-tesseract (ic): \t", result4)
+                print("ocropus-tesseract (ic):", result4)
                 print("--------")
                 break
 
 
 
 
+ocrolistlist_linified = linify_list(ocrolist)
+ocrolist_linified = unify_list_entries(ocrolistlist_linified)
 
+print("NON UNIFIED OCROLIST---------------")
 compare_lists(ocrolist,tesslist)
+print("UNIFIED OCROLIST---------------")
+compare_lists(ocrolist_linified,tesslist)
