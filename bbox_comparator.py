@@ -5,8 +5,7 @@
 
 import os
 from hocr_parser.parser import HOCRDocument,Line,Paragraph
-from bs4 import Tag
-from bs4 import BeautifulSoup
+import difflib
 
 def get_ocropus_boxes(filename):
     """
@@ -95,6 +94,42 @@ def compare_ocr_strings_cwise(ocr_string1,ocr_string2, ignore_case = False):
 
     return final_string
 
+
+def compare_ocr_strings_difflib_seqmatch(ocr_string1, ocr_string2):
+    """
+    difflib sequence matching is based on Ratcliff and Obershelp algorithm
+    longest contiguous matching subsequence that contains no “junk” elements
+
+    :param ocr_string1:
+    :param ocr_string2:
+    :return:
+    """
+    sqmatch = difflib.SequenceMatcher(None,ocr_string1,ocr_string2,True)
+
+    matching_blocks = sqmatch.get_matching_blocks()
+    for idx, block in enumerate(matching_blocks):
+        (str1_starti, str2_starti, match_length) = block
+
+        str1_substr = ocr_string1[str1_starti:str1_starti+match_length]
+        str2_substr = ocr_string2[str2_starti:str2_starti+match_length]
+
+        print("Block ",str(idx).zfill(4),"str1 match: ",str1_substr)
+        print("Block ",str(idx).zfill(4),"str2 match: ",str2_substr)
+
+    # similarity of sequences info
+    ratio = sqmatch.ratio()
+    print("Similarity ratio is ",ratio)
+
+    # find longest match in a subsequence of strings
+    longest_match = sqmatch.find_longest_match(0,10,5,10)
+
+    # operations how to turn ocrstr1 into ocrstr2
+    opcodes = sqmatch.get_opcodes()
+    opcodes_grouped = sqmatch.get_grouped_opcodes(3)
+
+
+    yes
+
 def linify_list(ocr_list):
     """
     Writes all elements which are in one line to the same line to the same list entry
@@ -167,8 +202,6 @@ def compare_lists(ocro_list,tess_list):
                 print("Tesseract Box:         ", tess_line_text)
                 ocro_line_text = ocro_line._hocr_html.contents[0]
                 print("Ocropus Box  :         ", ocro_line_text)
-                if tess_line_text.find("Will")>=0:
-                    dothat = 1
                 result1 = compare_ocr_strings_cwise(tess_line_text, ocro_line_text)
                 print("tesseract-ocropus:     ", result1)
                 result2 = compare_ocr_strings_cwise(ocro_line_text,tess_line_text)
@@ -177,6 +210,8 @@ def compare_lists(ocro_list,tess_list):
                 print("tesseract-ocropus (ic):", result3)
                 result4 = compare_ocr_strings_cwise(ocro_line_text, tess_line_text, True)
                 print("ocropus-tesseract (ic):", result4)
+                result5 = compare_ocr_strings_difflib_seqmatch(ocro_line_text, tess_line_text)
+                print("difflib seqmatch result:", result5)
                 print("--------")
                 break
 
