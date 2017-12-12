@@ -8,7 +8,7 @@
             "stopOnEntry": false,
             "pythonPath": "/usr/bin/python3.6",
             
-            "program": "${workspaceRoot}/tesserocr_check.py",
+            "program": "${workspaceRoot}/ocropy_check.py",
             "cwd": "${workspaceRoot}",
             "env": {},
             "envFile": "${workspaceRoot}/.env",
