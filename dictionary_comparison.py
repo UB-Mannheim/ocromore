@@ -34,4 +34,3 @@ def get_closest_match(text):
     return sorted_list[0]
 
 closest_match = get_closest_match("he11o")
-p
