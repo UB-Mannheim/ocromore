@@ -324,15 +324,233 @@ def compare_lists(ocro_list, tess_list, abbyy_list):
 
 
 
-ocrolistlist_linified = linify_list(ocrolist)
-ocrolist_linified = unify_list_entries(ocrolistlist_linified)
 
-print("NON UNIFIED OCROLIST---------------")
+
+
+
+def normalize_ocropus_list(ocropus_list):
+    """
+    Do the normalize
+    :param ocropus_list:
+    :return:
+    """
+    ocrolistlist_linified = linify_list(ocropus_list)
+    ocrolist_linified = unify_list_entries(ocrolistlist_linified)
+
+    return_list = []
+    # normalize ocr_text property
+    for line in ocrolist_linified:
+        text_to_add = line._hocr_html.contents[0]
+        # todo find a way to assign ocr_text property correctly here
+        line.ocr_text_ocropus = text_to_add
+        return_list.append(line)
+
+    return return_list
+
+
+ocrolist_normalized = normalize_ocropus_list(ocrolist)
+# print("NON UNIFIED OCROLIST---------------")
 # compare_lists(ocrolist,tesslist)
 print("UNIFIED OCROLIST---------------")
-print("ocrolist_unified.length: ", len(ocrolist_linified))
+print("ocrolist_unified.length: ", len(ocrolist_normalized))
 print("tesslist.length: ", len(tesslist))
 print("abbyylist.length: ", len(abbylist))
 
-compare_lists(ocrolist_linified, tesslist, abbylist)
+# compare_lists(ocrolist_linified, tesslist, abbylist)
 
+base_ocr_lists = []
+base_ocr_lists.append(ocrolist_normalized)
+base_ocr_lists.append(tesslist)
+base_ocr_lists.append(abbylist)
+
+class Marker:
+
+    @staticmethod
+    def is_not_marked(element):
+        """
+        This changes element property marked
+
+        If a given element hasn't got marked property - add marked=False and return false
+        If a given element has marked property, but marked=False return False
+        If a given element has marked property and marked=True return True
+
+        :param element: element to check upon
+        :return: see description
+        """
+
+        if not hasattr(element, 'marked'):
+            element.marked = False
+
+        if element.marked is True or element.marked is False:
+            return not element.marked
+        else:
+            raise Exception("THIS SHOULDN'T HAPPEN!")
+            return False
+
+    @staticmethod
+    def mark_element(element):
+        """
+        Set property marked in element to True
+        :param element: element to mark
+        :return:
+        """
+        element.marked = True
+
+
+class OCRset:
+    """
+        A storage class for a y_mean value
+        and a set of lines which was assigned to each other
+        If the lineset values where not edited, they are intialized with 'False
+    """
+    def __init__(self, lines_size, y_mean):
+        lineset = []
+        for x in range(0, lines_size):
+            lineset.append(False)
+
+        self._set_lines = lineset
+        self._size = lines_size
+        self._y_mean = y_mean
+
+    def edit_line_set_value(self,set_index,new_value):
+        self._set_lines[set_index] = new_value
+
+    @property
+    def size(self):
+        return self._size
+
+    @size.setter
+    def size(self, value):
+        self._size= value
+
+    @property
+    def y_mean(self):
+        return self._y_mean
+
+    @y_mean.setter
+    def y_mean(self, value):
+        self.y_mean = value
+
+    def calculate_y_mean(self):
+        """
+        Goes through set elements and calculates y_mean for y_start and y_stop values
+        :return:
+        """
+
+        acc_counter = 0
+        y_start_final = 0
+        y_stop_final = 0
+
+        for line in self._set_lines:
+            # don't count undefined values for means
+            if line is False or line is None:
+                continue
+            # accumulate y-values
+            (x_start, y_start, x_stop, y_stop) = line.coordinates
+            y_start_final = y_start_final + y_start
+            y_stop_final = y_stop_final + y_stop
+            # add number of accumulation count
+            acc_counter = acc_counter +1
+
+        y_start_mean = y_start_final/acc_counter
+        y_stop_mean = y_stop_final/acc_counter
+        y_mean = (y_start_mean + y_stop_mean) / 2
+
+        self._y_mean = round(y_mean)
+
+
+
+    def is_full(self):
+        """
+        Checks if all lines are defined in the lineset
+        :return: True or False
+        """
+        for line in self._set_lines:
+            if line is False:
+                return False
+
+        return True
+
+    def print_me(self, diff_only=False):
+
+        lineset_acc=""
+        one_line_is_false = False
+
+        for line in self._set_lines:
+            try:
+                if line is False:
+                    one_line_is_false = True
+                    lineset_acc = lineset_acc+str(line)+"||"
+                elif hasattr(line,'ocr_text_ocropus'):
+                    lineset_acc = lineset_acc+line.ocr_text_ocropus+"||"
+                else:
+                    lineset_acc = lineset_acc+line.ocr_text+"||"
+            except:
+                print("yeah it's ")
+
+        if diff_only is True:
+            if one_line_is_false is True:
+                print(str(self.y_mean) + "||" + lineset_acc)
+        else:
+            print(str(self.y_mean)+"||"+lineset_acc)
+
+
+
+
+class OCRcomparison:
+    """
+        Storage class for multiple Ocr_Sets
+    """
+
+    def __init__(self):
+        self.ocr_sets = []
+
+    def add_set(self,set_to_add):
+        self.ocr_sets.append(set_to_add)
+
+    def print_sets(self, diff_only= False):
+        for current_set in self.ocr_sets:
+            current_set.print_me(diff_only)
+
+
+def get_matches_in_other_lists(my_list_index, my_ocr_lists, line_element):
+
+    my_current_set = OCRset(len(my_ocr_lists),None)
+    my_current_set.edit_line_set_value(my_list_index,line_element)
+
+    # this is the search loop which finds matches in each list
+    for list_index, ocr_list in enumerate(my_ocr_lists):
+        if list_index is my_list_index:
+            # don't compare the same list
+            continue
+
+        for line_element_compare in ocr_list:
+            if Marker.is_not_marked(line_element_compare):
+                cmpr_result = compare_coordinates(line_element.coordinates, line_element_compare.coordinates)
+                if cmpr_result is True:
+                    Marker.mark_element(line_element_compare)
+                    my_current_set.edit_line_set_value(list_index, line_element_compare)
+                    if my_current_set.is_full():
+                        break
+
+    Marker.mark_element(line_element)
+    my_current_set.calculate_y_mean()
+    return my_current_set
+
+
+def compare_lists_new(ocr_lists):
+
+    return_comparison = OCRcomparison()
+
+    # this is the big loop which goes trough every element
+    for list_index, ocr_list in enumerate(ocr_lists):
+        for line_element in ocr_list:
+            if Marker.is_not_marked(line_element):
+                set_created = get_matches_in_other_lists(list_index, ocr_lists, line_element)
+                return_comparison.add_set(set_created)
+
+    return return_comparison
+
+
+ocr_comparison = compare_lists_new(base_ocr_lists)
+ocr_comparison.print_sets(True)
