@@ -4,7 +4,7 @@
 """
 
 import os
-from hocr_parser.parser import HOCRDocument,Line,Paragraph
+from hocr_parser.parser import HOCRDocument,Line,Paragraph,Area
 import difflib
 
 def get_ocropus_boxes(filename):
@@ -30,7 +30,7 @@ def get_ocropus_boxes(filename):
     return return_list
 
 
-ocrolist = get_ocropus_boxes("oneprof_ocropus.html")
+ocrolist = get_ocropus_boxes("Testfiles/oneprof_ocropus.html")
 
 
 def get_tesseract_boxes(filename):
@@ -49,8 +49,44 @@ def get_tesseract_boxes(filename):
 
     return return_list
 
+def get_abbyy_boxes(filename):
+    dir_path = os.path.dirname(os.path.abspath(__file__))
+    full_path = os.path.join(dir_path, filename)
+    document = HOCRDocument(full_path, is_path=True)
+    # page = document.pages[0]
+    return_list = []
+    page = document.pages[0]
 
-tesslist = get_tesseract_boxes("oneprof_tesseract.html")
+    html = page._hocr_html
+    contents = html.contents
+    return_list = []
+    for element in contents:
+        res = str(element).find("ocr_line")
+        if res>=1:
+            # in abbyy-hocr sometimes the lines are packed in ocr_careas and sometimes not
+            # this reads all the lines in correct order
+            if element.attrs['class'][0]=='ocr_carea':
+                new_area = Area(None, element)
+                for par in new_area.paragraphs:
+                    for line in par.lines:
+                        return_list.append(line)
+
+
+            elif element.attrs['class'][0]=='ocr_par':
+                par = Paragraph(None,element)
+                for line in par.lines:
+                    return_list.append(line)
+
+            else:
+                raise Exception('THIS SHOULDNT HAPPEN!')
+
+
+
+    return return_list
+
+tesslist = get_tesseract_boxes("Testfiles/oneprof_tesseract.html")
+abbylist = get_abbyy_boxes("Testfiles/oneprof_abbyy.hocr.html")
+
 
 
 def compare_coordinates(coordinates1, coordinates2):
@@ -128,7 +164,37 @@ def compare_ocr_strings_difflib_seqmatch(ocr_string1, ocr_string2):
     opcodes_grouped = sqmatch.get_grouped_opcodes(3)
 
 
-    yes
+def compare_ocr_strings_difflib_difftool(ocr_string1, ocr_string2):
+    print("compare ocr strings ")
+    differ = difflib.Differ(None,None)
+    cres = differ.compare(ocr_string1,ocr_string2)
+    listres = list(cres)
+
+    print("differ results ")
+    for element in listres:
+        ctrl_char = element[0:1]
+        string = element[1::]
+        print("Control char: ",ctrl_char," text: ",string)
+
+    """
+        Codes in differ result
+        '- ' 	line unique to sequence 1
+        '+ ' 	line unique to sequence 2
+        '  ' 	line common to both sequences
+        '? ' 	line not present in either input sequence
+    """
+
+
+    # Alternative ndiff
+    print("ndiff results ")
+    ndiff = difflib.ndiff(ocr_string1,ocr_string2)
+    ndiflist = list(ndiff)
+
+    for element in ndiflist:
+        ctrl_char = element[0:1]
+        string = element[1::]
+        print("Control char: ", ctrl_char, " text: ", string)
+
 
 def linify_list(ocr_list):
     """
@@ -186,35 +252,75 @@ def unify_list_entries(ocr_listlist, mode="OCROPUS"):
     return final_list
 
 
-def compare_lists(ocro_list,tess_list):
+def compare_lists(ocro_list, tess_list, abbyy_list):
 
     Y_TRESH=10
+    TESSERACT_COMPARE=False
+    ABBY_COMPARE=True
 
     for ocro_line in ocro_list:
         #search correspondence
         ocro_coordinates = ocro_line.coordinates
-        for tess_line in tess_list:
-            tess_coordinates = tess_line.coordinates
-            cmpr_result = compare_coordinates(ocro_coordinates,tess_coordinates)
-            if cmpr_result:
-                """Extract and subtract text from boxes"""
-                tess_line_text = tess_line.ocr_text
-                print("Tesseract Box:         ", tess_line_text)
-                ocro_line_text = ocro_line._hocr_html.contents[0]
-                print("Ocropus Box  :         ", ocro_line_text)
-                result1 = compare_ocr_strings_cwise(tess_line_text, ocro_line_text)
-                print("tesseract-ocropus:     ", result1)
-                result2 = compare_ocr_strings_cwise(ocro_line_text,tess_line_text)
-                print("ocropus-tesseract:     ", result2)
-                result3 = compare_ocr_strings_cwise(tess_line_text, ocro_line_text, True)
-                print("tesseract-ocropus (ic):", result3)
-                result4 = compare_ocr_strings_cwise(ocro_line_text, tess_line_text, True)
-                print("ocropus-tesseract (ic):", result4)
-                result5 = compare_ocr_strings_difflib_seqmatch(ocro_line_text, tess_line_text)
-                print("difflib seqmatch result:", result5)
-                print("--------")
-                break
+        if TESSERACT_COMPARE:
+            for tess_line in tess_list:
+                tess_coordinates = tess_line.coordinates
+                cmpr_result = compare_coordinates(ocro_coordinates,tess_coordinates)
+                if cmpr_result:
+                    """Extract and subtract text from boxes"""
+                    tess_line_text = tess_line.ocr_text
+                    print("Tesseract Box:         ", tess_line_text)
+                    ocro_line_text = ocro_line._hocr_html.contents[0]
+                    print("Ocropus Box  :         ", ocro_line_text)
+                    result1 = compare_ocr_strings_cwise(tess_line_text, ocro_line_text)
+                    print("tesseract-ocropus:     ", result1)
+                    result2 = compare_ocr_strings_cwise(ocro_line_text,tess_line_text)
+                    print("ocropus-tesseract:     ", result2)
+                    result3 = compare_ocr_strings_cwise(tess_line_text, ocro_line_text, True)
+                    print("tesseract-ocropus (ic):", result3)
+                    result4 = compare_ocr_strings_cwise(ocro_line_text, tess_line_text, True)
+                    print("ocropus-tesseract (ic):", result4)
 
+                    # this just logs blocks
+
+
+
+                   # compare_ocr_strings_difflib_seqmatch(ocro_line_text, tess_line_text)
+
+
+                    result5 = compare_ocr_strings_difflib_difftool(ocro_line_text, tess_line_text)
+
+                    print("--------")
+                    break
+        if ABBY_COMPARE:
+            for abby_line in abbyy_list:
+                abbyy_coordinates = abby_line.coordinates
+                cmpr_result = compare_coordinates(ocro_coordinates,abbyy_coordinates)
+                if cmpr_result:
+                    """Extract and subtract text from boxes"""
+                    abbyy_line_text = abby_line.ocr_text
+                    print("Abbyy Box:         ", abbyy_line_text)
+                    ocro_line_text = ocro_line._hocr_html.contents[0]
+                    print("Ocropus Box  :         ", ocro_line_text)
+                    result1 = compare_ocr_strings_cwise(abbyy_line_text, ocro_line_text)
+                    print("abbyy-ocropus:     ", result1)
+                    result2 = compare_ocr_strings_cwise(ocro_line_text,abbyy_line_text)
+                    print("ocropus-abby:     ", result2)
+                    result3 = compare_ocr_strings_cwise(abbyy_line_text, ocro_line_text, True)
+                    print("abbyy-ocropus (ic):", result3)
+                    result4 = compare_ocr_strings_cwise(ocro_line_text, abbyy_line_text, True)
+                    print("ocropus-abbyy (ic):", result4)
+
+                    # this just logs blocks
+
+
+
+                   # compare_ocr_strings_difflib_seqmatch(ocro_line_text, tess_line_text)
+
+
+                   # result5 = compare_ocr_strings_difflib_difftool(ocro_line_text, abbyy_line_text)
+
+                    print("--------")
+                    break
 
 
 
@@ -222,6 +328,11 @@ ocrolistlist_linified = linify_list(ocrolist)
 ocrolist_linified = unify_list_entries(ocrolistlist_linified)
 
 print("NON UNIFIED OCROLIST---------------")
-compare_lists(ocrolist,tesslist)
+# compare_lists(ocrolist,tesslist)
 print("UNIFIED OCROLIST---------------")
-compare_lists(ocrolist_linified,tesslist)
+print("ocrolist_unified.length: ", len(ocrolist_linified))
+print("tesslist.length: ", len(tesslist))
+print("abbyylist.length: ", len(abbylist))
+
+compare_lists(ocrolist_linified, tesslist, abbylist)
+
