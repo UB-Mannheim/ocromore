@@ -29,7 +29,6 @@ def get_closest_match(text):
         return sec
 
 
-    sorted_list = sorted(final_list, key=take_second, reverse=True)
     #return first element
     return sorted_list[0]
 
