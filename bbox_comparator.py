@@ -4,7 +4,10 @@
 """
 
 import os
-from hocr_parser.parser import HOCRDocument,Line,Paragraph,Area
+# from hocr_parser.parser import HOCRDocument,Line,Paragraph,Area
+from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
+
+
 import difflib
 
 def get_ocropus_boxes(filename):
@@ -23,7 +26,7 @@ def get_ocropus_boxes(filename):
     return_list = []
     for element in contents:
         res = str(element).find("span")
-        if res>=1:
+        if res >= 1:
             liner = Line(document,element)
             return_list.append(liner)
 
@@ -478,21 +481,56 @@ class OCRset:
 
         for line in self._set_lines:
             try:
-                if line is False:
+                ocr_text = self.get_line_content(line)
+                if ocr_text is False:
                     one_line_is_false = True
-                    lineset_acc = lineset_acc+str(line)+"||"
-                elif hasattr(line,'ocr_text_ocropus'):
-                    lineset_acc = lineset_acc+line.ocr_text_ocropus+"||"
+                    lineset_acc = lineset_acc+str(ocr_text)+"||"
                 else:
-                    lineset_acc = lineset_acc+line.ocr_text+"||"
+                    lineset_acc = lineset_acc+ocr_text+"||"
+
             except:
-                print("yeah it's ")
+                print("problem creating printable lineset ")
 
         if diff_only is True:
             if one_line_is_false is True:
                 print(str(self.y_mean) + "||" + lineset_acc)
         else:
             print(str(self.y_mean)+"||"+lineset_acc)
+
+    def calculate_best_of_set(self):
+        for line_index, line in enumerate(self._set_lines):
+            self.compare_with_other_lines(line_index,line)
+
+
+    def compare_with_other_lines(self,line_index,line):
+        ocr_text = self.get_line_content(line)
+
+        for line_index_cmp, line_cmp in enumerate(self._set_lines):
+            # todo add condition, if the line was not already compared
+
+            if line_index is line_index_cmp:
+                continue
+            ocr_text_cmp = self.get_line_content(line_cmp)
+            distance = self.get_distance(ocr_text, ocr_text_cmp)
+
+    def get_distance(self,text1,text2):
+        compare_ocr_strings_difflib_difftool()
+
+    def get_line_content(self,line):
+        """
+        Helper method to get line content, because ocropus content
+        has other access properties.
+        :param line: line element to check upn
+        :return: string with line content, or 'False if line isn't defined.
+        """
+
+        if line is False:
+            return False
+        elif hasattr(line, 'ocr_text_ocropus'):
+            return line.ocr_text_ocropus
+        else:
+            return line.ocr_text
+
 
 
 
@@ -523,6 +561,10 @@ class OCRcomparison:
     def print_sets(self, diff_only= False):
         for current_set in self.ocr_sets:
             current_set.print_me(diff_only)
+
+    def do_best_of_three_keying(self):
+        for current_set in self.ocr_sets:
+            current_set.calculate_best_of_three()
 
 
 def get_matches_in_other_lists(my_list_index, my_ocr_lists, line_element):
@@ -566,4 +608,8 @@ def compare_lists_new(ocr_lists):
 
 ocr_comparison = compare_lists_new(base_ocr_lists)
 ocr_comparison.sort_set()
-ocr_comparison.print_sets(False)
+ocr_comparison.print_sets(True)
+
+# todo implement best of 3/N
+# todo implement proper error rating against ground-truth
+# todo implement difference matching
