@@ -6,9 +6,10 @@
 import os
 # from hocr_parser.parser import HOCRDocument,Line,Paragraph,Area
 from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
-
+from text_comparator import TextComparator
 
 import difflib
+import operator # for sorting dicts
 
 def get_ocropus_boxes(filename):
     """
@@ -399,6 +400,91 @@ class Marker:
         """
         element.marked = True
 
+    @staticmethod
+    def mark_element_custom_tag(element,tag):
+        element[tag] = True
+
+    @staticmethod
+    def is_element_marked_with_custom_tag(element,tag):
+        if not hasattr(element, tag):
+            return False
+
+        if element[tag] is True or element[tag] is False:
+            return element[tag]
+        else:
+            raise Exception("THIS SHOULDN'T HAPPEN!")
+            return False
+
+class DistanceStorage():
+    def __init__(self):
+
+        self.key_val_dict = {}
+        self.accumulated_dists_dict = {}
+        self.shortest_distance_index = -1
+
+    def store_value(self, setindex1, setindex2, value):
+        key_tuple = self.order_input_keys(setindex1, setindex2)
+        self.key_val_dict[key_tuple] = value
+
+    def fetch_value(self, setindex1, setindex2):
+
+        key_tuple = self.order_input_keys(setindex1, setindex2)
+
+        if key_tuple not in self.key_val_dict:
+            return None
+
+        return self.key_val_dict[key_tuple]
+
+    def order_input_keys(self,key1,key2):
+        """
+        Orders keys in ascending order and returns corrected tuples
+        :param key1: number based key
+        :param key2: number based key
+        :return: tuple corrected
+        """
+
+        if key1>key2:
+            return (key2, key1)
+        elif key1 < key2:
+            return (key1, key2)
+        else:
+            return (key1, key2)
+
+    def clear_storage(self):
+        self.key_val_dict = {}
+
+    def calculate_accumulated_distance(self, setindex):
+        """
+        For a certain set index, calculate a accumulated distance to all other elements,
+        then store the distance, distances to items which are not defined (negative distance value)
+        are not counted in for accumulated distance.
+
+        :param setindex: number value of index
+        :return:
+        """
+        acc_dist = 0
+
+        for indextuple in self.key_val_dict:
+            if setindex in indextuple:
+                distance_value = self.key_val_dict[indextuple]
+                if distance_value >= 0:
+                    acc_dist = acc_dist + distance_value
+
+        self.accumulated_dists_dict[setindex] = acc_dist
+
+        return setindex
+
+    def calculate_shortest_distance_index(self):
+
+        sorted_dict = sorted(self.accumulated_dists_dict.items(), key = operator.itemgetter(1))
+        shortest_index = sorted_dict[0][0]
+        self.shortest_distance_index = shortest_index
+
+    def get_shortest_distance_index(self):
+        return self.shortest_distance_index
+
+
+
 
 class OCRset:
     """
@@ -406,6 +492,8 @@ class OCRset:
         and a set of lines which was assigned to each other
         If the lineset values where not edited, they are intialized with 'False
     """
+    N_DISTANCE_SHORTEST_TAG = "n_distance_shortest"
+
     def __init__(self, lines_size, y_mean):
         lineset = []
         for x in range(0, lines_size):
@@ -414,6 +502,8 @@ class OCRset:
         self._set_lines = lineset
         self._size = lines_size
         self._y_mean = y_mean
+        self.d_storage = DistanceStorage()
+        self.shortest_distance_line_index = -1
 
     def edit_line_set_value(self,set_index,new_value):
         self._set_lines[set_index] = new_value
@@ -491,30 +581,77 @@ class OCRset:
             except:
                 print("problem creating printable lineset ")
 
+        lineset_acc = lineset_acc + "||"
+
         if diff_only is True:
             if one_line_is_false is True:
-                print(str(self.y_mean) + "||" + lineset_acc)
+                print(str(self.y_mean) + "||"+str(self.shortest_distance_line_index)+"||" + lineset_acc)
         else:
-            print(str(self.y_mean)+"||"+lineset_acc)
+            print(str(self.y_mean)+"||"+str(self.shortest_distance_line_index)+"||"+lineset_acc)
 
-    def calculate_best_of_set(self):
+
+
+    def calculate_n_distance_keying(self):
+
+        # do a line-wise comparison, which calculates a distance between all lines in this set
         for line_index, line in enumerate(self._set_lines):
             self.compare_with_other_lines(line_index,line)
 
+        # calculate the distance from each item in set to all others
+        for line_index, line in enumerate(self._set_lines):
+            self.d_storage.calculate_accumulated_distance(line_index)
+
+        # get the index of the item in set, which has the shortest distance to all others
+        self.d_storage.calculate_shortest_distance_index()
+
+        # save the result
+        shortest_dist_index = self.d_storage.get_shortest_distance_index()
+        self.shortest_distance_line_index = shortest_dist_index
+
+        print("Finished storage is: ", self.d_storage)
+
+    def get_shortest_n_distance_line(self):
+        if self.shortest_distance_line_index >= 0:
+            line = self._set_lines[self.shortest_distance_line_index]
+            line_text = self.get_line_content(line)
+            return line_text
+        else:
+            return None
+
+    def print_shortest_n_distance_line(self):
+        line = self.get_shortest_n_distance_line()
+        if line is not None and line is not False:
+            print(line)
 
     def compare_with_other_lines(self,line_index,line):
         ocr_text = self.get_line_content(line)
 
         for line_index_cmp, line_cmp in enumerate(self._set_lines):
             # todo add condition, if the line was not already compared
-
             if line_index is line_index_cmp:
                 continue
+
+            existing_distance = self.d_storage.fetch_value(line_index, line_index_cmp)
+            if existing_distance is not None:
+                continue
+
             ocr_text_cmp = self.get_line_content(line_cmp)
             distance = self.get_distance(ocr_text, ocr_text_cmp)
+            self.d_storage.store_value(line_index,line_index_cmp, distance)
 
-    def get_distance(self,text1,text2):
-        compare_ocr_strings_difflib_difftool()
+    def get_distance(self, text1, text2):
+        # todo add more possibilities for distance measurement, i.e confidences, edit distance, context weighting
+
+        # return a fixed negative value if one of the strings is not defined
+        if text1 is False and text2 is False:
+            return 0
+
+        # One is false and one is not false
+        if text1 is False or text2 is False:
+            return 1
+
+        dist_one = TextComparator.compare_ocr_strings_difflib_seqmatch(text1, text2)
+        return dist_one
 
     def get_line_content(self,line):
         """
@@ -562,9 +699,14 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             current_set.print_me(diff_only)
 
-    def do_best_of_three_keying(self):
+    def do_n_distance_keying(self):
         for current_set in self.ocr_sets:
-            current_set.calculate_best_of_three()
+            current_set.calculate_n_distance_keying()
+
+    def print_n_distance_keying_results(self):
+        print("N_DISTANCE_KEYING_RESULTS ")
+        for current_set in self.ocr_sets:
+            current_set.print_shortest_n_distance_line()
 
 
 def get_matches_in_other_lists(my_list_index, my_ocr_lists, line_element):
@@ -609,7 +751,11 @@ def compare_lists_new(ocr_lists):
 ocr_comparison = compare_lists_new(base_ocr_lists)
 ocr_comparison.sort_set()
 ocr_comparison.print_sets(True)
+ocr_comparison.do_n_distance_keying()
+ocr_comparison.print_n_distance_keying_results()
 
+ocr_comparison.print_sets(False)
 # todo implement best of 3/N
 # todo implement proper error rating against ground-truth
 # todo implement difference matching
+asd

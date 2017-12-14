@@ -2,6 +2,9 @@ import difflib
 
 
 class TextComparator:
+    @staticmethod
+    def do_smth():
+        print("it's done")
 
     @staticmethod
     def compare_ocr_strings_difflib_seqmatch(ocr_string1, ocr_string2):
@@ -13,9 +16,11 @@ class TextComparator:
         :param ocr_string2:
         :return:
         """
-        sqmatch = difflib.SequenceMatcher(None,ocr_string1,ocr_string2,True)
+        sqmatch = difflib.SequenceMatcher(None, ocr_string1, ocr_string2, True)
+        ratio = sqmatch.ratio()
 
-        matching_blocks = sqmatch.get_matching_blocks()
+        # matching_blocks = sqmatch.get_matching_blocks() # necessary
+        """
         for idx, block in enumerate(matching_blocks):
             (str1_starti, str2_starti, match_length) = block
 
@@ -26,5 +31,8 @@ class TextComparator:
             print("Block ",str(idx).zfill(4),"str2 match: ",str2_substr)
 
         # similarity of sequences info
-        ratio = sqmatch.ratio()
-        return ratio
+        """
+        # ratio = sqmatch.ratio()
+        distance = 1 - ratio
+
+        return distance
