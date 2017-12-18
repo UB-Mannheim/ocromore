@@ -30,9 +30,9 @@ print("abbyylist.length: ", len(abbylist))
 
 # Prepare a basic list object with all ocr's which should be compared
 base_ocr_lists = []
-base_ocr_lists.append(ocrolist_normalized)
 base_ocr_lists.append(tesslist)
 base_ocr_lists.append(abbylist)
+base_ocr_lists.append(ocrolist_normalized)
 
 # Do the actual comparison of ocr lists, this matches lines with the same y-position together and calls them sets
 ocr_comparison = hocr_comparator.compare_lists(base_ocr_lists)
@@ -47,10 +47,25 @@ ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keyin
 
 # Do steps to validate the used keying
 ocr_validator = OCRvalidator()
+
+ignore_linefeed = True
+ignore_whitespace = True
+"""
 ocr_validator.set_groundtruth("./Testfiles/oneprof.gt.txt")
 ocr_validator.set_ocr_file("./Testfiles/oneprof_keying_result.txt")
-ocr_validator.compare()
-
+ocr_validator.compare_difflib_differ(ignore_linefeed, ignore_whitespace)
+ocr_validator.set_ocr_file("./Testfiles/oneprof_abbyy.txt")
+ocr_validator.compare_difflib_differ(ignore_linefeed, ignore_whitespace)
+ocr_validator.set_ocr_file("./Testfiles/oneprof_tesseract_questionmark.txt")
+ocr_validator.compare_difflib_differ(ignore_linefeed, ignore_whitespace, True)
+"""
+ocr_validator.set_groundtruth("./Testfiles/oneprof.gt.txt")
+ocr_validator.set_ocr_file("./Testfiles/oneprof_keying_result.txt")
+ocr_validator.compare_ocrolib_edist(ignore_linefeed, ignore_whitespace)
+ocr_validator.set_ocr_file("./Testfiles/oneprof_abbyy.txt")
+ocr_validator.compare_ocrolib_edist(ignore_linefeed, ignore_whitespace)
+ocr_validator.set_ocr_file("./Testfiles/oneprof_tesseract_questionmark.txt")
+ocr_validator.compare_ocrolib_edist(ignore_linefeed, ignore_whitespace)
 
 # todo implement proper error rating against ground-truth
 # todo implement difference matching
