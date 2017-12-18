@@ -34,5 +34,30 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             current_set.print_shortest_n_distance_line()
 
+    def save_n_distance_keying_results_to_file(self,filename):
+        file = open(filename, 'w+')
 
+        for  current_set in self.ocr_sets:
+            sd_line = current_set.get_shortest_n_distance_line()
 
+            # do not print lines which are mostly recognized with no content at the moment
+            if sd_line is not None and sd_line is not False:
+                file.write(sd_line+"\n")
+
+        file.close()
+
+    def export_text_lines(self):
+        """
+        Exports the lines of text of the result as list
+        :return: list with lines
+        """
+
+        return_list = []
+        for setindex, current_set in enumerate(self.ocr_sets):
+            sd_line = current_set.get_shortest_n_distance_line()
+
+            # do not list lines which are mostly recognized with no content at the moment
+            if sd_line is not None and sd_line is not False:
+                return_list.append(sd_line)
+
+        return sd_line
