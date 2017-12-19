@@ -12,12 +12,21 @@ class OCRvalidator(object):
         self.gt_lines = []
         self.filename = ""
 
-    def set_groundtruth(self, filename):
+    def set_groundtruth(self, filename, ignore_form_feed=True):
         with open(filename, 'r') as file:
             self.gt_text = file.read()
+            if ignore_form_feed:
+                self.gt_text = self.gt_text.replace('\f','')
 
         with open(filename, 'r') as file:
             self.gt_lines = file.readlines()
+            if ignore_form_feed:
+                lines_new = []
+                for line in self.gt_lines:
+                    new_line = line.replace('\f','')
+                    if new_line is not '':
+                        lines_new.append(new_line)
+                self.gt_lines = lines_new
 
     def set_ocr_file(self, filename):
 
@@ -42,7 +51,7 @@ class OCRvalidator(object):
         text_split = text.split('\n')
         self.ocr_lines = text_split
 
-    def compare_difflib_differ(self, ignore_linefeed=True, ignore_whitespace=False, visualize_results = False):
+    def compare_difflib_differ(self, ignore_linefeed=True, ignore_whitespace=False, visualize_results=False):
         """
         Count deltas from difflib differ and calculate error rate, basic algorith is: Ratcliff-Obershelp
         RATING: This algorithm is too primitive to give a meaningful error-rate, it counts in transitioned strings as
@@ -61,8 +70,8 @@ class OCRvalidator(object):
 
         # if ignore linefeed is active, filter the text-strings
         if ignore_linefeed:
-            text_gt = text_gt.replace('\n','')
-            text_ocr = text_ocr.replace('\n','')
+            text_gt = text_gt.replace('\n', '')
+            text_ocr = text_ocr.replace('\n', '')
 
         # if ignore whitespace is active filter whitespace from text-strings
         if ignore_whitespace:
@@ -84,7 +93,7 @@ class OCRvalidator(object):
         # variables for visualization
         previous_ctrl_char = ""
         text_group_accumulated = ""
-        text_group_acc_error  = 0
+        text_group_acc_error = 0
 
         for element in listres:
             ctrl_char = element[0:1]
@@ -154,7 +163,7 @@ class OCRvalidator(object):
         err = errs * 100.0 / total
         acc = 100-err
         #Show the Differences....
-        # res2 = Edist3.xlevenshtein(text_gt, text_ocr)
+        res2 = Edist3.xlevenshtein(text_gt, text_ocr)
         print("OCR_validation results with ocrolib-edist: --------------------------")
         print("Filename was:", self.filename)
         print("ignore_linefeed:", ignore_linefeed)

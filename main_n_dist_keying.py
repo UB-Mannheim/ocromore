@@ -30,8 +30,8 @@ print("abbyylist.length: ", len(abbylist))
 
 # Prepare a basic list object with all ocr's which should be compared
 base_ocr_lists = []
-base_ocr_lists.append(tesslist)
 base_ocr_lists.append(abbylist)
+base_ocr_lists.append(tesslist)
 base_ocr_lists.append(ocrolist_normalized)
 
 # Do the actual comparison of ocr lists, this matches lines with the same y-position together and calls them sets
@@ -48,8 +48,8 @@ ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keyin
 # Do steps to validate the used keying
 ocr_validator = OCRvalidator()
 
-ignore_linefeed = True
-ignore_whitespace = True
+ignore_linefeed = False
+ignore_whitespace = False
 """
 ocr_validator.set_groundtruth("./Testfiles/oneprof.gt.txt")
 ocr_validator.set_ocr_file("./Testfiles/oneprof_keying_result.txt")
