@@ -87,7 +87,7 @@ class HocrBBoxComparator(object):
         (x2_start, y2_start, x2_end, y2_end) = coordinates2
 
         if MODE == "ENDPOINT_TRESHOLD":
-            TRESHOLD_VALUE = 14
+            TRESHOLD_VALUE = 30
             y_start_diff = abs(y1_start - y2_start)
             y_end_diff = abs(y1_end - y2_end)
             if (y_start_diff < TRESHOLD_VALUE and y_end_diff < TRESHOLD_VALUE):
