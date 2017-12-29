@@ -21,6 +21,13 @@ class OCRcomparison:
         sorted_sets = sorted(self.ocr_sets, key=take_y_mean, reverse=False)
         self.ocr_sets = sorted_sets
 
+
+    def unspace_sets(self):
+        for set in self.ocr_sets:
+            set.unspace_lines()
+
+
+
     def print_sets(self, diff_only= False):
         for current_set in self.ocr_sets:
             current_set.print_me(diff_only)

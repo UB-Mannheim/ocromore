@@ -69,7 +69,6 @@ class HocrBBoxComparator(object):
                         for line in par.lines:
                             return_list.append(line)
 
-
                 elif element.attrs['class'][0] == 'ocr_par':
                     par = Paragraph(None, element)
                     for line in par.lines:

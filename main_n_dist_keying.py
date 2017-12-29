@@ -12,17 +12,19 @@ from ocr_validation.ocr_validator import OCRvalidator
 hocr_comparator = HocrBBoxComparator()
 ocrolist = hocr_comparator.get_ocropus_boxes("../Testfiles/oneprof_ocropus.html")
 tesslist = hocr_comparator.get_tesseract_boxes("../Testfiles/oneprof_tesseract.html")
-abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy.hocr.html")
+# abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy.hocr.html")
+abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy_tables_ok.hocr.html")
 
 # Normalize list results for comparison
 hocr_normalizer = HocrLineNormalizer()
 ocrolist_normalized = hocr_normalizer.normalize_ocropus_list(ocrolist)
-
+abbylist_normalized = hocr_normalizer.normalize_abbyy_list(abbylist)
+tesslist_normalized = hocr_normalizer.normalize_tesseract_list(tesslist)
 
 print("List results:---------------")
 print("ocrolist_normalized.length: ", len(ocrolist_normalized))
-print("tesslist.length: ", len(tesslist))
-print("abbyylist.length: ", len(abbylist))
+print("tesslist.length: ", len(tesslist_normalized))
+print("abbyylist.length: ", len(abbylist_normalized))
 
 # Show a basic list comparison, with characterwise comparison (depreciated)
 # hocr_comparator.compare_lists(ocrolist_normalized, tesslist, abbylist)
@@ -30,26 +32,33 @@ print("abbyylist.length: ", len(abbylist))
 
 # Prepare a basic list object with all ocr's which should be compared
 base_ocr_lists = []
-base_ocr_lists.append(abbylist)
-base_ocr_lists.append(tesslist)
+base_ocr_lists.append(abbylist_normalized)
+base_ocr_lists.append(tesslist_normalized)
 base_ocr_lists.append(ocrolist_normalized)
 
 # Do the actual comparison of ocr lists, this matches lines with the same y-position together and calls them sets
 ocr_comparison = hocr_comparator.compare_lists(base_ocr_lists)
 ocr_comparison.sort_set()           #sort the created set after the y-height in ocr-documents
+ocr_comparison.print_sets(True)
+ocr_comparison.unspace_sets()
+ocr_comparison.print_sets(True)
+
+
+
 ocr_comparison.print_sets(True)     #print the sets created
 ocr_comparison.do_n_distance_keying()   #do the keying, which makes the decision which is the best line for each set
 ocr_comparison.print_n_distance_keying_results()  #print keying results
 ocr_comparison.print_sets(False)    # print the sets again with decision information
 
+exit(0)
 
 ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt")
 
 # Do steps to validate the used keying
 ocr_validator = OCRvalidator()
 
-ignore_linefeed = False
-ignore_whitespace = False
+ignore_linefeed = True
+ignore_whitespace = True
 """
 ocr_validator.set_groundtruth("./Testfiles/oneprof.gt.txt")
 ocr_validator.set_ocr_file("./Testfiles/oneprof_keying_result.txt")

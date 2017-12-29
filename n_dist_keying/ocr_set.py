@@ -1,5 +1,6 @@
 from n_dist_keying.distance_storage import DistanceStorage
 from n_dist_keying.text_comparator import TextComparator
+from n_dist_keying.text_unspacer import TextUnspacer
 
 class OCRset:
     """
@@ -19,6 +20,7 @@ class OCRset:
         self._y_mean = y_mean
         self.d_storage = DistanceStorage()
         self.shortest_distance_line_index = -1
+        self._unspaced = False # indicates the set_lines was unspaced
 
     def edit_line_set_value(self,set_index,new_value):
         self._set_lines[set_index] = new_value
@@ -140,11 +142,14 @@ class OCRset:
         ocr_text = self.get_line_content(line)
 
         for line_index_cmp, line_cmp in enumerate(self._set_lines):
-            # todo add condition, if the line was not already compared
+
+            # if line has the same index, continue
             if line_index is line_index_cmp:
                 continue
 
             existing_distance = self.d_storage.fetch_value(line_index, line_index_cmp)
+
+            # if line was already compared, continue
             if existing_distance is not None:
                 continue
 
@@ -166,7 +171,7 @@ class OCRset:
         dist_one = TextComparator.compare_ocr_strings_difflib_seqmatch(text1, text2)
         return dist_one
 
-    def get_line_content(self,line):
+    def get_line_content(self, line):
         """
         Helper method to get line content, because ocropus content
         has other access properties.
@@ -174,9 +179,17 @@ class OCRset:
         :return: string with line content, or 'False if line isn't defined.
         """
 
+        # hint: the attribute checked is created by hocr_line_normalizer
         if line is False:
             return False
-        elif hasattr(line, 'ocr_text_ocropus'):
-            return line.ocr_text_ocropus
+        # elif hasattr(line, 'ocr_text_normalized'):
+        elif line.ocr_text_normalized is not None:
+            return line.ocr_text_normalized
         else:
             return line.ocr_text
+
+    def unspace_lines(self):
+        # todo make unspaced index adaptable
+        unspaced_lines = TextUnspacer.unspace_texts(self._set_lines, 1)
+        self._unspaced = True
+        self._set_lines = unspaced_lines

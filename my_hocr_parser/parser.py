@@ -184,6 +184,8 @@ class Line(HOCRElement):
 
     def __init__(self, parent, hocr_html):
         super(Line, self).__init__(hocr_html, parent, 'span', Word.HOCR_WORD_TAG, Word)
+        self._ocr_text_normalized = None # custom property, none if not assigned
+
 
     @property
     def words(self):
@@ -202,6 +204,13 @@ class Line(HOCRElement):
         output += self._elements[-1].ocr_text
         return output
 
+    @property 
+    def ocr_text_normalized(self):
+        return self._ocr_text_normalized
+    
+    @ocr_text_normalized.setter
+    def ocr_text_normalized(self, new_text):
+        self._ocr_text_normalized = new_text
 
 class Word(HOCRElement):
 

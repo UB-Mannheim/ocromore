@@ -24,9 +24,9 @@ class HocrLineNormalizer(object):
 
                 # refactor the first element with accumulated text
                 if mode is "OCROPUS":
-                    entry[0]._hocr_html.contents[0] = text_accu
+                    entry[0].ocr_text_normalized = text_accu
                 else:
-                    entry[0].ocr_text = text_accu
+                    entry[0].ocr_text_normalized = text_accu
 
                 final_list.append(entry[0])
 
@@ -73,11 +73,45 @@ class HocrLineNormalizer(object):
         ocrolist_linified = self.unify_list_entries(ocrolistlist_linified)
 
         return_list = []
+
         # normalize ocr_text property
         for line in ocrolist_linified:
             text_to_add = line._hocr_html.contents[0]
-            # todo find a way to assign ocr_text property correctly here
-            line.ocr_text_ocropus = text_to_add
+            line.ocr_text_normalized = text_to_add
+            return_list.append(line)
+
+        return return_list
+
+    def normalize_abbyy_list(self, abbyy_list):
+        """
+        Do the normalize
+        :param abbyy_list:
+        :return:
+        """
+        abbyylistlist_linified = self.linify_list(abbyy_list)
+        abbyylist_linified = self.unify_list_entries(abbyylistlist_linified,"ABBYY")
+
+        return_list = []
+
+        for line in abbyylist_linified:
+            if line.ocr_text_normalized is None:
+                line.ocr_text_normalized = line.ocr_text
+            return_list.append(line)
+
+
+        return return_list
+
+
+
+        return return_list
+
+    def normalize_tesseract_list(self, tesseract_list):
+
+        return_list = []
+
+        for line in tesseract_list:
+            if line.ocr_text_normalized is None:
+                line.ocr_text_normalized = line.ocr_text
             return_list.append(line)
 
         return return_list

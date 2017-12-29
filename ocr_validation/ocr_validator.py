@@ -6,13 +6,22 @@ from ocr_validation.ocrolib_edist import Edist3
 class OCRvalidator(object):
 
     def __init__(self):
-        self.ocr_text =""
+        self.ocr_text = ""
         self.ocr_lines = []
         self.gt_text = ""
         self.gt_lines = []
         self.filename = ""
 
     def set_groundtruth(self, filename, ignore_form_feed=True):
+        """
+        Set the ground-truth file for the validator comparison,
+        this produces a internal string property with text and
+        another one with lines
+
+        :param filename: filename for the gt-file
+        :param ignore_form_feed: flag for filtering out '\f' in the gt-file
+        :return:
+        """
         with open(filename, 'r') as file:
             self.gt_text = file.read()
             if ignore_form_feed:
@@ -126,20 +135,20 @@ class OCRvalidator(object):
         err_rate = deltas_sum / characters_sum;
 
         print("OCR_validation results with difflib.Differ: --------------------------")
-        print("Filename was:",self.filename)
+        print("Filename was:", self.filename)
         print("ignore_linefeed:", ignore_linefeed)
         print("ignore_whitespace:", ignore_whitespace)
         print("Groundtruth-text length", len(self.gt_text))
         print("OCR-text  length:", len(self.ocr_text))
         print("Groundtruth-textF length:", len(text_gt))
         print("OCR-textF length:", len(text_ocr))
-        print("Overall character size is   :",characters_sum)
+        print("Overall character size is   :", characters_sum)
         print("Overall deltas (differences):", deltas_sum)
         print("Overall error rate is       :", err_rate)
         print("Deltas object ", str(deltas))
         return err_rate
 
-    def compare_ocrolib_edist(self ,ignore_linefeed=True ,ignore_whitespace=True):
+    def compare_ocrolib_edist(self, ignore_linefeed=True, ignore_whitespace=True):
 
         if self.ocr_text is "" or self.gt_text is "":
             print("ocr_validator: no text defined, won't compare ")
@@ -150,8 +159,8 @@ class OCRvalidator(object):
 
         # if ignore linefeed is active, filter the text-strings
         if ignore_linefeed:
-            text_gt = text_gt.replace('\n','')
-            text_ocr = text_ocr.replace('\n','')
+            text_gt = text_gt.replace('\n', '')
+            text_ocr = text_ocr.replace('\n', '')
 
         # if ignore whitespace is active filter whitespace from text-strings
         if ignore_whitespace:
@@ -162,8 +171,8 @@ class OCRvalidator(object):
         errs = Edist3.levenshtein(text_gt, text_ocr)
         err = errs * 100.0 / total
         acc = 100-err
-        #Show the Differences....
-        res2 = Edist3.xlevenshtein(text_gt, text_ocr)
+        # show the differences....
+        # res2 = Edist3.xlevenshtein(text_gt, text_ocr)
         print("OCR_validation results with ocrolib-edist: --------------------------")
         print("Filename was:", self.filename)
         print("ignore_linefeed:", ignore_linefeed)
