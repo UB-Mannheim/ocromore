@@ -39,9 +39,12 @@ base_ocr_lists.append(ocrolist_normalized)
 # Do the actual comparison of ocr lists, this matches lines with the same y-position together and calls them sets
 ocr_comparison = hocr_comparator.compare_lists(base_ocr_lists)
 ocr_comparison.sort_set()           #sort the created set after the y-height in ocr-documents
-ocr_comparison.print_sets(True)
-ocr_comparison.unspace_sets()
-ocr_comparison.print_sets(True)
+print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
+ocr_comparison.print_sets(False)
+ocr_comparison.unspace_list(2, 1) # unspace ocropus with tesseract as unspacing template
+ocr_comparison.unspace_list(0, 1) # unspace abbyy with tesseract as unspacing template
+print("Print mean||decision||abbyy||tesseract||ocropus|||| ocropus and abbyy unspaced--------------------")
+ocr_comparison.print_sets(False)
 
 
 
@@ -50,7 +53,6 @@ ocr_comparison.do_n_distance_keying()   #do the keying, which makes the decision
 ocr_comparison.print_n_distance_keying_results()  #print keying results
 ocr_comparison.print_sets(False)    # print the sets again with decision information
 
-exit(0)
 
 ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt")
 
@@ -58,7 +60,7 @@ ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keyin
 ocr_validator = OCRvalidator()
 
 ignore_linefeed = True
-ignore_whitespace = True
+ignore_whitespace = False
 """
 ocr_validator.set_groundtruth("./Testfiles/oneprof.gt.txt")
 ocr_validator.set_ocr_file("./Testfiles/oneprof_keying_result.txt")

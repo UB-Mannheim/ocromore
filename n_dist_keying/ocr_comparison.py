@@ -22,9 +22,19 @@ class OCRcomparison:
         self.ocr_sets = sorted_sets
 
 
-    def unspace_sets(self):
+    def unspace_list(self, list_index_to_unspace, unspaced_list_index):
+        """
+        apply the unspacing algorithm to one of the lists, take another list as
+        comparison  (which is not spaced)
+        :param list_index_to_unspace: index for the set to unspace
+        :param unspaced_list_index: index for the non-spaced set
+        :return:
+        """
+
         for set in self.ocr_sets:
-            set.unspace_lines()
+            set.unspace_lines(list_index_to_unspace, unspaced_list_index)
+
+
 
 
 

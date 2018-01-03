@@ -49,12 +49,15 @@ class Filo(Stack):
 
 class Ranged_Filo(Filo):
 
-    def __init__(self, size_limit, search_range):
+    def __init__(self, size_limit, search_range, fill_with_none):
 
         self.range = search_range
         self.size_limit = size_limit
         self.middle_index = Random.find_middle(size_limit, True)
         super().__init__(size_limit)
+        if fill_with_none:
+            for index in range(0, self.size_limit):
+                self.items.append(None)
 
     def get_middle_index(self):
         return self.middle_index

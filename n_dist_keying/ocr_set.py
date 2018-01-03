@@ -21,6 +21,7 @@ class OCRset:
         self.d_storage = DistanceStorage()
         self.shortest_distance_line_index = -1
         self._unspaced = False # indicates the set_lines was unspaced
+        self._text_unspacer = TextUnspacer()
 
     def edit_line_set_value(self,set_index,new_value):
         self._set_lines[set_index] = new_value
@@ -188,8 +189,9 @@ class OCRset:
         else:
             return line.ocr_text
 
-    def unspace_lines(self):
-        # todo make unspaced index adaptable
-        unspaced_lines = TextUnspacer.unspace_texts(self._set_lines, 1)
+    def unspace_lines(self, list_index_to_unspace, unspaced_list_index):
+
+        unspaced_lines = self._text_unspacer.unspace_texts(self._set_lines, list_index_to_unspace, unspaced_list_index)
+
         self._unspaced = True
         self._set_lines = unspaced_lines
