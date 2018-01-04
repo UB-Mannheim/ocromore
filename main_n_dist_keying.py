@@ -6,7 +6,11 @@
 
 from n_dist_keying.hocr_line_normalizer import HocrLineNormalizer
 from n_dist_keying.hocr_bbox_comparator import HocrBBoxComparator
+from n_dist_keying.hocr_line_height import LineHeightCalculator
 from ocr_validation.ocr_validator import OCRvalidator
+
+
+
 
 # Get lists of Hocr-objects from testfiles
 hocr_comparator = HocrBBoxComparator()
@@ -14,6 +18,13 @@ ocrolist = hocr_comparator.get_ocropus_boxes("../Testfiles/oneprof_ocropus.html"
 tesslist = hocr_comparator.get_tesseract_boxes("../Testfiles/oneprof_tesseract.html")
 # abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy.hocr.html")
 abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy_tables_ok.hocr.html")
+
+
+#Calculate line height in files #todo get for pages
+lh_calculator = LineHeightCalculator()
+lh_ocro = lh_calculator.calculate_line_height_ocropus(ocrolist)
+
+
 
 # Normalize list results for comparison
 hocr_normalizer = HocrLineNormalizer()
@@ -28,7 +39,7 @@ print("abbyylist.length: ", len(abbylist_normalized))
 
 # Show a basic list comparison, with characterwise comparison (depreciated)
 # hocr_comparator.compare_lists(ocrolist_normalized, tesslist, abbylist)
-
+exit(0)
 
 # Prepare a basic list object with all ocr's which should be compared
 base_ocr_lists = []

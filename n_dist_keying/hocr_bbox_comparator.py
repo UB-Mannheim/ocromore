@@ -7,6 +7,12 @@ from n_dist_keying.marker import Marker
 
 class HocrBBoxComparator(object):
 
+    def __init__(self):
+        self._ocropus_page = None
+        self._abbyy_page = None
+        self._tesseract_page = None
+
+
     def get_hocr_document(self, filename):
 
         dir_path = os.path.dirname(os.path.abspath(__file__))
@@ -24,6 +30,9 @@ class HocrBBoxComparator(object):
         document = self.get_hocr_document(filename)
         page = document.pages[0]
 
+        # assign ocropus page
+        self._ocropus_page = page
+
         html = page._hocr_html
         contents = html.contents
         return_list = []
@@ -39,6 +48,10 @@ class HocrBBoxComparator(object):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]
+
+        # assign tesseract page for further usage
+        self._tesseract_page = page
+
         return_list = []
 
         for c_area in page.areas:
@@ -54,6 +67,9 @@ class HocrBBoxComparator(object):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]
+
+        # assign abbyy page for further usage
+        self._abbyy_page = page
 
         html = page._hocr_html
         contents = html.contents

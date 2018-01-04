@@ -5,6 +5,7 @@
 """
 from n_dist_keying.hocr_bbox_comparator import HocrBBoxComparator
 
+
 class HocrLineNormalizer(object):
     def __init__(self):
         self.hocr_comparator = HocrBBoxComparator()
@@ -97,11 +98,6 @@ class HocrLineNormalizer(object):
             if line.ocr_text_normalized is None:
                 line.ocr_text_normalized = line.ocr_text
             return_list.append(line)
-
-
-        return return_list
-
-
 
         return return_list
 
