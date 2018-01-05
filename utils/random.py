@@ -57,3 +57,21 @@ class Random:
 
         return arr1_reduced
 
+    @staticmethod
+    def add_to_mean(overall_value, current_value, overall_count, current_count):
+        """
+        Adds a mean of a number of values to an existing mean, and adapts the outcoming mean
+        based on the number of the additional values
+        :param overall_value: overall mean
+        :param current_value: additional value to add
+        :param overall_count: number of values the original mean was calculated
+        :param current_count: number of values the additional mean was calculated
+        :return: new calculated mean, new number of values
+        """
+
+        new_overall_counter = (overall_value * overall_count) + \
+                           (current_value * current_count)
+        new_overall_divisor = overall_count + current_count
+        new_overall_value = new_overall_counter / new_overall_divisor
+        new_overall_count = overall_count + current_count
+        return new_overall_value, new_overall_count

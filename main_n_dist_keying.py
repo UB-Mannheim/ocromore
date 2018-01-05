@@ -20,9 +20,12 @@ tesslist = hocr_comparator.get_tesseract_boxes("../Testfiles/oneprof_tesseract.h
 abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy_tables_ok.hocr.html")
 
 
-#Calculate line height in files #todo get for pages
+# Calculate line height in files, used for making linebreaks in merged ocr-output # todo get for pages
 lh_calculator = LineHeightCalculator()
-lh_ocro = lh_calculator.calculate_line_height_ocropus(ocrolist)
+ldist_ocro, lgap_ocro, lh_ocro, y_gaps_len_ocro, lh_len_ocro = lh_calculator.calculate_line_distance_information(ocrolist)
+ldist_tess, lgap_tess, lh_tess, y_gaps_len_tess, lh_len_tess = lh_calculator.calculate_ld_information_tesseract(hocr_comparator._tesseract_page)
+ldist_tess_sl, lgap_tess_sl, lh_tess_sl, y_gaps_len_tess_sl, lh_len_tess_sl = lh_calculator.calculate_line_height_tesseract_simple(hocr_comparator._tesseract_page)
+#ldist_abbyy, lgap_abbyy, lh_abbyy, y_gaps_len_abbyy, lh_len_abbyy = lh_calculator.calculate_line_height_abbyy(hocr_comparator._abbyy_page)
 
 
 
