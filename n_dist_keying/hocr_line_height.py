@@ -4,6 +4,7 @@ from utils import histo_plotter
 from utils.random import Random
 from utils.typecasts import TypeCasts
 from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area, Page
+import copy as cp
 
 class LineHeightCalculator(object):
 
@@ -260,10 +261,13 @@ class LineHeightCalculator(object):
                     raise Exception('THIS SHOULDNT HAPPEN!')
 
 
-        mock_page = abbyy_page
-        mock_area = Area()
-        mock_area.paragraphs.extend(content_paragraphs)
+        mock_page = type('', (), {})()
+        mock_page.areas = []
+        mock_area = type('', (), {})()
+        mock_area.paragraphs = content_paragraphs
         mock_page.areas.append(mock_area)
+
+
 
         ldist_ocro, lgap_ocro, lh_ocro, y_gaps_len_ocro, lh_len_ocro = self.calculate_ld_information_tesseract(mock_page)
 

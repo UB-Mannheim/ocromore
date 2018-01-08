@@ -19,14 +19,7 @@ tesslist = hocr_comparator.get_tesseract_boxes("../Testfiles/oneprof_tesseract.h
 # abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy.hocr.html")
 abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy_tables_ok.hocr.html")
 
-
-# Calculate line height in files, used for making linebreaks in merged ocr-output # todo get for pages
-lh_calculator = LineHeightCalculator()
-ldist_ocro, lgap_ocro, lh_ocro, y_gaps_len_ocro, lh_len_ocro = lh_calculator.calculate_line_distance_information(ocrolist)
-ldist_tess, lgap_tess, lh_tess, y_gaps_len_tess, lh_len_tess = lh_calculator.calculate_ld_information_tesseract(hocr_comparator._tesseract_page)
-ldist_tess_sl, lgap_tess_sl, lh_tess_sl, y_gaps_len_tess_sl, lh_len_tess_sl = lh_calculator.calculate_line_height_tesseract_simple(hocr_comparator._tesseract_page)
-#ldist_abbyy, lgap_abbyy, lh_abbyy, y_gaps_len_abbyy, lh_len_abbyy = lh_calculator.calculate_line_height_abbyy(hocr_comparator._abbyy_page)
-
+#todo: Possibility calculate linefeed with additional information in unnormalized boxes
 
 
 # Normalize list results for comparison
@@ -40,9 +33,18 @@ print("ocrolist_normalized.length: ", len(ocrolist_normalized))
 print("tesslist.length: ", len(tesslist_normalized))
 print("abbyylist.length: ", len(abbylist_normalized))
 
+# Calculate line height in files, used for making linebreaks in merged ocr-output # todo get for pages
+lh_calculator = LineHeightCalculator()
+nldist_ocro, nlgap_ocro, nlh_ocro, ny_gaps_len_ocro, nlh_len_ocro = lh_calculator.calculate_line_distance_information(ocrolist_normalized)
+nldist_tess, nlgap_tess, nlh_tess, ny_gaps_len_tess, nlh_len_tess  = lh_calculator.calculate_line_distance_information(tesslist_normalized)
+nldist_abbyy, nlgap_abbyy, nlh_abbyy, ny_gaps_len_abbyy, nlh_len_abbyy = lh_calculator.calculate_line_distance_information(abbylist_normalized)
+
+
+
+
 # Show a basic list comparison, with characterwise comparison (depreciated)
 # hocr_comparator.compare_lists(ocrolist_normalized, tesslist, abbylist)
-exit(0)
+#exit(0)
 
 # Prepare a basic list object with all ocr's which should be compared
 base_ocr_lists = []
@@ -55,6 +57,7 @@ ocr_comparison = hocr_comparator.compare_lists(base_ocr_lists)
 ocr_comparison.sort_set()           #sort the created set after the y-height in ocr-documents
 print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
 ocr_comparison.print_sets(False)
+# todo possible: add substitution for characters, todo segmentate stuff
 ocr_comparison.unspace_list(2, 1) # unspace ocropus with tesseract as unspacing template
 ocr_comparison.unspace_list(0, 1) # unspace abbyy with tesseract as unspacing template
 print("Print mean||decision||abbyy||tesseract||ocropus|||| ocropus and abbyy unspaced--------------------")

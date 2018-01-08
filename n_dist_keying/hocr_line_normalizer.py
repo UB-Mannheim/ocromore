@@ -90,7 +90,7 @@ class HocrLineNormalizer(object):
         :return:
         """
         abbyylistlist_linified = self.linify_list(abbyy_list)
-        abbyylist_linified = self.unify_list_entries(abbyylistlist_linified,"ABBYY")
+        abbyylist_linified = self.unify_list_entries(abbyylistlist_linified, "ABBYY")
 
         return_list = []
 
