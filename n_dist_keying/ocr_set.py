@@ -22,6 +22,7 @@ class OCRset:
         self.shortest_distance_line_index = -1
         self._unspaced = False # indicates the set_lines was unspaced
         self._text_unspacer = TextUnspacer()
+        self.shortest_distance_line = None  # holder element for recognized shortest distance line
 
     def edit_line_set_value(self,set_index,new_value):
         self._set_lines[set_index] = new_value
@@ -113,7 +114,7 @@ class OCRset:
 
         # do a line-wise comparison, which calculates a distance between all lines in this set
         for line_index, line in enumerate(self._set_lines):
-            self.compare_with_other_lines(line_index,line)
+            self.compare_with_other_lines(line_index, line)
 
         # calculate the distance from each item in set to all others
         for line_index, line in enumerate(self._set_lines):
@@ -125,17 +126,31 @@ class OCRset:
         # save the result
         shortest_dist_index = self.d_storage.get_shortest_distance_index()
         self.shortest_distance_line_index = shortest_dist_index
+        self.shortest_distance_line = self._set_lines[shortest_dist_index]
 
-    def get_shortest_n_distance_line(self):
+    def get_shortest_n_distance_text(self):
         if self.shortest_distance_line_index >= 0:
-            line = self._set_lines[self.shortest_distance_line_index]
+            line = self.shortest_distance_line
             line_text = self.get_line_content(line)
             return line_text
         else:
             return None
 
+    def get_shortest_n_distance_line(self):
+        if self.shortest_distance_line_index >= 0:
+            line = self.shortest_distance_line
+            return line
+        else:
+            return None
+
+    def get_shortest_n_distance_index(self):
+        if self.shortest_distance_line_index >= 0:
+            return self.shortest_distance_line_index
+        else:
+            return None
+
     def print_shortest_n_distance_line(self):
-        line = self.get_shortest_n_distance_line()
+        line = self.get_shortest_n_distance_text()
         if line is not None and line is not False:
             print(line)
 
@@ -156,7 +171,7 @@ class OCRset:
 
             ocr_text_cmp = self.get_line_content(line_cmp)
             distance = self.get_distance(ocr_text, ocr_text_cmp)
-            self.d_storage.store_value(line_index,line_index_cmp, distance)
+            self.d_storage.store_value(line_index, line_index_cmp, distance)
 
     def get_distance(self, text1, text2):
         # todo add more possibilities for distance measurement, i.e confidences, edit distance, context weighting

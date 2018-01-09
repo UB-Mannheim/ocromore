@@ -4,7 +4,22 @@ from utils import histo_plotter
 from utils.random import Random
 from utils.typecasts import TypeCasts
 from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area, Page
-import copy as cp
+
+
+class LineHeightInformation(object):
+
+    def __init__(self, line_distance, line_gap, line_height, len_line_gaps, len_line_heigths):
+        self._line_distance = line_distance
+        self._line_gap = line_gap
+        self._line_height = line_height
+        self._len_line_gaps = len_line_gaps
+        self._len_line_heigths = len_line_heigths
+
+    def set_textfield(self, text):
+        self._info_field = text
+
+    def get_line_distance(self):
+        return self._line_distance
 
 class LineHeightCalculator(object):
 
@@ -16,7 +31,7 @@ class LineHeightCalculator(object):
         line_height = y_end-y_start
         return line_height
 
-    def calculate_line_distance_information(self, lines_input, do_analysis_stuff=False):
+    def calculate_line_distance_information(self, lines_input, do_analysis_stuff=False, return_class=False, info_field=None):
 
         PRINT_OUTPUT = True
         FILTER_NEGATIVE_VALUE = True  # sometimes overlapping lines produce negative line gaps
@@ -94,6 +109,11 @@ class LineHeightCalculator(object):
 
         # calculate the average distance between to line middle points
         line_distance = median_bin + lh_mean
+
+        if return_class is True:
+            lhi = LineHeightInformation(line_distance, median_bin, lh_mean, y_gaps_len, lh_len)
+            lhi.set_textfield(info_field)
+            return lhi
 
         # return the calculated information
         return line_distance, median_bin, lh_mean, y_gaps_len, lh_len
@@ -266,11 +286,6 @@ class LineHeightCalculator(object):
         mock_area = type('', (), {})()
         mock_area.paragraphs = content_paragraphs
         mock_page.areas.append(mock_area)
-
-
-
-        ldist_ocro, lgap_ocro, lh_ocro, y_gaps_len_ocro, lh_len_ocro = self.calculate_ld_information_tesseract(mock_page)
-
 
 
         return  self.calculate_ld_information_tesseract(mock_page)
