@@ -70,6 +70,9 @@ class OCRvalidator(object):
         :param visualize_results: print a visualzation to stdout
         :return: calculated error rate
         """
+
+        MODE_ONLY_VISUALIZE_DIFFS = True
+
         if self.ocr_text is "" or self.gt_text is "":
             print("ocr_validator: no text defined, won't compare ")
             return
@@ -112,7 +115,11 @@ class OCRvalidator(object):
                     text_group_accumulated = text_group_accumulated + current_text
                     text_group_acc_error += 1
                 else:
-                    print("CTRL: ", previous_ctrl_char, "CTR:",text_group_acc_error,"TEXT:",text_group_accumulated)
+
+
+                    text_group_accumulated = text_group_accumulated.replace(' ', '_')
+                    if not MODE_ONLY_VISUALIZE_DIFFS or previous_ctrl_char != ' ':
+                        print("CTRL: ", previous_ctrl_char, "CTR:", text_group_acc_error,"TEXT:", text_group_accumulated)
                     text_group_accumulated = current_text
                     text_group_acc_error = 0
 
