@@ -32,8 +32,16 @@ class Marker:
         element.marked = True
 
     @staticmethod
-    def mark_element_custom_tag(element,tag):
+    def unmark_element(element):
+        element.marked = False
+
+    @staticmethod
+    def mark_element_custom_tag(element, tag):
         element[tag] = True
+
+    @staticmethod
+    def unmark_element_custom_tag(element, tag):
+        element[tag] = False
 
     @staticmethod
     def is_element_marked_with_custom_tag(element,tag):

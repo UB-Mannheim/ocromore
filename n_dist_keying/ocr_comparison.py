@@ -41,10 +41,6 @@ class OCRcomparison:
         for set in self.ocr_sets:
             set.unspace_lines(list_index_to_unspace, unspaced_list_index)
 
-
-
-
-
     def print_sets(self, diff_only= False):
         for current_set in self.ocr_sets:
             current_set.print_me(diff_only)

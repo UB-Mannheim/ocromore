@@ -154,7 +154,7 @@ class OCRset:
         if line is not None and line is not False:
             print(line)
 
-    def compare_with_other_lines(self,line_index,line):
+    def compare_with_other_lines(self, line_index, line):
         ocr_text = self.get_line_content(line)
 
         for line_index_cmp, line_cmp in enumerate(self._set_lines):
