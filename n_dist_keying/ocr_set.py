@@ -24,8 +24,17 @@ class OCRset:
         self._text_unspacer = TextUnspacer()
         self.shortest_distance_line = None  # holder element for recognized shortest distance line
 
-    def edit_line_set_value(self,set_index,new_value):
+    def edit_line_set_value(self, set_index, new_value):
         self._set_lines[set_index] = new_value
+
+    def get_line_set_value_line(self, set_index):
+        return self._set_lines[set_index]
+
+    def get_line_set_value_text(self, set_index):
+        value_line = self.get_line_set_value_line(set_index)
+        value_text = self.get_line_content(value_line)
+        return value_text
+
 
     @property
     def size(self):

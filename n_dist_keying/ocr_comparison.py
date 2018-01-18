@@ -114,6 +114,38 @@ class OCRcomparison:
 
         file.close()
 
+
+    def save_dataset_to_file(self, filename, set_index, mode_add_linebreaks = False):
+        file = open(filename, 'w+')
+
+        previous_dataset_line = None
+        previous_dataset_line_index = None
+
+        for current_set in self.ocr_sets:
+
+            dataset_text = current_set.get_line_set_value_text(set_index)
+
+            # add comparison from previous to actual line break here
+            if mode_add_linebreaks:
+                dataset_line = current_set.get_line_set_value_line(set_index)
+                if dataset_line is True or dataset_line is False:
+                    continue
+
+                additional_breaks = \
+                    self.add_linebreaks(previous_dataset_line, dataset_line, previous_dataset_line_index, set_index,
+                                        self.line_height_information)
+
+                if additional_breaks is not None:
+                    file.write(additional_breaks)
+                previous_dataset_line = dataset_line
+                previous_dataset_line_index = set_index
+
+            # do not print lines which are mostly recognized with no content at the moment
+            if dataset_text is not None and dataset_text is not False:
+                file.write(dataset_text + "\n")
+
+        file.close()
+
     def export_text_lines(self):
         """
         Exports the lines of text of the result as list

@@ -96,22 +96,22 @@ class TextUnspacer:
         text = line_to_process.ocr_text_normalized
         text_cmp = line_unspaced.ocr_text_normalized
 
-        if "Aus den G" in text_cmp:
-            print("im here")
+        #if "Aus den G" in text_cmp:
+        #    print("im here")
 
         text_tuple, text_tuple_adj = self.get_tuples(text, SIZE_FILO, SEARCH_RANGE_FILO)
         text_tuple_cmp, text_tuple_cmp_adj = self.get_tuples(text_cmp, SIZE_FILO, SEARCH_RANGE_FILO)
         if WILDCARD_MODE:
             text_tuple2, change1 = self.add_adjacent_tuple_information(text_tuple, text_tuple_adj)
             text_tuple_cmp2, change2 = self.add_adjacent_tuple_information(text_tuple_cmp, text_tuple_cmp_adj)
-            if change1 or change2:
-                print("test")
+            # if change1 or change2:
+                # print("test")
 
         print("text", text, "text_cmp", text_cmp)
         diff1 = Random.subtract_arrays(text_tuple, text_tuple_cmp, WILDCARD_MODE, WILDCARD_COUNT, text_tuple2, text_tuple_cmp2)
 
-        if len(text_tuple) != len(text_tuple2):
-            print("test")
+        # if len(text_tuple) != len(text_tuple2):
+            # print("test")
 
 
         # put text to process together with the process information
