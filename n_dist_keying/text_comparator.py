@@ -1,6 +1,7 @@
 import difflib
 from ocr_validation.ocrolib_edist import Edist3
 from utils.typecasts import TypeCasts
+import distance as distpkg
 
 class TextComparator:
     @staticmethod
@@ -104,10 +105,34 @@ class TextComparator:
 
         return difference_count, difference_indices
 
+    @staticmethod
+    def compare_ocr_strings_hamming(ocr_string1, ocr_string2, pad_difference = True):
+        # pad stuff here :) ?
+        # todo !!!
+        result = distpkg.hamming(ocr_string1, ocr_string2)
+        return result
+
+    @staticmethod
+    def compare_ocr_strings_sorensen(ocr_string1, ocr_string2):
+        """
+        Sorensen distance
+        :param ocr_string1:
+        :param ocr_string2:
+        :return:
+        """
+        result = distpkg.sorensen(ocr_string1, ocr_string2)
+        return result
+
+    @staticmethod
+    def compare_ocr_strings_jaccard(ocr_string1, ocr_string2):
+        result = distpkg.jaccard(ocr_string1, ocr_string2)
+        return result
+
 
     @staticmethod
     def compare_ocr_strings_levensthein_normed(ocr_string1, ocr_string2):
         ldist_normed, ldist = Edist3.normed_levenshtein(ocr_string1, ocr_string2)
+        # ldist_normed2 = distpkg.nlevenshtein(ocr_string1, ocr_string2, method=2) # this is the same - verified
         return ldist_normed
 
 

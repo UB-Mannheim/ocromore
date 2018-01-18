@@ -13,7 +13,7 @@ class Edist3:
 
     @staticmethod
     def normed_levenshtein(a, b):
-        """
+        """ or nlevenshtein (with longest alignment)
         Calculates a normalized version of the levenshtein distance.
         Divided through the maximum length (which is in levenshtein the length
         of the longer string)

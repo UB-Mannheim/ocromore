@@ -185,8 +185,11 @@ class OCRset:
     def get_distance(self, text1, text2):
         # todo add more possibilities for distance measurement, i.e confidences, edit distance, context weighting
         MODE_DIFFLIB = 'difflib'
-        MODE_NORMED_LEVENSHTEIN = 'normed_levenshtein'
-        MODE  = MODE_NORMED_LEVENSHTEIN # set your mode here
+        MODE_NORMED_LEVENSHTEIN = 'normed_levenshtein' # longest alignment normed levenshtein distance
+        MODE_SORENSEN = 'sorensen'
+        MODE_JACCARD = 'jaccard'
+        MODE_HAMMING = 'hamming'
+        mode  = MODE_DIFFLIB # set your mode here
 
         # return a fixed negative value if one of the strings is not defined
         if text1 is False and text2 is False:
@@ -198,11 +201,21 @@ class OCRset:
 
         dist = 1
 
-        if MODE == MODE_DIFFLIB:
+        if mode == MODE_DIFFLIB:
             dist = TextComparator.compare_ocr_strings_difflib_seqmatch(text1, text2)
 
-        elif MODE == MODE_NORMED_LEVENSHTEIN:
+        elif mode == MODE_NORMED_LEVENSHTEIN:
             dist = TextComparator.compare_ocr_strings_levensthein_normed(text1, text2)
+
+        elif mode == MODE_HAMMING:
+            dist = TextComparator.compare_ocr_strings_hamming(text1, text2)
+
+        elif mode == MODE_SORENSEN:
+            dist = TextComparator.compare_ocr_strings_sorensen(text1, text2)
+
+        elif mode == MODE_JACCARD:
+            dist = TextComparator.compare_ocr_strings_jaccard(text1, text2)
+
 
         return dist
 
