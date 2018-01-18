@@ -1,6 +1,15 @@
+from n_dist_keying.text_comparator import TextComparator
 
 
 class Random:
+
+    @staticmethod
+    def replace_value_in_tuple(tuple_in, value, index):
+        tuple_l = list(tuple_in)  # make a[0] mutable
+        tuple_l[index] = value  # now new assignment will be valid
+        ret_val= tuple(tuple_l)  # make a[0] again a tuple
+        return ret_val
+
 
     @staticmethod
     def append_pad_values(text, padding_length, padding_char='¦'):
@@ -31,7 +40,7 @@ class Random:
                 return (low_middle, high_middle)
 
     @staticmethod
-    def subtract_arrays(arr1_in, arr2_in):
+    def subtract_arrays(arr1_in, arr2_in, wildcard_mode=False, wildcard_count=0, arr1_in_adj=[], arr2_in_adj=[]):
         """
         Subtract arr2 from arr1 (arr1-arr2), same contents get subtracted once
         i.e. arr1 = ['a','a','b'], arr2 = ['a'], result is ['a', 'b']
@@ -39,6 +48,7 @@ class Random:
         :param arr2_in: input list two
         :return: subtracted output
         """
+        ORDER_CONFUSION_TRESHOLD = 0.4
 
         # create copies of input arrays, which can be modified
         arr1 = arr1_in[:]
@@ -47,10 +57,44 @@ class Random:
         # mark everything which is equal once
         for index_a1, entry_a1 in enumerate(arr1):
             for index_a2, entry_a2 in enumerate(arr2):
-                if entry_a1 is not None and entry_a1 == entry_a2:
-                    arr1[index_a1] = None
-                    arr2[index_a2] = None
-                    break
+
+                entry_a1_adj = None
+                entry_a2_adj = None
+
+                if wildcard_mode:
+                    entry_a1_adj = arr1_in_adj[index_a1]
+                    entry_a2_adj = arr2_in_adj[index_a2]
+
+                if wildcard_mode is False:
+                    if entry_a1 is not None and entry_a1 == entry_a2:
+                        arr1[index_a1] = None
+                        arr2[index_a2] = None
+                        break
+                else:
+                    if entry_a1 is not None and entry_a2 is not None:
+                        tpldif_ctr, tpldif, order_confusion = TextComparator.compare_tuples(entry_a1, entry_a2)
+                        if tpldif_ctr <= wildcard_count:
+                            if tpldif_ctr != 0:
+                                # additional condition, the string shouldn't be order confused
+                                print("1st", entry_a1)
+                                print("2nd", entry_a2)
+                                print("order_confusion", order_confusion)
+                                if order_confusion > ORDER_CONFUSION_TRESHOLD:
+                                    continue
+                                tpldif_ctr2, tpldif2, order_confusion2 = TextComparator.compare_tuples(entry_a1_adj, entry_a2)
+                                if tpldif_ctr2 == 0:
+                                    # this means the adjusted version is equal and this is a match
+                                    arr1[index_a1] = None
+                                    arr2[index_a2] = None
+                                    break
+
+
+                            arr1[index_a1] = None
+                            arr2[index_a2] = None
+                            break
+                        #res1 = TextComparator.compare_ocr_strings_difflib_seqmatch(entry_a1, entry_a2)
+                        #res2 = TextComparator.compare_ocr_strings_difflib_difftool(entry_a1, entry_a2)
+                        #print("done")
 
         # subtract nones from arr1
         arr1_reduced = [value for value in arr1 if value is not None]

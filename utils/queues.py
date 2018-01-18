@@ -51,6 +51,7 @@ class Ranged_Filo(Filo):
 
     def __init__(self, size_limit, search_range, fill_with_none):
 
+        self.original_range = search_range
         self.range = search_range
         self.size_limit = size_limit
         self.middle_index = Random.find_middle(size_limit, True)
@@ -61,6 +62,15 @@ class Ranged_Filo(Filo):
 
     def get_middle_index(self):
         return self.middle_index
+
+    def set_search_range(self, value):
+         self.range = value
+
+    def get_middle_items_for_range(self, range_value):
+        self.set_search_range(range_value)
+        result = self.get_middle_items(True, False)
+        self.set_search_range(self.original_range)
+        return result
 
     def get_middle_items(self, use_range=False, pad_values=False):
 

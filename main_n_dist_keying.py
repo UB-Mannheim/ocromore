@@ -12,8 +12,6 @@ from ocr_validation.ocr_validator import OCRvalidator
 from utils.pycharm_handler import PycharmHandler
 
 
-
-
 # Get lists of Hocr-objects from testfiles
 hocr_comparator = HocrBBoxComparator()
 ocrolist = hocr_comparator.get_ocropus_boxes("../Testfiles/oneprof_ocropus.html")
@@ -97,7 +95,6 @@ ocr_comparison.print_sets(True)     # print the sets created
 ocr_comparison.do_n_distance_keying()   # do the keying, which makes the decision which is the best line for each set
 ocr_comparison.print_n_distance_keying_results()  # print keying results
 ocr_comparison.print_sets(False)    # print the sets again with decision information
-
 
 ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt", True)
 
