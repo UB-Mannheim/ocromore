@@ -1,6 +1,7 @@
 import difflib
 from ocr_validation.ocrolib_edist import Edist3
-from utils.typecasts import  TypeCasts
+from utils.typecasts import TypeCasts
+
 class TextComparator:
     @staticmethod
     def do_smth():
@@ -102,6 +103,13 @@ class TextComparator:
 
 
         return difference_count, difference_indices
+
+
+    @staticmethod
+    def compare_ocr_strings_levensthein_normed(ocr_string1, ocr_string2):
+        ldist_normed, ldist = Edist3.normed_levenshtein(ocr_string1, ocr_string2)
+        return ldist_normed
+
 
     @staticmethod
     def compare_ocr_strings_difflib_seqmatch(ocr_string1, ocr_string2):

@@ -12,6 +12,24 @@ import re
 class Edist3:
 
     @staticmethod
+    def normed_levenshtein(a, b):
+        """
+        Calculates a normalized version of the levenshtein distance.
+        Divided through the maximum length (which is in levenshtein the length
+        of the longer string)
+        :param a: first string
+        :param b: second string
+        :return: normed levenshtein distance and levenshtein distance
+        """
+
+        len_a = len(a)
+        len_b = len(b)
+        max_len = max(len_a, len_b)
+        ldist = Edist3.levenshtein(a, b)
+        normed_ldist = ldist / max_len
+        return normed_ldist, ldist
+
+    @staticmethod
     def levenshtein(a, b):
         """Calculates the Levenshtein distance between a and b.
         (Clever compact Pythonic implementation from hetland.org)"""
@@ -62,7 +80,7 @@ class Edist3:
             path.append(l)
             i, j = l
             l = sources[i,j]
-        al,bl = [],[]
+        al, bl = [], []
         path = [(n+2,m+2)]+path
         for k in range(len(path)-1):
             i, j = path[k]
@@ -82,12 +100,12 @@ class Edist3:
         bl = " "*context+bl+" "*context
         assert "~" not in al and "~" not in bl
         same = array([al[i] == bl[i] for i in range(len(al))], 'i')
-        same = filters.minimum_filter(same,1+2*context)
+        same = filters.minimum_filter(same, 1+2*context)
         als = "".join([al[i] if not same[i] else "~" for i in range(len(al))])
         bls = "".join([bl[i] if not same[i] else "~" for i in range(len(bl))])
         # print(als)
         # print(bls)
-        ags = re.split(r'~+',als)
-        bgs = re.split(r'~+',bls)
+        ags = re.split(r'~+', als)
+        bgs = re.split(r'~+', bls)
         confusions = [(a, b) for a, b in zip(ags,bgs) if a != "" or b != ""]
         return cost, confusions
