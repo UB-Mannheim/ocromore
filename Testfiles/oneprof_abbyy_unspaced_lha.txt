@@ -6,7 +6,7 @@ Fernruf: 2 28 75 - 77.
 
 Vorstand:
 Arnold Holtmann, Münster
-(Westf.)," Vors.;
+(Westf.),"Vors.;
 Dr.jur. Gottfried Wolters, Münster
 (Westf.);
 Karl Rhode, Münster (Westf.).
@@ -50,7 +50,7 @@ Börsennotiz: Düsseldorf (amtl.).
 Ordnungsnr.d.Aktien: 586900.
 
 Stückelung:
-2 870 St. -Ak. zu je DM 1 000.-
+2 870 St.-Ak. zu je DM 1 000. -
 (Nr. 1 - 2 870)
 500 St.-Akt. zujeDM 100.-
 (Nr. 5 001 - 5 500)
@@ -62,28 +62,28 @@ Großaktionär:
 Familie Dieninghoff, Münster (Mehrheit).
 
 Aktienkurse:
-ultimo ultimo1948 60 %
-II 1949 60%
+ultimoultimo 1948 60 %
+II194960%
 
-II 1950 65 %
+II1950 65 %
 
-II 1951 70 %
+II195170 %
 
-II 1952 52%
+II1952 52%
 
-II 1953 60%
+II195360%
 
-II 1954 107 %
+II1954 107 %
 
-II 1955 150 %
+II1955 150 %
 
-15.Okt. 1956 147 %
+15.Okt. 1956 147%
 
 +) Kurs für DM-Nennwert.
 
 
 Dividenden auf Stammaktien:
-1948/11/49 bis 1954: je 0%
+1948/11/49 bis 1954: je0%
 1955: 4 % (Div.Sch.Nr. 1)
 
 
@@ -121,7 +121,7 @@ rechnungen
 Löhne und Gehälter 1 545 2 023
 Abschreibungen 1 388 2 479
 Steuern 3 368 4 343
- Jahresertrag 7127 9 440
+Jahresertrag 7127 9 440
 
 
 Atlas Levante-Linie Aktiengesellschaft

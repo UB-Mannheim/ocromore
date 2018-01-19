@@ -41,6 +41,11 @@ class OCRcomparison:
         for set in self.ocr_sets:
             set.unspace_lines(list_index_to_unspace, unspaced_list_index)
 
+    def refspace_list(self, list_index_to_adapt, list_index_reference):
+
+        for set in self.ocr_sets:
+            set.refspace_lines( list_index_to_adapt, list_index_reference )
+
     def print_sets(self, diff_only= False):
         for current_set in self.ocr_sets:
             current_set.print_me(diff_only)

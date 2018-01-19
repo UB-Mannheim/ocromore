@@ -17,10 +17,11 @@ class OCRset:
 
         self._set_lines = lineset
         self._size = lines_size
-        self._y_mean = y_mean
+        self._y_mean = y_mean  # mean y coordinate of all lines referenced in this set
         self.d_storage = DistanceStorage()
         self.shortest_distance_line_index = -1
-        self._unspaced = False # indicates the set_lines was unspaced
+        self._unspaced = False  # indicates the set_lines was unspaced
+        self._refspaced = False # indicates the set_lines was reference spaced
         self._text_unspacer = TextUnspacer()
         self.shortest_distance_line = None  # holder element for recognized shortest distance line
 
@@ -189,7 +190,7 @@ class OCRset:
         MODE_SORENSEN = 'sorensen'
         MODE_JACCARD = 'jaccard'
         MODE_HAMMING = 'hamming'
-        mode  = MODE_DIFFLIB # set your mode here
+        mode = MODE_DIFFLIB # set your mode here
 
         # return a fixed negative value if one of the strings is not defined
         if text1 is False and text2 is False:
@@ -241,4 +242,14 @@ class OCRset:
         unspaced_lines = self._text_unspacer.unspace_texts(self._set_lines, list_index_to_unspace, unspaced_list_index)
 
         self._unspaced = True
+        self._refspaced = False
         self._set_lines = unspaced_lines
+
+
+    def refspace_lines(self, list_index_to_adapt, list_index_reference):
+
+        refspaced_lines = self._text_unspacer.refspace_texts(self._set_lines, list_index_to_adapt, list_index_reference)
+
+        self._unspaced = False
+        self._refspaced = True
+        self._set_lines = refspaced_lines

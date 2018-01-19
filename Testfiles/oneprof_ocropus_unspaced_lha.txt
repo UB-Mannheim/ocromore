@@ -1,6 +1,6 @@
 Sitz: (21a) Münster
 gWAMAN(Westf.), Grevener
-Stra3e 89.
+Stra3e89.
 aogp'g3a
 $$38S r+=o +s- n.
 '>a
@@ -13,7 +13,7 @@ Karl Rhode, Münster (Westf.).
 Aufsichtsrat:
 Dr. Werner Reineke I, Münster (Westf.),
 Vors.;
-Wi11 Marx, Düsseldorf, stellv.Vors.;
+Wi11Marx, Düsseldorf, stellv.Vors.;
 Frau Gertrud Holtmann, Münster;
 Frau Maria Hallermann, Münster;
 Arbeitnehmervertreter:
@@ -29,8 +29,8 @@ freie Getränke, Eis.
 
 Geschtaftsjahr:Kalenderjahr.
 
-Stimmrecht d.Aktien i,d.H.-V.:
-Jenom. DM 1 000.- = 1Stimme.
+Stimmrecht d.Aktieni,d.H.-V.:
+Jenom. DM 1 000.-= 1 Stimme.
 
 Zahlstellen:
 Gesellschaftskasse, Münster (Westf.);
@@ -40,7 +40,7 @@ dorf und Münster (Westf.).
 Grundkapital: DM 2 920 000.-.
 Umstellung 1:1 auf DM 2 940 000.-
 durch H.-V.v14.9.1951.
-Durch H.-V.-Beschlulß vom 17.8.1954
+Durch H.-V.-Beschlulßvom 17.8.1954
 Kapitalherabsetzung um DM 20 000.-
 auf DM 2 920 000.-.
 
@@ -61,11 +61,11 @@ Familie Dieninghoff, Münster (Mehrheit).
 
 Aktienkurse:
 ultimo 1948 60
-1949 60
+194960
 1950 65
-1951 70
+195170
 1952 52
-1953 60
+195360
 1954 107
 1955 150
 15.Okt. 1956 147
@@ -73,7 +73,7 @@ ultimo 1948 60
 +) Kurs für DM-Nennwert.
 
 Dividenden auf Stammaktien:
-1948/II/49 bis 1954: je 0%
+1948/II/49 bis 1954: je0%
 1955: 4 % (Div,Sch.Nr. 1)
 
 
@@ -105,7 +105,7 @@ Fremdkapital
 Gewinn nach Vortrag 73
 
 
-Aus den Gewin n-und Verlust-
+Aus den Gewinn- undVerlust-
 rechnungen
 
 Löhne und Gehälter 1 545
