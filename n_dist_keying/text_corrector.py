@@ -23,6 +23,7 @@ class TextCorrector(object):
     @staticmethod
     def correct_roman_ii(line_text):
         """
+        todo: this correction has to be verified for false positives 
         Corrects occurrences of roman II letters which get confused with I1 or 11 sometimes
 
         Example:

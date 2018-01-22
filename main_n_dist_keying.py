@@ -11,6 +11,7 @@ from n_dist_keying.textfile_generator import TextFileGenerator
 from ocr_validation.ocr_validator import OCRvalidator
 from utils.pycharm_handler import PycharmHandler
 
+
 # line height adaption settings:
 EXPORT_ADAPTED_ABBYY_RESULT = True
 EXPORT_ADAPTED_OCROPUS_RESULT = True
