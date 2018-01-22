@@ -99,8 +99,8 @@ class TextComparator:
                 difference_count += 1
                 difference_indices.append(char_1_index)
 
-        if difference_count == 1:
-            print("yes")
+        #if difference_count == 1:
+        #   print("yes")
 
 
         return difference_count, difference_indices

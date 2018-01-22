@@ -84,8 +84,8 @@ ocr_comparison.sort_set()
 print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
 ocr_comparison.print_sets(False)
 # todo possible: add substitution for characters, todo segmentate stuff
+#ocr_comparison.refspace_list(2, 1) # refspace ocropus with tesseract as unspacing template
 ocr_comparison.unspace_list(2, 1) # unspace ocropus with tesseract as unspacing template
-# ocr_comparison.unspace_list(0, 1) # unspace abbyy with tesseract as unspacing template
 print("Print mean||decision||abbyy||tesseract||ocropus|||| ocropus and abbyy unspaced--------------------")
 ocr_comparison.print_sets(False)
 

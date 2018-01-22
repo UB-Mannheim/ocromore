@@ -14,6 +14,9 @@ from utils.pycharm_handler import PycharmHandler
 
 USE_REFSPACING = False # instead of unspacing algorithm use the respacing algorithm
 DISPLAY_DIFFERENCES = False
+IGNORE_LINEFEED = False
+IGNORE_WHITESPACE = False
+
 
 # base files (input)
 filepath_ground_truth = "./Testfiles/oneprof.gt.txt"
@@ -85,20 +88,17 @@ ocr_comparison.save_dataset_to_file(filepath_abbyy_unspaced_lha, 0, True)
 
 ocr_validator = OCRvalidator()
 
-ignore_linefeed = False
-ignore_whitespace = False
-
 print("Comparison of the unspaced files and spaced files to groundtruth--------------")
 print("Refspacing is: ", USE_REFSPACING)
 ocr_validator.set_groundtruth(filepath_ground_truth)
 ocr_validator.set_ocr_file(filepath_ocropus_lha_txt)
-ocr_validator.compare_ocrolib_edist(ignore_linefeed, ignore_whitespace)
+ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
 ocr_validator.set_ocr_file(filepath_ocropus_unspaced_lha)
-ocr_validator.compare_ocrolib_edist(ignore_linefeed, ignore_whitespace)
+ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
 ocr_validator.set_ocr_file(filepath_abbyy_lha_txt)
-ocr_validator.compare_ocrolib_edist(ignore_linefeed, ignore_whitespace)
+ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
 ocr_validator.set_ocr_file(filepath_abbyy_unspaced_lha)
-ocr_validator.compare_ocrolib_edist(ignore_linefeed, ignore_whitespace)
+ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
 
 
 if DISPLAY_DIFFERENCES:

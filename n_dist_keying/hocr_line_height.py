@@ -33,7 +33,7 @@ class LineHeightCalculator(object):
 
     def calculate_line_distance_information(self, lines_input, do_analysis_stuff=False, return_class=False, info_field=None):
 
-        PRINT_OUTPUT = True
+        PRINT_OUTPUT = False
         FILTER_NEGATIVE_VALUE = True  # sometimes overlapping lines produce negative line gaps
 
         y_gaps = []

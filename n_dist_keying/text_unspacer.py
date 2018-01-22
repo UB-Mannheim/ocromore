@@ -113,7 +113,6 @@ class TextUnspacer:
             # if change1 or change2:
             # print("test")
 
-        print("text", text, "text_cmp", text_cmp)
         diff1 = self.subtract_arrays(text_tuple, text_tuple_cmp, WILDCARD_MODE, WILDCARD_COUNT, text_tuple2,0)
 
         # if len(text_tuple) != len(text_tuple2):
@@ -180,7 +179,7 @@ class TextUnspacer:
             # if change1 or change2:
                 # print("test")
 
-        print("text", text, "text_cmp", text_reference)
+        # print("text", text, "text_cmp", text_reference)
         diff1 = self.subtract_arrays(text_tuple, text_tuple_ref, WILDCARD_MODE, WILDCARD_COUNT, text_tuple_with_adj, 0)
         diff2 = self.subtract_arrays(text_tuple_ref, text_tuple, WILDCARD_MODE, WILDCARD_COUNT, text_tuple_with_adj, 1)
 
@@ -273,8 +272,8 @@ class TextUnspacer:
 
         # mark everything which is equal once
         for index_a1, entry_a1 in enumerate(arr1):
-            if index_a1 == 12:
-                print("reachd breaking point")
+            #if index_a1 == 12:
+            #    print("reachd breaking point")
 
             for index_a2, entry_a2 in enumerate(arr2):
 
@@ -291,8 +290,8 @@ class TextUnspacer:
                     else:
                         used_ref_index = index_a2
 
-                    if len(arr_ref_in_adj) <= used_ref_index:
-                        print("what")
+                    #if len(arr_ref_in_adj) <= used_ref_index:
+                    #    print("what")
 
                     entry_ref_adj = arr_ref_in_adj[used_ref_index]
                     #entry_a2_adj = arr2_in_adj[index_a2]
@@ -311,8 +310,8 @@ class TextUnspacer:
 
                             if tpldif_ctr != 0:
                                 # additional condition, the string shouldn't be order confused
-                                print("1st", entry_a1)
-                                print("2nd", entry_a2)
+                                # print("1st", entry_a1)
+                                # print("2nd", entry_a2)
                                 #if order_confusion > ORDER_CONFUSION_TRESHOLD:
                                 #    continue
                                 if non_reference_switch == 0:
