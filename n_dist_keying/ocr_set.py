@@ -146,12 +146,25 @@ class OCRset:
         else:
             return None
 
+    def set_shortest_n_distance_text(self, value):
+        if self.shortest_distance_line_index >= 0:
+            sd_line = self.shortest_distance_line
+            sd_line_new_value = self.set_line_content(sd_line, value)
+            self.set_shortest_n_distance_line(sd_line_new_value)
+        else:
+            return None
+
+
     def get_shortest_n_distance_line(self):
         if self.shortest_distance_line_index >= 0:
             line = self.shortest_distance_line
             return line
         else:
             return None
+
+    def set_shortest_n_distance_line(self, value):
+        self.shortest_distance_line = value
+
 
     def get_shortest_n_distance_index(self):
         if self.shortest_distance_line_index >= 0:
@@ -236,6 +249,23 @@ class OCRset:
             return line.ocr_text_normalized
         else:
             return line.ocr_text
+
+    def set_line_content(self, line, value):
+        """
+        Helper method to set line content, because ocropus content
+        has other access properties.
+        :param line: line element to set the value to
+        :param value: value to set to 'ocr_text_normalized' property
+        :return: line or false if line not defined
+        """
+
+        # hint: the attribute checked is created by hocr_line_normalizer
+        if line is False:
+            return False
+
+        line.ocr_text_normalized = value
+        return line
+
 
     def unspace_lines(self, list_index_to_unspace, unspaced_list_index):
 

@@ -18,10 +18,14 @@ EXPORT_ADAPTED_OCROPUS_RESULT = True
 # un-/refspacing settings:
 USE_REFSPACING = True  # instead of unspacing algorithm use the refspacing algorithm
 
+# postcorrection settings:
+KEYING_RESULT_POSTCORRECTION = True
+
 # validation settings:
 IGNORE_LINEFEED = False
 IGNORE_WHITESPACE = False
 DISPLAY_DIFFERENCES = True
+
 
 
 
@@ -113,6 +117,11 @@ ocr_comparison.print_sets(True)     # print the sets created
 ocr_comparison.do_n_distance_keying()   # do the keying, which makes the decision which is the best line for each set
 ocr_comparison.print_n_distance_keying_results()  # print keying results
 ocr_comparison.print_sets(False)    # print the sets again with decision information
+
+if KEYING_RESULT_POSTCORRECTION:
+    ocr_comparison.do_postcorrection(True)
+    print("keying results after postcorrection")
+    ocr_comparison.print_n_distance_keying_results()
 
 ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt", True)
 
