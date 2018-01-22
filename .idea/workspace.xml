@@ -4,11 +4,8 @@
     <list default="true" id="353b567f-620f-44de-9fa6-886605054a69" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../learning_python/basics1.py" afterPath="$PROJECT_DIR$/../learning_python/basics1.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_keying_result.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_keying_result.txt" />
       <change beforePath="$PROJECT_DIR$/main_n_dist_keying.py" afterPath="$PROJECT_DIR$/main_n_dist_keying.py" />
-      <change beforePath="$PROJECT_DIR$/main_unspacer.py" afterPath="$PROJECT_DIR$/main_unspacer.py" />
-      <change beforePath="$PROJECT_DIR$/n_dist_keying/hocr_line_height.py" afterPath="$PROJECT_DIR$/n_dist_keying/hocr_line_height.py" />
-      <change beforePath="$PROJECT_DIR$/n_dist_keying/text_comparator.py" afterPath="$PROJECT_DIR$/n_dist_keying/text_comparator.py" />
-      <change beforePath="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" afterPath="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main_n_dist_keying.py" pinned="true" current-in-tab="false">
+      <file leaf-file-name="main_n_dist_keying.py" pinned="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1638">
-              <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+            <state relative-caret-position="216">
+              <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
               <folding>
                 <element signature="e#202#267#0" expanded="true" />
               </folding>
@@ -93,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main_unspacer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main_unspacer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_unspacer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="252">
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#189#254#0" expanded="true" />
               </folding>
@@ -210,10 +207,10 @@
         <option value="$PROJECT_DIR$/n_dist_keying/ocr_set.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/ocr_comparison.py" />
         <option value="$PROJECT_DIR$/utils/typecasts.py" />
-        <option value="$PROJECT_DIR$/main_n_dist_keying.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/text_comparator.py" />
         <option value="$PROJECT_DIR$/main_unspacer.py" />
+        <option value="$PROJECT_DIR$/main_n_dist_keying.py" />
       </list>
     </option>
   </component>
@@ -324,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_unspacer.py">
+  <component name="RunManager" selected="Python.main_n_dist_keying.py">
     <configuration name="dictionary_comparison.py" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -479,6 +476,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="275" y="6" width="1857" height="988" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41647598" sideWeight="0.2954178" order="7" side_tool="true" content_ui="tabs" />
@@ -491,7 +489,7 @@
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.49595687" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41647598" sideWeight="0.7045822" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41647598" sideWeight="0.7045822" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -851,7 +849,7 @@
         <state relative-caret-position="810">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -861,7 +859,7 @@
         <state relative-caret-position="4374">
           <caret line="245" column="40" lean-forward="false" selection-start-line="245" selection-start-column="40" selection-end-line="245" selection-end-column="40" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#58#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -942,22 +940,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
+    <entry file="file://$PROJECT_DIR$/main_unspacer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="91" column="0" lean-forward="true" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
-            <element signature="e#202#267#0" expanded="true" />
+            <element signature="e#189#254#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_unspacer.py">
+    <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        <state relative-caret-position="216">
+          <caret line="18" column="67" lean-forward="false" selection-start-line="18" selection-start-column="67" selection-end-line="18" selection-end-column="67" />
           <folding>
-            <element signature="e#189#254#0" expanded="true" />
+            <element signature="e#202#267#0" expanded="true" />
           </folding>
         </state>
       </provider>
