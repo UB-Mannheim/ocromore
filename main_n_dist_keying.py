@@ -10,6 +10,7 @@ from n_dist_keying.hocr_line_height import LineHeightCalculator
 from n_dist_keying.textfile_generator import TextFileGenerator
 from ocr_validation.ocr_validator import OCRvalidator
 from utils.pycharm_handler import PycharmHandler
+from n_dist_keying.hocr_charinfo import get_charconfs, dump_charinfo
 
 
 # line height adaption settings:
@@ -32,10 +33,17 @@ DISPLAY_DIFFERENCES = True
 
 # Get lists of Hocr-objects from testfiles
 hocr_comparator = HocrBBoxComparator()
-ocrolist = hocr_comparator.get_ocropus_boxes("../Testfiles/oneprof_ocropus.html")
-tesslist = hocr_comparator.get_tesseract_boxes("../Testfiles/oneprof_tesseract_sure.html")
+ocrolist = hocr_comparator.get_ocropus_boxes("../Testfiles/ocropy_charconfs.hocr")
+tesslist = hocr_comparator.get_tesseract_boxes("../Testfiles/tess_charconfs.hocr")
 # abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy.hocr.html") #original abbyy tables
 abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy_tables_ok.hocr.html")
+
+# Charconfs processing
+ocro_charinfo = get_charconfs(ocrolist)
+dump_charinfo(ocro_charinfo,"../Testfiles/ocropy_charconfs")
+tess_charinfo = get_charconfs(tesslist)
+dump_charinfo(ocro_charinfo,"../Testfiles/tess_charconfs")
+end = "STOP"
 
 #todo: Possibility calculate linefeed with additional information in unnormalized boxes
 

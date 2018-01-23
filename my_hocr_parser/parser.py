@@ -216,6 +216,7 @@ class Word(HOCRElement):
 
     HOCR_WORD_TAG = "ocrx_word"
     _xwconf = None
+    _xconfs = None
 
     def __init__(self, parent, hocr_html):
         super(Word, self).__init__(hocr_html, parent, None, None, None)
@@ -224,6 +225,8 @@ class Word(HOCRElement):
         for element in titlesplit:
             if 'x_wconf' in element:
                 self._xwconf = element.strip().split(' ')[1]
+            if "x_confs" in element:
+                self._xconfs = element.strip().split(' ')[1:]
                 break
 
 
