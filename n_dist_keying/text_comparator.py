@@ -2,6 +2,7 @@ import difflib
 from ocr_validation.ocrolib_edist import Edist3
 from utils.typecasts import TypeCasts
 from utils.random import Random
+from utils.myers import MyersSequenceMatcher
 import distance as distpkg
 
 class TextComparator:
@@ -263,3 +264,22 @@ class TextComparator:
             ctrl_char = element[0:1]
             string = element[1::]
             print("Control char: ", ctrl_char, " text: ", string)
+
+
+
+
+    @staticmethod
+    def compare_ocr_strings_myers(ocr_string1, ocr_string2):
+        """
+         myers/difflib sequence matching https://github.com/GNOME/meld/blob/master/meld/matchers/myers.py
+
+         :param ocr_string1:
+         :param ocr_string2:
+         :return:
+         """
+
+        sqmatch = MyersSequenceMatcher(None, ocr_string1, ocr_string2)
+        ratio = sqmatch.ratio()
+        distance = 1 - ratio
+
+        return distance

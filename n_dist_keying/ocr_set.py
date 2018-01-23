@@ -203,7 +203,8 @@ class OCRset:
         MODE_SORENSEN = 'sorensen'
         MODE_JACCARD = 'jaccard'
         MODE_HAMMING = 'hamming'
-        mode = MODE_HAMMING # set your mode here
+        MODE_MYERS = 'myers' # use myers special difflib sequence matcher
+        mode = MODE_DIFFLIB # set your mode here
 
         # return a fixed negative value if one of the strings is not defined
         if text1 is False and text2 is False:
@@ -229,7 +230,8 @@ class OCRset:
 
         elif mode == MODE_JACCARD:
             dist = TextComparator.compare_ocr_strings_jaccard(text1, text2)
-
+        elif mode == MODE_MYERS:
+            dist = TextComparator.compare_ocr_strings_myers(text1, text2)
 
         return dist
 

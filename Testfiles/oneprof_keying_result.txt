@@ -28,9 +28,9 @@ Es werden erzeugt:
 Unter- und obergärige Biere, alkohol-
 freie Getränke, Eis.
 
-Geschäftsjahr: Kalenderjahr.
+Geschäftsjahr:Kalenderjahr.
 
-Stimmrecht d.Aktien i.d.H.-V.
+Stimmrecht d.Aktien i.d.H.-V.:
 Jenom. DM 1 000.- = 1 Stimme.
 
 Zahlstellen:
@@ -41,7 +41,7 @@ dorf und Münster (Westf.).
 Grundkapital: DM 2 920 000.-.
 Umstellung 1:1 auf DM 2 940 000.-
 durch H.-V.v.14.9.1951.
-Durch H.-V. -Beschlulßvom 17.8.1954
+Durch H.-V. -Beschluß vom 17.8.1954
 Kapitalherabsetzung um DM 20 000.-
 auf DM 2 920 000.-.
 
@@ -52,7 +52,7 @@ Ordnungsnr.d.Aktien: 586900.
 Stückelung:
 2 870 St.-Ak. zu je DM 1 000. -
 (Nr. 1 - 2 870)
-
+500 St.-Akt. zu je DM 100.-
 (Nr. 5 001 - 5 500)
 
 Sämtliche Stammaktien sind lieferbar.
@@ -64,13 +64,13 @@ Familie Dieninghoff, Münster (Mehrheit).
 Aktienkurse:
 ultimo 1948 60 %
 " 1949 6%
-1950 65
+" 1950 65 %
 " 1951. 70 %
 " 1952 52%
 " 1953 6 %
 " 1954 107 %
-1955 150
-15.Okt. 1956 147 %+)
+" 1955 150 %
+ 15. Okt. 1956 147 %
 
 +) Kurs für DM-Nennwert.
 
@@ -94,7 +94,7 @@ Aus den Bilanzen
 
 
 31.12.1954 31.12.1955
-— "Tin1000DM)
+(in1000DM)
 
 Anlagevermögen 4 703 5 367
 Umlaufvermögen 4 893 6 978
@@ -114,7 +114,7 @@ rechnungen
 Löhne und Gehälter 1 545 2 023
 Abschreibungen 1 388 2 479
 Steuern 3 368 4 343
-. Jahresertrag 7127 9 440
+ Jahresertrag 7 127 9 440
 
 
 Atlas Levante-Linie Aktiengesellschaft
