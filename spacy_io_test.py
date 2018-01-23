@@ -3,6 +3,7 @@ Ideas:
 - Improve spacy speed by using the api / server functionality
 - Use spacy for classifying stuff within af2 (table information)
 - Use spacy for calculating word similaritys for distance keying
+- Use spacy to recognize word validity and build a junk filter
 """
 
 
