@@ -1,4 +1,3 @@
-from n_dist_keying.text_comparator import TextComparator
 
 
 class Random:

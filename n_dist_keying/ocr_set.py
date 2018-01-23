@@ -203,7 +203,7 @@ class OCRset:
         MODE_SORENSEN = 'sorensen'
         MODE_JACCARD = 'jaccard'
         MODE_HAMMING = 'hamming'
-        mode = MODE_DIFFLIB # set your mode here
+        mode = MODE_HAMMING # set your mode here
 
         # return a fixed negative value if one of the strings is not defined
         if text1 is False and text2 is False:

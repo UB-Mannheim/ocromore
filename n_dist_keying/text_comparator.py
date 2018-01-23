@@ -1,6 +1,7 @@
 import difflib
 from ocr_validation.ocrolib_edist import Edist3
 from utils.typecasts import TypeCasts
+from utils.random import Random
 import distance as distpkg
 
 class TextComparator:
@@ -102,13 +103,21 @@ class TextComparator:
         #if difference_count == 1:
         #   print("yes")
 
-
         return difference_count, difference_indices
 
     @staticmethod
-    def compare_ocr_strings_hamming(ocr_string1, ocr_string2, pad_difference = True):
-        # pad stuff here :) ?
-        # todo !!!
+    def compare_ocr_strings_hamming(ocr_string1, ocr_string2, pad_difference=True):
+
+        if pad_difference is True:
+            len_str1 = len(ocr_string1)
+            len_str2 = len(ocr_string2)
+            if len_str1 > len_str2:
+                ocr_string2 = Random.append_pad_values(ocr_string2,len_str1-len_str2)
+            elif len_str2 > len_str1:
+                ocr_string1 = Random.append_pad_values(ocr_string1,len_str2-len_str1)
+
+        # print("Do Hammingdist ",ocr_string1," to " ,ocr_string2)
+
         result = distpkg.hamming(ocr_string1, ocr_string2)
         return result
 
