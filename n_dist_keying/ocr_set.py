@@ -2,6 +2,8 @@ from n_dist_keying.distance_storage import DistanceStorage
 from n_dist_keying.text_comparator import TextComparator
 from n_dist_keying.text_unspacer import TextUnspacer
 
+from multi_sequence_alignment.msa_handler import MsaHandler
+
 class OCRset:
     """
         A storage class for a y_mean value
@@ -24,6 +26,7 @@ class OCRset:
         self._refspaced = False # indicates the set_lines was reference spaced
         self._text_unspacer = TextUnspacer()
         self.shortest_distance_line = None  # holder element for recognized shortest distance line
+        self._best_msa_text =""
 
     def edit_line_set_value(self, set_index, new_value):
         self._set_lines[set_index] = new_value
@@ -36,6 +39,8 @@ class OCRset:
         value_text = self.get_line_content(value_line)
         return value_text
 
+    def get_msa_best_text(self):
+        return self._best_msa_text
 
     @property
     def size(self):
@@ -111,12 +116,12 @@ class OCRset:
                 print("problem creating printable lineset ")
 
         lineset_acc = lineset_acc + "||"
-
+        msa_str = str(self._best_msa_text)
         if diff_only is True:
             if one_line_is_false is True:
-                print(str(self.y_mean) + "||"+str(self.shortest_distance_line_index)+"||" + lineset_acc)
+                print(str(self.y_mean) + "||"+msa_str+"||"+str(self.shortest_distance_line_index)+"||" + lineset_acc)
         else:
-            print(str(self.y_mean)+"||"+str(self.shortest_distance_line_index)+"||"+lineset_acc)
+            print(str(self.y_mean)+"||"+msa_str+"||"+str(self.shortest_distance_line_index)+"||"+lineset_acc)
 
 
 
@@ -137,6 +142,42 @@ class OCRset:
         shortest_dist_index = self.d_storage.get_shortest_distance_index()
         self.shortest_distance_line_index = shortest_dist_index
         self.shortest_distance_line = self._set_lines[shortest_dist_index]
+
+    def calculate_msa_best(self):
+        try:
+            line_1 = self.get_line_content(self._set_lines[0])
+            line_2 = self.get_line_content(self._set_lines[1]) # should be best
+            line_3 = self.get_line_content(self._set_lines[2])
+
+            from utils.random import Random
+
+            lines = [line_1, line_2, line_3]
+
+            line_1_ok = not Random.is_false_true_or_none(line_1)
+            line_2_ok = not Random.is_false_true_or_none(line_2)
+            line_3_ok = not Random.is_false_true_or_none(line_3)
+            ok_lines = [line_1_ok, line_2_ok, line_3_ok]
+            not_ok_indices = []
+            ok_indices = []
+            for ok_index, ok in enumerate(ok_lines):
+                if ok is True:
+                    # not_ok_indices.append(ok_index)
+                    ok_indices.append(ok_index)
+
+            ok_len = len(ok_indices)
+
+            if ok_len ==1:
+                result = lines[ok_indices[0]]
+            elif ok_len == 0:
+                result = None
+            elif ok_len == 2:
+                result = lines[ok_indices[0]]
+            else:
+                result = MsaHandler.get_best_of_three(line_1, line_2, line_3)
+
+            self._best_msa_text = result
+        except:
+            self._best_msa_text = self.get_line_content(self._set_lines[1])
 
     def get_shortest_n_distance_text(self):
         if self.shortest_distance_line_index >= 0:
@@ -176,6 +217,14 @@ class OCRset:
         line = self.get_shortest_n_distance_text()
         if line is not None and line is not False:
             print(line)
+
+    def print_msa_best_line(self):
+        msa_text = self._best_msa_text
+        if msa_text is not None and msa_text is not False:
+            print(msa_text)
+        else:
+            print(str(msa_text))
+
 
     def compare_with_other_lines(self, line_index, line):
         ocr_text = self.get_line_content(line)
