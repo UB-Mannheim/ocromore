@@ -27,19 +27,18 @@ def hocr2charinfo():
     return 0
 
 def plot_charinfo(ocro_charinfo,tess_charinfo,GROUPS=False,plot = "Histo"):
-    # Plot
+    # Plot Group
     if GROUPS:
         charinfosdict = {"Ocropus": ocro_charinfo, "Tesseract": tess_charinfo}
+        groupmembers = ["Zeichen", "Buchstaben", "Zahlen", "Satzzeichen"]
         for ocr in charinfosdict:
-            labels = ["Zeichen", "Buchstaben", "Zahlen", "Satzzeichen"]
-            data = set()
-            for label in labels:
-                data.update([float(x) for x in charinfosdict[ocr].get(label, {}).get("Confs", [])])
-
-            data = ([float(x) for x in charinfosdict[ocr].get("Zeichen", {}).get("Confs", [])],
-                    [float(x) for x in charinfosdict[ocr].get("Buchstaben", {}).get("Confs", [])],
-                    [float(x) for x in charinfosdict[ocr].get("Zahlen", {}).get("Confs", [])],
-                    [float(x) for x in charinfosdict[ocr].get("Satzzeichen", {}).get("Confs", [])])
+            data = []
+            for member in groupmembers:
+                data.append([float(x) for x in charinfosdict[ocr].get(member, {}).get("Confs", [])])
+            #data = ([float(x) for x in charinfosdict[ocr].get("Zeichen", {}).get("Confs", [])],
+            #        [float(x) for x in charinfosdict[ocr].get("Buchstaben", {}).get("Confs", [])],
+            #        [float(x) for x in charinfosdict[ocr].get("Zahlen", {}).get("Confs", [])],
+            #        [float(x) for x in charinfosdict[ocr].get("Satzzeichen", {}).get("Confs", [])])
             # Settings
             output = "/home/jkamlah/Coding/python_ocr/Testfiles/charconfs/figs/"
             bins_input = 10
@@ -68,19 +67,16 @@ def plot_charinfo(ocro_charinfo,tess_charinfo,GROUPS=False,plot = "Histo"):
             plt.savefig(output + "Compare_ocropus" + fileformat)
             plt.close()
 
+    # Plot single Character
     for char in (ocro_charinfo.keys() | tess_charinfo.keys()):
         # Data
         data = ([float(x) for x in ocro_charinfo.get(char, {}).get("Confs", [])],
                 [float(x) for x in tess_charinfo.get(char, {}).get("Confs", [])])
-        data = ([float(x) for x in ocro_charinfo.get("Zeichen", {}).get("Confs", [])],
-                [float(x) for x in ocro_charinfo.get("Buchstaben", {}).get("Confs", [])],
-                [float(x) for x in ocro_charinfo.get("Zahlen", {}).get("Confs", [])],
-                [float(x) for x in ocro_charinfo.get("Satzzeichen", {}).get("Confs", [])])
         # Settings
         output = "/home/jkamlah/Coding/python_ocr/Testfiles/charconfs/figs/"
         bins_input = 10
-        color = ['red', 'lime']
-        labels = ["Zeichen", "Buchstaben", "Zahlen", "Satzzeichen"]
+        colors = ['red', 'lime']
+        labels = ["Ocropus","Tesseract"]
         fileformat = ".png"
 
         # Plot
@@ -91,7 +87,6 @@ def plot_charinfo(ocro_charinfo,tess_charinfo,GROUPS=False,plot = "Histo"):
         if plot == "Histo":
             # the histogram of the data
             # ax.hist(data, bins_input, histtype='bar',stacked=True)
-            colors = ['red', 'tan', 'lime', 'blue']
             ax.hist(data, bins_input, density=True, histtype='bar', color=colors, label=labels)
             plt.legend(loc='best')
             # label_patch = mpatches.Patch(color=, label=["Zeichen","Buchstaben","Zahlen","Satzzeichen"])
@@ -100,10 +95,10 @@ def plot_charinfo(ocro_charinfo,tess_charinfo,GROUPS=False,plot = "Histo"):
         else:
             bplot1 = ax.boxplot(data, vert=True, patch_artist=True, labels=labels, showfliers=False)
             # plt.ylim((75, 100))
-        ax.set_title("Vergleich Ocropus")
+        ax.set_title("Vergleich von: "+char)
         ax.yaxis.grid(True)
         fig.tight_layout()
-        plt.savefig(output + "Compare_ocropus" + fileformat)
+        plt.savefig(output + char + fileformat)
         plt.close()
     return 0
 
