@@ -176,7 +176,8 @@ class OCRset:
                 result = MsaHandler.get_best_of_three(line_1, line_2, line_3)
 
             self._best_msa_text = result
-        except:
+        except Exception as e:
+            print("Excption in MSA, just taking line prio exception:",e)
             self._best_msa_text = self.get_line_content(self._set_lines[1])
 
     def get_shortest_n_distance_text(self):

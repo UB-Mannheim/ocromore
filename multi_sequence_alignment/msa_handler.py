@@ -82,17 +82,24 @@ class MsaHandler(object):
             (str1_starti, str2_starti, match_length) = block
 
             str1_substr = line_to_fill[str1_starti:str1_starti + match_length]
-            str_1_to_fill=line_to_fill[last_start:str1_starti + match_length]
+            str_1_to_fill = line_to_fill[last_start:str1_starti + match_length]
             last_start = str1_starti + match_length
+
             str2_substr = reference_line[str2_starti:str2_starti + match_length]
-            if str2_starti > (transition+str1_starti):
+            if match_length > 1 and str2_starti > (transition+str1_starti):
                 diff = str2_starti - (transition + str1_starti)
+                #diff = str2_starti - (transition + last_start)
+
+
                 transition += diff
                 #line_filled += wildcard_character
                 line_filled = Random.append_pad_values(line_filled, diff, wildcard_character)
             line_filled += str_1_to_fill
 
-
+        # just a  trick to fill up in some cases
+        length_diff = len(reference_line) - len(line_filled)
+        if length_diff > 0:
+            line_filled = Random.append_pad_values(line_filled, length_diff, wildcard_character)
 
         return line_filled
 
@@ -136,23 +143,25 @@ class MsaHandler(object):
         print(len(res_one_1), res_one_1)
         print(len(pivot_msa), pivot_msa)
         print(len(res_three_2), res_three_2)
-
+        #if res_one_1.__contains__("Stückelung") is True:
+        #    print("asd")
+        
         res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa)
         res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa)
 
         res_final_1 = res_one_1_filled
         res_final_2 = pivot_msa
-        res_final_3 = res_three_2
-
+        # res_final_3 = res_three_2
+        res_final_3 = res_three_2_filled
         """
         res_final_1, holder1 = MsaHandler.compare(list_res_one_1, list_pivot_msa)
         res_final_2 = pivot_msa
         res_final_3, holder2 = MsaHandler.compare(list_res_three_2, list_pivot_msa)
         """
         #j4t
-        rres_final_1, rholder1 = MsaHandler.compare(list_pivot_msa, list_res_one_1)
-        rres_final_2 = pivot_msa
-        rres_final_3, rholder2 = MsaHandler.compare( list_pivot_msa, list_res_three_2)
+        #rres_final_1, rholder1 = MsaHandler.compare(list_pivot_msa, list_res_one_1)
+        #rres_final_2 = pivot_msa
+        #rres_final_3, rholder2 = MsaHandler.compare( list_pivot_msa, list_res_three_2)
 
 
         best, best_stripped = MsaHandler.best_of_three_simple(res_final_1, res_final_2, res_final_3, 1)  # res two is the best element
