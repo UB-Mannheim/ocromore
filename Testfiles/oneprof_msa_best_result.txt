@@ -1,10 +1,10 @@
 Sitz: (2la) Münster
-(Westf.), Gre
+(Westf.), Grevener
 Straße 89.
 
 Fernruf: 2 28 75 - 77.
 
-Vorstand
+Vorstand:
 Arnold Holtmann, Münster
 (Westf.), Vors.;
 Dr.jur. Gottfried Wolters, Münster
@@ -14,7 +14,7 @@ Karl Rhode, Münster (Westf.).
 Aufsichtsrat:
 Dr. Werner Reineke I, Münster (Westf.),
 Vors.;
-Will Marx, Düsseldorf, stellv. Vors.
+Will Marx, Düsseldorf, stellv. Vors.;
 Frau Gertrud Holtmann, Münster;
 Frau Maria Hallermann, Münster;
 Arbeitnehmervertreter:
@@ -23,7 +23,7 @@ Albert Kluge, Münster.
 
 Gründung: 1928.
 
-Tätigkeitsgebiet
+Tätigkeitsgebiet:
 Es werden erzeugt:
 Unter- und obergärige Biere, alkohol-
 freie Getränke, Eis.
@@ -49,7 +49,7 @@ Börsennotiz: Düsseldorf (amtl.).
 
 Ordnungsnr.d.Aktien: 586900.
 
-Stückelung:
+Stückelung: -
 2 870 St.-Ak. zu je DM 1 000. -
 (Nr. 1 - 2 870)
 500 St.-Akt. zu je DM 100.-
@@ -87,7 +87,7 @@ Dividenden auf Stammaktien:
 1955: 4 % (Div.Sch.Nr. 1)
 
 
-ZZur Geschftslage
+Zur Geschäftslage:
 Das Geschäftsjahr 1955 erbrachte eine
 überdurchschnittliche Ausstoßsteigerung,
 die sich auch auf die alkoholfreien Ge-

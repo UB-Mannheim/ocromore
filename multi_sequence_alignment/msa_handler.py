@@ -69,6 +69,8 @@ class MsaHandler(object):
     @staticmethod
     def fillup_wildcarded_result(line_to_fill, reference_line, wildcard_character='¦'):
         import difflib
+        from utils.random import Random
+
         s = difflib.SequenceMatcher(None, line_to_fill, reference_line)
 
         mbs = s.get_matching_blocks()
@@ -84,8 +86,10 @@ class MsaHandler(object):
             last_start = str1_starti + match_length
             str2_substr = reference_line[str2_starti:str2_starti + match_length]
             if str2_starti > (transition+str1_starti):
-                transition += str2_starti - (transition + str1_starti)
-                line_filled +=wildcard_character
+                diff = str2_starti - (transition + str1_starti)
+                transition += diff
+                #line_filled += wildcard_character
+                line_filled = Random.append_pad_values(line_filled, diff, wildcard_character)
             line_filled += str_1_to_fill
 
 
@@ -163,6 +167,7 @@ class MsaHandler(object):
                 print("E:", best_stripped)
                 print("F:", best_stripped_non_multi_whitespace)
             """
+            print("0:", res_one_1)
             print("A:",res_final_1)
             print("B:",res_final_2)
             print("C:",res_final_3)
