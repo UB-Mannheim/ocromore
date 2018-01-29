@@ -54,7 +54,7 @@ class SequenceAlignment(object):
     def alignSequences(sequence1=[], sequence2=[]):
         # lcs is the Longest Common Subsequence function.
         cs = LCS.lcs(sequence1, sequence2)
-
+        #cs = LCS.lcs_with_wildcard(sequence1, sequence2)
         if cs == []:
             return sequence1 + [''] * len(sequence2), \
                    [''] * len(sequence1) + sequence2

@@ -71,3 +71,46 @@ class LCS(object):
                 sb = sb[1:] + ['']
 
         return longest
+
+    @staticmethod
+    def lcs_with_wildcard(a=[], b=[], wildcard='¦'):
+        if a == [] or b == []:
+            return []
+
+        l = len(a) + len(b) - 1
+
+        # Fill non-comparable elements with null spaces.
+        sa = a + (len(b) - 1) * ['']
+        sb = (len(a) - 1) * [''] + b
+
+        longest = []
+
+        for k in range(l):
+            cur = []
+
+            for c in range(l):
+                if sa[c] != '' and sb[c] != '' and sa[c] == sb[c]:
+                    cur.append(sa[c])
+                    if sa[c]==wildcard and sb[c]==wildcard:
+                        print('ok') # this is unlikely
+                elif sa[c] == wildcard and sb[c]!='':
+                    cur.append(sa[c])
+                elif sb[c] == wildcard and sa[c]!='':
+                    cur.append(sa[c])
+                else:
+                    if len(cur) > len(longest):
+                        longest = cur
+
+                    cur = []
+
+            if len(cur) > len(longest):
+                longest = cur
+
+            if sa[len(sa) - 1] == '':
+                # Shift 'a' to the right.
+                sa = [''] + sa[: len(sa) - 1]
+            else:
+                # Shift 'b' to the left.
+                sb = sb[1:] + ['']
+
+        return longest

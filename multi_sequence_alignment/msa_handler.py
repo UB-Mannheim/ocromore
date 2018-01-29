@@ -67,30 +67,106 @@ class MsaHandler(object):
         return accumulated_chars, accumulated_chars_stripped
 
     @staticmethod
+    def fillup_wildcarded_result(line_to_fill, reference_line, wildcard_character='¦'):
+        import difflib
+        s = difflib.SequenceMatcher(None, line_to_fill, reference_line)
+
+        mbs = s.get_matching_blocks()
+
+        line_filled = ""
+        last_start=0
+        transition = 0
+        for idx, block in enumerate(mbs):
+            (str1_starti, str2_starti, match_length) = block
+
+            str1_substr = line_to_fill[str1_starti:str1_starti + match_length]
+            str_1_to_fill=line_to_fill[last_start:str1_starti + match_length]
+            last_start = str1_starti + match_length
+            str2_substr = reference_line[str2_starti:str2_starti + match_length]
+            if str2_starti > (transition+str1_starti):
+                transition += str2_starti - (transition + str1_starti)
+                line_filled +=wildcard_character
+            line_filled += str_1_to_fill
+
+
+
+        return line_filled
+
+
+    @staticmethod
     def get_best_of_three(text_1, text_2, text_3):
 
         PRINT_RESULTS = True
         # list_one = list('1. Wie funktioniert der Algorithmus')
         # list_two = list('2. Wie funktioniert hier der Algorithmus')  # this is the pivot element
         # list_three = list('3. Wie der Algorithmus')
+
+        #text_1 = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
+        #text_2 = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
+        #text_3 = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
+
         list_one = list(text_1)
         list_two = list(text_2)  # this is the pivot element
         list_three = list(text_3)
 
         res_one_1, res_two_1 = MsaHandler.compare(list_one, list_two)
+
+
         res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
 
+        list_res_one_1 = list(res_one_1)
+        list_res_two_1 = list(res_two_1)
+
+        list_res_two_2 = list(res_two_2)
+        list_res_three_2 = list(res_three_2)
+
+        list_pivot_msa = None
+        pivot_msa = None
+        if len(list_res_two_1) >= len(list_res_two_2):
+            list_pivot_msa = list_res_two_1
+            pivot_msa = res_two_1
+        else:
+            list_pivot_msa = list_res_two_2
+            pivot_msa = res_two_2
+
+        print(len(res_one_1), res_one_1)
+        print(len(pivot_msa), pivot_msa)
+        print(len(res_three_2), res_three_2)
+
+        res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa)
+        res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa)
+
+        res_final_1 = res_one_1_filled
+        res_final_2 = pivot_msa
+        res_final_3 = res_three_2
+
+        """
+        res_final_1, holder1 = MsaHandler.compare(list_res_one_1, list_pivot_msa)
+        res_final_2 = pivot_msa
+        res_final_3, holder2 = MsaHandler.compare(list_res_three_2, list_pivot_msa)
+        """
+        #j4t
+        rres_final_1, rholder1 = MsaHandler.compare(list_pivot_msa, list_res_one_1)
+        rres_final_2 = pivot_msa
+        rres_final_3, rholder2 = MsaHandler.compare( list_pivot_msa, list_res_three_2)
 
 
-        best, best_stripped = MsaHandler.best_of_three_simple(res_one_1, res_two_2, res_three_2, 1)  # res two is the best element
+        best, best_stripped = MsaHandler.best_of_three_simple(res_final_1, res_final_2, res_final_3, 1)  # res two is the best element
         best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
         if PRINT_RESULTS:
-            print("A:", res_one_1)
-            print("B:", res_two_2)
-            print("C:", res_three_2)
+            """
+                print("A:", res_one_1)
+                print("B:", res_two_2)
+                print("C:", res_three_2)
+                print("D:", best)
+                print("E:", best_stripped)
+                print("F:", best_stripped_non_multi_whitespace)
+            """
+            print("A:",res_final_1)
+            print("B:",res_final_2)
+            print("C:",res_final_3)
             print("D:", best)
             print("E:", best_stripped)
             print("F:", best_stripped_non_multi_whitespace)
-
         return best_stripped_non_multi_whitespace
