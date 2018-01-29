@@ -5,8 +5,11 @@ from n_dist_keying.ocr_comparison import OCRcomparison
 from n_dist_keying.ocr_set import OCRset
 from n_dist_keying.marker import Marker
 import pandas as pd
+from pandas.io.json import json_normalize
 import numpy as np
 import matplotlib.pyplot as plt
+import sys
+
 
 class HocrDFComparator(object):
 
@@ -23,7 +26,7 @@ class HocrDFComparator(object):
         document = HOCRDocument(full_path, is_path=True)
         return document
 
-    def get_ocropus_df(self, filename):
+    def get_ocropus_json(self, filename):
         """
         Gets the box information for ocropus
         :param filename: name of the file to check for boxes
@@ -48,21 +51,28 @@ class HocrDFComparator(object):
                 liner = Line(document, element)
                 for widx, word in enumerate(liner.words):
                     for cidx, char in enumerate(word.ocr_text):
-                        dfdict[idx] = {}
-                        dfdict[idx]["ocr"]="Ocropus"
-                        dfdict[idx]["lineidx"]=lidx
-                        dfdict[idx]["wordidx"]=widx
-                        dfdict[idx]["charidx"]=cidx
-                        dfdict[idx]["char"]=char
-                        dfdict[idx]["x_confs"]=word._xconfs[cidx]
-                        dfdict[idx]["w_confs"]=word._xwconf
-                        idx += 1
+                        if len(word._xconfs) > cidx:
+                            dfdict[idx] = {
+                                "ocr"     : "Ocropus",
+                                "line_idx"  : lidx,
+                                "word_idx"  : widx,
+                                "char_idx"  : cidx,
+                                "char"     : char,
+                                "char_gt"   : None,
+                                "x_confs"  : word._xconfs[cidx],
+                                "w_confs"  : word._xwconf,
+                                "weight"   : None,
+                                "line_vs"  : word._xwconf,
+                                "line_bbox": (),
+                                "word_bbox": (),
+                            }
+                            idx += 1
                 lidx+=1
-        df = pd.DataFrame.from_dict(dfdict,orient='index')
-        print(df)
-        return df
+        #df = pd.DataFrame.from_dict(dfdict,orient='index')
+        #df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
+        return dfdict
 
-    def get_tesseract_df(self, filename):
+    def get_tesseract_json(self, filename):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]
@@ -70,18 +80,29 @@ class HocrDFComparator(object):
         # assign tesseract page for further usage
         self._tesseract_page = page
 
-        return_list = []
-
+        dfdict = {}
+        idx = 0
+        lidx = 0
         for c_area in page.areas:
             for c_paragraph in c_area.paragraphs:
                 for c_line in c_paragraph.lines:
-                    return_list.append(c_line)
-                    # for c_word in c_line.words:
-                    # print(c_word.ocr_text)
+                    for widx, word in enumerate(c_line.words):
+                        for cidx, char in enumerate(word.ocr_text):
+                            if len(word._xconfs) > cidx:
+                                dfdict[idx] = {}
+                                dfdict[idx]["ocr"] = "Tesseract"
+                                dfdict[idx]["lineidx"] = lidx
+                                dfdict[idx]["wordidx"] = widx
+                                dfdict[idx]["charidx"] = cidx
+                                dfdict[idx]["char"] = char
+                                dfdict[idx]["x_confs"] = word._xconfs[cidx]
+                                dfdict[idx]["w_confs"] = word._xwconf
+                                idx += 1
+                    lidx += 1
+        #df = pd.DataFrame.from_dict(dfdict, orient='index')
+        return dfdict
 
-        return return_list
-
-    def get_abbyy_df(self, filename):
+    def get_abbyy_json(self, filename):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]
