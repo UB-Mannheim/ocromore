@@ -10,9 +10,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 from sqlalchemy import create_engine
+import zlib
 
 
-class HocrDFComparator(object):
+class HocrSQLComparator(object):
 
     def __init__(self):
         self._ocropus_page = None
@@ -27,7 +28,7 @@ class HocrDFComparator(object):
         document = HOCRDocument(full_path, is_path=True)
         return document
 
-    def get_ocropus_json(self, filename):
+    def create_table_ocropus(self, filename, ocr_profile=None):
         """
         Gets the box information for ocropus
         :param filename: name of the file to check for boxes
@@ -37,7 +38,6 @@ class HocrDFComparator(object):
         document = self.get_hocr_document(filename)
         page = document.pages[0]
 
-        #df = pd.DataFrame()
         # assign ocropus page
         self._ocropus_page = page
 
@@ -46,37 +46,63 @@ class HocrDFComparator(object):
         lidx = 0
         dfdict = {}
         idx = 0
+        ocr = "Ocropus"
+        if not ocr_profile:
+            ocr_profile = "default"
         for element in contents:
             res = str(element).find("span")
             if res >= 1:
-                liner = Line(document, element)
-                for widx, word in enumerate(liner.words):
+                line = Line(document, element)
+                for widx, word in enumerate(line.words):
                     for cidx, char in enumerate(word.ocr_text):
                         if len(word._xconfs) > cidx:
                             dfdict[idx] = {
-                                "ocr"           : "Ocropus",
-                                "ocr_profile"   : "default",
+                                "ocr"           : ocr,
+                                "ocr_profile"   : ocr_profile,
                                 "line_idx"      : lidx,
                                 "word_idx"      : widx,
                                 "char_idx"      : cidx,
                                 "char"          : char,
-                                "char_eval"     : None,
+                                "char_eval"     : "",
                                 "char_weight"   : -1.0,
-                                "x_confs"       : word._xconfs[cidx],
-                                "w_confs"       : word._xwconf,
+                                "x_confs"       : float(word._xconfs[cidx])+4,
+                                "w_confs"       : float(word._xwconf),
                                 "line_match"    : -1,
-                                "line_bbox"     : ' '.join([str(x) for x in liner.coordinates]),
-                                "word_bbox"     : ' '.join([str(x) for x in word.coordinates]),
+                                "line_x0"       : int(line.coordinates[0]),
+                                "line_x1"       : int(line.coordinates[1]),
+                                "line_y0"       : int(line.coordinates[2]),
+                                "line_y1"       : int(line.coordinates[3]),
+                                "word_x0"       : int(word.coordinates[0]),
+                                "word_x1"       : int(word.coordinates[1]),
+                                "word_y0"       : int(word.coordinates[2]),
+                                "word_y1"       : int(word.coordinates[3]),
                             }
                             idx += 1
                 lidx+=1
-        df = pd.DataFrame.from_dict(dfdict,orient='index')
-        df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
-        engine = create_engine('sqlite:////home/jkamlah/Coding/akf-sql/test.db', echo=True)
-        df.to_sql("Firsttest",engine)
-        return df
 
-    def get_tesseract_json(self, filename):
+        # creating and indexing the dataframe
+        df_new = pd.DataFrame.from_dict(dfdict,orient='index')
+        df_new = df_new.set_index(['ocr','line_idx','word_idx','char_idx'])
+
+
+        # creating and appending database
+        engine = create_engine('sqlite:////media/sf_ShareVB/test.db', echo=True)
+        tablename = str(os.path.basename(filename)).split(".")[0]
+
+        # try to create a table
+        try:
+            df_new.to_sql(tablename,engine)
+            print(f'The table:"{tablename}" was created!')
+        except:
+            # loading the table
+            df_old = pd.read_sql_table(tablename,engine)
+            df_old = df_old.set_index(['ocr','line_idx','word_idx','char_idx'])
+            df_old.update(df_new)
+            df_old.to_sql(tablename,engine,if_exists='replace')
+            print(f'The table:"{tablename}" was updated!')
+        return 0
+
+    def create_table_tesseract(self, filename, ocr_profile=None):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]
@@ -87,26 +113,49 @@ class HocrDFComparator(object):
         dfdict = {}
         idx = 0
         lidx = 0
-        for c_area in page.areas:
-            for c_paragraph in c_area.paragraphs:
-                for c_line in c_paragraph.lines:
-                    for widx, word in enumerate(c_line.words):
+        ocr = "Tesseract"
+        if not ocr_profile:
+            ocr_profile = "default"
+        for area in page.areas:
+            for paragraph in area.paragraphs:
+                for line in paragraph.lines:
+                    for widx, word in enumerate(line.words):
                         for cidx, char in enumerate(word.ocr_text):
                             if len(word._xconfs) > cidx:
-                                dfdict[idx] = {}
-                                dfdict[idx]["ocr"] = "Tesseract"
-                                dfdict[idx]["lineidx"] = lidx
-                                dfdict[idx]["wordidx"] = widx
-                                dfdict[idx]["charidx"] = cidx
-                                dfdict[idx]["char"] = char
-                                dfdict[idx]["x_confs"] = word._xconfs[cidx]
-                                dfdict[idx]["w_confs"] = word._xwconf
+                                dfdict[idx] = {
+                                    "ocr"           : ocr,
+                                    "ocr_profile"   : ocr_profile,
+                                    "line_idx"      : lidx,
+                                    "word_idx"      : widx,
+                                    "char_idx"      : cidx,
+                                    "char"          : char,
+                                    "char_eval"     : "",
+                                    "char_weight"   : -1.0,
+                                    "x_confs"       : word._xconfs[cidx],
+                                    "w_confs"       : word._xwconf,
+                                    "line_match"    : -1,
+                                    "line_x0"       : line.coordinates[0],
+                                    "line_x1"       : line.coordinates[1],
+                                    "line_y0"       : line.coordinates[2],
+                                    "line_y1"       : line.coordinates[3],
+                                    "word_x0"       : word.coordinates[0],
+                                    "word_x1"       : word.coordinates[1],
+                                    "word_y0"       : word.coordinates[2],
+                                    "word_y1"       : word.coordinates[3],
+                                    "uid"           : ' '.join([ocr,ocr_profile,str(lidx),str(widx),str(cidx)]),
+                                }
                                 idx += 1
                     lidx += 1
-        #df = pd.DataFrame.from_dict(dfdict, orient='index')
+        df = pd.DataFrame.from_dict(dfdict, orient='index')
+        # obsolete?
+        # df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
+
+        df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
+        engine = create_engine('sqlite:////home/jkamlah/Coding/akf-sql/test.db', echo=True)
+        df.to_sql(str(os.path.basename(filename)).split(".")[0], engine, if_exists='append')
         return dfdict
 
-    def get_abbyy_json(self, filename):
+    def create_table_abby(self, filename):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]

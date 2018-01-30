@@ -3,13 +3,14 @@
    files are loaded to python-objects here and are then compared
    with different methods. One of them is the n-dist-keying
 """
-from n_dist_keying.hocr_df_comparator import HocrDFComparator
+from n_dist_keying.hocr_sql_comparator import HocrSQLComparator
 from n_dist_keying.hocr_charinfo import get_charconfs, dump_charinfo, merge_charinfo
 import glob
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import pandas as pd
+import json
 
 def hocr2charinfo():
     # Get lists of Hocr-objects from testfiles
@@ -17,15 +18,11 @@ def hocr2charinfo():
     files = glob.iglob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/**/*.hocr", recursive=True)
     for file in files:
         if "ocro" in file:
-            ocrolist = hocr_comparator.get_ocropus_df(file)
-            ocro_charinfo = get_charconfs(ocrolist)
-            dump_charinfo(ocro_charinfo, file[:-5] + "_charfons")
-
+           hocr_comparator.create_table_ocropus(file)
         # Charconfs processing
         if "tess" in file:
-            tesslist = hocr_comparator.get_tesseract_df(file)
-            tess_charinfo = get_charconfs(tesslist)
-            dump_charinfo(tess_charinfo, file[:-5] + "_charfons")
+            hey = "HEY"
+            #jsondata = hocr_comparator.get_tesseract_json(file)
     return 0
 
 def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
