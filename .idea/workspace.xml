@@ -4,12 +4,15 @@
     <list default="true" id="353b567f-620f-44de-9fa6-886605054a69" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../learning_python/basics1.py" afterPath="$PROJECT_DIR$/../learning_python/basics1.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_abbyy.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_abbyy.txt" />
+      <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_abbyy_unspaced_lha.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_abbyy_unspaced_lha.txt" />
       <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_keying_result.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_keying_result.txt" />
-      <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_msa_best_result.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_msa_best_result.txt" />
-      <change beforePath="$PROJECT_DIR$/main_n_dist_keying.py" afterPath="$PROJECT_DIR$/main_n_dist_keying.py" />
+      <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_ocropus_unspaced_lha.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_ocropus_unspaced_lha.txt" />
+      <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_tesseract_sure.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_tesseract_sure.txt" />
+      <change beforePath="$PROJECT_DIR$/main_unspacer.py" afterPath="$PROJECT_DIR$/main_unspacer.py" />
       <change beforePath="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" afterPath="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" />
-      <change beforePath="$PROJECT_DIR$/n_dist_keying/ocr_comparison.py" afterPath="$PROJECT_DIR$/n_dist_keying/ocr_comparison.py" />
-      <change beforePath="$PROJECT_DIR$/n_dist_keying/ocr_set.py" afterPath="$PROJECT_DIR$/n_dist_keying/ocr_set.py" />
+      <change beforePath="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" afterPath="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" />
+      <change beforePath="$PROJECT_DIR$/n_dist_keying/textfile_generator.py" afterPath="$PROJECT_DIR$/n_dist_keying/textfile_generator.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,8 +26,8 @@
       <file leaf-file-name="main_n_dist_keying.py" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="141" column="31" lean-forward="false" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="47" />
+            <state relative-caret-position="-133">
+              <caret line="84" column="28" lean-forward="true" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
               <folding>
                 <element signature="e#202#267#0" expanded="true" />
               </folding>
@@ -35,8 +38,18 @@
       <file leaf-file-name="text_comparator.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/n_dist_keying/text_comparator.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="220" selection-end-column="77" />
+            <state relative-caret-position="180">
+              <caret line="225" column="11" lean-forward="false" selection-start-line="225" selection-start-column="11" selection-end-line="225" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="text_unspacer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/n_dist_keying/text_unspacer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -45,28 +58,18 @@
       <file leaf-file-name="ocr_comparison.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_comparison.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="42" />
+            <state relative-caret-position="153">
+              <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="longest_common_subsequence.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/longest_common_subsequence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1764">
-              <caret line="98" column="20" lean-forward="false" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ocr_set.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ocr_set.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_set.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-472">
-              <caret line="147" column="105" lean-forward="false" selection-start-line="147" selection-start-column="105" selection-end-line="147" selection-end-column="105" />
+            <state relative-caret-position="153">
+              <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -77,8 +80,8 @@
       <file leaf-file-name="msa_handler.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-328">
-              <caret line="141" column="33" lean-forward="true" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+            <state relative-caret-position="-172">
+              <caret line="147" column="9" lean-forward="false" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
@@ -86,11 +89,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="msa_algorithm.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/msa_algorithm.py">
+      <file leaf-file-name="main_unspacer.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main_unspacer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-941">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="303">
+              <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="oneprof_tesseract_sure.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_tesseract_sure.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ocr_validator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ocr_validation/ocr_validator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="172" column="18" lean-forward="false" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="textfile_generator.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/n_dist_keying/textfile_generator.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="353">
+              <caret line="40" column="88" lean-forward="true" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -107,7 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ultimo</find>
       <find>line_d1e460</find>
       <find>get_</find>
       <find>median</find>
@@ -137,6 +169,7 @@
       <find>print_s</find>
       <find>calculate_msa</find>
       <find>ocropus_text_file_path</find>
+      <find>filepath_abbyy_txt</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -175,11 +208,8 @@
         <option value="$PROJECT_DIR$/utils/pycharm_handler.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/marker.py" />
         <option value="$PROJECT_DIR$/utils/queues.py" />
-        <option value="$PROJECT_DIR$/n_dist_keying/textfile_generator.py" />
         <option value="$PROJECT_DIR$/ocr_validation/ocrolib_edist.py" />
         <option value="$PROJECT_DIR$/utils/typecasts.py" />
-        <option value="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" />
-        <option value="$PROJECT_DIR$/main_unspacer.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/text_corrector.py" />
         <option value="$PROJECT_DIR$/spacy_io_test.py" />
         <option value="$PROJECT_DIR$/textblob_testing_deutsch.py" />
@@ -191,10 +221,14 @@
         <option value="$PROJECT_DIR$/utils/random.py" />
         <option value="$PROJECT_DIR$/multi_sequence_alignment/longest_common_subsequence.py" />
         <option value="$PROJECT_DIR$/multi_sequence_alignment/sequence_alignment.py" />
-        <option value="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/ocr_comparison.py" />
-        <option value="$PROJECT_DIR$/main_n_dist_keying.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/ocr_set.py" />
+        <option value="$PROJECT_DIR$/main_n_dist_keying.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" />
+        <option value="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" />
+        <option value="$PROJECT_DIR$/n_dist_keying/textfile_generator.py" />
+        <option value="$PROJECT_DIR$/Testfiles/oneprof_tesseract_sure.txt" />
+        <option value="$PROJECT_DIR$/main_unspacer.py" />
       </list>
     </option>
   </component>
@@ -254,12 +288,7 @@
             <path>
               <item name="python_ocr" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_ocr" type="462c0819:PsiDirectoryNode" />
-              <item name=".vscode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="python_ocr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_ocr" type="462c0819:PsiDirectoryNode" />
-              <item name="n_dist_keying" type="462c0819:PsiDirectoryNode" />
+              <item name="Testfiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="python_ocr" type="b2602c69:ProjectViewProjectNode" />
@@ -300,7 +329,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.main_n_dist_keying.py">
+  <component name="RunManager" selected="Python.main_unspacer.py">
     <configuration name="dictionary_comparison.py" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -513,17 +542,17 @@
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="980" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22264151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22264151" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45537758" sideWeight="0.30619946" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30778033" sideWeight="0.30619946" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29405034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2402746" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45537758" sideWeight="0.69380057" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30778033" sideWeight="0.69380057" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -583,7 +612,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/n_dist_keying/text_unspacer.py</url>
-          <line>293</line>
+          <line>290</line>
           <option name="timeStamp" value="991" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -609,7 +638,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="1127" />
+      <option name="time" value="1142" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -621,6 +650,21 @@
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>text_tuple_cmp</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>text_tuple_adj</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>text_tuple</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>lines_abbyy_normalized</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -628,41 +672,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_line_normalizer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_tesseract_questionmark.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="127" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_tesseract.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6066">
-          <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_abbyy_result_lh_adapted.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tesserocr_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="97" column="38" lean-forward="true" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/3" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -685,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocr_validation/ocr_validator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2352">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dictionary_comparison.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -710,16 +712,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/text_unspacer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="317" column="93" lean-forward="true" selection-start-line="317" selection-start-column="92" selection-end-line="317" selection-end-column="106" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -751,13 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main_unspacer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_tesseract_sure.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1350">
@@ -769,13 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="58" column="10" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_abbyy.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -891,13 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/textfile_generator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/utils/histo_plotter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -952,49 +923,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/text_comparator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="220" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="141" column="31" lean-forward="false" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="47" />
+        <state relative-caret-position="-133">
+          <caret line="84" column="28" lean-forward="true" selection-start-line="84" selection-start-column="28" selection-end-line="84" selection-end-column="28" />
           <folding>
             <element signature="e#202#267#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/text_comparator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="225" column="11" lean-forward="false" selection-start-line="225" selection-start-column="11" selection-end-line="225" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/textfile_generator.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="40" column="88" lean-forward="true" selection-start-line="40" selection-start-column="88" selection-end-line="40" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_ocropus_spaced.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1170">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_abbyy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1692">
+          <caret line="14" column="7" lean-forward="false" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_set.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="337" column="0" lean-forward="false" selection-start-line="337" selection-start-column="0" selection-end-line="337" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_comparison.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="65" column="29" lean-forward="false" selection-start-line="65" selection-start-column="24" selection-end-line="65" selection-end-column="42" />
+        <state relative-caret-position="153">
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/text_unspacer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="130" column="0" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_ocropus_spaced_lha.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1551">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_ocropus_abbyy_lha.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1731">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_tesseract.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_tesseract_sure.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-328">
-          <caret line="141" column="33" lean-forward="true" selection-start-line="141" selection-start-column="33" selection-end-line="141" selection-end-column="33" />
+        <state relative-caret-position="-172">
+          <caret line="147" column="9" lean-forward="false" selection-start-line="147" selection-start-column="9" selection-end-line="147" selection-end-column="9" />
           <folding>
             <element signature="e#0#73#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_set.py">
+    <entry file="file://$PROJECT_DIR$/ocr_validation/ocr_validator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-472">
-          <caret line="147" column="105" lean-forward="false" selection-start-line="147" selection-start-column="105" selection-end-line="147" selection-end-column="105" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="163">
+          <caret line="172" column="18" lean-forward="false" selection-start-line="172" selection-start-column="18" selection-end-line="172" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_unspacer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="144" column="0" lean-forward="true" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

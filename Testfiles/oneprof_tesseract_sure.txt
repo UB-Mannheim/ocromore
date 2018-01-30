@@ -1,4 +1,4 @@
-addSitz: (2la) Münster
+Sitz: (2la) Münster
 (Westf.), Grevener
 Straße 89.
 

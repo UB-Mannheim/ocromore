@@ -144,8 +144,8 @@ class MsaHandler(object):
         print(len(res_one_1), res_one_1)
         print(len(pivot_msa), pivot_msa)
         print(len(res_three_2), res_three_2)
-        if res_one_1.__contains__("Sitz:") is True:
-            print("asd")
+        #if res_one_1.__contains__("Sitz:") is True:
+        #    print("asd")
 
         res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa)
         res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa)
