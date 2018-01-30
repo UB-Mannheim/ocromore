@@ -10,8 +10,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 from sqlalchemy import create_engine
-import zlib
-
 
 class HocrSQLComparator(object):
 
@@ -28,7 +26,7 @@ class HocrSQLComparator(object):
         document = HOCRDocument(full_path, is_path=True)
         return document
 
-    def create_table_ocropus(self, filename, ocr_profile=None):
+    def create_table_ocropus(self, filename,dbpath=None,ocr_profile=None):
         """
         Gets the box information for ocropus
         :param filename: name of the file to check for boxes
@@ -43,66 +41,25 @@ class HocrSQLComparator(object):
 
         html = page._hocr_html
         contents = html.contents
-        lidx = 0
-        dfdict = {}
-        idx = 0
+
+        df_dict = {}
         ocr = "Ocropus"
         if not ocr_profile:
             ocr_profile = "default"
+        idx = 0
+        lidx = 0
+
         for element in contents:
             res = str(element).find("span")
             if res >= 1:
                 line = Line(document, element)
-                for widx, word in enumerate(line.words):
-                    for cidx, char in enumerate(word.ocr_text):
-                        if len(word._xconfs) > cidx:
-                            dfdict[idx] = {
-                                "ocr"           : ocr,
-                                "ocr_profile"   : ocr_profile,
-                                "line_idx"      : lidx,
-                                "word_idx"      : widx,
-                                "char_idx"      : cidx,
-                                "char"          : char,
-                                "char_eval"     : "",
-                                "char_weight"   : -1.0,
-                                "x_confs"       : float(word._xconfs[cidx])+4,
-                                "w_confs"       : float(word._xwconf),
-                                "line_match"    : -1,
-                                "line_x0"       : int(line.coordinates[0]),
-                                "line_x1"       : int(line.coordinates[1]),
-                                "line_y0"       : int(line.coordinates[2]),
-                                "line_y1"       : int(line.coordinates[3]),
-                                "word_x0"       : int(word.coordinates[0]),
-                                "word_x1"       : int(word.coordinates[1]),
-                                "word_y0"       : int(word.coordinates[2]),
-                                "word_y1"       : int(word.coordinates[3]),
-                            }
-                            idx += 1
+                idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
                 lidx+=1
 
-        # creating and indexing the dataframe
-        df_new = pd.DataFrame.from_dict(dfdict,orient='index')
-        df_new = df_new.set_index(['ocr','line_idx','word_idx','char_idx'])
-
-
-        # creating and appending database
-        engine = create_engine('sqlite:////media/sf_ShareVB/test.db', echo=True)
-        tablename = str(os.path.basename(filename)).split(".")[0]
-
-        # try to create a table
-        try:
-            df_new.to_sql(tablename,engine)
-            print(f'The table:"{tablename}" was created!')
-        except:
-            # loading the table
-            df_old = pd.read_sql_table(tablename,engine)
-            df_old = df_old.set_index(['ocr','line_idx','word_idx','char_idx'])
-            df_old.update(df_new)
-            df_old.to_sql(tablename,engine,if_exists='replace')
-            print(f'The table:"{tablename}" was updated!')
+        self.dict2sql(df_dict,dbpath,filename)
         return 0
 
-    def create_table_tesseract(self, filename, ocr_profile=None):
+    def create_table_tesseract(self, filename,dbpath=None, ocr_profile=None):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]
@@ -110,7 +67,9 @@ class HocrSQLComparator(object):
         # assign tesseract page for further usage
         self._tesseract_page = page
 
-        dfdict = {}
+        df_dict = {}
+        if not ocr_profile:
+            ocr_profile = "default"
         idx = 0
         lidx = 0
         ocr = "Tesseract"
@@ -119,43 +78,12 @@ class HocrSQLComparator(object):
         for area in page.areas:
             for paragraph in area.paragraphs:
                 for line in paragraph.lines:
-                    for widx, word in enumerate(line.words):
-                        for cidx, char in enumerate(word.ocr_text):
-                            if len(word._xconfs) > cidx:
-                                dfdict[idx] = {
-                                    "ocr"           : ocr,
-                                    "ocr_profile"   : ocr_profile,
-                                    "line_idx"      : lidx,
-                                    "word_idx"      : widx,
-                                    "char_idx"      : cidx,
-                                    "char"          : char,
-                                    "char_eval"     : "",
-                                    "char_weight"   : -1.0,
-                                    "x_confs"       : word._xconfs[cidx],
-                                    "w_confs"       : word._xwconf,
-                                    "line_match"    : -1,
-                                    "line_x0"       : line.coordinates[0],
-                                    "line_x1"       : line.coordinates[1],
-                                    "line_y0"       : line.coordinates[2],
-                                    "line_y1"       : line.coordinates[3],
-                                    "word_x0"       : word.coordinates[0],
-                                    "word_x1"       : word.coordinates[1],
-                                    "word_y0"       : word.coordinates[2],
-                                    "word_y1"       : word.coordinates[3],
-                                    "uid"           : ' '.join([ocr,ocr_profile,str(lidx),str(widx),str(cidx)]),
-                                }
-                                idx += 1
+                    idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
                     lidx += 1
-        df = pd.DataFrame.from_dict(dfdict, orient='index')
-        # obsolete?
-        # df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
+        self.dict2sql(df_dict,dbpath,filename)
+        return 0
 
-        df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
-        engine = create_engine('sqlite:////home/jkamlah/Coding/akf-sql/test.db', echo=True)
-        df.to_sql(str(os.path.basename(filename)).split(".")[0], engine, if_exists='append')
-        return dfdict
-
-    def create_table_abby(self, filename):
+    def create_table_abbyy(self, filename,dbpath=None,ocr_profile="None"):
 
         document = self.get_hocr_document(filename)
         page = document.pages[0]
@@ -165,7 +93,12 @@ class HocrSQLComparator(object):
 
         html = page._hocr_html
         contents = html.contents
-        return_list = []
+        df_dict = {}
+        idx = 0
+        lidx = 0
+        ocr = "Abbyy"
+        if not ocr_profile:
+            ocr_profile = "default"
         for element in contents:
             res = str(element).find("ocr_line")
             if res >= 1:
@@ -175,17 +108,67 @@ class HocrSQLComparator(object):
                     new_area = Area(None, element)
                     for par in new_area.paragraphs:
                         for line in par.lines:
-                            return_list.append(line)
-
+                            idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
                 elif element.attrs['class'][0] == 'ocr_par':
                     par = Paragraph(None, element)
                     for line in par.lines:
-                        return_list.append(line)
+                        idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
 
                 else:
                     raise Exception('THIS SHOULDNT HAPPEN!')
 
-        return return_list
+        self.dict2sql(df_dict,dbpath,filename)
+        return 0
+
+    def line2dict(self,line,df_dict,ocr,ocr_profile,idx,lidx):
+        for widx, word in enumerate(line.words):
+            for cidx, char in enumerate(word.ocr_text):
+                if len(word._xconfs) > cidx:
+                    df_dict[idx] = {
+                        "ocr": ocr,
+                        "ocr_profile": ocr_profile,
+                        "line_idx": lidx,
+                        "word_idx": widx,
+                        "char_idx": cidx,
+                        "char": char,
+                        "char_eval": "",
+                        "char_weight": -1.0,
+                        "x_confs": float(word._xconfs[cidx]) + 4,
+                        "w_confs": float(word._xwconf),
+                        "line_match": -1,
+                        "line_x0": int(line.coordinates[0]),
+                        "line_x1": int(line.coordinates[1]),
+                        "line_y0": int(line.coordinates[2]),
+                        "line_y1": int(line.coordinates[3]),
+                        "word_x0": int(word.coordinates[0]),
+                        "word_x1": int(word.coordinates[1]),
+                        "word_y0": int(word.coordinates[2]),
+                        "word_y1": int(word.coordinates[3]),
+                    }
+                    idx += 1
+        return idx
+
+    @classmethod
+    def dict2sql(cls,df_dict,dbpath,filename):
+        # creating and indexing the dataframe
+        df_new = pd.DataFrame.from_dict(df_dict, orient='index')
+        df_new = df_new.set_index(['ocr', 'line_idx', 'word_idx', 'char_idx'])
+
+        # creating and appending database
+        engine = create_engine(dbpath, echo=True)
+        tablename = str(os.path.basename(filename)).split(".")[0]
+
+        # try to create a table
+        try:
+            df_new.to_sql(tablename, engine)
+            print(f'The table:"{tablename}" was created!')
+        except:
+            # loading the table
+            df_old = pd.read_sql_table(tablename, engine)
+            df_old = df_old.set_index(['ocr', 'line_idx', 'word_idx', 'char_idx'])
+            df_old.update(df_new)
+            df_old.to_sql(tablename, engine, if_exists='replace')
+            print(f'The table:"{tablename}" was updated!')
 
     def compare_coordinates(self, coordinates1, coordinates2):
         MODE = "ENDPOINT_TRESHOLD"
