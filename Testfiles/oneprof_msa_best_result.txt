@@ -1,4 +1,4 @@
-Sitz: (2la) Münster
+Sitz: (21a) Münster
 (Westf.), Grevener
 Straße 89.
 
@@ -52,7 +52,7 @@ Ordnungsnr.d.Aktien: 586900.
 Stückelung:
 2 870 St.-Ak. zu je DM 1 000. -
 (Nr. 1 - 2 870)
-500 St.-Akt. zu je DM 100.-
+500 St. -Akt. zujeDM 100.-
 (Nr. 5 001 - 5 500)
 
 Sämtliche Stammaktien sind lieferbar.
@@ -71,7 +71,7 @@ ultimo 1948 60 %
 
 1952 52%
 
-1953 6 %
+1953 60 %
 
 1954 107 %
 
@@ -101,7 +101,7 @@ Aus den Bilanzen
 
 
 31.12.1954 31.12.1955
-Tin1000DM)
+(in1000DM)
 
 Anlagevermögen 4 703 5 367
 Umlaufvermögen 4 893 6 978

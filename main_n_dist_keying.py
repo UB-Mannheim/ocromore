@@ -17,7 +17,7 @@ EXPORT_ADAPTED_ABBYY_RESULT = True
 EXPORT_ADAPTED_OCROPUS_RESULT = True
 
 # un-/refspacing settings:
-USE_REFSPACING = True  # instead of unspacing algorithm use the refspacing algorithm
+USE_REFSPACING = False  # instead of unspacing algorithm use the refspacing algorithm
 
 #keying mechanism
 DO_N_DIST_KEYING = True
@@ -112,7 +112,7 @@ print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing----
 ocr_comparison.print_sets(False)
 if USE_REFSPACING:
     ocr_comparison.refspace_list(2, 1)  # refspace ocropus with tesseract as unspacing template
-    # ocr_comparison.refspace_list(0, 1)  # refspace abbyy with tesseract as unspacing template, seems to produce worse keying-results
+    #ocr_comparison.refspace_list(0, 1)  # refspace abbyy with tesseract as unspacing template, seems to produce worse keying-results
 
 else:
     ocr_comparison.unspace_list(2, 1)  # unspace ocropus with tesseract as unspacing template
@@ -138,7 +138,8 @@ if DO_N_DIST_KEYING:
     ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt", True)
 
 if DO_MSA_BEST:
-    ocr_comparison.do_msa_best()
+    #ocr_comparison.do_msa_best()
+    ocr_comparison.do_msa_best_with_ndist_pivot()
     ocr_comparison.print_msa_best_results()
     ocr_comparison.save_dataset_to_file(FILEPATH_MSA_BEST_RESULT, 0, True, "msa_best")
 

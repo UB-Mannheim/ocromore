@@ -143,11 +143,25 @@ class OCRset:
         self.shortest_distance_line_index = shortest_dist_index
         self.shortest_distance_line = self._set_lines[shortest_dist_index]
 
-    def calculate_msa_best(self):
+    def calculate_msa_best(self, take_n_dist_best_index=False):
+
+        # do a preselection of best element, if the parameter is set to take best n_dist_index as a pivot
+        best_index = 1
+        if take_n_dist_best_index is True:
+            best_index = self.get_shortest_n_distance_index()
+
+
+        indices = [0, 1, 2]
+        indices.remove(best_index)
+        index1 = indices[0]
+        index2 = indices[1]
+
+        print("msa selection taking best:",best_index, "others:(", index1, "and", index2,")")
+
         try:
-            line_1 = self.get_line_content(self._set_lines[0])
-            line_2 = self.get_line_content(self._set_lines[1]) # should be best
-            line_3 = self.get_line_content(self._set_lines[2])
+            line_1 = self.get_line_content(self._set_lines[index1])
+            line_2 = self.get_line_content(self._set_lines[best_index]) # should be best
+            line_3 = self.get_line_content(self._set_lines[index2])
 
             from utils.random import Random
 
