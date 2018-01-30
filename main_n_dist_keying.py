@@ -23,6 +23,9 @@ USE_REFSPACING = False  # instead of unspacing algorithm use the refspacing algo
 DO_N_DIST_KEYING = True
 DO_MSA_BEST = True
 
+# Settings for Multi Sequence Alignment Best
+MSA_BEST_USE_N_DIST_PIVOT = True
+
 # postcorrection settings:
 KEYING_RESULT_POSTCORRECTION = True
 
@@ -138,8 +141,12 @@ if DO_N_DIST_KEYING:
     ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt", True)
 
 if DO_MSA_BEST:
-    #ocr_comparison.do_msa_best()
-    ocr_comparison.do_msa_best_with_ndist_pivot()
+
+    if MSA_BEST_USE_N_DIST_PIVOT:
+        ocr_comparison.do_msa_best_with_ndist_pivot()
+    else:
+        ocr_comparison.do_msa_best()
+
     ocr_comparison.print_msa_best_results()
     ocr_comparison.save_dataset_to_file(FILEPATH_MSA_BEST_RESULT, 0, True, "msa_best")
 
