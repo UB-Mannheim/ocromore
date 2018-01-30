@@ -9,6 +9,7 @@ from pandas.io.json import json_normalize
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
+from sqlalchemy import create_engine
 
 
 class HocrDFComparator(object):
@@ -36,7 +37,7 @@ class HocrDFComparator(object):
         document = self.get_hocr_document(filename)
         page = document.pages[0]
 
-        df = pd.DataFrame()
+        #df = pd.DataFrame()
         # assign ocropus page
         self._ocropus_page = page
 
@@ -53,24 +54,27 @@ class HocrDFComparator(object):
                     for cidx, char in enumerate(word.ocr_text):
                         if len(word._xconfs) > cidx:
                             dfdict[idx] = {
-                                "ocr"     : "Ocropus",
-                                "line_idx"  : lidx,
-                                "word_idx"  : widx,
-                                "char_idx"  : cidx,
-                                "char"     : char,
-                                "char_gt"   : None,
-                                "x_confs"  : word._xconfs[cidx],
-                                "w_confs"  : word._xwconf,
-                                "weight"   : None,
-                                "line_vs"  : word._xwconf,
-                                "line_bbox": (),
-                                "word_bbox": (),
+                                "ocr"           : "Ocropus",
+                                "ocr_profile"   : "default",
+                                "line_idx"      : lidx,
+                                "word_idx"      : widx,
+                                "char_idx"      : cidx,
+                                "char"          : char,
+                                "char_eval"     : None,
+                                "char_weight"   : -1.0,
+                                "x_confs"       : word._xconfs[cidx],
+                                "w_confs"       : word._xwconf,
+                                "line_match"    : -1,
+                                "line_bbox"     : ' '.join([str(x) for x in liner.coordinates]),
+                                "word_bbox"     : ' '.join([str(x) for x in word.coordinates]),
                             }
                             idx += 1
                 lidx+=1
-        #df = pd.DataFrame.from_dict(dfdict,orient='index')
-        #df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
-        return dfdict
+        df = pd.DataFrame.from_dict(dfdict,orient='index')
+        df = df.set_index(['ocr','line_idx','word_idx','char_idx'])
+        engine = create_engine('sqlite:////home/jkamlah/Coding/akf-sql/test.db', echo=True)
+        df.to_sql("Firsttest",engine)
+        return df
 
     def get_tesseract_json(self, filename):
 
