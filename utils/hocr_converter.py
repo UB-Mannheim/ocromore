@@ -19,7 +19,7 @@ class HocrConverter(object):
 
     def hocr2sql(self,filename,dbpath, ocr=None,ocr_profile=None):
         df = self.hocr2df(filename,ocr,ocr_profile)
-        self.df2sql(filename, dbpath)
+        self.df2sql(df,filename, dbpath)
         return df
 
     def hocr2df(self,filename,ocr=None,ocr_profile=None):
@@ -133,6 +133,11 @@ class HocrConverter(object):
         for widx, word in enumerate(line.words):
             for cidx, char in enumerate(word.ocr_text):
                 if len(word._xconfs) > cidx:
+                    lbbox = getattr(line,"coordinates",(0,0,0,0))
+                    wbbox = getattr(word, "coordinates",lbbox)
+                    x_confs = getattr(word, "_xconfs",[0.0])
+                    x_conf = x_confs[cidx] if len(x_confs) >= cidx else 0.0
+                    x_wconf = getattr(word, "_xwconf",0.0)
                     df_dict[idx] = {
                         "ocr": ocr,
                         "ocr_profile": ocr_profile,
@@ -142,17 +147,17 @@ class HocrConverter(object):
                         "char": char,
                         "char_eval": "",
                         "char_weight": -1.0,
-                        "x_confs": float(word._xconfs[cidx]) + 4,
-                        "w_confs": float(word._xwconf),
+                        "x_confs": x_conf,
+                        "x_wconf": x_wconf,
                         "line_match": -1,
-                        "line_x0": int(line.coordinates[0]),
-                        "line_x1": int(line.coordinates[1]),
-                        "line_y0": int(line.coordinates[2]),
-                        "line_y1": int(line.coordinates[3]),
-                        "word_x0": int(word.coordinates[0]),
-                        "word_x1": int(word.coordinates[1]),
-                        "word_y0": int(word.coordinates[2]),
-                        "word_y1": int(word.coordinates[3]),
+                        "line_x0": lbbox[0],
+                        "line_x1": lbbox[1],
+                        "line_y0": lbbox[2],
+                        "line_y1": lbbox[3],
+                        "word_x0": wbbox[0],
+                        "word_x1": wbbox[1],
+                        "word_y0": wbbox[2],
+                        "word_y1": wbbox[3],
                     }
                     idx += 1
         return idx
@@ -176,8 +181,10 @@ class HocrConverter(object):
             # loading the table
             df_old = pd.read_sql_table(tablename, engine)
             df_old = df_old.set_index(['ocr', 'line_idx', 'word_idx', 'char_idx'])
-            df_old.update(df)
+            df_old = df_old.combine_first(df)
+            #df.merge(df_old,on=['ocr', 'line_idx', 'word_idx', 'char_idx'])
             df_old.to_sql(tablename, engine, if_exists='replace')
+            df_old = None
             print(f'The table:"{tablename}" was updated!')
 
         return 0
