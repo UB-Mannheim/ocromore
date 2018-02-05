@@ -3,27 +3,17 @@
    files are loaded to python-objects here and are then compared
    with different methods. One of them is the n-dist-keying
 """
-from n_dist_keying.hocr_sql_comparator import HocrSQLComparator
-from n_dist_keying.hocr_charinfo import get_charconfs, dump_charinfo, merge_charinfo
+from utils.hocr_converter import HocrConverter
+from utils.hocr_charinfo import merge_charinfo
+from utils.df_tools import get_con
+from utils.df_objectifier import DFObjectifier
 import glob
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 import pandas as pd
-import json
+from pathlib import Path
 
-def hocr2charinfo():
-    # Get lists of Hocr-objects from testfiles
-    hocr_comparator = HocrDFComparator()
-    files = glob.iglob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/**/*.hocr", recursive=True)
-    for file in files:
-        if "ocro" in file:
-           hocr_comparator.create_table_ocropus(file)
-        # Charconfs processing
-        if "tess" in file:
-            hey = "HEY"
-            #jsondata = hocr_comparator.get_tesseract_json(file)
-    return 0
 
 def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
     # Plot Group
@@ -127,8 +117,34 @@ def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
 
 def charinfo_process(GROUPS = False):
     # Produce charinfo.json from hocr files
+    dbdir = './Testfiles/sql/'
+    dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
+    files = glob.iglob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/**/*.hocr", recursive=True)
+    dbnamelast,con = "", None
+    """""
+    for file in files:
+        fpath = Path(file)
+        ocr_profile = fpath.parts[-2]
+        dbname = fpath.name.split("_")[1]
+        if dbname != dbnamelast:
+            con = get_con(dbdir + '/'+dbname+'.db')
+            dbnamelast = dbname
+        HocrConverter().hocr2sql(file,con,ocr_profile)
+    """
+    # Load specific table
+    con = get_con(dbdir + '/1957.db')
+    dfobj = DFObjectifier(con,'0140_1957_hoppa-405844417-0050_0172')
 
-    hocr2charinfo()
+    table = dfobj.get_obj(line_idx=1,col=["char"])
+    text = table.get_text(1)
+
+    STOP = "STAAAWP"
+
+
+
+
+
+
 
     # Merge charinfo files
     years = glob.glob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/*")
