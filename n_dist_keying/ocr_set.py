@@ -3,6 +3,8 @@ from n_dist_keying.text_comparator import TextComparator
 from n_dist_keying.text_unspacer import TextUnspacer
 
 from multi_sequence_alignment.msa_handler import MsaHandler
+import inspect
+
 
 class OCRset:
     """
@@ -127,6 +129,9 @@ class OCRset:
 
     def calculate_n_distance_keying(self):
 
+        if self.y_mean == 2123:
+            print("Stop here")
+
         # do a line-wise comparison, which calculates a distance between all lines in this set
         for line_index, line in enumerate(self._set_lines):
             self.compare_with_other_lines(line_index, line)
@@ -192,6 +197,8 @@ class OCRset:
             self._best_msa_text = result
         except Exception as e:
             print("Excption in MSA, just taking line prio exception:",e)
+            tr = inspect.trace()
+
             self._best_msa_text = self.get_line_content(self._set_lines[1])
 
     def get_shortest_n_distance_text(self):
@@ -262,7 +269,7 @@ class OCRset:
 
     def get_distance(self, text1, text2):
         # todo add more possibilities for distance measurement, i.e confidences, edit distance, context weighting
-        MODE_DIFFLIB = 'difflib'
+        MODE_DIFFLIB = 'difflib' #best bet
         MODE_NORMED_LEVENSHTEIN = 'normed_levenshtein' # longest alignment normed levenshtein distance
         MODE_SORENSEN = 'sorensen'
         MODE_JACCARD = 'jaccard'

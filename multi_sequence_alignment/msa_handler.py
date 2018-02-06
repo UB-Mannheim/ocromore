@@ -1,5 +1,6 @@
 from multi_sequence_alignment.msa_algorithm import MultiSequenceAlignment
 import numpy as np
+import inspect
 
 class MsaHandler(object):
 
@@ -103,11 +104,8 @@ class MsaHandler(object):
 
         return line_filled
 
-
     @staticmethod
-    def get_best_of_three(text_1, text_2, text_3):
-
-        PRINT_RESULTS = True
+    def msa_alignment_gonzalo(text_1, text_2, text_3):
         # list_one = list('1. Wie funktioniert der Algorithmus')
         # list_two = list('2. Wie funktioniert hier der Algorithmus')  # this is the pivot element
         # list_three = list('3. Wie der Algorithmus')
@@ -163,9 +161,112 @@ class MsaHandler(object):
         #rres_final_1, rholder1 = MsaHandler.compare(list_pivot_msa, list_res_one_1)
         #rres_final_2 = pivot_msa
         #rres_final_3, rholder2 = MsaHandler.compare( list_pivot_msa, list_res_three_2)
+        return res_final_1, res_final_2, res_final_3
+
+    @staticmethod
+    def msa_alignment_skbio(text_1, text_2, text_3):
+        print("asd")
+
+        from skbio import TabularMSA, DNA
+        from skbio.sequence import GrammaredSequence
+        from skbio.alignment import local_pairwise_align_ssw, local_pairwise_align, global_pairwise_align, make_identity_substitution_matrix
+
+        from multi_sequence_alignment.scikit_custom_sequence_ocr import CustomSequence
 
 
-        best, best_stripped = MsaHandler.best_of_three_simple(res_final_1, res_final_2, res_final_3, 1)  # res two is the best element
+        #
+        gap_open_penalty = 1
+        gap_extend_penalty = 1
+        #substitution_matrix_b50 =CustomSequence.blosum50 # just an example
+
+        try:
+            """    
+            alignment, score, start_end_positions = local_pairwise_align_ssw(
+                DNA("ACTAAGGCTCTCTACCCCTCTCAGAGA"),
+                DNA("ACTAAGGCTCCTAACCCCCTTTTCTCAGA")
+            )
+            """
+            # todo sequence/_sequence.py is missing proper encoding, this has to fix to make this work completely atm workaround: replace non ascii with '?'
+            # also sequence/_grammared_sequence.py
+            #cs1 = CustomSequence("Hallo das ist ein Test überkrass")
+            #cs2 = CustomSequence("H4llo das ist Test überkraass")
+            cs1 = CustomSequence(text_1)
+            cs2 = CustomSequence(text_2)
+            cs3 = CustomSequence(text_3)
+
+            #substitution_matrix_unity = cs2.create_unity_sequence_matrix()
+            substitution_matrix_equal = make_identity_substitution_matrix(1,-1,cs2.create_charset_string())
+
+            #alignment, score, start_end_positions = local_pairwise_align(cs1, cs2, gap_open_penalty, gap_extend_penalty, substitution_matrix_unity)
+
+            alignment12, score12, start_end_positions12 = global_pairwise_align(cs1, cs2, gap_open_penalty, gap_extend_penalty, substitution_matrix_equal)
+            alignment23, score23, start_end_positions23 = global_pairwise_align(cs2, cs3, gap_open_penalty, gap_extend_penalty, substitution_matrix_equal)
+
+
+            #alignment3, score3, start_end_positions3 = global_pairwise_align("Hallo das ist ein Test", "H4llo das ist Test", gap_open_penalty, gap_extend_penalty, substitution_matrix_equal)
+            #res_one_1, res_two_1 = MsaHandler.compare(list_one, list_two)
+
+            #res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
+            res_one_1 = str(alignment12._seqs[0])
+            res_two_1 = str(alignment12._seqs[1])
+            res_two_2 = str(alignment23._seqs[0])
+            res_three_2 = str(alignment23._seqs[1])
+
+            list_res_one_1 = list(res_one_1)
+            list_res_two_1 = list(res_two_1)
+
+            list_res_two_2 = list(res_two_2)
+            list_res_three_2 = list(res_three_2)
+
+            list_pivot_msa = None
+            pivot_msa = None
+            if len(list_res_two_1) >= len(list_res_two_2):
+                # if len(list_res_two_1) > len(list_res_two_2):
+                list_pivot_msa = list_res_two_1
+                pivot_msa = res_two_1
+            else:
+                list_pivot_msa = list_res_two_2
+                pivot_msa = res_two_2
+
+            print(len(res_one_1), res_one_1)
+            print(len(pivot_msa), pivot_msa)
+            print(len(res_three_2), res_three_2)
+            # if res_one_1.__contains__("Sitz:") is True:
+            #    print("asd")
+
+            res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa, '@')
+            res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa, '@')
+
+            res_final_1 = res_one_1_filled
+            res_final_2 = pivot_msa
+            # res_final_3 = res_three_2
+            res_final_3 = res_three_2_filled
+            return res_final_1, res_final_2, res_final_3
+
+
+        except Exception as ex:
+            tr = inspect.trace()
+            print("Exception raised in %s" % tr[-1][3])
+
+
+
+    @staticmethod
+    def get_best_of_three(text_1, text_2, text_3):
+
+        PRINT_RESULTS = True
+        MODE_GONZALO = 'gonzalo'
+        MODE_SKBIO = 'scikit-bio_alignment'
+        MODE = MODE_SKBIO
+
+        if MODE == MODE_GONZALO:
+            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_gonzalo(text_1, text_2, text_3)
+            wildcard_character = '¦'
+        elif MODE == MODE_SKBIO:
+            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_skbio(text_1, text_2, text_3)
+            wildcard_character = '@'
+
+        # This is the voting algorithm -
+        best, best_stripped = MsaHandler.best_of_three_simple(res_final_1, res_final_2, res_final_3, 1,wildcard_character)  # res two is the best element
         best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
         if PRINT_RESULTS:
@@ -177,7 +278,6 @@ class MsaHandler(object):
                 print("E:", best_stripped)
                 print("F:", best_stripped_non_multi_whitespace)
             """
-            print("0:", res_one_1)
             print("A:",res_final_1)
             print("B:",res_final_2)
             print("C:",res_final_3)
