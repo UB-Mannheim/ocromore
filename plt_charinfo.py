@@ -132,11 +132,14 @@ def charinfo_process(GROUPS = False):
         HocrConverter().hocr2sql(file,con,ocr_profile)
     """
     # Load specific table
-    con = get_con(dbdir + '/1957.db')
-    dfobj = DFObjectifier(con,'0140_1957_hoppa-405844417-0050_0172')
+    dfobj = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
 
-    table = dfobj.get_obj(line_idx=1,col=["char"])
-    text = table.get_text(1)
+    obj = dfobj.get_obj(query='x_confs < "98"')
+    obj2 = dfobj.df.get('line_idx')
+    obj.data[0]["char"][0] = "A"
+    dfobj.update(obj)
+    obj = dfobj.get_obj(line_idx=1)
+    text = obj.get_text(1)
 
     STOP = "STAAAWP"
 
