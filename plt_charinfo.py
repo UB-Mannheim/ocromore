@@ -133,20 +133,14 @@ def charinfo_process(GROUPS = False):
     """
     # Load specific table
     dfobj = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
-
-    obj = dfobj.get_obj(query='x_confs < "98"')
-    obj2 = dfobj.df.get('line_idx')
-    obj.data[0]["char"][0] = "A"
-    dfobj.update(obj)
     obj = dfobj.get_obj(line_idx=1)
-    text = obj.get_text(1)
-
-    STOP = "STAAAWP"
-
-
-
-
-
+    obj[0].text(1,"A")
+    obj[0].text(3,"C")
+    obj[0].text(0,cmd="pop")
+    obj[0].val("calc_line",4,10)
+    #obj[0].update()  - Optional
+    dfobj.update(obj)
+    STOP = "STAPP"
 
 
     # Merge charinfo files

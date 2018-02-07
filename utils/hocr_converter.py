@@ -17,7 +17,7 @@ class HocrConverter(object):
 
     def hocr2sql(self,filename,con,ocr=None,ocr_profile=None,index=None):
         if not index:
-            index = ['ocr', 'line_idx', 'word_idx', 'char_idx']
+            index = ['ocr','ocr_profile', 'line_idx', 'word_idx', 'char_idx']
         df = self.hocr2df(filename,ocr,ocr_profile,index)
         self.df2sql(df,filename, con, index=index)
         return df
@@ -142,11 +142,8 @@ class HocrConverter(object):
                         "word_idx": widx,
                         "char_idx": cidx,
                         "char": char,
-                        "char_eval": "",
-                        "char_weight": -1.0,
                         "x_confs": x_conf,
                         "x_wconf": x_wconf,
-                        "line_match": -1,
                         "line_x0": lbbox[0],
                         "line_x1": lbbox[1],
                         "line_y0": lbbox[2],
@@ -155,6 +152,10 @@ class HocrConverter(object):
                         "word_x1": wbbox[1],
                         "word_y0": wbbox[2],
                         "word_y1": wbbox[3],
+                        "calc_line": lidx,
+                        "calc_word": widx,
+                        "calc_char": char,
+                        "char_weight": -1.0,
                 }
                 idx += 1
         return idx
