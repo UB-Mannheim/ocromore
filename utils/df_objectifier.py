@@ -10,6 +10,17 @@ class DFObjectifier(object):
         self.tablename = tablename
         self.engine = engine
         self.df = pd.read_sql_table(tablename, get_con(engine)).set_index(self.idxkeys)
+        self.res_df = self._init_res_df()
+
+    def _init_res_df(self):
+        res_df = pd.DataFrame(columns=self.df.reset_index().columns)
+        try:
+            del res_df["ocr"]
+            del res_df["ocr_profile"]
+        except:
+            pass
+        res_df["UID"] = []
+        return res_df
 
     def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False):
         # Need some explanation?
@@ -17,8 +28,9 @@ class DFObjectifier(object):
         # col = select columns you want to get (+ index)
         # query = params: 'column op "val"' (query conditions for the df)
         if res:
-            dfres = pd.DataFrame(index=self.df.index)
-            return Obj("Result",dfres,self.idxkeys,self.imkeys)
+            res_df = self.res_df
+            size = self.res_df.shape[0]
+            return ResObj("Result",res_df,self.idxkeys,self.imkeys)
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
@@ -49,7 +61,10 @@ class DFObjectifier(object):
             if col is not None:
                 if isinstance(col,list): col = [col]
                 new_df = new_df.loc[self.idxkeys+col]
-            self.df.update(new_df)
+            if obj.name == "Result":
+                self.res_df._update_res_df(new_df,self.res_df.shape[0])
+            else:
+                self.df.update(new_df)
         return
 
     def _update_obsolete(self,obj,col=None):
@@ -87,22 +102,23 @@ class Obj(object):
     def _get_data(self,df):
         data = {}
         df_dict = df.to_dict(orient="split")
-        for didx, dataset in enumerate(df_dict["data"]):
-            for kidx, key in enumerate(df_dict["columns"]):
-                if key not in data:
-                    data[key] = []
+        for kidx, key in enumerate(df_dict["columns"]):
+            if key not in data:
+                data[key] = []
+            for didx, dataset in enumerate(df_dict["data"]):
                 data[key].append(df_dict["data"][didx][kidx])
         return data
 
     def _orig_text(self):
         if "char" in self.data:
             str = ""
-            lidx = self.data["word_idx"][0]
-            for pos, idx in enumerate(self.data["word_idx"]):
-                if idx != lidx:
-                    str += " "
-                    lidx = idx
-                str += self.data["char"][pos]
+            if len(self.data["word_idx"]) > 0:
+                lidx = self.data["word_idx"][0]
+                for pos, idx in enumerate(self.data["word_idx"]):
+                    if idx != lidx:
+                        str += " "
+                        lidx = idx
+                    str += self.data["char"][pos]
             return str
         else:
             return "No text to export!"
@@ -125,39 +141,39 @@ class Obj(object):
     def textstr(self):
         if "calc_char" in self.data:
             str = ""
-            lidx = self.data["UID"][0]
-            for pos,idx in enumerate(self.data["UID"]):
-                if idx != lidx:
-                    str +=" "
-                    lidx = idx
-                str+=self.data["calc_char"][pos]
+            if len(self.data["UID"]) > 0:
+                lidx = self.data["UID"][0]
+                for pos,idx in enumerate(self.data["UID"]):
+                    if idx != lidx:
+                        str +=" "
+                        lidx = idx
+                    str+=self.data["calc_char"][pos]
             return str
         else:
             return "No text to export!"
 
     def value(self,attr,pos,val=None):
-        self.ivalue.attr = attr
-        self.ivalue.pos = pos
-        if val is not None:
-           self._set_value(val)
-        else:
-            self._get_value()
-        return self.ivalue.val
+        if attr in self.data.keys():
+            self.ivalue.attr = attr
+            self.ivalue.pos = pos
+            if val is not None:
+                self._set_value(val)
+            else:
+                self._get_value()
+            return self.ivalue.val
 
     def _get_value(self):
         idx = self.data["UID"][self.ivalue.pos]
-        if self.ivalue.attr in self.data.keys():
-            if self.ivalue.attr in self.idxkeys+["char"]:
-                if idx != -1:
-                    self.ivalue.val = self.data[self.ivalue.attr][idx]
-            else:
+        if self.ivalue.attr in self.idxkeys+["char"] and self.name != "Result":
+            if idx != -1:
                 self.ivalue.val = self.data[self.ivalue.attr][idx]
+        else:
+            self.ivalue.val = self.data[self.ivalue.attr][self.ivalue.pos]
 
     def _set_value(self,val):
-        if self.ivalue.attr in self.data.keys():
-            if self.ivalue.attr not in self.idxkeys+["char","UID"]:
-                self.ivalue.val = val
-                self.data[self.ivalue.attr][self.ivalue.pos] = val
+        if self.ivalue.attr not in self.idxkeys+["char","UID"] or self.name == "Result":
+            self.ivalue.val = val
+            self.data[self.ivalue.attr][self.ivalue.pos] = val
 
     def update(self,col=None):
         if col is not None:
@@ -183,6 +199,34 @@ class Obj(object):
 
     def store(self):
         return
+
+class ResObj(Obj):
+
+    def __init__(self, name, df, idxkeys, imkeys):
+        Obj.__init__(self,name,df,idxkeys,imkeys)
+
+    def _update_res_df(self,maxuid,col=None):
+        if col is not None:
+            keys = ["UID"]+col
+        else:
+            keys = self.data.keys()
+        dfdict = {}
+        for idx, uidx in enumerate(self.data["UID"]):
+            if uidx == 1:
+                uidx = maxuid
+                maxuid += 1
+            for col in keys:
+                if col not in dfdict:
+                    dfdict[col] = []
+                    if col == "UID":
+                        dfdict[col].append(uidx)
+                    else:
+                        dfdict[col].append(self.data[col][idx])
+        df = pd.DataFrame.from_dict(dfdict).set_index("UID")
+        orig_df = self.orig_df
+        orig_df = orig_df.reset_index().set_index("UID")
+        orig_df.update(df)
+        self.orig_df = orig_df
 
 class Value(object):
     def __init__(self):

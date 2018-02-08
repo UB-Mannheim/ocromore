@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="353b567f-620f-44de-9fa6-886605054a69" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py" afterPath="$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py" />
-      <change beforePath="$PROJECT_DIR$/plt_charinfo.py" afterPath="$PROJECT_DIR$/plt_charinfo.py" />
+      <change beforePath="$PROJECT_DIR$/utils/df_objectifier.py" afterPath="$PROJECT_DIR$/utils/df_objectifier.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,33 +16,68 @@
       <file leaf-file-name="plt_charinfo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plt_charinfo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+            <state relative-caret-position="134">
+              <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
               <folding>
-                <element signature="e#1027#5532#0" expanded="false" />
-                <element signature="e#7116#9198#0" expanded="false" />
+                <element signature="e#201#247#0" expanded="true" />
+                <element signature="e#587#5092#0" expanded="false" />
+                <element signature="e#5122#6270#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hocr_charinfo.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_charinfo.py">
+      <file leaf-file-name="apport_python_hook.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+            <state relative-caret-position="372">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hocr_df_comparator.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py">
+      <file leaf-file-name="df_objectifier.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utils/df_objectifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state relative-caret-position="253">
+              <caret line="212" column="26" lean-forward="false" selection-start-line="212" selection-start-column="26" selection-end-line="212" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#109#3721#0" expanded="false" />
+                <element signature="e#4050#4366#0" expanded="false" />
+                <element signature="e#4402#4840#0" expanded="false" />
+                <element signature="e#5596#6025#0" expanded="false" />
+                <element signature="e#6074#6328#0" expanded="false" />
+                <element signature="e#6364#6665#0" expanded="false" />
+                <element signature="e#6705#6882#0" expanded="false" />
+                <element signature="e#6923#7754#0" expanded="false" />
+                <element signature="e#8743#8835#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="df_tools.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/df_tools.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hocr_converter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/hocr_converter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
+                <element signature="e#135#6834#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -55,7 +87,7 @@
         <entry file="file://$PROJECT_DIR$/my_hocr_parser/parser.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4209">
-              <caret line="185" column="66" lean-forward="false" selection-start-line="185" selection-start-column="62" selection-end-line="185" selection-end-column="66" />
+              <caret line="185" column="21" lean-forward="false" selection-start-line="185" selection-start-column="21" selection-end-line="185" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -72,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ocr_text</find>
       <find>ocr_text_ocropus</find>
       <find>ocr_text_normalized</find>
       <find>range</find>
@@ -102,6 +133,7 @@
       <find>yes</find>
       <find>set_shortest</find>
       <find>df.iloc[idx]</find>
+      <find>np</find>
     </findStrings>
     <replaceStrings>
       <replace>line</replace>
@@ -158,6 +190,7 @@
         <option value="$PROJECT_DIR$/n_dist_keying/hocr_charinfo.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py" />
         <option value="$PROJECT_DIR$/plt_charinfo.py" />
+        <option value="$PROJECT_DIR$/utils/df_objectifier.py" />
       </list>
     </option>
   </component>
@@ -205,8 +238,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,15 +245,12 @@
               <item name="python_ocr" type="b2602c69:ProjectViewProjectNode" />
               <item name="python_ocr" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="python_ocr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="python_ocr" type="462c0819:PsiDirectoryNode" />
-              <item name="n_dist_keying" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -450,19 +478,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="939" extended-state="6" />
-    <editor active="true" />
+    <frame x="67" y="25" width="1853" height="947" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1284153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35042736" sideWeight="0.30382514" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29331684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920793" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29331684" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18935643" sideWeight="0.4978142" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3345588" sideWeight="0.69617486" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35024753" sideWeight="0.69617486" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -526,6 +553,11 @@
           <line>102</line>
           <option name="timeStamp" value="1096" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/plt_charinfo.py</url>
+          <line>142</line>
+          <option name="timeStamp" value="1104" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
@@ -537,7 +569,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="1097" />
+      <option name="time" value="1107" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -558,27 +590,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_abbyy_formatted.hocr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_ocropus.hocr">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="59" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_abbyy.hocr.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="3" column="22306" lean-forward="false" selection-start-line="3" selection-start-column="22306" selection-end-line="3" selection-end-column="22306" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_abbyy_result.txt_lh_adapted">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -727,7 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38364">
           <caret line="1668" column="0" lean-forward="false" selection-start-line="1668" selection-start-column="0" selection-end-line="1668" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -816,13 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testfiles/charconfs/long/ocro/0033_1969_230-6_B_062_0076.jpg_charfons_charinfo.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -848,14 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5428">
           <caret line="1" column="47" lean-forward="true" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_hocr_parser/parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4209">
-          <caret line="185" column="66" lean-forward="false" selection-start-line="185" selection-start-column="62" selection-end-line="185" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,31 +882,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_charinfo.py">
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_charinfo.py" />
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py" />
+    <entry file="file://$PROJECT_DIR$/my_hocr_parser/parser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        <state relative-caret-position="4209">
+          <caret line="185" column="21" lean-forward="false" selection-start-line="185" selection-start-column="21" selection-end-line="185" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/df_tools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/hocr_converter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#135#6834#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plt_charinfo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="62" lean-forward="false" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        <state relative-caret-position="134">
+          <caret line="117" column="23" lean-forward="false" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
           <folding>
-            <element signature="e#1027#5532#0" expanded="false" />
-            <element signature="e#7116#9198#0" expanded="false" />
+            <element signature="e#201#247#0" expanded="true" />
+            <element signature="e#587#5092#0" expanded="false" />
+            <element signature="e#5122#6270#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py">
+    <entry file="file://$PROJECT_DIR$/utils/df_objectifier.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="253">
+          <caret line="212" column="26" lean-forward="false" selection-start-line="212" selection-start-column="26" selection-end-line="212" selection-end-column="26" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#109#3721#0" expanded="false" />
+            <element signature="e#4050#4366#0" expanded="false" />
+            <element signature="e#4402#4840#0" expanded="false" />
+            <element signature="e#5596#6025#0" expanded="false" />
+            <element signature="e#6074#6328#0" expanded="false" />
+            <element signature="e#6364#6665#0" expanded="false" />
+            <element signature="e#6705#6882#0" expanded="false" />
+            <element signature="e#6923#7754#0" expanded="false" />
+            <element signature="e#8743#8835#0" expanded="false" />
           </folding>
         </state>
       </provider>
