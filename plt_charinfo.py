@@ -115,46 +115,59 @@ def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
             plt.close()
     return 0
 
-def charinfo_process(GROUPS = False):
-    # Produce charinfo.json from hocr files
+def charinfo_process():
+    HOCR2SQL = False
+    WORKWITHOBJ = True
+    PLOT = False
+
+    # Read hocr and create sql-db
     dbdir = './Testfiles/sql/'
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
     files = glob.iglob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/**/*.hocr", recursive=True)
     dbnamelast,con = "", None
-    """""
-    for file in files:
-        fpath = Path(file)
-        ocr_profile = fpath.parts[-2]
-        dbname = fpath.name.split("_")[1]
-        if dbname != dbnamelast:
-            con = get_con(dbdir + '/'+dbname+'.db')
-            dbnamelast = dbname
-        HocrConverter().hocr2sql(file,con,ocr_profile)
-    """
-    # Load specific table
-    dfobj = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
-    obj = dfobj.get_obj(line_idx=1)
-    obj[0].text(1,"A")
-    obj[0].text(3,"C")
-    obj[0].text(0,cmd="pop")
-    obj[0].val("calc_line",4,10)
-    #obj[0].update()  - Optional
-    dfobj.update(obj)
-    STOP = "STAPP"
+    if HOCR2SQL:
+        for file in files:
+            fpath = Path(file)
+            ocr_profile = fpath.parts[-2]
+            dbname = fpath.name.split("_")[1]
+            if dbname != dbnamelast:
+                con = get_con(dbdir + '/'+dbname+'.db')
+                dbnamelast = dbname
+            HocrConverter().hocr2sql(file,con,ocr_profile)
+
+    # Work with Obj
+    if WORKWITHOBJ:
+        dfObj = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
+        ocrObj = dfObj.get_obj(line_idx=1)
+        resObj = dfObj.get_obj(res=True)
+        ocrObj[0].text(1,"A")
+        ocrObj[0].text(3,"C")
+        ocrObj[0].text(0,cmd="pop")
+        ocrObj[0].val("calc_line",4,10)
+        #obj[0].update()  - Optional
+        dfObj.update(ocrObj)
+
+    # Plot DF (not working atm)
+    if PLOT:
+        plot_charinfo()
+
+if __name__=="__main__":
+    charinfo_process()
 
 
+def obsoleteI():
     # Merge charinfo files
     years = glob.glob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/*")
-    comparator = {"ocro":{},"tess":{}}
+    comparator = {"ocro": {}, "tess": {}}
     for year in [years.sort()]:
-        files = glob.glob(year+"/ocro/*.json", recursive=True)
+        files = glob.glob(year + "/ocro/*.json", recursive=True)
         date = year.split("/")[-1]
-        charinfo={"ocro":{},"tess":{}}
-        charinfo["ocro"] = merge_charinfo(files,GROUPS)
+        charinfo = {"ocro": {}, "tess": {}}
+        charinfo["ocro"] = merge_charinfo(files, GROUPS)
         comparator["ocro"][date] = {}
-        comparator["ocro"][date] = merge_charinfo(files,GROUPS)
-        files = glob.glob(year+"/tess/*.json", recursive=True)
-        charinfo["tess"] = merge_charinfo(files,GROUPS)
+        comparator["ocro"][date] = merge_charinfo(files, GROUPS)
+        files = glob.glob(year + "/tess/*.json", recursive=True)
+        charinfo["tess"] = merge_charinfo(files, GROUPS)
         comparator["tess"][date] = {}
         comparator["tess"][date] = merge_charinfo(files, GROUPS)
 
@@ -166,18 +179,9 @@ def charinfo_process(GROUPS = False):
     #    tesschar  =   list(tess_charinfo.keys())
     #    tessmean  =   [statistics.mean(float(x) for x in tess_charinfo[key]["Confs"]) for key in tess_charinfo]
 
-
     #    df = pd.DataFrame({"OCR":ocroarr+tessarr,"Char":ocrochar+tesschar,"Mean":ocromean+tessmean})
 
-        plot_charinfo(charinfo,date,GROUPS)
-        stop = "STOP"
-    plot_charinfo(comparator, [], GROUPS=False,years=True)
-
-if __name__=="__main__":
-    charinfo_process(True)
-
-
-def obsolete():
+def obsoleteII():
     sns.set(style="white", rc={"axes.facecolor": (0, 0, 0, 0)})
     rs = np.random.RandomState(1979)
     #x = rs.randn(500)

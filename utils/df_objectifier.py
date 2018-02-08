@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 from utils.df_tools import get_con
-import os
 
 class DFObjectifier(object):
 
@@ -12,11 +11,14 @@ class DFObjectifier(object):
         self.engine = engine
         self.df = pd.read_sql_table(tablename, get_con(engine)).set_index(self.idxkeys)
 
-    def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None):
+    def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False):
         # Need some explanation?
         # vars = represent the index-columns
         # col = select columns you want to get (+ index)
         # query = params: 'column op "val"' (query conditions for the df)
+        if res:
+            dfres = pd.DataFrame(index=self.df.index)
+            return Obj("Result",dfres,self.idxkeys,self.imkeys)
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
@@ -80,7 +82,7 @@ class Obj(object):
         self.data = self._get_data(df)
         self.orig_df = df
         self.orig_text = self._orig_text()
-        self.value = Value()
+        self.ivalue = Value()
 
     def _get_data(self,df):
         data = {}
@@ -119,30 +121,6 @@ class Obj(object):
         if cmd == "replace":
             self.data["calc_char"][pos] = val
 
-    def val(self,attr,pos,val=None):
-        self.value.attr = attr
-        self.value.pos = pos
-        if val is not None:
-           self._set_value(val)
-        else:
-            self._get_value()
-        return self.value.val
-
-    def _get_value(self):
-        idx = self.data["UID"][self.value.pos]
-        if self.value.attr in self.data.keys():
-            if self.value.attr in self.idxkeys+["char"]:
-                if idx != -1:
-                    self.value.val = self.data[self.value.attr][idx]
-            else:
-                self.value.val = self.data[self.value.attr][idx]
-
-    def _set_value(self,val):
-        if self.value.attr in self.data.keys():
-            if self.value.attr not in self.idxkeys+["char","UID"]:
-                self.value.val = val
-                self.data[self.value.attr][self.value.pos] = val
-
     @property
     def textstr(self):
         if "calc_char" in self.data:
@@ -156,6 +134,30 @@ class Obj(object):
             return str
         else:
             return "No text to export!"
+
+    def value(self,attr,pos,val=None):
+        self.ivalue.attr = attr
+        self.ivalue.pos = pos
+        if val is not None:
+           self._set_value(val)
+        else:
+            self._get_value()
+        return self.ivalue.val
+
+    def _get_value(self):
+        idx = self.data["UID"][self.ivalue.pos]
+        if self.ivalue.attr in self.data.keys():
+            if self.ivalue.attr in self.idxkeys+["char"]:
+                if idx != -1:
+                    self.ivalue.val = self.data[self.ivalue.attr][idx]
+            else:
+                self.ivalue.val = self.data[self.ivalue.attr][idx]
+
+    def _set_value(self,val):
+        if self.ivalue.attr in self.data.keys():
+            if self.ivalue.attr not in self.idxkeys+["char","UID"]:
+                self.ivalue.val = val
+                self.data[self.ivalue.attr][self.ivalue.pos] = val
 
     def update(self,col=None):
         if col is not None:
@@ -178,6 +180,9 @@ class Obj(object):
         orig_df = orig_df.reset_index().set_index("UID")
         orig_df.update(df)
         self.orig_df = orig_df
+
+    def store(self):
+        return
 
 class Value(object):
     def __init__(self):
