@@ -1,6 +1,9 @@
 from multi_sequence_alignment.msa_algorithm import MultiSequenceAlignment
 import numpy as np
 import inspect
+from Bio import pairwise2
+from Bio.SubsMat import MatrixInfo as matlist
+
 
 class MsaHandler(object):
 
@@ -165,8 +168,6 @@ class MsaHandler(object):
 
     @staticmethod
     def msa_alignment_skbio(text_1, text_2, text_3):
-        print("asd")
-
         from skbio import TabularMSA, DNA
         from skbio.sequence import GrammaredSequence
         from skbio.alignment import local_pairwise_align_ssw, local_pairwise_align, global_pairwise_align, make_identity_substitution_matrix
@@ -248,6 +249,161 @@ class MsaHandler(object):
             tr = inspect.trace()
             print("Exception raised in %s" % tr[-1][3])
 
+    @staticmethod
+    def msa_alignment_biopython(text_1, text_2, text_3,wildcard_character='¦'):
+        """
+        align1 = MultipleSeqAlignment([
+            SeqRecord(Seq("ACTGCTAGCTAG", generic_dna), id="Alpha"),
+            SeqRecord(Seq("ACT-CTAGCTAG", generic_dna), id="Beta"),
+            SeqRecord(Seq("ACTGCTAGDTAG", generic_dna), id="Gamma"),
+        ])
+
+        align2 = MultipleSeqAlignment([
+            SeqRecord(Seq("GTCAGC-AG", generic_dna), id="Delta"),
+            SeqRecord(Seq("GACAGCTAG", generic_dna), id="Epsilon"),
+            SeqRecord(Seq("GTCAGCTAG", generic_dna), id="Zeta"),
+        ])
+
+        align3 = MultipleSeqAlignment([
+            SeqRecord(Seq("ACTAGTACAGCTG", generic_dna), id="Eta"),
+            SeqRecord(Seq("ACTAGTACAGCT-", generic_dna), id="Theta"),
+            SeqRecord(Seq("-CTACTACAGGTG", generic_dna), id="Iota"),
+        ])
+              
+        my_alignments = [align1, align2, align3]
+        """
+        """
+        penalize_extend_when_opening: boolean (default: False). Whether to count an extension penalty when opening a gap. If false, a gap of 1 is only penalized an "open" penalty, otherwise it is penalized "open+extend".
+        penalize_end_gaps: boolean. Whether to count the gaps at the ends of an alignment. By default, they are counted for global alignments but not for local ones. Setting penalize_end_gaps to (boolean, boolean) allows you to specify for the two sequences separately whether gaps at the end of the alignment should be counted.
+        gap_char: string (default: '-'). Which character to use as a gap character in the alignment returned. If your input sequences are lists, you must change this to ['-'].
+        force_generic: boolean (default: False). Always use the generic, non-cached, dynamic programming function (slow!). For debugging.
+        score_only: boolean (default: False). Only get the best score, don't recover any alignments. The return value of the function is the score. Faster and uses less memory.
+        one_alignment_only: boolean (default: False). Only recover one alignment.
+        """
+        wildcard_character = '@'
+        # http://biopython.org/DIST/docs/api/Bio.pairwise2-module.html
+
+        #matrix = matlist.blosum62
+
+
+        points_identical_char = 2
+        penality_non_identical_char = -1
+        penalty_opening_gap = -0.5
+        penalty_extending_gap  = -0.1
+
+        take_first_or_last = True  # True take first alignment, False take last alignment
+
+        try:
+            alignment12_multi = pairwise2.align.globalms(text_1, text_2,points_identical_char,penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character,penalize_end_gaps=False)
+            alignment23_multi = pairwise2.align.globalms(text_2, text_3,points_identical_char,penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character,penalize_end_gaps=False)
+            if take_first_or_last is True:
+                alignment12_index = 0
+                alignment23_index = 0
+            else:
+                alignment12_index = len(alignment12_multi)-1
+                alignment23_index = len(alignment23_multi)-1
+
+            alignment12 = alignment12_multi[alignment12_index]
+            alignment23 = alignment23_multi[alignment23_index]
+
+
+
+
+            # experiments
+            #alignmentsPW2 = pairwise2.align.globalmx("ACCGT", "ACG",points_identical_char,penality_non_identical_char, gap_char='¦')
+            #alignmentsPW3 = pairwise2.align.globalxx("Übersetzerin", "Übersetzung")
+            #alignmentsPW2M = pairwise2.align.globalxx("Übersetzerin", "Übersetzung",matrix)
+
+            res_one_1 = str(alignment12[0])
+            res_two_1 = str(alignment12[1])
+            res_two_2 = str(alignment23[0])
+            res_three_2 = str(alignment23[1])
+
+            list_res_one_1 = list(res_one_1)
+            list_res_two_1 = list(res_two_1)
+
+            list_res_two_2 = list(res_two_2)
+            list_res_three_2 = list(res_three_2)
+
+            list_pivot_msa = None
+            pivot_msa = None
+
+            pivot_index = -1
+            if len(list_res_two_1) >= len(list_res_two_2):
+                # if len(list_res_two_1) > len(list_res_two_2):
+                list_pivot_msa = list_res_two_1
+                pivot_msa = res_two_1
+                pivot_index = 0
+            else:
+                list_pivot_msa = list_res_two_2
+                pivot_msa = res_two_2
+                pivot_index = 1
+            print(len(res_one_1), res_one_1)
+            print(len(pivot_msa), pivot_msa)
+            print(len(res_three_2), res_three_2)
+            # if res_one_1.__contains__("Sitz:") is True:
+            #    print("asd")
+
+            USE_OLD_FILLING = False
+            if USE_OLD_FILLING is True:
+                res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa)
+                res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa)
+            else:
+
+                if pivot_index == 0:
+
+                    res_three_2_cp = res_one_1[:]
+                    pivot_msa_cp = pivot_msa[:]
+                    res_three_2_multi = pairwise2.align.globalxx(res_three_2_cp, pivot_msa_cp, gap_char=wildcard_character, force_generic=True)
+
+                    res_one_1_filled = res_one_1
+                    res_three_2_filled = res_three_2_multi[0][0]
+                elif pivot_index == 1:
+
+                    #res_one_1_multi = pairwise2.align.globalms(res_one_1, pivot_msa, points_identical_char,
+                    #                                             penality_non_identical_char, penalty_opening_gap,
+                    #                                             penalty_extending_gap, gap_char='¦',
+                    #                                             penalize_end_gaps=False)
+
+                    res_one_1_cp = res_one_1[:]
+                    pivot_msa_cp = pivot_msa[:]
+                    res_one_1_multi = pairwise2.align.globalxx(res_one_1_cp,pivot_msa_cp, gap_char=wildcard_character, force_generic=True)
+                    res_one_1_filled = res_one_1_multi[0][0]
+                    res_three_2_filled = res_three_2
+
+
+
+
+            res_one_1_filledOld = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa, '¦')
+            res_three_2_filledOld = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa, '¦')
+
+            res_final_1 = res_one_1_filled
+            res_final_2 = pivot_msa
+            # res_final_3 = res_three_2
+            res_final_3 = res_three_2_filled
+            print("j4t-new")
+            print(res_final_1)
+            print(res_final_2)
+            print(res_final_3)
+            print("j4t-old")
+            print(res_one_1_filledOld)
+            print(res_final_2)
+            print(res_three_2_filledOld)
+            return res_final_1, res_final_2, res_final_3
+
+        except Exception as ex:
+            print(ex)
+
+        print("My Alignment Test ----")
+        #print(pairwise2.format_alignment(*alignmentsPW[0]))
+        #print(pairwise2.format_alignment(*alignmentsPW[1]))
+
+
+
+        # alignment3, score3, start_end_positions3 = global_pairwise_align("Hallo das ist ein Test", "H4llo das ist Test", gap_open_penalty, gap_extend_penalty, substitution_matrix_equal)
+        # res_one_1, res_two_1 = MsaHandler.compare(list_one, list_two)
+
+        # res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
 
 
     @staticmethod
@@ -256,7 +412,8 @@ class MsaHandler(object):
         PRINT_RESULTS = True
         MODE_GONZALO = 'gonzalo'
         MODE_SKBIO = 'scikit-bio_alignment'
-        MODE = MODE_SKBIO
+        MODE_BIOPYTHON = 'biopython'
+        MODE = MODE_BIOPYTHON
 
         if MODE == MODE_GONZALO:
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_gonzalo(text_1, text_2, text_3)
@@ -264,6 +421,10 @@ class MsaHandler(object):
         elif MODE == MODE_SKBIO:
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_skbio(text_1, text_2, text_3)
             wildcard_character = '@'
+        elif MODE == MODE_BIOPYTHON:
+            wildcard_character = '¦'
+            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character)
+
 
         # This is the voting algorithm -
         best, best_stripped = MsaHandler.best_of_three_simple(res_final_1, res_final_2, res_final_3, 1,wildcard_character)  # res two is the best element

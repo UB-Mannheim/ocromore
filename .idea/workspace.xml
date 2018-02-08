@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="353b567f-620f-44de-9fa6-886605054a69" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../learning_python/update_properties.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/multi_sequence_alignment/scikit_custom_sequence_ocr.py" />
       <change beforePath="$PROJECT_DIR$/../learning_python/basics1.py" afterPath="$PROJECT_DIR$/../learning_python/basics1.py" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_keying_result.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_keying_result.txt" />
       <change beforePath="$PROJECT_DIR$/Testfiles/oneprof_msa_best_result.txt" afterPath="$PROJECT_DIR$/Testfiles/oneprof_msa_best_result.txt" />
-      <change beforePath="$PROJECT_DIR$/main_n_dist_keying.py" afterPath="$PROJECT_DIR$/main_n_dist_keying.py" />
       <change beforePath="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" afterPath="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" />
-      <change beforePath="$PROJECT_DIR$/n_dist_keying/ocr_set.py" afterPath="$PROJECT_DIR$/n_dist_keying/ocr_set.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +19,8 @@
       <file leaf-file-name="main_n_dist_keying.py" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state relative-caret-position="254">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="e#202#267#0" expanded="true" />
               </folding>
@@ -33,11 +28,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="update_properties.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="update_properties.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../learning_python/update_properties.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            <state relative-caret-position="288">
+              <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -46,7 +41,7 @@
       <file leaf-file-name="ocr_comparison.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_comparison.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
+            <state relative-caret-position="166">
               <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding />
             </state>
@@ -56,8 +51,8 @@
       <file leaf-file-name="ocr_set.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_set.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1054">
-              <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+            <state relative-caret-position="154">
+              <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
               <folding>
                 <element signature="e#0#58#0" expanded="true" />
               </folding>
@@ -65,14 +60,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="msa_handler.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="msa_handler.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="284" column="37" lean-forward="false" selection-start-line="284" selection-start-column="24" selection-end-line="284" selection-end-column="37" />
+            <state relative-caret-position="418">
+              <caret line="282" column="31" lean-forward="false" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
               <folding>
                 <element signature="e#0#73#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="random.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/random.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-389">
+              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="typecasts.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils/typecasts.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -97,18 +112,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_grammared_sequence.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/_grammared_sequence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="365" column="19" lean-forward="false" selection-start-line="365" selection-start-column="19" selection-end-line="365" selection-end-column="19" />
-              <folding>
-                <element signature="e#354#395#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="scikit_custom_sequence_ocr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/scikit_custom_sequence_ocr.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,19 +119,6 @@
               <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
               <folding>
                 <element signature="e#0#44#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_sequence.py" pinned="false" current-in-tab="false">
-        <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/_sequence.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-118">
-              <caret line="1092" column="48" lean-forward="false" selection-start-line="1092" selection-start-column="48" selection-end-line="1092" selection-end-column="48" />
-              <folding>
-                <element signature="e#354#363#0" expanded="true" />
-                <marker date="1517915511984" expanded="true" signature="20980:21165" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,7 +171,7 @@
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../learning_python" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -233,9 +223,9 @@
         <option value="$PROJECT_DIR$/main_unspacer.py" />
         <option value="$PROJECT_DIR$/multi_sequence_alignment/scikit_custom_sequence_ocr.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/ocr_set.py" />
-        <option value="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" />
         <option value="$PROJECT_DIR$/main_n_dist_keying.py" />
         <option value="$PROJECT_DIR$/../learning_python/update_properties.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" />
       </list>
     </option>
   </component>
@@ -290,7 +280,12 @@
           <expand>
             <path>
               <item name="python_ocr" type="b2602c69:ProjectViewProjectNode" />
-              <item name="learning_python" type="462c0819:PsiDirectoryNode" />
+              <item name="python_ocr" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="python_ocr" type="b2602c69:ProjectViewProjectNode" />
+              <item name="python_ocr" type="462c0819:PsiDirectoryNode" />
+              <item name="multi_sequence_alignment" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -326,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.update_properties">
+  <component name="RunManager" selected="Python.main_n_dist_keying.py">
     <configuration name="dictionary_comparison.py" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -563,13 +558,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31693363" sideWeight="0.31159028" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3318078" sideWeight="0.31159028" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29405034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2402746" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31693363" sideWeight="0.6884097" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3318078" sideWeight="0.6884097" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -653,19 +648,14 @@
           <option name="timeStamp" value="1162" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py</url>
-          <line>248</line>
-          <option name="timeStamp" value="1207" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/_sequence.py</url>
           <line>634</line>
           <option name="timeStamp" value="1218" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main_n_dist_keying.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="1228" />
+          <url>file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py</url>
+          <line>249</line>
+          <option name="timeStamp" value="1277" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -675,7 +665,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="1230" />
+      <option name="time" value="1282" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -714,14 +704,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/spacy_api/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/textblob_testing_deutsch.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/textblob/translate.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -806,14 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
           <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/random.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,34 +1022,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_comparison.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_set.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1054">
-          <caret line="162" column="0" lean-forward="false" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="284" column="37" lean-forward="false" selection-start-line="284" selection-start-column="24" selection-end-line="284" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_msa_best_result.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-36">
@@ -1084,21 +1030,73 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../learning_python/update_properties.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+        <state relative-caret-position="254">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
             <element signature="e#202#267#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../learning_python/update_properties.py">
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/Bio/pairwise2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="-878">
+          <caret line="422" column="0" lean-forward="false" selection-start-line="422" selection-start-column="0" selection-end-line="422" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-389">
+          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/typecasts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_set.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="194" column="0" lean-forward="false" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="282" column="31" lean-forward="false" selection-start-line="282" selection-start-column="31" selection-end-line="282" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
