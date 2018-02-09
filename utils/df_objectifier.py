@@ -29,8 +29,7 @@ class DFObjectifier(object):
         # query = params: 'column op "val"' (query conditions for the df)
         if res:
             res_df = self.res_df
-            size = self.res_df.shape[0]
-            return ResObj("Result",res_df,self.idxkeys,self.imkeys)
+            return ResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
@@ -48,21 +47,26 @@ class DFObjectifier(object):
         grouped = _df_.groupby(level=['ocr', 'ocr_profile'])
         obj = []
         for name, group in grouped:
-            size = group.shape[0]
-            group["UID"] = np.arange(0,size)
-            obj.append(Obj(name,group,self.idxkeys,self.imkeys))
+            #Needs to be copied cos of the addition of "UID"
+            cpgroup = group.copy(deep=True)
+            size = cpgroup.shape[0]
+            cpgroup["UID"] = np.arange(0,size)
+            obj.append(Obj(name,cpgroup,self.idxkeys,self.imkeys))
+            del cpgroup
         return obj
 
     def update(self,objlist,col=None):
         if not isinstance(objlist,list): objlist = [objlist]
         for obj in objlist:
-            obj.update(col)
-            new_df = obj.orig_df.reset_index().set_index(self.idxkeys)
+            obj.update_df(col)
+            idx = self.idxkeys if not obj.result else "UID"
+            new_df = obj.orig_df.reset_index().set_index(idx)
             if col is not None:
                 if isinstance(col,list): col = [col]
-                new_df = new_df.loc[self.idxkeys+col]
-            if obj.name == "Result":
-                self.res_df._update_res_df(new_df,self.res_df.shape[0])
+                new_df = new_df.loc[idx+col]
+            if obj.result:
+                obj.maxuid = self.res_df.shape[0]
+                self.res_df.update(new_df)
             else:
                 self.df.update(new_df)
         return
@@ -91,10 +95,12 @@ class DFObjectifier(object):
 class Obj(object):
 
     def __init__(self,name,df,idxkeys,imkeys):
-        self.idxkeys = idxkeys
-        self.imkeys = imkeys
         self.name = name
         self.data = self._get_data(df)
+        self.idxkeys = idxkeys
+        self.result = True
+        self.imkeys = imkeys
+        self.mkeys = list(set(self.data.keys()).difference(set(imkeys + idxkeys)))
         self.orig_df = df
         self.orig_text = self._orig_text()
         self.ivalue = Value()
@@ -132,18 +138,42 @@ class Obj(object):
             self.data["calc_line"].insert(pos, self.data["calc_line"][pos - i])
             self.data["calc_word"].insert(pos, self.data["calc_word"][pos - i])
         if cmd == "pop":
-            self.data["calc_char"].pop(pos)
-            self.data["UID"].pop(pos)
+            if pos <= len(self.data["UID"]):
+                for key in self.mkeys:
+                    self.data[key].pop(pos)
         if cmd == "replace":
             self.data["calc_char"][pos] = val
+
+    def update_textspace(self, text, wc=None):
+        # wc = wildcards
+        if wc is not None:
+            self._update_wildcard(text,wc)
+        wsarr = np.where(np.array(list(text)) == " ")[0]
+        if len(wsarr)>0:
+            if max(wsarr) <= len(self.data["calc_word"]):
+                lidx = 0
+                for line,idx in enumerate(np.nditer(wsarr)):
+                    if idx != 0:
+                        self.data["calc_word"][lidx:idx] = [line]*(idx-lidx)
+                    lidx = idx
+
+    def _update_wildcard(self,text,wc):
+        #wc = wildcards
+        chararr = np.array(list(text.replace(" ","")))
+        wcarr = np.where(chararr == wc)
+        if len(self.data["calc_word"]) == len(chararr)-len(*wcarr):
+            for idx in np.nditer(np.where(chararr == wc)):
+                self.text(idx,wc)
+        else:
+            print("Cant update text. Seems that the wildcards matching seems wrong.")
 
     @property
     def textstr(self):
         if "calc_char" in self.data:
             str = ""
-            if len(self.data["UID"]) > 0:
-                lidx = self.data["UID"][0]
-                for pos,idx in enumerate(self.data["UID"]):
+            if len(self.data["calc_line"]) > 0:
+                lidx = self.data["calc_word"][0]
+                for pos,idx in enumerate(self.data["calc_word"]):
                     if idx != lidx:
                         str +=" "
                         lidx = idx
@@ -164,18 +194,18 @@ class Obj(object):
 
     def _get_value(self):
         idx = self.data["UID"][self.ivalue.pos]
-        if self.ivalue.attr in self.idxkeys+["char"] and self.name != "Result":
+        if self.ivalue.attr in self.idxkeys+["char"] and not self.result:
             if idx != -1:
                 self.ivalue.val = self.data[self.ivalue.attr][idx]
         else:
             self.ivalue.val = self.data[self.ivalue.attr][self.ivalue.pos]
 
     def _set_value(self,val):
-        if self.ivalue.attr not in self.idxkeys+["char","UID"] or self.name == "Result":
+        if self.ivalue.attr not in self.idxkeys+["char","UID"] or self.result:
             self.ivalue.val = val
             self.data[self.ivalue.attr][self.ivalue.pos] = val
 
-    def update(self,col=None):
+    def update_df(self,col=None):
         if col is not None:
             legalcol = list(set(col).difference(set(self.idxkeys+self.imkeys)))
             keys = ["UID"]+legalcol
@@ -202,10 +232,28 @@ class Obj(object):
 
 class ResObj(Obj):
 
-    def __init__(self, name, df, idxkeys, imkeys):
+    def __init__(self, name, df, idxkeys, imkeys,maxuid):
         Obj.__init__(self,name,df,idxkeys,imkeys)
+        self.result = True
+        self.maxuid = maxuid
 
-    def _update_res_df(self,maxuid,col=None):
+    def text(self,pos,val=None,cmd="insert"):
+        if cmd == "insert":
+            for key in self.data.keys():
+                if key == "calc_char":
+                    self.data["calc_char"].insert(pos,val)
+                if key == "UID":
+                    self.data["UID"].insert(pos, -1)
+                else:
+                    self.data[key].insert(pos,None)
+        if cmd == "pop":
+            if pos <= len(self.data["UID"]):
+                for key in self.data.keys():
+                    self.data[key].pop(pos)
+        if cmd == "replace":
+            self.data["calc_char"][pos] = val
+
+    def update_df(self,col=None):
         if col is not None:
             keys = ["UID"]+col
         else:
@@ -213,8 +261,8 @@ class ResObj(Obj):
         dfdict = {}
         for idx, uidx in enumerate(self.data["UID"]):
             if uidx == 1:
-                uidx = maxuid
-                maxuid += 1
+                uidx = self.maxuid
+                self.maxuid += 1
             for col in keys:
                 if col not in dfdict:
                     dfdict[col] = []

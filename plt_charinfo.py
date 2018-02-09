@@ -140,10 +140,17 @@ def charinfo_process():
         dfObj = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
         ocrObj = dfObj.get_obj(line_idx=1)
         resObj = dfObj.get_obj(res=True)
+        text=ocrObj[0].textstr
+        text = text[:1]+"|"+text[1:]
+        text = text[:3]+"|"+text[3:]
+        text = text[:5] + " " + text[5:]
+        text = text[:3] + " " + text[3:]
+        ocrObj[0].update_textspace(text,"|")
+        dfObj.update(resObj)
         ocrObj[0].text(1,"A")
         ocrObj[0].text(3,"C")
         ocrObj[0].text(0,cmd="pop")
-        ocrObj[0].val("calc_line",4,10)
+        ocrObj[0].value("calc_line",4,10)
         #obj[0].update()  - Optional
         dfObj.update(ocrObj)
 
@@ -153,8 +160,7 @@ def charinfo_process():
 
 if __name__=="__main__":
     charinfo_process()
-
-
+""""
 def obsoleteI():
     # Merge charinfo files
     years = glob.glob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/*")
@@ -241,6 +247,6 @@ def obsoleteII():
     #sns.lmplot(x="x", y="y", col="dataset", hue="dataset", data=data,
     #           col_wrap=2, ci=None, palette="muted", size=2,
     #           scatter_kws={"s": 50, "alpha": 1})
-
+"""
 
 
