@@ -32,7 +32,7 @@ KEYING_RESULT_POSTCORRECTION = True
 # validation settings:
 IGNORE_LINEFEED = False
 IGNORE_WHITESPACE = False
-DISPLAY_DIFFERENCES = False
+DISPLAY_DIFFERENCES = True
 
 #FILENAMES:
 FILEPATH_ABBYY_TEXT = "./Testfiles/oneprof_abbyy_result_lh_adapted.txt"
