@@ -1,6 +1,11 @@
 import pandas as pd
 import numpy as np
 from utils.df_tools import get_con
+import math
+from itertools import cycle
+import sys
+
+spinner = cycle([u'⣾', u'⣽', u'⣻', u'⢿', u'⡿', u'⣟', u'⣯', u'⣷'].reverse())
 
 class DFObjectifier(object):
 
@@ -29,7 +34,7 @@ class DFObjectifier(object):
         # query = params: 'column op "val"' (query conditions for the df)
         if res:
             res_df = self.res_df
-            return ResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
+            return DFResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
@@ -51,7 +56,7 @@ class DFObjectifier(object):
             cpgroup = group.copy(deep=True)
             size = cpgroup.shape[0]
             cpgroup["UID"] = np.arange(0,size)
-            obj.append(Obj(name,cpgroup,self.idxkeys,self.imkeys))
+            obj.append(DFSelObj(name,cpgroup,self.idxkeys,self.imkeys))
             del cpgroup
         return obj
 
@@ -85,14 +90,69 @@ class DFObjectifier(object):
         self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
         return
 
-    def write2sql(self):
-        con = get_con(self.engine)
+    def match_line(self,force=False,pad=0.25,max_col=10000):
+        """
+        :param force: Force to calculate the matching lines (overwrites old values)
+        :param pad: Padding area where to find similar lines (0.25 -> 25 prc)
+        :param max_col: Maximum value for matching lines (prevent infinity loops)
+        :return:
+        """
+        try:
+            if force:
+                self.df["calc_line"] = -1
+            orig_idx = self.df.index
+            self.df.reset_index()
+            lineIdx = 0
+            print("Start line matching")
+            while True:
+                sys.stdout.write(f"Match lines {next(spinner)} \r")
+                sys.stdout.flush()
+                tdf = self.df.loc[self.df["calc_line"] == -1]
+                tdf = tdf[["line_y0", "line_y1", "calc_line"]]
+                y0_min = tdf['line_y0'].min()
+                if math.isnan(y0_min):
+                    print("Match lines ✓")
+                    break
+                y1_min = tdf.loc[tdf['line_y0'] == y0_min]["line_y1"].min()
+
+                y_diff = (y1_min - y0_min) * pad
+
+                # Select all y0 which are smaller as y0+25%diff and greater as y0+25%diff
+                tdf = tdf.loc[tdf['line_y0'] > (y0_min - y_diff)].loc[tdf['line_y0'] < (y0_min + y_diff)]
+                # Select all y1 which are smaller as y1+25%diff and greater as y1+25%diff
+                tdf = tdf.loc[tdf['line_y1'] > (y1_min - y_diff)].loc[tdf['line_y1'] < (y1_min + y_diff)]
+
+                tdf["calc_line"] = lineIdx
+
+                self.df.update(tdf)
+
+                lineIdx += 1
+
+                if lineIdx == max_col:
+                    print("Match lines ✗")
+                    print(f"The max of {max_col} col was reached. Maybe something went wrong?")
+                    break
+            self.df.set_index(orig_idx)
+        except:
+            print("Match lines ✗")
+            print("Something went wrong while matching lines.")
+            pass
+
+    def write2sql(self,result=False,engine=None):
+        if engine is None:
+            engine = self.engine
+        con = get_con(engine)
         # try to create a table
-        self.df.to_sql(self.tablename, con, if_exists='replace')
-        print(f'The table:"{self.tablename}" was updated!')
+        if not result:
+            self.df.to_sql(self.tablename, con, if_exists='replace')
+            print(f'The table:"{self.tablename}" was updated!')
+        else:
+            if engine != self.engine:
+                self.res_df.to_sql(self.tablename, con, if_exists='replace')
+                print(f'The result table:"{self.tablename}" was updated!')
         return
 
-class Obj(object):
+class DFSelObj(object):
 
     def __init__(self,name,df,idxkeys,imkeys):
         self.name = name
@@ -128,6 +188,9 @@ class Obj(object):
             return str
         else:
             return "No text to export!"
+
+    def set_line(self):
+        return
 
     def text(self,pos,val=None,cmd="insert"):
         if cmd == "insert":
@@ -230,10 +293,10 @@ class Obj(object):
     def store(self):
         return
 
-class ResObj(Obj):
+class DFResObj(DFSelObj):
 
     def __init__(self, name, df, idxkeys, imkeys,maxuid):
-        Obj.__init__(self,name,df,idxkeys,imkeys)
+        DFSelObj.__init__(self,name,df,idxkeys,imkeys)
         self.result = True
         self.maxuid = maxuid
 

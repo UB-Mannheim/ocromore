@@ -13,6 +13,7 @@ import seaborn as sns
 import numpy as np
 import pandas as pd
 from pathlib import Path
+import math
 
 
 def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
@@ -125,6 +126,7 @@ def charinfo_process():
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
     files = glob.iglob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/**/*.hocr", recursive=True)
     dbnamelast,con = "", None
+
     if HOCR2SQL:
         for file in files:
             fpath = Path(file)
@@ -137,15 +139,20 @@ def charinfo_process():
 
     # Work with Obj
     if WORKWITHOBJ:
-        dfObj = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
-        ocrObj = dfObj.get_obj(line_idx=1)
-        resObj = dfObj.get_obj(res=True)
-        text=ocrObj[0].textstr
+        dfXO = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
+
+        #Linematcher with queries
+        dfXO.match_line(force=True)
+        dfXO.write2sql()
+
+        dfSelO = dfXO.get_obj(line_idx=1)
+        dfResO = dfXO.get_obj(res=True)
+        text= dfSelO[0].textstr
         text = text[:1]+"|"+text[1:]
         text = text[:3]+"|"+text[3:]
         text = text[:5] + " " + text[5:]
         text = text[:3] + " " + text[3:]
-        ocrObj[0].update_textspace(text,"|")
+        dfSelO[0].update_textspace(text,"|")
         dfObj.update(resObj)
         ocrObj[0].text(1,"A")
         ocrObj[0].text(3,"C")
@@ -157,6 +164,23 @@ def charinfo_process():
     # Plot DF (not working atm)
     if PLOT:
         plot_charinfo()
+
+### TEST FUNCTION
+
+def test_linematching(dfXO):
+    max_line = dfXO.df["calc_line"].max()
+    grps = dfXO.df.groupby(["ocr","ocr_profile"])
+    for lidx in np.arange(0.0,max_line):
+        for name, group in grps:
+            print(name[0])
+            arr = group["calc_line"]
+            if lidx in group["calc_line"].tolist():
+                print(group.loc[group["calc_line"] == lidx]["char"].tolist())
+                #"".join(group.loc[group["calc_line"] == lidx]["char"].tolist())
+            else:
+                print("No line found!")
+    return
+
 
 if __name__=="__main__":
     charinfo_process()
