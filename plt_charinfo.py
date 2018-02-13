@@ -139,14 +139,36 @@ def charinfo_process():
 
     # Work with Obj
     if WORKWITHOBJ:
-        dfXO = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
+        #for file in files:
+        #    fpath = Path(file)
+        #    dbname = fpath.name.split("_")[1]
+        #    if dbname != dbnamelast:
+        #        dbnamelast = dbname
 
-        #Linematcher with queries
-        dfXO.match_line(force=True)
+        #    #dfXO = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
+        #    dfXO = DFObjectifier(dbdir + '/'+dbname+'.db', fpath.name.split(".")[0])
+
+            #Linematcher with queries
+        #    dfXO.match_line()
+        #    dfXO.write2sql()
+
+        dfXO = DFObjectifier(dbdir + '/1957.db', '0140_1957_hoppa-405844417-0050_0172')
+
+        # Linematcher with queries
+        dfXO.match_line()
         dfXO.write2sql()
 
-        dfSelO = dfXO.get_obj(line_idx=1)
+        # Unspacing
+        dfXO.unspace()
+        dfXO.write2sql()
+
+
+
+        # Example for selecting all line with calc_line == 10
+        #dfSelO = dfXO.get_obj(query="calc_line == 10")
+        dfSelO = dfXO.get_obj(query="calc_line == 10")
         dfResO = dfXO.get_obj(res=True)
+
         text= dfSelO[0].textstr
         text = text[:1]+"|"+text[1:]
         text = text[:3]+"|"+text[3:]

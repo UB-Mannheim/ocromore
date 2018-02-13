@@ -4,8 +4,9 @@ from utils.df_tools import get_con
 import math
 from itertools import cycle
 import sys
+from operator import itemgetter
 
-spinner = cycle([u'⣾', u'⣽', u'⣻', u'⢿', u'⡿', u'⣟', u'⣯', u'⣷'].reverse())
+spinner = cycle([u'⣾', u'⣽', u'⣻', u'⢿', u'⡿', u'⣟', u'⣯', u'⣷'])
 
 class DFObjectifier(object):
 
@@ -90,7 +91,8 @@ class DFObjectifier(object):
         self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
         return
 
-    def match_line(self,force=False,pad=0.25,max_col=10000):
+
+    def match_line(self,force=False,pad=0.25):
         """
         :param force: Force to calculate the matching lines (overwrites old values)
         :param pad: Padding area where to find similar lines (0.25 -> 25 prc)
@@ -104,6 +106,7 @@ class DFObjectifier(object):
             self.df.reset_index()
             lineIdx = 0
             print("Start line matching")
+            max_row = self.df.reset_index()["line_idx"].max()
             while True:
                 sys.stdout.write(f"Match lines {next(spinner)} \r")
                 sys.stdout.flush()
@@ -128,15 +131,55 @@ class DFObjectifier(object):
 
                 lineIdx += 1
 
-                if lineIdx == max_col:
+                if lineIdx == max_row:
                     print("Match lines ✗")
-                    print(f"The max of {max_col} col was reached. Maybe something went wrong?")
+                    print(f"The max of {max_row} col was reached. Maybe something went wrong?")
                     break
             self.df.set_index(orig_idx)
         except:
             print("Match lines ✗")
             print("Something went wrong while matching lines.")
             pass
+
+
+
+    def unspace(self, sort_by=None, force=False):
+        if sort_by is None:
+            sort_by = ["Tess", "Abbyy", "Ocro"]
+        if self.df.loc[self.df["calc_line"] == -1].shape[0] == 0 and not force:return
+        orig_idx = self.df.index
+        tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_y0","word_y1","word_x0", "word_x1", "calc_line","calc_word"] #.set_index(["ocr","ocr_profile"])
+        groups = tdf.groupby(["ocr","ocr_profile"])
+        groupnames = sorted(groups.indices.keys(),key= lambda x:sort_by.index(x[0]))
+        max_lidx = groups['calc_line'].max().max()
+        for lidx in np.arange(0,max_lidx):
+            max_widx = tdf.loc[tdf['calc_line'] == lidx]["calc_word"].max()
+            for widx in np.arange(0,max_widx):
+                x0 = None
+                x1 = None
+                for name in groupnames:
+                    group = groups.get_group(name)
+                    group = group.loc[group["calc_line"] == lidx]
+                    if group.shape[0] != 0:
+                        if x0 is None:
+                            group = group.loc[group["calc_word"] == widx]
+                            if group.shape[0] == 0: break
+                            x0 = group["word_x0"].iloc[0]
+                            x1 = group["word_x1"].iloc[0]
+                            diff = (group["word_y1"].iloc[0]-group["word_y0"].iloc[0])*0.5
+                        else:
+                            # Select all the words in the other groups which have the same borders
+                            tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x1'] < (x1 + diff)]
+                            max_widx = tmpgroup["calc_word"].max()
+                            min_widx = tmpgroup["calc_word"].min()
+                            tmpgroup["calc_word"] = min_widx
+                            if not np.isnan(max_widx):
+                                group.update(tmpgroup)
+                                tmpgroup = group.loc[group["calc_word"]>max_widx]["calc_word"].sub(max_widx-min_widx)
+                                group.update(tmpgroup)
+                            tdf.update(group)
+        self.df.update(tdf.reset_index().set_index(orig_idx))
+
 
     def write2sql(self,result=False,engine=None):
         if engine is None:
@@ -192,12 +235,13 @@ class DFSelObj(object):
     def set_line(self):
         return
 
-    def text(self,pos,val=None,cmd="insert"):
-        if cmd == "insert":
+    def text(self,pos,val=None,cmd="insert",insertfront=False):
+        if cmd == "insert" and val is not None:
             self.data["calc_char"].insert(pos,val)
             self.data["UID"].insert(pos, -1)
             self.data["char_weight"].insert(pos,-1)
             i = 1 if pos != 0 else 0
+            if insertfront: i = -1
             self.data["calc_line"].insert(pos, self.data["calc_line"][pos - i])
             self.data["calc_word"].insert(pos, self.data["calc_word"][pos - i])
         if cmd == "pop":
