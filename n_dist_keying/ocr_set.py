@@ -3,6 +3,9 @@ from n_dist_keying.text_comparator import TextComparator
 from n_dist_keying.text_unspacer import TextUnspacer
 
 from multi_sequence_alignment.msa_handler import MsaHandler
+from utils.random import Random
+
+
 import inspect
 
 
@@ -168,7 +171,11 @@ class OCRset:
             line_2 = self.get_line_content(self._set_lines[best_index]) # should be best
             line_3 = self.get_line_content(self._set_lines[index2])
 
-            from utils.random import Random
+            print("ocr_set:")
+            print("text_A",line_1)
+            print("text_B",line_2)
+            print("text_C",line_3)
+
 
             lines = [line_1, line_2, line_3]
 
@@ -196,7 +203,7 @@ class OCRset:
 
             self._best_msa_text = result
         except Exception as e:
-            print("Excption in MSA, just taking line prio exception:",e)
+            print("Exception in MSA, just taking line prio exception:", e)
             tr = inspect.trace()
 
             self._best_msa_text = self.get_line_content(self._set_lines[1])

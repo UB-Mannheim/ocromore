@@ -4,6 +4,17 @@ import inspect
 from Bio import pairwise2
 from Bio.SubsMat import MatrixInfo as matlist
 
+from utils.typecasts import TypeCasts
+
+
+class GapConfig(object):
+
+    def __init__(self, points_identical_char=2, penalty_non_identical_char=-1.3, penalty_opening_gap=-0.5, penalty_extending_gap=-0.4 ):
+        self.points_identical_char = points_identical_char
+        self.penalty_non_identical_char = penalty_non_identical_char
+        self.penalty_opening_gap = penalty_opening_gap
+        self.penalty_extending_gap = penalty_extending_gap
+
 
 class MsaHandler(object):
 
@@ -42,6 +53,63 @@ class MsaHandler(object):
 
         return same_ctr
 
+    @staticmethod
+    def reduce_double_wildcards(line_1, line_2, wildcard_character='¦'):
+        list_line_1 = list(line_1)
+        list_line_2 = list(line_2)
+
+        reduced_line_1 = ""
+        reduced_line_2 = ""
+
+        for character_index, character_1 in enumerate(list_line_1):
+            character_2 = list_line_2[character_index]
+
+            if character_1 == wildcard_character and character_2 == wildcard_character:
+                continue
+
+            reduced_line_1 += character_1
+            reduced_line_2 += character_2
+
+
+        return reduced_line_1, reduced_line_2
+
+    @staticmethod
+    def reduce_double_wildcards_specific(line_1, line_2, wildcard_character_1='¦', wildcard_character_2='@'):
+        # mind input order here
+        list_line_1 = list(line_1)
+        list_line_2 = list(line_2)
+
+        reduced_line_1 = ""
+        reduced_line_2 = ""
+
+        for character_index, character_1 in enumerate(list_line_1):
+            if character_index >= len(list_line_2):
+                reduced_line_1 += character_1
+                continue
+
+
+            character_2 = list_line_2[character_index]
+
+            #if character_1 == wildcard_character_1 and character_2 == wildcard_character_1:
+            #    continue
+            if character_1 == wildcard_character_1 and character_2 == wildcard_character_2:
+                continue
+            #elif character_1 == wildcard_character_2 and character_2 == wildcard_character_2:
+            #    continue
+            elif character_1 == wildcard_character_2 and character_2 == wildcard_character_1:
+                print("")
+                continue
+            #elif character_1 ==' ' and character_2 == wildcard_character_2:
+            #    continue # this is really a glitch
+            #elif character_2 ==' ' and character_1 == wildcard_character_2:
+            #    continue # this is really a glitch
+
+
+            reduced_line_1 += character_1
+            reduced_line_2 += character_2
+
+
+        return reduced_line_1, reduced_line_2
 
     @staticmethod
     def best_of_three_simple(line_1, line_2, line_3, index_best, wildcard_character='¦'):
@@ -106,6 +174,7 @@ class MsaHandler(object):
             line_filled = Random.append_pad_values(line_filled, length_diff, wildcard_character)
 
         return line_filled
+
 
     @staticmethod
     def msa_alignment_gonzalo(text_1, text_2, text_3):
@@ -249,8 +318,129 @@ class MsaHandler(object):
             tr = inspect.trace()
             print("Exception raised in %s" % tr[-1][3])
 
+
     @staticmethod
-    def msa_alignment_biopython(text_1, text_2, text_3,wildcard_character='¦'):
+    def pairwise_unicode(text_1, text_2, wildcard_character='¦', gap_config=None, add_leading_gapchar=False):
+
+        if gap_config is None:
+            points_identical_char = 2
+            penalty_non_identical_char = -1.3 #-1
+            penalty_opening_gap = -0.5 #-0.5
+            penalty_extending_gap  = -0.4
+
+        else:
+            points_identical_char = gap_config.points_identical_char
+            penalty_non_identical_char = gap_config.penalty_non_identical_char
+            penalty_opening_gap = gap_config.penalty_opening_gap
+            penalty_extending_gap = gap_config.penalty_extending_gap
+
+        # this function fixes an issue in algorithm which crashes at certain beginnning chars
+        def add_gapchar_at_start(text, wildcard_character='¦'):
+            return wildcard_character + text
+
+        if add_leading_gapchar is True:
+            text_1 = add_gapchar_at_start(text_1)
+            text_2 = add_gapchar_at_start(text_2)
+
+        text_1_uclist = TypeCasts.convert_string_to_unicode_list(text_1)
+        text_2_uclist = TypeCasts.convert_string_to_unicode_list(text_2)
+        wildcard_character_uclist = TypeCasts.convert_string_to_unicode_list(wildcard_character)
+
+
+        def custom_match_fn(charA, charB):
+            match = points_identical_char
+            mismatch = penalty_non_identical_char
+            gap_match = points_identical_char-0.5
+            gap_char = wildcard_character_uclist[0]
+
+            if charA == charB:
+                return match
+            elif charA == gap_char or charB == gap_char:
+                return gap_match
+            else:
+                return mismatch
+
+        try:
+            #ms without match fn  match_fn = identity_match_custom(points_identical_char, penality_non_identical_char, wildcard_character),
+            alignment12 = pairwise2.align.globalcs(text_1_uclist, text_2_uclist,custom_match_fn, penalty_opening_gap,
+                                                         penalty_extending_gap, gap_char=wildcard_character_uclist,
+                                                         penalize_end_gaps=False)
+
+
+            text_1_al = TypeCasts.convert_unicodelist_to_string(alignment12[0][0])
+            text_2_al = TypeCasts.convert_unicodelist_to_string(alignment12[0][1])
+            return text_1_al, text_2_al
+        except Exception as ex:
+            print("asd")
+
+    @staticmethod
+    def msa_alignment_biopython(text_A, text_B, text_C, wildcard_character='¦'):
+
+        #text_A = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
+        #text_B = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
+        #text_C = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
+
+        text_Ab, text_Ba = MsaHandler.pairwise_unicode(text_A, text_B, wildcard_character,None,True)
+        text_Bc, text_Cb = MsaHandler.pairwise_unicode(text_B, text_C, wildcard_character,None,True)
+        print("text_Ab..", text_Ab)
+        print("text_Ba..", text_Ba)
+        print("text_Bc..", text_Bc)
+        print("text_Cb..", text_Cb)
+
+        # p.identical,p.non_identical,p.opening_gap,p.extending_ap
+        #gap_config_big_pivot = GapConfig(4, -4, -4, -2)
+        text_Babc, text_Bcba = MsaHandler.pairwise_unicode(text_Ba, text_Bc, wildcard_character)
+
+
+
+        print("text_Babc", text_Babc)
+        print("text_Bcba", text_Bcba)
+
+
+        text_Af, text_BabcfA = MsaHandler.pairwise_unicode(text_Ab, text_Babc, wildcard_character)
+        text_Bf, text_BabcfB = MsaHandler.pairwise_unicode(text_B, text_Babc, wildcard_character)
+        text_Cf, text_BabcfC = MsaHandler.pairwise_unicode(text_Cb, text_Babc, wildcard_character)
+
+        print("text_Af..", text_Af)
+        print("text_Babc", text_Babc)
+        print("text_Cf..", text_Cf)
+
+        #text_Af_r = MsaHandler.reduce_double_wildcards_specific(text_Af, text_BabcfA,'@',wildcard_character)[0].replace('@',wildcard_character)
+        #text_Bf_r = MsaHandler.reduce_double_wildcards_specific(text_Bf, text_BabcfB,'@',wildcard_character)[0].replace('@',wildcard_character)
+        #text_Cf_r = MsaHandler.reduce_double_wildcards_specific(text_Cf, text_BabcfC,'@',wildcard_character)[0].replace('@',wildcard_character)
+
+        #print("text_Af.r", text_Af_r)
+        #print("text_Bf.r", text_Bf_r)
+        #print("text_Cf.r", text_Cf_r)
+
+
+        #if "Tätigkeit" in text_Af:
+        #    print("asd")
+
+        res_final_1 = text_Af
+        res_final_2 = text_Babc
+        res_final_3 = text_Cf
+
+        return res_final_1, res_final_2, res_final_3
+
+
+    @staticmethod
+    def msa_alignment_biopython_old(text_1, text_2, text_3, wildcard_character='¦'):
+
+        wildcard_character2 = '@'
+
+        #text_1 = "Das erster text"
+        #text_2 = "Das zweiter text"
+        #text_3 = "Das dritter text"
+        #works
+        #text_1 = "Geschäftsjahr:Kalenderjahr."
+        #text_2 = "Geschäftsjahr: Kalenderjahr."
+        #text_3 = "Geschtaftsjahr:Kalenderjahr."
+
+
+        #that's the isolated problem case
+
+
         """
         align1 = MultipleSeqAlignment([
             SeqRecord(Seq("ACTGCTAGCTAG", generic_dna), id="Alpha"),
@@ -280,7 +470,7 @@ class MsaHandler(object):
         score_only: boolean (default: False). Only get the best score, don't recover any alignments. The return value of the function is the score. Faster and uses less memory.
         one_alignment_only: boolean (default: False). Only recover one alignment.
         """
-        wildcard_character = '@'
+        #wildcard_character = '@'
         # http://biopython.org/DIST/docs/api/Bio.pairwise2-module.html
 
         #matrix = matlist.blosum62
@@ -294,8 +484,136 @@ class MsaHandler(object):
         take_first_or_last = True  # True take first alignment, False take last alignment
 
         try:
-            alignment12_multi = pairwise2.align.globalms(text_1, text_2,points_identical_char,penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character,penalize_end_gaps=False)
-            alignment23_multi = pairwise2.align.globalms(text_2, text_3,points_identical_char,penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character,penalize_end_gaps=False)
+
+
+            print("Biopython alignment 1", text_1, text_2)
+            print("Biopython alignment 2", text_2, text_3)
+            #if '>' in text_3:
+
+            #text_3 = text_2
+
+            #text_1_cp = text_1[:]
+            #text_2_cp = text_2[:]
+            #text_3_cp = text_3[:]
+
+            text_1_uclist = TypeCasts.convert_string_to_unicode_list(text_1)
+            text_2_uclist = TypeCasts.convert_string_to_unicode_list(text_2)
+            text_3_uclist = TypeCasts.convert_string_to_unicode_list(text_3)
+
+            wildcard_character_uclist = TypeCasts.convert_string_to_unicode_list(wildcard_character)
+
+            alignment12_multi = pairwise2.align.globalms(text_1_uclist, text_2_uclist, points_identical_char, penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character_uclist,penalize_end_gaps=False)
+            alignment23_multi = pairwise2.align.globalms(text_2_uclist, text_3_uclist, points_identical_char, penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character_uclist,penalize_end_gaps=False)
+
+            print("12 one", TypeCasts.convert_unicodelist_to_string(alignment12_multi[0][0]))
+            print("12 two", TypeCasts.convert_unicodelist_to_string(alignment12_multi[0][1]))
+            print("23 one", TypeCasts.convert_unicodelist_to_string(alignment23_multi[0][0]))
+            print("23 two", TypeCasts.convert_unicodelist_to_string(alignment23_multi[0][1]))
+
+            wildcard_character_uclist2 = TypeCasts.convert_string_to_unicode_list(wildcard_character2)
+            ff_compare_list = None
+            if len(alignment12_multi[0][1]) > len(alignment23_multi[0][0]):
+                alignmentff_multi = pairwise2.align.globalms(alignment23_multi[0][1], alignment12_multi[0][1],
+                                                             points_identical_char, penality_non_identical_char,
+                                                             penalty_opening_gap, penalty_extending_gap,
+                                                             gap_char=wildcard_character_uclist2,
+                                                             penalize_end_gaps=False)
+                print("ff one", TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][0]))
+                print("ff two", TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1]))
+                # alignmentee_multi = pairwise2.align.globalms(alignment23_multi[0][1], alignmentff_multi[0][1], points_identical_char, penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character_uclist2,penalize_end_gaps=False)
+                # print("ee one", TypeCasts.convert_unicodelist_to_string(alignmentee_multi[0][0]))
+                # print("ee two", TypeCasts.convert_unicodelist_to_string(alignmentee_multi[0][1]))
+                if len(alignmentff_multi[0][1]) > len(alignment12_multi[0][0]):
+                    redwc1, redwc2 = MsaHandler.reduce_double_wildcards_specific( \
+                         TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][0]), \
+                        TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1]))
+                    print("ff onr", redwc1)
+                    print("ff twr", redwc2)
+                else:
+                    redwc2 = TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1])
+
+                res_final_1 = TypeCasts.convert_unicodelist_to_string(alignment12_multi[0][0])
+                res_final_2 = TypeCasts.convert_unicodelist_to_string(alignment12_multi[0][1])
+                res_final_3 = redwc2.replace(wildcard_character2,wildcard_character) #replace the helper wildcards
+
+
+
+                print("path 1")
+                print("res_fi1", res_final_1)
+                print("res_fi2", res_final_2)
+                print("res_fi3", res_final_3)
+
+                if "Eigenkapital" in res_final_1:
+                    print("teheres a bug")
+
+            else:
+                alignmentff_multi = pairwise2.align.globalms(alignment12_multi[0][0], alignment23_multi[0][0],
+                                                             points_identical_char, penality_non_identical_char,
+                                                             penalty_opening_gap, penalty_extending_gap,
+                                                             gap_char=wildcard_character_uclist2,
+                                                             penalize_end_gaps=False)
+
+
+
+                print("ff one", TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][0]))
+                print("ff two", TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1]))
+                # alignmentee_multi = pairwise2.align.globalms(alignment23_multi[0][1], alignmentff_multi[0][1], points_identical_char, penality_non_identical_char,penalty_opening_gap,penalty_extending_gap, gap_char=wildcard_character_uclist2,penalize_end_gaps=False)
+                # print("ee one", TypeCasts.convert_unicodelist_to_string(alignmentee_multi[0][0]))
+                # print("ee two", TypeCasts.convert_unicodelist_to_string(alignmentee_multi[0][1]))
+                if len(alignmentff_multi[0][1]) > len(alignment23_multi[0][0]):
+
+                    alignmentffNeu_multi = pairwise2.align.globalms(alignment23_multi[0][1],
+                                                                    alignmentff_multi[0][1],
+                                                                  points_identical_char, penality_non_identical_char,
+                                                                  penalty_opening_gap, penalty_extending_gap,
+                                                                  gap_char=wildcard_character_uclist2)
+
+                    print("ff onn", TypeCasts.convert_unicodelist_to_string(alignmentffNeu_multi[0][0]))
+                    print("ff twn", TypeCasts.convert_unicodelist_to_string(alignmentffNeu_multi[0][1]))
+
+                    # ignore
+                    redwc1, redwc2 = MsaHandler.reduce_double_wildcards_specific(
+                        TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][0]),
+                        TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1]), wildcard_character, wildcard_character2)
+                    print("ff onr", redwc1)
+                    print("ff twr", redwc2)
+
+                    if len(redwc2) > len(alignment23_multi[0][1]):
+                        redwc2rep = redwc2.replace(wildcard_character2, wildcard_character)
+
+                        alignmentff2_multi = pairwise2.align.globalms(alignment23_multi[0][1], TypeCasts.convert_string_to_unicode_list(redwc2rep),
+                                                                     points_identical_char, penality_non_identical_char,
+                                                                     penalty_opening_gap, penalty_extending_gap,
+                                                                     gap_char=wildcard_character_uclist2)
+
+                        print("ff thr", TypeCasts.convert_unicodelist_to_string(alignmentff2_multi[0][0]))
+                        print("ff th2", TypeCasts.convert_unicodelist_to_string(alignmentff2_multi[0][1]))
+                        redwc3, redwc4 = MsaHandler.reduce_double_wildcards_specific(
+                            TypeCasts.convert_unicodelist_to_string(alignmentff2_multi[0][0]),
+                            redwc2rep, wildcard_character,
+                            wildcard_character2)
+                        print("ff th3", redwc3.replace(wildcard_character2, wildcard_character))
+
+                        print("")
+
+                else:
+                    redwc1 = TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1])
+
+                res_final_1 = redwc1.replace(wildcard_character2, wildcard_character)
+                res_final_2 = TypeCasts.convert_unicodelist_to_string(alignment23_multi[0][0])
+                res_final_3 = TypeCasts.convert_unicodelist_to_string(alignment23_multi[0][1])
+                print("path 2")
+                print("res_fi1", res_final_1)
+                print("res_fi2", res_final_2)
+                print("res_fi3", res_final_3)
+
+            if len(res_final_1) != len(res_final_2) or len(res_final_2) != len(res_final_3):
+                print("shouldn't happen")
+
+
+
+            return res_final_1, res_final_2, res_final_3
+
             if take_first_or_last is True:
                 alignment12_index = 0
                 alignment23_index = 0
@@ -314,22 +632,22 @@ class MsaHandler(object):
             #alignmentsPW3 = pairwise2.align.globalxx("Übersetzerin", "Übersetzung")
             #alignmentsPW2M = pairwise2.align.globalxx("Übersetzerin", "Übersetzung",matrix)
 
-            res_one_1 = str(alignment12[0])
-            res_two_1 = str(alignment12[1])
-            res_two_2 = str(alignment23[0])
-            res_three_2 = str(alignment23[1])
+            res_one_1 = alignment12[0][:]
+            res_two_1 = alignment12[1][:]
+            res_two_2 = alignment23[0][:]
+            res_three_2 = alignment23[1][:]
 
-            list_res_one_1 = list(res_one_1)
-            list_res_two_1 = list(res_two_1)
+            list_res_one_1 = res_one_1
+            list_res_two_1 = res_two_1
 
-            list_res_two_2 = list(res_two_2)
-            list_res_three_2 = list(res_three_2)
+            list_res_two_2 = res_two_2
+            list_res_three_2 = res_three_2
 
             list_pivot_msa = None
             pivot_msa = None
 
             pivot_index = -1
-            if len(list_res_two_1) >= len(list_res_two_2):
+            if len(res_two_1) >= len(res_two_2):
                 # if len(list_res_two_1) > len(list_res_two_2):
                 list_pivot_msa = list_res_two_1
                 pivot_msa = res_two_1
@@ -338,26 +656,47 @@ class MsaHandler(object):
                 list_pivot_msa = list_res_two_2
                 pivot_msa = res_two_2
                 pivot_index = 1
-            print(len(res_one_1), res_one_1)
-            print(len(pivot_msa), pivot_msa)
-            print(len(res_three_2), res_three_2)
+
+
+
+            print(len(res_one_1), TypeCasts.convert_unicodelist_to_string(res_one_1))
+            print(len(pivot_msa), TypeCasts.convert_unicodelist_to_string(pivot_msa))
+            print(len(res_three_2), TypeCasts.convert_unicodelist_to_string(res_three_2))
+            print("pivot index",pivot_index)
             # if res_one_1.__contains__("Sitz:") is True:
             #    print("asd")
+
+            #return "Fake","Fake","Fake"
 
             USE_OLD_FILLING = False
             if USE_OLD_FILLING is True:
                 res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa)
                 res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa)
             else:
+                if'Stra' in res_three_2:
+                    print("asd")
 
+                pivot_index = 0
                 if pivot_index == 0:
 
-                    res_three_2_cp = res_one_1[:]
+                    res_one_1_cp = res_one_1[:]
+                    res_three_2_cp = res_three_2[:]
                     pivot_msa_cp = pivot_msa[:]
-                    res_three_2_multi = pairwise2.align.globalxx(res_three_2_cp, pivot_msa_cp, gap_char=wildcard_character, force_generic=True)
+                    res_three_2_multi = pairwise2.align.globalxx(res_three_2_cp, pivot_msa_cp, gap_char= wildcard_character_uclist, force_generic=False)
 
-                    res_one_1_filled = res_one_1
-                    res_three_2_filled = res_three_2_multi[0][0]
+
+                    new_pivot = res_three_2_multi[0][0]
+                    res_three_2_filled = res_three_2_multi[0][1]
+                    print("new_pivot_......", TypeCasts.convert_unicodelist_to_string(new_pivot))
+                    print("res_thr_2_filled",TypeCasts.convert_unicodelist_to_string(res_three_2_filled))
+
+                    res_one_1_multi_2 = pairwise2.align.globalxx(res_one_1_cp, pivot_msa, gap_char= wildcard_character_uclist, force_generic=False)
+                    res_one_1_filled = res_one_1_multi_2[0][0]
+                    print("res_one_1_filled",TypeCasts.convert_unicodelist_to_string(res_one_1_filled))
+
+
+                    print("a")
+
                 elif pivot_index == 1:
 
                     #res_one_1_multi = pairwise2.align.globalms(res_one_1, pivot_msa, points_identical_char,
@@ -367,34 +706,33 @@ class MsaHandler(object):
 
                     res_one_1_cp = res_one_1[:]
                     pivot_msa_cp = pivot_msa[:]
-                    res_one_1_multi = pairwise2.align.globalxx(res_one_1_cp,pivot_msa_cp, gap_char=wildcard_character, force_generic=True)
+                    res_one_1_multi = pairwise2.align.globalxx(res_one_1_cp,pivot_msa_cp, gap_char=wildcard_character_uclist, force_generic=False)
                     res_one_1_filled = res_one_1_multi[0][0]
                     res_three_2_filled = res_three_2
 
 
 
 
-            res_one_1_filledOld = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa, '¦')
-            res_three_2_filledOld = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa, '¦')
+            #res_one_1_filledOld = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa, '¦')
+            #res_three_2_filledOld = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa, '¦')
 
-            res_final_1 = res_one_1_filled
-            res_final_2 = pivot_msa
+            res_final_1 = TypeCasts.convert_unicodelist_to_string(res_one_1_filled)
+            res_final_2 = TypeCasts.convert_unicodelist_to_string(new_pivot)
             # res_final_3 = res_three_2
-            res_final_3 = res_three_2_filled
+            res_final_3 = TypeCasts.convert_unicodelist_to_string(res_three_2_filled)
             print("j4t-new")
             print(res_final_1)
             print(res_final_2)
             print(res_final_3)
-            print("j4t-old")
-            print(res_one_1_filledOld)
-            print(res_final_2)
-            print(res_three_2_filledOld)
+            #print("j4t-old")
+            #print(res_one_1_filledOld)
+            #print(res_final_2)
+            #print(res_three_2_filledOld)
             return res_final_1, res_final_2, res_final_3
 
         except Exception as ex:
             print(ex)
 
-        print("My Alignment Test ----")
         #print(pairwise2.format_alignment(*alignmentsPW[0]))
         #print(pairwise2.format_alignment(*alignmentsPW[1]))
 
