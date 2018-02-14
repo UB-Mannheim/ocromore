@@ -155,33 +155,34 @@ def charinfo_process():
         dfXO = DFObjectifier(dbdir + '/1957.db', '0140_1957_hoppa-405844417-0050_0172')
 
         # Linematcher with queries
-        dfXO.match_line()
+        dfXO.match_line(force=True)
         dfXO.write2sql()
 
         # Unspacing
         dfXO.unspace()
         dfXO.write2sql()
 
-
+        dfXO.write2file("STUFF")
 
         # Example for selecting all line with calc_line == 10
         #dfSelO = dfXO.get_obj(query="calc_line == 10")
-        dfSelO = dfXO.get_obj(query="calc_line == 10")
+        dfSelO = dfXO.get_obj(query="calc_line_idx == 10")
         dfResO = dfXO.get_obj(res=True)
 
         text= dfSelO[0].textstr
-        text = text[:1]+"|"+text[1:]
-        text = text[:3]+"|"+text[3:]
+        text2= dfSelO[1].textstr
+        text = text[:1] + "|" + text[1:]
+        text = text[:3] + "|" + text[3:]
         text = text[:5] + " " + text[5:]
         text = text[:3] + " " + text[3:]
-        dfSelO[0].update_textspace(text,"|")
-        dfObj.update(resObj)
-        ocrObj[0].text(1,"A")
-        ocrObj[0].text(3,"C")
-        ocrObj[0].text(0,cmd="pop")
-        ocrObj[0].value("calc_line",4,10)
+        dfSelO[0].update_textspace(text,"@")
+        dfSelO.update(dfResO)
+        dfSelO[0].text(1,"A")
+        dfSelO[0].text(3,"C")
+        dfSelO[0].text(0,cmd="pop")
+        dfSelO[0].value("calc_line_idx",4,10)
         #obj[0].update()  - Optional
-        dfObj.update(ocrObj)
+        dfXO.update(dfSelO)
 
     # Plot DF (not working atm)
     if PLOT:
