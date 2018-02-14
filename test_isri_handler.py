@@ -27,6 +27,10 @@ if DO_ISRI_VAL is True:
     FILEPATH_WACCURACY_REPORT_OCRO = "./Testfiles/isri_waccreport_ocro.txt"
     FILEPATH_WACCURACY_REPORT_ISRI_VOTE = "./Testfiles/isri_waccreport_isri_vote.txt"
 
+    FILEPATH_EDITOP_REPORT_MSA = "./Testfiles/isri_editopreport_msa_best.txt"
+    FILEPATH_EDITOP_REPORT_ABBYY = "./Testfiles/isri_editopreport_abbyy.txt"
+    FILEPATH_EDITOP_REPORT_SUMMED = "./Testfiles/isri_editopreport_summed.txt"
+    FILEPATH_EDITOP_COST_REPORT_MSA = "./Testfiles/isri_editopcostreport_msa_best.txt"
 
     FILEPATH_SYNCTEXT_REPORT_MSA = "./Testfiles/isri_syncreport_msa_best.txt"
 
@@ -80,3 +84,12 @@ if DO_ISRI_VAL is True:
     #Test 'wordfreq'
 
     isri_handler.wordfreq([FILEPATH_GROUNDTRUTH],FILEPATH_WORDFREQ_RESULT)
+
+
+    #Test 'editop' and zoning capabilities
+
+    isri_handler.editop(FILEPATH_GROUNDTRUTH, FILEPATH_MSA_BEST_RESULT, FILEPATH_EDITOP_REPORT_MSA)
+    isri_handler.editop(FILEPATH_GROUNDTRUTH, FILEPATH_ABBYY_TEXT, FILEPATH_EDITOP_REPORT_ABBYY)
+    isri_handler.editopsum([FILEPATH_EDITOP_REPORT_MSA, FILEPATH_EDITOP_REPORT_ABBYY], FILEPATH_EDITOP_REPORT_SUMMED)
+
+    isri_handler.editopcost(FILEPATH_EDITOP_REPORT_MSA,None, FILEPATH_EDITOP_COST_REPORT_MSA)

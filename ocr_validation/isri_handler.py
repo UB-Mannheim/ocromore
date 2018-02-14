@@ -302,8 +302,61 @@ class IsriHandler(object):
         except Exception as ex:
             print("Exception calling pycharm", ex)
 
-
     #todo add the zoning programs some day: point 4 in doc
+    def editop(self, path_correctfile, path_comparison_file, path_editop_report = None):
+
+        try:
+            calls = ["editop"]
+
+
+            calls.append(path_correctfile)
+            calls.append(path_comparison_file)
+
+            if path_editop_report is not None:
+                calls.append(path_editop_report)
+
+            call(calls)
+
+        except Exception as ex:
+            print("Exception calling pycharm", ex)
+
+    def editopsum(self, filepaths_editopreports,  path_summed_report=None):
+
+        try:
+            calls = ["editopsum"]
+            calls.extend(filepaths_editopreports)
+
+            if path_summed_report is None:
+                call(calls)
+            else:
+                filehandle = self.create_file_if_doesnt_exist(path_summed_report, True)
+                call(calls, stdout=filehandle)
+                filehandle.close()
+
+        except Exception as ex:
+            print("Exception calling pycharm", ex)
+
+    def editopcost(self, path_editop_report, path_editop_report2=None, path_output_xyfile=None):
+
+        try:
+            calls = ["editopcost"]
+
+
+            calls.append(path_editop_report)
+
+
+            if path_editop_report2 is not None:
+                calls.append(path_editop_report2)
+
+            if path_output_xyfile is None:
+                call(calls)
+            else:
+                filehandle = self.create_file_if_doesnt_exist(path_output_xyfile, True)
+                call(calls, stdout=filehandle)
+                filehandle.close()
+
+        except Exception as ex:
+            print("Exception calling pycharm", ex)
 
     def create_file_if_doesnt_exist(self, filepath, overwrite = False):
 
