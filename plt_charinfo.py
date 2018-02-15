@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 from pathlib import Path
 import math
+import pickle
 
 
 def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
@@ -124,7 +125,7 @@ def charinfo_process():
     # Read hocr and create sql-db
     dbdir = './Testfiles/sql/'
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
-    files = glob.iglob("/home/jkamlah/Coding/python_ocr/Testfiles/long/default/**/*.hocr", recursive=True)
+    files = glob.iglob("./Testfiles/long/default/**/*.hocr", recursive=True)
     dbnamelast,con = "", None
 
     if HOCR2SQL:
@@ -152,22 +153,29 @@ def charinfo_process():
         #    dfXO.match_line()
         #    dfXO.write2sql()
 
-        dfXO = DFObjectifier(dbdir + '/1957.db', '0140_1957_hoppa-405844417-0050_0172')
+        dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
 
         # Linematcher with queries
         first = dfXO.match_line()
         if first: dfXO.write2sql()
 
         # Unspacing
-        dfXO.unspace(pad=1.0)
-        #dfXO.write2sql()
+        if first:
+            dfXO.unspace(pad=0.5)
+            dfXO.write2sql()
 
-        dfXO.write2file("STUFF")
+            dfXO.write2file()
 
         # Example for selecting all line with calc_line == 10
         #dfSelO = dfXO.get_obj(query="calc_line == 10")
-        max_line  = dfXO.loc["calc_line_idx"].max()
-        dfSelO = dfXO.get_obj(query="calc_line_idx == 10")
+        max_line = dfXO.df["calc_line_idx"].max()
+        #for idx in np.arange(0,max_line):
+        #dfXO.get_obj(query="calc_line_idx == 10")
+            #print(idx)
+
+        import sys
+
+        dfSelO = dfXO.get_line_obj()
         dfResO = dfXO.get_obj(res=True)
 
         text= dfSelO[0].textstr

@@ -28,6 +28,43 @@ class DFObjectifier(object):
         res_df["UID"] = []
         return res_df
 
+    def get_line_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False):
+        # Need some explanation?
+        # vars = represent the index-columns
+        # col = select columns you want to get (+ index)
+        # query = params: 'column op "val"' (query conditions for the df)
+        if res:
+            res_df = self.res_df
+            return DFResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
+        vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
+        for varidx, var in enumerate(vars):
+            if var is None:
+                vars[varidx] = (None)
+            if not isinstance(var,tuple):
+                vars[varidx] = (var,var,1)
+        idx = pd.IndexSlice[slice(*vars[0]),slice(*vars[1]),slice(*vars[2]),slice(*vars[3]),slice(*vars[4])]
+        if col is None:
+            _df_ = self.df.loc(axis=0)[idx]
+        else:
+            _df_ = self.df.loc(axis=0)[idx].loc(axis=1)[col]
+        #if query is not None:
+            #_df_ = _df_.query(query)
+        _df_ = _df_.reset_index().set_index("calc_line_idx")
+        obj = {}
+        idxgroups = _df_.groupby(level=['calc_line_idx'])
+        for idxname, idxgroup in idxgroups:
+            obj[idxname] = []
+            grouped = idxgroup.set_index(['ocr','ocr_profile']).groupby(level=['ocr', 'ocr_profile'])
+            for name, group in grouped:
+                #Needs to be copied cos of the addition of "UID"
+                cpgroup = group.copy(deep=True)
+                size = cpgroup.shape[0]
+                if size != 0:
+                    cpgroup["UID"] = np.arange(0,size)
+                    obj[idxname].append(DFSelObj(name,cpgroup,self.idxkeys,self.imkeys))
+                    del cpgroup
+        return obj
+
     def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False):
         # Need some explanation?
         # vars = represent the index-columns
@@ -47,8 +84,8 @@ class DFObjectifier(object):
             _df_ = self.df.loc(axis=0)[idx]
         else:
             _df_ = self.df.loc(axis=0)[idx].loc(axis=1)[col]
-        if query is not None:
-            _df_ = _df_.query(query)
+        #if query is not None:
+            #_df_ = _df_.query(query)
         _df_ = _df_.reset_index().set_index(self.idxkeys[:2])
         grouped = _df_.groupby(level=['ocr', 'ocr_profile'])
         obj = []
@@ -91,7 +128,7 @@ class DFObjectifier(object):
         self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
         return
 
-    def match_line(self,force=False,pad=0.25):
+    def match_line(self,force=False,pad=0.4):
         """
         :param force: Force to calculate the matching lines (overwrites old values)
         :param pad: Padding area where to find similar lines (0.25 -> 25 prc)
@@ -153,7 +190,7 @@ class DFObjectifier(object):
             pass
         return True
 
-    def unspace(self, sort_by=None, pad=0.05):
+    def unspace(self, sort_by=None, pad=0.5):
         if sort_by is None:
             sort_by = ["Tess", "Abbyy", "Ocro"]
         tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_y0","word_y1","word_x0", "word_x1", "calc_line_idx","calc_word_idx"]
@@ -209,7 +246,7 @@ class DFObjectifier(object):
                 print(f'The result table:"{self.tablename}" was updated!')
         return
 
-    def write2file(self,path,fname=None,ftype='txt',calc=True,result=False,line_height_normalization = True):
+    def write2file(self,path=None,fname=None,ftype='txt',calc=True,result=False,line_height_normalization = True):
         if ftype == 'txt':
             if result:
                 self._writeRes2txt(path, fname, line_height_normalization)
@@ -222,7 +259,11 @@ class DFObjectifier(object):
                 self._writeGrp2hocr(path, fname, calc, line_height_normalization)
         return
 
-    def _writeGrp2txt(self,path="./Testfiles/txt/",fname="_orig_", calc = True,line_height_normalization = True):
+    def _writeGrp2txt(self,path=None,fname=None, calc = True,line_height_normalization = True):
+        if path is None:
+            path = "./Testfiles/txt/"
+        if fname is None:
+            fname = "_orig_"
         groups = self.df.reset_index().groupby(["ocr", "ocr_profile"])
         if calc:
             line, word, char = "calc_line_idx", "calc_word_idx", "calc_char"
@@ -296,7 +337,6 @@ class DFSelObj(object):
             self.data["char_weight"].insert(pos,-1)
             i = 1 if pos != 0 else 0
             if insertfront: i = -1
-            self.data["calc_line_idx"].insert(pos, self.data["calc_line_idx"][pos - i])
             self.data["calc_word_idx"].insert(pos, self.data["calc_word_idx"][pos - i])
         if cmd == "pop":
             if pos <= len(self.data["UID"]):
@@ -332,7 +372,7 @@ class DFSelObj(object):
     def textstr(self):
         if "calc_char" in self.data:
             str = ""
-            if len(self.data["calc_line_idx"]) > 0:
+            if len(self.data["calc_word_idx"]) > 0:
                 lidx = self.data["calc_word_idx"][0]
                 for pos,idx in enumerate(self.data["calc_word_idx"]):
                     if idx != lidx:
