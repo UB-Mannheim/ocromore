@@ -101,6 +101,7 @@ class DFObjectifier(object):
         try:
             if force:
                 self.df["calc_line_idx"] = -1
+            if self.df.loc[self.df["calc_line_idx"] == -1].empty: return False
             orig_idx = self.df.index
             self.df.reset_index()
             lineIdx = 0
@@ -150,11 +151,11 @@ class DFObjectifier(object):
             print("Something went wrong while matching lines.")
             print(f"Error:{e}")
             pass
+        return True
 
-    def unspace(self, sort_by=None, force=False):
+    def unspace(self, sort_by=None, pad=0.05):
         if sort_by is None:
             sort_by = ["Tess", "Abbyy", "Ocro"]
-        if not self.df.reset_index()['word_idx'].equals(self.df.reset_index()['calc_word_idx'].astype(int)) and not force: return
         tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_y0","word_y1","word_x0", "word_x1", "calc_line_idx","calc_word_idx"]
         groups = tdf.groupby(["ocr","ocr_profile"])
         groupnames = sorted(groups.indices.keys(),key= lambda x:sort_by.index(x[0]))
@@ -171,11 +172,15 @@ class DFObjectifier(object):
                     group = group.loc[group["calc_line_idx"] == lidx]
                     if group.shape[0] != 0:
                         if x0 is None:
+                            if widx != max_widx:
+                                groupnext = group.loc[group["calc_word_idx"] == widx+1.0]
+                                if groupnext.shape[0] != 0:
+                                    x1 = groupnext["word_x0"].iloc[0]
                             group = group.loc[group["calc_word_idx"] == widx]
                             if group.shape[0] == 0: break
                             x0 = group["word_x0"].iloc[0]
-                            x1 = group["word_x1"].iloc[0]
-                            diff = (group["word_y1"].iloc[0]-group["word_y0"].iloc[0])*1.25
+                            if x1 is None: x1 = group["word_x1"].iloc[0]
+                            diff = (group["word_y1"].iloc[0]-group["word_y0"].iloc[0])*pad
                         else:
                             # Select all the words in the other groups which have the same borders
                             tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x1'] < (x1 + diff)]
@@ -187,6 +192,7 @@ class DFObjectifier(object):
                                 tmpgroup = group.loc[group["calc_word_idx"]>max_widx]["calc_word_idx"].sub(max_widx-min_widx)
                                 group.update(tmpgroup)
                             tdf.update(group)
+        print("Unspace lines ✓")
         self.df.update(tdf.reset_index().set_index(self.df.index))
 
     def write2sql(self,result=False,engine=None):
@@ -203,20 +209,20 @@ class DFObjectifier(object):
                 print(f'The result table:"{self.tablename}" was updated!')
         return
 
-    def write2file(self,path,name=None,ftype='txt',calc=True,result=False,line_height_normalization = True):
+    def write2file(self,path,fname=None,ftype='txt',calc=True,result=False,line_height_normalization = True):
         if ftype == 'txt':
             if result:
-                self._writeRes2txt(path, name, line_height_normalization)
+                self._writeRes2txt(path, fname, line_height_normalization)
             else:
-                self._writeGrp2txt(path, name, calc,line_height_normalization)
+                self._writeGrp2txt(path, fname, calc,line_height_normalization)
         if ftype == 'hocr':
             if result:
-                self._writeRes2hocr(path, name, line_height_normalization)
+                self._writeRes2hocr(path, fname, line_height_normalization)
             else:
-                self._writeGrp2hocr(path, name, calc, line_height_normalization)
+                self._writeGrp2hocr(path, fname, calc, line_height_normalization)
         return
 
-    def _writeGrp2txt(self,path,name=None, calc = True,line_height_normalization = True):
+    def _writeGrp2txt(self,path="./Testfiles/txt/",fname="_orig_", calc = True,line_height_normalization = True):
         groups = self.df.reset_index().groupby(["ocr", "ocr_profile"])
         if calc:
             line, word, char = "calc_line_idx", "calc_word_idx", "calc_char"
@@ -225,7 +231,7 @@ class DFObjectifier(object):
         for name, group in groups:
             groupl = group[line]
             lidxarr = groupl.unique()
-            with open("./Testfiles/txt/"+"orig_" + "".join(name), 'w+', encoding='utf-8') as infile:
+            with open(path+fname+"".join(name), 'w+', encoding='utf-8') as infile:
                 for lidx in lidxarr:
                     groupw = group[groupl == lidx][word]
                     widxarr = groupw.unique()
@@ -235,14 +241,13 @@ class DFObjectifier(object):
                     infile.write(" ".join(txtline)+"\n")
         return
 
-    def _writeRes2txt(self,path, name=None, line_height_normalization = True):
+    def _writeRes2txt(self,path, fname=None, line_height_normalization = True):
         return
 
-    def _writeGrp2hocr(self,path, name=None, calc = True, line_height_normalization = True):
+    def _writeGrp2hocr(self,path, fname=None, calc = True, line_height_normalization = True):
         return
-    def _writeRes2hocr(self,path, name=None, line_height_normalization = True):
+    def _writeRes2hocr(self,path, fname=None, line_height_normalization = True):
         return
-
 
 class DFSelObj(object):
 

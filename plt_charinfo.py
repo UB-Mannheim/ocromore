@@ -155,17 +155,18 @@ def charinfo_process():
         dfXO = DFObjectifier(dbdir + '/1957.db', '0140_1957_hoppa-405844417-0050_0172')
 
         # Linematcher with queries
-        dfXO.match_line()
-        dfXO.write2sql()
+        first = dfXO.match_line()
+        if first: dfXO.write2sql()
 
         # Unspacing
-        dfXO.unspace(force=True)
-        dfXO.write2sql()
+        dfXO.unspace(pad=1.0)
+        #dfXO.write2sql()
 
         dfXO.write2file("STUFF")
 
         # Example for selecting all line with calc_line == 10
         #dfSelO = dfXO.get_obj(query="calc_line == 10")
+        max_line  = dfXO.loc["calc_line_idx"].max()
         dfSelO = dfXO.get_obj(query="calc_line_idx == 10")
         dfResO = dfXO.get_obj(res=True)
 
