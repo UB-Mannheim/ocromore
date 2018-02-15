@@ -55,10 +55,26 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             current_set.calculate_n_distance_keying()
 
+    def do_msa_best(self):
+        for current_set in self.ocr_sets:
+            current_set.calculate_msa_best()
+
+    def do_msa_best_with_ndist_pivot(self):
+        self.do_n_distance_keying()
+
+        for current_set in self.ocr_sets:
+            current_set.calculate_msa_best(True)
+
+
     def print_n_distance_keying_results(self):
         print("N_DISTANCE_KEYING_RESULTS ")
         for current_set in self.ocr_sets:
             current_set.print_shortest_n_distance_line()
+
+    def print_msa_best_results(self):
+        print("MSA_BEST_RESULTS ")
+        for current_set in self.ocr_sets:
+            current_set.print_msa_best_line()
 
     def add_linebreaks(self, previous_line, current_line, previous_line_index, sd_line_index, line_heigth_info):
         MODE = 'TAKE_CURRENT_LINE_DIST'
@@ -121,15 +137,17 @@ class OCRcomparison:
         file.close()
 
 
-    def save_dataset_to_file(self, filename, set_index, mode_add_linebreaks = False):
+    def save_dataset_to_file(self, filename, set_index, mode_add_linebreaks = False, other_set=""):
         file = open(filename, 'w+')
 
         previous_dataset_line = None
         previous_dataset_line_index = None
 
         for current_set in self.ocr_sets:
-
-            dataset_text = current_set.get_line_set_value_text(set_index)
+            if other_set == 'msa_best':
+                dataset_text = current_set.get_msa_best_text()
+            else:
+                dataset_text = current_set.get_line_set_value_text(set_index)
 
             # add comparison from previous to actual line break here
             if mode_add_linebreaks:

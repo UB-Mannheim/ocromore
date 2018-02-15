@@ -11,7 +11,7 @@ import copy as cp
 
 class TextFileGenerator(object):
 
-    def create_file(self, line_height_info_normalized, lines_normalized, output_file_path):
+    def create_file(self, line_height_info_normalized, lines_normalized, output_file_path, use_lhi=True):
         """
         This generates a textfile to the specific files, with linebreaks from line_height_info
         currently works with normalized lines from ocropus and from abbyy, should also work with other normalized infos
@@ -28,11 +28,14 @@ class TextFileGenerator(object):
             line_copy = cp.copy(line)
             local_lines.append(line_copy)
 
-        local_lhi = cp.copy(line_height_info_normalized)
         ocr_lists = []
         ocr_lists.append(local_lines)
         ocr_comparison = hocr_comparator.compare_lists(ocr_lists)
-        ocr_comparison.add_line_information(local_lhi)
+
+        if use_lhi is True:
+            local_lhi = cp.copy(line_height_info_normalized)
+            ocr_comparison.add_line_information(local_lhi)
+
         ocr_comparison.sort_set()
         ocr_comparison.do_n_distance_keying()
-        ocr_comparison.save_n_distance_keying_results_to_file(output_file_path, True)
+        ocr_comparison.save_n_distance_keying_results_to_file(output_file_path, use_lhi)

@@ -1,7 +1,13 @@
-from n_dist_keying.text_comparator import TextComparator
 
 
 class Random:
+
+    @staticmethod
+    def is_false_true_or_none(value):
+        if value is False or value is True or value is None:
+            return True
+
+        return False
 
     @staticmethod
     def replace_value_in_tuple(tuple_in, value, index):

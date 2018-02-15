@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="353b567f-620f-44de-9fa6-886605054a69" name="Default" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/utils/df_objectifier.py" afterPath="$PROJECT_DIR$/utils/df_objectifier.py" />
+=======
+      <change beforePath="$PROJECT_DIR$/../learning_python/basics1.py" afterPath="$PROJECT_DIR$/../learning_python/basics1.py" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/ocr_validation/isri_handler.py" afterPath="$PROJECT_DIR$/ocr_validation/isri_handler.py" />
+      <change beforePath="$PROJECT_DIR$/test_isri_handler.py" afterPath="$PROJECT_DIR$/test_isri_handler.py" />
+>>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,6 +20,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="plt_charinfo.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plt_charinfo.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -22,21 +30,79 @@
                 <element signature="e#201#247#0" expanded="true" />
                 <element signature="e#587#5092#0" expanded="false" />
                 <element signature="e#5122#6270#0" expanded="false" />
+=======
+      <file leaf-file-name="isri_handler.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ocr_validation/isri_handler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="322" column="8" lean-forward="false" selection-start-line="322" selection-start-column="8" selection-end-line="322" selection-end-column="8" />
+              <folding>
+                <marker date="1518623956528" expanded="true" signature="3812:3921" ph="..." />
+>>>>>>> master
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="apport_python_hook.py" pinned="false" current-in-tab="false">
         <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="372">
               <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+=======
+      <file leaf-file-name="isri_editopcostreport_msa_best.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopcostreport_msa_best.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-291">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="isri_editopreport_summed.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopreport_summed.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="isri_editopreport_abbyy.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopreport_abbyy.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="isri_editopreport_msa_best.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopreport_msa_best.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_isri_handler.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_isri_handler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+>>>>>>> master
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="df_objectifier.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/utils/df_objectifier.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,6 +154,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4209">
               <caret line="185" column="21" lean-forward="false" selection-start-line="185" selection-start-column="21" selection-end-line="185" selection-end-column="21" />
+=======
+      <file leaf-file-name="isri_report_wordfreq.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Testfiles/isri_report_wordfreq.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-252">
+              <caret line="167" column="12" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
@@ -104,6 +177,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
+<<<<<<< HEAD
       <find>ocr_text_ocropus</find>
       <find>ocr_text_normalized</find>
       <find>range</find>
@@ -134,6 +208,38 @@
       <find>set_shortest</find>
       <find>df.iloc[idx]</find>
       <find>np</find>
+=======
+      <find>lcs</find>
+      <find>calculate_ms</find>
+      <find>print_s</find>
+      <find>calculate_msa</find>
+      <find>ocropus_text_file_path</find>
+      <find>filepath_abbyy_txt</find>
+      <find>alphabet</find>
+      <find>show_file_comparison</find>
+      <find>in position</find>
+      <find>character</find>
+      <find>UnicodeError</find>
+      <find>__init</find>
+      <find>sequence</find>
+      <find>decode(&quot;utf-8</find>
+      <find>contains</find>
+      <find>FILEPATH_MSA_BEST_RESULT</find>
+      <find>match</find>
+      <find>_align</find>
+      <find>_make_score_matrix_fast</find>
+      <find>identity_match</find>
+      <find>identity_matchk</find>
+      <find>ascii</find>
+      <find>best_of_three</find>
+      <find>reduce_double_wildcards_specific</find>
+      <find>specif</find>
+      <find>specific</find>
+      <find>match_fn</find>
+      <find>sort</find>
+      <find>pairwise_unicode</find>
+      <find>gonzalo</find>
+>>>>>>> master
     </findStrings>
     <replaceStrings>
       <replace>line</replace>
@@ -148,12 +254,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pytesseract_check.py" />
-        <option value="$PROJECT_DIR$/tesserocr_check.py" />
-        <option value="$PROJECT_DIR$/custom_ocropus_scripts/ocropus-hocr" />
-        <option value="$PROJECT_DIR$/ocropy_check.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/../learning_python/classes.py" />
         <option value="$PROJECT_DIR$/dictionary_comparison.py" />
         <option value="$PROJECT_DIR$/main_n_keying.py" />
@@ -174,14 +274,30 @@
         <option value="$PROJECT_DIR$/utils/pycharm_handler.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/marker.py" />
         <option value="$PROJECT_DIR$/utils/queues.py" />
-        <option value="$PROJECT_DIR$/n_dist_keying/textfile_generator.py" />
         <option value="$PROJECT_DIR$/ocr_validation/ocrolib_edist.py" />
-        <option value="$PROJECT_DIR$/utils/random.py" />
-        <option value="$PROJECT_DIR$/utils/typecasts.py" />
-        <option value="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" />
+        <option value="$PROJECT_DIR$/n_dist_keying/text_corrector.py" />
+        <option value="$PROJECT_DIR$/spacy_io_test.py" />
+        <option value="$PROJECT_DIR$/textblob_testing_deutsch.py" />
+        <option value="$PROJECT_DIR$/textblob_testing.py" />
+        <option value="$PROJECT_DIR$/utils/myers.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/text_comparator.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment/multi_sequence_alignment.py" />
+        <option value="$PROJECT_DIR$/utils/random.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment/longest_common_subsequence.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment/sequence_alignment.py" />
+        <option value="$PROJECT_DIR$/n_dist_keying/ocr_comparison.py" />
+        <option value="$PROJECT_DIR$/n_dist_keying/text_unspacer.py" />
+        <option value="$PROJECT_DIR$/n_dist_keying/textfile_generator.py" />
+        <option value="$PROJECT_DIR$/Testfiles/oneprof_tesseract_sure.txt" />
         <option value="$PROJECT_DIR$/main_unspacer.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment/scikit_custom_sequence_ocr.py" />
+        <option value="$PROJECT_DIR$/../learning_python/update_properties.py" />
+        <option value="$PROJECT_DIR$/eseraygun_python_alignment_test.py" />
+        <option value="$PROJECT_DIR$/msa_biopython_bugfix.py" />
+        <option value="$PROJECT_DIR$/utils/typecasts.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/ocr_set.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/n_dist_keying/ocr_comparison.py" />
         <option value="$PROJECT_DIR$/n_dist_keying/text_corrector.py" />
         <option value="$PROJECT_DIR$/spacy_io_test.py" />
@@ -191,14 +307,30 @@
         <option value="$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py" />
         <option value="$PROJECT_DIR$/plt_charinfo.py" />
         <option value="$PROJECT_DIR$/utils/df_objectifier.py" />
+=======
+        <option value="$PROJECT_DIR$/msa_biopython_bugfix2.py" />
+        <option value="$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py" />
+        <option value="$PROJECT_DIR$/main_n_dist_keying.py" />
+        <option value="$PROJECT_DIR$/Testfiles/accreport_msa_best.txt" />
+        <option value="$PROJECT_DIR$/Testfiles/isri_syncreport_msa_best.txt" />
+        <option value="$PROJECT_DIR$/ocr_validation/isri_handler.py" />
+        <option value="$PROJECT_DIR$/test_isri_handler.py" />
+>>>>>>> master
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="1" />
     <option name="y" value="25" />
     <option name="width" value="639" />
     <option name="height" value="455" />
+=======
+    <option name="x" value="640" />
+    <option name="y" value="-4" />
+    <option name="width" value="1920" />
+    <option name="height" value="1020" />
+>>>>>>> master
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -216,7 +348,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>BashSupport</id>
+            <id>PyPackageRequirementsInspection</id>
           </State>
         </selected-state>
       </profile-state>
@@ -238,6 +370,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scratches" />
+>>>>>>> master
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,23 +386,27 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+<<<<<<< HEAD
       <pane id="Scratches" />
+=======
+>>>>>>> master
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/spacy_io_test.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/test_isri_handler.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Testfiles" />
-      <recent name="$PROJECT_DIR$/custom_ocropus_scripts" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/n_dist_keying" />
       <recent name="$PROJECT_DIR$/my_hocr_parser" />
       <recent name="$PROJECT_DIR$/Testfiles" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ocr_validation" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Testfiles" />
+      <recent name="$PROJECT_DIR$/custom_ocropus_scripts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -281,7 +421,11 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python.plt_charinfo">
+=======
+  <component name="RunManager" selected="Python.test_isri_handler">
+>>>>>>> master
     <configuration name="dictionary_comparison.py" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -295,6 +439,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python_ocr" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dictionary_comparison.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="eseraygun_python_alignment_test.py" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learning_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/eseraygun_python_alignment_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -331,6 +493,42 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="learning_python" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main_unspacer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="msa_biopython_bugfix2.py" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learning_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/msa_biopython_bugfix2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="multi_sequence_alignment_test" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learning_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_sequence_alignment_test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -444,6 +642,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+<<<<<<< HEAD
     <list size="9">
       <item index="0" class="java.lang.String" itemvalue="Python.python2validation" />
       <item index="1" class="java.lang.String" itemvalue="Python.ocropy_check" />
@@ -454,6 +653,77 @@
       <item index="6" class="java.lang.String" itemvalue="Python.ocropus_hocr_custom" />
       <item index="7" class="java.lang.String" itemvalue="Python.ocropus_visualize_results_custom" />
       <item index="8" class="java.lang.String" itemvalue="Python.plt_charinfo" />
+=======
+    <configuration name="test_isri_handler" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learning_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_isri_handler.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="textblob_testing" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learning_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/textblob_testing.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="update_properties" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../learning_python" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="learning_python" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../learning_python/update_properties.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <list size="14">
+      <item index="0" class="java.lang.String" itemvalue="Python.msa_biopython_bugfix2.py" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test_isri_handler" />
+      <item index="2" class="java.lang.String" itemvalue="Python.eseraygun_python_alignment_test.py" />
+      <item index="3" class="java.lang.String" itemvalue="Python.update_properties" />
+      <item index="4" class="java.lang.String" itemvalue="Python.python2validation" />
+      <item index="5" class="java.lang.String" itemvalue="Python.ocropy_check" />
+      <item index="6" class="java.lang.String" itemvalue="Python.main_n_dist_keying.py" />
+      <item index="7" class="java.lang.String" itemvalue="Python.multi_sequence_alignment_test" />
+      <item index="8" class="java.lang.String" itemvalue="Python.spacy_io_test" />
+      <item index="9" class="java.lang.String" itemvalue="Python.textblob_testing" />
+      <item index="10" class="java.lang.String" itemvalue="Python.main_unspacer.py" />
+      <item index="11" class="java.lang.String" itemvalue="Python.dictionary_comparison.py" />
+      <item index="12" class="java.lang.String" itemvalue="Python.ocropus_hocr_custom" />
+      <item index="13" class="java.lang.String" itemvalue="Python.ocropus_visualize_results_custom" />
+>>>>>>> master
     </list>
     <recent_temporary>
       <list size="1">
@@ -478,6 +748,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
+<<<<<<< HEAD
     <frame x="67" y="25" width="1853" height="947" extended-state="6" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1284153" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -489,15 +760,35 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18935643" sideWeight="0.4978142" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3345588" sideWeight="0.69617486" order="3" side_tool="false" content_ui="tabs" />
+=======
+    <frame x="640" y="-4" width="1857" height="1028" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35525605" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4190372" sideWeight="0.25606468" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29405034" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2402746" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4190372" sideWeight="0.7439353" order="3" side_tool="false" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+<<<<<<< HEAD
       <window_info id="R Packages" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="R Graphics" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.49595687" order="1" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32951945" sideWeight="0.49380055" order="1" side_tool="false" content_ui="tabs" />
+>>>>>>> master
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -540,10 +831,11 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/n_dist_keying/text_unspacer.py</url>
-          <line>293</line>
+          <line>290</line>
           <option name="timeStamp" value="991" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/n_dist_keying/hocr_df_comparator.py</url>
           <line>153</line>
           <option name="timeStamp" value="1090" />
@@ -557,6 +849,96 @@
           <url>file://$PROJECT_DIR$/plt_charinfo.py</url>
           <line>142</line>
           <option name="timeStamp" value="1104" />
+=======
+          <url>file://$PROJECT_DIR$/textblob_testing.py</url>
+          <line>110</line>
+          <option name="timeStamp" value="1016" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/textblob_testing.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="1017" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/textblob_testing.py</url>
+          <line>78</line>
+          <option name="timeStamp" value="1026" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/_sequence.py</url>
+          <line>634</line>
+          <option name="timeStamp" value="1218" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/msa_biopython_bugfix.py</url>
+          <line>69</line>
+          <option name="timeStamp" value="1315" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/msa_biopython_bugfix.py</url>
+          <line>68</line>
+          <option name="timeStamp" value="1316" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/msa_biopython_bugfix.py</url>
+          <line>58</line>
+          <option name="timeStamp" value="1318" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/msa_biopython_bugfix.py</url>
+          <line>62</line>
+          <option name="timeStamp" value="1319" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/local/lib/python3.6/dist-packages/Bio/pairwise2.py</url>
+          <line>607</line>
+          <option name="timeStamp" value="1344" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///usr/local/lib/python3.6/dist-packages/Bio/pairwise2.py</url>
+          <line>599</line>
+          <option name="timeStamp" value="1346" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eseraygun_python_alignment_test.py</url>
+          <line>143</line>
+          <option name="timeStamp" value="1362" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/eseraygun_python_alignment_test.py</url>
+          <line>118</line>
+          <option name="timeStamp" value="1365" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/msa_biopython_bugfix.py</url>
+          <line>53</line>
+          <option name="timeStamp" value="1367" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py</url>
+          <line>700</line>
+          <option name="timeStamp" value="1398" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py</url>
+          <line>619</line>
+          <option name="timeStamp" value="1399" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py</url>
+          <line>573</line>
+          <option name="timeStamp" value="1427" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/n_dist_keying/ocr_set.py</url>
+          <line>208</line>
+          <option name="timeStamp" value="1488" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py</url>
+          <line>373</line>
+          <option name="timeStamp" value="1489" />
+>>>>>>> master
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -569,7 +951,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
+<<<<<<< HEAD
       <option name="time" value="1107" />
+=======
+      <option name="time" value="1496" />
+>>>>>>> master
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -583,6 +969,26 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
+        <expression-string>print(&quot;asd&quot;)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>text_tuple_cmp</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>text_tuple_adj</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>text_tuple</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
         <expression-string>lines_abbyy_normalized</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
@@ -590,6 +996,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_abbyy_result.txt_lh_adapted">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -760,30 +1167,232 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2548">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+=======
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ocr_validation/ocrolib_edist.py">
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/_genetic_code.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="764" column="0" lean-forward="false" selection-start-line="764" selection-start-column="0" selection-end-line="764" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="312" column="0" lean-forward="false" selection-start-line="312" selection-start-column="0" selection-end-line="312" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/alignment/_tabular_msa.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharmCE2017.3/system/python_stubs/-1247971763/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="4707" column="58" lean-forward="false" selection-start-line="4707" selection-start-column="0" selection-end-line="4708" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-118">
+          <caret line="1092" column="48" lean-forward="false" selection-start-line="1092" selection-start-column="48" selection-end-line="1092" selection-end-column="48" />
+          <folding>
+            <element signature="e#354#363#0" expanded="false" />
+            <marker date="1517915511984" expanded="true" signature="20980:21165" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../learning_python/update_properties.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/nwalign3/wrappers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/alignment/_pairwise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-717">
+          <caret line="532" column="4" lean-forward="false" selection-start-line="532" selection-start-column="4" selection-end-line="532" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/scikit_custom_sequence_ocr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/skbio/sequence/_grammared_sequence.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6336">
+          <caret line="361" column="38" lean-forward="false" selection-start-line="361" selection-start-column="38" selection-end-line="361" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eseraygun_python_alignment_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="37" column="60" lean-forward="false" selection-start-line="37" selection-start-column="54" selection-end-line="37" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/typecasts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multi_sequence_alignment_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5160">
+          <caret line="354" column="34" lean-forward="false" selection-start-line="353" selection-start-column="0" selection-end-line="364" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa_biopython_bugfix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="51" column="52" lean-forward="false" selection-start-line="51" selection-start-column="52" selection-end-line="51" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/msa_biopython_bugfix2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multi_sequence_alignment/msa_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="744" column="0" lean-forward="true" selection-start-line="744" selection-start-column="0" selection-end-line="744" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#73#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/dist-packages/Bio/pairwise2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="406" column="0" lean-forward="false" selection-start-line="406" selection-start-column="0" selection-end-line="406" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spacy_io_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_unspacer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="583">
+          <caret line="127" column="0" lean-forward="true" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/n_dist_keying/ocr_set.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="208" column="0" lean-forward="false" selection-start-line="208" selection-start-column="0" selection-end-line="208" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/oneprof_msa_best_result.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="103" column="8" lean-forward="true" selection-start-line="103" selection-start-column="1" selection-end-line="104" selection-end-column="0" />
+>>>>>>> master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/AccReport_msa_best.txt" />
+    <entry file="file://$PROJECT_DIR$/Testfiles/accreport_tesseract.txt">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="180">
           <caret line="22" column="11" lean-forward="false" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tesserocr_check.py">
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/accreport_ocro.txt">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="782">
           <caret line="97" column="38" lean-forward="false" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/pytesseract_check.py">
+=======
+    <entry file="file://$PROJECT_DIR$/Testfiles/accreport_ndist_keying.txt">
+>>>>>>> master
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/n_dist_keying/hocr_line_normalizer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-793">
@@ -827,12 +1436,77 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Testfiles/charconfs/long/ocro/0033_1969_230-6_B_062_0076.jpg_charfons_charinfo.json">
+=======
+    <entry file="file://$PROJECT_DIR$/Testfiles/accreport_abbyy.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/accreport_msa_best.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_syncreport_msa_best.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2739">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_report_ngram.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_report_vote.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1134">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main_n_dist_keying.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2394">
+          <caret line="38" column="54" lean-forward="false" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_accreport_isri_vote.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_accreport_ndist_keying.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_waccreport_tesseract.txt">
+>>>>>>> master
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Testfiles/charconfs/long/ocro/0585_1969_230-6_B_062_0998.jpg_charfons_charinfo.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -888,10 +1562,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4209">
           <caret line="185" column="21" lean-forward="false" selection-start-line="185" selection-start-column="21" selection-end-line="185" selection-end-column="21" />
+=======
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_waccreport_ocro.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_accreport_msa_best.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_waccreport_abbyy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_waccreport_msa_best.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_waccreport_isri_vote.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_waccreport_ndist_keying.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_report_wordfreq.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-252">
+          <caret line="167" column="12" lean-forward="false" selection-start-line="167" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopreport_abbyy.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/utils/df_tools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -910,17 +1647,38 @@
             <element signature="e#0#9#0" expanded="true" />
             <element signature="e#135#6834#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3/dist-packages/apport_python_hook.py">
+=======
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopreport_msa_best.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopreport_summed.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> master
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testfiles/isri_editopcostreport_msa_best.txt">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="372">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+=======
+        <state relative-caret-position="-291">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> master
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/plt_charinfo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -929,10 +1687,19 @@
             <element signature="e#201#247#0" expanded="true" />
             <element signature="e#587#5092#0" expanded="false" />
             <element signature="e#5122#6270#0" expanded="false" />
+=======
+    <entry file="file://$PROJECT_DIR$/ocr_validation/isri_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="322" column="8" lean-forward="false" selection-start-line="322" selection-start-column="8" selection-end-line="322" selection-end-column="8" />
+          <folding>
+            <marker date="1518623956528" expanded="true" signature="3812:3921" ph="..." />
+>>>>>>> master
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/utils/df_objectifier.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -949,6 +1716,13 @@
             <element signature="e#6923#7754#0" expanded="false" />
             <element signature="e#8743#8835#0" expanded="false" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/test_isri_handler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="95" column="0" lean-forward="true" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+          <folding />
+>>>>>>> master
         </state>
       </provider>
     </entry>

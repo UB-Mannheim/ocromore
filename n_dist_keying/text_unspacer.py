@@ -102,8 +102,8 @@ class TextUnspacer:
         text = line_to_process.ocr_text_normalized
         text_cmp = line_unspaced.ocr_text_normalized
 
-        # if "Aus den G" in text_cmp:
-        #    print("im here")
+        if "Dividenden auf" in text_cmp:
+            print("im here")
 
         text_tuple, text_tuple_adj = self.get_tuples(text, SIZE_FILO, SEARCH_RANGE_FILO)
         text_tuple_cmp, text_tuple_cmp_adj = self.get_tuples(text_cmp, SIZE_FILO, SEARCH_RANGE_FILO)
@@ -276,9 +276,6 @@ class TextUnspacer:
             #    print("reachd breaking point")
 
             for index_a2, entry_a2 in enumerate(arr2):
-
-
-
 
                 entry_ref_adj = None
                 #entry_a2_adj = None
