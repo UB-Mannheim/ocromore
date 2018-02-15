@@ -102,6 +102,16 @@ class HOCRDocument(HOCRElement):
     def npages(self):
         return len(self._elements)
 
+    @property
+    def ocr(self):
+        for tag in self._hocr_html.find_all("meta"):
+            if "esseract" in tag.get("content",None):
+                return "Tess"
+            if "cropy" in tag.get("content",None):
+                return "Ocro"
+            if "ABBYY" in tag.get("content",None):
+                return "Abbyy"
+        return "Abbyy"
 
 class Page(HOCRElement):
 
@@ -126,8 +136,6 @@ class Page(HOCRElement):
     @property
     def nareas(self):
         return len(self._elements)
-
-
 
 class Area(HOCRElement):
 
@@ -177,7 +185,6 @@ class Paragraph(HOCRElement):
         output += self._elements[-1].ocr_text
         return output
 
-
 class Line(HOCRElement):
 
     HOCR_LINE_TAG = "ocr_line"
@@ -216,6 +223,7 @@ class Word(HOCRElement):
 
     HOCR_WORD_TAG = "ocrx_word"
     _xwconf = None
+    _xconfs = None
 
     def __init__(self, parent, hocr_html):
         super(Word, self).__init__(hocr_html, parent, None, None, None)
@@ -224,6 +232,8 @@ class Word(HOCRElement):
         for element in titlesplit:
             if 'x_wconf' in element:
                 self._xwconf = element.strip().split(' ')[1]
+            if "x_confs" in element:
+                self._xconfs = element.strip().split(' ')[1:]
                 break
 
 

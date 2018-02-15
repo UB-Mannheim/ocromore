@@ -1,3 +1,8 @@
 .oneprof/
 .pynative/
+.idea/
 custom_ocropus_scripts
+Testfiles/charconfs/
+Testfiles/long/
+Testfiles/sql/
+__pycache__/

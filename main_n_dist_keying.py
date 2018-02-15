@@ -54,7 +54,6 @@ abbylist = hocr_comparator.get_abbyy_boxes("../Testfiles/oneprof_abbyy_tables_ok
 
 #todo: Possibility calculate linefeed with additional information in unnormalized boxes
 
-
 # Normalize list results for comparison
 hocr_normalizer = HocrLineNormalizer()
 ocrolist_normalized = hocr_normalizer.normalize_ocropus_list(ocrolist)
