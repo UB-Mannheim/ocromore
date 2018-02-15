@@ -1,6 +1,28 @@
 class TypeCasts:
 
     @staticmethod
+    def convert_string_to_unicode_list(text):
+
+        unicode_a = []
+        for char in list(text):
+            # echar = char.encode('UTF-16')
+            ordinal = ord(char)
+            unicode_a.append(ordinal)
+        return unicode_a
+
+
+    @staticmethod
+    def convert_unicodelist_to_string(u_list):
+
+        text = ""
+        for number in list(u_list):
+            # echar = char.encode('UTF-16')
+            character = chr(number)
+            text += character
+        return text
+
+
+    @staticmethod
     def round_to_int(value):
         return int(round(value))
 

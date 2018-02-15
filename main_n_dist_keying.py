@@ -17,7 +17,14 @@ EXPORT_ADAPTED_ABBYY_RESULT = True
 EXPORT_ADAPTED_OCROPUS_RESULT = True
 
 # un-/refspacing settings:
-USE_REFSPACING = True  # instead of unspacing algorithm use the refspacing algorithm
+USE_REFSPACING = False  # instead of unspacing algorithm use the refspacing algorithm
+
+#keying mechanism
+DO_N_DIST_KEYING = True
+DO_MSA_BEST = True
+
+# Settings for Multi Sequence Alignment Best
+MSA_BEST_USE_N_DIST_PIVOT = True
 
 # postcorrection settings:
 KEYING_RESULT_POSTCORRECTION = True
@@ -25,9 +32,17 @@ KEYING_RESULT_POSTCORRECTION = True
 # validation settings:
 IGNORE_LINEFEED = False
 IGNORE_WHITESPACE = False
-DISPLAY_DIFFERENCES = True
+DISPLAY_DIFFERENCES = False
+
+#FILENAMES:
+FILEPATH_ABBYY_TEXT = "./Testfiles/oneprof_abbyy_result_lh_adapted.txt"
+FILEPATH_OCROPUS_TEXT = "./Testfiles/oneprof_ocropus_result_lh_adapted.txt"
+FILEPATH_TESSERACT_TEXT = "./Testfiles/oneprof_tesseract_sure.txt"
+FILEPATH_GROUNDTRUTH = "./Testfiles/oneprof.gt.txt"
 
 
+
+FILEPATH_MSA_BEST_RESULT = "./Testfiles/oneprof_msa_best_result.txt"
 
 
 # Get lists of Hocr-objects from testfiles
@@ -64,7 +79,6 @@ lhi_ocropus_normalized = lh_calculator.calculate_line_distance_information(ocrol
 
 
 
-abbyy_text_file_path = "./Testfiles/oneprof_abbyy_result_lh_adapted.txt"
 if EXPORT_ADAPTED_ABBYY_RESULT:
     """
         Abbyy output comes only in html-hocr. Therefore the output has to be adapted.
@@ -74,13 +88,12 @@ if EXPORT_ADAPTED_ABBYY_RESULT:
         if necessary)
     """
     tfg = TextFileGenerator()
-    tfg.create_file(lhi_abbyy_normalized, abbylist_normalized, abbyy_text_file_path)
+    tfg.create_file(lhi_abbyy_normalized, abbylist_normalized, FILEPATH_ABBYY_TEXT)
 
 
-ocropus_text_file_path = "./Testfiles/oneprof_ocropus_result_lh_adapted.txt"
 if EXPORT_ADAPTED_OCROPUS_RESULT:
     tfg2 = TextFileGenerator()
-    tfg2.create_file(lhi_ocropus_normalized, ocrolist_normalized, ocropus_text_file_path)
+    tfg2.create_file(lhi_ocropus_normalized, ocrolist_normalized, FILEPATH_OCROPUS_TEXT)
 
 
 
@@ -102,7 +115,7 @@ print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing----
 ocr_comparison.print_sets(False)
 if USE_REFSPACING:
     ocr_comparison.refspace_list(2, 1)  # refspace ocropus with tesseract as unspacing template
-    # ocr_comparison.refspace_list(0, 1)  # refspace abbyy with tesseract as unspacing template, seems to produce worse keying-results
+    #ocr_comparison.refspace_list(0, 1)  # refspace abbyy with tesseract as unspacing template, seems to produce worse keying-results
 
 else:
     ocr_comparison.unspace_list(2, 1)  # unspace ocropus with tesseract as unspacing template
@@ -114,38 +127,85 @@ ocr_comparison.print_sets(False)
 
 
 ocr_comparison.print_sets(True)     # print the sets created
-ocr_comparison.do_n_distance_keying()   # do the keying, which makes the decision which is the best line for each set
-ocr_comparison.print_n_distance_keying_results()  # print keying results
+
+if DO_N_DIST_KEYING:
+
+    ocr_comparison.do_n_distance_keying()   # do the keying, which makes the decision which is the best line for each set
+    ocr_comparison.print_n_distance_keying_results()  # print keying results
+
+    if KEYING_RESULT_POSTCORRECTION:
+        ocr_comparison.do_postcorrection(True)
+        print("keying results after postcorrection")
+        ocr_comparison.print_n_distance_keying_results()
+
+    ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt", True)
+
+if DO_MSA_BEST:
+
+    if MSA_BEST_USE_N_DIST_PIVOT:
+        ocr_comparison.do_msa_best_with_ndist_pivot()
+    else:
+        ocr_comparison.do_msa_best()
+
+    ocr_comparison.print_msa_best_results()
+    ocr_comparison.save_dataset_to_file(FILEPATH_MSA_BEST_RESULT, 0, True, "msa_best")
+
 ocr_comparison.print_sets(False)    # print the sets again with decision information
 
-if KEYING_RESULT_POSTCORRECTION:
-    ocr_comparison.do_postcorrection(True)
-    print("keying results after postcorrection")
-    ocr_comparison.print_n_distance_keying_results()
+DO_OWN_VAL = False
+if DO_OWN_VAL is True:
+    # Do steps to validate the used keying
+    ocr_validator = OCRvalidator()
 
-ocr_comparison.save_n_distance_keying_results_to_file("./Testfiles/oneprof_keying_result.txt", True)
+    ocr_validator.set_groundtruth(FILEPATH_GROUNDTRUTH)
+    ocr_validator.set_ocr_file("./Testfiles/oneprof_keying_result.txt")
+    ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
+    ocr_validator.set_ocr_file(FILEPATH_MSA_BEST_RESULT)
+    ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
+    ocr_validator.set_ocr_file("./Testfiles/oneprof_abbyy.txt")
+    ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
+    ocr_validator.set_ocr_file(FILEPATH_ABBYY_TEXT)
+    ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
+    ocr_validator.set_ocr_file(FILEPATH_TESSERACT_TEXT)
+    ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
+    ocr_validator.set_ocr_file(FILEPATH_OCROPUS_TEXT)
+    ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
 
-# Do steps to validate the used keying
-ocr_validator = OCRvalidator()
 
-ocr_validator.set_groundtruth("./Testfiles/oneprof.gt.txt")
-ocr_validator.set_ocr_file("./Testfiles/oneprof_keying_result.txt")
-ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
-ocr_validator.set_ocr_file("./Testfiles/oneprof_abbyy.txt")
-ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
-ocr_validator.set_ocr_file(abbyy_text_file_path)
-ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
-ocr_validator.set_ocr_file("./Testfiles/oneprof_tesseract_sure.txt")
-ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
-ocr_validator.set_ocr_file(ocropus_text_file_path)
-ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
+DO_ISRI_VAL = True
+if DO_ISRI_VAL is True:
+    from ocr_validation.isri_handler import IsriHandler
+
+
+    isri_handler = IsriHandler()
+    FILEPATH_ACCURACY_REPORT_MSA = "./Testfiles/isri_accreport_msa_best.txt"
+    FILEPATH_ACCURACY_REPORT_NDIST = "./Testfiles/isri_accreport_ndist_keying.txt"
+
+    FILEPATH_ACCURACY_REPORT_ABBYY = "./Testfiles/isri_accreport_abbyy.txt"
+    FILEPATH_ACCURACY_REPORT_TESS = "./Testfiles/isri_accreport_tesseract.txt"
+    FILEPATH_ACCURACY_REPORT_OCRO = "./Testfiles/isri_accreport_ocro.txt"
+
+
+    FILEPATH_SYNCTEXT_REPORT_MSA = "./Testfiles/isri_accreport_msa_best.txt"
+
+    isri_handler.accuracy(FILEPATH_GROUNDTRUTH, "./Testfiles/oneprof_keying_result.txt",FILEPATH_ACCURACY_REPORT_NDIST)
+    isri_handler.accuracy(FILEPATH_GROUNDTRUTH, FILEPATH_MSA_BEST_RESULT, FILEPATH_ACCURACY_REPORT_MSA)
+    isri_handler.accuracy(FILEPATH_GROUNDTRUTH, FILEPATH_ABBYY_TEXT, FILEPATH_ACCURACY_REPORT_ABBYY)
+    isri_handler.accuracy(FILEPATH_GROUNDTRUTH, FILEPATH_OCROPUS_TEXT, FILEPATH_ACCURACY_REPORT_OCRO)
+    isri_handler.accuracy(FILEPATH_GROUNDTRUTH, FILEPATH_TESSERACT_TEXT, FILEPATH_ACCURACY_REPORT_TESS)
+
+    synctext_config = isri_handler.SynctextConfig()
+    synctext_config.use_H_algorithm()
+    synctext_config.use_T_algorithm()
+    isri_handler.synctext(FILEPATH_GROUNDTRUTH, FILEPATH_MSA_BEST_RESULT,FILEPATH_SYNCTEXT_REPORT_MSA,synctext_config)
 
 # show differences
 if DISPLAY_DIFFERENCES:
     pyc_handler = PycharmHandler()
-    pyc_handler.show_file_comparison("./Testfiles/oneprof.gt.txt", "./Testfiles/oneprof_keying_result.txt")
+    pyc_handler.show_file_comparison(FILEPATH_GROUNDTRUTH, "./Testfiles/oneprof_keying_result.txt")
     # mind this is the line height adapted text, generated by this file
-    pyc_handler.show_file_comparison("./Testfiles/oneprof.gt.txt", abbyy_text_file_path)
-    pyc_handler.show_file_comparison("./Testfiles/oneprof.gt.txt", ocropus_text_file_path)
-    pyc_handler.show_file_comparison("./Testfiles/oneprof.gt.txt", "./Testfiles/oneprof_tesseract_sure.txt")
+    pyc_handler.show_file_comparison(FILEPATH_GROUNDTRUTH, FILEPATH_ABBYY_TEXT)
+    pyc_handler.show_file_comparison(FILEPATH_GROUNDTRUTH, FILEPATH_OCROPUS_TEXT)
+    pyc_handler.show_file_comparison(FILEPATH_GROUNDTRUTH, FILEPATH_TESSERACT_TEXT)
+    pyc_handler.show_file_comparison(FILEPATH_GROUNDTRUTH, FILEPATH_MSA_BEST_RESULT)
 

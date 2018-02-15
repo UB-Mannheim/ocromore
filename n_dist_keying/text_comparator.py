@@ -1,6 +1,8 @@
 import difflib
 from ocr_validation.ocrolib_edist import Edist3
 from utils.typecasts import TypeCasts
+from utils.random import Random
+from utils.myers import MyersSequenceMatcher
 import distance as distpkg
 
 class TextComparator:
@@ -102,13 +104,21 @@ class TextComparator:
         #if difference_count == 1:
         #   print("yes")
 
-
         return difference_count, difference_indices
 
     @staticmethod
-    def compare_ocr_strings_hamming(ocr_string1, ocr_string2, pad_difference = True):
-        # pad stuff here :) ?
-        # todo !!!
+    def compare_ocr_strings_hamming(ocr_string1, ocr_string2, pad_difference=True):
+
+        if pad_difference is True:
+            len_str1 = len(ocr_string1)
+            len_str2 = len(ocr_string2)
+            if len_str1 > len_str2:
+                ocr_string2 = Random.append_pad_values(ocr_string2,len_str1-len_str2)
+            elif len_str2 > len_str1:
+                ocr_string1 = Random.append_pad_values(ocr_string1,len_str2-len_str1)
+
+        # print("Do Hammingdist ",ocr_string1," to " ,ocr_string2)
+
         result = distpkg.hamming(ocr_string1, ocr_string2)
         return result
 
@@ -254,3 +264,22 @@ class TextComparator:
             ctrl_char = element[0:1]
             string = element[1::]
             print("Control char: ", ctrl_char, " text: ", string)
+
+
+
+
+    @staticmethod
+    def compare_ocr_strings_myers(ocr_string1, ocr_string2):
+        """
+         myers/difflib sequence matching https://github.com/GNOME/meld/blob/master/meld/matchers/myers.py
+
+         :param ocr_string1:
+         :param ocr_string2:
+         :return:
+         """
+
+        sqmatch = MyersSequenceMatcher(None, ocr_string1, ocr_string2)
+        ratio = sqmatch.ratio()
+        distance = 1 - ratio
+
+        return distance
