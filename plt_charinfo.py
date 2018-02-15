@@ -155,11 +155,11 @@ def charinfo_process():
         dfXO = DFObjectifier(dbdir + '/1957.db', '0140_1957_hoppa-405844417-0050_0172')
 
         # Linematcher with queries
-        dfXO.match_line(force=True)
+        dfXO.match_line()
         dfXO.write2sql()
 
         # Unspacing
-        dfXO.unspace()
+        dfXO.unspace(force=True)
         dfXO.write2sql()
 
         dfXO.write2file("STUFF")

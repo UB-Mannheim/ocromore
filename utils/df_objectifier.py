@@ -155,7 +155,7 @@ class DFObjectifier(object):
         if sort_by is None:
             sort_by = ["Tess", "Abbyy", "Ocro"]
         if not self.df.reset_index()['word_idx'].equals(self.df.reset_index()['calc_word_idx'].astype(int)) and not force: return
-        tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_y0","word_y1","word_x0", "word_x1", "calc_line_idx","calc_word_idx"] #.set_index(["ocr","ocr_profile"])
+        tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_y0","word_y1","word_x0", "word_x1", "calc_line_idx","calc_word_idx"]
         groups = tdf.groupby(["ocr","ocr_profile"])
         groupnames = sorted(groups.indices.keys(),key= lambda x:sort_by.index(x[0]))
         max_lidx = groups['calc_line_idx'].max().max()
@@ -175,7 +175,7 @@ class DFObjectifier(object):
                             if group.shape[0] == 0: break
                             x0 = group["word_x0"].iloc[0]
                             x1 = group["word_x1"].iloc[0]
-                            diff = (group["word_y1"].iloc[0]-group["word_y0"].iloc[0])
+                            diff = (group["word_y1"].iloc[0]-group["word_y0"].iloc[0])*1.25
                         else:
                             # Select all the words in the other groups which have the same borders
                             tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x1'] < (x1 + diff)]
