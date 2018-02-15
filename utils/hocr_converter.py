@@ -152,8 +152,8 @@ class HocrConverter(object):
                         "word_x1": wbbox[2],
                         "word_y0": wbbox[1],
                         "word_y1": wbbox[3],
-                        "calc_line": -1,
-                        "calc_word": widx,
+                        "calc_line_idx": -1,
+                        "calc_word_idx": widx,
                         "calc_char": char,
                         "char_weight": -1.0,
                 }
