@@ -296,7 +296,7 @@ class DFSelObj(object):
         self.name = name
         self.data = self._get_data(df)
         self.idxkeys = idxkeys
-        self.result = True
+        self.result = False
         self.imkeys = imkeys
         self.mkeys = list(set(self.data.keys()).difference(set(imkeys + idxkeys)))
         self.orig_df = df
@@ -394,10 +394,15 @@ class DFSelObj(object):
             return self.ivalue.val
 
     def _get_value(self):
+        if self.ivalue.pos >= len(self.data["UID"]):
+            self.ivalue.val = None
+            return
         idx = self.data["UID"][self.ivalue.pos]
-        if self.ivalue.attr in self.idxkeys+["char"] and not self.result:
+        if self.ivalue.attr not in self.mkeys and not self.result:
             if idx != -1:
                 self.ivalue.val = self.data[self.ivalue.attr][idx]
+            else:
+                self.ivalue.val = None
         else:
             self.ivalue.val = self.data[self.ivalue.attr][self.ivalue.pos]
 

@@ -173,13 +173,21 @@ def charinfo_process():
         #dfXO.get_obj(query="calc_line_idx == 10")
             #print(idx)
 
-        import sys
-
         dfSelO = dfXO.get_line_obj()
-        dfResO = dfXO.get_obj(res=True)
 
-        text= dfSelO[0].textstr
-        text2= dfSelO[1].textstr
+        for lidx in dfSelO:
+            for items in dfSelO[lidx]:
+                print(items.textstr)
+                txt = items.textstr
+                txt = txt[:1] + "|||" + txt[1:]
+                items.update_textspace(txt,"|")
+                print(items.textstr)
+                print(items.data["UID"])
+                print(items.value("calc_char", 2))
+                print(items.value("x_confs",2))
+                print(items.value("calc_char", 4))
+                print(items.value("x_confs",4))
+        text2 = dfSelO[1].textstr
         text = text[:1] + "|" + text[1:]
         text = text[:3] + "|" + text[3:]
         text = text[:5] + " " + text[5:]
