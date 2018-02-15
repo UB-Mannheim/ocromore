@@ -10,8 +10,8 @@ class HocrConverter(object):
         self._tesseract_page = None
 
     def get_hocr_document(self, filename):
-        dir_path = os.path.dirname(os.path.abspath(__file__))
-        full_path = os.path.join(dir_path, filename)
+        #dir_path = os.path.dirname(os.path.abspath(__file__))
+        full_path = filename #os.path.join(dir_path, filename)
         document = HOCRDocument(full_path, is_path=True)
         return document
 

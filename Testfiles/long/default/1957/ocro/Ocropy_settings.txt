@@ -1,0 +1,129 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Ocropy-Settings for the run "datetime"
+Timestamp:Tue Jan 23 16:06:41 2018
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Arguments:
+{
+    "binary": false,
+    "cut": false,
+    "fileformat": "jpg",
+    "filter": "sauvola",
+    "fpathin": "",
+    "fpathout": "",
+    "idx": 0,
+    "info": "datetime",
+    "infofolder": "2018-01-23_T16H06M/",
+    "infotxt": "",
+    "no_ocropy": false,
+    "no_tess": false,
+    "ocropy_profile": "test",
+    "tess_profile": "test",
+    "threshbin": 256,
+    "threshhitter": 10000,
+    "threshweight": 0.2,
+    "threshwindow": 31
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Profile:
+{
+    "parameters": {
+        "ocropus-dewrap": {
+            "files": {
+                "nargs": "*"
+            }
+        },
+        "ocropus-gpageseg": {
+            "error checking": {
+                "--maxlines": {
+                    "default": "300",
+                    "help": "maximum # lines permitted default: %(defaults)",
+                    "type": "float",
+                    "value": "3000"
+                },
+                "--nocheck": {
+                    "action": "store_true",
+                    "alias": "-n",
+                    "default": false,
+                    "help": "disable error checking on inputs",
+                    "value": true
+                }
+            },
+            "others": {
+                "files": {
+                    "nargs": "+"
+                }
+            },
+            "output parameters": {
+                "--json": {
+                    "action": "store_true",
+                    "alias": "-j",
+                    "default": false,
+                    "help": "store information about parameters in a *.ocropy.json-file (this option can be used to create an extended hocr output)",
+                    "value": true
+                }
+            }
+        },
+        "ocropus-gtedit": {
+            "html": {
+                "files": {
+                    "nargs": "+"
+                }
+            },
+            "org": {
+                "files": {
+                    "nargs": "+"
+                }
+            },
+            "text": {
+                "files": {
+                    "nargs": "+"
+                }
+            }
+        },
+        "ocropus-hocr": {
+            "--charconfs": {
+                "action": "store_true",
+                "alias": "-c",
+                "default": false,
+                "help": "output confidences of every char, only in combination with extened hocr-file.",
+                "value": true
+            },
+            "files": {
+                "nargs": "+"
+            }
+        },
+        "ocropus-lpred": {
+            "files": {
+                "nargs": "*"
+            }
+        },
+        "ocropus-ltrain": {
+            "files": {
+                "nargs": "*"
+            }
+        },
+        "ocropus-nlbin": {
+            "--nocheck": {
+                "action": "store_true",
+                "alias": "-n",
+                "default": false,
+                "help": "disable error checking on inputs",
+                "value": true
+            },
+            "files": {
+                "nargs": "+"
+            }
+        },
+        "ocropus-rpred": {
+            "files": {
+                "help": "input files; glob and @ expansion performed",
+                "nargs": "+"
+            }
+        },
+        "ocropus-rtrain": {
+            "files": {
+                "nargs": "*"
+            }
+        }
+    }
+}
