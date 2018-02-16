@@ -32,7 +32,11 @@ class OCRset:
         self._text_unspacer = TextUnspacer()
         self.shortest_distance_line = None  # holder element for recognized shortest distance line
         self._best_msa_text =""
+        self._is_origin_database = False
 
+    def is_database_set(self, enabled):
+        self._is_origin_database = enabled
+        
     def edit_line_set_value(self, set_index, new_value):
         self._set_lines[set_index] = new_value
 

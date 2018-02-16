@@ -126,7 +126,7 @@ def charinfo_process():
     dbdir = './Testfiles/sql/'
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
     files = glob.iglob("./Testfiles/long/default/**/*.hocr", recursive=True)
-    dbnamelast,con = "", None
+    dbnamelast, con = "", None
 
     if HOCR2SQL:
         for file in files:
