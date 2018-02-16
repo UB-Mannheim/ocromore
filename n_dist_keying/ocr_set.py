@@ -36,7 +36,7 @@ class OCRset:
 
     def is_database_set(self, enabled):
         self._is_origin_database = enabled
-        
+
     def edit_line_set_value(self, set_index, new_value):
         self._set_lines[set_index] = new_value
 
@@ -320,19 +320,27 @@ class OCRset:
     def get_line_content(self, line):
         """
         Helper method to get line content, because ocropus content
-        has other access properties.
+        has other access properties. Method behaves differently when
+        the current set is a database set
         :param line: line element to check upn
         :return: string with line content, or 'False if line isn't defined.
         """
+
 
         # hint: the attribute checked is created by hocr_line_normalizer
         if line is False:
             return False
         # elif hasattr(line, 'ocr_text_normalized'):
-        elif line.ocr_text_normalized is not None:
-            return line.ocr_text_normalized
+
+        if self._is_origin_database is False:
+            # just the standard behaviour
+            if line.ocr_text_normalized is not None:
+                return line.ocr_text_normalized
+            else:
+                return line.ocr_text
         else:
-            return line.ocr_text
+            return line.textstr
+
 
     def set_line_content(self, line, value):
         """

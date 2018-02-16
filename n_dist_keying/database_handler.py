@@ -23,10 +23,12 @@ class DatabaseHandler():
 
 
         ocr_set = OCRset(self._number_of_inputs, line_index)
+        ocr_set.is_database_set(True)
 
         for input_element in input_list_db:
-            print(input_element)
+
             ocr_program, ocr_setting = input_element.name
+
             if ocr_setting != USED_OCR_SETTING:
                 continue
 
@@ -39,20 +41,9 @@ class DatabaseHandler():
             if ocr_program == 'Ocro':
                 ocr_set.edit_line_set_value(DEFAULT_OCROPUS_INDEX, input_element)
 
-            """
-            print(items.textstr)
-            txt = items.textstr
-            txt = txt[:1] + "|||" + txt[1:]
-            items.update_textspace(txt, "|")
-            print(items.textstr)
-            print(items.data["UID"])
-            print(items.value("calc_char", 2))
-            print(items.value("x_confs", 2))
-            print(items.value("calc_char", 4))
-            print(items.value("x_confs", 4))
-            """
-        if len(ocr_set._set_lines) != len(input_list_db):
-            print("asd")
+
+        #if len(ocr_set._set_lines) != len(input_list_db):
+        #    print("asd")
 
         return  ocr_set
 
