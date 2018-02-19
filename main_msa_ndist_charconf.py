@@ -8,7 +8,8 @@ from ocr_validation.isri_handler import IsriHandler
 DB_DIR = './Testfiles/sql/'
 NUMBER_OF_INPUTS = 3  # number of ocr inputs which will be compared, todo make this dynmically with maxlen or smth
 # keying mechanism
-DO_N_DIST_KEYING = False
+DO_N_DIST_KEYING = True
+DO_WORDWISE_KEYING = False
 DO_MSA_BEST = False
 
 # Settings for Multi Sequence Alignment Best
@@ -16,7 +17,6 @@ MSA_BEST_USE_N_DIST_PIVOT = True
 
 # postcorrection settings:
 KEYING_RESULT_POSTCORRECTION = True
-
 
 # validation settings:
 IGNORE_LINEFEED = False
@@ -49,8 +49,8 @@ ocr_comparison.print_sets(False)
 
 
 if DO_N_DIST_KEYING:
-    print("Doing: N_DIST_KEYING")
-    ocr_comparison.do_n_distance_keying()   # do the keying, which makes the decision which is the best line for each set
+    print("Doing: N_DIST_KEYING, WORDWISE KEYING: ",DO_WORDWISE_KEYING)
+    ocr_comparison.do_n_distance_keying(DO_WORDWISE_KEYING)   # do the keying, which makes the decision which is the best line for each set
     #ocr_comparison.print_n_distance_keying_results()  # print keying results
     if KEYING_RESULT_POSTCORRECTION:
         print("Doing: KEYING_RESULT_POSTCORRECTION")

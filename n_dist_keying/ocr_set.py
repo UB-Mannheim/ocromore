@@ -136,8 +136,8 @@ class OCRset:
 
     def calculate_n_distance_keying(self):
 
-        if self.y_mean == 2123:
-            print("Stop here")
+        #if self.y_mean == 2123:
+        #    print("Stop here")
 
         # do a line-wise comparison, which calculates a distance between all lines in this set
         for line_index, line in enumerate(self._set_lines):
@@ -154,6 +154,72 @@ class OCRset:
         shortest_dist_index = self.d_storage.get_shortest_distance_index()
         self.shortest_distance_line_index = shortest_dist_index
         self.shortest_distance_line = self._set_lines[shortest_dist_index]
+
+    def calculate_n_distance_keying_wordwise(self):
+        if self._is_origin_database is False:
+            raise Exception("Wordwise keying only possible with database originated ocr_sets")
+
+        # get maximum word index
+        max_word_indices = []
+        for line in self._set_lines:
+            if line is False or line is None:
+                max_word_indices.append(0)
+            else:
+                max_word_index = int(max(line.data["word_idx"]))
+                max_word_indices.append(max_word_index)
+
+        max_word_index = max(max_word_indices)
+        print("mwi",max_word_index)
+
+        def get_word_at_calc_wordindex(line, word_index):
+            accumulated_word = ""
+            word_indices = line.data["calc_word_idx"]
+
+            for char_index, char in enumerate(line.data["char"]):
+                current_word_index = word_indices[char_index]
+                if current_word_index == word_index:
+                    accumulated_word +=char
+                if current_word_index > word_index:
+                    break
+            return accumulated_word
+
+        # get corresponding words
+        for current_word_index in range(0,max_word_index):
+            words = []
+            for line in self._set_lines:
+                if line is False or line is None:
+                    words.append(False)
+                else:
+                    if current_word_index < int(max(line.data["calc_word_idx"])):
+                        current_word = get_word_at_calc_wordindex(line, current_word_index)
+                        words.append(current_word)
+                    else:
+                        words.append(False)
+
+            print(words)
+            print("--")
+
+        return
+        #if self.y_mean == 2123:
+        #    print("Stop here")
+
+        # do a line-wise comparison, which calculates a distance between all lines in this set
+        for line_index, line in enumerate(self._set_lines):
+            self.compare_with_other_lines(line_index, line)
+
+        # calculate the distance from each item in set to all others
+        for line_index, line in enumerate(self._set_lines):
+            self.d_storage.calculate_accumulated_distance(line_index)
+
+        # get the index of the item in set, which has the shortest distance to all others
+        self.d_storage.calculate_shortest_distance_index()
+
+        # save the result
+        shortest_dist_index = self.d_storage.get_shortest_distance_index()
+        self.shortest_distance_line_index = shortest_dist_index
+        self.shortest_distance_line = self._set_lines[shortest_dist_index]
+
+
 
     def calculate_msa_best(self, take_n_dist_best_index=False):
 
