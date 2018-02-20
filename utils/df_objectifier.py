@@ -372,7 +372,7 @@ class DFSelObj(object):
             self.data["UID"].insert(pos, -1)
             self.data["char_weight"].insert(pos,-1)
             i = 1 if pos != 0 else 0
-            if insertfront: i = -1
+            if insertfront: i = 0
             self.data["calc_word_idx"].insert(pos, self.data["calc_word_idx"][pos - i])
         if cmd == "pop":
             if pos <= len(self.data["UID"]):
@@ -383,7 +383,7 @@ class DFSelObj(object):
 
     def update_textspace(self, text, wc=None):
         # wc = wildcards
-        if len(text) == len(self.textstr):return
+        if text == self.textstr:return
         if wc is not None:
             if wc in text:
                 self._update_wildcard(text,wc)
@@ -427,7 +427,6 @@ class DFSelObj(object):
             return str
         else:
             return "No text to export!"
-
 
     #def word(self,idx):
     #    if "calc_char" in self.data:
