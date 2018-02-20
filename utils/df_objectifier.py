@@ -387,7 +387,7 @@ class DFSelObj(object):
         if wc is not None:
             if wc in text:
                 self._update_wildcard(text,wc)
-        if np.where(np.array(list(text)) == " ")[0] != np.where(np.array(list(self.textstr)) == " ")[0]:
+        if text != self.textstr:
             wsarr = np.where(np.array(list(text)) == " ")[0]
             if len(wsarr)>0:
                 if max(wsarr) <= len(self.data["calc_word_idx"]):
@@ -400,14 +400,17 @@ class DFSelObj(object):
     def _update_wildcard(self,text,wc):
         #wc = wildcards
         chararr = np.array(list(text))
-        for idx in np.nditer(np.where(chararr == wc)):
-            front = False
-            if idx == 0: front=True
-            else:
-                if text[idx-1] == " ": front=True
-            nows = len(np.where(np.array(list(text[:idx])) == " ")[0])
-            self.text(idx-nows,wc,insertfront=front)
-        else:
+        try:
+            for idx in np.nditer(np.where(chararr == wc)):
+                front = False
+                if idx == 0:
+                    front=True
+                    nows = 0
+                else:
+                    if text[idx-1] == " ": front=True
+                    nows = len(np.where(np.array(list(text[:idx])) == " ")[0])
+                self.text(idx-nows,wc,insertfront=front)
+        except Exception:
             print("Cant update text. Seems that the wildcards matching seems wrong.")
 
     @property
