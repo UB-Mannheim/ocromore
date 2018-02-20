@@ -546,6 +546,13 @@ class DFEmptyObj(DFSelObj):
         self.empty = True
         self.maxuid = maxuid
 
+    def update_textspace(self, text, wc=None):
+        # wc = wildcards
+        self.data["calc_char"] = list(text)
+        self.data["UID"] = [-1]*len(text)
+        self.data["char_weight"] = [-1] * len(text)
+        self.data["calc_word_idx"] = [-1] * len(text)
+
 class Value(object):
     def __init__(self):
         self.pos = None
