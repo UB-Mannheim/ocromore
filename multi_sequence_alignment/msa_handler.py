@@ -3,7 +3,7 @@ import inspect
 from Bio import pairwise2
 from n_dist_keying.ocr_voter import OCRVoter
 from utils.random import Random
-
+import numpy as np
 from utils.typecasts import TypeCasts
 
 
@@ -419,8 +419,22 @@ class MsaHandler(object):
             res_final_2 = text_Babc
             res_final_3 = text_Cf
 
-            if len(res_final_1) != len(res_final_2) or len(res_final_1) !=  len(res_final_3):
-                print("no equal lengths in alignment!")
+            if len(res_final_1) != len(res_final_2) or len(res_final_1) !=  len(res_final_3) \
+                    or len(res_final_2) !=  len(res_final_3):
+                print("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
+                final_arrs = [res_final_1, res_final_2, res_final_2]
+                maxlen = max([len(res_final_1), len(res_final_2), len(res_final_3)])
+                # maxindex = np.argmax([len(res_final_1), len(res_final_2), len(res_final_3)])  # this takes in priorisation in case the chars are same
+                for current_res_index, current_res in enumerate(final_arrs):
+                    current_len = len(current_res)
+                    pad_size_needed = maxlen-current_len
+                    if pad_size_needed >=1:
+                        new_res = Random.append_pad_values(current_res,pad_size_needed,wildcard_character)
+                        final_arrs[current_res_index] = new_res
+
+                res_final_1 = final_arrs[0]
+                res_final_2 = final_arrs[1]
+                res_final_3 = final_arrs[2]
 
 
             return res_final_1, res_final_2, res_final_3
