@@ -28,7 +28,7 @@ class DFObjectifier(object):
         res_df["UID"] = []
         return res_df
 
-    def get_line_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False):
+    def get_line_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False, empty=False):
         # Need some explanation?
         # vars = represent the index-columns
         # col = select columns you want to get (+ index)
@@ -36,6 +36,9 @@ class DFObjectifier(object):
         if res:
             res_df = self.res_df
             return DFResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
+        if empty:
+            empty_df = self.res_df
+            return DFEmptyObj("Empty",empty_df,self.idxkeys,self.imkeys,self.empty_df.shape[0])
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
@@ -145,8 +148,9 @@ class DFObjectifier(object):
             print("Start line matching")
             max_row = self.df.reset_index().groupby(["ocr","ocr_profile"])["line_idx"].max().sum()
             while True:
-                sys.stdout.write(f"Match lines {next(spinner)} \r")
-                sys.stdout.flush()
+                #sys.stdout.write(f"Match lines {next(spinner)} \r")
+                #sys.stdout.flush()
+                print(f"Match line: {lineIdx}")
                 tdf = self.df.loc[self.df["calc_line_idx"] == -1]
                 tdf = tdf[["line_y0", "line_y1", "calc_line_idx","calc_word_idx"]]
                 y0_min = tdf['line_y0'].min()
@@ -200,6 +204,7 @@ class DFObjectifier(object):
         for lidx in np.arange(0,max_lidx):
             #sys.stdout.write(f"Unspace lines {next(spinner)} \r")
             #sys.stdout.flush()
+            print(f"Unpsace words in line: {lidx}")
             max_widx = tdf.loc[tdf['calc_line_idx'] == lidx]["calc_word_idx"].max()
             for widx in np.arange(0,max_widx):
                 x0 = None
@@ -233,13 +238,13 @@ class DFObjectifier(object):
         self.df.update(tdf.reset_index().set_index(self.df.index))
 
     def match_words(self, force=False):
-        if not "word_match" in self.df or force==True:
+        if {'word_match'}.issubset(self.df.columns) or force == True:
             self.df["word_match"]=-1
             tdf = self.df.reset_index().set_index(self.idxkeys).loc(axis=1)["word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
             groups = tdf.groupby("calc_line_idx")
             for name, group in groups:
                 count = 0
-                print(name)
+                print(f"Match words in line: {name}")
                 while True:
                     tgdf = group.loc[group["word_match"] == -1]
                     if tgdf.empty: break
@@ -323,6 +328,7 @@ class DFSelObj(object):
         self.data = self._get_data(df)
         self.idxkeys = idxkeys
         self.result = False
+        self.empty = False
         self.imkeys = imkeys
         self.mkeys = list(set(self.data.keys()).difference(set(imkeys + idxkeys)))
         self.orig_df = df
@@ -386,9 +392,7 @@ class DFSelObj(object):
 
     def _update_wildcard(self,text,wc):
         #wc = wildcards
-        #wsarr = np.where(np.array(list(text)) == " ")[0].tolist()
         chararr = np.array(list(text))
-        wcarr = np.where(chararr == wc)
         if " " not in self.data["calc_char"]:
             for idx in np.nditer(np.where(chararr == wc)):
                 front = False
@@ -414,6 +418,22 @@ class DFSelObj(object):
             return str
         else:
             return "No text to export!"
+
+
+    def word(self,idx):
+    #    if "calc_char" in self.data:
+    #        str = ""
+    #            widxarr = np.where(np.array(self.data["word_match"]) == idx)[0]
+    #            for line, idx in enumerate(np.nditer(widxarr)):
+    #                           lidx = self.data["calc_word_idx"][0]
+    #            for pos, idx in enumerate(self.data["calc_word_idx"]):
+    #                if idx != lidx:
+    #                    str += " "
+    #                    lidx = idx
+    #                str += self.data["calc_char"][pos]
+    #        return str
+    #    else:
+    return "No text to export!"
 
     def value(self,attr,pos,val=None):
         if attr in self.data.keys():
@@ -473,6 +493,7 @@ class DFResObj(DFSelObj):
     def __init__(self, name, df, idxkeys, imkeys,maxuid):
         DFSelObj.__init__(self,name,df,idxkeys,imkeys)
         self.result = True
+        self.empty = False
         self.maxuid = maxuid
 
     def text(self,pos,val=None,cmd="insert"):
@@ -514,8 +535,16 @@ class DFResObj(DFSelObj):
         orig_df.update(df)
         self.orig_df = orig_df
 
+class DFEmptyObj(DFSelObj):
+
+    def __init__(self, name, df, idxkeys, imkeys,maxuid):
+        DFSelObj.__init__(self,name,df,idxkeys,imkeys)
+        self.empty = True
+        self.maxuid = maxuid
+
 class Value(object):
     def __init__(self):
         self.pos = None
         self.attr = None
         self.val = None
+

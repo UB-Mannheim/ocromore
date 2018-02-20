@@ -56,12 +56,12 @@ def charinfo_process():
 
         # Linematcher with queries
         first = dfXO.match_line()
-        if first: dfXO.write2sql()
+        #if first: dfXO.write2sql()
 
         # Unspacing
         if first:
             dfXO.unspace()
-            dfXO.write2sql()
+            #dfXO.write2sql()
 
         #dfXO.write2file()
 
@@ -80,6 +80,7 @@ def charinfo_process():
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
                 print(items.textstr)
+                print(items.)
                 txt = items.textstr
                 txt = txt[:1] + "|||" + txt[1:]
                 items.update_textspace(txt,"|")
