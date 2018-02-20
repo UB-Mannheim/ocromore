@@ -16,6 +16,115 @@ from pathlib import Path
 import math
 import pickle
 
+def charinfo_process():
+    HOCR2SQL = False
+    WORKWITHOBJ = True
+    PLOT = False
+
+    # Read hocr and create sql-db
+    dbdir = './Testfiles/sql/'
+    dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
+    files = glob.iglob("./Testfiles/long/default/**/*.hocr", recursive=True)
+    dbnamelast, con = "", None
+
+    if HOCR2SQL:
+        for file in files:
+            fpath = Path(file)
+            ocr_profile = fpath.parts[-2]
+            dbname = fpath.name.split("_")[1]
+            if dbname != dbnamelast:
+                con = get_con(dbdir + '/'+dbname+'.db')
+                dbnamelast = dbname
+            HocrConverter().hocr2sql(file,con,ocr_profile)
+
+    # Work with Obj
+    if WORKWITHOBJ:
+        #for file in files:
+        #    fpath = Path(file)
+        #    dbname = fpath.name.split("_")[1]
+        #    if dbname != dbnamelast:
+        #        dbnamelast = dbname
+
+        #    #dfXO = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
+        #    dfXO = DFObjectifier(dbdir + '/'+dbname+'.db', fpath.name.split(".")[0])
+
+            #Linematcher with queries
+        #    dfXO.match_line()
+        #    dfXO.write2sql()
+
+        dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
+
+        # Linematcher with queries
+        first = dfXO.match_line()
+        if first: dfXO.write2sql()
+
+        # Unspacing
+        if first:
+            dfXO.unspace()
+            dfXO.write2sql()
+
+        #dfXO.write2file()
+
+        dfXO.match_words()
+        dfXO.write2sql()
+
+        # Example for selecting all line with calc_line == 10
+        #dfSelO = dfXO.get_obj(query="calc_line == 10")
+        max_line = dfXO.df["calc_line_idx"].max()
+        #for idx in np.arange(0,max_line):
+        #dfXO.get_obj(query="calc_line_idx == 10")
+            #print(idx)
+
+        dfSelO = dfXO.get_line_obj()
+
+        for lidx in dfSelO:
+            for items in dfSelO[lidx]:
+                print(items.textstr)
+                txt = items.textstr
+                txt = txt[:1] + "|||" + txt[1:]
+                items.update_textspace(txt,"|")
+                print(items.textstr)
+                print(items.data["UID"])
+                print(items.value("calc_char", 2))
+                print(items.value("x_confs",2))
+                print(items.value("calc_char", 4))
+                print(items.value("x_confs",4))
+        text2 = dfSelO[1].textstr
+        text = text[:1] + "|" + text[1:]
+        text = text[:3] + "|" + text[3:]
+        text = text[:5] + " " + text[5:]
+        text = text[:3] + " " + text[3:]
+        dfSelO[0].update_textspace(text,"@")
+        dfSelO.update(dfResO)
+        dfSelO[0].text(1,"A")
+        dfSelO[0].text(3,"C")
+        dfSelO[0].text(0,cmd="pop")
+        dfSelO[0].value("calc_line_idx",4,10)
+        #obj[0].update()  - Optional
+        dfXO.update(dfSelO)
+
+    # Plot DF (not working atm)
+    if PLOT:
+        plot_charinfo()
+
+### TEST FUNCTION
+
+def test_linematching(dfXO):
+    max_line = dfXO.df["calc_line"].max()
+    grps = dfXO.df.groupby(["ocr","ocr_profile"])
+    for lidx in np.arange(0.0,max_line):
+        for name, group in grps:
+            print(name[0])
+            arr = group["calc_line"]
+            if lidx in group["calc_line"].tolist():
+                print(group.loc[group["calc_line"] == lidx]["char"].tolist())
+                #"".join(group.loc[group["calc_line"] == lidx]["char"].tolist())
+            else:
+                print("No line found!")
+    return
+
+if __name__=="__main__":
+    charinfo_process()
 
 def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
     # Plot Group
@@ -116,114 +225,6 @@ def plot_charinfo(charinfo,date,GROUPS=False,years=False,plot = "Histo"):
             plt.savefig(output + char + fileformat)
             plt.close()
     return 0
-
-def charinfo_process():
-    HOCR2SQL = False
-    WORKWITHOBJ = True
-    PLOT = False
-
-    # Read hocr and create sql-db
-    dbdir = './Testfiles/sql/'
-    dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
-    files = glob.iglob("./Testfiles/long/default/**/*.hocr", recursive=True)
-    dbnamelast, con = "", None
-
-    if HOCR2SQL:
-        for file in files:
-            fpath = Path(file)
-            ocr_profile = fpath.parts[-2]
-            dbname = fpath.name.split("_")[1]
-            if dbname != dbnamelast:
-                con = get_con(dbdir + '/'+dbname+'.db')
-                dbnamelast = dbname
-            HocrConverter().hocr2sql(file,con,ocr_profile)
-
-    # Work with Obj
-    if WORKWITHOBJ:
-        #for file in files:
-        #    fpath = Path(file)
-        #    dbname = fpath.name.split("_")[1]
-        #    if dbname != dbnamelast:
-        #        dbnamelast = dbname
-
-        #    #dfXO = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
-        #    dfXO = DFObjectifier(dbdir + '/'+dbname+'.db', fpath.name.split(".")[0])
-
-            #Linematcher with queries
-        #    dfXO.match_line()
-        #    dfXO.write2sql()
-
-        dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
-
-        # Linematcher with queries
-        first = dfXO.match_line()
-        if first: dfXO.write2sql()
-
-        # Unspacing
-        if first:
-            dfXO.unspace(pad=0.5)
-            dfXO.write2sql()
-
-            dfXO.write2file()
-
-        # Example for selecting all line with calc_line == 10
-        #dfSelO = dfXO.get_obj(query="calc_line == 10")
-        max_line = dfXO.df["calc_line_idx"].max()
-        #for idx in np.arange(0,max_line):
-        #dfXO.get_obj(query="calc_line_idx == 10")
-            #print(idx)
-
-        dfSelO = dfXO.get_line_obj()
-
-        for lidx in dfSelO:
-            for items in dfSelO[lidx]:
-                print(items.textstr)
-                txt = items.textstr
-                txt = txt[:1] + "|||" + txt[1:]
-                items.update_textspace(txt,"|")
-                print(items.textstr)
-                print(items.data["UID"])
-                print(items.value("calc_char", 2))
-                print(items.value("x_confs",2))
-                print(items.value("calc_char", 4))
-                print(items.value("x_confs",4))
-        text2 = dfSelO[1].textstr
-        text = text[:1] + "|" + text[1:]
-        text = text[:3] + "|" + text[3:]
-        text = text[:5] + " " + text[5:]
-        text = text[:3] + " " + text[3:]
-        dfSelO[0].update_textspace(text,"@")
-        dfSelO.update(dfResO)
-        dfSelO[0].text(1,"A")
-        dfSelO[0].text(3,"C")
-        dfSelO[0].text(0,cmd="pop")
-        dfSelO[0].value("calc_line_idx",4,10)
-        #obj[0].update()  - Optional
-        dfXO.update(dfSelO)
-
-    # Plot DF (not working atm)
-    if PLOT:
-        plot_charinfo()
-
-### TEST FUNCTION
-
-def test_linematching(dfXO):
-    max_line = dfXO.df["calc_line"].max()
-    grps = dfXO.df.groupby(["ocr","ocr_profile"])
-    for lidx in np.arange(0.0,max_line):
-        for name, group in grps:
-            print(name[0])
-            arr = group["calc_line"]
-            if lidx in group["calc_line"].tolist():
-                print(group.loc[group["calc_line"] == lidx]["char"].tolist())
-                #"".join(group.loc[group["calc_line"] == lidx]["char"].tolist())
-            else:
-                print("No line found!")
-    return
-
-
-if __name__=="__main__":
-    charinfo_process()
 """"
 def obsoleteI():
     # Merge charinfo files

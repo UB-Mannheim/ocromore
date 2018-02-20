@@ -198,8 +198,8 @@ class DFObjectifier(object):
         groupnames = sorted(groups.indices.keys(),key= lambda x:sort_by.index(x[0]))
         max_lidx = groups['calc_line_idx'].max().max()
         for lidx in np.arange(0,max_lidx):
-            sys.stdout.write(f"Unspace lines {next(spinner)} \r")
-            sys.stdout.flush()
+            #sys.stdout.write(f"Unspace lines {next(spinner)} \r")
+            #sys.stdout.flush()
             max_widx = tdf.loc[tdf['calc_line_idx'] == lidx]["calc_word_idx"].max()
             for widx in np.arange(0,max_widx):
                 x0 = None
@@ -220,7 +220,7 @@ class DFObjectifier(object):
                             diff = (group["word_y1"].iloc[0]-group["word_y0"].iloc[0])*pad
                         else:
                             # Select all the words in the other groups which have the same borders
-                            tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x1'] < (x1 + diff)]
+                            tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x0'] < (x1 - diff)]
                             max_widx = tmpgroup["calc_word_idx"].max()
                             min_widx = tmpgroup["calc_word_idx"].min()
                             tmpgroup["calc_word_idx"] = min_widx
@@ -231,6 +231,28 @@ class DFObjectifier(object):
                             tdf.update(group)
         print("Unspace lines ✓")
         self.df.update(tdf.reset_index().set_index(self.df.index))
+
+    def match_words(self, force=False):
+        if not "word_match" in self.df or force==True:
+            self.df["word_match"]=-1
+            tdf = self.df.reset_index().set_index(self.idxkeys).loc(axis=1)["word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
+            groups = tdf.groupby("calc_line_idx")
+            for name, group in groups:
+                count = 0
+                print(name)
+                while True:
+                    tgdf = group.loc[group["word_match"] == -1]
+                    if tgdf.empty: break
+                    minx0 = tgdf["word_x0"].min()
+                    maxx1 = tgdf.loc[tgdf["word_x0"] == minx0]["word_x1"].max()
+                    if isinstance(minx0,float) and isinstance(maxx1,float):
+                        found = group[group["word_x0"] >= minx0][group["word_x0"] <= maxx1]
+                        found["word_match"] = count
+                        group.update(found)
+                        count += 1
+                tdf.update(group)
+            self.df.update(tdf)
+        return
 
     def write2sql(self,result=False,engine=None):
         if engine is None:
@@ -287,7 +309,11 @@ class DFObjectifier(object):
 
     def _writeGrp2hocr(self,path, fname=None, calc = True, line_height_normalization = True):
         return
+
     def _writeRes2hocr(self,path, fname=None, line_height_normalization = True):
+        return
+
+    def _normalize_line_height(self):
         return
 
 class DFSelObj(object):
@@ -360,11 +386,17 @@ class DFSelObj(object):
 
     def _update_wildcard(self,text,wc):
         #wc = wildcards
-        chararr = np.array(list(text.replace(" ","")))
+        #wsarr = np.where(np.array(list(text)) == " ")[0].tolist()
+        chararr = np.array(list(text))
         wcarr = np.where(chararr == wc)
-        if len(self.data["calc_word_idx"]) == len(chararr)-len(*wcarr):
+        if " " not in self.data["calc_char"]:
             for idx in np.nditer(np.where(chararr == wc)):
-                self.text(idx,wc)
+                front = False
+                if idx == 0: front=True
+                else:
+                    if text[idx-1] == " ": front=True
+                nows = len(np.where(np.array(list(text[:idx])) == " ")[0])
+                self.text(idx-nows,wc,insertfront=front)
         else:
             print("Cant update text. Seems that the wildcards matching seems wrong.")
 
