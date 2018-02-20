@@ -68,7 +68,7 @@ class DFObjectifier(object):
                     del cpgroup
         return obj
 
-    def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False):
+    def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False, empty=False):
         # Need some explanation?
         # vars = represent the index-columns
         # col = select columns you want to get (+ index)
@@ -76,6 +76,9 @@ class DFObjectifier(object):
         if res:
             res_df = self.res_df
             return DFResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
+        if empty:
+            empty_df = self.res_df
+            return DFEmptyObj("Empty",empty_df,self.idxkeys,self.imkeys,self.empty_df.shape[0])
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
@@ -420,7 +423,7 @@ class DFSelObj(object):
             return "No text to export!"
 
 
-    def word(self,idx):
+    #def word(self,idx):
     #    if "calc_char" in self.data:
     #        str = ""
     #            widxarr = np.where(np.array(self.data["word_match"]) == idx)[0]
@@ -433,7 +436,7 @@ class DFSelObj(object):
     #                str += self.data["calc_char"][pos]
     #        return str
     #    else:
-    return "No text to export!"
+    #return "No text to export!"
 
     def value(self,attr,pos,val=None):
         if attr in self.data.keys():
