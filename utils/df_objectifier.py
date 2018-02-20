@@ -34,11 +34,11 @@ class DFObjectifier(object):
         # col = select columns you want to get (+ index)
         # query = params: 'column op "val"' (query conditions for the df)
         if res:
-            res_df = self.res_df
-            return DFResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
+            return DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
         if empty:
-            empty_df = self.res_df
-            return DFEmptyObj("Empty",empty_df,self.idxkeys,self.imkeys,self.empty_df.shape[0])
+            empty_df = pd.DataFrame(columns=self.df.reset_index().columns)
+            empty_df["UID"] = []
+            return DFEmptyObj("Empty",empty_df,self.idxkeys,self.imkeys,empty_df.shape[0])
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
@@ -77,8 +77,9 @@ class DFObjectifier(object):
             res_df = self.res_df
             return DFResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
         if empty:
-            empty_df = self.res_df
-            return DFEmptyObj("Empty",empty_df,self.idxkeys,self.imkeys,self.empty_df.shape[0])
+            empty_df = pd.DataFrame(columns=self.df.reset_index().columns)
+            empty_df["UID"] = []
+            return DFEmptyObj("Empty",empty_df,self.idxkeys,self.imkeys,empty_df.shape[0])
         vars = [ocr, ocr_profile, line_idx, word_idx, char_idx]
         for varidx, var in enumerate(vars):
             if var is None:
