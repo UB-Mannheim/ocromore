@@ -128,6 +128,7 @@ class HocrConverter(object):
     def line2dict(self,line,df_dict,ocr,ocr_profile,idx,lidx):
         for widx, word in enumerate(line.words):
             for cidx, char in enumerate(word.ocr_text):
+                if char == " ": char = "�"
                 lbbox = getattr(line,"coordinates",(0,0,0,0))
                 wbbox = getattr(word, "coordinates",lbbox)
                 x_confs = getattr(word, "_xconfs",[0.0])

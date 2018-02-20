@@ -74,13 +74,13 @@ def charinfo_process():
         #for idx in np.arange(0,max_line):
         #dfXO.get_obj(query="calc_line_idx == 10")
             #print(idx)
-
+        object = dfXO.get_obj(empty=True)
+        object.update_textspace(">>  >>")
         dfSelO = dfXO.get_line_obj()
-
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
                 print(items.textstr)
-                print(items.)
+                print(items)
                 txt = items.textstr
                 txt = txt[:1] + "|||" + txt[1:]
                 items.update_textspace(txt,"|")
