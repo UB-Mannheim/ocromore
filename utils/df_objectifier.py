@@ -383,28 +383,30 @@ class DFSelObj(object):
 
     def update_textspace(self, text, wc=None):
         # wc = wildcards
+        if len(text) == len(self.textstr):return
         if wc is not None:
-            self._update_wildcard(text,wc)
-        wsarr = np.where(np.array(list(text)) == " ")[0]
-        if len(wsarr)>0:
-            if max(wsarr) <= len(self.data["calc_word_idx"]):
-                lidx = 0
-                for line,idx in enumerate(np.nditer(wsarr)):
-                    if idx != 0:
-                        self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
-                    lidx = idx
+            if wc in text:
+                self._update_wildcard(text,wc)
+        if np.where(np.array(list(text)) == " ")[0] != np.where(np.array(list(self.textstr)) == " ")[0]:
+            wsarr = np.where(np.array(list(text)) == " ")[0]
+            if len(wsarr)>0:
+                if max(wsarr) <= len(self.data["calc_word_idx"]):
+                    lidx = 0
+                    for line,idx in enumerate(np.nditer(wsarr)):
+                        if idx != 0:
+                            self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
+                        lidx = idx
 
     def _update_wildcard(self,text,wc):
         #wc = wildcards
         chararr = np.array(list(text))
-        if " " not in self.data["calc_char"]:
-            for idx in np.nditer(np.where(chararr == wc)):
-                front = False
-                if idx == 0: front=True
-                else:
-                    if text[idx-1] == " ": front=True
-                nows = len(np.where(np.array(list(text[:idx])) == " ")[0])
-                self.text(idx-nows,wc,insertfront=front)
+        for idx in np.nditer(np.where(chararr == wc)):
+            front = False
+            if idx == 0: front=True
+            else:
+                if text[idx-1] == " ": front=True
+            nows = len(np.where(np.array(list(text[:idx])) == " ")[0])
+            self.text(idx-nows,wc,insertfront=front)
         else:
             print("Cant update text. Seems that the wildcards matching seems wrong.")
 
