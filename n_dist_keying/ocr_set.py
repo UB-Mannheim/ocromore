@@ -33,9 +33,11 @@ class OCRset:
         self.shortest_distance_line = None  # holder element for recognized shortest distance line
         self._best_msa_text =""
         self._is_origin_database = False
+        self._database_handler = None
 
-    def is_database_set(self, enabled):
+    def is_database_set(self, enabled, database_handler):
         self._is_origin_database = enabled
+        self._database_handler = database_handler
 
     def edit_line_set_value(self, set_index, new_value):
         self._set_lines[set_index] = new_value
@@ -277,6 +279,69 @@ class OCRset:
             tr = inspect.trace()
 
             self._best_msa_text = self.get_line_content(self._set_lines[1])
+
+
+
+    def calculate_msa_best_charconf(self, take_n_dist_best_index=False):
+
+        # do a preselection of best element, if the parameter is set to take best n_dist_index as a pivot
+        best_index = 1
+        if take_n_dist_best_index is True:
+            best_index = self.get_shortest_n_distance_index()
+
+
+        indices = [0, 1, 2]
+        indices.remove(best_index)
+        index1 = indices[0]
+        index2 = indices[1]
+
+        print("msa selection taking best:",best_index, "others:(", index1, "and", index2,")")
+
+        try:
+
+            line_1 = self._set_lines[index1]
+            line_2 = self._set_lines[best_index]
+            line_3 = self._set_lines[index2]
+
+            text_1 = self.get_line_content(line_1)
+            text_2 = self.get_line_content(line_2) # should be best
+            text_3 = self.get_line_content(line_3)
+
+            print("ocr_set:")
+            print("text_A", text_1)
+            print("text_B", text_2)
+            print("text_C", text_3)
+
+
+            lines = [text_1, text_2, text_3]
+
+            line_1_ok = not Random.is_false_true_or_none(text_1)
+            line_2_ok = not Random.is_false_true_or_none(text_2)
+            line_3_ok = not Random.is_false_true_or_none(text_3)
+            ok_lines = [line_1_ok, line_2_ok, line_3_ok]
+            not_ok_indices = []
+            ok_indices = []
+            for ok_index, ok in enumerate(ok_lines):
+                if ok is True:
+                    # not_ok_indices.append(ok_index)
+                    ok_indices.append(ok_index)
+
+            ok_len = len(ok_indices)
+
+            if ok_len == 0:
+                result = None
+            else:
+                result = MsaHandler.get_best_of_three(text_1, text_2, text_3, use_charconfs=True, \
+                                                      line_1=line_1,line_2=line_2,line_3=line_3)
+
+            self._best_msa_text = result
+        except Exception as e:
+            print("Exception in MSA, just taking line prio exception:", e)
+            tr = inspect.trace()
+
+            self._best_msa_text = self.get_line_content(self._set_lines[1])
+
+
 
     def get_shortest_n_distance_text(self):
         if self.shortest_distance_line_index >= 0:

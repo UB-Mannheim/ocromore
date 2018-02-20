@@ -9,7 +9,12 @@ class DatabaseHandler():
         self._dataframe_wrapper = dataframe_wrapper
         self._number_of_inputs = number_of_inputs
 
-    def create_ocr_set(self, input_list_db, line_index):
+    def get_some_empty_object(self):
+
+        empty_object = self._dataframe_wrapper.get_obj(res=True)
+        return empty_object
+
+    def create_ocr_set(self, input_list_db, line_index, fillup_empty_spaces=True):
         """
         Creates an ocr_set from given dataframe_wrapper
         #todo string comparison for ocr_setting and ocr_program costs much cpu, consider using enums or some keying
@@ -23,7 +28,7 @@ class DatabaseHandler():
 
 
         ocr_set = OCRset(self._number_of_inputs, line_index)
-        ocr_set.is_database_set(True)
+        ocr_set.is_database_set(True, self)
 
         for input_element in input_list_db:
 
@@ -41,6 +46,13 @@ class DatabaseHandler():
             if ocr_program == 'Ocro':
                 ocr_set.edit_line_set_value(DEFAULT_OCROPUS_INDEX, input_element)
 
+        if fillup_empty_spaces is True:
+            # fill up indices with no object
+            for line_index in range(0, ocr_set.size):
+                line = ocr_set.get_line_set_value_line(line_index)
+                if line is False:
+                    emptyobject = self.get_some_empty_object()
+                    ocr_set.edit_line_set_value(line_index, emptyobject)
 
         #if len(ocr_set._set_lines) != len(input_list_db):
         #    print("asd")

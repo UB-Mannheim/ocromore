@@ -345,7 +345,7 @@ class DFSelObj(object):
         if cmd == "replace":
             self.data["calc_char"][pos] = val
 
-    def update_textspace(self, text, wc=None):
+    def update_textspace(self, text, wc=None): #todo update this whitespaces should not be substracted
         # wc = wildcards
         if wc is not None:
             self._update_wildcard(text,wc)

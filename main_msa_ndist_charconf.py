@@ -10,10 +10,11 @@ NUMBER_OF_INPUTS = 3  # number of ocr inputs which will be compared, todo make t
 # keying mechanism
 DO_N_DIST_KEYING = True
 DO_WORDWISE_KEYING = False
-DO_MSA_BEST = False
+DO_MSA_BEST = True
 
 # Settings for Multi Sequence Alignment Best
 MSA_BEST_USE_N_DIST_PIVOT = True
+MSA_BEST_USE_CHARCONFS = True
 
 # postcorrection settings:
 KEYING_RESULT_POSTCORRECTION = True
@@ -21,7 +22,7 @@ KEYING_RESULT_POSTCORRECTION = True
 # validation settings:
 IGNORE_LINEFEED = False
 IGNORE_WHITESPACE = False
-DISPLAY_DIFFERENCES = True
+DISPLAY_DIFFERENCES = False
 DO_ISRI_VAL = False
 
 
@@ -60,13 +61,23 @@ if DO_N_DIST_KEYING:
     ocr_comparison.save_n_distance_keying_results_to_file(FILEPATH_NDIST_RESULT, MODE_ADD_LINEBREAKS)
 
 if DO_MSA_BEST:
-    if MSA_BEST_USE_N_DIST_PIVOT:
-        print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT")
+    if MSA_BEST_USE_CHARCONFS is False:
+        if MSA_BEST_USE_N_DIST_PIVOT:
+            print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT")
 
-        ocr_comparison.do_msa_best_with_ndist_pivot()
+            ocr_comparison.do_msa_best_with_ndist_pivot()
+        else:
+            print("Doing: DO_MSA_BEST without NDIST_PIVOT")
+            ocr_comparison.do_msa_best()
     else:
-        print("Doing: DO_MSA_BEST without NDIST_PIVOT")
-        ocr_comparison.do_msa_best()
+        if MSA_BEST_USE_N_DIST_PIVOT:
+            print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT and CHARCONFS")
+
+            ocr_comparison.do_msa_best_with_ndist_pivot_charconf()
+        else:
+            print("Doing: DO_MSA_BEST without NDIST_PIVOT and CHARCONFS")
+            print("This is not implemented yet")
+
     MODE_ADD_LINEBREAKS = False #todo add linebreaks later!
 
     #ocr_comparison.print_msa_best_results()

@@ -1,8 +1,8 @@
 from multi_sequence_alignment.msa_algorithm import MultiSequenceAlignment
-import numpy as np
 import inspect
 from Bio import pairwise2
-from Bio.SubsMat import MatrixInfo as matlist
+from n_dist_keying.ocr_voter import OCRVoter
+from utils.random import Random
 
 from utils.typecasts import TypeCasts
 
@@ -42,16 +42,7 @@ class MsaHandler(object):
 
         return s1, s2
 
-    @staticmethod
-    def get_same_count(c1, c2, c3):
-        same_ctr = 0
-        if c1 == c2:
-            same_ctr += 1
 
-        if c1 == c3:
-            same_ctr += 1
-
-        return same_ctr
 
     @staticmethod
     def reduce_double_wildcards(line_1, line_2, wildcard_character='¦'):
@@ -111,32 +102,6 @@ class MsaHandler(object):
 
         return reduced_line_1, reduced_line_2
 
-    @staticmethod
-    def best_of_three_simple(line_1, line_2, line_3, index_best, wildcard_character='¦'):
-        list_line_1 = list(line_1)
-        list_line_2 = list(line_2)
-        list_line_3 = list(line_3)
-
-        accumulated_chars = ""
-        for character_index, character_1 in enumerate(list_line_1):
-            character_2 = list_line_2[character_index]
-            character_3 = list_line_3[character_index]
-
-            clist = [character_1, character_2, character_3]
-            sc1 = MsaHandler.get_same_count(character_1, character_2, character_3)
-            sc2 = MsaHandler.get_same_count(character_2, character_1, character_3)
-            sc3 = MsaHandler.get_same_count(character_3, character_2, character_1)
-            maxindices = np.argmax([sc2, sc1, sc3])
-            if maxindices == 0:
-                accumulated_chars += character_2
-            elif maxindices == 1:
-                accumulated_chars += character_1
-            else:
-                accumulated_chars += character_3
-
-        accumulated_chars_stripped = accumulated_chars.replace(wildcard_character, '')
-
-        return accumulated_chars, accumulated_chars_stripped
 
     @staticmethod
     def fillup_wildcarded_result(line_to_fill, reference_line, wildcard_character='¦'):
@@ -371,7 +336,7 @@ class MsaHandler(object):
             text_2_al = TypeCasts.convert_unicodelist_to_string(alignment12[0][1])
             return text_1_al, text_2_al
         except Exception as ex:
-            print("asd")
+            print("Exception in pairwise alignment unicode-biopython", ex)
 
     @staticmethod
     def msa_alignment_biopython(text_A, text_B, text_C, wildcard_character='¦'):
@@ -379,6 +344,35 @@ class MsaHandler(object):
         #text_A = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
         #text_B = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
         #text_C = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
+        if "T I" in text_A:
+            pass
+
+        # stringify results to make also empty stuff comparable
+        def stringify_results(text):
+            if text is False or text is True or text is None or text == '' or text =="":
+                return '', True
+            return text, False
+
+        text_A, text_A_empty = stringify_results(text_A)
+        text_B, text_B_empty = stringify_results(text_B)
+        text_C, text_C_empty = stringify_results(text_C)
+
+        if text_A_empty and text_B_empty:
+            res_1_final = Random.append_pad_values('',len(text_C),wildcard_character)
+            res_2_final = Random.append_pad_values('',len(text_C),wildcard_character)
+            res_3_final = text_C
+            return  res_1_final, res_2_final, res_3_final
+        elif text_A_empty and text_C_empty:
+            res_1_final = Random.append_pad_values('',len(text_B),wildcard_character)
+            res_2_final = text_B
+            res_3_final = Random.append_pad_values('',len(text_B),wildcard_character)
+            return  res_1_final, res_2_final, res_3_final
+
+        elif text_B_empty and text_C_empty:
+            res_1_final = text_A
+            res_2_final = Random.append_pad_values('',len(text_A),wildcard_character)
+            res_3_final = Random.append_pad_values('',len(text_A),wildcard_character)
+            return  res_1_final, res_2_final, res_3_final
 
         text_Ab, text_Ba = MsaHandler.pairwise_unicode(text_A, text_B, wildcard_character,None,True)
         text_Bc, text_Cb = MsaHandler.pairwise_unicode(text_B, text_C, wildcard_character,None,True)
@@ -398,7 +392,7 @@ class MsaHandler(object):
 
 
         text_Af, text_BabcfA = MsaHandler.pairwise_unicode(text_Ab, text_Babc, wildcard_character)
-        text_Bf, text_BabcfB = MsaHandler.pairwise_unicode(text_B, text_Babc, wildcard_character)
+        # text_Bf, text_BabcfB = MsaHandler.pairwise_unicode(text_B, text_Babc, wildcard_character)
         text_Cf, text_BabcfC = MsaHandler.pairwise_unicode(text_Cb, text_Babc, wildcard_character)
 
         print("text_Af..", text_Af)
@@ -745,7 +739,7 @@ class MsaHandler(object):
 
 
     @staticmethod
-    def get_best_of_three(text_1, text_2, text_3):
+    def get_best_of_three(text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None):
 
         PRINT_RESULTS = True
         MODE_GONZALO = 'gonzalo'
@@ -763,10 +757,19 @@ class MsaHandler(object):
             wildcard_character = '¦'
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character)
 
+        if use_charconfs is True:
+            # update the line info with resolutions
+            line_1.update_textspace(res_final_1, wildcard_character)
+            line_2.update_textspace(res_final_2, wildcard_character)
+            line_3.update_textspace(res_final_3, wildcard_character)
+            # This is the voting algorithm -
+            best, best_stripped = OCRVoter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1, wildcard_character)  # res two is the best element
+            best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
-        # This is the voting algorithm -
-        best, best_stripped = MsaHandler.best_of_three_simple(res_final_1, res_final_2, res_final_3, 1,wildcard_character)  # res two is the best element
-        best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
+        else:
+            # This is the voting algorithm -
+            best, best_stripped = OCRVoter.vote_best_of_three_simple(res_final_1, res_final_2, res_final_3, 1,wildcard_character)  # res two is the best element
+            best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
         if PRINT_RESULTS:
             """
