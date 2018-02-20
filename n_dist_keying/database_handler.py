@@ -11,7 +11,7 @@ class DatabaseHandler():
 
     def get_some_empty_object(self):
 
-        empty_object = self._dataframe_wrapper.get_obj(res=True)
+        empty_object = self._dataframe_wrapper.get_obj(empty=True)
         return empty_object
 
     def create_ocr_set(self, input_list_db, line_index, fillup_empty_spaces=True):

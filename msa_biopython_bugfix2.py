@@ -4,6 +4,13 @@ from utils.typecasts import TypeCasts
 text_A = '" 1953 6 %'
 text_B = 'II 1953 60 %'
 
+text_A = '¦sulllt)lhill ===-----'
+text_B = '¦SÜQÜJESIFHLEH falb) Geisweid'
+
+text_A = '¦sullltlhill'
+text_B = '¦SÜQÜJESIFHLEH falb) Geisweid'
+
+
 def add_gapchar_at_start(text, wildcard_character='¦'):
     return wildcard_character+text
 

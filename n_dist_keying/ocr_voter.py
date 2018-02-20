@@ -108,9 +108,9 @@ class OCRVoter(object):
 
 
         key_confs = 'x_confs'
-        print(line_1.textstr)
-        print(line_2.textstr)
-        print(line_3.textstr)
+        print("vote_text1",line_1.textstr)
+        print("vote_text2",line_2.textstr)
+        print("vote_text3",line_3.textstr)
 
         chars_line_1 = list(line_1.textstr)
         chars_line_2 = list(line_2.textstr)

@@ -1,7 +1,7 @@
 from n_dist_keying.distance_storage import DistanceStorage
 from n_dist_keying.text_comparator import TextComparator
 from n_dist_keying.text_unspacer import TextUnspacer
-
+import numpy as np
 from multi_sequence_alignment.msa_handler import MsaHandler
 from utils.random import Random
 
@@ -222,12 +222,34 @@ class OCRset:
         self.shortest_distance_line = self._set_lines[shortest_dist_index]
 
 
+    def get_longest_index(self):
 
-    def calculate_msa_best(self, take_n_dist_best_index=False):
+        def if_notdef_set_emptystring(value):
+            if value is True or value is False or value is None:
+                return ""
+
+            return value
+
+        lsval_1 = if_notdef_set_emptystring(self.get_line_content(self.get_line_set_value_line(0)))
+        lsval_2 = if_notdef_set_emptystring(self.get_line_content(self.get_line_set_value_line(1)))
+        lsval_3 = if_notdef_set_emptystring(self.get_line_content(self.get_line_set_value_line(2)))
+
+        len_pline_1 = len(lsval_1)
+        len_pline_2 = len(lsval_2)
+        len_pline_3 = len(lsval_3)
+        # max_index_value = max([len_pline_1, len_pline_2, len_pline_3])
+        max_index = np.argmax([len_pline_1, len_pline_2, len_pline_3])
+        print(max_index)
+        return max_index
+
+    def calculate_msa_best(self, take_n_dist_best_index=False, take_longest_as_pivot = False):
+
 
         # do a preselection of best element, if the parameter is set to take best n_dist_index as a pivot
         best_index = 1
-        if take_n_dist_best_index is True:
+        if take_longest_as_pivot is True:
+            best_index = self.get_longest_index()
+        elif take_n_dist_best_index is True:
             best_index = self.get_shortest_n_distance_index()
 
 
@@ -282,13 +304,16 @@ class OCRset:
 
 
 
-    def calculate_msa_best_charconf(self, take_n_dist_best_index=False):
+    def calculate_msa_best_charconf(self, take_n_dist_best_index=False, take_longest_as_pivot = True):
 
         # do a preselection of best element, if the parameter is set to take best n_dist_index as a pivot
         best_index = 1
-        if take_n_dist_best_index is True:
-            best_index = self.get_shortest_n_distance_index()
 
+        if take_n_dist_best_index is True:
+            ldist_best_index = self.get_shortest_n_distance_index() # this doesn't work in all cases atm
+            best_index = ldist_best_index
+        if take_longest_as_pivot is True:
+            best_index = self.get_longest_index()
 
         indices = [0, 1, 2]
         indices.remove(best_index)
@@ -338,8 +363,11 @@ class OCRset:
         except Exception as e:
             print("Exception in MSA, just taking line prio exception:", e)
             tr = inspect.trace()
+            if take_n_dist_best_index is True:
+                self._best_msa_text = self.get_line_content(self._set_lines[ldist_best_index])
+            else:
+                self._best_msa_text = self.get_line_content(self._set_lines[best_index])
 
-            self._best_msa_text = self.get_line_content(self._set_lines[1])
 
 
 
