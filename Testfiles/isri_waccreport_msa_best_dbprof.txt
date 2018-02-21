@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      607   Words
-      12   Misrecognized
-   98.02%  Accuracy
+       8   Misrecognized
+   98.68%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,47 +12,47 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      25        1    96.00        1
-     103        0   100.00        2
-     132        1    99.24        3
-      75        4    94.67        4
+      25        0   100.00        1
+     104        0   100.00        2
+     133        1    99.25        3
+      74        3    95.95        4
       35        0   100.00        5
       41        1    97.56        6
       34        1    97.06        7
-      40        2    95.00        8
-      30        1    96.67        9
+      39        1    97.44        8
+      31        1    96.77        9
       22        0   100.00       10
       23        0   100.00       11
       24        0   100.00       12
-       7        1    85.71       13
+       6        0   100.00       13
        6        0   100.00       14
        5        0   100.00       15
        2        0   100.00       17
-     604       12    98.01    Total
+     604        8    98.68    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     286        9    96.85        1
-      47        1    97.87        2
+     287        8    97.21        1
+      45        0   100.00        2
       21        0   100.00        3
-      13        0   100.00        4
-       1        0   100.00        5
+      12        0   100.00        4
+       2        0   100.00        5
        3        0   100.00        6
        2        0   100.00        7
        1        0   100.00       10
        4        0   100.00      >10
-     378       10    97.35    Total
+     377        8    97.88    Total
 
 Phrases
    Count   Missed   %Right   Length
-     607       12    98.02        1
-     606       20    96.70        2
-     605       28    95.37        3
-     604       36    94.04        4
-     603       44    92.70        5
-     602       52    91.36        6
-     601       60    90.02        7
-     600       68    88.67        8
+     607        8    98.68        1
+     606       14    97.69        2
+     605       20    96.69        3
+     604       26    95.70        4
+     603       32    94.69        5
+     602       38    93.69        6
+     601       44    92.68        7
+     600       50    91.67        8
 
 Stopwords
    Count   Missed   %Right   
@@ -64,16 +64,16 @@ Non-stopwords
        1        0   100.00   0
        1        0   100.00   0,0,0,0,0,0
        1        0   100.00   00
-      21        0   100.00   000
+      22        0   100.00   000
        3        0   100.00   001
        1        0   100.00   010
        1        0   100.00   019
        1        0   100.00   031
        1        0   100.00   095
-       4        0   100.00   1
+       5        0   100.00   1
        2        0   100.00   10
        4        0   100.00   100
-       2        2     0.00   1000
+       1        1     0.00   1000
        1        0   100.00   101
        1        0   100.00   115
        1        0   100.00   12
@@ -180,7 +180,7 @@ Non-stopwords
       10        0   100.00   bank
        1        0   100.00   bankverein
        1        0   100.00   barich
-       1        1     0.00   barmitte
+       1        0   100.00   barmittel
        1        0   100.00   bayerische
        1        0   100.00   beachtlich
        1        0   100.00   ber
@@ -206,7 +206,7 @@ Non-stopwords
        2        0   100.00   commerz
        2        0   100.00   commerzbank
        1        0   100.00   credit
-       2        1    50.00   d
+       1        0   100.00   d
        1        0   100.00   dabei
        1        0   100.00   darunter
        1        0   100.00   davon
@@ -223,7 +223,7 @@ Non-stopwords
        2        0   100.00   disconto
        3        0   100.00   div.sch.nr
        3        0   100.00   dividenden
-      14        0   100.00   dm
+      15        0   100.00   dm
        1        0   100.00   dorf
        2        0   100.00   dortmund
        3        0   100.00   dr
@@ -387,7 +387,6 @@ Non-stopwords
        1        0   100.00   stückelung
        1        0   100.00   sämtliche
        1        0   100.00   süddeutsche
-       1        1     0.00   südwestfalen
        1        0   100.00   thelemann
        1        1     0.00   thomée
        1        0   100.00   tigerzeugnissen

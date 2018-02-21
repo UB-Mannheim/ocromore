@@ -1,4 +1,3 @@
-SÜDWESTFALEN 
 Sitz:
 (21b) Geisweid
 (Krs. Siegen).
@@ -22,7 +21,7 @@ Siegen;
 Dr.-Ing. Heinrich van de Loo, Lendring-
 sen (Krs. Iserlohn);
 Erich Pachnicke, Siegen;
-Dipl. -Ing. Friedrich Riekeberg, Wetzlar;
+Dipl.-Ing. Friedrich Riekeberg, Wetzlar;
 Ernst Schulte, Hagen;
 Wilhelm von Thelemann, München;
 Gustav Triebel, Hagen;
@@ -46,30 +45,30 @@ Thomée.
 
 Namhafte Beteiligungen:
 Stahlwerke Brüninghaus GmbH, West-
-hofen .
+hofen
 
-Kapital: DM 7 000 000. - (100%).
+Kapital: DM 7 000 000.- (100%).
 
 Grevenbrücker Kalkwerke GmbH, Greven-
 brück
-Kapital: DM 250 000. - (50%).
+Kapital: DM 250 000.- (50%).
 
 Westdeutsche Wohnhäuser AG, Düsseldorf
-Kapital: DM 21 000 000. - (2%)
+Kapital: DM 21 000 000.- (2%)
 Dividenden: Organvertrag mit den Aktio-
 nären.
 
 Westfälische Wohnstätten AG, Dortmund
-Kapital: DM 18 000 000. - (3%)
+Kapital: DM 18 000 000.- (3%)
 Dividenden ab 1949/50: 0,0,0,0,0,0%.
 
 Geschäftsjahr:
 1.Oktober bis 30. September.
 
 Stimmrecht d. Aktien i.d.H.-V.:
-Je nom. DM 100. - = 1 Stimme.
+Je nom. DM 100.- = 1 Stimme.
 
-Zahlstellen:;
+Zahlstellen:
 Deutsche Bank AG West, Düsseldorf;
 Norddeutsche Bank AG, Hamburg;
 Süddeutsche Bank AG, Frankfurt (Main);
@@ -103,8 +102,8 @@ Waldthausen & Co., Düsseldorf.
 Grundkapital: DM 40 000 000.-.
 Urspr. DM 200 000.-. Lt.H. -V.v.29.9.
 1951 Erhöhung um DM 19 800 000.- und
-1t.H. -V.v.13.4.1953 Erhöhung um DM
-20 000 000. - auf DM 40 000 000.-.
+1t.H.-V.v.13.4.1953 Erhöhung um DM
+20 000 000.- auf DM 40 000 000.-.
 
 Börsennotiz:
 Düsseldorf, Berlin, Frankfurt (M), Ham-
@@ -112,9 +111,9 @@ burg, München (amtl.), Stuttart (Freiv.)
 Ordnungsnr.d. Aktien: 728400.
 Stückelung:
 101 000 Namens-St.-Akt. zu je DM 100. -
-(Nr. 00 001 -. 41 000 u. 60 001 - 120 000)
-29 900 Globalaktien über 10 Namens-St. -
-Akt. zu je DM 100.- = DM 1000.- .
+(Nr. 00 001 - 41 000 u. 60 001 - 120 000)
+29 900 Globalaktien über 10 Namens-St.-
+Akt. zu je DM 100.- = DM 1000.-
 (Nr. 200 001/200 010 - 498 991/499 000).
 
 Sämtliche Stammaktien sind lieferbar.
@@ -129,14 +128,14 @@ ber 1953.
 ultimo 1953 115 %
 " 1954 163 %
 " 1955 180 %
-10. Okt. 1956 168,5 %+)
+10. Okt. 1956 168,5 % +)
 +) Kurs für DM-Nennwert.
 
 Dividenden auf Stammaktien:
-1951/52: 0%
+1951/52: 0 %
 1952/53: 4 % (Div.Sch.Nr. 1)
 1953/54: 6 % (Div.Sch.Nr. 2)
-1954/55: 8% (Div.Sch.Nr. 3)
+1954/55: 8 % (Div.Sch.Nr. 3)
 
 Zur Geschäftslage:
 
@@ -154,13 +153,13 @@ rund 36 % erhöht.
 Aus den Bilanzen
 
 30.9.1954 30.9.1955
-in 1000 D
+(in 1 000 DM)
 Anlagevermögen 67 909 71 762
 Umlaufvermögen 77 560 96 823
 (darunter
 Vorräte 34 019 47 921
 Lieferforderungen 29 416 33 387
-Barmitte!) 5 627 4 736
+Barmittel) 5 627 4 736
 Eigenkapital 70 460 70 460
 (davon A.-K.) 40 000 40 000
 Fremdkapital 72 609 94 925
@@ -177,4 +176,3 @@ Jahresertrag 67 697 86 795
  
 
 Reichelbräu Aktien-Gesellschaft
-

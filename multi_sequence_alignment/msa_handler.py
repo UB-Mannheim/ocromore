@@ -422,7 +422,7 @@ class MsaHandler(object):
             if len(res_final_1) != len(res_final_2) or len(res_final_1) !=  len(res_final_3) \
                     or len(res_final_2) !=  len(res_final_3):
                 print("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
-                final_arrs = [res_final_1, res_final_2, res_final_2]
+                final_arrs = [res_final_1, res_final_2, res_final_3]
                 maxlen = max([len(res_final_1), len(res_final_2), len(res_final_3)])
                 # maxindex = np.argmax([len(res_final_1), len(res_final_2), len(res_final_3)])  # this takes in priorisation in case the chars are same
                 for current_res_index, current_res in enumerate(final_arrs):
