@@ -86,12 +86,12 @@ def charinfo_process():
                 if "FNTFN" in txt:
                     txt = txt[:0] + "||||||" + txt[0:]
                 #items.update_textspace(txt,"|")
-                word1  = items.word["text"].get(1.0,None)
+                word1 = items.word["text"].get(1.0,None)
                 if word1 != None:
-                    word1 = word1[:-2]+"||"+word1[-2:]
+                    word1 = word1[:-2]+"| |"+word1[-2:]
                     items.update_textspace(word1,"|",widx=1.0)
                     word2 = items.word["text"].get(2.0,None)
-                    word2 = word2[:-2] + "||" + word2[-2:]
+                    word2 = word2[:-2] + "| |" + word2[-2:]
                     items.update_textspace(word2, "|", widx=2.0)
                 print(items.textstr)
                 print(items.value("x_confs",3))

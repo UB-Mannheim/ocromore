@@ -493,10 +493,13 @@ class DFSelObj(object):
             if len(wsarr)>0:
                 if max(wsarr) <= len(self.data["calc_word_idx"]):
                     lidx = 0
+                    wscount = 0
                     for line,idx in enumerate(np.nditer(wsarr)):
                         if idx != 0:
-                            self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
-                        lidx = idx
+                            self.data["calc_word_idx"][lidx:idx-wscount] = [line]*(idx-lidx-wscount)
+                        lidx = idx-wscount
+                        wscount += 1
+                    self.data["calc_word_idx"][idx-wscount+1:] = [line+1] * len(self.data["calc_word_idx"][idx-wscount+1:])
 
     def _update_wildcard(self,text,wc,offset=0):
         #wc = wildcards
@@ -509,7 +512,7 @@ class DFSelObj(object):
                     ws = 0
                 else:
                     if text[idx-1] == " ": front=True
-                    ws = len(np.where(np.array(list(text[offset:idx+1+offset])) == " ")[0])
+                    ws = len(np.where(np.array(list(text[:idx+1])) == " ")[0])
                 self.text(offset+idx-ws,wc,insertfront=front)
         except Exception:
             print("Cant update text. Seems that the wildcards matching seems wrong.")
@@ -584,12 +587,19 @@ class DFSelObj(object):
                 wordarr['UID'][idx] = uidarr
             return wordarr
 
-    def value(self,attr,pos,val=None,wsval=0.5):
+    def value(self,attr,pos,val=None,widx=None,wsval=75,):
         if attr in self.data.keys():
             self.ivalue.attr = attr
             self.ivalue.ws = len(np.where(np.array(list(self.textstr[:pos+1])) == " ")[0])
             self.ivalue.wsval = wsval
             self.ivalue.pos = pos-self.ivalue.ws
+            if widx != None:
+                wmidxset = set(np.where(np.array(list(self.data["word_match"])) == widx)[0].tolist())
+                if len(wmidxset) != 0:
+                    self.ivalue.pos += list(wmidxset)[0]
+                else:
+                    self.ivalue.val = None
+                    return
             if val is not None:
                 self._set_value(val)
             else:
