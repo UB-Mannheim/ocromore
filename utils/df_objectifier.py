@@ -374,7 +374,8 @@ class DFSelObj(object):
             i = 1 if pos != 0 else 0
             if insertfront: i = 0
             self.data["calc_word_idx"].insert(pos, self.data["calc_word_idx"][pos - i])
-            self.data["word_match"].insert(pos, self.data["word_match"][pos - i])
+            if "word_match" in self.data:
+                self.data["word_match"].insert(pos, self.data["word_match"][pos - i])
         if cmd == "pop":
             if pos <= len(self.data["UID"]):
                 for key in self.mkeys:
@@ -383,6 +384,7 @@ class DFSelObj(object):
             self.data["calc_char"][pos] = val
 
     def update_textspace(self, text, wc=None, widx=None):
+
         # wc = wildcards
         if widx != None:
             wmidxset = set(np.where(np.array(list(self.data["word_match"])) == widx)[0].tolist())
@@ -400,7 +402,8 @@ class DFSelObj(object):
                         for line,idx in enumerate(np.nditer(wsarr)):
                             if idx != 0:
                                 self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
-                            lidx = idx
+                                lidx = idx
+
 
     def _update_wildcard(self,text,wc):
         #wc = wildcards
@@ -415,8 +418,8 @@ class DFSelObj(object):
                     if text[idx-1] == " ": front=True
                     ws = len(np.where(np.array(list(text[:idx+1])) == " ")[0])
                 self.text(idx-ws,wc,insertfront=front)
-        except Exception:
-            print("Cant update text. Seems that the wildcards matching seems wrong.")
+        except Exception as ex:
+            print("Cant update text. Seems that the wildcards matching seems wrong.",ex)
 
     def _update_wordspace(self,text,wc,widx):
         wmidxarr = np.where(np.array(list(self.data["word_match"])) == widx)[0]
