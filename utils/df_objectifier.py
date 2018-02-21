@@ -3,6 +3,8 @@ import numpy as np
 from utils.df_tools import get_con
 import math
 from itertools import cycle
+import lxml.etree as ET
+from io import StringIO
 import sys
 
 
@@ -242,25 +244,24 @@ class DFObjectifier(object):
         self.df.update(tdf.reset_index().set_index(self.df.index))
 
     def match_words(self, force=False):
-        if not {'word_match'}.issubset(self.df.columns) or force == True:
-            self.df["word_match"]=-1
-            tdf = self.df.reset_index().set_index(self.idxkeys).loc(axis=1)["word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
-            groups = tdf.groupby("calc_line_idx")
-            for name, group in groups:
-                count = 0
-                print(f"Match words in line: {name}")
-                while True:
-                    tgdf = group.loc[group["word_match"] == -1]
-                    if tgdf.empty: break
-                    minx0 = tgdf["word_x0"].min()
-                    maxx1 = tgdf.loc[tgdf["word_x0"] == minx0]["word_x1"].max()
-                    if isinstance(minx0,float) and isinstance(maxx1,float):
-                        found = group[group["word_x0"] >= minx0][group["word_x0"] <= maxx1]
-                        found["word_match"] = count
-                        group.update(found)
-                        count += 1
-                tdf.update(group)
-            self.df.update(tdf)
+        self.df["word_match"]=-1
+        tdf = self.df.reset_index().set_index(self.idxkeys).loc(axis=1)["word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
+        groups = tdf.groupby("calc_line_idx")
+        for name, group in groups:
+            count = 0
+            print(f"Match words in line: {name}")
+            while True:
+                tgdf = group.loc[group["word_match"] == -1]
+                if tgdf.empty: break
+                minx0 = tgdf["word_x0"].min()
+                maxx1 = tgdf.loc[tgdf["word_x0"] == minx0]["word_x1"].max()
+                if isinstance(minx0,float) and isinstance(maxx1,float):
+                    found = group[group["word_x0"] >= minx0][group["word_x0"] <= maxx1]
+                    found["word_match"] = count
+                    group.update(found)
+                    count += 1
+            tdf.update(group)
+        self.df.update(tdf)
         return
 
     def write2sql(self,result=False,engine=None):
@@ -285,9 +286,9 @@ class DFObjectifier(object):
                 self._writeGrp2txt(path, fname, calc,line_height_normalization)
         if ftype == 'hocr':
             if result:
-                self._writeRes2hocr(path, fname, line_height_normalization)
+                self._writeRes2hocr(path, fname)
             else:
-                self._writeGrp2hocr(path, fname, calc, line_height_normalization)
+                self._writeGrp2hocr(path, fname, calc)
         return
 
     def _writeGrp2txt(self,path=None,fname=None, calc = True,line_height_normalization = True):
@@ -316,10 +317,90 @@ class DFObjectifier(object):
     def _writeRes2txt(self,path, fname=None, line_height_normalization = True):
         return
 
-    def _writeGrp2hocr(self,path, fname=None, calc = True, line_height_normalization = True):
+    def _writeGrp2hocr(self,path, fname=None, calc = True):
+        """
+        if path is None:
+            path = "./Testfiles/hocr/"
+        if fname is None:
+            fname = "_orig_"
+        groups = self.df.reset_index().groupby(["ocr", "ocr_profile"])
+        if calc:
+            line, word, char = "calc_line_idx", "calc_word_idx", "calc_char"
+        else:
+            line, word, char = "line_idx","word_idx","char"
+        for name, group in groups:
+            groupl = group[line]
+            lidxarr = groupl.unique()
+            with open(path+fname+"".join(name), 'w+', encoding='utf-8') as infile:
+                hocrparse = ET.parse(StringIO(f'''
+                <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+                <head>
+                <title>OCR Results</title>
+                <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+                <meta name='AKF-OCR' content='{name[0]}-{name[1]}' />
+                <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
+                </head>
+                </html>
+                '''))
+                "< div class ='ocr_page' title='image /media/sf_ShareVB/many_years_firmprofiles_output/long//1957ocropy/2018-01-25_T14H16M/0140_1957_hoppa-405844417-0050_0172/0001.bin.png; bbox 0 0 1974 15065' >"
+                hocrroot = hocrparse.getroot()
+                hocrtess = ET.fromstring(api.GetHOCRText(0))
+                hocrtess.set("title", "image " + file + "; bbox" + hocrtess.get("title").split("bbox")[-1])
+                allwordinfo = hocrtess.findall('.//div/p/span/span')
+                for lidx in lidxarr:
+                    groupw = group[groupl == lidx][word]
+                    widxarr = groupw.unique()
+                    txtline = []
+                    for widx in widxarr:
+                        txtline.append("".join(group.loc[groupl==lidx].loc[groupw == widx][char].tolist()))
+                    infile.write(" ".join(txtline)+"\n")
+        self.df.to_html
+        self.df.groupby["ocr","ocr_profile"]:
+        parameters = get_param(tess_profile)
+        with PyTessBaseAPI(**parameters) as api:
+            set_vars(api, file, tess_profile)
+            ri = api.GetIterator()
+            # TODO: Need to fix header ...
+            # lang = api.GetInitLanguagesAsString()
+            version = api.Version()
+
+
+            level = RIL.SYMBOL
+            bbinfo = tuple()
+            conf = ""
+            charinfo = {}
+            for r in iterate_level(ri, level):
+                if bbinfo != r.BoundingBoxInternal(RIL.WORD):
+                    if bbinfo != ():
+                        bbox = "bbox " + " ".join(map(str, bbinfo))
+                        for wordinfo in allwordinfo:
+                            if bbox in wordinfo.get("title"):
+                                wordinfo.set("title", wordinfo.get("title") + ";x_confs" + conf)
+                                allwordinfo.remove(wordinfo)
+                                break
+                        conf = ""
+                    bbinfo = r.BoundingBoxInternal(RIL.WORD)
+                conf += " " + str(r.Confidence(level))
+                # symbol = r.GetUTF8Text(level)
+                # if symbol not in charinfo:
+                #    charinfo[symbol]=[r.Confidence(level)]
+                # else:
+                #    charinfo[symbol].append(r.Confidence(level))
+        bbox = "bbox " + " ".join(map(str, bbinfo))
+        for wordinfo in allwordinfo:
+            if bbox in wordinfo.get("title"):
+                wordinfo.set("title", wordinfo.get("title") + ";x_confs" + conf)
+        # with open(fileout+"_charinfo.json", "w") as output:
+        #    json.dump(charinfo, output, indent=4)
+        hocrbody = ET.SubElement(hocrroot, "body")
+        hocrbody.append(hocrtess)
+        hocrparse.write(fileout + ".hocr", xml_declaration=True, encoding='UTF-8')
+        """
         return
 
-    def _writeRes2hocr(self,path, fname=None, line_height_normalization = True):
+    def _writeRes2hocr(self,path, fname=None):
         return
 
     def _normalize_line_height(self):
@@ -374,7 +455,8 @@ class DFSelObj(object):
             i = 1 if pos != 0 else 0
             if insertfront: i = 0
             self.data["calc_word_idx"].insert(pos, self.data["calc_word_idx"][pos - i])
-            self.data["word_match"].insert(pos, self.data["word_match"][pos - i])
+            if "word_match" in self.data:
+                self.data["word_match"].insert(pos, self.data["word_match"][pos - i])
         if cmd == "pop":
             if pos <= len(self.data["UID"]):
                 for key in self.mkeys:
@@ -384,25 +466,39 @@ class DFSelObj(object):
 
     def update_textspace(self, text, wc=None, widx=None):
         # wc = wildcards
+        # widx = word index
+        # word2text = update text with word elements
+        offset = 0
         if widx != None:
             wmidxset = set(np.where(np.array(list(self.data["word_match"])) == widx)[0].tolist())
-            self._update_wordspace(text,wc,widx)
+            if len(wmidxset) != 0:
+                offset = list(wmidxset)[0]
+            else:
+                return
         else:
             if text == self.textstr:return
-            if wc is not None:
-                if wc in text:
-                    self._update_wildcard(text,wc)
-            if text != self.textstr:
-                wsarr = np.where(np.array(list(text)) == " ")[0]
-                if len(wsarr)>0:
-                    if max(wsarr) <= len(self.data["calc_word_idx"]):
-                        lidx = 0
-                        for line,idx in enumerate(np.nditer(wsarr)):
-                            if idx != 0:
-                                self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
-                            lidx = idx
+        if wc is not None:
+            if wc in text:
+                self._update_wildcard(text,wc,offset)
+        if widx != None:
+            textarr = []
+            for idx in self.word["text"]:
+                if widx != idx:
+                    textarr.append(self.word["text"][idx])
+                else:
+                    textarr.append(text)
+            text = " ".join(textarr)
+        if text != self.textstr:
+            wsarr = np.where(np.array(list(text)) == " ")[0]
+            if len(wsarr)>0:
+                if max(wsarr) <= len(self.data["calc_word_idx"]):
+                    lidx = 0
+                    for line,idx in enumerate(np.nditer(wsarr)):
+                        if idx != 0:
+                            self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
+                        lidx = idx
 
-    def _update_wildcard(self,text,wc):
+    def _update_wildcard(self,text,wc,offset=0):
         #wc = wildcards
         chararr = np.array(list(text))
         try:
@@ -413,16 +509,46 @@ class DFSelObj(object):
                     ws = 0
                 else:
                     if text[idx-1] == " ": front=True
-                    ws = len(np.where(np.array(list(text[:idx+1])) == " ")[0])
-                self.text(idx-ws,wc,insertfront=front)
+                    ws = len(np.where(np.array(list(text[offset:idx+1+offset])) == " ")[0])
+                self.text(offset+idx-ws,wc,insertfront=front)
         except Exception:
             print("Cant update text. Seems that the wildcards matching seems wrong.")
 
     def _update_wordspace(self,text,wc,widx):
+        if text == self.textstr: return
+        if wc is not None:
+            if wc in text:
+                self._update_word_wildcard(text, wc)
+        if text != self.textstr:
+            wsarr = np.where(np.array(list(text)) == " ")[0]
+            if len(wsarr) > 0:
+                if max(wsarr) <= len(self.data["calc_word_idx"]):
+                    lidx = 0
+                    for line, idx in enumerate(np.nditer(wsarr)):
+                        if idx != 0:
+                            self.data["calc_word_idx"][lidx:idx] = [line] * (idx - lidx)
+                        lidx = idx
+
         wmidxarr = np.where(np.array(list(self.data["word_match"])) == widx)[0]
         for wmidx in wmidxarr:
             print(wmidx)
         return
+
+    def _update_word_wildcard(self, text, wc):
+        # wc = wildcards
+        chararr = np.array(list(text))
+        try:
+            for idx in np.nditer(np.where(chararr == wc)):
+                front = False
+                if idx == 0:
+                    front = True
+                    ws = 0
+                else:
+                    if text[idx - 1] == " ": front = True
+                    ws = len(np.where(np.array(list(text[:idx + 1])) == " ")[0])
+                self.text(idx - ws, wc, insertfront=front)
+        except Exception:
+            print("Cant update text. Seems that the wildcards matching seems wrong.")
 
     @property
     def textstr(self):
@@ -442,13 +568,20 @@ class DFSelObj(object):
     @property
     def word(self):
         if "word_match" in self.data:
-            wordarr = {}
+            wordarr = {'text':{},'UID':{}}
             for idx in set(self.data["word_match"]):
                 wordstr = ""
+                uidarr = []
                 widxarr = np.where(np.array(self.data["word_match"]) == idx)[0]
+                last_widx = None
                 for widx in widxarr:
+                    if last_widx != None and last_widx != self.data["calc_word_idx"][widx]:
+                        wordstr += " "
                     wordstr += self.data["calc_char"][widx]
-                wordarr[idx] = wordstr
+                    last_widx = self.data["calc_word_idx"][widx]
+                    uidarr.append(last_widx)
+                wordarr['text'][idx] = wordstr
+                wordarr['UID'][idx] = uidarr
             return wordarr
 
     def value(self,attr,pos,val=None,wsval=0.5):
