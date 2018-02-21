@@ -242,7 +242,7 @@ class DFObjectifier(object):
         self.df.update(tdf.reset_index().set_index(self.df.index))
 
     def match_words(self, force=False):
-        if {'word_match'}.issubset(self.df.columns) or force == True:
+        if not {'word_match'}.issubset(self.df.columns) or force == True:
             self.df["word_match"]=-1
             tdf = self.df.reset_index().set_index(self.idxkeys).loc(axis=1)["word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
             groups = tdf.groupby("calc_line_idx")
@@ -374,6 +374,7 @@ class DFSelObj(object):
             i = 1 if pos != 0 else 0
             if insertfront: i = 0
             self.data["calc_word_idx"].insert(pos, self.data["calc_word_idx"][pos - i])
+            self.data["word_match"].insert(pos, self.data["word_match"][pos - i])
         if cmd == "pop":
             if pos <= len(self.data["UID"]):
                 for key in self.mkeys:
@@ -381,21 +382,25 @@ class DFSelObj(object):
         if cmd == "replace":
             self.data["calc_char"][pos] = val
 
-    def update_textspace(self, text, wc=None): #todo update this whitespaces should not be substracted
+    def update_textspace(self, text, wc=None, widx=None):
         # wc = wildcards
-        if text == self.textstr:return
-        if wc is not None:
-            if wc in text:
-                self._update_wildcard(text,wc)
-        if text != self.textstr:
-            wsarr = np.where(np.array(list(text)) == " ")[0]
-            if len(wsarr)>0:
-                if max(wsarr) <= len(self.data["calc_word_idx"]):
-                    lidx = 0
-                    for line,idx in enumerate(np.nditer(wsarr)):
-                        if idx != 0:
-                            self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
-                        lidx = idx
+        if widx != None:
+            wmidxset = set(np.where(np.array(list(self.data["word_match"])) == widx)[0].tolist())
+            self._update_wordspace(text,wc,widx)
+        else:
+            if text == self.textstr:return
+            if wc is not None:
+                if wc in text:
+                    self._update_wildcard(text,wc)
+            if text != self.textstr:
+                wsarr = np.where(np.array(list(text)) == " ")[0]
+                if len(wsarr)>0:
+                    if max(wsarr) <= len(self.data["calc_word_idx"]):
+                        lidx = 0
+                        for line,idx in enumerate(np.nditer(wsarr)):
+                            if idx != 0:
+                                self.data["calc_word_idx"][lidx:idx] = [line]*(idx-lidx)
+                            lidx = idx
 
     def _update_wildcard(self,text,wc):
         #wc = wildcards
@@ -405,13 +410,19 @@ class DFSelObj(object):
                 front = False
                 if idx == 0:
                     front=True
-                    nows = 0
+                    ws = 0
                 else:
                     if text[idx-1] == " ": front=True
-                    nows = len(np.where(np.array(list(text[:idx])) == " ")[0])
-                self.text(idx-nows,wc,insertfront=front)
+                    ws = len(np.where(np.array(list(text[:idx+1])) == " ")[0])
+                self.text(idx-ws,wc,insertfront=front)
         except Exception:
             print("Cant update text. Seems that the wildcards matching seems wrong.")
+
+    def _update_wordspace(self,text,wc,widx):
+        wmidxarr = np.where(np.array(list(self.data["word_match"])) == widx)[0]
+        for wmidx in wmidxarr:
+            print(wmidx)
+        return
 
     @property
     def textstr(self):
@@ -428,25 +439,24 @@ class DFSelObj(object):
         else:
             return "No text to export!"
 
-    #def word(self,idx):
-    #    if "calc_char" in self.data:
-    #        str = ""
-    #            widxarr = np.where(np.array(self.data["word_match"]) == idx)[0]
-    #            for line, idx in enumerate(np.nditer(widxarr)):
-    #                           lidx = self.data["calc_word_idx"][0]
-    #            for pos, idx in enumerate(self.data["calc_word_idx"]):
-    #                if idx != lidx:
-    #                    str += " "
-    #                    lidx = idx
-    #                str += self.data["calc_char"][pos]
-    #        return str
-    #    else:
-    #return "No text to export!"
+    @property
+    def word(self):
+        if "word_match" in self.data:
+            wordarr = {}
+            for idx in set(self.data["word_match"]):
+                wordstr = ""
+                widxarr = np.where(np.array(self.data["word_match"]) == idx)[0]
+                for widx in widxarr:
+                    wordstr += self.data["calc_char"][widx]
+                wordarr[idx] = wordstr
+            return wordarr
 
-    def value(self,attr,pos,val=None):
+    def value(self,attr,pos,val=None,wsval=0.5):
         if attr in self.data.keys():
             self.ivalue.attr = attr
-            self.ivalue.pos = pos
+            self.ivalue.ws = len(np.where(np.array(list(self.textstr[:pos+1])) == " ")[0])
+            self.ivalue.wsval = wsval
+            self.ivalue.pos = pos-self.ivalue.ws
             if val is not None:
                 self._set_value(val)
             else:
@@ -457,6 +467,13 @@ class DFSelObj(object):
         if self.ivalue.pos >= len(self.data["UID"]):
             self.ivalue.val = None
             return
+        if self.textstr[self.ivalue.pos+self.ivalue.ws] == " ":
+            if self.ivalue.attr == "x_confs":
+                self.ivalue.val = self.ivalue.wsval
+            elif self.ivalue.attr == "calc_char":
+                self.ivalue.val = " "
+            else: self.ivalue.val = None
+            return self.ivalue.val
         idx = self.data["UID"][self.ivalue.pos]
         if self.ivalue.attr not in self.mkeys and not self.result:
             if idx != -1:
@@ -562,4 +579,6 @@ class Value(object):
         self.pos = None
         self.attr = None
         self.val = None
+        self.ws = 0
+        self.wsval = None
 
