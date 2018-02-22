@@ -474,6 +474,22 @@ class DFSelObj(object):
             if len(wmidxset) != 0:
                 offset = list(wmidxset)[0]
             else:
+                if max(set(self.data["word_match"])) > widx:
+                    nextidx = min(set(self.data["word_match"]).difference(x for x in np.arange(0.0,widx)))
+                    pos = min(np.where(np.array(list(self.data["word_match"])) == nextidx)[0])
+                    self.data["word_match"] = self.data["word_match"][:pos]+[widx]*len(text)+self.data["word_match"][pos:]
+                    self.data["calc_char"] = self.data["calc_char"][:pos] + [wc] * len(text) + self.data["calc_char"][pos:]
+                    self.data["UID"] = self.data["UID"][:pos] + [-1] * len(text) + self.data["UID"][pos:]
+                    self.data["char_weight"] = self.data["char_weight"][:pos] + [-1] * len(text) + self.data["char_weight"][pos:]
+                    self.data["calc_word_idx"] = self.data["calc_word_idx"][:pos] + [-widx] * len(text) + self.data["calc_word_idx"][pos:]
+                    wc = None
+                else:
+                    self.data["word_match"].extend([widx]*len(text))
+                    self.data["calc_char"].extend([wc] * len(text))
+                    self.data["UID"].extend([-1] * len(text))
+                    self.data["char_weight"].extend([-1] * len(text))
+                    self.data["calc_word_idx"].extend([-widx] * len(text))
+                    wc = None
                 return
         else:
             if text == self.textstr:return
@@ -487,7 +503,9 @@ class DFSelObj(object):
                     textarr.append(self.word["text"][idx])
                 else:
                     textarr.append(text)
-            text = " ".join(textarr)
+                    text = ""
+            text = " ".join(textarr)+" "+text
+            text.strip()
         if text != self.textstr:
             wsarr = np.where(np.array(list(text)) == " ")[0]
             if len(wsarr)>0:
@@ -732,7 +750,6 @@ class DFEmptyObj(DFSelObj):
                         textarr.append(text)
                         text = ""
                 text = "".join(textarr)+text
-                text.strip()
         self.data["calc_char"] = list(text)
         self.data["UID"] = [-1]*len(text)
         self.data["char_weight"] = [-1] * len(text)
