@@ -65,8 +65,8 @@ def charinfo_process():
 
         #dfXO.write2file()
 
-        dfXO.match_words()
-        dfXO.write2sql()
+        #dfXO.match_words()
+        #dfXO.write2sql()
 
         # Example for selecting all line with calc_line == 10
         #dfSelO = dfXO.get_obj(query="calc_line == 10")
@@ -82,14 +82,32 @@ def charinfo_process():
                 print(items.textstr)
                 print(items)
                 txt = items.textstr
-                txt = txt[:1] + "|||" + txt[1:]
-                items.update_textspace(txt,"|")
+                txt = txt[:1] + "|" + txt[1:]
+                if "FNTFN" in txt:
+                    txt = txt[:0] + "||||||" + txt[0:]
+                #items.update_textspace(txt,"|")
+                word1 = items.word["text"].get(1.0,None)
+                if word1 != None:
+                    word1 = word1[:-2]+"| |"+word1[-2:]
+                    items.update_textspace(word1,"|",widx=1.0)
+                    word2 = items.word["text"].get(2.0,None)
+                    word2 = word2[:-2] + "| |" + word2[-2:]
+                    items.update_textspace(word2, "|", widx=2.0)
                 print(items.textstr)
+                print(items.value("x_confs",3))
+                print(items.value("calc_char", 3))
+                print(items.value("char", 3))
+                print(items.value("x_confs", 10))
+                print(items.value("calc_char", 10))
+                print(items.value("char", 9))
+                print(items.value("x_confs", 9, wsval=10.0))
+                print(items.value("calc_char", 9))
+                print(items.value("char", 10))
                 print(items.data["UID"])
-                print(items.value("calc_char", 2))
                 print(items.value("x_confs",2))
                 print(items.value("calc_char", 4))
                 print(items.value("x_confs",4))
+        return
         text2 = dfSelO[1].textstr
         text = text[:1] + "|" + text[1:]
         text = text[:3] + "|" + text[3:]
