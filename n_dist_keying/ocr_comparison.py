@@ -78,7 +78,13 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             current_set.calculate_msa_best_charconf(True)
 
+    def do_msa_best_new(self, use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise):
 
+        if use_ndist_pivot is True:
+            self.do_n_distance_keying()
+
+        for current_set in self.ocr_sets:
+            current_set.calculate_msa_best_all(use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise)
 
     def print_n_distance_keying_results(self):
         print("N_DISTANCE_KEYING_RESULTS ")

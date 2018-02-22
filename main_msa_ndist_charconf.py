@@ -8,13 +8,18 @@ from ocr_validation.isri_handler import IsriHandler
 DB_DIR = './Testfiles/sql/'
 NUMBER_OF_INPUTS = 3  # number of ocr inputs which will be compared, todo make this dynmically with maxlen or smth
 # keying mechanism
-DO_N_DIST_KEYING = True
-DO_WORDWISE_KEYING = False
-DO_MSA_BEST = False
+DO_N_DIST_KEYING = False
+DO_MSA_BEST = True
+
+# Settings for N-distance keying
+NDIST_USE_WORDWISE_KEYING = False
 
 # Settings for Multi Sequence Alignment Best
-MSA_BEST_USE_N_DIST_PIVOT = True
+MSA_BEST_USE_LONGEST_PIVOT = True
+MSA_BEST_USE_N_DIST_PIVOT = True  # this is not applicable atm, it's just the longest string
 MSA_BEST_USE_CHARCONFS = True
+MSA_BEST_USE_WORDWISE_MSA = True
+
 
 # postcorrection settings:
 KEYING_RESULT_POSTCORRECTION = True
@@ -50,8 +55,8 @@ ocr_comparison.print_sets(False)
 
 
 if DO_N_DIST_KEYING:
-    print("Doing: N_DIST_KEYING, WORDWISE KEYING: ",DO_WORDWISE_KEYING)
-    ocr_comparison.do_n_distance_keying(DO_WORDWISE_KEYING)   # do the keying, which makes the decision which is the best line for each set
+    print("Doing: N_DIST_KEYING, WORDWISE KEYING: ", NDIST_USE_WORDWISE_KEYING)
+    ocr_comparison.do_n_distance_keying(NDIST_USE_WORDWISE_KEYING)   # do the keying, which makes the decision which is the best line for each set
     #ocr_comparison.print_n_distance_keying_results()  # print keying results
     if KEYING_RESULT_POSTCORRECTION:
         print("Doing: KEYING_RESULT_POSTCORRECTION")
@@ -61,24 +66,30 @@ if DO_N_DIST_KEYING:
     ocr_comparison.save_n_distance_keying_results_to_file(FILEPATH_NDIST_RESULT, MODE_ADD_LINEBREAKS)
 
 if DO_MSA_BEST:
-    if MSA_BEST_USE_CHARCONFS is False:
-        if MSA_BEST_USE_N_DIST_PIVOT:
-            print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT")
 
-            ocr_comparison.do_msa_best_with_ndist_pivot()
-        else:
-            print("Doing: DO_MSA_BEST without NDIST_PIVOT")
-            ocr_comparison.do_msa_best()
+    if MSA_BEST_USE_WORDWISE_MSA:
+        # this is the new msa best invocation
+        ocr_comparison.do_msa_best_new(MSA_BEST_USE_N_DIST_PIVOT, MSA_BEST_USE_LONGEST_PIVOT, MSA_BEST_USE_CHARCONFS, \
+                                       MSA_BEST_USE_WORDWISE_MSA)
     else:
-        if MSA_BEST_USE_N_DIST_PIVOT:
-            print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT and CHARCONFS")
+        if MSA_BEST_USE_CHARCONFS is False:
+            if MSA_BEST_USE_N_DIST_PIVOT:
+                print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT")
 
-            ocr_comparison.do_msa_best_with_ndist_pivot_charconf()
+                ocr_comparison.do_msa_best_with_ndist_pivot()
+            else:
+                print("Doing: DO_MSA_BEST without NDIST_PIVOT")
+                ocr_comparison.do_msa_best()
         else:
-            print("Doing: DO_MSA_BEST without NDIST_PIVOT and CHARCONFS")
-            print("This is not implemented yet")
+            if MSA_BEST_USE_N_DIST_PIVOT:
+                print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT and CHARCONFS")
 
-    MODE_ADD_LINEBREAKS = False #todo add linebreaks later!
+                ocr_comparison.do_msa_best_with_ndist_pivot_charconf()
+            else:
+                print("Doing: DO_MSA_BEST without NDIST_PIVOT and CHARCONFS")
+                print("This is not implemented yet")
+
+        MODE_ADD_LINEBREAKS = False #todo add linebreaks later!
 
     #ocr_comparison.print_msa_best_results()
     ocr_comparison.save_dataset_to_file(FILEPATH_MSA_BEST_RESULT, 0, MODE_ADD_LINEBREAKS, "msa_best")

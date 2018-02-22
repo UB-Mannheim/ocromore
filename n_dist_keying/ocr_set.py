@@ -291,6 +291,75 @@ class OCRset:
 
             self._best_msa_text = self.get_line_content(self._set_lines[1])
 
+    def obtain_best_index(self, use_n_dist_pivot, use_longest_pivot, default_best_index=1):
+        # do a preselection of best element, if the parameter is set to take best n_dist_index as a pivot
+        best_index = 1
+
+        if use_n_dist_pivot is True:
+            ldist_best_index = self.get_shortest_n_distance_index() # this doesn't work in all cases atm
+            best_index = ldist_best_index
+        if use_longest_pivot is True:
+            best_index = self.get_longest_index()
+
+        indices = [0, 1, 2]
+        indices.remove(best_index)
+        other_indices = indices
+        return best_index, other_indices
+
+    def obtain_line_info(self, best_index, other_indices):
+
+        line_1 = self._set_lines[other_indices[0]]
+        line_2 = self._set_lines[best_index]  # should be best
+        line_3 = self._set_lines[other_indices[1]]
+
+        text_1 = self.get_line_content(line_1)
+        text_2 = self.get_line_content(line_2)  # should be best
+        text_3 = self.get_line_content(line_3)
+
+        print("ocr_set:")
+        print("text_A", line_1)
+        print("text_B", line_2)
+        print("text_C", line_3)
+
+        lines = [line_1, line_2, line_3]
+
+        line_1_ok = not Random.is_false_true_or_none(line_1)
+        line_2_ok = not Random.is_false_true_or_none(line_2)
+        line_3_ok = not Random.is_false_true_or_none(line_3)
+        ok_lines = [line_1_ok, line_2_ok, line_3_ok]
+        not_ok_indices = []
+        ok_indices = []
+        for ok_index, ok in enumerate(ok_lines):
+            if ok is True:
+                # not_ok_indices.append(ok_index)
+                ok_indices.append(ok_index)
+
+        ok_len = len(ok_indices)
+
+        texts_return = [text_1, text_2, text_3]
+        lines_return = [line_1,line_2,line_3]
+        lines_return_ok = [line_1_ok,line_2_ok,line_3_ok]
+
+        return texts_return, lines_return, lines_return_ok, ok_len
+
+    def calculate_msa_best_all(self, use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, prefered_index=1):
+
+        # get the pivot index and the other indices
+        best_index, other_indices = self.obtain_best_index(use_ndist_pivot, use_longest_pivot,prefered_index)
+        print("msa selection taking best:", best_index, "others:(", other_indices[0], "and", other_indices[1], ")")
+
+        # fetch the lines to process and info which (and how many) lines are ok
+        texts, lines, lines_ok, number_lines_ok = self.obtain_line_info(best_index, other_indices)
+
+        # do the msa if there is at least one line ok (confidence vote can be done with one line also :))
+        if use_wordwise is True:
+            if number_lines_ok != 0:
+                result = MsaHandler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], True)
+            else:
+                result = None
+
+        self._best_msa_text = result
+
 
 
     def calculate_msa_best_charconf(self, take_n_dist_best_index=False, take_longest_as_pivot = True):

@@ -18,6 +18,7 @@ class GapConfig(object):
 
 class MsaHandler(object):
 
+
     @staticmethod
     def compare(item_one, item_two, wildcard_character='¦'):
         sequences1 = [item_one]
@@ -762,11 +763,8 @@ class MsaHandler(object):
 
         # res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
 
-
     @staticmethod
-    def get_best_of_three(text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None):
-
-        PRINT_RESULTS = True
+    def align_three_texts(text_1, text_2, text_3, wildcard_character = '¦'):
         MODE_GONZALO = 'gonzalo'
         MODE_SKBIO = 'scikit-bio_alignment'
         MODE_BIOPYTHON = 'biopython'
@@ -774,13 +772,27 @@ class MsaHandler(object):
 
         if MODE == MODE_GONZALO:
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_gonzalo(text_1, text_2, text_3)
-            wildcard_character = '¦'
+
         elif MODE == MODE_SKBIO:
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_skbio(text_1, text_2, text_3)
-            wildcard_character = '@'
         elif MODE == MODE_BIOPYTHON:
-            wildcard_character = '¦'
+
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character)
+
+        return res_final_1, res_final_2, res_final_3
+
+    @staticmethod
+    def get_best_of_three_wordwise(line_1, line_2, line_3, use_charconfs):
+        wildcard_character = '¦'
+        # iterate words
+
+
+    @staticmethod
+    def get_best_of_three(text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None):
+        PRINT_RESULTS = True
+        wildcard_character = '¦'
+
+        res_final_1, res_final_2, res_final_3 = MsaHandler.align_three_texts(text_1, text_2, text_3, wildcard_character)
 
         print("my final resolutions before vote")
         print("res_final_1",res_final_1)
