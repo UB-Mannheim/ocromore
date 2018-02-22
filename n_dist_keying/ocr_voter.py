@@ -114,13 +114,13 @@ class OCRVoter(object):
             key_confs_mapping = 'UID'
             key_confs = 'x_confs'
             key_char = 'calc_char'
-            print("vote_text1",line_1.textstr)
-            print("vote_text2",line_2.textstr)
-            print("vote_text3",line_3.textstr)
+            print("vote_text1", line_1.textstr)
+            print("vote_text2", line_2.textstr)
+            print("vote_text3", line_3.textstr)
             if "¦¦lt.H" in line_1.textstr:
                 print("asd")
 
-            maximum_char_number = max(len(line_1.textstr),len(line_2.textstr),len(line_3.textstr))
+            maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
             accumulated_chars = ""
             for character_index in range(0, maximum_char_number): # check: is list 1 always best reference?

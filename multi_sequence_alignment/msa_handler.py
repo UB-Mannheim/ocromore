@@ -442,7 +442,7 @@ class MsaHandler(object):
         except Exception as ex:
             tr = inspect.trace()
             print("trace",tr)
-            print("Exception within alignemnt algo ", ex)
+            print("Exception within alignment algo ", ex)
 
     @staticmethod
     def msa_alignment_biopython_old(text_1, text_2, text_3, wildcard_character='¦'):
@@ -805,6 +805,28 @@ class MsaHandler(object):
         def update_word(line_in, word_index, new_value):
             line_in.update_textspace(new_value, wildcard_character, widx=word_index)
 
+
+        def sort_words_longest_mid(word1, word2, word3):
+            words = [word1, word2, word3]
+
+            wlongest_index = np.argmax([len(word1), len(word2), len(word3)])
+
+            if wlongest_index == 1:
+                words_sorted = words
+            else:
+                longest_word = words[wlongest_index]
+                words_sorted = words[:]
+                words_sorted.pop(wlongest_index)
+                words_sorted.insert(1, longest_word)
+
+            return words_sorted, wlongest_index
+
+
+        def reverse_mid_sort(al_word1,alword2, alword3, wlongest_index):
+            words_aligned = [al_word1, alword3]
+            words_aligned.insert(wlongest_index, alword2)
+            return words_aligned
+
         m1 = get_max_wordlen(line_1)
         m2 = get_max_wordlen(line_2)
         m3 = get_max_wordlen(line_3)
@@ -815,23 +837,21 @@ class MsaHandler(object):
                 word2 = get_word_from_line(line_2, current_word_index)
                 word3 = get_word_from_line(line_3, current_word_index)
 
-                #get longest word
-                words = [word1, word2, word3]
-                wlongest_index = np.argmax([len(word1), len(word2), len(word3)])
-                if wlongest_index == 1:
-                    words_sorted = words
-                else:
-                    longest_word = words[wlongest_index]
-                    words_sorted = words[:]
-                    words_sorted.pop(wlongest_index)
-                    words_sorted.insert(1, longest_word)
+                # sort by length (longest has index 1)
+                words_sorted, wlongest_index = sort_words_longest_mid(word1, word2, word3)
+
+                word1_al, word2_al, word3_al = MsaHandler.align_three_texts(words_sorted[0], words_sorted[1], \
+                                                                            words_sorted[2], wildcard_character)
+
+                # sort back ...
+                words_aligned = reverse_mid_sort(word1_al, word2_al, word3_al, wlongest_index)
+                if len(words_aligned[0])!= len(words_aligned[1]) or len(words_aligned[1]) != len(words_aligned[2]):
+                    print("shouldn't be")
 
 
-                word1_al, word2_al, word3_al = MsaHandler.align_three_texts(words_sorted[0], words_sorted[1], words_sorted[2],
-                                                                            wildcard_character)
-                update_word(line_1, current_word_index, word1_al)
-                update_word(line_2, current_word_index, word2_al)
-                update_word(line_2, current_word_index, word3_al)
+                update_word(line_1, current_word_index, words_aligned[0])
+                update_word(line_2, current_word_index, words_aligned[1])
+                update_word(line_2, current_word_index, words_aligned[2])
 
 
             if use_charconfs:
