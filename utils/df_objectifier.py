@@ -711,12 +711,36 @@ class DFEmptyObj(DFSelObj):
         self.empty = True
         self.maxuid = maxuid
 
-    def update_textspace(self, text, wc=None):
+    def update_textspace(self, text, wc=None, widx=None):
         # wc = wildcards
+        if widx != None:
+            prevtxt = self.word["text"]
+            if  self.data["word_match"]==[]:
+                self.data["word_match"] = [widx] * len(text)
+            else:
+                if max(set(self.data["word_match"])) > widx:
+                    nextidx = min(set(self.data["word_match"]).difference(x for x in np.arange(0.0,widx)))
+                    pos = min(np.where(np.array(list(self.data["word_match"])) == nextidx)[0])
+                    arr = [widx] * len(text)
+                    self.data["word_match"] = self.data["word_match"][:pos]+arr+self.data["word_match"][pos:]
+                else:
+                    self.data["word_match"].extend([widx]*len(text))
+                textarr = []
+                for idx in prevtxt:
+                    if widx != idx:
+                        textarr.append(prevtxt[idx])
+                    else:
+                        textarr.append(text)
+                        text = ""
+                text = "".join(textarr)+text
+                text.strip()
         self.data["calc_char"] = list(text)
         self.data["UID"] = [-1]*len(text)
         self.data["char_weight"] = [-1] * len(text)
         self.data["calc_word_idx"] = [-1] * len(text)
+        if widx != None:
+            self.data["calc_word_idx"] = self.data["word_match"]
+
 
 class Value(object):
     def __init__(self):

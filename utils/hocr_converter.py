@@ -1,6 +1,8 @@
 import os
 from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
 import pandas as pd
+from utils.abbyyXML_converter import get_xml_document
+
 
 class HocrConverter(object):
 
@@ -12,7 +14,12 @@ class HocrConverter(object):
     def get_hocr_document(self, filename):
         #dir_path = os.path.dirname(os.path.abspath(__file__))
         full_path = filename #os.path.join(dir_path, filename)
-        document = HOCRDocument(full_path, is_path=True)
+        if full_path.split(".")[-1].lower() == "xml":
+            document = get_xml_document(full_path)
+        elif full_path.split(".")[-1].lower() == "hocr":
+            document = HOCRDocument(full_path, is_path=True)
+        else:
+            document = None
         return document
 
     def hocr2sql(self,filename,con,ocr=None,ocr_profile=None,index=None):
@@ -37,6 +44,7 @@ class HocrConverter(object):
         df_dict = {"Ocro":self.create_dict_ocropus,
               "Tess":self.create_dict_tesseract,
               "Abbyy":self.create_dict_abbyy,
+              "AbbyyXML":self.create_dict_abbyyxml,
               "Default":{},}.get(ocr,"Default")(document,ocr_profile=ocr_profile)
         df = self.dict2df(df_dict,index=index)
         return df
@@ -123,6 +131,16 @@ class HocrConverter(object):
 
                 else:
                     raise Exception('THIS SHOULDNT HAPPEN!')
+        return df_dict
+
+    def create_dict_abbyyxml(self,document,ocr_profile=None):
+        ocr = "Abbyy"
+        df_dict={}
+        lidx =0
+        idx = 0
+        for line in document.page:
+            idx = self.line2dict(line, df_dict, ocr, ocr_profile, idx, lidx)
+            lidx += 1
         return df_dict
 
     def line2dict(self,line,df_dict,ocr,ocr_profile,idx,lidx):
