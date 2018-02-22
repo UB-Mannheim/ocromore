@@ -55,7 +55,7 @@ def charinfo_process():
         dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
 
         # Linematcher with queries
-        first = dfXO.match_line()
+        first = dfXO.match_line(force=True)
         #if first: dfXO.write2sql()
 
         # Unspacing
@@ -65,9 +65,10 @@ def charinfo_process():
 
         #dfXO.write2file()
 
-        #dfXO.match_words()
-        #dfXO.write2sql()
-
+        dfXO.match_words()
+        dfXO.write2sql()
+        print("exiting....")
+        exit(0)
         # Example for selecting all line with calc_line == 10
         #dfSelO = dfXO.get_obj(query="calc_line == 10")
         max_line = dfXO.df["calc_line_idx"].max()

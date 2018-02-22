@@ -317,17 +317,16 @@ class OCRset:
         text_3 = self.get_line_content(line_3)
 
         print("ocr_set:")
-        print("text_A", line_1)
-        print("text_B", line_2)
-        print("text_C", line_3)
+        print("text_A", text_1)
+        print("text_B", text_2)
+        print("text_C", text_3)
 
-        lines = [line_1, line_2, line_3]
 
         line_1_ok = not Random.is_false_true_or_none(line_1)
         line_2_ok = not Random.is_false_true_or_none(line_2)
         line_3_ok = not Random.is_false_true_or_none(line_3)
         ok_lines = [line_1_ok, line_2_ok, line_3_ok]
-        not_ok_indices = []
+
         ok_indices = []
         for ok_index, ok in enumerate(ok_lines):
             if ok is True:

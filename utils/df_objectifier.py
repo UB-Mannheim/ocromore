@@ -3,7 +3,6 @@ import numpy as np
 from utils.df_tools import get_con
 import math
 from itertools import cycle
-import lxml.etree as ET
 from io import StringIO
 import sys
 

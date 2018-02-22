@@ -784,7 +784,70 @@ class MsaHandler(object):
     @staticmethod
     def get_best_of_three_wordwise(line_1, line_2, line_3, use_charconfs):
         wildcard_character = '¦'
+        PRINT_RESULTS = True
         # iterate words
+
+
+        def get_max_wordlen(line_to_check):
+            if line_to_check is None or line_to_check is False or line_to_check is True:
+                return -1
+
+            highest_word = max(line_2.word['text'].keys())
+            return highest_word
+
+        def get_word_from_line(line_to_check, word_index, return_val_empty=""):
+            if line_to_check is None or line_to_check is False or line_to_check is True:
+                return return_val_empty
+
+            word_obtained = line_to_check.word["text"].get(word_index, return_val_empty)
+            return word_obtained
+
+        def update_word(line_in, word_index, new_value):
+            line_in.update_textspace(new_value, wildcard_character, widx=word_index)
+
+        m1 = get_max_wordlen(line_1)
+        m2 = get_max_wordlen(line_2)
+        m3 = get_max_wordlen(line_3)
+        max_range_word =  int(max(m1, m2, m3)+1)  # add a one because it starts with zero
+        try:
+            for current_word_index in range(0, max_range_word):
+                word1 = get_word_from_line(line_1, current_word_index)
+                word2 = get_word_from_line(line_2, current_word_index)
+                word3 = get_word_from_line(line_3, current_word_index)
+
+                #get longest word
+                words = [word1, word2, word3]
+                wlongest_index = np.argmax([len(word1), len(word2), len(word3)])
+                if wlongest_index == 1:
+                    words_sorted = words
+                else:
+                    longest_word = words[wlongest_index]
+                    words_sorted = words[:]
+                    words_sorted.pop(wlongest_index)
+                    words_sorted.insert(1, longest_word)
+
+
+                word1_al, word2_al, word3_al = MsaHandler.align_three_texts(words_sorted[0], words_sorted[1], words_sorted[2],
+                                                                            wildcard_character)
+                update_word(line_1, current_word_index, word1_al)
+                update_word(line_2, current_word_index, word2_al)
+                update_word(line_2, current_word_index, word3_al)
+
+
+            if use_charconfs:
+                best, best_stripped = OCRVoter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1,
+                                                                            wildcard_character)  # res two is the best element
+                best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
+
+            if PRINT_RESULTS:
+                print("best         ", best)
+                print("best_stripped", best_stripped)
+                print("best______nmw", best_stripped_non_multi_whitespace)
+
+            return best_stripped_non_multi_whitespace
+        except Exception as ex:
+            tr = inspect.trace()
+            print("tr", tr)
 
 
     @staticmethod
@@ -800,9 +863,6 @@ class MsaHandler(object):
         print("res_final_3",res_final_3)
 
         if use_charconfs is True:
-            if "T I" in res_final_1:
-                print("asd")
-
 
             # update the line info with resolutions
             line_1.update_textspace(res_final_1, wildcard_character)
@@ -818,14 +878,6 @@ class MsaHandler(object):
             best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
         if PRINT_RESULTS:
-            """
-                print("A:", res_one_1)
-                print("B:", res_two_2)
-                print("C:", res_three_2)
-                print("D:", best)
-                print("E:", best_stripped)
-                print("F:", best_stripped_non_multi_whitespace)
-            """
             print("A:",res_final_1)
             print("B:",res_final_2)
             print("C:",res_final_3)

@@ -133,7 +133,6 @@ class OCRVoter(object):
                 charconf_2 = try_obtain_charconf(line_2.value(key_confs, character_index, wsval=50.0))
                 charconf_3 = try_obtain_charconf(line_3.value(key_confs, character_index, wsval=50.0))
 
-
                 clist = [character_1, character_2, character_3]
                 # get the character which occurs the most
                 sc1, acc_conf_1 = OCRVoter.get_confidence_count(character_1, character_2, character_3, charconf_1, charconf_2, charconf_3)
