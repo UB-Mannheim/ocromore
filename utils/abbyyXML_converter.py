@@ -17,19 +17,19 @@ def get_xml_document(fpath):
             print(clean_tag)
             if clean_tag == "line":
                 if doc.page != [] and line != None:
-                    line.word.append(word)
+                    line.words.append(word)
                 line = Line(item.attrib)
-                word = Word()
+                word= Word()
                 doc.page.append(line)
             if clean_tag == "charParams":
                 if item.text == " ":
-                    line.word.append(word)
+                    line.words.append(word)
                     word = Word()
                 else:
                     print(item.text)
                     print(item.attrib)
                     word.update_coordinates(item.attrib)
-                    word.x_confs.append(item.attrib["charConfidence"])
+                    word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
     except Exception as ex:
         print("Parsing AbbyyXML Exception:",ex)
@@ -43,20 +43,20 @@ class Document():
 class Line():
     def __init__(self,attr):
         self.coordinates = (attr["l"],attr["t"],attr["r"],attr["b"])
-        self.word = []
+        self.words = []
 
 class Word():
     def __init__(self):
         self.coordinates = (None,None,None,None)
         self.ocr_text = []
-        self.x_confs = []
+        self._xconfs = []
 
     @property
-    def x_wconf(self):
+    def _xwconf(self):
         res = 0
-        if self.x_confs != []:
+        if self._xconfs != []:
             res = 1
-            for x in self.x_confs:
+            for x in self._xconfs:
                 res = res*(int(x)*0.01)
         return res*100
 

@@ -17,14 +17,14 @@ import math
 import pickle
 
 def charinfo_process():
-    READXML = True
+    READXML = False
     HOCR2SQL = False
-    WORKWITHOBJ = False
+    WORKWITHOBJ = True
     PLOT = False
 
     if READXML:
         path = "./Testfiles/long/default/1957/abbyy/0237_1957_hoppa-405844417-0050_0290.jpg.xml"
-        HocrConverter().get_hocr_document(path)
+        HocrConverter().hocr2sql(path, "")
 
 
     # Read hocr and create sql-db
@@ -81,7 +81,9 @@ def charinfo_process():
         #dfXO.get_obj(query="calc_line_idx == 10")
             #print(idx)
         object = dfXO.get_obj(empty=True)
-        object.update_textspace(">>  >>")
+        object.update_textspace(">>  >>",widx=1.0)
+        object.update_textspace(">>  >>", widx=3.0)
+        object.update_textspace(">>  >>", widx=2.0)
         dfSelO = dfXO.get_line_obj()
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
