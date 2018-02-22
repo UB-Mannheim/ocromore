@@ -1,0 +1,70 @@
+from lxml import etree
+
+VALIDXML = ["FineReader10-schema-v1.xml"]
+
+def get_xml_document(fpath):
+    doc = Document()
+    try:
+        tree = etree.parse(fpath)
+        root = tree.getroot()
+        print(tree.docinfo.doctype)
+        if not VALIDXML[0] in root.tag:
+            print(f"The file is not valid with {VALIDXML[0]}")
+            return
+        line = None
+        for item in root.iter():
+            clean_tag = item.tag.split("}")[-1]
+            print(clean_tag)
+            if clean_tag == "line":
+                if doc.page != [] and line != None:
+                    line.word.append(word)
+                line = Line(item.attrib)
+                word = Word()
+                doc.page.append(line)
+            if clean_tag == "charParams":
+                if item.text == " ":
+                    line.word.append(word)
+                    word = Word()
+                else:
+                    print(item.text)
+                    print(item.attrib)
+                    word.update_coordinates(item.attrib)
+                    word.x_confs.append(item.attrib["charConfidence"])
+                    word.ocr_text.append(item.text)
+    except Exception as ex:
+        print("Parsing AbbyyXML Exception:",ex)
+    return doc
+
+class Document():
+    def __init__(self):
+        self.ocr = "AbbyyXML"
+        self.page = []
+
+class Line():
+    def __init__(self,attr):
+        self.coordinates = (attr["l"],attr["t"],attr["r"],attr["b"])
+        self.word = []
+
+class Word():
+    def __init__(self):
+        self.coordinates = (None,None,None,None)
+        self.ocr_text = []
+        self.x_confs = []
+
+    @property
+    def x_wconf(self):
+        res = 0
+        if self.x_confs != []:
+            res = 1
+            for x in self.x_confs:
+                res = res*(int(x)*0.01)
+        return res*100
+
+    def update_coordinates(self,attr):
+        if self.coordinates == (None,None,None,None):
+            self.coordinates = (attr["l"],attr["t"],attr["r"],attr["b"])
+        else:
+            if attr["t"] > self.coordinates[1]: attr["t"] = self.coordinates[1]
+            if attr["b"] < self.coordinates[3]: attr["b"] = self.coordinates[3]
+            self.coordinates = (self.coordinates[0],attr["t"], attr["r"], attr["b"])
+
