@@ -10,7 +10,7 @@ NUMBER_OF_INPUTS = 3  # number of ocr inputs which will be compared, todo make t
 # keying mechanism
 DO_N_DIST_KEYING = True
 DO_WORDWISE_KEYING = False
-DO_MSA_BEST = True
+DO_MSA_BEST = False
 
 # Settings for Multi Sequence Alignment Best
 MSA_BEST_USE_N_DIST_PIVOT = True

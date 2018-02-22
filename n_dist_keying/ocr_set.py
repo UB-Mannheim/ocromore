@@ -1,6 +1,7 @@
 from n_dist_keying.distance_storage import DistanceStorage
 from n_dist_keying.text_comparator import TextComparator
 from n_dist_keying.text_unspacer import TextUnspacer
+from n_dist_keying.n_distance_voter import NDistanceVoter
 import numpy as np
 from multi_sequence_alignment.msa_handler import MsaHandler
 from utils.random import Random
@@ -25,7 +26,6 @@ class OCRset:
         self._set_lines = lineset
         self._size = lines_size
         self._y_mean = y_mean  # mean y coordinate of all lines referenced in this set
-        self.d_storage = DistanceStorage()
         self.shortest_distance_line_index = -1
         self._unspaced = False  # indicates the set_lines was unspaced
         self._refspaced = False # indicates the set_lines was reference spaced
@@ -138,22 +138,16 @@ class OCRset:
 
     def calculate_n_distance_keying(self):
 
-        #if self.y_mean == 2123:
-        #    print("Stop here")
+        # get the texts
+        texts = []
+        for line in self._set_lines:
+            text = self.get_line_content(line)
+            texts.append(text)
 
-        # do a line-wise comparison, which calculates a distance between all lines in this set
-        for line_index, line in enumerate(self._set_lines):
-            self.compare_with_other_lines(line_index, line)
-
-        # calculate the distance from each item in set to all others
-        for line_index, line in enumerate(self._set_lines):
-            self.d_storage.calculate_accumulated_distance(line_index)
-
-        # get the index of the item in set, which has the shortest distance to all others
-        self.d_storage.calculate_shortest_distance_index()
+        self._n_distance_voter = NDistanceVoter(texts)
+        shortest_dist_index = self._n_distance_voter.compare_texts()
 
         # save the result
-        shortest_dist_index = self.d_storage.get_shortest_distance_index()
         self.shortest_distance_line_index = shortest_dist_index
         self.shortest_distance_line = self._set_lines[shortest_dist_index]
 
@@ -161,17 +155,18 @@ class OCRset:
         if self._is_origin_database is False:
             raise Exception("Wordwise keying only possible with database originated ocr_sets")
 
-        # get maximum word index
+        # get maximum word index todo probably will be refactored
         max_word_indices = []
         for line in self._set_lines:
-            if line is False or line is None:
+            if line is False or line is None or line.textstr =='':
                 max_word_indices.append(0)
             else:
                 max_word_index = int(max(line.data["word_idx"]))
                 max_word_indices.append(max_word_index)
 
         max_word_index = max(max_word_indices)
-        print("mwi",max_word_index)
+        print("mwi", max_word_index)
+
 
         def get_word_at_calc_wordindex(line, word_index):
             accumulated_word = ""
@@ -185,9 +180,14 @@ class OCRset:
                     break
             return accumulated_word
 
+        max_word_index = 2
+        words_mock = [["hallo", "h4llo", "hallo"], ["zwei", None, "2wei"]]
+        ndist_voter = NDistanceVoter(None)
+
         # get corresponding words
         for current_word_index in range(0,max_word_index):
             words = []
+            """
             for line in self._set_lines:
                 if line is False or line is None:
                     words.append(False)
@@ -197,29 +197,18 @@ class OCRset:
                         words.append(current_word)
                     else:
                         words.append(False)
+            """
 
-            print(words)
+            words = words_mock[current_word_index]
+            ndist_voter.set_texts(words)
+            wordindex_result = ndist_voter.compare_texts()
+            ndist_voter.reset()
+            print(words[wordindex_result])
             print("--")
+            # just assume words is filled here and a 3 word list
+
 
         return
-        #if self.y_mean == 2123:
-        #    print("Stop here")
-
-        # do a line-wise comparison, which calculates a distance between all lines in this set
-        for line_index, line in enumerate(self._set_lines):
-            self.compare_with_other_lines(line_index, line)
-
-        # calculate the distance from each item in set to all others
-        for line_index, line in enumerate(self._set_lines):
-            self.d_storage.calculate_accumulated_distance(line_index)
-
-        # get the index of the item in set, which has the shortest distance to all others
-        self.d_storage.calculate_shortest_distance_index()
-
-        # save the result
-        shortest_dist_index = self.d_storage.get_shortest_distance_index()
-        self.shortest_distance_line_index = shortest_dist_index
-        self.shortest_distance_line = self._set_lines[shortest_dist_index]
 
 
     def get_longest_index(self):
@@ -418,63 +407,6 @@ class OCRset:
             print(str(msa_text))
 
 
-    def compare_with_other_lines(self, line_index, line):
-        ocr_text = self.get_line_content(line)
-
-        for line_index_cmp, line_cmp in enumerate(self._set_lines):
-
-            # if line has the same index, continue
-            if line_index is line_index_cmp:
-                continue
-
-            existing_distance = self.d_storage.fetch_value(line_index, line_index_cmp)
-
-            # if line was already compared, continue
-            if existing_distance is not None:
-                continue
-
-            ocr_text_cmp = self.get_line_content(line_cmp)
-            distance = self.get_distance(ocr_text, ocr_text_cmp)
-            self.d_storage.store_value(line_index, line_index_cmp, distance)
-
-    def get_distance(self, text1, text2):
-        # todo add more possibilities for distance measurement, i.e confidences, edit distance, context weighting
-        MODE_DIFFLIB = 'difflib' #best bet
-        MODE_NORMED_LEVENSHTEIN = 'normed_levenshtein' # longest alignment normed levenshtein distance
-        MODE_SORENSEN = 'sorensen'
-        MODE_JACCARD = 'jaccard'
-        MODE_HAMMING = 'hamming'
-        MODE_MYERS = 'myers' # use myers special difflib sequence matcher
-        mode = MODE_DIFFLIB # set your mode here
-
-        # return a fixed negative value if one of the strings is not defined
-        if text1 is False and text2 is False:
-            return 0
-
-        # One is false and one is not false
-        if text1 is False or text2 is False:
-            return 1
-
-        dist = 1
-
-        if mode == MODE_DIFFLIB:
-            dist = TextComparator.compare_ocr_strings_difflib_seqmatch(text1, text2)
-
-        elif mode == MODE_NORMED_LEVENSHTEIN:
-            dist = TextComparator.compare_ocr_strings_levensthein_normed(text1, text2)
-
-        elif mode == MODE_HAMMING:
-            dist = TextComparator.compare_ocr_strings_hamming(text1, text2)
-
-        elif mode == MODE_SORENSEN:
-            dist = TextComparator.compare_ocr_strings_sorensen(text1, text2)
-
-        elif mode == MODE_JACCARD:
-            dist = TextComparator.compare_ocr_strings_jaccard(text1, text2)
-        elif mode == MODE_MYERS:
-            dist = TextComparator.compare_ocr_strings_myers(text1, text2)
-
-        return dist
 
     def get_line_content(self, line):
         """
