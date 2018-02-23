@@ -88,6 +88,7 @@ def charinfo_process():
         object.update_textspace(">>  >>",widx=1.0)
         object.update_textspace(">>  >>", widx=3.0)
         object.update_textspace(">>  >>", widx=2.0)
+        object.restore()
         dfSelO = dfXO.get_line_obj()
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
@@ -99,6 +100,7 @@ def charinfo_process():
                 if "FNT" in txt:
                     items.update_textspace("||","|",widx=0.0)
                     items.update_textspace("@@@@@","@",widx=3.0)
+                    items.restore()
 
                     txt = txt[:0] + "||||||" + txt[0:]
                 #items.update_textspace(txt,"|")
