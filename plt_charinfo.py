@@ -8,40 +8,60 @@ from utils.hocr_charinfo import merge_charinfo
 from utils.df_tools import get_con
 from utils.df_objectifier import DFObjectifier
 import glob
-import matplotlib.pyplot as plt
-import seaborn as sns
+from itertools import chain
+
 import numpy as np
-import pandas as pd
+#import matplotlib.pyplot as plt
+#import seaborn as sns
+#import pandas as pd
 from pathlib import Path
-import math
-import pickle
+#import math
 
 def charinfo_process():
-    READXML = False
     HOCR2SQL = False
+    PREPROCESSING = False
     WORKWITHOBJ = True
     PLOT = False
-
-    if READXML:
-        path = "./Testfiles/long/default/1957/abbyy/0237_1957_hoppa-405844417-0050_0290.jpg.xml"
-        HocrConverter().hocr2sql(path, "")
-
 
     # Read hocr and create sql-db
     dbdir = './Testfiles/sql/'
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
-    files = glob.iglob("./Testfiles/long/default/**/*.hocr", recursive=True)
-    dbnamelast, con = "", None
+
+    filetypes = ["hocr","xml"]
+    files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*."+filetype, recursive=True) for filetype in filetypes)
+
+    dbnamelast,con = "", None
+
 
     if HOCR2SQL:
         for file in files:
+            print(f"\nConvert to sql:\t{file}")
             fpath = Path(file)
             ocr_profile = fpath.parts[-2]
             dbname = fpath.name.split("_")[1]
             if dbname != dbnamelast:
                 con = get_con(dbdir + '/'+dbname+'.db')
                 dbnamelast = dbname
-            HocrConverter().hocr2sql(file,con,ocr_profile)
+            try:
+                HocrConverter().hocr2sql(file,con,ocr_profile)
+            except:
+                pass
+
+    dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
+
+    # Preprocesses data from the dataframe
+    if PREPROCESSING:
+
+        # Linematcher with queries
+        if dfXO.match_line():
+            # Unspacing
+            dfXO.unspace()
+
+            # Match words or segments of words into "word_match"
+            dfXO.match_words()
+
+            # Write the calulated values into the db
+            dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
@@ -58,23 +78,8 @@ def charinfo_process():
         #    dfXO.match_line()
         #    dfXO.write2sql()
 
-        dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
+        # dfXO.write2file()
 
-        # Linematcher with queries
-        first = dfXO.match_line(force=True)
-        #if first: dfXO.write2sql()
-
-        # Unspacing
-        if first:
-            dfXO.unspace()
-            #dfXO.write2sql()
-
-        #dfXO.write2file()
-
-        dfXO.match_words()
-        dfXO.write2sql()
-        print("exiting....")
-        exit(0)
         # Example for selecting all line with calc_line == 10
         #dfSelO = dfXO.get_obj(query="calc_line == 10")
         max_line = dfXO.df["calc_line_idx"].max()
@@ -94,7 +99,7 @@ def charinfo_process():
                 txt = items.textstr
                 txt = txt[:1] + "|" + txt[1:]
                 if "FNT" in txt:
-                    items.update_textspace("||||||","|",widx=4.0)
+                    items.update_textspace("||","|",widx=0.0)
                     items.update_textspace("@@@@@","@",widx=3.0)
 
                     txt = txt[:0] + "||||||" + txt[0:]

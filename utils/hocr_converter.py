@@ -3,7 +3,6 @@ from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
 import pandas as pd
 from utils.abbyyXML_converter import get_xml_document
 
-
 class HocrConverter(object):
 
     def __init__(self):
@@ -13,13 +12,13 @@ class HocrConverter(object):
 
     def get_hocr_document(self, filename):
         #dir_path = os.path.dirname(os.path.abspath(__file__))
+        document = None
         full_path = filename #os.path.join(dir_path, filename)
         if full_path.split(".")[-1].lower() == "xml":
             document = get_xml_document(full_path)
         elif full_path.split(".")[-1].lower() == "hocr":
             document = HOCRDocument(full_path, is_path=True)
-        else:
-            document = None
+        if document == None: raise NameError('The filetype is not supported or the file is damaged.\t✗')
         return document
 
     def hocr2sql(self,filename,con,ocr=None,ocr_profile=None,index=None):
@@ -55,7 +54,10 @@ class HocrConverter(object):
         elif "tess" in ocr.lower():
             ocr = "Tess"
         elif "abb" in ocr.lower():
-            ocr = "Abbyy"
+            if "xml" in docr.lower():
+                ocr = "AbbyyXML"
+            else:
+                ocr = "Abbyy"
         else:
             ocr = docr
         return ocr
@@ -130,7 +132,7 @@ class HocrConverter(object):
                         idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
 
                 else:
-                    raise Exception('THIS SHOULDNT HAPPEN!')
+                    raise Exception("Parsing Exception:\tCreate Abbyy dict\t✗")
         return df_dict
 
     def create_dict_abbyyxml(self,document,ocr_profile=None):
@@ -192,7 +194,9 @@ class HocrConverter(object):
         # try to create a table
         try:
             df.to_sql(tablename, con)
-            print(f'The table:"{tablename}" was created!')
+            print(f'SQLite directory:\t{con.url.database}')
+            print(f'Create table:\t{tablename}\t✓')
+
         except:
             # loading the table
             df_old = pd.read_sql_table(tablename, con)
@@ -200,7 +204,8 @@ class HocrConverter(object):
             df_old = df_old.combine_first(df)
             df_old.to_sql(tablename, con, if_exists='replace')
             df_old = None
-            print(f'The table:"{tablename}" was updated!')
+            print(f'SQLite directory:\t{con.url.database}')
+            print(f'Update table:\t{tablename}\t✓')
 
         return 0
 

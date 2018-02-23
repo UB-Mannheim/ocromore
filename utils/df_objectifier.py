@@ -3,13 +3,44 @@ import numpy as np
 from utils.df_tools import get_con
 import math
 from itertools import cycle
-from io import StringIO
 import sys
 
-
+# Contains unicode snippets to create a spinner animation for loading processess
 spinner = cycle([u'⣾',u'⣷',u'⣯',u'⣟',u'⡿', u'⢿',u'⣻', u'⣽'])
 
 class DFObjectifier(object):
+    """
+    This class serves as cross-plattform between sql-dataframe(df)-obj for ocr output data
+    with properties and methods to create and update each of them.
+    It also contains methods for preprocessing the data.
+    =======
+    METHODS
+    =======
+       Preprocessing
+       -----------------------------------------------------------------------------------------------------------------
+            match_line  -   Match lines over all datasets
+            unspace     -   Unspace datasets compared to a pivot
+            match_words -   Match words for each line over all datasets
+
+        Create Obj
+       -----------------------------------------------------------------------------------------------------------------
+                            Info: There are three types of obj -
+                            SelObj (selection)  -   Contains data, serves for calcuation
+                            ResObj (result)     -   Contains 0 data, serves a store for the calculated results
+                            EmptyObj            -   Contains 0 data, serves a replacement for lines,
+                                                    where no data exists in one or more of the datasets
+            get_obj     -   Returns an obj with the specified parameters for all datasets
+            get_line_obj-   Returns obj for each line with specified parameters for all datasets
+
+        Update
+       -----------------------------------------------------------------------------------------------------------------
+            update      -   updates the main dataframe (df)
+
+        Write
+       -----------------------------------------------------------------------------------------------------------------
+            write2sql   -   writes the current state of the df to the sql
+            write2file  -   write the current state of the df to a specific file (e.g. txt, hocr)
+    """
 
     def __init__(self,engine,tablename):
         self.idxkeys = ['ocr','ocr_profile','line_idx', 'word_idx', 'char_idx']
@@ -406,6 +437,32 @@ class DFObjectifier(object):
         return
 
 class DFSelObj(object):
+    """
+    This class serves as container for a selection of the data from the main dataframe (see DFObject).
+    It capsulated the data and you can work more OO as with the dataframe.
+    To store the changes into the db you have to update the main df.
+
+    =======
+    METHODS
+    =======
+        Get&Set
+        ----------------------------------------------------------------------------------------------------------------
+            value               -   Set or get a value from a specific column
+            text                -
+
+        Update
+        ----------------------------------------------------------------------------------------------------------------
+            update_textspace    -   Updates the calculated text at the moment you can add or remove wildcards (wc)
+                                    or whitespaces (ws) on line or word (widx) base.
+            update_df           -   Updates the internal dataframe which later updates the main dataframe
+
+    ==========
+    PROPERTIES
+    ==========
+
+
+
+    """
 
     def __init__(self,name,df,idxkeys,imkeys):
         self.name = name
@@ -481,14 +538,18 @@ class DFSelObj(object):
                     self.data["calc_char"] = self.data["calc_char"][:pos] + [wc] * len(text) + self.data["calc_char"][pos:]
                     self.data["UID"] = self.data["UID"][:pos] + [-1] * len(text) + self.data["UID"][pos:]
                     self.data["char_weight"] = self.data["char_weight"][:pos] + [-1] * len(text) + self.data["char_weight"][pos:]
-                    self.data["calc_word_idx"] = self.data["calc_word_idx"][:pos] + [-widx] * len(text) + self.data["calc_word_idx"][pos:]
+                    cwidx = min(set(self.data["word_match"]))-1.0
+                    if cwidx >= 0.0: cwidx = -1.0
+                    self.data["calc_word_idx"] = self.data["calc_word_idx"][:pos] + [cwidx] * len(text) + self.data["calc_word_idx"][pos:]
                     wc = None
                 else:
                     self.data["word_match"].extend([widx]*len(text))
                     self.data["calc_char"].extend([wc] * len(text))
                     self.data["UID"].extend([-1] * len(text))
                     self.data["char_weight"].extend([-1] * len(text))
-                    self.data["calc_word_idx"].extend([-widx] * len(text))
+                    cwidx = min(set(self.data["word_match"])) - 1.0
+                    if cwidx >= 0.0: cwidx = -1.0
+                    self.data["calc_word_idx"].extend([cwidx] * len(text))
                     wc = None
                 return
         else:
@@ -683,7 +744,7 @@ class DFResObj(DFSelObj):
         self.empty = False
         self.maxuid = maxuid
 
-    def text(self,pos,val=None,cmd="insert"):
+    def text(self,pos,val=None,cmd="insert",insertfront=False):
         if cmd == "insert":
             for key in self.data.keys():
                 if key == "calc_char":
@@ -723,7 +784,9 @@ class DFResObj(DFSelObj):
         self.orig_df = orig_df
 
 class DFEmptyObj(DFSelObj):
+    """
 
+    """
     def __init__(self, name, df, idxkeys, imkeys,maxuid):
         DFSelObj.__init__(self,name,df,idxkeys,imkeys)
         self.empty = True
@@ -758,8 +821,10 @@ class DFEmptyObj(DFSelObj):
         if widx != None:
             self.data["calc_word_idx"] = self.data["word_match"]
 
-
 class Value(object):
+    """
+    This servers as data container for get and set value methods in the Sel-,Res- and EmptyObj
+    """
     def __init__(self):
         self.pos = None
         self.attr = None
