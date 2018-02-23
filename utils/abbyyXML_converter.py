@@ -7,14 +7,13 @@ def get_xml_document(fpath):
     try:
         tree = etree.parse(fpath)
         root = tree.getroot()
-        print(tree.docinfo.doctype)
         if not VALIDXML[0] in root.tag:
-            print(f"The file is not valid with {VALIDXML[0]}")
+            print(f"Not valid with:\t{VALIDXML[0]}\t✗")
             return
         line = None
         for item in root.iter():
             clean_tag = item.tag.split("}")[-1]
-            print(clean_tag)
+            #print(clean_tag)
             if clean_tag == "line":
                 if doc.page != [] and line != None:
                     line.words.append(word)
@@ -26,13 +25,10 @@ def get_xml_document(fpath):
                     line.words.append(word)
                     word = Word()
                 else:
-                    print(item.text)
-                    print(item.attrib)
                     word.update_coordinates(item.attrib)
                     word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
-    except Exception as ex:
-        print("Parsing AbbyyXML Exception:",ex)
+    except Exception as ex:print("Parsing Exception:\t",ex,"\t✗")
     return doc
 
 class Document():
