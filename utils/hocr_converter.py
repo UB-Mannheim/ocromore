@@ -1,9 +1,39 @@
 import os
 from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
+from utils.abbyyXML_parser import get_xml_document
 import pandas as pd
-from utils.abbyyXML_converter import get_xml_document
 
 class HocrConverter(object):
+    """
+        This class serves as cross-platform parser hocr/xml->obj->dict->dataframe(df)->sql
+        for different ocr output data.
+        =======
+        METHODS
+        =======
+            Meta
+           -----------------------------------------------------------------------------------------------------------------
+                hocr2sql                -   Match lines over all datasets
+                hocr2df                 -   Unspace datasets compared to a pivot
+
+            Parse hocr/xml->obj
+           -----------------------------------------------------------------------------------------------------------------
+                get_hocr_document       -   Call my_hocr_parser for hocr and abbyyXML_parser for xml
+
+            Parse obj->dict
+           -----------------------------------------------------------------------------------------------------------------
+                create_dict_ocropus     -   Parses single lines from the ocropus_obj and a dict to line2dict
+                create_dict_tesseract   -   Parses single lines from the tesseract_obj and a dict to line2dict
+                create_dict_abbyy       -   Parses single lines from the abbyy_obj and a dict to line2dict
+                line2dict               -   Takes a single line and extend the dict with the parsed information
+
+            Parse dict->df
+           -----------------------------------------------------------------------------------------------------------------
+                dict2df                 -   Parse a dict to a pandas dataframe
+
+            Parse df->sql
+           -----------------------------------------------------------------------------------------------------------------
+                df2sql                  -   Parse the dataframe to a sqlite db
+        """
 
     def __init__(self):
         self._ocropus_page = None
@@ -22,6 +52,15 @@ class HocrConverter(object):
         return document
 
     def hocr2sql(self,filename,con,ocr=None,ocr_profile=None,index=None):
+        """
+        Metamethod to parse hocr/xml files to sql
+        :param filename: Filename
+        :param con: DB connection
+        :param ocr: Name of the ocr engine
+        :param ocr_profile: Name of the used profil
+        :param index: Set the index
+        :return: dataframe
+        """
         if not index:
             index = ['ocr','ocr_profile', 'line_idx', 'word_idx', 'char_idx']
         df = self.hocr2df(filename,ocr,ocr_profile,index)
@@ -30,9 +69,13 @@ class HocrConverter(object):
 
     def hocr2df(self,filename,ocr=None,ocr_profile=None,index=None):
         """
-        Gets the box information for ocropus
-        :param filename: name of the file to check for boxes
-        :return: list of lines with boxes
+        Metamethod to parse hocr/xml files to a dataframe
+        :param filename: Filename
+        :param con: DB connection
+        :param ocr: Name of the ocr engine
+        :param ocr_profile: Name of the used profil
+        :param index: Set the index
+        :return: dataframe
         """
         document = self.get_hocr_document(filename)
         ocr = document.ocr if not ocr else self._normalize_ocr_(ocr, document.ocr)
@@ -45,10 +88,12 @@ class HocrConverter(object):
               "Abbyy":self.create_dict_abbyy,
               "AbbyyXML":self.create_dict_abbyyxml,
               "Default":{},}.get(ocr,"Default")(document,ocr_profile=ocr_profile)
+        if df_dict == {}: raise IOError(f"The {ocr} document {filename} cant be parsed to dict.\t✗")
         df = self.dict2df(df_dict,index=index)
         return df
 
     def _normalize_ocr_(self,ocr,docr):
+        # Normalize the ocr names
         if "ocro" in ocr.lower():
             ocr = "Ocro"
         elif "tess" in ocr.lower():
@@ -64,9 +109,10 @@ class HocrConverter(object):
 
     def create_dict_ocropus(self,document,ocr_profile=None):
         """
-        Gets the box information for ocropus
-        :param filename: name of the file to check for boxes
-        :return: list of lines with boxes
+        Parses the documentobj to dict
+        :param document: Parsed hocr-obj
+        :param ocr_profile:
+        :return:
         """
         ocr = "Ocro"
         page = document.pages[0]
@@ -86,6 +132,12 @@ class HocrConverter(object):
         return df_dict
 
     def create_dict_tesseract(self, document, ocr_profile=None):
+        """
+        Parses the documentobj to dict
+        :param document: Parsed hocr-obj
+        :param ocr_profile:
+        :return:
+        """
         ocr = "Tess"
         page = document.pages[0]
         # assign tesseract page for further usage
@@ -103,6 +155,12 @@ class HocrConverter(object):
         return df_dict
 
     def create_dict_abbyy(self, document,ocr_profile=None):
+        """
+        Parses the documentobj to dict
+        :param document: Parsed hocr-obj
+        :param ocr_profile:
+        :return:
+        """
         ocr = "Abbyy"
         page = document.pages[0]
 
@@ -136,6 +194,12 @@ class HocrConverter(object):
         return df_dict
 
     def create_dict_abbyyxml(self,document,ocr_profile=None):
+        """
+        Parses the documentobj to dict
+        :param document: Parsed xml-obj
+        :param ocr_profile:
+        :return:
+        """
         ocr = "Abbyy"
         df_dict={}
         lidx =0
@@ -146,6 +210,16 @@ class HocrConverter(object):
         return df_dict
 
     def line2dict(self,line,df_dict,ocr,ocr_profile,idx,lidx):
+        """
+        Parses a line of information from obj and extend the information to the dict
+        :param line:
+        :param df_dict:
+        :param ocr:
+        :param ocr_profile:
+        :param idx:
+        :param lidx:
+        :return:
+        """
         for widx, word in enumerate(line.words):
             for cidx, char in enumerate(word.ocr_text):
                 if char == " ": char = "�"
@@ -182,12 +256,26 @@ class HocrConverter(object):
         return idx
 
     def dict2df(self,df_dict, index=None):
+        """
+        Creates a dataframe fromt the dict
+        :param df_dict:
+        :param index:
+        :return:
+        """
         # creating and indexing the dataframe
         df = pd.DataFrame.from_dict(df_dict, orient='index')
         df = df.set_index(index)
         return df
 
     def df2sql(cls,df,filename, con,index=None):
+        """
+        Writes the dataframe to a db
+        :param df:
+        :param filename:
+        :param con:
+        :param index:
+        :return:
+        """
         # creating and appending database
         tablename = str(os.path.basename(filename)).split(".")[0]
 
@@ -208,4 +296,3 @@ class HocrConverter(object):
             print(f'Update table:\t{tablename}\t✓')
 
         return 0
-
