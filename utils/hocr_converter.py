@@ -1,9 +1,40 @@
 import os
 from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
+from utils.abbyyXML_parser import get_xml_document
 import pandas as pd
-from utils.abbyyXML_converter import get_xml_document
+
 
 class HocrConverter(object):
+    """
+        This class serves as cross-platform parser hocr/xml->obj->dict->dataframe(df)->sql
+        for different ocr output data.
+        =======
+        METHODS
+        =======
+            Meta
+           -----------------------------------------------------------------------------------------------------------------
+                hocr2sql                -   Match lines over all datasets
+                hocr2df                 -   Unspace datasets compared to a pivot
+
+            Parse hocr/xml->obj
+           -----------------------------------------------------------------------------------------------------------------
+                get_hocr_document       -   Call my_hocr_parser for hocr and abbyyXML_parser for xml
+
+            Parse obj->dict
+           -----------------------------------------------------------------------------------------------------------------
+                create_dict_ocropus     -   Parses single lines from the ocropus_obj and a dict to line2dict
+                create_dict_tesseract   -   Parses single lines from the tesseract_obj and a dict to line2dict
+                create_dict_abbyy       -   Parses single lines from the abbyy_obj and a dict to line2dict
+                line2dict               -   Takes a single line and extend the dict with the parsed information
+
+            Parse dict->df
+           -----------------------------------------------------------------------------------------------------------------
+                dict2df                 -   Parse a dict to a pandas dataframe
+
+            Parse df->sql
+           -----------------------------------------------------------------------------------------------------------------
+                df2sql                  -   Parse the dataframe to a sqlite db
+        """
 
     def __init__(self):
         self._ocropus_page = None
