@@ -33,6 +33,7 @@ KEYING_RESULT_POSTCORRECTION = True
 IGNORE_LINEFEED = False
 IGNORE_WHITESPACE = False
 DISPLAY_DIFFERENCES = False
+DO_ISRI_VAL = True
 
 #FILENAMES:
 FILEPATH_ABBYY_TEXT = "./Testfiles/oneprof_abbyy_result_lh_adapted.txt"
@@ -172,7 +173,6 @@ if DO_OWN_VAL is True:
     ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
 
 
-DO_ISRI_VAL = True
 if DO_ISRI_VAL is True:
     from ocr_validation.isri_handler import IsriHandler
 

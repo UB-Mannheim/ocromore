@@ -1,9 +1,9 @@
 from multi_sequence_alignment.msa_algorithm import MultiSequenceAlignment
-import numpy as np
 import inspect
 from Bio import pairwise2
-from Bio.SubsMat import MatrixInfo as matlist
-
+from n_dist_keying.ocr_voter import OCRVoter
+from utils.random import Random
+import numpy as np
 from utils.typecasts import TypeCasts
 
 
@@ -17,6 +17,7 @@ class GapConfig(object):
 
 
 class MsaHandler(object):
+
 
     @staticmethod
     def compare(item_one, item_two, wildcard_character='¦'):
@@ -42,16 +43,7 @@ class MsaHandler(object):
 
         return s1, s2
 
-    @staticmethod
-    def get_same_count(c1, c2, c3):
-        same_ctr = 0
-        if c1 == c2:
-            same_ctr += 1
 
-        if c1 == c3:
-            same_ctr += 1
-
-        return same_ctr
 
     @staticmethod
     def reduce_double_wildcards(line_1, line_2, wildcard_character='¦'):
@@ -111,32 +103,6 @@ class MsaHandler(object):
 
         return reduced_line_1, reduced_line_2
 
-    @staticmethod
-    def best_of_three_simple(line_1, line_2, line_3, index_best, wildcard_character='¦'):
-        list_line_1 = list(line_1)
-        list_line_2 = list(line_2)
-        list_line_3 = list(line_3)
-
-        accumulated_chars = ""
-        for character_index, character_1 in enumerate(list_line_1):
-            character_2 = list_line_2[character_index]
-            character_3 = list_line_3[character_index]
-
-            clist = [character_1, character_2, character_3]
-            sc1 = MsaHandler.get_same_count(character_1, character_2, character_3)
-            sc2 = MsaHandler.get_same_count(character_2, character_1, character_3)
-            sc3 = MsaHandler.get_same_count(character_3, character_2, character_1)
-            maxindices = np.argmax([sc2, sc1, sc3])
-            if maxindices == 0:
-                accumulated_chars += character_2
-            elif maxindices == 1:
-                accumulated_chars += character_1
-            else:
-                accumulated_chars += character_3
-
-        accumulated_chars_stripped = accumulated_chars.replace(wildcard_character, '')
-
-        return accumulated_chars, accumulated_chars_stripped
 
     @staticmethod
     def fillup_wildcarded_result(line_to_fill, reference_line, wildcard_character='¦'):
@@ -371,58 +337,113 @@ class MsaHandler(object):
             text_2_al = TypeCasts.convert_unicodelist_to_string(alignment12[0][1])
             return text_1_al, text_2_al
         except Exception as ex:
-            print("asd")
+            tr = inspect.trace()
+            print("trace is",tr)
+            print("Exception in pairwise alignment unicode-biopython", ex)
 
     @staticmethod
-    def msa_alignment_biopython(text_A, text_B, text_C, wildcard_character='¦'):
+    def msa_alignment_biopython(text_A, text_B, text_C, wildcard_character='¦', print_output=False):
+        from utils.conditional_print import ConditionalPrint as CP
+        cp = CP(print_output)
 
-        #text_A = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
-        #text_B = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
-        #text_C = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
+        try:
+            #text_A = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
+            #text_B = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
+            #text_C = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
+            if "T I" in text_A:
+                cp.print("T I there")
+                pass
 
-        text_Ab, text_Ba = MsaHandler.pairwise_unicode(text_A, text_B, wildcard_character,None,True)
-        text_Bc, text_Cb = MsaHandler.pairwise_unicode(text_B, text_C, wildcard_character,None,True)
-        print("text_Ab..", text_Ab)
-        print("text_Ba..", text_Ba)
-        print("text_Bc..", text_Bc)
-        print("text_Cb..", text_Cb)
+            # stringify results to make also empty stuff comparable
+            def stringify_results(text):
+                if text is False or text is True or text is None or text == '' or text =="":
+                    return '', True
+                return text, False
 
-        # p.identical,p.non_identical,p.opening_gap,p.extending_ap
-        #gap_config_big_pivot = GapConfig(4, -4, -4, -2)
-        text_Babc, text_Bcba = MsaHandler.pairwise_unicode(text_Ba, text_Bc, wildcard_character)
+            text_A, text_A_empty = stringify_results(text_A)
+            text_B, text_B_empty = stringify_results(text_B)
+            text_C, text_C_empty = stringify_results(text_C)
+
+            if text_A_empty and text_B_empty:
+                res_1_final = Random.append_pad_values('',len(text_C),wildcard_character)
+                res_2_final = Random.append_pad_values('',len(text_C),wildcard_character)
+                res_3_final = text_C
+                return  res_1_final, res_2_final, res_3_final
+            elif text_A_empty and text_C_empty:
+                res_1_final = Random.append_pad_values('',len(text_B),wildcard_character)
+                res_2_final = text_B
+                res_3_final = Random.append_pad_values('',len(text_B),wildcard_character)
+                return  res_1_final, res_2_final, res_3_final
+
+            elif text_B_empty and text_C_empty:
+                res_1_final = text_A
+                res_2_final = Random.append_pad_values('',len(text_A),wildcard_character)
+                res_3_final = Random.append_pad_values('',len(text_A),wildcard_character)
+                return  res_1_final, res_2_final, res_3_final
+
+            text_Ab, text_Ba = MsaHandler.pairwise_unicode(text_A, text_B, wildcard_character,None,True)
+            # text_Bc_old, text_Cb_old = MsaHandler.pairwise_unicode(text_B, text_C, wildcard_character,None,True)
+            text_Cb, text_Bc = MsaHandler.pairwise_unicode(text_C, text_B, wildcard_character, None, True)
+            cp.print("text_Ab..", text_Ab)
+            cp.print("text_Ba..", text_Ba)
+            cp.print("text_Bc..", text_Bc)
+            cp.print("text_Cb..", text_Cb)
+
+            # p.identical,p.non_identical,p.opening_gap,p.extending_ap
+            #gap_config_big_pivot = GapConfig(4, -4, -4, -2)
+            text_Babc, text_Bcba = MsaHandler.pairwise_unicode(text_Ba, text_Bc, wildcard_character)
+
+            cp.print("text_Babc", text_Babc)
+            cp.print("text_Bcba", text_Bcba)
 
 
+            text_Af, text_BabcfA = MsaHandler.pairwise_unicode(text_Ab, text_Babc, wildcard_character)
+            # text_Bf, text_BabcfB = MsaHandler.pairwise_unicode(text_B, text_Babc, wildcard_character)
+            text_Cf, text_BabcfC = MsaHandler.pairwise_unicode(text_Cb, text_Babc, wildcard_character)
 
-        print("text_Babc", text_Babc)
-        print("text_Bcba", text_Bcba)
+            cp.print("text_Af..", text_Af)
+            cp.print("text_Babc", text_Babc)
+            cp.print("text_Cf..", text_Cf)
 
+            #text_Af_r = MsaHandler.reduce_double_wildcards_specific(text_Af, text_BabcfA,'@',wildcard_character)[0].replace('@',wildcard_character)
+            #text_Bf_r = MsaHandler.reduce_double_wildcards_specific(text_Bf, text_BabcfB,'@',wildcard_character)[0].replace('@',wildcard_character)
+            #text_Cf_r = MsaHandler.reduce_double_wildcards_specific(text_Cf, text_BabcfC,'@',wildcard_character)[0].replace('@',wildcard_character)
 
-        text_Af, text_BabcfA = MsaHandler.pairwise_unicode(text_Ab, text_Babc, wildcard_character)
-        text_Bf, text_BabcfB = MsaHandler.pairwise_unicode(text_B, text_Babc, wildcard_character)
-        text_Cf, text_BabcfC = MsaHandler.pairwise_unicode(text_Cb, text_Babc, wildcard_character)
-
-        print("text_Af..", text_Af)
-        print("text_Babc", text_Babc)
-        print("text_Cf..", text_Cf)
-
-        #text_Af_r = MsaHandler.reduce_double_wildcards_specific(text_Af, text_BabcfA,'@',wildcard_character)[0].replace('@',wildcard_character)
-        #text_Bf_r = MsaHandler.reduce_double_wildcards_specific(text_Bf, text_BabcfB,'@',wildcard_character)[0].replace('@',wildcard_character)
-        #text_Cf_r = MsaHandler.reduce_double_wildcards_specific(text_Cf, text_BabcfC,'@',wildcard_character)[0].replace('@',wildcard_character)
-
-        #print("text_Af.r", text_Af_r)
-        #print("text_Bf.r", text_Bf_r)
-        #print("text_Cf.r", text_Cf_r)
+            #print("text_Af.r", text_Af_r)
+            #print("text_Bf.r", text_Bf_r)
+            #print("text_Cf.r", text_Cf_r)
 
 
-        #if "Tätigkeit" in text_Af:
-        #    print("asd")
+            #if "Tätigkeit" in text_Af:
+            #    print("asd")
 
-        res_final_1 = text_Af
-        res_final_2 = text_Babc
-        res_final_3 = text_Cf
+            res_final_1 = text_Af
+            res_final_2 = text_Babc
+            res_final_3 = text_Cf
 
-        return res_final_1, res_final_2, res_final_3
+            if len(res_final_1) != len(res_final_2) or len(res_final_1) !=  len(res_final_3) \
+                    or len(res_final_2) !=  len(res_final_3):
+                Random.printc("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
+                final_arrs = [res_final_1, res_final_2, res_final_3]
+                maxlen = max([len(res_final_1), len(res_final_2), len(res_final_3)])
+                # maxindex = np.argmax([len(res_final_1), len(res_final_2), len(res_final_3)])  # this takes in priorisation in case the chars are same
+                for current_res_index, current_res in enumerate(final_arrs):
+                    current_len = len(current_res)
+                    pad_size_needed = maxlen-current_len
+                    if pad_size_needed >=1:
+                        new_res = Random.append_pad_values(current_res,pad_size_needed,wildcard_character)
+                        final_arrs[current_res_index] = new_res
 
+                res_final_1 = final_arrs[0]
+                res_final_2 = final_arrs[1]
+                res_final_3 = final_arrs[2]
+
+
+            return res_final_1, res_final_2, res_final_3
+        except Exception as ex:
+            tr = inspect.trace()
+            print("trace", tr)
+            print("Exception within alignment algo ", ex)
 
     @staticmethod
     def msa_alignment_biopython_old(text_1, text_2, text_3, wildcard_character='¦'):
@@ -743,11 +764,8 @@ class MsaHandler(object):
 
         # res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
 
-
     @staticmethod
-    def get_best_of_three(text_1, text_2, text_3):
-
-        PRINT_RESULTS = True
+    def align_three_texts(text_1, text_2, text_3, wildcard_character = '¦', print_output=False):
         MODE_GONZALO = 'gonzalo'
         MODE_SKBIO = 'scikit-bio_alignment'
         MODE_BIOPYTHON = 'biopython'
@@ -755,28 +773,140 @@ class MsaHandler(object):
 
         if MODE == MODE_GONZALO:
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_gonzalo(text_1, text_2, text_3)
-            wildcard_character = '¦'
+
         elif MODE == MODE_SKBIO:
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_skbio(text_1, text_2, text_3)
-            wildcard_character = '@'
         elif MODE == MODE_BIOPYTHON:
-            wildcard_character = '¦'
-            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character)
+
+            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character, print_output)
+
+        return res_final_1, res_final_2, res_final_3
+
+    @staticmethod
+    def get_best_of_three_wordwise(line_1, line_2, line_3, use_charconfs):
+        wildcard_character = '¦'
+        PRINT_RESULTS = True
+        PRINT_ALIGNMENT_PROCESS = False
+
+        # iterate words
 
 
-        # This is the voting algorithm -
-        best, best_stripped = MsaHandler.best_of_three_simple(res_final_1, res_final_2, res_final_3, 1,wildcard_character)  # res two is the best element
-        best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
+        def get_max_wordlen(line_to_check):
+            if line_to_check is None or line_to_check is False or line_to_check is True:
+                return -1
+
+            highest_word = max(line_2.word['text'].keys())
+            return highest_word
+
+        def get_word_from_line(line_to_check, word_index, return_val_empty=""):
+            if line_to_check is None or line_to_check is False or line_to_check is True:
+                return return_val_empty
+
+            word_obtained = line_to_check.word["text"].get(word_index, return_val_empty)
+            return word_obtained
+
+        def update_word(line_in, word_index, new_value):
+            line_in.update_textspace(new_value, wildcard_character, widx=word_index)
+
+
+        def sort_words_longest_mid(word1, word2, word3):
+            words = [word1, word2, word3]
+
+            wlongest_index = np.argmax([len(word1), len(word2), len(word3)])
+
+            if wlongest_index == 1:
+                words_sorted = words
+            else:
+                longest_word = words[wlongest_index]
+                words_sorted = words[:]
+                words_sorted.pop(wlongest_index)
+                words_sorted.insert(1, longest_word)
+
+            return words_sorted, wlongest_index
+
+
+        def reverse_mid_sort(al_word1,alword2, alword3, wlongest_index):
+            words_aligned = [al_word1, alword3]
+            words_aligned.insert(wlongest_index, alword2)
+            return words_aligned
+
+        m1 = get_max_wordlen(line_1)
+        m2 = get_max_wordlen(line_2)
+        m3 = get_max_wordlen(line_3)
+        max_range_word = int(max(m1, m2, m3)+1)  # add a one because it starts with zero
+        try:
+            for current_word_index in range(0, max_range_word):
+                word1 = get_word_from_line(line_1, current_word_index)
+                word2 = get_word_from_line(line_2, current_word_index)
+                word3 = get_word_from_line(line_3, current_word_index)
+                print("word   1:", word1)
+                print("word   2:", word2)
+                print("word   3:", word3)
+
+                # sort by length (longest has index 1)
+                words_sorted, wlongest_index = sort_words_longest_mid(word1, word2, word3)
+
+                word1_al, word2_al, word3_al = MsaHandler.align_three_texts(words_sorted[0], words_sorted[1], \
+                                                                            words_sorted[2], wildcard_character, PRINT_ALIGNMENT_PROCESS)
+
+                # sort back ...
+                words_aligned = reverse_mid_sort(word1_al, word2_al, word3_al, wlongest_index)
+                if len(words_aligned[0])!= len(words_aligned[1]) or len(words_aligned[1]) != len(words_aligned[2]):
+                    print("shouldn't be")
+
+                print("word_al 1:", words_aligned[0])
+                print("word_al 2:", words_aligned[1])
+                print("word_al 3:", words_aligned[2])
+
+                update_word(line_1, current_word_index, words_aligned[0])
+                update_word(line_2, current_word_index, words_aligned[1])
+                update_word(line_3, current_word_index, words_aligned[2])
+
+
+            if use_charconfs:
+                best, best_stripped = OCRVoter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1,
+                                                                            wildcard_character)  # res two is the best element
+                best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
+
+            if PRINT_RESULTS:
+                print("best         ", best)
+                print("best_stripped", best_stripped)
+                print("best______nmw", best_stripped_non_multi_whitespace)
+
+            return best_stripped_non_multi_whitespace
+        except Exception as ex:
+            tr = inspect.trace()
+            print("tr", tr)
+
+
+    @staticmethod
+    def get_best_of_three(text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None):
+        PRINT_RESULTS = True
+        wildcard_character = '¦'
+
+        res_final_1, res_final_2, res_final_3 = MsaHandler.align_three_texts(text_1, text_2, text_3, wildcard_character)
+
+        print("my final resolutions before vote")
+        print("res_final_1",res_final_1)
+        print("res_final_2",res_final_2)
+        print("res_final_3",res_final_3)
+
+        if use_charconfs is True:
+
+            # update the line info with resolutions
+            line_1.update_textspace(res_final_1, wildcard_character)
+            line_2.update_textspace(res_final_2, wildcard_character)
+            line_3.update_textspace(res_final_3, wildcard_character)
+            # This is the voting algorithm -
+            best, best_stripped = OCRVoter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1, wildcard_character)  # res two is the best element
+            best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
+
+        else:
+            # This is the voting algorithm -
+            best, best_stripped = OCRVoter.vote_best_of_three_simple(res_final_1, res_final_2, res_final_3, 1,wildcard_character)  # res two is the best element
+            best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
         if PRINT_RESULTS:
-            """
-                print("A:", res_one_1)
-                print("B:", res_two_2)
-                print("C:", res_three_2)
-                print("D:", best)
-                print("E:", best_stripped)
-                print("F:", best_stripped_non_multi_whitespace)
-            """
             print("A:",res_final_1)
             print("B:",res_final_2)
             print("C:",res_final_3)

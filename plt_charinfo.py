@@ -26,10 +26,12 @@ def charinfo_process():
     # Read hocr and create sql-db
     dbdir = './Testfiles/sql/'
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
+
     filetypes = ["hocr","xml"]
     files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*."+filetype, recursive=True) for filetype in filetypes)
 
     dbnamelast,con = "", None
+
 
     if HOCR2SQL:
         for file in files:
