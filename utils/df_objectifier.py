@@ -1,12 +1,8 @@
 import pandas as pd
 import numpy as np
-from utils.df_tools import get_con
+from utils.df_tools import get_con, spinner
 import math
-from itertools import cycle
 import sys
-
-# Contains unicode snippets to create a spinner animation for loading processess
-spinner = cycle([u'⣾',u'⣷',u'⣯',u'⣟',u'⡿', u'⢿',u'⣻', u'⣽'])
 
 class DFObjectifier(object):
     """
@@ -26,8 +22,8 @@ class DFObjectifier(object):
        -----------------------------------------------------------------------------------------------------------------
                             Info: There are three types of obj -
                             SelObj (selection)  -   Contains data, serves for calcuation
-                            ResObj (result)     -   Contains 0 data, serves a store for the calculated results
-                            EmptyObj            -   Contains 0 data, serves a replacement for lines,
+                            ResObj (result)     -   Contains 0 data, serves to store for the calculated results
+                            EmptyObj            -   Contains 0 data, serves as a replacement for lines,
                                                     where no data exists in one or more of the datasets
             get_obj     -   Returns an obj with the specified parameters for all datasets
             get_line_obj-   Returns obj for each line with specified parameters for all datasets
@@ -43,6 +39,16 @@ class DFObjectifier(object):
     """
 
     def __init__(self,engine,tablename):
+        """
+        Initialize the DFObject-Handler
+        :param engine: Connection to the db
+        :param tablename: Name of the table to be loaded
+
+        :prop idxkeys: Index Keys
+        :prop imkeys: Immutable Keys
+        :prop df: Main dataframe
+        :prop res_df: Result dataframe
+        """
         self.idxkeys = ['ocr','ocr_profile','line_idx', 'word_idx', 'char_idx']
         self.imkeys = ['char','x_confs','x_wconf','line_x0','line_x1','line_y0','line_y1', 'word_x0','word_x1','word_y0','word_y1']
         self.tablename = tablename
@@ -51,6 +57,10 @@ class DFObjectifier(object):
         self.res_df = self._init_res_df()
 
     def _init_res_df(self):
+        """
+        Initialize the result dataframe
+        :return:
+        """
         res_df = pd.DataFrame(columns=self.df.reset_index().columns)
         try:
             del res_df["ocr"]
@@ -61,10 +71,19 @@ class DFObjectifier(object):
         return res_df
 
     def get_line_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False, empty=False):
-        # Need some explanation?
-        # vars = represent the index-columns
-        # col = select columns you want to get (+ index)
-        # query = params: 'column op "val"' (query conditions for the df)
+        """
+        Gets an Object with all lines
+        :param ocr: Index param
+        :param ocr_profile: Index param
+        :param line_idx: Index param
+        :param word_idx: Index param
+        :param char_idx: Index param
+        :param col: select columns you want to get (+ index)
+        :param query: 'column op "val"' (query conditions for the df)
+        :param res: Creates an result obj (bool)
+        :param empty: Creates an empty obj (bool)
+        :return:
+        """
         if res:
             return DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
         if empty:
@@ -101,10 +120,19 @@ class DFObjectifier(object):
         return obj
 
     def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False, empty=False):
-        # Need some explanation?
-        # vars = represent the index-columns
-        # col = select columns you want to get (+ index)
-        # query = params: 'column op "val"' (query conditions for the df)
+        """
+        Gets an Object for the specifc parameters
+        :param ocr: Index param
+        :param ocr_profile: Index param
+        :param line_idx: Index param
+        :param word_idx: Index param
+        :param char_idx: Index param
+        :param col: select columns you want to get (+ index)
+        :param query: 'column op "val"' (query conditions for the df)
+        :param res: Creates an result obj (bool)
+        :param empty: Creates an empty obj (bool)
+        :return:
+        """
         if res:
             res_df = self.res_df
             return DFResObj("Result",res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
@@ -138,6 +166,11 @@ class DFObjectifier(object):
         return obj
 
     def update(self,objlist,col=None):
+        """
+        Updates the main dataframe (df)
+        :param objlist: Obj or list of Objs which should be used to update the df
+        :param col: Specifies the columns which should be updated
+        """
         if not isinstance(objlist,list): objlist = [objlist]
         for obj in objlist:
             obj.update_df(col)
@@ -169,6 +202,7 @@ class DFObjectifier(object):
 
     def match_line(self,force=False,pad=0.4):
         """
+        Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)
         :param pad: Padding area where to find similar lines (0.25 -> 25 prc)
         :param max_col: Maximum value for matching lines (prevent infinity loops)
@@ -231,6 +265,13 @@ class DFObjectifier(object):
         return True
 
     def unspace(self, sort_by=None, pad=0.5):
+        """
+        Unspaces the words in the dataset based on a pivot
+        :param sort_by: Set the pivot selectin order
+        :param pad: Set the multiplicator which calculats the padding value for the matching algo.
+                    Pad = Multiplicator * (Height of Line)
+        :return:
+        """
         if sort_by is None:
             sort_by = ["Tess", "Abbyy", "Ocro"]
         tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_y0","word_y1","word_x0", "word_x1", "calc_line_idx","calc_word_idx"]
@@ -274,6 +315,11 @@ class DFObjectifier(object):
         self.df.update(tdf.reset_index().set_index(self.df.index))
 
     def match_words(self, force=False):
+        """
+        Matches the words together this can also meant that one word is match on two for a differen dataset
+        :param force: Force the process
+        :return:
+        """
         self.df["word_match"]=-1
         tdf = self.df.reset_index().set_index(self.idxkeys).loc(axis=1)["word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
         groups = tdf.groupby("calc_line_idx")
@@ -295,6 +341,12 @@ class DFObjectifier(object):
         return
 
     def write2sql(self,result=False,engine=None):
+        """
+        Writes the current state of the df to the db. The table will be replaced with the new one.
+        :param result:
+        :param engine:
+        :return:
+        """
         if engine is None:
             engine = self.engine
         con = get_con(engine)
@@ -309,6 +361,16 @@ class DFObjectifier(object):
         return
 
     def write2file(self,path=None,fname=None,ftype='txt',calc=True,result=False,line_height_normalization = True):
+        """
+        Writes the current state of the df to a file (e.g. hocr, text)
+        :param path:
+        :param fname:
+        :param ftype:
+        :param calc:
+        :param result:
+        :param line_height_normalization:
+        :return:
+        """
         if ftype == 'txt':
             if result:
                 self._writeRes2txt(path, fname, line_height_normalization)
@@ -448,7 +510,7 @@ class DFSelObj(object):
         Get&Set
         ----------------------------------------------------------------------------------------------------------------
             value               -   Set or get a value from a specific column
-            text                -
+            text                -   Modifies the character of a the textstr
 
         Update
         ----------------------------------------------------------------------------------------------------------------
@@ -459,9 +521,10 @@ class DFSelObj(object):
     ==========
     PROPERTIES
     ==========
-
-
-
+        textstr     -   Represents the calc_char seperated by whitespaces
+        ----------------------------------------------------------------------------------------------------------------
+        word        -   Represents the calc_char seperated by match_word in segments
+        ----------------------------------------------------------------------------------------------------------------
     """
 
     def __init__(self,name,df,idxkeys,imkeys):
@@ -735,6 +798,11 @@ class DFSelObj(object):
         return
 
 class DFResObj(DFSelObj):
+    """
+    Derivates from DFSelObj
+    Contains zero data from the start.
+    It serves to store the result.
+    """
 
     def __init__(self, name, df, idxkeys, imkeys,maxuid):
         DFSelObj.__init__(self,name,df,idxkeys,imkeys)
@@ -783,7 +851,9 @@ class DFResObj(DFSelObj):
 
 class DFEmptyObj(DFSelObj):
     """
-
+    Derivates from DFSelObj.
+    Contains zero data from the start.
+    It serves as a replacement for lines, where no data exists in one or more of the datasets
     """
     def __init__(self, name, df, idxkeys, imkeys,maxuid):
         DFSelObj.__init__(self,name,df,idxkeys,imkeys)
@@ -824,6 +894,13 @@ class Value(object):
     This servers as data container for get and set value methods in the Sel-,Res- and EmptyObj
     """
     def __init__(self):
+        """
+        :prop pos: Postion
+        :prop attr: Attribut (column name)
+        :prop val: Value
+        :prop ws:  Whitespace
+        :prop wsval: Charconf value of the whitespace
+        """
         self.pos = None
         self.attr = None
         self.val = None
