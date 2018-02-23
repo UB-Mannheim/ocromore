@@ -342,13 +342,16 @@ class MsaHandler(object):
             print("Exception in pairwise alignment unicode-biopython", ex)
 
     @staticmethod
-    def msa_alignment_biopython(text_A, text_B, text_C, wildcard_character='¦'):
+    def msa_alignment_biopython(text_A, text_B, text_C, wildcard_character='¦', print_output=False):
+        from utils.conditional_print import ConditionalPrint as CP
+        cp = CP(print_output)
+
         try:
             #text_A = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
             #text_B = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
             #text_C = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
             if "T I" in text_A:
-                print("T I there")
+                cp.print("T I there")
                 pass
 
             # stringify results to make also empty stuff comparable
@@ -381,28 +384,26 @@ class MsaHandler(object):
             text_Ab, text_Ba = MsaHandler.pairwise_unicode(text_A, text_B, wildcard_character,None,True)
             # text_Bc_old, text_Cb_old = MsaHandler.pairwise_unicode(text_B, text_C, wildcard_character,None,True)
             text_Cb, text_Bc = MsaHandler.pairwise_unicode(text_C, text_B, wildcard_character, None, True)
-            print("text_Ab..", text_Ab)
-            print("text_Ba..", text_Ba)
-            print("text_Bc..", text_Bc)
-            print("text_Cb..", text_Cb)
+            cp.print("text_Ab..", text_Ab)
+            cp.print("text_Ba..", text_Ba)
+            cp.print("text_Bc..", text_Bc)
+            cp.print("text_Cb..", text_Cb)
 
             # p.identical,p.non_identical,p.opening_gap,p.extending_ap
             #gap_config_big_pivot = GapConfig(4, -4, -4, -2)
             text_Babc, text_Bcba = MsaHandler.pairwise_unicode(text_Ba, text_Bc, wildcard_character)
 
-
-
-            print("text_Babc", text_Babc)
-            print("text_Bcba", text_Bcba)
+            cp.print("text_Babc", text_Babc)
+            cp.print("text_Bcba", text_Bcba)
 
 
             text_Af, text_BabcfA = MsaHandler.pairwise_unicode(text_Ab, text_Babc, wildcard_character)
             # text_Bf, text_BabcfB = MsaHandler.pairwise_unicode(text_B, text_Babc, wildcard_character)
             text_Cf, text_BabcfC = MsaHandler.pairwise_unicode(text_Cb, text_Babc, wildcard_character)
 
-            print("text_Af..", text_Af)
-            print("text_Babc", text_Babc)
-            print("text_Cf..", text_Cf)
+            cp.print("text_Af..", text_Af)
+            cp.print("text_Babc", text_Babc)
+            cp.print("text_Cf..", text_Cf)
 
             #text_Af_r = MsaHandler.reduce_double_wildcards_specific(text_Af, text_BabcfA,'@',wildcard_character)[0].replace('@',wildcard_character)
             #text_Bf_r = MsaHandler.reduce_double_wildcards_specific(text_Bf, text_BabcfB,'@',wildcard_character)[0].replace('@',wildcard_character)
@@ -422,7 +423,7 @@ class MsaHandler(object):
 
             if len(res_final_1) != len(res_final_2) or len(res_final_1) !=  len(res_final_3) \
                     or len(res_final_2) !=  len(res_final_3):
-                print("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
+                Random.printc("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
                 final_arrs = [res_final_1, res_final_2, res_final_3]
                 maxlen = max([len(res_final_1), len(res_final_2), len(res_final_3)])
                 # maxindex = np.argmax([len(res_final_1), len(res_final_2), len(res_final_3)])  # this takes in priorisation in case the chars are same
@@ -441,7 +442,7 @@ class MsaHandler(object):
             return res_final_1, res_final_2, res_final_3
         except Exception as ex:
             tr = inspect.trace()
-            print("trace",tr)
+            print("trace", tr)
             print("Exception within alignment algo ", ex)
 
     @staticmethod
@@ -764,7 +765,7 @@ class MsaHandler(object):
         # res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
 
     @staticmethod
-    def align_three_texts(text_1, text_2, text_3, wildcard_character = '¦'):
+    def align_three_texts(text_1, text_2, text_3, wildcard_character = '¦', print_output=False):
         MODE_GONZALO = 'gonzalo'
         MODE_SKBIO = 'scikit-bio_alignment'
         MODE_BIOPYTHON = 'biopython'
@@ -777,7 +778,7 @@ class MsaHandler(object):
             res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_skbio(text_1, text_2, text_3)
         elif MODE == MODE_BIOPYTHON:
 
-            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character)
+            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character, print_output)
 
         return res_final_1, res_final_2, res_final_3
 
@@ -785,6 +786,8 @@ class MsaHandler(object):
     def get_best_of_three_wordwise(line_1, line_2, line_3, use_charconfs):
         wildcard_character = '¦'
         PRINT_RESULTS = True
+        PRINT_ALIGNMENT_PROCESS = False
+
         # iterate words
 
 
@@ -830,28 +833,34 @@ class MsaHandler(object):
         m1 = get_max_wordlen(line_1)
         m2 = get_max_wordlen(line_2)
         m3 = get_max_wordlen(line_3)
-        max_range_word =  int(max(m1, m2, m3)+1)  # add a one because it starts with zero
+        max_range_word = int(max(m1, m2, m3)+1)  # add a one because it starts with zero
         try:
             for current_word_index in range(0, max_range_word):
                 word1 = get_word_from_line(line_1, current_word_index)
                 word2 = get_word_from_line(line_2, current_word_index)
                 word3 = get_word_from_line(line_3, current_word_index)
+                print("word   1:", word1)
+                print("word   2:", word2)
+                print("word   3:", word3)
 
                 # sort by length (longest has index 1)
                 words_sorted, wlongest_index = sort_words_longest_mid(word1, word2, word3)
 
                 word1_al, word2_al, word3_al = MsaHandler.align_three_texts(words_sorted[0], words_sorted[1], \
-                                                                            words_sorted[2], wildcard_character)
+                                                                            words_sorted[2], wildcard_character, PRINT_ALIGNMENT_PROCESS)
 
                 # sort back ...
                 words_aligned = reverse_mid_sort(word1_al, word2_al, word3_al, wlongest_index)
                 if len(words_aligned[0])!= len(words_aligned[1]) or len(words_aligned[1]) != len(words_aligned[2]):
                     print("shouldn't be")
 
+                print("word_al 1:", words_aligned[0])
+                print("word_al 2:", words_aligned[1])
+                print("word_al 3:", words_aligned[2])
 
                 update_word(line_1, current_word_index, words_aligned[0])
                 update_word(line_2, current_word_index, words_aligned[1])
-                update_word(line_2, current_word_index, words_aligned[2])
+                update_word(line_3, current_word_index, words_aligned[2])
 
 
             if use_charconfs:
