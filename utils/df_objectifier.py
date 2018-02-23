@@ -563,9 +563,6 @@ class DFSelObj(object):
         else:
             return "No text to export!"
 
-    def set_line(self):
-        return
-
     def text(self,pos,val=None,cmd="insert",insertfront=False):
         if cmd == "insert" and val is not None:
             self.data["calc_char"].insert(pos,val)
@@ -591,7 +588,7 @@ class DFSelObj(object):
         if widx != None:
             wmidxset = set(np.where(np.array(list(self.data["word_match"])) == widx)[0].tolist())
             if len(wmidxset) != 0:
-                offset = list(wmidxset)[0]
+                offset = min(set(list(wmidxset)))
             else:
                 if max(set(self.data["word_match"])) > widx:
                     nextidx = min(set(self.data["word_match"]).difference(x for x in np.arange(0.0,widx)))
@@ -655,8 +652,8 @@ class DFSelObj(object):
                     if text[idx-1] == " ": front=True
                     ws = len(np.where(np.array(list(text[:idx+1])) == " ")[0])
                 self.text(offset+idx-ws,wc,insertfront=front)
-        except Exception:
-            print("Cant update text. Seems that the wildcards matching seems wrong.")
+        except Exception as ex:
+            print("Wildcard matching exception: ",ex,"\t✗")
 
     def _update_wordspace(self,text,wc,widx):
         if text == self.textstr: return
@@ -772,7 +769,7 @@ class DFSelObj(object):
             self.ivalue.val = val
             self.data[self.ivalue.attr][self.ivalue.pos] = val
 
-    def update_df(self,col=None):
+    def store(self,col=None):
         if col is not None:
             legalcol = list(set(col).difference(set(self.idxkeys+self.imkeys)))
             keys = ["UID"]+legalcol
@@ -802,9 +799,6 @@ class DFSelObj(object):
                 self.data[key] = []
             for didx, dataset in enumerate(df_dict["data"]):
                 self.data[key].append(df_dict["data"][didx][kidx])
-        return
-
-    def store(self):
         return
 
 class DFResObj(DFSelObj):

@@ -51,7 +51,7 @@ def charinfo_process():
     if PREPROCESSING:
 
         # Linematcher with queries
-        if dfXO.match_line():
+        if dfXO.match_line(force=True):
             # Unspacing
             dfXO.unspace()
 
@@ -97,8 +97,8 @@ def charinfo_process():
                 print(items)
                 txt = items.textstr
                 txt = txt[:1] + "|" + txt[1:]
-                if "FNT" in txt:
-                    items.update_textspace("||","|",widx=0.0)
+                if "163 I" in txt:
+                    items.update_textspace("¦163 I¦¦","¦",widx=2.0)
                     items.update_textspace("@@@@@","@",widx=3.0)
                     items.restore()
 
@@ -158,7 +158,6 @@ def test_word(items):
         print("TEST WORD FAILED: ",ex)
     finally:
         print("TEST WORD PASSED!")
-
 
 def test_linematching(dfXO):
     max_line = dfXO.df["calc_line"].max()
