@@ -794,6 +794,16 @@ class DFSelObj(object):
         orig_df.update(df)
         self.orig_df = orig_df
 
+    def restore(self):
+        df_dict = self.orig_df.to_dict(orient="split")
+        self.data = {}
+        for kidx, key in enumerate(df_dict["columns"]):
+            if key not in self.data:
+                self.data[key] = []
+            for didx, dataset in enumerate(df_dict["data"]):
+                self.data[key].append(df_dict["data"][didx][kidx])
+        return
+
     def store(self):
         return
 
