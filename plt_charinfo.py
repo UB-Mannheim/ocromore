@@ -18,9 +18,9 @@ from pathlib import Path
 #import math
 
 def charinfo_process():
-    HOCR2SQL = False
-    PREPROCESSING = False
-    WORKWITHOBJ = True
+    HOCR2SQL = True
+    PREPROCESSING = True
+    WORKWITHOBJ = False
     PLOT = False
 
     # Read hocr and create sql-db

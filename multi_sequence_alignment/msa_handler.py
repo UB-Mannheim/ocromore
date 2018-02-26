@@ -423,7 +423,7 @@ class MsaHandler(object):
 
             if len(res_final_1) != len(res_final_2) or len(res_final_1) !=  len(res_final_3) \
                     or len(res_final_2) !=  len(res_final_3):
-                Random.printc("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
+                cp.print("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
                 final_arrs = [res_final_1, res_final_2, res_final_3]
                 maxlen = max([len(res_final_1), len(res_final_2), len(res_final_3)])
                 # maxindex = np.argmax([len(res_final_1), len(res_final_2), len(res_final_3)])  # this takes in priorisation in case the chars are same
@@ -783,7 +783,7 @@ class MsaHandler(object):
         return res_final_1, res_final_2, res_final_3
 
     @staticmethod
-    def get_best_of_three_wordwise(line_1, line_2, line_3, use_charconfs):
+    def get_best_of_three_wordwise(line_1, line_2, line_3, use_charconfs, use_searchspaces):
         wildcard_character = '¦'
         PRINT_RESULTS = True
         PRINT_ALIGNMENT_PROCESS = False
@@ -795,7 +795,11 @@ class MsaHandler(object):
             if line_to_check is None or line_to_check is False or line_to_check is True:
                 return -1
 
-            highest_word = max(line_2.word['text'].keys())
+            word_indices = line_to_check.word['text'].keys()
+            if len(word_indices) == 0:
+                highest_word = 0
+            else:
+                highest_word = max(word_indices)
             return highest_word
 
         def get_word_from_line(line_to_check, word_index, return_val_empty=""):
@@ -864,8 +868,13 @@ class MsaHandler(object):
 
 
             if use_charconfs:
-                best, best_stripped = OCRVoter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1,
-                                                                            wildcard_character)  # res two is the best element
+                if use_searchspaces is False:
+                    best, best_stripped = OCRVoter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1,
+                                                                                wildcard_character)  # res two is the best element
+                else:
+                    best, best_stripped = OCRVoter.vote_best_of_three_charconfs_searchspaces(line_1, line_2, line_3, 1,
+                                                                                wildcard_character)
+
                 best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
             if PRINT_RESULTS:
@@ -887,9 +896,9 @@ class MsaHandler(object):
         res_final_1, res_final_2, res_final_3 = MsaHandler.align_three_texts(text_1, text_2, text_3, wildcard_character)
 
         print("my final resolutions before vote")
-        print("res_final_1",res_final_1)
-        print("res_final_2",res_final_2)
-        print("res_final_3",res_final_3)
+        print("res_final_1", res_final_1)
+        print("res_final_2", res_final_2)
+        print("res_final_3", res_final_3)
 
         if use_charconfs is True:
 

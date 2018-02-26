@@ -19,6 +19,7 @@ MSA_BEST_USE_LONGEST_PIVOT = True
 MSA_BEST_USE_N_DIST_PIVOT = True  # this is not applicable atm, it's just the longest string
 MSA_BEST_USE_CHARCONFS = True
 MSA_BEST_USE_WORDWISE_MSA = True
+MSA_BEST_USE_SEARCHSPACE = True
 
 
 # postcorrection settings:
@@ -30,6 +31,8 @@ IGNORE_WHITESPACE = False
 DISPLAY_DIFFERENCES = False
 DO_ISRI_VAL = True
 
+#saving file settigs
+MODE_ADD_LINEBREAKS = False  # todo add linebreaks later!
 
 #Filenames
 FILEPATH_MSA_BEST_RESULT = "./Testfiles/dbprof_msa_best_result.txt"
@@ -70,8 +73,9 @@ if DO_MSA_BEST:
     if MSA_BEST_USE_WORDWISE_MSA:
         # this is the new msa best invocation
         ocr_comparison.do_msa_best_new(MSA_BEST_USE_N_DIST_PIVOT, MSA_BEST_USE_LONGEST_PIVOT, MSA_BEST_USE_CHARCONFS, \
-                                       MSA_BEST_USE_WORDWISE_MSA)
+                                       MSA_BEST_USE_WORDWISE_MSA,MSA_BEST_USE_SEARCHSPACE)
     else:
+        #todo refactor this old stuff
         if MSA_BEST_USE_CHARCONFS is False:
             if MSA_BEST_USE_N_DIST_PIVOT:
                 print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT")
@@ -89,7 +93,6 @@ if DO_MSA_BEST:
                 print("Doing: DO_MSA_BEST without NDIST_PIVOT and CHARCONFS")
                 print("This is not implemented yet")
 
-        MODE_ADD_LINEBREAKS = False #todo add linebreaks later!
 
     #ocr_comparison.print_msa_best_results()
     ocr_comparison.save_dataset_to_file(FILEPATH_MSA_BEST_RESULT, 0, MODE_ADD_LINEBREAKS, "msa_best")

@@ -341,7 +341,7 @@ class OCRset:
 
         return texts_return, lines_return, lines_return_ok, ok_len
 
-    def calculate_msa_best_all(self, use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, prefered_index=1):
+    def calculate_msa_best_all(self, use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise,use_searchspaces, prefered_index=1):
 
         # get the pivot index and the other indices
         best_index, other_indices = self.obtain_best_index(use_ndist_pivot, use_longest_pivot,prefered_index)
@@ -353,7 +353,7 @@ class OCRset:
         # do the msa if there is at least one line ok (confidence vote can be done with one line also :))
         if use_wordwise is True:
             if number_lines_ok != 0:
-                result = MsaHandler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], True)
+                result = MsaHandler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], use_charconfs, use_searchspaces)
             else:
                 result = None
 
