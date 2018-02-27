@@ -1,5 +1,6 @@
 from utils.conditional_print import ConditionalPrint
 from utils.queues import SearchSpace
+from n_dist_keying.search_space_processor import SearchSpaceProcessor
 import numpy as np
 import inspect
 
@@ -162,7 +163,6 @@ class OCRVoter(object):
         try:
             PRINT_TO_CONSOLE = True
             cp = ConditionalPrint(PRINT_TO_CONSOLE)
-
             def try_obtain_charconf(value, undef_value=0):
                 if value is None or value is False or value is True:
                     return undef_value
@@ -189,16 +189,20 @@ class OCRVoter(object):
 
 
             SEARCH_SPACE_Y_SIZE = 3
-            SEARCH_SPACE_X_SIZE = 7
-            SEARCH_SPACE_X_SEARCH_RANGE= 1
+            SEARCH_SPACE_X_SIZE_OUTER = 7
+            SEARCH_SPACE_X_SIZE_INNER = 3
+            SEARCH_SPACE_X_SEARCH_RANGE = 1
+            SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR ='¦'
 
-            SEARCH_SPACE = 3
             SEARCH_RANGE = 1
 
-            ssp_chars = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE, SEARCH_SPACE_X_SEARCH_RANGE, True)
-            ssp_confs = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE, SEARCH_SPACE_X_SEARCH_RANGE, True)
+            search_space_processor = SearchSpaceProcessor(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_INNER, \
+                                                          wildcard_character, SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR)
 
-            range_extension = int((SEARCH_SPACE_X_SIZE-1)/2)
+            ssp_chars = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_OUTER, SEARCH_SPACE_X_SEARCH_RANGE, True)
+            ssp_confs = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_OUTER, SEARCH_SPACE_X_SEARCH_RANGE, True)
+
+            range_extension = SEARCH_SPACE_X_SIZE_INNER
             for character_index in range(0, maximum_char_number+range_extension):  # check: is list 1 always best reference?
                 if character_index < maximum_char_number:
                     line_vals = [line_1.value(key_char, character_index), line_2.value(key_char, character_index), \
@@ -214,9 +218,12 @@ class OCRVoter(object):
 
                 ssp_chars.push_column(line_vals)
                 ssp_confs.push_column(charconf_vals)
-                print("mid_chars")
                 mid_chars = ssp_chars.get_middle_matrix(True)
-                mid_confs = ssp_confs.get_middle_matrix()
+                mid_confs = ssp_confs.get_middle_matrix(True)
+                mid_chars_processed, mid_confs_processed, change_done = search_space_processor.process_search_space(mid_chars, mid_confs)
+                if change_done is True:
+                    ssp_chars.update_middle_matrix(mid_chars_processed)
+                    ssp_confs.update_middle_matrix(mid_confs_processed)
 
 
                 """

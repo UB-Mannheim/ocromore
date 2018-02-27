@@ -55,6 +55,8 @@ class Ranged_Filo(Filo):
         self.range = search_range
         self.size_limit = size_limit
         self.middle_index = Random.find_middle(size_limit, True)
+        self.low_end_for_setting = self.middle_index - self.range
+
         super().__init__(size_limit)
         if fill_with_none:
             if fill_range_only is False:
@@ -75,6 +77,10 @@ class Ranged_Filo(Filo):
         result = self.get_middle_items(True, False)
         self.set_search_range(self.original_range)
         return result
+
+    def set_item_in_midrange(self, x_index, new_value):
+        index = self.low_end_for_setting + x_index
+        self.items[index] = new_value
 
     def get_middle_items(self, use_range=False, pad_values=False, return_as_list=False):
 
@@ -157,5 +163,17 @@ class SearchSpace(object):
 
         return middle_matrix
 
+    def update_value_midrange(self, y_index, x_index, new_value):
+        self._queues[y_index].set_item_in_midrange(x_index, new_value)
 
+
+    def update_middle_matrix(self, middle_matrix):
+
+        for y_index in range(0, self.get_y_size()):
+            row = middle_matrix[y_index]
+            for x_index, value in enumerate(row):
+                self.update_value_midrange(y_index,x_index,value)
+
+
+        return middle_matrix
 
