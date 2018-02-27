@@ -18,8 +18,8 @@ from pathlib import Path
 #import math
 
 def charinfo_process():
-    HOCR2SQL = False
-    PREPROCESSING = False
+    HOCR2SQL =False
+    PREPROCESSING = True
     WORKWITHOBJ = True
     PLOT = False
 
@@ -52,14 +52,15 @@ def charinfo_process():
 
         # Linematcher with queries
         if dfXO.match_line(force=True):
+            true = True
             # Unspacing
-            dfXO.unspace()
+        dfXO.unspace(pad=1)
 
             # Match words or segments of words into "word_match"
-            dfXO.match_words()
+        dfXO.match_words()
 
             # Write the calulated values into the db
-            dfXO.write2sql()
+        dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
@@ -92,13 +93,17 @@ def charinfo_process():
         dfSelO = dfXO.get_line_obj()
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
+                print(items.textstr)
+        for lidx in dfSelO:
+            for items in dfSelO[lidx]:
                 #test_word(items)
                 print(items.textstr)
                 print(items)
                 txt = items.textstr
                 txt = txt[:1] + "|" + txt[1:]
-                if "163 I" in txt:
-                    items.update_textspace("¦163 I¦¦","¦",widx=2.0)
+                if "Riekeberg" in txt:
+                    items.update_textspace("¦Dipl.¦¦¦¦¦","¦",widx=0.0)
+                    items.update_textspace("¦-Ing.","¦",widx=1.0)
                     items.update_textspace("@@@@@","@",widx=3.0)
                     items.restore()
 
