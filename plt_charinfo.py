@@ -20,7 +20,8 @@ from pathlib import Path
 def charinfo_process():
     HOCR2SQL = True
     PREPROCESSING = True
-    WORKWITHOBJ = False
+    WORKWITHOBJ = True 
+
     PLOT = False
 
     # Read hocr and create sql-db
@@ -54,6 +55,7 @@ def charinfo_process():
 
         # Linematcher with queries
         if dfXO.match_line(force=True):
+            true = True
             # Unspacing
             dfXO.unspace()
 
@@ -94,13 +96,17 @@ def charinfo_process():
         dfSelO = dfXO.get_line_obj()
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
+                print(items.textstr)
+        for lidx in dfSelO:
+            for items in dfSelO[lidx]:
                 #test_word(items)
                 print(items.textstr)
                 print(items)
                 txt = items.textstr
                 txt = txt[:1] + "|" + txt[1:]
-                if "163 I" in txt:
-                    items.update_textspace("¦163 I¦¦","¦",widx=2.0)
+                if "Riekeberg" in txt:
+                    items.update_textspace("¦Dipl.¦¦¦¦¦","¦",widx=0.0)
+                    items.update_textspace("¦-Ing.","¦",widx=1.0)
                     items.update_textspace("@@@@@","@",widx=3.0)
                     items.restore()
 

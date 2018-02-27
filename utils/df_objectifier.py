@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 from utils.df_tools import get_con, spinner
 import math
+import copy
 import sys
 
 class DFObjectifier(object):
@@ -264,7 +265,77 @@ class DFObjectifier(object):
             pass
         return True
 
-    def unspace(self, sort_by=None, pad=0.5):
+    def unspace(self, sort_by=None, pad=0.75, padrb=0.25):
+        """
+        Unspaces the words in the dataset based on a pivot
+        :param sort_by: Set the pivot selectin order
+        :param pad: Set the multiplicator which calculats the padding value for the matching algo.
+                    Pad = Multiplicator * (Height of Line)
+        :param padrb: Special padding for right border
+        :return:
+        """
+        if sort_by is None:
+            sort_by = ["Tess", "Abbyy", "Ocro"]
+        linedict = {}
+        tdf = self.df.reset_index().loc(axis=1)["ocr", "ocr_profile",'line_idx', 'word_idx', 'char_idx',"word_x0", "word_x1","word_y0","word_y1","calc_line_idx", "calc_word_idx"]
+        # df_dict = self.df.reset_index().set_index(self.idxkeys+["calc_line_idx"]).to_dict(orient="list")
+        lgroups = tdf.groupby(["calc_line_idx", "ocr", "ocr_profile"])
+        for lidx, groups in lgroups:
+            if not lidx[0] in linedict:
+                linedict[lidx[0]] = {}
+                linedict[lidx[0]]["orig"] = {}
+                linedict[lidx[0]]["calc"] = {"ocr": [], "ocr_profile": [],'line_idx':[], 'word_idx':[], 'char_idx':[], "calc_word_idx": [], "calc_line_idx": [],
+                                             "word_x0": [], "word_x1": []}
+            linedict[lidx[0]]["orig"][(lidx[1], lidx[2])] = groups.to_dict(orient="list")
+        tdf = pd.DataFrame()
+        maxlines = max(set(linedict.keys()))
+        for line in linedict:
+            print(f"Unspace words in line: {int(line)}/{int(maxlines)}")
+            maxx1 = 0
+            curline = linedict[line]["orig"]
+            for ocr in sorted(linedict[line]["orig"].keys(), key=lambda x: sort_by.index(x[0])):
+                if maxx1 < max(set(curline[ocr]["word_x1"])):maxx1 = max(set(curline[ocr]["word_x1"]))
+            maxx1 = maxx1*2
+            for ocrO in sorted(linedict[line]["orig"].keys(), key=lambda x: sort_by.index(x[0])):
+                while True:
+                    if all([True if item ==maxx1 else False for item in curline[ocrO]["word_x0"]]): break
+                    x0arr = curline[ocrO]["word_x0"]
+                    minx0 = min(set(x0arr))
+                    posx0 = np.where(np.array(list(x0arr)) == minx0)[0][0]
+                    minx1 = curline[ocrO]["word_x1"][posx0]
+                    diff = (curline[ocrO]["word_y1"][posx0]-curline[ocrO]["word_y0"][posx0])*pad
+                    if diff > (minx1-minx0)/2: diff = (minx1-minx0)/2
+                    for ocrI in sorted(linedict[line]["orig"].keys(), key=lambda x: sort_by.index(x[0])):
+                        x0arr = curline[ocrI]["word_x0"]
+                        result = np.where((np.array(list(x0arr))>minx0-diff)&(np.array(list(x0arr)) < minx1-(diff*padrb)))[0]
+                        if result.size >0:
+                            widx = curline[ocrI]["calc_word_idx"][min(set(result))]
+                            max_widx = curline[ocrI]["calc_word_idx"][max(set(result))]
+                            if widx != max_widx:
+                                for idx in np.where(np.array(list(x0arr)) > max_widx)[0]:
+                                    curline[ocrI]["calc_word_idx"][idx] =  curline[ocrI]["calc_word_idx"][idx]-(max_widx-widx)
+                        for idx in reversed(result):
+                            linedict[line]["calc"]["ocr"].append(ocrI[0])
+                            linedict[line]["calc"]["ocr_profile"].append(ocrI[1])
+                            linedict[line]["calc"]["line_idx"].append(curline[ocrI]["line_idx"][idx])
+                            linedict[line]["calc"]["word_idx"].append(curline[ocrI]["word_idx"][idx])
+                            linedict[line]["calc"]["char_idx"].append(curline[ocrI]["char_idx"][idx])
+                            linedict[line]["calc"]["calc_word_idx"].append(widx)
+                            linedict[line]["calc"]["calc_line_idx"].append(line)
+                            linedict[line]["calc"]["word_x1"].append(curline[ocrI]["word_x1"][idx])
+                            linedict[line]["calc"]["word_x0"].append(curline[ocrI]["word_x0"][idx])
+                            curline[ocrI]["calc_word_idx"][idx] = widx
+                            curline[ocrI]["word_x0"][idx] = maxx1
+            if tdf.empty:
+                tdf = pd.DataFrame.from_dict(linedict[line]["calc"])
+            else:
+                tdf = tdf.append(pd.DataFrame.from_dict(linedict[line]["calc"]),ignore_index=True)
+
+        self.df.update(tdf.set_index(self.idxkeys))
+        print("Unspace lines ✓")
+        return
+
+    def unspace_obsolete(self, sort_by=None, pad=0.7):
         """
         Unspaces the words in the dataset based on a pivot
         :param sort_by: Set the pivot selectin order
@@ -274,16 +345,18 @@ class DFObjectifier(object):
         """
         if sort_by is None:
             sort_by = ["Tess", "Abbyy", "Ocro"]
-        tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_y0","word_y1","word_x0", "word_x1", "calc_line_idx","calc_word_idx"]
-        groups = tdf.groupby(["ocr","ocr_profile"])
-        groupnames = sorted(groups.indices.keys(),key= lambda x:sort_by.index(x[0]))
+        # self.df["word_match"] = -1
+        tdf = self.df.reset_index().loc(axis=1)[
+            "ocr", "ocr_profile", "word_y0", "word_y1", "word_x0", "word_x1", "calc_line_idx", "calc_word_idx"]
+        groups = tdf.groupby(["ocr", "ocr_profile"])
+        groupnames = sorted(groups.indices.keys(), key=lambda x: sort_by.index(x[0]))
         max_lidx = groups['calc_line_idx'].max().max()
-        for lidx in np.arange(0,max_lidx):
-            #sys.stdout.write(f"Unspace lines {next(spinner)} \r")
-            #sys.stdout.flush()
+        for lidx in np.arange(0, max_lidx):
+            # sys.stdout.write(f"Unspace lines {next(spinner)} \r")
+            # sys.stdout.flush()
             print(f"Unpsace words in line: {lidx}")
             max_widx = tdf.loc[tdf['calc_line_idx'] == lidx]["calc_word_idx"].max()
-            for widx in np.arange(0,max_widx):
+            for widx in np.arange(0, max_widx):
                 x0 = None
                 x1 = None
                 for name in groupnames:
@@ -292,14 +365,14 @@ class DFObjectifier(object):
                     if group.shape[0] != 0:
                         if x0 is None:
                             if widx != max_widx:
-                                groupnext = group.loc[group["calc_word_idx"] == widx+1.0]
+                                groupnext = group.loc[group["calc_word_idx"] == widx + 1.0]
                                 if groupnext.shape[0] != 0:
                                     x1 = groupnext["word_x0"].iloc[0]
                             group = group.loc[group["calc_word_idx"] == widx]
                             if group.shape[0] == 0: break
                             x0 = group["word_x0"].iloc[0]
                             if x1 is None: x1 = group["word_x1"].iloc[0]
-                            diff = (group["word_y1"].iloc[0]-group["word_y0"].iloc[0])*pad
+                            diff = (group["word_y1"].iloc[0] - group["word_y0"].iloc[0]) * pad
                         else:
                             # Select all the words in the other groups which have the same borders
                             tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x0'] < (x1 - diff)]
@@ -308,21 +381,69 @@ class DFObjectifier(object):
                             tmpgroup["calc_word_idx"] = min_widx
                             if not np.isnan(max_widx):
                                 group.update(tmpgroup)
-                                tmpgroup = group.loc[group["calc_word_idx"]>max_widx]["calc_word_idx"].sub(max_widx-min_widx)
+                                tmpgroup = group.loc[group["calc_word_idx"] > max_widx]["calc_word_idx"].sub(
+                                    max_widx - min_widx)
                                 group.update(tmpgroup)
                             tdf.update(group)
         print("Unspace lines ✓")
         self.df.update(tdf.reset_index().set_index(self.df.index))
 
-    def match_words(self, force=False):
+    def match_words(self, force=False,pad=0.5):
         """
         Matches the words together this can also meant that one word is match on two for a differen dataset
         :param force: Force the process
         :return:
         """
         self.df["word_match"]=-1
-        tdf = self.df.reset_index().set_index(self.idxkeys).loc(axis=1)["word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
-        groups = tdf.groupby("calc_line_idx")
+        linedict = {}
+        tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
+        #df_dict = self.df.reset_index().set_index(self.idxkeys+["calc_line_idx"]).to_dict(orient="list")
+        lgroups = tdf.groupby(["calc_line_idx","ocr","ocr_profile"])
+        for lidx, groups in lgroups:
+            if not lidx[0] in linedict:
+                linedict[lidx[0]] ={}
+                linedict[lidx[0]]["orig"] = {}
+                linedict[lidx[0]]["calc"] = {"ocr":[],"ocr_profile":[],"calc_word_idx":[],"calc_line_idx":[],"word_x0":[],"word_x1":[],"word_match":[]}
+            linedict[lidx[0]]["orig"][(lidx[1],lidx[2])]= groups.to_dict(orient="list")
+        for line in linedict:
+            for ocr in linedict[line]["orig"]:
+                for widx in set(linedict[line]["orig"][ocr]["calc_word_idx"]):
+                    warr = np.where(np.array(list(linedict[line]["orig"][ocr]["calc_word_idx"])) == widx)[0]
+                    linedict[line]["calc"]["ocr"].append(ocr[0])
+                    linedict[line]["calc"]["ocr_profile"].append(ocr[1])
+                    linedict[line]["calc"]["calc_word_idx"].append(widx)
+                    linedict[line]["calc"]["calc_line_idx"].append(line)
+                    linedict[line]["calc"]["word_x0"].append(linedict[line]["orig"][ocr]["word_x0"][warr.min()])
+                    linedict[line]["calc"]["word_x1"].append(linedict[line]["orig"][ocr]["word_x1"][warr.max()])
+                    linedict[line]["calc"]["word_match"].append(-1)
+        tdf = pd.DataFrame()
+        maxlines = max(set(linedict.keys()))
+        for line in linedict:
+            print(f"Match words in line: {int(line)}/{int(maxlines)}")
+            widx = 0.0
+            curline = copy.deepcopy(linedict[line]["calc"])
+            maxx1 = max(set(linedict[line]["calc"]["word_x1"]))
+            while True:
+                if all([True if item >= 0.0 else False for item in linedict[line]["calc"]["word_match"]]):break
+                x0arr = curline["word_x0"]
+                minx0 = min(set(x0arr))
+                minx1 = curline["word_x1"][np.where(np.array(list(x0arr)) == minx0)[0][0]]
+                result = np.where(np.array(list(x0arr)) < minx0+((minx1-minx0)*pad))[0]
+                for idx in reversed(result):
+                    linedict[line]["calc"]["word_match"][idx] = widx
+                    curline["word_x0"][idx] = maxx1
+                widx += 1.0
+            if tdf.empty:tdf = pd.DataFrame.from_dict(linedict[line]["calc"])
+            else: tdf = tdf.append(pd.DataFrame.from_dict(linedict[line]["calc"]),ignore_index=True)
+        df1 = self.df.reset_index().set_index(["ocr","ocr_profile","calc_line_idx","calc_word_idx"])
+        df2 = tdf.set_index(["ocr","ocr_profile","calc_line_idx","calc_word_idx"])
+        df1.update(df2["word_match"])
+        df1 =df1.reset_index().set_index(self.idxkeys)
+        self.df.update(df1)
+        print("Match words ✓")
+        return
+
+    def _match_words_obsolete(self):
         for name, group in groups:
             count = 0
             print(f"Match words in line: {name}")
