@@ -265,7 +265,7 @@ class DFObjectifier(object):
             pass
         return True
 
-    def unspace(self, sort_by=None, pad=0.75, padrb=0.5):
+    def unspace(self, sort_by=None, pad=0.75, padrb=0.25):
         """
         Unspaces the words in the dataset based on a pivot
         :param sort_by: Set the pivot selectin order
@@ -307,7 +307,7 @@ class DFObjectifier(object):
                     if diff > (minx1-minx0)/2: diff = (minx1-minx0)/2
                     for ocrI in sorted(linedict[line]["orig"].keys(), key=lambda x: sort_by.index(x[0])):
                         x0arr = curline[ocrI]["word_x0"]
-                        result = np.where((np.array(list(x0arr))>minx0-diff)&(np.array(list(x0arr)) < minx1-(diff*fixpad)))[0]
+                        result = np.where((np.array(list(x0arr))>minx0-diff)&(np.array(list(x0arr)) < minx1-(diff*padrb)))[0]
                         if result.size >0:
                             widx = curline[ocrI]["calc_word_idx"][min(set(result))]
                             max_widx = curline[ocrI]["calc_word_idx"][max(set(result))]

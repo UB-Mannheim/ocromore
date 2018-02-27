@@ -18,7 +18,7 @@ from pathlib import Path
 #import math
 
 def charinfo_process():
-    HOCR2SQL =False
+    HOCR2SQL = True
     PREPROCESSING = True
     WORKWITHOBJ = True
     PLOT = False
@@ -54,13 +54,13 @@ def charinfo_process():
         if dfXO.match_line(force=True):
             true = True
             # Unspacing
-        dfXO.unspace(pad=1)
+            dfXO.unspace()
 
             # Match words or segments of words into "word_match"
-        dfXO.match_words()
+            dfXO.match_words()
 
             # Write the calulated values into the db
-        dfXO.write2sql()
+            dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
