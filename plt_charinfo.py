@@ -20,16 +20,19 @@ from pathlib import Path
 def charinfo_process():
     HOCR2SQL = True
     PREPROCESSING = True
-    WORKWITHOBJ = True
+    WORKWITHOBJ = True 
+
     PLOT = False
 
     # Read hocr and create sql-db
     dbdir = './Testfiles/sql/'
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
+
     filetypes = ["hocr","xml"]
     files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*."+filetype, recursive=True) for filetype in filetypes)
 
     dbnamelast,con = "", None
+
 
     if HOCR2SQL:
         for file in files:

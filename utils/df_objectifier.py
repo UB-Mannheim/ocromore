@@ -702,6 +702,7 @@ class DFSelObj(object):
             self.data["calc_char"][pos] = val
 
     def update_textspace(self, text, wc=None, widx=None):
+
         # wc = wildcards
         # widx = word index
         # word2text = update text with word elements
@@ -734,6 +735,7 @@ class DFSelObj(object):
                 return
         else:
             if text == self.textstr:return
+
         if wc is not None:
             if wc in text:
                 self._update_wildcard(text,wc,offset)
