@@ -163,6 +163,7 @@ class OCRVoter(object):
         try:
             PRINT_TO_CONSOLE = True
             cp = ConditionalPrint(PRINT_TO_CONSOLE)
+
             def try_obtain_charconf(value, undef_value=0):
                 if value is None or value is False or value is True:
                     return undef_value
@@ -180,8 +181,8 @@ class OCRVoter(object):
             cp.print("vote_text1", line_1.textstr)
             cp.print("vote_text2", line_2.textstr)
             cp.print("vote_text3", line_3.textstr)
-            if "¦¦lt.H" in line_1.textstr:
-                cp.print("asd")
+            # if "¦¦lt.H" in line_1.textstr:
+            #     cp.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
@@ -193,8 +194,9 @@ class OCRVoter(object):
             SEARCH_SPACE_X_SIZE_INNER = 3
             SEARCH_SPACE_X_SEARCH_RANGE = 1
             SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR ='¦'
-
+            SEARCH_SPACE_PROCESSING_USE_SIMILAR_CHARS = True
             SEARCH_RANGE = 1
+            PRINT_MATRICES = True
 
             search_space_processor = SearchSpaceProcessor(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_INNER, \
                                                           wildcard_character, SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR)
@@ -218,10 +220,11 @@ class OCRVoter(object):
 
                 ssp_chars.push_column(line_vals)
                 ssp_confs.push_column(charconf_vals)
-                print_matrices = False
-                mid_chars = ssp_chars.get_middle_matrix(print_matrices)
-                mid_confs = ssp_confs.get_middle_matrix(print_matrices)
-                mid_chars_processed, mid_confs_processed, change_done = search_space_processor.process_search_space(mid_chars, mid_confs)
+
+                mid_chars = ssp_chars.get_middle_matrix(PRINT_MATRICES)
+                mid_confs = ssp_confs.get_middle_matrix(PRINT_MATRICES)
+                mid_chars_processed, mid_confs_processed, change_done = \
+                    search_space_processor.process_search_space(mid_chars, mid_confs,SEARCH_SPACE_PROCESSING_USE_SIMILAR_CHARS)
                 if change_done is True:
                     ssp_chars.update_middle_matrix(mid_chars_processed)
                     ssp_confs.update_middle_matrix(mid_confs_processed)

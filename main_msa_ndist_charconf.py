@@ -28,7 +28,7 @@ KEYING_RESULT_POSTCORRECTION = True
 # validation settings:
 IGNORE_LINEFEED = False
 IGNORE_WHITESPACE = False
-DISPLAY_DIFFERENCES = False
+DISPLAY_DIFFERENCES = True
 DO_ISRI_VAL = True
 
 #saving file settigs
