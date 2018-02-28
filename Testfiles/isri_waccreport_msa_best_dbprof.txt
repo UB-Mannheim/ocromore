@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      607   Words
-      11   Misrecognized
-   98.19%  Accuracy
+      10   Misrecognized
+   98.35%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -18,7 +18,7 @@ Non-stopwords
       74        3    95.95        4
       35        1    97.14        5
       41        0   100.00        6
-      34        2    94.12        7
+      34        1    97.06        7
       39        1    97.44        8
       31        1    96.77        9
       22        0   100.00       10
@@ -28,11 +28,11 @@ Non-stopwords
        6        0   100.00       14
        5        0   100.00       15
        2        0   100.00       17
-     604       11    98.18    Total
+     604       10    98.34    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     287       10    96.52        1
+     287        9    96.86        1
       45        0   100.00        2
       21        0   100.00        3
       12        0   100.00        4
@@ -41,18 +41,18 @@ Distinct Non-stopwords
        2        0   100.00        7
        1        0   100.00       10
        4        0   100.00      >10
-     377       10    97.35    Total
+     377        9    97.61    Total
 
 Phrases
    Count   Missed   %Right   Length
-     607       11    98.19        1
-     606       20    96.70        2
-     605       29    95.21        3
-     604       38    93.71        4
-     603       47    92.21        5
-     602       56    90.70        6
-     601       65    89.18        7
-     600       74    87.67        8
+     607       10    98.35        1
+     606       18    97.03        2
+     605       26    95.70        3
+     604       34    94.37        4
+     603       42    93.03        5
+     602       50    91.69        6
+     601       58    90.35        7
+     600       66    89.00        8
 
 Stopwords
    Count   Missed   %Right   
@@ -231,7 +231,7 @@ Non-stopwords
        1        0   100.00   dr.rudolf
        1        0   100.00   dudziak
        1        0   100.00   dustrie
-       1        1     0.00   düssel
+       1        0   100.00   düssel
        7        0   100.00   düsseldorf
        1        0   100.00   edelstähle
        1        0   100.00   eigenkapital

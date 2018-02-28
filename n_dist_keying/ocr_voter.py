@@ -181,8 +181,8 @@ class OCRVoter(object):
             cp.print("vote_text1", line_1.textstr)
             cp.print("vote_text2", line_2.textstr)
             cp.print("vote_text3", line_3.textstr)
-            # if "¦¦lt.H" in line_1.textstr:
-            #     cp.print("asd")
+            if "Erich" in line_1.textstr:
+                 cp.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 

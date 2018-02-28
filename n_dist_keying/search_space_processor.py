@@ -31,7 +31,10 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append(['a', 'ä'])
         self.similar_chars.append([':', ';'])
         self.similar_chars.append(['-', '¬'])
+
         # just for testing ...
+        self.similar_chars.append(['.', ','])
+        self.similar_chars.append(['i', 'l']) # 1 l i also possible
         # self.similar_chars.append(['e', 'é'])
 
     def get_middle_index(self):
