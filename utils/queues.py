@@ -82,6 +82,14 @@ class Ranged_Filo(Filo):
         index = self.low_end_for_setting + x_index
         self.items[index] = new_value
 
+    def get_item_around_middle(self,position_relative_to_mid):
+        index_to_check = self.middle_index+position_relative_to_mid
+        if index_to_check < 0 or index_to_check > self.size()-1:
+            return None
+
+        item_to_return = self.items[index_to_check]
+        return item_to_return
+
     def get_middle_items(self, use_range=False, pad_values=False, return_as_list=False):
 
         if not use_range:
@@ -133,6 +141,14 @@ class SearchSpace(object):
 
     def get_middle_queue_values(self, y_index):
         retval = self._queues[y_index].get_middle_items(use_range=True, return_as_list=True)
+        return retval
+
+    def get_middle_queue_value(self, y_index):
+        retval = self._queues[y_index].get_middle_items(use_range=False, return_as_list=False)
+        return retval
+
+    def get_value_around_middle(self,y_index, middle_offset):
+        retval = self._queues[y_index].get_item_around_middle(middle_offset)
         return retval
 
     def init_queues(self, y_size, x_size, x_search_range, fill_with_none, fill_range_only):

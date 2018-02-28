@@ -203,7 +203,7 @@ class OCRVoter(object):
             ssp_confs = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_OUTER, SEARCH_SPACE_X_SEARCH_RANGE, True)
 
             range_extension = SEARCH_SPACE_X_SIZE_INNER
-            for character_index in range(0, maximum_char_number+range_extension):  # check: is list 1 always best reference?
+            for character_index in range(0, maximum_char_number+range_extension+2):  # check: is list 1 always best reference?
                 if character_index < maximum_char_number:
                     line_vals = [line_1.value(key_char, character_index), line_2.value(key_char, character_index), \
                                  line_3.value(key_char, character_index)]
@@ -218,15 +218,26 @@ class OCRVoter(object):
 
                 ssp_chars.push_column(line_vals)
                 ssp_confs.push_column(charconf_vals)
-                mid_chars = ssp_chars.get_middle_matrix(True)
-                mid_confs = ssp_confs.get_middle_matrix(True)
+                print_matrices = False
+                mid_chars = ssp_chars.get_middle_matrix(print_matrices)
+                mid_confs = ssp_confs.get_middle_matrix(print_matrices)
                 mid_chars_processed, mid_confs_processed, change_done = search_space_processor.process_search_space(mid_chars, mid_confs)
                 if change_done is True:
                     ssp_chars.update_middle_matrix(mid_chars_processed)
                     ssp_confs.update_middle_matrix(mid_confs_processed)
 
 
-                """
+                # mind range here
+                character_offset = -(SEARCH_SPACE_X_SEARCH_RANGE+1)
+                character_1 = ssp_chars.get_value_around_middle(0, character_offset)
+                character_2 = ssp_chars.get_value_around_middle(1, character_offset)
+                character_3 = ssp_chars.get_value_around_middle(2, character_offset)
+                charconf_1 = ssp_confs.get_value_around_middle(0, character_offset)
+                charconf_2 = ssp_confs.get_value_around_middle(1, character_offset)
+                charconf_3 = ssp_confs.get_value_around_middle(2, character_offset)
+                if character_1 is None or character_2 is None or character_3 is None:
+                    print("test")
+                    continue
                 clist = [character_1, character_2, character_3]
                 # get the character which occurs the most
                 sc1, acc_conf_1 = OCRVoter.get_confidence_count(character_1, character_2, character_3, charconf_1,
@@ -243,7 +254,7 @@ class OCRVoter(object):
                     accumulated_chars += character_1
                 else:
                     accumulated_chars += character_3
-                """
+
 
             accumulated_chars_stripped = accumulated_chars.replace(wildcard_character, '')
 

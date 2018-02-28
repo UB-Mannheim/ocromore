@@ -19,7 +19,7 @@ MSA_BEST_USE_LONGEST_PIVOT = True
 MSA_BEST_USE_N_DIST_PIVOT = True  # this is not applicable atm, it's just the longest string
 MSA_BEST_USE_CHARCONFS = True
 MSA_BEST_USE_WORDWISE_MSA = True
-MSA_BEST_USE_SEARCHSPACE = False
+MSA_BEST_USE_SEARCHSPACE = True
 
 
 # postcorrection settings:
