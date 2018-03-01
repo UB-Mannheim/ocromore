@@ -19,7 +19,7 @@ from pathlib import Path
 
 def charinfo_process():
     HOCR2SQL = False
-    PREPROCESSING =False
+    PREPROCESSING = True
     WORKWITHOBJ = True
     PLOT = False
 
@@ -91,12 +91,14 @@ def charinfo_process():
         object.update_textspace(">>  >>", widx=2.0)
         object.restore()
         dfSelO = dfXO.get_line_obj()
-        for lidx in dfSelO:
+        for idx,lidx in enumerate(dfSelO):
+            print(idx)
             for items in dfSelO[lidx]:
-                if "Akt. zu je DM 100. - = DM 1 000. -" in items.textstr:
-                    items.update_textspace("|","|",widx=13.0)
-                    items.update_textspace("|", "|", widx=14.0)
-                print(items.textstr)
+                for word in items.word["text"]:
+                    if "maßgeblich" in items.word["text"][word]:
+                        stio = "STIO"
+                    print(items.word["text"][word]+"\t",end="")
+                print("\n")
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
                 #test_word(items)
