@@ -18,8 +18,8 @@ from pathlib import Path
 #import math
 
 def charinfo_process():
-    HOCR2SQL = True
-    PREPROCESSING = True
+    HOCR2SQL = False
+    PREPROCESSING =False
     WORKWITHOBJ = True
     PLOT = False
 
@@ -93,6 +93,9 @@ def charinfo_process():
         dfSelO = dfXO.get_line_obj()
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
+                if "Akt. zu je DM 100. - = DM 1 000. -" in items.textstr:
+                    items.update_textspace("|","|",widx=13.0)
+                    items.update_textspace("|", "|", widx=14.0)
                 print(items.textstr)
         for lidx in dfSelO:
             for items in dfSelO[lidx]:

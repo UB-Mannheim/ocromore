@@ -718,19 +718,17 @@ class DFSelObj(object):
                     self.data["calc_char"] = self.data["calc_char"][:pos] + [wc] * len(text) + self.data["calc_char"][pos:]
                     self.data["UID"] = self.data["UID"][:pos] + [-1] * len(text) + self.data["UID"][pos:]
                     self.data["char_weight"] = self.data["char_weight"][:pos] + [-1] * len(text) + self.data["char_weight"][pos:]
-                    cwidx = min(set(self.data["word_match"]))-1.0
-                    if cwidx >= 0.0: cwidx = -1.0
+                    cwidx = min(set(self.data["calc_word_idx"]))-1.0
+                    if cwidx >= -1.0: cwidx = -2.0
                     self.data["calc_word_idx"] = self.data["calc_word_idx"][:pos] + [cwidx] * len(text) + self.data["calc_word_idx"][pos:]
-                    wc = None
                 else:
                     self.data["word_match"].extend([widx]*len(text))
                     self.data["calc_char"].extend([wc] * len(text))
                     self.data["UID"].extend([-1] * len(text))
                     self.data["char_weight"].extend([-1] * len(text))
-                    cwidx = min(set(self.data["word_match"])) - 1.0
-                    if cwidx >= 0.0: cwidx = -1.0
+                    cwidx = min(set(self.data["calc_word_idx"])) - 1.0
+                    if cwidx >= -1.0: cwidx = -2.0
                     self.data["calc_word_idx"].extend([cwidx] * len(text))
-                    wc = None
                 return
         else:
             if text == self.textstr:return
