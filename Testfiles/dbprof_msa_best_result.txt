@@ -7,11 +7,11 @@ Fernschreiber: 031 827.
 
 Vorstand:
 Dipl.-Kfm. Karl Barich, Dillnhütten, Vors.; I
-Dr. Erich Dudziak, Dortmund:
+Dr. Erich Dudziak, Dortmund:;
 Dipl.-Ing. Rudolf Schäfer, Geisweid;
 Heinz Solbach, Hagen, stellv.
 Aufsichtsrat:
-Hubert Biernat, Strickherdicke, Vors.;
+Hubert Biernat, Strickherdicke,, Vors.;
 Dr.Rudolf Haus, Detmold, 1. stellv. Vors.; I
 Dr.-Ing. Karl Neuenhofer, Mannheim,
 2. stellv. Vors.;
@@ -62,7 +62,7 @@ Deutsche Bank AG West, Düsseldorf;
 Norddeutsche Bank AG, Hamburg;
 Süddeutsche Bank AG, Frankfurt (Main);
 Berliner Disconto Bank AG, Berlin;
-Commerzbank-Bankverein AG, Düssel-
+Commerzbank-Bankverein AG, Düsseil-
 dorf;
 Commerz- und Credit-Bank AG, Frank-
 furt(Main);
@@ -89,18 +89,18 @@ Merck, Finck & Co., München;
 Waldthausen & Co., Düsseldorf.
 Grundkapital: DM 40 000 000.-.
 Urspr. DM 200 000. -. Lt.H. -V.v.29.9.
-1951 Erhöhung um DM 19 800 000.- - und
+1951 Erhöhung um DM 19 800 000.- und
 lt.H.-V.v.13.4.1953 Erhöhung um DM
-20 000 000. - - auf DM 40 000 000. -.
+20 000 000. - auf DM 40 000 000. -.
 Börsennotiz:
 Düsseldorf, Berlin, Frankfurt (M), Ham-
-burg, München (amtl.), Stuttgart (Freiv.) )
+büurg, München (amtl.), Stuttgart (Freiv.)
 Ordnungsnr.d. Aktien: 728400.
 Stückelung:
-101 000 Namens-St.-Akt. zu je DM 100. - -
+101 000 Namens-St.-Akt. zu je DM 100. -
 (Nr. 00 001 - 41 000 u. 60 001 - 120 000)
-29 900 Globalaktien über 10 Namens-St. - -
-Akt. zu je DM 100. - - = DDM 1 0000. --
+29 900 Globalaktien über 10 Namens-St. -
+Akt. zu je DM 100. - - == DDM 11 0000. --
 (Nr. 200 001/200 010 - 498 991/499 000).
 Sämtliche Stammaktien sind lieferbar.
 Großaktionäre:
@@ -123,12 +123,12 @@ Dividenden auf Stammaktien:
 1952/53: 4 % (Div.Sch.Nr. 1)
 1953/54: 6 % (Div.Sch.Nr. 2)
 1954/55: 8% (Div.Sch.Nr. 3)
-Zur Geschäftslage: :
+Zur Geschäftslage:
 Infolge der anhaltend guten Marktlage
 konnten in 1954/55 sowohl die Produktion
 als auch der Versand von Walzwerksfer-
-tigerzeugnissen beachtlich gesteigert wer-
-den, Dabei erhöhte sich wiederum beson-
+tigerzeugnissen beachtlich gesteigert wer--
+den,. Dabei erhöhte sich wiederum beson--
 ders der Anteil hochwertiger Edelstähle.
 Der Umsatz 1954/55 hat sich gegenüber
 dem vorangegangenen Geschäftsjahr um

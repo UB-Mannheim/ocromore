@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      607   Words
-      10   Misrecognized
-   98.35%  Accuracy
+      12   Misrecognized
+   98.02%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -15,10 +15,10 @@ Non-stopwords
       25        0   100.00        1
      104        1    99.04        2
      133        2    98.50        3
-      74        3    95.95        4
+      74        4    94.59        4
       35        1    97.14        5
       41        0   100.00        6
-      34        1    97.06        7
+      34        2    94.12        7
       39        1    97.44        8
       31        1    96.77        9
       22        0   100.00       10
@@ -28,11 +28,11 @@ Non-stopwords
        6        0   100.00       14
        5        0   100.00       15
        2        0   100.00       17
-     604       10    98.34    Total
+     604       12    98.01    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     287        9    96.86        1
+     287       11    96.17        1
       45        0   100.00        2
       21        0   100.00        3
       12        0   100.00        4
@@ -41,18 +41,18 @@ Distinct Non-stopwords
        2        0   100.00        7
        1        0   100.00       10
        4        0   100.00      >10
-     377        9    97.61    Total
+     377       11    97.08    Total
 
 Phrases
    Count   Missed   %Right   Length
-     607       10    98.35        1
-     606       18    97.03        2
-     605       26    95.70        3
-     604       34    94.37        4
-     603       42    93.03        5
-     602       50    91.69        6
-     601       58    90.35        7
-     600       66    89.00        8
+     607       12    98.02        1
+     606       22    96.37        2
+     605       32    94.71        3
+     604       41    93.21        4
+     603       50    91.71        5
+     602       59    90.20        6
+     601       68    88.69        7
+     600       77    87.17        8
 
 Stopwords
    Count   Missed   %Right   
@@ -197,7 +197,7 @@ Non-stopwords
        1        0   100.00   bochum
        1        0   100.00   brück
        1        0   100.00   brüninghaus
-       1        0   100.00   burg
+       1        1     0.00   burg
        1        0   100.00   burkhardt
        1        0   100.00   börsennotiz
        1        1     0.00   c.g
@@ -231,7 +231,7 @@ Non-stopwords
        1        0   100.00   dr.rudolf
        1        0   100.00   dudziak
        1        0   100.00   dustrie
-       1        0   100.00   düssel
+       1        1     0.00   düssel
        7        0   100.00   düsseldorf
        1        0   100.00   edelstähle
        1        0   100.00   eigenkapital
