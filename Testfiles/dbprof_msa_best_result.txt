@@ -1,5 +1,5 @@
 
-SitsuWz:ESTFLEN b(21) Geisweid
+Sitsz:ESFLE b(21) Geisweid
 
 (Krs. Siegen).
 Fernruf: Siegen Sa.-Nr. 51 81.I
@@ -108,7 +108,7 @@ OPRIBA Handels- und Verwal- ) (maßgeblich)
 tungs- KG, Hannover. )
 Aktienkurse: Notierung seit Novem-
 ber 1953.
-wultimo 1953 115 %
+ultimo 1953 115 %
 1954163
 163 %
 1955180
@@ -149,4 +149,4 @@ Löhne und Gehälter 30 333 35 932
 Abschreibungen 7 430 8 095
 Steuern 12 402 23 352
 Jahresertrag 67 697 86 795
-Reichelbräu Aktien-Gesellschaft
+Reichelbräu Aktien-Gesellshaft

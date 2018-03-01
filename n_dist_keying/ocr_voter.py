@@ -52,7 +52,7 @@ class OCRVoter(object):
                 return 1, SPACE_PUT_IN_VALUE
 
         elif char1 == wildcard_char and same_ctr ==1: #todo: differentiate type of character ??
-            return 1, 98.0 #todo j4t
+            return 1, 99.0 #todo j4t
             # if the confidence of the other character is below that value, space gets the high put in confidence value
             WILDCARD_TRESH = 50.0
             WILDCARD_PUT_IN_VALUE = 99.0

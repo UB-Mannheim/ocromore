@@ -1,46 +1,46 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     4151   Characters
-      82   Errors
-   98.02%  Accuracy
+      78   Errors
+   98.12%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   98.02%  Accuracy After Correction
+   98.12%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       7        8       67       82   Unmarked
-       7        8       67       82   Total
+       8        8       62       78   Unmarked
+       8        8       62       78   Total
 
    Count   Missed   %Right
      603        7    98.84   ASCII Spacing Characters
      414        5    98.79   ASCII Special Symbols
      421        0   100.00   ASCII Digits
      396        0   100.00   ASCII Uppercase Letters
-    2264        2    99.91   ASCII Lowercase Letters
+    2264        3    99.87   ASCII Lowercase Letters
       53        1    98.11   Latin1 Lowercase Letters
-    4151       15    99.64   Total
+    4151       16    99.61   Total
 
   Errors   Marked   Correct-Generated
       36        0   {}-{I}
       11        0   {}-{ }
-       9        0   {<\n>}-{ESTFLEN b}
+       7        0   {<\n>}-{ESFLE b}
        4        0   { }-{163<\n>}
        4        0   { }-{180<\n>}
        4        0   {" }-{}
-       3        0   {}-{suW}
        2        0   { }-{}
        1        0   {%}-{t}
        1        0   {.}-{,}
        1        0   {;}-{:}
        1        0   {b}-{}
+       1        0   {c}-{}
        1        0   {n}-{r}
        1        0   {}-{<\n>}
        1        0   {}-{e}
-       1        0   {}-{w}
+       1        0   {}-{s}
        1        0   {é}-{e}
 
    Count   Missed   %Right
@@ -94,7 +94,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        3        0   100.00   {Z}
      156        0   100.00   {a}
       43        1    97.67   {b}
-      63        0   100.00   {c}
+      63        1    98.41   {c}
       92        0   100.00   {d}
      324        0   100.00   {e}
       42        0   100.00   {f}
