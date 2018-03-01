@@ -18,7 +18,7 @@ from pathlib import Path
 #import math
 
 def charinfo_process():
-    HOCR2SQL = True
+    HOCR2SQL = False
     PREPROCESSING = True
     WORKWITHOBJ = True 
 
@@ -94,9 +94,14 @@ def charinfo_process():
         object.update_textspace(">>  >>", widx=2.0)
         object.restore()
         dfSelO = dfXO.get_line_obj()
-        for lidx in dfSelO:
+        for idx,lidx in enumerate(dfSelO):
+            print(idx)
             for items in dfSelO[lidx]:
-                print(items.textstr)
+                for word in items.word["text"]:
+                    if "maßgeblich" in items.word["text"][word]:
+                        stio = "STIO"
+                    print(items.word["text"][word]+"\t",end="")
+                print("\n")
         for lidx in dfSelO:
             for items in dfSelO[lidx]:
                 #test_word(items)

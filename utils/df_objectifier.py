@@ -201,7 +201,7 @@ class DFObjectifier(object):
         self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
         return
 
-    def match_line(self,force=False,pad=0.4):
+    def match_line(self,force=False,pad=0.6):
         """
         Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)
@@ -231,11 +231,13 @@ class DFObjectifier(object):
                 y1_min = tdf.loc[tdf['line_y0'] == y0_min]["line_y1"].min()
 
                 y_diff = (y1_min - y0_min) * pad
+                y_diffmid = y_diff
+                if pad >0.5: y_diffmid =(y1_min - y0_min)*0.5
 
                 # Select all y0 which are smaller as y0+25%diff and greater as y0+25%diff
-                tdf = tdf.loc[tdf['line_y0'] > (y0_min - y_diff)].loc[tdf['line_y0'] < (y0_min + y_diff)]
+                tdf = tdf.loc[tdf['line_y0'] > (y0_min - y_diff)].loc[tdf['line_y0'] < (y0_min + y_diffmid)]
                 # Select all y1 which are smaller as y1+25%diff and greater as y1+25%diff
-                tdf = tdf.loc[tdf['line_y1'] > (y1_min - y_diff)].loc[tdf['line_y1'] < (y1_min + y_diff)]
+                tdf = tdf.loc[tdf['line_y1'] > (y1_min - y_diffmid)].loc[tdf['line_y1'] < (y1_min + y_diff)]
                 tdfgroups = tdf.reset_index().groupby(["ocr","ocr_profile"])
                 for name,group in tdfgroups:
                     if len(group["line_idx"].unique().tolist()) > 1:
@@ -343,6 +345,7 @@ class DFObjectifier(object):
                     Pad = Multiplicator * (Height of Line)
         :return:
         """
+        """
         if sort_by is None:
             sort_by = ["Tess", "Abbyy", "Ocro"]
         # self.df["word_match"] = -1
@@ -387,23 +390,24 @@ class DFObjectifier(object):
                             tdf.update(group)
         print("Unspace lines ✓")
         self.df.update(tdf.reset_index().set_index(self.df.index))
-
-    def match_words(self, force=False,pad=0.5):
         """
-        Matches the words together this can also meant that one word is match on two for a differen dataset
+
+    def match_words(self, force=False,pad=1):
+        """
+        Matches the words together this can also meant that one word is match on two for a different dataset
         :param force: Force the process
         :return:
         """
         self.df["word_match"]=-1
         linedict = {}
-        tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_x0", "word_x1", "calc_line_idx", "calc_word_idx","word_match"]
+        tdf = self.df.reset_index().loc(axis=1)["ocr","ocr_profile","word_x0", "word_x1","word_y0","word_y1","calc_line_idx", "calc_word_idx","word_match"]
         #df_dict = self.df.reset_index().set_index(self.idxkeys+["calc_line_idx"]).to_dict(orient="list")
         lgroups = tdf.groupby(["calc_line_idx","ocr","ocr_profile"])
         for lidx, groups in lgroups:
             if not lidx[0] in linedict:
                 linedict[lidx[0]] ={}
                 linedict[lidx[0]]["orig"] = {}
-                linedict[lidx[0]]["calc"] = {"ocr":[],"ocr_profile":[],"calc_word_idx":[],"calc_line_idx":[],"word_x0":[],"word_x1":[],"word_match":[]}
+                linedict[lidx[0]]["calc"] = {"ocr":[],"ocr_profile":[],"calc_word_idx":[],"calc_line_idx":[],"word_x0":[],"word_x1":[],"word_y0":[],"word_y1":[],"word_match":[]}
             linedict[lidx[0]]["orig"][(lidx[1],lidx[2])]= groups.to_dict(orient="list")
         for line in linedict:
             for ocr in linedict[line]["orig"]:
@@ -415,6 +419,8 @@ class DFObjectifier(object):
                     linedict[line]["calc"]["calc_line_idx"].append(line)
                     linedict[line]["calc"]["word_x0"].append(linedict[line]["orig"][ocr]["word_x0"][warr.min()])
                     linedict[line]["calc"]["word_x1"].append(linedict[line]["orig"][ocr]["word_x1"][warr.max()])
+                    linedict[line]["calc"]["word_y0"].append(linedict[line]["orig"][ocr]["word_y0"][warr.min()])
+                    linedict[line]["calc"]["word_y1"].append(linedict[line]["orig"][ocr]["word_y1"][warr.max()])
                     linedict[line]["calc"]["word_match"].append(-1)
         tdf = pd.DataFrame()
         maxlines = max(set(linedict.keys()))
@@ -422,16 +428,29 @@ class DFObjectifier(object):
             print(f"Match words in line: {int(line)}/{int(maxlines)}")
             widx = 0.0
             curline = copy.deepcopy(linedict[line]["calc"])
-            maxx1 = max(set(linedict[line]["calc"]["word_x1"]))
+            maxx1 = max(set(linedict[line]["calc"]["word_x1"]))+1
             while True:
                 if all([True if item >= 0.0 else False for item in linedict[line]["calc"]["word_match"]]):break
+                if all([True if item > maxx1-1 else False for item in curline["word_x0"]]): break
                 x0arr = curline["word_x0"]
                 minx0 = min(set(x0arr))
-                minx1 = curline["word_x1"][np.where(np.array(list(x0arr)) == minx0)[0][0]]
-                result = np.where(np.array(list(x0arr)) < minx0+((minx1-minx0)*pad))[0]
+                posx0 = np.where(np.array(list(x0arr)) == minx0)[0][0]
+                minx1 = curline["word_x1"][posx0]
+                diff = (curline["word_y1"][posx0] - curline["word_y0"][posx0]) * pad
+                if diff > (minx1-minx0)/2: diff = (minx1-minx0)/2
+                result = np.where(np.array(list(x0arr)) < minx1-diff)[0]
+                lmaxx1 = minx1
                 for idx in reversed(result):
                     linedict[line]["calc"]["word_match"][idx] = widx
                     curline["word_x0"][idx] = maxx1
+                    curline["word_x1"][idx] = maxx1
+                    if curline["word_x1"][idx] > lmaxx1: lmaxx1 = curline["word_x1"][idx]
+                if lmaxx1-2*diff > minx1:
+                    resultmax1 = np.where(np.array(list(curline["word_x1"])) < lmaxx1+diff)[0]
+                    for idx in reversed(resultmax1):
+                        linedict[line]["calc"]["word_match"][idx] = widx
+                        curline["word_x0"][idx] = maxx1
+                        curline["word_x1"][idx] = maxx1
                 widx += 1.0
             if tdf.empty:tdf = pd.DataFrame.from_dict(linedict[line]["calc"])
             else: tdf = tdf.append(pd.DataFrame.from_dict(linedict[line]["calc"]),ignore_index=True)
@@ -444,6 +463,7 @@ class DFObjectifier(object):
         return
 
     def _match_words_obsolete(self):
+        """
         for name, group in groups:
             count = 0
             print(f"Match words in line: {name}")
@@ -459,6 +479,7 @@ class DFObjectifier(object):
                     count += 1
             tdf.update(group)
         self.df.update(tdf)
+        """
         return
 
     def write2sql(self,result=False,engine=None):
@@ -719,19 +740,17 @@ class DFSelObj(object):
                     self.data["calc_char"] = self.data["calc_char"][:pos] + [wc] * len(text) + self.data["calc_char"][pos:]
                     self.data["UID"] = self.data["UID"][:pos] + [-1] * len(text) + self.data["UID"][pos:]
                     self.data["char_weight"] = self.data["char_weight"][:pos] + [-1] * len(text) + self.data["char_weight"][pos:]
-                    cwidx = min(set(self.data["word_match"]))-1.0
-                    if cwidx >= 0.0: cwidx = -1.0
+                    cwidx = min(set(self.data["calc_word_idx"]))-1.0
+                    if cwidx >= -1.0: cwidx = -2.0
                     self.data["calc_word_idx"] = self.data["calc_word_idx"][:pos] + [cwidx] * len(text) + self.data["calc_word_idx"][pos:]
-                    wc = None
                 else:
                     self.data["word_match"].extend([widx]*len(text))
                     self.data["calc_char"].extend([wc] * len(text))
                     self.data["UID"].extend([-1] * len(text))
                     self.data["char_weight"].extend([-1] * len(text))
-                    cwidx = min(set(self.data["word_match"])) - 1.0
-                    if cwidx >= 0.0: cwidx = -1.0
+                    cwidx = min(set(self.data["calc_word_idx"])) - 1.0
+                    if cwidx >= -1.0: cwidx = -2.0
                     self.data["calc_word_idx"].extend([cwidx] * len(text))
-                    wc = None
                 return
         else:
             if text == self.textstr:return
