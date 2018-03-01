@@ -201,7 +201,7 @@ class DFObjectifier(object):
         self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
         return
 
-    def match_line(self,force=False,pad=20,lineheightmul=2):
+    def match_line(self,force=False,pad=2,padmid=0.75,lineheightmul=2):
         """
         Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)
@@ -230,9 +230,11 @@ class DFObjectifier(object):
                     break
                 y1_min = tdf.loc[tdf['line_y0'] == y0_min]["line_y1"].min()
 
+                if lineIdx == 111:
+                    stop = "STP"
                 y_diff = (y1_min - y0_min) * pad
                 y_diffmid = y_diff
-                if pad >0.5: y_diffmid =(y1_min - y0_min)*0.5
+                if pad > padmid: y_diffmid =(y1_min - y0_min)*padmid
 
                 tdf["line_height"] = tdf["line_y1"]-tdf["line_y0"]
                 # Select all y0 which are smaller as y0+25%diff and greater as y0+25%diff
@@ -272,7 +274,7 @@ class DFObjectifier(object):
             pass
         return True
 
-    def unspace(self, sort_by=None, pad=0.75, padrb=0.15):
+    def unspace(self, sort_by=None, pad=1.0, padrb=0.00):
         """
         Unspaces the words in the dataset based on a pivot
         :param sort_by: Set the pivot selectin order

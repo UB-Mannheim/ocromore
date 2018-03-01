@@ -9,7 +9,7 @@ from utils.df_tools import get_con
 from utils.df_objectifier import DFObjectifier
 import glob
 from itertools import chain
-
+import os
 import numpy as np
 #import matplotlib.pyplot as plt
 #import seaborn as sns
@@ -18,7 +18,8 @@ from pathlib import Path
 #import math
 
 def charinfo_process():
-    HOCR2SQL = False
+    HOCR2SQL = True
+    DELOLDSQL = True
     PREPROCESSING = True
     WORKWITHOBJ = True 
 
@@ -41,6 +42,9 @@ def charinfo_process():
             ocr_profile = fpath.parts[-2]
             dbname = fpath.name.split("_")[1]
             if dbname != dbnamelast:
+                if DELOLDSQL and file.split(".")[-1] == "hocr":
+                    if os.path.isfile(dbdir + '/'+dbname+'.db'):
+                        os.remove(dbdir + '/'+dbname+'.db')
                 con = get_con(dbdir + '/'+dbname+'.db')
                 dbnamelast = dbname
             try:

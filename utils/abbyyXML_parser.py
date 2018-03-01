@@ -39,6 +39,7 @@ def get_xml_document(fpath):
                     word.update_coordinates(item.attrib)
                     word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
+        line.words.append(word)
     except Exception as ex:print("Parsing Exception:\t",ex,"\t✗")
     return doc
 
