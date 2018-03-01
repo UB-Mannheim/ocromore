@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      608   Words
-      24   Misrecognized
-   96.05%  Accuracy
+      20   Misrecognized
+   96.71%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,14 +13,14 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       26        0   100.00        1
-     104        1    99.04        2
-     134        4    97.01        3
-      73        1    98.63        4
-      35        4    88.57        5
-      41        2    95.12        6
+     104        0   100.00        2
+     134        2    98.51        3
+      73        3    95.89        4
+      35        3    91.43        5
+      41        3    92.68        6
       34        2    94.12        7
-      39        2    94.87        8
-      31        3    90.32        9
+      38        0   100.00        8
+      32        2    93.75        9
       22        1    95.45       10
       23        1    95.65       11
       24        0   100.00       12
@@ -28,11 +28,11 @@ Non-stopwords
        6        0   100.00       14
        5        0   100.00       15
        2        1    50.00       17
-     605       24    96.03    Total
+     605       20    96.69    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     284       17    94.01        1
+     284       13    95.42        1
       46        0   100.00        2
       21        0   100.00        3
       12        0   100.00        4
@@ -41,18 +41,18 @@ Distinct Non-stopwords
        2        0   100.00        7
        1        0   100.00       10
        4        0   100.00      >10
-     375       17    95.47    Total
+     375       13    96.53    Total
 
 Phrases
    Count   Missed   %Right   Length
-     608       24    96.05        1
-     607       40    93.41        2
-     606       55    90.92        3
-     605       69    88.60        4
-     604       83    86.26        5
-     603       95    84.25        6
-     602      106    82.39        7
-     601      117    80.53        8
+     608       20    96.71        1
+     607       37    93.90        2
+     606       52    91.42        3
+     605       65    89.26        4
+     604       78    87.09        5
+     603       89    85.24        6
+     602       99    83.55        7
+     601      109    81.86        8
 
 Stopwords
    Count   Missed   %Right   
@@ -87,8 +87,8 @@ Non-stopwords
        3        0   100.00   1951
        1        0   100.00   1952
        3        0   100.00   1953
-       4        0   100.00   1954
-       1        0   100.00   1955
+       4        1    75.00   1954
+       1        1     0.00   1955
        1        0   100.00   1956
        3        0   100.00   2
        1        0   100.00   20
@@ -199,7 +199,7 @@ Non-stopwords
        1        0   100.00   burkhardt
        1        0   100.00   börsennotiz
        1        0   100.00   c.g
-       1        1     0.00   cie
+       1        0   100.00   cie
        6        0   100.00   co
        2        0   100.00   commerz
        2        0   100.00   commerzbank
@@ -255,7 +255,7 @@ Non-stopwords
        2        0   100.00   für
        1        0   100.00   gegenüber
        1        0   100.00   gehälter
-       3        1    66.67   geisweid
+       3        0   100.00   geisweid
        1        0   100.00   gerbershagen
        1        0   100.00   geschmiedetes
        2        0   100.00   geschäftsjahr
@@ -298,7 +298,7 @@ Non-stopwords
        1        0   100.00   ist
        1        0   100.00   jahresertrag
        3        0   100.00   je
-       1        1     0.00   jr
+       1        0   100.00   jr
        1        0   100.00   k
        1        0   100.00   kalkwerke
        4        0   100.00   kapital
@@ -309,7 +309,7 @@ Non-stopwords
        1        0   100.00   kreditbank
        2        0   100.00   krs
        1        0   100.00   kurs
-       1        1     0.00   köln
+       1        0   100.00   köln
        1        0   100.00   lendring
        1        0   100.00   lieferbar
        1        0   100.00   lieferforderungen
@@ -342,7 +342,7 @@ Non-stopwords
        1        1     0.00   nären
        1        0   100.00   okt
        1        0   100.00   oktober
-       1        1     0.00   oppenheim
+       1        0   100.00   oppenheim
        1        0   100.00   opriba
        1        0   100.00   ordnungsnr.d
        1        0   100.00   organvertrag
@@ -358,7 +358,7 @@ Non-stopwords
        1        0   100.00   ruhr
        1        0   100.00   rund
        1        0   100.00   sa
-       1        1     0.00   sal
+       1        0   100.00   sal
        1        0   100.00   schulte
        1        0   100.00   schäfer
        1        0   100.00   seit
@@ -381,7 +381,7 @@ Non-stopwords
        1        0   100.00   stimme
        1        0   100.00   stimmrecht
        1        0   100.00   strickherdicke
-       1        1     0.00   stuttart
+       1        0   100.00   stuttgart
        1        0   100.00   stückelung
        1        0   100.00   sämtliche
        1        0   100.00   süddeutsche
@@ -394,7 +394,7 @@ Non-stopwords
        1        0   100.00   tungs
        1        1     0.00   tätigkeitsgebiet
        1        0   100.00   u
-       1        0   100.00   ultimo
+       1        1     0.00   ultimo
        3        0   100.00   um
        1        0   100.00   umlaufvermögen
        1        0   100.00   umsatz

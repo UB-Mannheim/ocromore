@@ -30,8 +30,6 @@ class OCRVoter(object):
         same_ctr = 0
         cconf_ctr = float(cconf1)
 
-
-
         if char1 == char2:
             same_ctr += 1
             cconf_ctr += float(cconf2)

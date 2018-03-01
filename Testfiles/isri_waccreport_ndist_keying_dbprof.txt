@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      608   Words
-       6   Misrecognized
-   99.01%  Accuracy
+       5   Misrecognized
+   99.18%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -19,8 +19,8 @@ Non-stopwords
       35        0   100.00        5
       41        0   100.00        6
       34        1    97.06        7
-      39        1    97.44        8
-      31        2    93.55        9
+      38        0   100.00        8
+      32        2    93.75        9
       22        0   100.00       10
       23        0   100.00       11
       24        0   100.00       12
@@ -28,11 +28,11 @@ Non-stopwords
        6        0   100.00       14
        5        0   100.00       15
        2        0   100.00       17
-     605        6    99.01    Total
+     605        5    99.17    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     284        6    97.89        1
+     284        5    98.24        1
       46        0   100.00        2
       21        0   100.00        3
       12        0   100.00        4
@@ -41,18 +41,18 @@ Distinct Non-stopwords
        2        0   100.00        7
        1        0   100.00       10
        4        0   100.00      >10
-     375        6    98.40    Total
+     375        5    98.67    Total
 
 Phrases
    Count   Missed   %Right   Length
-     608        6    99.01        1
-     607       10    98.35        2
-     606       14    97.69        3
-     605       18    97.02        4
-     604       22    96.36        5
-     603       26    95.69        6
-     602       30    95.02        7
-     601       34    94.34        8
+     608        5    99.18        1
+     607        8    98.68        2
+     606       11    98.18        3
+     605       14    97.69        4
+     604       17    97.19        5
+     603       20    96.68        6
+     602       23    96.18        7
+     601       26    95.67        8
 
 Stopwords
    Count   Missed   %Right   
@@ -381,7 +381,7 @@ Non-stopwords
        1        0   100.00   stimme
        1        0   100.00   stimmrecht
        1        0   100.00   strickherdicke
-       1        1     0.00   stuttart
+       1        0   100.00   stuttgart
        1        0   100.00   stückelung
        1        0   100.00   sämtliche
        1        0   100.00   süddeutsche

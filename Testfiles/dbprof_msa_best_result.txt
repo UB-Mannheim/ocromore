@@ -1,10 +1,11 @@
-Sal.Oppenheimjr.&Cie.,Köln;
-Sit
+
+SitsuWz:ESTFLEN b(21) Geisweid
+
 (Krs. Siegen).
 Fernruf: Siegen Sa.-Nr. 51 81.I
 Fernschreiber: 031 827.
 
-Vorstand::
+Vorstand:
 Dipl.-Kfm. Karl Barich, Dillnhütten, Vors.;I
 Dr. Erich Dudziak, Dortmund:
 Dipl.-Ing. Rudolf Schäfer, Geisweid;
@@ -51,7 +52,7 @@ nären.I
 Westfälische Wohnstätten AG, Dortmund
 Kapital: DM 18 000 000. - (3%)
 Dividenden ab 1949/50: 0,0,0,0,0,0%.
-Geschäftsjahr::
+Geschäftsjahr:
 1.Oktober bis 30. September.
 Stimmrecht d. Aktien i.d.H.-V.:
 Je nom. DM 100. - = 1 Stimme.
@@ -76,6 +77,7 @@ und Frankfurt (Main);
 Burkhardt & Co., Essen;
 Hardy & Co., GmbH, Berlin und Frank-
 furt (Main);
+Sal. Oppenheim jr. & Cie., Köln;
 Poensgen, Marx & Co., Düsseldorf;
 C.G. Trinkaus, Düsseldorf;
 Westfalenbank AG, Bochum;
@@ -91,9 +93,9 @@ lt.H.-V.v.13.4.1953 Erhöhung um DM
 20 000 000. - auf DM 40 000 000. -.
 Börsennotiz:
 Düsseldorf, Berlin, Frankfurt (M), Ham-
-burg, München (amtl.), Stuttgart (Freiv.))
+burg, München (amtl.), Stuttgart (Freiv.)
 Ordnungsnr.d. Aktien: 728400.
-Stückelung::
+Stückelung:
 101 000 Namens-St.-Akt. zu je DM 100. -
 (Nr. 00 001 - 41 000 u. 60 001 - 120 000)
 29 900 Globalaktien über 10 Namens-St. -
@@ -106,12 +108,11 @@ OPRIBA Handels- und Verwal- ) (maßgeblich)
 tungs- KG, Hannover. )
 Aktienkurse: Notierung seit Novem-
 ber 1953.
-ultimo 1953 115 %
-wmo 953
-
-1954 163 %
-
-1955 180 t
+wultimo 1953 115 %
+1954163
+163 %
+1955180
+180 t
 10. Okt. 1956 168,5 % +)
 +) Kurs für DM-Nennwert.
 Dividenden auf Stammaktien:

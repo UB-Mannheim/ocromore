@@ -63,7 +63,7 @@ def charinfo_process():
             dfXO.match_words()
 
             # Write the calulated values into the db
-            #dfXO.write2sql()
+            dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:

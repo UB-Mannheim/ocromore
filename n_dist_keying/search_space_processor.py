@@ -12,6 +12,7 @@ class ColumnFeatures(Enum):
     MOSTLY_REFERENCE_CHAR = 4  # reference char is in there one or more times
     ONLY_WHITESPACE = 5
     ONLY_WILDCARD = 6
+    ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS = 7
 
 
 class SearchSpaceProcessor(object):
@@ -106,6 +107,7 @@ class SearchSpaceProcessor(object):
 
         # extract features
         features = []
+        counter_whitespace_and_wildcards =  counter_whitespaces + counter_wildcards
 
         if counter_nones == self.get_y_size():
             features.append(ColumnFeatures.ONLY_NONE.value)
@@ -113,6 +115,8 @@ class SearchSpaceProcessor(object):
             features.append((ColumnFeatures.ONE_CHAR_REST_WILDCARDS).value)
         elif counter_whitespaces == self.get_y_size()-1 and counter_characters == 1:
             features.append(ColumnFeatures.ONE_CHAR_REST_WHITESPACE.value)
+        elif counter_whitespace_and_wildcards == self.get_y_size()-1 and counter_characters == 1:
+            features.append(ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value)
         elif counter_reference_char == self.get_y_size()-1 and (counter_whitespaces == 1 or counter_wildcards == 1):
             features.append(ColumnFeatures.MOSTLY_REFERENCE_CHAR.value)
         elif counter_whitespaces == self.get_y_size():
@@ -175,7 +179,11 @@ class SearchSpaceProcessor(object):
         mid_column_feats, otherchar_mid, oc_mid_index = self.validate_column_features(search_space, self.get_middle_index())
 
         if ColumnFeatures.ONE_CHAR_REST_WILDCARDS.value in mid_column_feats \
-                or ColumnFeatures.ONE_CHAR_REST_WHITESPACE.value in mid_column_feats:
+                or ColumnFeatures.ONE_CHAR_REST_WHITESPACE.value in mid_column_feats \
+                    or ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
+
+            #if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
+            #   print("beep!")
 
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)
