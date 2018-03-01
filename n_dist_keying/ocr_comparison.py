@@ -51,9 +51,16 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             current_set.print_me(diff_only)
 
-    def do_n_distance_keying(self):
-        for current_set in self.ocr_sets:
-            current_set.calculate_n_distance_keying()
+    def do_n_distance_keying(self, wordwise_keying = False):
+
+        if wordwise_keying is False:
+            # the keying is done on line base - this is the standard mode without database
+            for current_set in self.ocr_sets:
+                current_set.calculate_n_distance_keying()
+        else:
+            # the keying is done wordwise - can be done with sets originated by database
+            for current_set in self.ocr_sets:
+                current_set.calculate_n_distance_keying_wordwise()
 
     def do_msa_best(self):
         for current_set in self.ocr_sets:
@@ -65,6 +72,19 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             current_set.calculate_msa_best(True)
 
+    def do_msa_best_with_ndist_pivot_charconf(self):
+        self.do_n_distance_keying()
+
+        for current_set in self.ocr_sets:
+            current_set.calculate_msa_best_charconf(True)
+
+    def do_msa_best_new(self, use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, use_searchspaces):
+
+        if use_ndist_pivot is True:
+            self.do_n_distance_keying()
+
+        for current_set in self.ocr_sets:
+            current_set.calculate_msa_best_all(use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, use_searchspaces)
 
     def print_n_distance_keying_results(self):
         print("N_DISTANCE_KEYING_RESULTS ")

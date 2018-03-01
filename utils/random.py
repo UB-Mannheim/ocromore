@@ -3,6 +3,18 @@
 class Random:
 
     @staticmethod
+    def printc(*args, print_output):
+        """
+        Print conditionally if print_output is True 
+        :param args:
+        :param print_output:
+        :return:
+        """
+        if print_output is True:
+            print(*args)
+
+
+    @staticmethod
     def is_false_true_or_none(value):
         if value is False or value is True or value is None:
             return True
