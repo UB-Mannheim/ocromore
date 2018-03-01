@@ -201,7 +201,7 @@ class DFObjectifier(object):
         self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
         return
 
-    def match_line(self,force=False,pad=0.6):
+    def match_line(self,force=False,pad=20,lineheightmul=2):
         """
         Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)
@@ -234,10 +234,15 @@ class DFObjectifier(object):
                 y_diffmid = y_diff
                 if pad >0.5: y_diffmid =(y1_min - y0_min)*0.5
 
+                tdf["line_height"] = tdf["line_y1"]-tdf["line_y0"]
                 # Select all y0 which are smaller as y0+25%diff and greater as y0+25%diff
-                tdf = tdf.loc[tdf['line_y0'] > (y0_min - y_diff)].loc[tdf['line_y0'] < (y0_min + y_diffmid)]
+                tdf = tdf.loc[((tdf['line_height']*lineheightmul) > (y1_min-y0_min))&
+                              (tdf['line_y0'] > (y0_min - y_diff)) &
+                              (tdf['line_y0'] < (y0_min + y_diffmid)) &
+                              (tdf['line_y1'] > (y1_min - y_diffmid)) &
+                              (tdf['line_y1'] < (y1_min + y_diff))]
                 # Select all y1 which are smaller as y1+25%diff and greater as y1+25%diff
-                tdf = tdf.loc[tdf['line_y1'] > (y1_min - y_diffmid)].loc[tdf['line_y1'] < (y1_min + y_diff)]
+                #tdf = tdf.loc[tdf['line_y1'] > (y1_min - y_diffmid)].loc[tdf['line_y1'] < (y1_min + y_diff)]
                 tdfgroups = tdf.reset_index().groupby(["ocr","ocr_profile"])
                 for name,group in tdfgroups:
                     if len(group["line_idx"].unique().tolist()) > 1:
@@ -267,7 +272,7 @@ class DFObjectifier(object):
             pass
         return True
 
-    def unspace(self, sort_by=None, pad=0.75, padrb=0.25):
+    def unspace(self, sort_by=None, pad=0.75, padrb=0.15):
         """
         Unspaces the words in the dataset based on a pivot
         :param sort_by: Set the pivot selectin order
@@ -300,7 +305,7 @@ class DFObjectifier(object):
             maxx1 = maxx1*2
             for ocrO in sorted(linedict[line]["orig"].keys(), key=lambda x: sort_by.index(x[0])):
                 while True:
-                    if all([True if item ==maxx1 else False for item in curline[ocrO]["word_x0"]]): break
+                    if all([True if item == maxx1 else False for item in curline[ocrO]["word_x0"]]): break
                     x0arr = curline[ocrO]["word_x0"]
                     minx0 = min(set(x0arr))
                     posx0 = np.where(np.array(list(x0arr)) == minx0)[0][0]
@@ -315,7 +320,7 @@ class DFObjectifier(object):
                             max_widx = curline[ocrI]["calc_word_idx"][max(set(result))]
                             if widx != max_widx:
                                 for idx in np.where(np.array(list(x0arr)) > max_widx)[0]:
-                                    curline[ocrI]["calc_word_idx"][idx] =  curline[ocrI]["calc_word_idx"][idx]-(max_widx-widx)
+                                    curline[ocrI]["calc_word_idx"][idx] = curline[ocrI]["calc_word_idx"][idx]-(max_widx-widx)
                         for idx in reversed(result):
                             linedict[line]["calc"]["ocr"].append(ocrI[0])
                             linedict[line]["calc"]["ocr_profile"].append(ocrI[1])

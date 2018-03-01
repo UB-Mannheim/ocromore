@@ -63,7 +63,7 @@ def charinfo_process():
             dfXO.match_words()
 
             # Write the calulated values into the db
-            dfXO.write2sql()
+            #dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
@@ -97,6 +97,7 @@ def charinfo_process():
         for idx,lidx in enumerate(dfSelO):
             print(idx)
             for items in dfSelO[lidx]:
+                print(items.textstr)
                 for word in items.word["text"]:
                     if "maßgeblich" in items.word["text"][word]:
                         stio = "STIO"
