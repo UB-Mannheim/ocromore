@@ -73,7 +73,7 @@ if DO_MSA_BEST:
     if MSA_BEST_USE_WORDWISE_MSA:
         # this is the new msa best invocation
         ocr_comparison.do_msa_best_new(MSA_BEST_USE_N_DIST_PIVOT, MSA_BEST_USE_LONGEST_PIVOT, MSA_BEST_USE_CHARCONFS, \
-                                       MSA_BEST_USE_WORDWISE_MSA,MSA_BEST_USE_SEARCHSPACE)
+                                       MSA_BEST_USE_WORDWISE_MSA, MSA_BEST_USE_SEARCHSPACE)
     else:
         #todo refactor this old stuff
         if MSA_BEST_USE_CHARCONFS is False:

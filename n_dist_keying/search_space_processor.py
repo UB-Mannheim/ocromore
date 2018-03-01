@@ -184,10 +184,10 @@ class SearchSpaceProcessor(object):
 
             shifted = False
             left_right = None
-            if ColumnFeatures.MOSTLY_REFERENCE_CHAR in pre_column_feats:
+            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in pre_column_feats:
                 left_right = True
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
-            if ColumnFeatures.MOSTLY_REFERENCE_CHAR in nex_column_feats:
+            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in nex_column_feats:
                 left_right = False
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
             if shifted:

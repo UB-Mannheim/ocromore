@@ -18,9 +18,9 @@ from pathlib import Path
 #import math
 
 def charinfo_process():
-    HOCR2SQL = False
+    HOCR2SQL = True
     PREPROCESSING = True
-    WORKWITHOBJ = True 
+    WORKWITHOBJ = False
 
     PLOT = False
 
