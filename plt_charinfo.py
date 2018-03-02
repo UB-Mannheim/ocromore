@@ -15,27 +15,35 @@ import numpy as np
 #import seaborn as sns
 #import pandas as pd
 from pathlib import Path
-#import math
+import traceback
 
 def charinfo_process():
-    HOCR2SQL = True
-    DELOLDSQL = True
-    PREPROCESSING = True
-    WORKWITHOBJ = True 
 
+    # FLAGS #
+    # Read hocr and create sql-db
+    HOCR2SQL = False
+    # Delete old db
+    DELOLDSQL = False
+    # Do preprocessing steps, match lines, unspace words and match words
+    PREPROCESSING = False
+    # Testbench for code changes
+    WORKWITHOBJ = True
+    # Plot results
     PLOT = False
 
-    # Read hocr and create sql-db
+    # DB directory
     dbdir = './Testfiles/sql/'
     dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
 
-    filetypes = ["hocr","xml"]
-    files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*."+filetype, recursive=True) for filetype in filetypes)
+    # Testfile
+    dbAtab = (dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
 
-    dbnamelast,con = "", None
-
-
+    # Read hocr and create sql-db
     if HOCR2SQL:
+        filetypes = ["hocr", "xml"]
+        files = chain.from_iterable(
+            glob.iglob("./Testfiles/long/default/**/*." + filetype, recursive=True) for filetype in filetypes)
+        dbnamelast, con = "", None
         for file in files:
             print(f"\nConvert to sql:\t{file}")
             fpath = Path(file)
@@ -52,14 +60,15 @@ def charinfo_process():
             except:
                 pass
 
-    dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
-
-    # Preprocesses data from the dataframe
+    dfXO = None
+    # Preprocess data
     if PREPROCESSING:
+
+        # Get db-Object from db
+        dfXO = DFObjectifier(*dbAtab)
 
         # Linematcher with queries
         if dfXO.match_line(force=True):
-            true = True
             # Unspacing
             dfXO.unspace()
 
@@ -67,93 +76,36 @@ def charinfo_process():
             dfXO.match_words()
 
             # Write the calulated values into the db
-            #dfXO.write2sql()
+            dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
-        #for file in files:
-        #    fpath = Path(file)
-        #    dbname = fpath.name.split("_")[1]
-        #    if dbname != dbnamelast:
-        #        dbnamelast = dbname
+        # Get db-Object from db
+        dfXO = DFObjectifier(*dbAtab)
 
-        #    #dfXO = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
-        #    dfXO = DFObjectifier(dbdir + '/'+dbname+'.db', fpath.name.split(".")[0])
-
-            #Linematcher with queries
-        #    dfXO.match_line()
-        #    dfXO.write2sql()
-
-        # dfXO.write2file()
-
-        # Example for selecting all line with calc_line == 10
-        #dfSelO = dfXO.get_obj(query="calc_line == 10")
-        max_line = dfXO.df["calc_line_idx"].max()
-        #for idx in np.arange(0,max_line):
-        #dfXO.get_obj(query="calc_line_idx == 10")
-            #print(idx)
-        object = dfXO.get_obj(empty=True)
-        object.update_textspace(">>  >>",widx=1.0)
-        object.update_textspace(">>  >>", widx=3.0)
-        object.update_textspace(">>  >>", widx=2.0)
-        object.restore()
+        # Get LineObject from db-Object
         dfSelO = dfXO.get_line_obj()
-        for idx,lidx in enumerate(dfSelO):
-            print(idx)
-            for items in dfSelO[lidx]:
-                print(items.textstr)
-                for word in items.word["text"]:
-                    if "maßgeblich" in items.word["text"][word]:
-                        stio = "STIO"
-                    print(items.word["text"][word]+"\t",end="")
-                print("\n")
-        for lidx in dfSelO:
-            for items in dfSelO[lidx]:
-                #test_word(items)
-                print(items.textstr)
-                print(items)
-                txt = items.textstr
-                txt = txt[:1] + "|" + txt[1:]
-                if "Riekeberg" in txt:
-                    items.update_textspace("¦Dipl.¦¦¦¦¦","¦",widx=0.0)
-                    items.update_textspace("¦-Ing.","¦",widx=1.0)
-                    items.update_textspace("@@@@@","@",widx=3.0)
-                    items.restore()
 
-                    txt = txt[:0] + "||||||" + txt[0:]
-                #items.update_textspace(txt,"|")
-                print(items.textstr)
-                print(items.value("x_confs",3))
-                print(items.value("calc_char", 3))
-                print(items.value("char", 3))
-                print(items.value("x_confs", 10))
-                print(items.value("calc_char", 10))
-                print(items.value("char", 9))
-                print(items.value("x_confs", 9, wsval=10.0))
-                print(items.value("calc_char", 9))
-                print(items.value("char", 10))
-                print(items.data["UID"])
-                print(items.value("x_confs",2))
-                print(items.value("calc_char", 4))
-                print(items.value("x_confs",4))
-        return
-        text2 = dfSelO[1].textstr
-        text = text[:1] + "|" + text[1:]
-        text = text[:3] + "|" + text[3:]
-        text = text[:5] + " " + text[5:]
-        text = text[:3] + " " + text[3:]
-        dfSelO[0].update_textspace(text,"@")
-        dfSelO.update(dfResO)
-        dfSelO[0].text(1,"A")
-        dfSelO[0].text(3,"C")
-        dfSelO[0].text(0,cmd="pop")
-        dfSelO[0].value("calc_line_idx",4,10)
-        #obj[0].update()  - Optional
-        dfXO.update(dfSelO)
+        # Test function
+        try:
+            #test_linematching(dfXO)
+            test_emptyobj(dfXO)
+            test_wordmacthing(dfSelO)
+            test_lineobj(dfSelO)
+            dfXO.write2file(calc=True)
+        except Exception as e:
+            print("Testfunction-Error!")
+            traceback.print_exc()
 
     # Plot DF (not working atm)
     if PLOT:
-        plot_charinfo()
+        if dfXO is None:
+            dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
+        pltdf = dfXO.df.reset_index()["x_wconf"].astype(str).astype(float)
+        type = pltdf.describe()
+        print(type)
+        pltdf.plot()
+        #plot_charinfo()
 
 ### TEST FUNCTION
 
@@ -190,6 +142,55 @@ def test_linematching(dfXO):
             else:
                 print("No line found!")
     return
+
+def test_lineobj(dfSelO):
+    for lidx in dfSelO:
+        for items in dfSelO[lidx]:
+            # test_word(items)
+            print(items.textstr)
+            print(items)
+            txt = items.textstr
+            txt = txt[:1] + "|" + txt[1:]
+            if "Riekeberg" in txt:
+                items.update_textspace("¦Dipl.¦¦¦¦¦", "¦", widx=0.0)
+                items.update_textspace("¦-Ing.", "¦", widx=1.0)
+                items.update_textspace("@@@@@", "@", widx=3.0)
+                items.restore()
+
+                txt = txt[:0] + "||||||" + txt[0:]
+            # items.update_textspace(txt,"|")
+            print(items.textstr)
+            print(items.value("x_confs", 3))
+            print(items.value("calc_char", 3))
+            print(items.value("char", 3))
+            print(items.value("x_confs", 10))
+            print(items.value("calc_char", 10))
+            print(items.value("char", 9))
+            print(items.value("x_confs", 9, wsval=10.0))
+            print(items.value("calc_char", 9))
+            print(items.value("char", 10))
+            print(items.data["UID"])
+            print(items.value("x_confs", 2))
+            print(items.value("calc_char", 4))
+            print(items.value("x_confs", 4))
+
+def test_wordmacthing(dfSelO):
+    for idx, lidx in enumerate(dfSelO):
+        print(idx)
+        for items in dfSelO[lidx]:
+            print(items.textstr)
+            for word in items.word["text"]:
+                if "maßgeblich" in items.word["text"][word]:
+                    stio = "STIO"
+                print(items.word["text"][word] + "\t", end="")
+            print("\n")
+
+def test_emptyobj(dfXO):
+    object = dfXO.get_obj(empty=True)
+    object.update_textspace(">>  >>", widx=1.0)
+    object.update_textspace(">>  >>", widx=3.0)
+    object.update_textspace(">>  >>", widx=2.0)
+    object.restore()
 
 if __name__=="__main__":
     charinfo_process()
