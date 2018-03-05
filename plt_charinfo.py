@@ -23,9 +23,9 @@ def charinfo_process():
     # Read hocr and create sql-db
     HOCR2SQL = False
     # Delete old db
-    DELOLDSQL = False
+    DELOLDSQL = True
     # Do preprocessing steps, match lines, unspace words and match words
-    PREPROCESSING = False
+    PREPROCESSING = True
     # Testbench for code changes
     WORKWITHOBJ = True
     # Plot results
@@ -67,6 +67,8 @@ def charinfo_process():
         # Get db-Object from db
         dfXO = DFObjectifier(*dbAtab)
 
+        dfXO.clean_data()
+
         # Linematcher with queries
         if dfXO.match_line(force=True):
             # Unspacing
@@ -76,12 +78,12 @@ def charinfo_process():
             dfXO.match_words()
 
             # Write the calulated values into the db
-            dfXO.write2sql()
+            #dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
         # Get db-Object from db
-        dfXO = DFObjectifier(*dbAtab)
+        #dfXO = DFObjectifier(*dbAtab)
 
         # Get LineObject from db-Object
         dfSelO = dfXO.get_line_obj()
@@ -101,7 +103,7 @@ def charinfo_process():
     if PLOT:
         if dfXO is None:
             dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
-        pltdf = dfXO.df.reset_index()["x_wconf"].astype(str).astype(float)
+        pltdf = dfXO.df.reset_index()["x_wconf"].astype(float)
         type = pltdf.describe()
         print(type)
         pltdf.plot()

@@ -4,7 +4,7 @@ from utils.df_tools import get_con, spinner
 import math
 import copy
 import sys
-from sklearn import cluster
+from sklearn import cluster, neighbors
 
 class DFObjectifier(object):
     """
@@ -188,7 +188,61 @@ class DFObjectifier(object):
                 self.df.update(new_df)
         return
 
-    def match_line(self,force=False,pad=2,padmid=0.75,lhm=2):
+    def clean_data(self, outliercleaner = True,iqrmul=2.0):
+        """
+        Unspaces the words in the dataset based on a pivot
+        :param sort_by: Set the pivot selectin order
+        :param pad: Set the multiplicator which calculats the padding value for the matching algo.
+                    Pad = Multiplicator * (Height of Line)
+        :param padrb: Special padding for right border
+        :return:
+        """
+        linedict = {}
+        tdf = self.df.reset_index().loc(axis=1)[
+            "ocr", "ocr_profile", 'calc_char','line_idx', 'word_idx', 'char_idx', "line_x0", "line_x1", "line_y0", "line_y1","word_x0", "word_x1", "word_y0", "word_y1", "x_wconf", "x_confs"]
+        lgroups = tdf.groupby(["line_idx", "ocr", "ocr_profile"])
+        for lidx, groups in lgroups:
+            if not lidx[0] in linedict:
+                linedict[lidx[0]] = {}
+                linedict[lidx[0]]["orig"] = {}
+            linedict[lidx[0]]["orig"][(lidx[1], lidx[2])] = groups.to_dict(orient="list")
+            linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["ocr"] = [lidx[1]]*len(linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["line_idx"])
+            linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["ocr_profile"] = [lidx[2]]*len(linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["line_idx"])
+        tdf = pd.DataFrame()
+        maxlines = max(set(linedict.keys()))
+        for line in linedict:
+            print(f"Clean data in line: {int(line)}/{int(maxlines)}")
+            for ocr in sorted(linedict[line]["orig"].keys()):
+                if outliercleaner:
+                    linf = linedict[line]["orig"][ocr]["word_y0"]
+                    quartile_1, quartile_3 = np.percentile(linf, [25, 75])
+                    iqr = quartile_3 - quartile_1
+                    lower_bound = quartile_1 - (iqr * iqrmul)
+                    outlierspos = np.where(linf < lower_bound)[0]
+                    for outlierpos in outlierspos:
+                        if outlierpos == 0 or outlierpos == len(linf)-1:
+                            wordidxarr = linedict[line]["orig"][ocr]["word_idx"]
+                            outlierwidx = wordidxarr[outlierpos]
+                            if len(np.where(np.array(wordidxarr) == outlierwidx)[0]) == 1:
+                                if outlierpos == 0:
+                                    minx0 = np.array(linf[outlierpos + 1:]).min()
+                                else:
+                                    minx0 = np.array(linf[:outlierpos]).min()
+                                linf[outlierpos] = minx0
+                                #linedict[line]["orig"][ocr]["calc_char"][outlierpos] = "_"
+                                linedict[line]["orig"][ocr]["x_confs"][outlierpos] = 49.0
+                                linedict[line]["orig"][ocr]["line_y0"] = [minx0]*len(linedict[line]["orig"][ocr]["line_y0"])
+                                print(f"Clean data from outlier in {ocr[0]} ✓")
+                if tdf.empty:
+                    tdf = pd.DataFrame.from_dict(linedict[line]["orig"][ocr])
+                else:
+                    tdf = tdf.append(pd.DataFrame.from_dict(linedict[line]["orig"][ocr]), ignore_index=True)
+        if not tdf.empty:
+            self.df.update(tdf.reset_index().set_index(self.idxkeys))
+        print("Clean data ✓")
+        return
+
+    def match_line(self,force=False,pad=5,padmid=0.75,lhm=2):
         """
         Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)
@@ -216,13 +270,9 @@ class DFObjectifier(object):
                     print("Match lines ✓")
                     break
                 y1_min = tdf.loc[tdf['line_y0'] == y0_min]["line_y1"].min()
-
-                if lineIdx == 111:
-                    stop = "STP"
                 y_diff = (y1_min - y0_min) * pad
                 y_diffmid = y_diff
                 if pad > padmid: y_diffmid =(y1_min - y0_min)*padmid
-
                 tdf["line_height"] = tdf["line_y1"]-tdf["line_y0"]
                 # Select all y0 which are smaller as y0+25%diff and greater as y0+25%diff
                 tdf = tdf.loc[((tdf['line_height']*lhm) > (y1_min-y0_min))&
@@ -444,7 +494,7 @@ class DFObjectifier(object):
                 self._writeGrp2hocr(path, fname, calc)
         return
 
-    def _writeGrp2txt(self,path=None,fname=None, calc = True,lhnorm = True):
+    def _writeGrp2txt(self,path=None,fname=None, calc = True,lhnorm = True, maxlhinsert=2):
         if path is None:
             path = "./Testfiles/txt/"
         if fname is None:
@@ -457,30 +507,16 @@ class DFObjectifier(object):
         for name, group in groups:
             groupl = group[line]
             lidxarr = groupl.unique()
+            lhmean = None
             if lhnorm:
-                try:
-                    lh = []
-                    line_height = group["line_y1"] - group["line_y0"]
-                    for idx,lidx in enumerate(lidxarr[:-1]):
-                        gap = group[groupl == lidxarr[idx+1]]["line_y0"].max()-group[groupl == lidx]["line_y1"].min()
-                        if gap > 0.0:
-                            lh.append(gap)
-                    lh = np.array(lh)
-                    lh = lh.reshape(-1,1)
-                    bandwidth = cluster.estimate_bandwidth(lh, quantile=0.3)
-                    ms = cluster.MeanShift(bandwidth=bandwidth, bin_seeding=True)
-                    ms.fit(lh)
-                    lhm = ms.cluster_centers_[0][0]
-                    lhmm = lhm + np.median(line_height)
-                except:
-                    lhmm =  np.median(line_height)
+                lhmean = self._get_mean_lineheight(group,line,lidxarr)
             eol = None
             with open(path+fname+"".join(name), 'w+', encoding='utf-8') as infile:
                 for lidx in lidxarr:
-                    if eol is not None and lhnorm:
+                    if eol is not None and lhnorm and lhmean is not None:
                         sol = group[groupl == lidx]["line_y1"].max()
-                        lc = int(round((sol-eol)/lhmm))-1
-                        if lc > 2: lc = 2
+                        lc = int(round((sol-eol)/lhmean))-1
+                        if lc > maxlhinsert: lc = maxlhinsert
                         for emptyln in range(0,lc):
                                 infile.write("\n")
                     groupw = group[groupl == lidx][word]
@@ -581,12 +617,30 @@ class DFObjectifier(object):
     def _writeRes2hocr(self,path, fname=None):
         return
 
-    def _normalize_line_height(self):
-        return
+    def _get_mean_lineheight(self, df,linetype,lidxarr):
+        try:
+            lhu = []
+            lharr = df["line_y1"] - df["line_y0"]
+            for idx, lidx in enumerate(lidxarr[:-1]):
+                gap = df[df[linetype] == lidxarr[idx + 1]]["line_y0"].max() - df[df[linetype] == lidx]["line_y1"].min()
+                if gap > 0.0:
+                    lhu.append(gap)
+            lh = np.array(lhu)
+            lh = lh.reshape(-1, 1)
+            bandwidth = cluster.estimate_bandwidth(lh, quantile=0.3)
+            ms = cluster.MeanShift(bandwidth=bandwidth, bin_seeding=True)
+            ms.fit(lh)
+            lhmean = ms.cluster_centers_[0][0]
+            lhmean = lhmean + np.median(lharr)
+        except:
+            print("Lineheight calculation failed!")
+            return None
+        return lhmean
 
     # ######## #
     # OBSOLETE #
     # ######## #
+
     def _obsolete_update_(self,obj,col=None):
         """""
         combdata = {}
