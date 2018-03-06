@@ -25,7 +25,7 @@ def charinfo_process():
     # Delete old db
     DELOLDSQL = True
     # Do preprocessing steps, match lines, unspace words and match words
-    PREPROCESSING = True
+    PREPROCESSING = False
     # Testbench for code changes
     WORKWITHOBJ = True
     # Plot results
@@ -78,15 +78,20 @@ def charinfo_process():
             dfXO.match_words()
 
             # Write the calulated values into the db
-            #dfXO.write2sql()
+            dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
         # Get db-Object from db
-        #dfXO = DFObjectifier(*dbAtab)
+        dfXO = DFObjectifier(*dbAtab)
 
         # Get LineObject from db-Object
-        dfSelO = dfXO.get_line_obj()
+        dfSelO, dfResO = dfXO.get_line_obj(res=True)
+
+        dfResO[7.0].append(dfSelO[7.0][0],2)
+        dfResO[7.0].append(dfSelO[7.0][1],5)
+        dfResO[7.0].append(dfSelO[7.0][0], -1)
+        dfResO[7.0].append(dfSelO[7.0][2], 3)
 
         # Test function
         try:

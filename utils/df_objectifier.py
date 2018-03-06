@@ -65,8 +65,9 @@ class DFObjectifier(object):
         """
         res_df = pd.DataFrame(columns=self.df.reset_index().columns)
         try:
-            del res_df["ocr"]
-            del res_df["ocr_profile"]
+            for value in list(res_df):
+                if not value in [*self.idxkeys,*self.imkeys]:
+                    del res_df[value]
         except:
             pass
         res_df["UID"] = []
@@ -86,8 +87,8 @@ class DFObjectifier(object):
         :param empty: Creates an empty obj (bool)
         :return:
         """
-        if res:
-            return DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
+        #if res:
+        #    return DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
         if empty:
             empty_df = pd.DataFrame(columns=self.df.reset_index().columns)
             empty_df["UID"] = []
@@ -107,9 +108,13 @@ class DFObjectifier(object):
             #_df_ = _df_.query(query)
         _df_ = _df_.reset_index().set_index("calc_line_idx")
         obj = {}
+        resobj = {}
         idxgroups = _df_.groupby(level=['calc_line_idx'])
         for idxname, idxgroup in idxgroups:
             obj[idxname] = []
+            if res:
+                #resobj[idxname] = []
+                resobj[idxname] = DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0],lidx=idxname)
             grouped = idxgroup.set_index(['ocr','ocr_profile']).groupby(level=['ocr', 'ocr_profile'])
             for name, group in grouped:
                 #Needs to be copied cos of the addition of "UID"
@@ -119,7 +124,10 @@ class DFObjectifier(object):
                     cpgroup["UID"] = np.arange(0,size)
                     obj[idxname].append(DFSelObj(name,cpgroup,self.idxkeys,self.imkeys))
                     del cpgroup
-        return obj
+        if res:
+            return obj, resobj
+        else:
+            return obj
 
     def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False, empty=False):
         """
@@ -188,7 +196,7 @@ class DFObjectifier(object):
                 self.df.update(new_df)
         return
 
-    def clean_data(self, outliercleaner = True,iqrmul=2.0):
+    def clean_data(self, outliercleaner = True,iqrmul=2.0, outlierex = None):
         """
         Unspaces the words in the dataset based on a pivot
         :param sort_by: Set the pivot selectin order
@@ -197,6 +205,8 @@ class DFObjectifier(object):
         :param padrb: Special padding for right border
         :return:
         """
+        if outlierex is None:
+            outlierex = ["\"","§","'","*","A","O","Y","°","^","`"]
         linedict = {}
         tdf = self.df.reset_index().loc(axis=1)[
             "ocr", "ocr_profile", 'calc_char','line_idx', 'word_idx', 'char_idx', "line_x0", "line_x1", "line_y0", "line_y1","word_x0", "word_x1", "word_y0", "word_y1", "x_wconf", "x_confs"]
@@ -224,15 +234,16 @@ class DFObjectifier(object):
                             wordidxarr = linedict[line]["orig"][ocr]["word_idx"]
                             outlierwidx = wordidxarr[outlierpos]
                             if len(np.where(np.array(wordidxarr) == outlierwidx)[0]) == 1:
-                                if outlierpos == 0:
-                                    minx0 = np.array(linf[outlierpos + 1:]).min()
-                                else:
-                                    minx0 = np.array(linf[:outlierpos]).min()
-                                linf[outlierpos] = minx0
-                                #linedict[line]["orig"][ocr]["calc_char"][outlierpos] = "_"
-                                linedict[line]["orig"][ocr]["x_confs"][outlierpos] = 49.0
-                                linedict[line]["orig"][ocr]["line_y0"] = [minx0]*len(linedict[line]["orig"][ocr]["line_y0"])
-                                print(f"Clean data from outlier in {ocr[0]} ✓")
+                                if not linedict[line]["orig"][ocr]["calc_char"][outlierpos] in outlierex:
+                                    if outlierpos == 0:
+                                        minx0 = np.array(linf[outlierpos + 1:]).min()
+                                    else:
+                                        minx0 = np.array(linf[:outlierpos]).min()
+                                    linf[outlierpos] = minx0
+                                    #linedict[line]["orig"][ocr]["calc_char"][outlierpos] = "_"
+                                    linedict[line]["orig"][ocr]["x_confs"][outlierpos] = 49.0
+                                    linedict[line]["orig"][ocr]["line_y0"] = [minx0]*len(linedict[line]["orig"][ocr]["line_y0"])
+                                    print(f"Clean data from outlier in {ocr[0]} ✓")
                 if tdf.empty:
                     tdf = pd.DataFrame.from_dict(linedict[line]["orig"][ocr])
                 else:
@@ -1042,11 +1053,29 @@ class DFResObj(DFSelObj):
     It serves to store the result.
     """
 
-    def __init__(self, name, df, idxkeys, imkeys,maxuid):
+    def __init__(self, name, df, idxkeys, imkeys,maxuid, lidx=None):
         DFSelObj.__init__(self,name,df,idxkeys,imkeys)
         self.result = True
         self.empty = False
         self.maxuid = maxuid
+        self.lineidx = int(lidx)
+        self.wordidx = 0
+        self.charidx = 0
+
+    def append(self,lineobj,UID):#
+        if UID == -1:
+            self.wordidx += 1
+            self.charidx = 0
+            return
+        self.data["ocr"].append(lineobj.name[0])
+        self.data["ocr_profile"].append(lineobj.name[1])
+        self.data["UID"].append(UID)
+        self.data["line_idx"].append(self.lineidx)
+        self.data["word_idx"].append(self.wordidx)
+        self.data["char_idx"].append(self.charidx)
+        for item in ["char","x_confs","x_wconf","line_x0","line_x1","line_y0","line_y1","word_x0","word_x1","word_y0","word_y1"]:
+            self.data[item].append(lineobj.data[item][UID])
+        self.charidx += 1
 
     def text(self,pos,val=None,cmd="insert",insertfront=False):
         if cmd == "insert":
@@ -1064,7 +1093,39 @@ class DFResObj(DFSelObj):
         if cmd == "replace":
             self.data["calc_char"][pos] = val
 
-    def update_df(self,col=None):
+    def update_textspace(self, text, wc=None, widx=None):
+        # wc = wildcards
+        if widx is not None:
+            prevtxt = self.word["text"]
+            if self.data["word_match"]==[]:
+                self.data["word_match"] = [widx] * len(text)
+            else:
+                if max(set(self.data["word_match"])) > widx:
+                    nextidx = min(set(self.data["word_match"]).difference(x for x in np.arange(0.0,widx)))
+                    pos = min(np.where(np.array(list(self.data["word_match"])) == nextidx)[0])
+                    arr = [widx] * len(text)
+                    self.data["word_match"] = self.data["word_match"][:pos]+arr+self.data["word_match"][pos:]
+                else:
+                    self.data["word_match"].extend([widx]*len(text))
+                textarr = []
+                for idx in prevtxt:
+                    if widx != idx:
+                        textarr.append(prevtxt[idx])
+                    else:
+                        textarr.append(text)
+                        text = ""
+                text = "".join(textarr)+text
+        self.data["calc_char"] = list(text)
+        self.data["UID"] = [-1]*len(text)
+        self.data["char_weight"] = [-1] * len(text)
+        self.data["calc_word_idx"] = [-1] * len(text)
+        if widx is not None:
+            self.data["calc_word_idx"] = self.data["word_match"]
+
+    def update_df(self,lineobj,res,col=None):
+
+
+        self.orig_df.append()
         if col is not None:
             keys = ["UID"]+col
         else:
@@ -1082,10 +1143,7 @@ class DFResObj(DFSelObj):
                     else:
                         dfdict[col].append(self.data[col][idx])
         df = pd.DataFrame.from_dict(dfdict).set_index("UID")
-        orig_df = self.orig_df
-        orig_df = orig_df.reset_index().set_index("UID")
-        orig_df.update(df)
-        self.orig_df = orig_df
+        self.orig_df.reset_index().set_index("UID").update(df)
 
 class DFEmptyObj(DFSelObj):
     """
