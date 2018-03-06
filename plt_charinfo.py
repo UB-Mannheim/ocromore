@@ -25,9 +25,9 @@ def charinfo_process():
     # Delete old db
     DELOLDSQL = True
     # Do preprocessing steps, match lines, unspace words and match words
-    PREPROCESSING = False
+    PREPROCESSING = True
     # Testbench for code changes
-    WORKWITHOBJ = True
+    WORKWITHOBJ = False
     # Plot results
     PLOT = False
 
@@ -40,12 +40,12 @@ def charinfo_process():
 
     # Read hocr and create sql-db
     if HOCR2SQL:
-        filetypes = ["hocr", "xml"]
+        filetypes = ["hocr","xml"]
         files = chain.from_iterable(
             glob.iglob("./Testfiles/long/default/**/*." + filetype, recursive=True) for filetype in filetypes)
         dbnamelast, con = "", None
         for file in files:
-            print(f"\nConvert to sql:\t{file}")
+            print(f"\nConvert to SQL:\t{file}")
             fpath = Path(file)
             ocr_profile = fpath.parts[-2]
             dbname = fpath.name.split("_")[1]
@@ -63,22 +63,27 @@ def charinfo_process():
     dfXO = None
     # Preprocess data
     if PREPROCESSING:
+        filetypes = ["xml"]
+        files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*." + filetype, recursive=True) for filetype in filetypes)
+        for file in files:
+            fpath = Path(file)
+            dbAtab = (dbdir + f'/{fpath.name.split("_")[1]}.db', fpath.name.split(".")[0])
+            ##dbAtab = (dbdir + f'/1965.db', "0010_1965_230-6_B_058_0045")
+            # Get db-Object from db
+            dfXO = DFObjectifier(*dbAtab)
 
-        # Get db-Object from db
-        dfXO = DFObjectifier(*dbAtab)
+            dfXO.clean_data()
 
-        dfXO.clean_data()
+            # Linematcher with queries
+            if dfXO.match_line(force=True):
+                # Unspacing
+                dfXO.unspace()
 
-        # Linematcher with queries
-        if dfXO.match_line(force=True):
-            # Unspacing
-            dfXO.unspace()
+                # Match words or segments of words into "word_match"
+                dfXO.match_words()
 
-            # Match words or segments of words into "word_match"
-            dfXO.match_words()
-
-            # Write the calulated values into the db
-            dfXO.write2sql()
+                # Write the calulated values into the db
+                dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
@@ -90,7 +95,7 @@ def charinfo_process():
 
         dfResO[7.0].append(dfSelO[7.0][0],2)
         dfResO[7.0].append(dfSelO[7.0][1],5)
-        dfResO[7.0].append(dfSelO[7.0][0], -1)
+        dfResO[7.0].append(dfSelO[7.0][0],-1)
         dfResO[7.0].append(dfSelO[7.0][2], 3)
 
         # Test function

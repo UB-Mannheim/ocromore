@@ -18,6 +18,7 @@ def get_xml_document(fpath):
             print(f"Not valid with:\t{VALIDXML[0]}\t✗")
             return
         line = None
+        word = None
         # Iterate line for line through the parsed xml
         # Search for the tags "line" (contains line coordinates)
         # and "charParams" (contains char, char_conf and coordinates)
@@ -39,8 +40,14 @@ def get_xml_document(fpath):
                     word.update_coordinates(item.attrib)
                     word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
-        line.words.append(word)
-    except Exception as ex:print("Parsing Exception:\t",ex,"\t✗")
+        if word is not None:
+            line.words.append(word)
+        if not doc.page:
+            raise EOFError
+    except EOFError:
+        print("Exception:\t\tThe file does not contain valid data!\t✗")
+    except Exception as ex:
+            print("Parsing Exception:\t",ex,"\t✗")
     return doc
 
 class Document():

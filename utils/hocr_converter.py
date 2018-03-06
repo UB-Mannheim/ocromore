@@ -282,7 +282,7 @@ class HocrConverter(object):
         # try to create a table
         try:
             df.to_sql(tablename, con)
-            print(f'SQLite directory:\t{con.url.database}')
+            print(f'SQLite directory:\t\t{con.url.database}')
             print(f'Create table:\t{tablename}\t✓')
 
         except:
@@ -292,7 +292,7 @@ class HocrConverter(object):
             df_old = df_old.combine_first(df)
             df_old.to_sql(tablename, con, if_exists='replace')
             df_old = None
-            print(f'SQLite directory:\t{con.url.database}')
+            print(f'DB directory:\t{con.url.database}')
             print(f'Update table:\t{tablename}\t✓')
 
         return 0
