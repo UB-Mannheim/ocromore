@@ -362,6 +362,10 @@ class DFObjectifier(object):
                     minx1 = curline[ocrO]["word_x1"][posx0]
                     diff = (curline[ocrO]["word_y1"][posx0]-curline[ocrO]["word_y0"][posx0])*pad
                     if diff > (minx1-minx0)/2: diff = (minx1-minx0)/2
+                    if diff < 0:
+                        print("Warning: X0 smaller than X1")
+                        diff = 0
+                        minx1=minx0
                     for ocrI in sorted(linedict[line]["orig"].keys(), key=lambda x: sort_by.index(x[0])):
                         x0arr = curline[ocrI]["word_x0"]
                         result = np.where((np.array(list(x0arr))>=minx0-diff)&(np.array(list(x0arr)) <= minx1-(diff*padrb)))[0]

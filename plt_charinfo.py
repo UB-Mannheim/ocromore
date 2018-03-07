@@ -25,9 +25,9 @@ def charinfo_process():
     # Delete old db
     DELOLDSQL = True
     # Do preprocessing steps, match lines, unspace words and match words
-    PREPROCESSING = True
+    PREPROCESSING = False
     # Testbench for code changes
-    WORKWITHOBJ = False
+    WORKWITHOBJ = True
     # Plot results
     PLOT = False
 
@@ -68,7 +68,7 @@ def charinfo_process():
         for file in files:
             fpath = Path(file)
             dbAtab = (dbdir + f'/{fpath.name.split("_")[1]}.db', fpath.name.split(".")[0])
-            ##dbAtab = (dbdir + f'/1965.db', "0010_1965_230-6_B_058_0045")
+            #dbAtab = (dbdir + f'/1961.db', "0448_1961_230-6_B_054_0650")
             # Get db-Object from db
             dfXO = DFObjectifier(*dbAtab)
 
