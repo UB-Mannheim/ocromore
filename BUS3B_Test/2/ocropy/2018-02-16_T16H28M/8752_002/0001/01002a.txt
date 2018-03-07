@@ -1,0 +1,1 @@
+Visual C++ is available in two versions. If you would simply like to explore Windows programming in

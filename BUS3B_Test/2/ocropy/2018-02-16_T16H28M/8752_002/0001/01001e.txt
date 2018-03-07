@@ -1,0 +1,1 @@
+Class Library is scalable to the Win324TM API and, in the future, to Windows NTTM and other extensions

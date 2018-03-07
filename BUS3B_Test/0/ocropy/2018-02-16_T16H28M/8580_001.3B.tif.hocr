@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>OCR Results</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="ocr-system" content="ocropy-1.3.3" />
+<meta name="ocr-capabilities" content="ocr_line ocr_page" />
+</head>
+<body>
+
+<div class='ocr_page' title='image /media/sf_ShareVB/many_years_firmprofiles_output/bus.3B//0/ocropy/2018-02-16_T16H28M/8580_001/0001.bin.png; bbox 0 0 2560 3300'>
+    <span class='ocr_line' title='bbox 315 670 642 715'><br />
+        <span class='ocrx_word' title='bbox 315 670 442 715; x_wconf 94.1575251753; x_confs 96.8880672819 98.6025759275 98.5590438417'>May</span>
+        <span class='ocrx_word' title='bbox 442 670 540 715; x_wconf 98.0018252446; x_confs 99.9370926421 99.3546492762 98.700478664'>16,</span>
+        <span class='ocrx_word' title='bbox 540 670 642 715; x_wconf 97.1321763856; x_confs 99.8948951778 99.4770990767 99.5961025695 98.1418789805'>1991</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 902 691 947'><br />
+        <span class='ocrx_word' title='bbox 316 902 422 947; x_wconf 84.4540180968; x_confs 98.5505532548 99.6438528334 86.0024332086'>Mr,</span>
+        <span class='ocrx_word' title='bbox 422 902 558 947; x_wconf 96.6294741045; x_confs 99.5444060652 99.493610339 98.9348873717 99.3415749493 99.2697803893'>Craig</span>
+        <span class='ocrx_word' title='bbox 558 902 691 947; x_wconf 95.5186916548; x_confs 99.2065758746 99.1713145527 99.1510050694 99.1002809592 98.8074811866'>Schub</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 960 884 1003'><br />
+        <span class='ocrx_word' title='bbox 316 960 524 1003; x_wconf 94.5143080307; x_confs 99.3841570269 99.5457775795 99.0939747417 98.7113466677 99.4396851175 99.3454624175 99.4447483651 99.4153859098'>Director</span>
+        <span class='ocrx_word' title='bbox 524 960 588 1003; x_wconf 98.9730148614; x_confs 99.444873426 99.5255074008'>of</span>
+        <span class='ocrx_word' title='bbox 588 960 884 1003; x_wconf 89.8950627982; x_confs 99.3022952877 98.8229912796 99.6456212378 98.2166495575 99.8570628097 99.3446223819 98.7188227152 98.5639906276 98.7493994412 99.2280412128 98.9611982022'>Development</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 1016 925 1061'><br />
+        <span class='ocrx_word' title='bbox 316 1016 572 1061; x_wconf 91.9244113343; x_confs 98.3076852059 98.6486652097 99.4710716652 99.6445818273 99.423867613 99.5491694866 99.8311294254 98.8174396843 99.4536581259 98.4811360456'>PacifiCare</span>
+        <span class='ocrx_word' title='bbox 572 1016 740 1061; x_wconf 94.2447763729; x_confs 99.4831351976 98.5050137563 99.1044250514 98.2414301848 99.7934134205 98.9828349678'>Health</span>
+        <span class='ocrx_word' title='bbox 740 1016 925 1061; x_wconf 91.6510256444; x_confs 99.5008617479 98.5970676719 98.501531565 99.0938254797 98.1940715714 98.7171869356 98.7367598452'>Systems</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 1074 712 1112'><br />
+        <span class='ocrx_word' title='bbox 316 1074 465 1112; x_wconf 94.3203495009; x_confs 96.8662649625 99.4734045232 98.5764092325 99.3008281873'>5995</span>
+        <span class='ocrx_word' title='bbox 465 1074 604 1112; x_wconf 93.1344100305; x_confs 99.5652156709 96.6277149235 98.5431626125 99.5885679791 98.6426738346'>Plaza</span>
+        <span class='ocrx_word' title='bbox 604 1074 712 1112; x_wconf 96.3210930542; x_confs 98.9423765403 99.4541029543 99.5172188244 99.5280620608 98.8263104404'>Drive</span>
+    </span>
+    <span class='ocr_line' title='bbox 315 1133 794 1178'><br />
+        <span class='ocrx_word' title='bbox 315 1133 547 1178; x_wconf 93.1189125564; x_confs 99.3276602426 98.4481236038 99.1905711035 99.1703944976 98.6784628927 99.112294189 99.4139279337 99.5659122444'>Cypress,</span>
+        <span class='ocrx_word' title='bbox 547 1133 646 1178; x_wconf 93.5703219442; x_confs 99.4001322892 94.1350074586'>CA</span>
+        <span class='ocrx_word' title='bbox 646 1133 794 1178; x_wconf 91.8629485674; x_confs 99.7143974302 99.1075384622 98.4405416046 99.7573220777 94.6579392598'>90630</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 1249 571 1295'><br />
+        <span class='ocrx_word' title='bbox 316 1249 449 1295; x_wconf 96.6492538892; x_confs 99.2753570254 98.7307828137 99.0173819965 99.584793742'>Dear</span>
+        <span class='ocrx_word' title='bbox 449 1249 571 1295; x_wconf 87.7943986683; x_confs 99.2956220766 99.4540110744 98.7723993838 99.5477030637 98.987217144 91.3415636315'>Craig:</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 1365 2262 1410'><br />
+        <span class='ocrx_word' title='bbox 316 1365 545 1410; x_wconf 93.4015414941; x_confs 99.6411302766 99.2554866276 99.2701219262 99.2422404137 99.0066363947 99.0634472139 98.976070477 98.750160463'>Enclosed</span>
+        <span class='ocrx_word' title='bbox 545 1365 604 1410; x_wconf 98.5975729973; x_confs 99.51366624 99.0794297132'>is</span>
+        <span class='ocrx_word' title='bbox 604 1365 706 1410; x_wconf 97.1631408606; x_confs 98.9717039808 99.3154741508 98.849295252'>one</span>
+        <span class='ocrx_word' title='bbox 706 1365 799 1410; x_wconf 96.5234804063; x_confs 99.1311543539 98.5184348608 98.8337573082'>set</span>
+        <span class='ocrx_word' title='bbox 799 1365 863 1410; x_wconf 98.9586239578; x_confs 99.4007437633 99.5552147914'>of</span>
+        <span class='ocrx_word' title='bbox 863 1365 955 1410; x_wconf 97.5976574181; x_confs 99.6348974648 99.1271060666 98.8178698736'>the</span>
+        <span class='ocrx_word' title='bbox 955 1365 1073 1410; x_wconf 92.3139603834; x_confs 99.3982113374 98.5914444966 94.1997139732'>new</span>
+        <span class='ocrx_word' title='bbox 1073 1365 1229 1410; x_wconf 94.6758658611; x_confs 99.0928850954 98.6253669496 99.1527960542 98.8104834525 98.8781177855'>pages</span>
+        <span class='ocrx_word' title='bbox 1229 1365 1310 1410; x_wconf 98.6003396922; x_confs 99.6376945995 99.5597366745 99.3964792786'>for</span>
+        <span class='ocrx_word' title='bbox 1310 1365 1405 1410; x_wconf 97.1169223773; x_confs 99.6370442358 98.6708986019 98.7836325348'>the</span>
+        <span class='ocrx_word' title='bbox 1405 1365 1541 1410; x_wconf 88.9512945244; x_confs 99.6724653216 90.8689531685 98.2113198678'>HMO</span>
+        <span class='ocrx_word' title='bbox 1541 1365 1753 1410; x_wconf 92.7111251006; x_confs 98.8551013774 98.8825918049 99.6137041038 99.4013128602 99.2045844593 99.2522211186 99.0823141139 98.182389319'>National</span>
+        <span class='ocrx_word' title='bbox 1753 1365 1970 1410; x_wconf 90.3296591267; x_confs 97.431245623 98.6874503972 99.1742139227 96.9346535366 99.1050749945 99.0930310609 99.5069353403'>Network</span>
+        <span class='ocrx_word' title='bbox 1970 1365 2114 1410; x_wconf 95.0991459061; x_confs 99.4319513679 98.7376745095 99.8468107693 98.5591943017 98.4320244686'>Sales</span>
+        <span class='ocrx_word' title='bbox 2114 1365 2262 1410; x_wconf 87.2312886187; x_confs 98.8280977719 99.4696579549 99.0144891265 98.7992790492 98.7950646593 99.676079105 92.1133346917'>Binder.</span>
+    </span>
+    <span class='ocr_line' title='bbox 315 1423 2265 1468'><br />
+        <span class='ocrx_word' title='bbox 315 1423 397 1468; x_wconf 97.3629084132; x_confs 99.2841411211 98.064914813'>As</span>
+        <span class='ocrx_word' title='bbox 397 1423 499 1468; x_wconf 94.4530602152; x_confs 98.4231528139 98.906753888 97.0270465644'>you</span>
+        <span class='ocrx_word' title='bbox 499 1423 596 1468; x_wconf 95.7688238663; x_confs 97.3287676642 99.2784556453 99.1123826361'>can</span>
+        <span class='ocrx_word' title='bbox 596 1423 709 1468; x_wconf 87.6754786004; x_confs 90.7441810739 98.2283544254 98.7778216389 99.5779191353'>see,</span>
+        <span class='ocrx_word' title='bbox 709 1423 791 1468; x_wconf 97.3652956306; x_confs 98.4605786126 98.8875923771'>we</span>
+        <span class='ocrx_word' title='bbox 791 1423 917 1468; x_wconf 97.0003322503; x_confs 98.9522086047 99.4770002068 99.5543489419 98.983957367'>have</span>
+        <span class='ocrx_word' title='bbox 917 1423 1042 1468; x_wconf 95.8005557586; x_confs 99.1788420742 98.9159351699 98.7608305549 98.8776190444'>been</span>
+        <span class='ocrx_word' title='bbox 1042 1423 1168 1468; x_wconf 95.2003608254; x_confs 99.0239614829 97.9351785143 98.9714665324 99.1858165826'>busy</span>
+        <span class='ocrx_word' title='bbox 1168 1423 1419 1468; x_wconf 92.1124034094; x_confs 98.9737008413 99.4675872541 98.4550497941 98.9879056273 99.4344840601 98.6844826366 99.6033157189 99.4343214584 98.7871793533'>expanding</span>
+        <span class='ocrx_word' title='bbox 1419 1423 1506 1468; x_wconf 97.8747828089; x_confs 99.5573412235 99.0807453024 99.2220639612'>the</span>
+        <span class='ocrx_word' title='bbox 1506 1423 1720 1468; x_wconf 92.6596747582; x_confs 98.9079141403 98.9328287088 99.1986711747 97.4748048088 98.9644456773 99.7114514262 99.242304038'>Network</span>
+        <span class='ocrx_word' title='bbox 1720 1423 1783 1468; x_wconf 97.9286651285; x_confs 98.9756324599 98.9421968768'>to</span>
+        <span class='ocrx_word' title='bbox 1783 1423 1921 1468; x_wconf 96.2093995307; x_confs 98.7248429602 98.8723391341 99.5218003084 99.0371239793'>make</span>
+        <span class='ocrx_word' title='bbox 1921 1423 1968 1468; x_wconf 98.9754559952; x_confs 99.7421985809 99.231275632'>it</span>
+        <span class='ocrx_word' title='bbox 1968 1423 2009 1468; x_wconf 98.6657850658; x_confs 98.6657850658'>a</span>
+        <span class='ocrx_word' title='bbox 2009 1423 2162 1468; x_wconf 93.9359721886; x_confs 99.1249431361 98.7818477168 98.4941815452 99.404895036 98.7802275294 99.1935581295'>better</span>
+        <span class='ocrx_word' title='bbox 2162 1423 2265 1468; x_wconf 94.6489244775; x_confs 99.1238444014 98.7717292776 99.6174249661 98.4187795334 98.6033345587'>sales</span>
+    </span>
+    <span class='ocr_line' title='bbox 313 1481 1236 1525'><br />
+        <span class='ocrx_word' title='bbox 313 1481 428 1525; x_wconf 96.8389997654; x_confs 98.9747558464 99.4447077164 99.3589489511 99.023253538'>tool</span>
+        <span class='ocrx_word' title='bbox 428 1481 508 1525; x_wconf 98.355507066; x_confs 99.684885233 99.36679008 99.2951663674'>for</span>
+        <span class='ocrx_word' title='bbox 508 1481 630 1525; x_wconf 96.4795846853; x_confs 98.3235717425 99.1910991579 99.4484911427 99.4733806019'>your</span>
+        <span class='ocrx_word' title='bbox 630 1481 878 1525; x_wconf 92.2096064407; x_confs 98.9947100016 98.777773069 99.012892054 99.5727315417 98.8384691002 99.2924229571 99.5537702893 98.9737318466 98.9129161897'>marketing</span>
+        <span class='ocrx_word' title='bbox 878 1481 1236 1525; x_wconf 77.4669411216; x_confs 99.5379289106 98.9675367587 98.2961613806 99.2937475433 98.453471728 98.5853270494 98.7164848292 98.9057305101 99.2205052949 99.1421671742 99.4162421749 99.0333923092 98.1471155033 98.6629489976 98.8650894701 91.6956417595'>representatives.</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 1596 2264 1640'><br />
+        <span class='ocrx_word' title='bbox 316 1596 486 1640; x_wconf 92.7642886137; x_confs 98.7902998572 99.0467204738 98.4367518908 98.7996214853 98.783337765 98.6802321635'>Please</span>
+        <span class='ocrx_word' title='bbox 486 1596 717 1640; x_wconf 92.6801199302; x_confs 98.9426824993 99.1878851503 99.2158794054 99.4136963223 99.7983471312 99.3851528475 99.3528734837 99.3226499284 99.1474104704 98.6647235964'>distribute</span>
+        <span class='ocrx_word' title='bbox 717 1596 858 1640; x_wconf 94.6395108353; x_confs 99.5772102885 99.0378378154 98.5422507517 98.6096522882 98.7573610763'>these</span>
+        <span class='ocrx_word' title='bbox 858 1596 969 1640; x_wconf 95.9346002548; x_confs 98.9273947688 98.7826132171 99.3647962689 98.7974284617'>sets</span>
+        <span class='ocrx_word' title='bbox 969 1596 1031 1640; x_wconf 98.6852114293; x_confs 99.3204993878 99.3603657226'>of</span>
+        <span class='ocrx_word' title='bbox 1031 1596 1252 1640; x_wconf 91.4280704374; x_confs 98.7879256642 98.8030361155 99.2527076843 98.6349532067 99.6677979638 99.0961678036 98.85579942 98.9431074927 99.0450486547'>materials</span>
+        <span class='ocrx_word' title='bbox 1252 1596 1313 1640; x_wconf 97.7191795538; x_confs 98.9145445209 98.7915174934'>to</span>
+        <span class='ocrx_word' title='bbox 1313 1596 1537 1640; x_wconf 93.1300704324; x_confs 98.8316055404 99.7010959661 98.8419155292 99.8324360155 98.6615350287 99.2485815294 99.3736327073 98.4323794853'>everyone</span>
+        <span class='ocrx_word' title='bbox 1537 1596 1599 1640; x_wconf 97.8144302219; x_confs 98.6010676634 99.2022019029'>at</span>
+        <span class='ocrx_word' title='bbox 1599 1596 1713 1640; x_wconf 96.6328286523; x_confs 98.5334097086 99.220206352 99.4289941954 99.4095273038'>your</span>
+        <span class='ocrx_word' title='bbox 1713 1596 1844 1640; x_wconf 92.7159127731; x_confs 99.3649772779 94.9934534657 98.2261821009'>HMO</span>
+        <span class='ocrx_word' title='bbox 1844 1596 1908 1640; x_wconf 98.3753974861; x_confs 99.4725564655 98.8970234421'>to</span>
+        <span class='ocrx_word' title='bbox 1908 1596 2066 1640; x_wconf 95.2592744178; x_confs 98.1229832761 99.0451880334 99.2149760606 98.7929406342'>whom</span>
+        <span class='ocrx_word' title='bbox 2066 1596 2167 1640; x_wconf 96.0738586197; x_confs 98.585304382 99.1332187741 98.304600905'>you</span>
+        <span class='ocrx_word' title='bbox 2167 1596 2264 1640; x_wconf 96.8519041013; x_confs 99.2015449566 99.0905482722 99.5199992259 99.0027212636'>have</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 1654 798 1701'><br />
+        <span class='ocrx_word' title='bbox 316 1654 464 1701; x_wconf 96.1296254579; x_confs 99.2048761653 99.593018165 99.6199219896 98.7857186052 98.8678241133'>given</span>
+        <span class='ocrx_word' title='bbox 464 1654 508 1701; x_wconf 99.0348238067; x_confs 99.0348238067'>a</span>
+        <span class='ocrx_word' title='bbox 508 1654 649 1701; x_wconf 96.1589842068; x_confs 99.3483033204 99.0227393953 99.8442043605 98.9386521017 98.9476822577'>Sales</span>
+        <span class='ocrx_word' title='bbox 649 1654 798 1701; x_wconf 79.2605304664; x_confs 98.4356025769 99.6406714866 98.8912508142 98.9874370316 98.5501651965 99.7035708297 84.0160202894'>Binder.</span>
+    </span>
+    <span class='ocr_line' title='bbox 314 1769 2265 1815'><br />
+        <span class='ocrx_word' title='bbox 314 1769 415 1815; x_wconf 95.01641719; x_confs 96.413474377 98.5509730916'>We</span>
+        <span class='ocrx_word' title='bbox 415 1769 504 1815; x_wconf 97.5191130935; x_confs 99.0585743102 99.546428567 98.8944652066'>are</span>
+        <span class='ocrx_word' title='bbox 504 1769 710 1815; x_wconf 93.8493262362; x_confs 98.8865648676 98.644099699 98.9958193993 99.2110841208 99.6281231716 99.5258114617 98.793422'>working</span>
+        <span class='ocrx_word' title='bbox 710 1769 782 1815; x_wconf 98.0903683934; x_confs 99.0745860654 99.0065891657'>on</span>
+        <span class='ocrx_word' title='bbox 782 1769 826 1815; x_wconf 98.7015258002; x_confs 98.7015258002'>a</span>
+        <span class='ocrx_word' title='bbox 826 1769 931 1815; x_wconf 93.6923151019; x_confs 99.5043075744 98.9916084201 95.118218509'>few</span>
+        <span class='ocrx_word' title='bbox 931 1769 1065 1815; x_wconf 96.5331768247; x_confs 98.9079040756 99.2997508951 99.3346532835 98.9456396545'>more</span>
+        <span class='ocrx_word' title='bbox 1065 1769 1180 1815; x_wconf 92.1040179812; x_confs 99.0898037997 98.8154413625 94.0642924672'>new</span>
+        <span class='ocrx_word' title='bbox 1180 1769 1335 1815; x_wconf 94.6210442018; x_confs 98.7449375479 98.9858830325 99.2766862693 98.543755943 98.9516981249'>pages</span>
+        <span class='ocrx_word' title='bbox 1335 1769 1446 1815; x_wconf 96.6384612862; x_confs 99.6394462581 99.1336296793 98.7557499053 99.0684349312'>that</span>
+        <span class='ocrx_word' title='bbox 1446 1769 1540 1815; x_wconf 94.6274415371; x_confs 98.1240947172 97.9326653563 99.4181490036 99.0485649123'>will</span>
+        <span class='ocrx_word' title='bbox 1540 1769 1613 1815; x_wconf 97.4813328351; x_confs 98.5309195418 98.9347641212'>be</span>
+        <span class='ocrx_word' title='bbox 1613 1769 1730 1815; x_wconf 95.4869060432; x_confs 98.8569221566 98.7236290311 98.6161838907 99.2127373964'>sent</span>
+        <span class='ocrx_word' title='bbox 1730 1769 1792 1815; x_wconf 98.0388379069; x_confs 99.1673213413 98.8620410241'>to</span>
+        <span class='ocrx_word' title='bbox 1792 1769 1895 1815; x_wconf 95.6280433712; x_confs 98.9450526435 99.0536471765 97.5709907615'>you</span>
+        <span class='ocrx_word' title='bbox 1895 1769 2014 1815; x_wconf 95.5250810631; x_confs 98.4010987539 99.4685996461 99.3823763405 99.0467585489 99.1475116703'>later</span>
+        <span class='ocrx_word' title='bbox 2014 1769 2117 1815; x_wconf 97.4133907881; x_confs 99.5934209377 99.2377917684 99.5634518861 98.9944787678'>this</span>
+        <span class='ocrx_word' title='bbox 2117 1769 2265 1815; x_wconf 84.8721673667; x_confs 98.8423224242 99.3193723528 99.3731130782 99.2141341435 99.0355508919 88.5431201192'>month.</span>
+    </span>
+    <span class='ocr_line' title='bbox 314 1828 2266 1875'><br />
+        <span class='ocrx_word' title='bbox 314 1828 488 1875; x_wconf 95.544023553; x_confs 99.8522144151 98.8437170457 98.9259826749 99.0417140588 98.8025688'>These</span>
+        <span class='ocrx_word' title='bbox 488 1828 655 1875; x_wconf 94.8949509718; x_confs 98.5782600693 99.3041346198 99.1605322708 98.789802394 98.9563482087'>pages</span>
+        <span class='ocrx_word' title='bbox 655 1828 757 1875; x_wconf 97.0707368266; x_confs 98.8883780559 99.4396055691 98.7151203776'>are</span>
+        <span class='ocrx_word' title='bbox 757 1828 851 1875; x_wconf 98.8581611094; x_confs 99.6761194723 99.5733638685 99.6043318895'>for</span>
+        <span class='ocrx_word' title='bbox 851 1828 1123 1875; x_wconf 90.5848357027; x_confs 99.110354534 98.9086538522 98.4760313122 99.0081735776 99.5578296797 99.4857755983 99.3074689072 98.9021315233 98.470813701 98.9393587876'>Physicians</span>
+        <span class='ocrx_word' title='bbox 1123 1828 1301 1875; x_wconf 94.3698247978; x_confs 99.2748300119 98.5829620593 99.2419329703 98.5949677158 99.8517380708 98.6930433102'>Health</span>
+        <span class='ocrx_word' title='bbox 1301 1828 1526 1875; x_wconf 94.4959365681; x_confs 99.5556498295 98.9272138971 99.7961453591 99.4143871664 99.5138506835 99.5589026755 98.6076981951 98.9906061499'>Services</span>
+        <span class='ocrx_word' title='bbox 1526 1828 1602 1875; x_wconf 98.747078599; x_confs 99.2515065798 99.4917679357'>of</span>
+        <span class='ocrx_word' title='bbox 1602 1828 1911 1875; x_wconf 91.4108002304; x_confs 99.7565603203 99.297005023 98.4218674817 99.1622971022 98.2803492879 99.3988653271 99.4476373049 99.5662040687 99.5692961186 98.959042096 99.2079002897'>Connecticut</span>
+        <span class='ocrx_word' title='bbox 1911 1828 2023 1875; x_wconf 97.0784951345; x_confs 98.6256223994 99.4371282553 98.9884913012'>and</span>
+        <span class='ocrx_word' title='bbox 2023 1828 2082 1875; x_wconf 98.5344673068; x_confs 98.5344673068'>a</span>
+        <span class='ocrx_word' title='bbox 2082 1828 2209 1875; x_wconf 96.2135453127; x_confs 98.8645915701 98.7781575477 98.5222950809'>map</span>
+        <span class='ocrx_word' title='bbox 2209 1828 2266 1875; x_wconf 98.7426432813; x_confs 99.6186817566 99.5293511815 99.5893242213'>for</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 1888 640 1925'><br />
+        <span class='ocrx_word' title='bbox 316 1888 640 1925; x_wconf 86.0919393113; x_confs 99.7201096652 99.4229814559 98.554950421 98.8434114316 98.4053810279 99.5298640449 99.4216413972 99.1989748164 99.824989565 98.9360821693 99.5007157886 98.5999992685 95.2377927757'>ConnectiCare.</span>
+    </span>
+    <span class='ocr_line' title='bbox 317 2003 2267 2048'><br />
+        <span class='ocrx_word' title='bbox 317 2003 485 2048; x_wconf 92.0614238785; x_confs 98.7796158877 98.8624162539 98.1302945741 98.6160186797 98.6474513105 98.7512716885'>Please</span>
+        <span class='ocrx_word' title='bbox 485 2003 578 2048; x_wconf 97.503709504; x_confs 99.6305097848 98.9677817472 99.4462536282 99.4366588184'>call</span>
+        <span class='ocrx_word' title='bbox 578 2003 659 2048; x_wconf 97.5513732218; x_confs 98.7952119434 98.7409929114'>me</span>
+        <span class='ocrx_word' title='bbox 659 2003 704 2048; x_wconf 98.9513946095; x_confs 99.3335227408 99.6153079839'>if</span>
+        <span class='ocrx_word' title='bbox 704 2003 802 2048; x_wconf 95.6556652418; x_confs 98.3976099414 99.2235955236 97.974078279'>you</span>
+        <span class='ocrx_word' title='bbox 802 2003 924 2048; x_wconf 96.1080880949; x_confs 98.5853823829 99.3829442183 99.4905213763 98.5947629517'>have</span>
+        <span class='ocrx_word' title='bbox 924 2003 1023 2048; x_wconf 97.5656397753; x_confs 99.0632220894 99.2445176616 99.2379814247'>any</span>
+        <span class='ocrx_word' title='bbox 1023 2003 1282 2048; x_wconf 69.4315554324; x_confs 97.5135577988 98.32545065 98.5456059831 98.3190604548 99.5449507315 99.5350195802 99.1782810031 98.972904461 99.0886052974 77.5531090499'>questions.</span>
+        <span class='ocrx_word' title='bbox 1282 2003 1312 2048; x_wconf 56.6071665937; x_confs 56.6071665937'>l</span>
+        <span class='ocrx_word' title='bbox 1312 2003 1421 2048; x_wconf 89.9672597329; x_confs 97.9214890195 97.6914648913 95.5071363285 98.4722901887'>look</span>
+        <span class='ocrx_word' title='bbox 1421 2003 1616 2048; x_wconf 92.2517688349; x_confs 99.6431078758 99.4934890703 99.2105272704 96.9852856999 98.9423408701 99.2555798159 98.4763758383'>forward</span>
+        <span class='ocrx_word' title='bbox 1616 2003 1676 2048; x_wconf 97.8872228277; x_confs 99.0722396051 98.8038861521'>to</span>
+        <span class='ocrx_word' title='bbox 1676 2003 1860 2048; x_wconf 93.7735600944; x_confs 98.6239049083 98.2684123107 99.1349695764 99.4798893374 99.5900552213 99.1932614083 99.3170832724'>hearing</span>
+        <span class='ocrx_word' title='bbox 1860 2003 1980 2048; x_wconf 96.8503539315; x_confs 99.229717332 99.3363376517 99.0780830709 99.1684940546'>from</span>
+        <span class='ocrx_word' title='bbox 1980 2003 2079 2048; x_wconf 96.5527410034; x_confs 98.6222464834 98.7880786376 99.1026294501'>you</span>
+        <span class='ocrx_word' title='bbox 2079 2003 2175 2048; x_wconf 96.6408363196; x_confs 98.9942235358 99.1410073155 98.4685400403'>and</span>
+        <span class='ocrx_word' title='bbox 2175 2003 2267 2048; x_wconf 96.6105547371; x_confs 98.5816486096 99.0047071885 99.4239798699 99.5592260424'>your</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 2064 763 2107'><br />
+        <span class='ocrx_word' title='bbox 316 2064 662 2107; x_wconf 64.6137982291; x_confs 92.4819554369 98.8970383133 99.7438196775 98.6918181783 98.4050544558 78.9462009264 98.4715028999 98.8149188397 99.4914249604 99.4398400854 99.4993305133 99.6008628079 98.3539548269 98.4498264019'>sales/services</span>
+        <span class='ocrx_word' title='bbox 662 2064 763 2107; x_wconf 93.0763347132; x_confs 99.533111987 98.3115869628 97.9290586457 98.64597895 98.4636693929'>reps.</span>
+    </span>
+    <span class='ocr_line' title='bbox 316 2179 539 2224'><br />
+        <span class='ocrx_word' title='bbox 316 2179 539 2224; x_wconf 90.9437103647; x_confs 99.5877635157 99.5982285489 98.9785087355 99.3593806288 98.567815905 99.5285932318 98.5520240622 98.6145071641 98.9062202739 98.8672221381'>Sincerely,</span>
+    </span>
+    <span class='ocr_line' title='bbox 318 2413 585 2450'><br />
+        <span class='ocrx_word' title='bbox 318 2413 498 2450; x_wconf 95.5549583066; x_confs 99.4132892095 99.2202709921 98.9936462417 99.0055982838 99.6548809755 99.1842530493'>Ronald</span>
+        <span class='ocrx_word' title='bbox 498 2413 585 2450; x_wconf 96.9632999389; x_confs 99.08151639 99.6081932404 99.495852232 98.7449066951'>Rice</span>
+    </span>
+    <span class='ocr_line' title='bbox 318 2471 741 2508'><br />
+        <span class='ocrx_word' title='bbox 318 2471 566 2508; x_wconf 91.8013400284; x_confs 99.3714832655 98.530728036 98.569167975 99.1290088611 98.762528444 99.6336667167 99.2520438495 99.4070461272 98.8368193144'>Executive</span>
+        <span class='ocrx_word' title='bbox 566 2471 741 2508; x_wconf 93.1748134459; x_confs 99.4478071684 99.0381923274 99.2525980831 98.1374650612 99.4075856533 99.2634499031 99.1024532919 99.3186023355'>Director</span>
+    </span>
+    <span class='ocr_line' title='bbox 318 2590 479 2634'><br />
+        <span class='ocrx_word' title='bbox 318 2590 479 2634; x_wconf 87.4740564037; x_confs 98.8607607252 99.8231922575 92.2682609937 98.9250180929 97.8039855989 99.2907605795'>RR:hvy</span>
+    </span>
+    <span class='ocr_line' title='bbox 318 2706 563 2742'><br />
+        <span class='ocrx_word' title='bbox 318 2706 563 2742; x_wconf 93.3703895589; x_confs 99.626109934 99.3741204486 99.5109178873 99.6248288442 99.2975946588 99.1247124839 99.0809074871 99.5037088217 98.9900536006 99.0336776109'>Enclosures</span>
+    </span>
+</div>
+</body>
+</html>
+

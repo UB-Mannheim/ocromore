@@ -1,83 +1,56 @@
 from utils.df_objectifier import DFObjectifier
 from pathlib import Path
 from n_dist_keying.database_handler import DatabaseHandler
-from ocr_validation.ocr_validator import OCRvalidator
 from utils.pycharm_handler import PycharmHandler
 from ocr_validation.isri_handler import IsriHandler
-
-DB_DIR = './Testfiles/sql/'
-NUMBER_OF_INPUTS = 3  # number of ocr inputs which will be compared, todo make this dynmically with maxlen or smth
-# keying mechanism
-DO_N_DIST_KEYING = False
-DO_MSA_BEST = True
-
-# Settings for N-distance keying
-NDIST_USE_WORDWISE_KEYING = False
-
-# Settings for Multi Sequence Alignment Best
-MSA_BEST_USE_LONGEST_PIVOT = True
-MSA_BEST_USE_N_DIST_PIVOT = True  # this is not applicable atm, it's just the longest string
-MSA_BEST_USE_CHARCONFS = True
-MSA_BEST_USE_WORDWISE_MSA = True
-MSA_BEST_USE_SEARCHSPACE = True
+import importlib
+from configuration.configuration_handler import ConfigurationHandler
 
 
-# postcorrection settings:
-KEYING_RESULT_POSTCORRECTION = True
 
-# validation settings:
-IGNORE_LINEFEED = False
-IGNORE_WHITESPACE = False
-DISPLAY_DIFFERENCES = True
-DO_ISRI_VAL = True
+CODED_CONFIGURATION_PATH = './configuration/config_debug_js.conf'  # configuration which is not given with cli args
 
-#saving file settigs
-MODE_ADD_LINEBREAKS = False  # todo add linebreaks later!
+config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
+                                      coded_configuration_path=CODED_CONFIGURATION_PATH)
+#config_handler = ConfigurationHandler() # initialization in subclass
 
-#Filenames
-FILEPATH_MSA_BEST_RESULT = "./Testfiles/dbprof_msa_best_result.txt"
-FILEPATH_NDIST_RESULT    = "./Testfiles/dbprof_ndist_result.txt"
-FILEPATH_GROUNDTRUTH = "./Testfiles/dbprof.gt.txt"
+config = config_handler.get_config()
 
-FILEPATH_ACCURACY_REPORT_MSA = "./Testfiles/isri_accreport_msa_best_dbprof.txt"
-FILEPATH_ACCURACY_REPORT_NDIST = "./Testfiles/isri_accreport_ndist_keying_dbprof.txt"
-FILEPATH_WACCURACY_REPORT_MSA = "./Testfiles/isri_waccreport_msa_best_dbprof.txt"
-FILEPATH_WACCURACY_REPORT_NDIST = "./Testfiles/isri_waccreport_ndist_keying_dbprof.txt"
 
 
 # Functional Code: ...
 
-dbdir_abs = 'sqlite:///' + str(Path(DB_DIR).absolute())
+dbdir_abs = 'sqlite:///' + str(Path(config.DB_DIR).absolute())
 
 dataframe_wrapper = DFObjectifier(dbdir_abs + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
-database_handler = DatabaseHandler(dataframe_wrapper, NUMBER_OF_INPUTS)
+database_handler = DatabaseHandler(dataframe_wrapper, config.NUMBER_OF_INPUTS)
 ocr_comparison = database_handler.create_ocr_comparison()
 ocr_comparison.sort_set()
 print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
 ocr_comparison.print_sets(False)
 
 
-if DO_N_DIST_KEYING:
-    print("Doing: N_DIST_KEYING, WORDWISE KEYING: ", NDIST_USE_WORDWISE_KEYING)
-    ocr_comparison.do_n_distance_keying(NDIST_USE_WORDWISE_KEYING)   # do the keying, which makes the decision which is the best line for each set
+if config.DO_N_DIST_KEYING:
+    print("Doing: N_DIST_KEYING, WORDWISE KEYING: ", config.NDIST_USE_WORDWISE_KEYING)
+    ocr_comparison.do_n_distance_keying(config.NDIST_USE_WORDWISE_KEYING)   # do the keying, which makes the decision which is the best line for each set
     #ocr_comparison.print_n_distance_keying_results()  # print keying results
-    if KEYING_RESULT_POSTCORRECTION:
+    if config.KEYING_RESULT_POSTCORRECTION:
         print("Doing: KEYING_RESULT_POSTCORRECTION")
         ocr_comparison.do_postcorrection(True)
 
-    MODE_ADD_LINEBREAKS = False #todo add linebreaks later!
-    ocr_comparison.save_n_distance_keying_results_to_file(FILEPATH_NDIST_RESULT, MODE_ADD_LINEBREAKS)
 
-if DO_MSA_BEST:
+    ocr_comparison.save_n_distance_keying_results_to_file(config.FILEPATH_NDIST_RESULT, config.NDIST_MODE_ADD_LINEBREAKS)
 
-    if MSA_BEST_USE_WORDWISE_MSA:
+if config.DO_MSA_BEST:
+
+    if config.MSA_BEST_USE_WORDWISE_MSA:
         # this is the new msa best invocation
-        ocr_comparison.do_msa_best_new(MSA_BEST_USE_N_DIST_PIVOT, MSA_BEST_USE_LONGEST_PIVOT, MSA_BEST_USE_CHARCONFS, \
-                                       MSA_BEST_USE_WORDWISE_MSA, MSA_BEST_USE_SEARCHSPACE)
+        ocr_comparison.do_msa_best_new(config.MSA_BEST_USE_N_DIST_PIVOT, config.MSA_BEST_USE_LONGEST_PIVOT, config.MSA_BEST_USE_CHARCONFS, \
+                                       config.MSA_BEST_USE_WORDWISE_MSA, config.MSA_BEST_USE_SEARCHSPACE)
     else:
         #todo refactor this old stuff
-        if MSA_BEST_USE_CHARCONFS is False:
-            if MSA_BEST_USE_N_DIST_PIVOT:
+        if config.MSA_BEST_USE_CHARCONFS is False:
+            if config.MSA_BEST_USE_N_DIST_PIVOT:
                 print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT")
 
                 ocr_comparison.do_msa_best_with_ndist_pivot()
@@ -85,7 +58,7 @@ if DO_MSA_BEST:
                 print("Doing: DO_MSA_BEST without NDIST_PIVOT")
                 ocr_comparison.do_msa_best()
         else:
-            if MSA_BEST_USE_N_DIST_PIVOT:
+            if config.MSA_BEST_USE_N_DIST_PIVOT:
                 print("Doing: DO_MSA_BEST with MSA_BEST_USE_N_DIST_PIVOT and CHARCONFS")
 
                 ocr_comparison.do_msa_best_with_ndist_pivot_charconf()
@@ -95,26 +68,26 @@ if DO_MSA_BEST:
 
 
     #ocr_comparison.print_msa_best_results()
-    ocr_comparison.save_dataset_to_file(FILEPATH_MSA_BEST_RESULT, 0, MODE_ADD_LINEBREAKS, "msa_best")
+    ocr_comparison.save_dataset_to_file(config.FILEPATH_MSA_BEST_RESULT, 0, config.MODE_ADD_LINEBREAKS, "msa_best")
 
 ocr_comparison.print_sets(False)
 
 
-if DO_ISRI_VAL is True:
+if config.DO_ISRI_VAL is True:
     isri_handler = IsriHandler()
 
     # Test 'accuracy'
-    isri_handler.accuracy(FILEPATH_GROUNDTRUTH, FILEPATH_NDIST_RESULT, FILEPATH_ACCURACY_REPORT_NDIST)
-    isri_handler.accuracy(FILEPATH_GROUNDTRUTH, FILEPATH_MSA_BEST_RESULT, FILEPATH_ACCURACY_REPORT_MSA)
+    isri_handler.accuracy(config.FILEPATH_GROUNDTRUTH, config.FILEPATH_NDIST_RESULT, config.FILEPATH_ACCURACY_REPORT_NDIST)
+    isri_handler.accuracy(config.FILEPATH_GROUNDTRUTH, config.FILEPATH_MSA_BEST_RESULT, config.FILEPATH_ACCURACY_REPORT_MSA)
 
     # Test 'wordacc'
-    isri_handler.wordacc(FILEPATH_GROUNDTRUTH, FILEPATH_NDIST_RESULT, None, FILEPATH_WACCURACY_REPORT_NDIST)
-    isri_handler.wordacc(FILEPATH_GROUNDTRUTH, FILEPATH_MSA_BEST_RESULT, None, FILEPATH_WACCURACY_REPORT_MSA)
+    isri_handler.wordacc(config.FILEPATH_GROUNDTRUTH, config.FILEPATH_NDIST_RESULT, None, config.FILEPATH_WACCURACY_REPORT_NDIST)
+    isri_handler.wordacc(config.FILEPATH_GROUNDTRUTH, config.FILEPATH_MSA_BEST_RESULT, None, config.FILEPATH_WACCURACY_REPORT_MSA)
 
-if DISPLAY_DIFFERENCES:
+if config.DISPLAY_DIFFERENCES:
     pyc_handler = PycharmHandler()
-    pyc_handler.show_file_comparison(FILEPATH_GROUNDTRUTH, FILEPATH_NDIST_RESULT)
-    pyc_handler.show_file_comparison(FILEPATH_GROUNDTRUTH, FILEPATH_MSA_BEST_RESULT)
+    pyc_handler.show_file_comparison(config.FILEPATH_GROUNDTRUTH, config.FILEPATH_NDIST_RESULT)
+    pyc_handler.show_file_comparison(config.FILEPATH_GROUNDTRUTH, config.FILEPATH_MSA_BEST_RESULT)
 
     #testing strange wordaccuracy report production
     #pyc_handler.show_file_comparison(FILEPATH_NDIST_RESULT, FILEPATH_MSA_BEST_RESULT)

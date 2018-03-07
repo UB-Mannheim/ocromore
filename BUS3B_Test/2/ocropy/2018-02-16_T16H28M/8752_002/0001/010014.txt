@@ -1,0 +1,1 @@
+applications with such features as: MDI support, printing, Print Preview, toolbars, status bars, and much

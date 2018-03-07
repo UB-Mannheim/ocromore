@@ -1,10 +1,14 @@
 from utils.df_objectifier import DFObjectifier
 from n_dist_keying.ocr_comparison import OCRcomparison
 from n_dist_keying.ocr_set import OCRset
-
+from configuration.configuration_handler import ConfigurationHandler
 
 class DatabaseHandler():
+
     def __init__(self, dataframe_wrapper, number_of_inputs):
+
+
+
         print("Init database handler")
         self._dataframe_wrapper = dataframe_wrapper
         self._number_of_inputs = number_of_inputs

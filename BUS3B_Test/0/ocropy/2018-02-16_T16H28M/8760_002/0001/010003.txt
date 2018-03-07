@@ -1,0 +1,1 @@
+ReportSmith is available on MS-Windows and works with ASK INGRES/Net for

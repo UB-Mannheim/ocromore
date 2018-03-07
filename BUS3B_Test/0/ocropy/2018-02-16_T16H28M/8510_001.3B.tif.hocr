@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>OCR Results</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="ocr-system" content="ocropy-1.3.3" />
+<meta name="ocr-capabilities" content="ocr_line ocr_page" />
+</head>
+<body>
+
+<div class='ocr_page' title='image /media/sf_ShareVB/many_years_firmprofiles_output/bus.3B//0/ocropy/2018-02-16_T16H28M/8510_001/0001.bin.png; bbox 0 0 2560 3300'>
+    <span class='ocr_line' title='bbox 364 568 664 601'><br />
+        <span class='ocrx_word' title='bbox 364 568 495 601; x_wconf 94.6504026071; x_confs 99.0423622684 98.3471647513 98.6785236151 98.4729589893'>June</span>
+        <span class='ocrx_word' title='bbox 495 568 574 601; x_wconf 82.7023302768; x_confs 99.6575348666 98.3513704187 84.3776043534'>18,</span>
+        <span class='ocrx_word' title='bbox 574 568 664 601; x_wconf 98.5414658897; x_confs 99.9237818761 99.7327416922 99.7595377055 99.1192414491'>1993</span>
+    </span>
+    <span class='ocr_line' title='bbox 367 816 710 848'><br />
+        <span class='ocrx_word' title='bbox 367 816 564 848; x_wconf 95.0117124899; x_confs 99.48769519 99.3216202151 99.2579412563 99.4256084707 99.5293759626 99.1050611472 98.7764344004'>Deborah</span>
+        <span class='ocrx_word' title='bbox 564 816 710 848; x_wconf 93.7370186543; x_confs 99.5043970428 98.760176212 98.3853299698 99.7978133716 98.5987999729 99.4585945327 99.0653295443'>Wallace</span>
+    </span>
+    <span class='ocr_line' title='bbox 367 865 1016 906'><br />
+        <span class='ocrx_word' title='bbox 367 865 598 906; x_wconf 93.1861368648; x_confs 98.6950893025 99.0335309977 99.2266145593 99.6184635901 99.1433186238 99.6360823336 99.0312277463 99.7800777685 99.4197964089 99.3885879553'>University</span>
+        <span class='ocrx_word' title='bbox 598 865 647 906; x_wconf 98.4323695979; x_confs 99.0759768915 99.3503901614'>of</span>
+        <span class='ocrx_word' title='bbox 647 865 824 906; x_wconf 93.3772590363; x_confs 99.3405004993 98.7141500571 98.9045745437 98.9248698093 99.1016454323 99.0542572543 99.142414111'>Nevada,</span>
+        <span class='ocrx_word' title='bbox 824 865 906 906; x_wconf 97.401920204; x_confs 99.5808063168 98.9104243961 98.8894166434'>Las</span>
+        <span class='ocrx_word' title='bbox 906 865 1016 906; x_wconf 96.1194145938; x_confs 98.9819897771 99.2406261961 99.2310962784 99.083911696 99.5209489122'>Vegas</span>
+    </span>
+    <span class='ocr_line' title='bbox 367 916 1024 948'><br />
+        <span class='ocrx_word' title='bbox 367 916 503 948; x_wconf 85.9367821102; x_confs 99.8527586395 99.2897771202 99.0222692582 99.3785609755 98.828379055 89.1265782381'>Intro.</span>
+        <span class='ocrx_word' title='bbox 503 916 674 948; x_wconf 89.9158444248; x_confs 99.6359853501 93.1584557051 99.0827912695 99.7877856316 99.6756389419 99.4037734985 98.8849524674'>Sunrise</span>
+        <span class='ocrx_word' title='bbox 674 916 1024 948; x_wconf 81.1240537493; x_confs 98.7321065199 99.4663406945 98.7128937815 98.8926556129 98.9718293586 99.5158100126 99.7213147454 98.9884201136 94.5404225868 98.6545940308 98.7458591557 98.7551922716 99.834018733 98.7762707733 98.6926529112 99.1226799481 99.1969653275'>ResearchInstitute</span>
+    </span>
+    <span class='ocr_line' title='bbox 367 966 865 1007'><br />
+        <span class='ocrx_word' title='bbox 367 966 492 1007; x_wconf 98.3043973477; x_confs 99.8930458898 99.8679046143 98.7974647828 99.7392162662'>4505</span>
+        <span class='ocrx_word' title='bbox 492 966 701 1007; x_wconf 94.3028392662; x_confs 99.7925808606 99.1403882929 99.4932115915 99.0084225293 99.0138427105 99.5025820728 99.1670200077 99.0404895283'>Maryland</span>
+        <span class='ocrx_word' title='bbox 701 966 865 1007; x_wconf 94.7767910058; x_confs 98.6309859838 99.2282550493 99.6336983348 99.416480132 99.6325168037 98.6746956979 99.4447225024'>Parkway</span>
+    </span>
+    <span class='ocr_line' title='bbox 367 1017 586 1048'><br />
+        <span class='ocrx_word' title='bbox 367 1017 468 1048; x_wconf 95.1156051635; x_confs 97.9810138181 97.8206450118 99.2383019275'>Box</span>
+        <span class='ocrx_word' title='bbox 468 1017 586 1048; x_wconf 94.3830513865; x_confs 99.8184323131 99.8482577767 99.7762162064 95.3502123706 99.5391855077'>45402</span>
+    </span>
+    <span class='ocr_line' title='bbox 368 1067 660 1106'><br />
+        <span class='ocrx_word' title='bbox 368 1067 461 1106; x_wconf 97.8741154436; x_confs 99.634916884 99.3160048383 98.9092813146'>Las</span>
+        <span class='ocrx_word' title='bbox 461 1067 609 1106; x_wconf 94.3689775623; x_confs 97.7932010179 99.3710273017 99.2049353795 99.1273901466 99.3452508138 99.4000829921'>Vegas,</span>
+        <span class='ocrx_word' title='bbox 609 1067 660 1106; x_wconf 97.0839905897; x_confs 99.4429233808 97.62785253'>NV</span>
+    </span>
+    <span class='ocr_line' title='bbox 368 1165 664 1197'><br />
+        <span class='ocrx_word' title='bbox 368 1165 489 1197; x_wconf 97.3934551245; x_confs 99.4857737617 99.1583705348 99.209295098 99.5146559208'>Dear</span>
+        <span class='ocrx_word' title='bbox 489 1165 664 1197; x_wconf 91.7160327718; x_confs 99.1574303919 98.6590982377 99.4213938106 99.0467591806 99.8354208049 99.2073399304 98.938254917 97.1560913284'>Deborah:</span>
+    </span>
+<p />
+    <span class='ocr_line' title='bbox 1795 54 1938 118'><br />
+        <span class='ocrx_word' title='bbox 1795 54 1833 118; x_wconf 0; x_confs 0'></span>
+        <span class='ocrx_word' title='bbox 1833 54 1938 118; x_wconf 75.0708081454; x_confs 75.0708081454'>.</span>
+    </span>
+    <span class='ocr_line' title='bbox 1965 39 2144 85'><br />
+        <span class='ocrx_word' title='bbox 1965 39 2091 85; x_wconf 41.6599164521; x_confs 41.6599164521'>S</span>
+        <span class='ocrx_word' title='bbox 2091 39 2144 85; x_wconf 84.209471373; x_confs 96.2298444353 87.5086849275'>-'</span>
+    </span>
+    <span class='ocr_line' title='bbox 2019 77 2139 133'><br />
+</div>

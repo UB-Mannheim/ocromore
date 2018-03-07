@@ -1,0 +1,1 @@
+supports multiple inheritance and dynamic object creation. Objects may redefine

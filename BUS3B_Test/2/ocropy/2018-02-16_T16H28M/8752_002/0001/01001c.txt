@@ -1,0 +1,1 @@
+all your existing Microsoft Foundation Class Library code will recompile smoothly with Microsoft

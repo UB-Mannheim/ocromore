@@ -1,0 +1,1 @@
+change the way applications for Windows are created in C+-+. Visual C++ combines the power of reusable,

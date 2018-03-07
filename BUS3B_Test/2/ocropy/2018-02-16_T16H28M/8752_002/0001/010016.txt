@@ -1,0 +1,1 @@
+Library 2.0 has been rigorously tuned to give you small, fast executables.

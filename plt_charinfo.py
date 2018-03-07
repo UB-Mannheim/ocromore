@@ -16,6 +16,20 @@ import numpy as np
 #import pandas as pd
 from pathlib import Path
 #import math
+class CharInfoConf1(object):
+    DBDIR = "./Testfiles"
+
+
+class CharInfoConfJK(object):
+    DBDIR = "./Testfiles"
+
+
+class CharInfoConfJS(object):
+    DBDIR = "./Testfiles"
+
+
+used_info_conf = CharInfoConfJS()
+
 
 def charinfo_process():
     HOCR2SQL = True
@@ -26,7 +40,7 @@ def charinfo_process():
 
     # Read hocr and create sql-db
     dbdir = './Testfiles/sql/'
-    dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
+    dbdir = 'sqlite:///'+str(Path(used_info_conf.DBDIR).absolute())
 
     filetypes = ["hocr","xml"]
     files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*."+filetype, recursive=True) for filetype in filetypes)

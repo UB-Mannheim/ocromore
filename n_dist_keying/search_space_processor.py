@@ -4,7 +4,7 @@ from utils.random import Random
 from enum import Enum, unique
 
 @unique
-class ColumnFeatures(Enum):
+class ColumnFeatures(Enum):  # todo this can be normal class
 
     ONE_CHAR_REST_WILDCARDS  = 1
     ONE_CHAR_REST_WHITESPACE = 2
@@ -18,7 +18,6 @@ class ColumnFeatures(Enum):
 class SearchSpaceProcessor(object):
 
     def __init__(self, y_size, x_size, wildcard_character, substitution_character):
-        print("init ssp")
         self._y_size = y_size
         self._x_size = x_size
         self._middle_index = Random.find_middle(self._x_size, True)
@@ -235,7 +234,6 @@ class SearchSpaceProcessor(object):
                                                                                                 reference_char,
                                                                                                   use_similar_chars)
                 if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in other_column_feats:
-                    print("translate here")
                     processed_space, shifted_longtrans = self.shift_from_to(search_space, reference_char_y_index, \
                                                                   check_index_from, check_index)
 
