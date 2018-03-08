@@ -1,0 +1,1 @@
+from data entry, to organization, to retrieval - can present bottlenecks and hidden

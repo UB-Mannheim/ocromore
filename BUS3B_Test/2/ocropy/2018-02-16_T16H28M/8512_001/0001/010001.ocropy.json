@@ -1,0 +1,21 @@
+{
+    "global": {
+        "fpath": "/media/sf_ShareVB/many_years_firmprofiles_output/bus.3B//2/ocropy/2018-02-16_T16H28M/8512_001/0001.bin.png", 
+        "id": "010001"
+    }, 
+    "pad": {
+        "gpageseg": 3
+    }, 
+    "scale": {
+        "gpageseg": 25.25866188063018
+    }, 
+    "bbox": {
+        "line": {
+            "chars": "", 
+            "x0": 322, 
+            "x1": 393, 
+            "y0": 192, 
+            "y1": 230
+        }
+    }
+}

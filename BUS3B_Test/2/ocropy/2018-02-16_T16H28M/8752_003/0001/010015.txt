@@ -1,0 +1,1 @@
+controls into the tools palette and then dragging and dropping them into your application form.

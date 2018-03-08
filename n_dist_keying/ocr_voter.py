@@ -30,8 +30,6 @@ class OCRVoter(object):
         same_ctr = 0
         cconf_ctr = float(cconf1)
 
-
-
         if char1 == char2:
             same_ctr += 1
             cconf_ctr += float(cconf2)
@@ -54,7 +52,7 @@ class OCRVoter(object):
                 return 1, SPACE_PUT_IN_VALUE
 
         elif char1 == wildcard_char and same_ctr ==1: #todo: differentiate type of character ??
-            return 1, 98.0 #todo j4t
+            return 1, 99.0 #todo j4t
             # if the confidence of the other character is below that value, space gets the high put in confidence value
             WILDCARD_TRESH = 50.0
             WILDCARD_PUT_IN_VALUE = 99.0
@@ -181,7 +179,7 @@ class OCRVoter(object):
             cp.print("vote_text1", line_1.textstr)
             cp.print("vote_text2", line_2.textstr)
             cp.print("vote_text3", line_3.textstr)
-            if "Geschä" in line_1.textstr:
+            if "Freiv." in line_1.textstr:
                  cp.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))

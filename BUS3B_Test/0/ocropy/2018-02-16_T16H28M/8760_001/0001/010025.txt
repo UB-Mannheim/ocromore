@@ -1,0 +1,1 @@
+SQL can be viewed and edited by users that prefer to have that

@@ -9,115 +9,277 @@ from utils.df_tools import get_con
 from utils.df_objectifier import DFObjectifier
 import glob
 from itertools import chain
-import os
+import inspect
+
 import numpy as np
 #import matplotlib.pyplot as plt
 #import seaborn as sns
 #import pandas as pd
+import os
+import shutil
+
 from pathlib import Path
-import traceback
+#import math
+from configuration.configuration_handler import ConfigurationHandler
+
+
+
+CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_dbtest.conf"
+config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, coded_configuration_path=CODED_CONFIGURATION_PATH)
+config = config_handler.get_config()
+
 
 def charinfo_process():
 
-    # FLAGS #
-    # Read hocr and create sql-db
-    HOCR2SQL = False
-    # Delete old db
-    DELOLDSQL = True
-    # Do preprocessing steps, match lines, unspace words and match words
-    PREPROCESSING = False
-    # Testbench for code changes
-    WORKWITHOBJ = True
-    # Plot results
-    PLOT = False
 
-    # DB directory
-    dbdir = './Testfiles/sql/'
-    dbdir = 'sqlite:///'+str(Path(dbdir).absolute())
+    HOCR2SQL = config.HOCR2SQL
+    PREPROCESSING = config.PREPROCESSING
+    WORKWITHOBJ = config.WORKWITHOBJ
 
-    # Testfile
-    dbAtab = (dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
+    PLOT = config.PLOT
 
     # Read hocr and create sql-db
-    if HOCR2SQL:
-        filetypes = ["hocr","xml"]
+    DBDIR = config.DBDIR
+
+
+
+    dbdir = 'sqlite:///'+str(Path(DBDIR).absolute())
+
+    INPUT_FILETYPES = config.INPUT_FILETYPES
+    INPUT_FILEGLOB = config.INPUT_FILEGLOB
+
+
+    def fetch_dbs_and_files(fileglob, filetypes):
+
         files = chain.from_iterable(
-            glob.iglob("./Testfiles/long/default/**/*." + filetype, recursive=True) for filetype in filetypes)
-        dbnamelast, con = "", None
+            glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
+
+        dbs_and_files = {}
+
+        dbnamelast = ""
         for file in files:
-            print(f"\nConvert to SQL:\t{file}")
+            fpath = Path(file)
+            ocr_profile = fpath.parts[-2]
+            # dbname = fpath.name.split("_")[1]
+            fp_dir_split = os.path.dirname(fpath).split('/')
+            dbname = fp_dir_split[0]+"_"+fp_dir_split[1] # new db name, todo @jk please create more common interface for dbname generation here
+
+
+            if dbname != dbnamelast:
+                db_fullname = dbdir + '/'+dbname+'.db'
+                dbs_and_files[db_fullname] = []
+                dbnamelast = dbname
+
+
+            dbs_and_files[db_fullname].append((file, ocr_profile))
+
+        return dbs_and_files
+
+
+    def convert_files_to_dbs(dbs_and_files, delete_and_create_dir=True):
+
+        if delete_and_create_dir is True:
+            # delete and recreate database directory
+            if os.path.exists(DBDIR):
+                shutil.rmtree(DBDIR)
+            os.makedirs(DBDIR)
+
+
+        exceptions = []
+        for db_fullname in dbs_and_files:
+            current_con = get_con(db_fullname)
+
+            values = dbs_and_files[db_fullname]
+            for (file, ocr_profile) in values:
+                print(f"\nConvert to sql:\t{file}")
+                try:
+                    HocrConverter().hocr2sql(file, current_con, ocr_profile)
+                except Exception as ex:
+                    print("Exception parsing file ", file, ":", ex)
+                    exceptions.append(ex)
+
+
+        return exceptions
+
+
+
+
+    def fetch_table_names(dbs_and_files):
+        print("fetching table names")
+        # create connection for each db and do the job
+
+    def do_preprocessing(dbs_and_files):
+        print("doing preprocessing")
+        exceptions = []
+
+        for db in dbs_and_files:
+            files = dbs_and_files[db]
+            print("preprocessing database:",db)
+            for (file, othervar) in files:
+
+                filename = os.path.basename(file)
+                table_name = filename.split('.')[0]
+
+                try:
+                    dataframe_wrapper = DFObjectifier(db, table_name)
+
+                    # Linematcher with queries
+                    if dataframe_wrapper.match_line(force=True):
+                        # Unspacing
+                        dataframe_wrapper.unspace()
+
+                        # Match words or segments of words into "word_match"
+                        dataframe_wrapper.match_words()
+
+                        # Write the calulated values into the db
+                        dataframe_wrapper.write2sql()
+                except Exception as ex:
+                    tr = inspect.trace()
+                    print("Exception parsing table ", table_name, ":", ex, "trace", tr)
+                    exceptions.append(ex)
+
+        return exceptions
+
+
+    dbs_and_files = fetch_dbs_and_files(INPUT_FILEGLOB, INPUT_FILETYPES)
+
+    if config.HOCR2SQL is True:
+        report_conv = convert_files_to_dbs(dbs_and_files)
+
+    if config.PREPROCESSING:
+        report_prep = do_preprocessing(dbs_and_files)
+
+
+
+
+
+    if HOCR2SQL:
+
+        for file in files:
+            print(f"\nConvert to sql:\t{file}")
             fpath = Path(file)
             ocr_profile = fpath.parts[-2]
             dbname = fpath.name.split("_")[1]
+            fp_dir_split = os.path.dirname(fpath).split('/')
+            dbname = fp_dir_split[0]+"_"+fp_dir_split[1] # new db name, todo @jk please create more common interface for dbname generation here
+
+
             if dbname != dbnamelast:
-                if DELOLDSQL and file.split(".")[-1] == "hocr":
-                    if os.path.isfile(dbdir + '/'+dbname+'.db'):
-                        os.remove(dbdir + '/'+dbname+'.db')
-                con = get_con(dbdir + '/'+dbname+'.db')
+                db_fullname = dbdir + '/'+dbname+'.db'
+                con = get_con(db_fullname)
+                hocr2sql_db_names.append(db_fullname)
                 dbnamelast = dbname
             try:
-                HocrConverter().hocr2sql(file,con,ocr_profile)
-            except:
+                HocrConverter().hocr2sql(file, con, ocr_profile)
+            except Exception as ex:
+                print("Exception parsing file ", file, ":", ex)
                 pass
 
-    dfXO = None
-    # Preprocess data
+
+
+
+    dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
+
+    # Preprocesses data from the dataframe
     if PREPROCESSING:
-        filetypes = ["xml"]
-        files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*." + filetype, recursive=True) for filetype in filetypes)
-        for file in files:
-            fpath = Path(file)
-            dbAtab = (dbdir + f'/{fpath.name.split("_")[1]}.db', fpath.name.split(".")[0])
-            #dbAtab = (dbdir + f'/1961.db', "0448_1961_230-6_B_054_0650")
-            # Get db-Object from db
-            dfXO = DFObjectifier(*dbAtab)
 
-            dfXO.clean_data()
+        # Linematcher with queries
+        if dfXO.match_line(force=True):
+            true = True
+            # Unspacing
+            dfXO.unspace()
 
-            # Linematcher with queries
-            if dfXO.match_line(force=True):
-                # Unspacing
-                dfXO.unspace()
+            # Match words or segments of words into "word_match"
+            dfXO.match_words()
 
-                # Match words or segments of words into "word_match"
-                dfXO.match_words()
-
-                # Write the calulated values into the db
-                dfXO.write2sql()
+            # Write the calulated values into the db
+            dfXO.write2sql()
 
     # Work with Obj
     if WORKWITHOBJ:
-        # Get db-Object from db
-        dfXO = DFObjectifier(*dbAtab)
+        #for file in files:
+        #    fpath = Path(file)
+        #    dbname = fpath.name.split("_")[1]
+        #    if dbname != dbnamelast:
+        #        dbnamelast = dbname
 
-        # Get LineObject from db-Object
-        dfSelO, dfResO = dfXO.get_line_obj(res=True)
+        #    #dfXO = DFObjectifier(dbdir + '/1957.db','0140_1957_hoppa-405844417-0050_0172')
+        #    dfXO = DFObjectifier(dbdir + '/'+dbname+'.db', fpath.name.split(".")[0])
 
-        dfResO[7.0].append(dfSelO[7.0][0],2)
-        dfResO[7.0].append(dfSelO[7.0][1],5)
-        dfResO[7.0].append(dfSelO[7.0][0],-1)
-        dfResO[7.0].append(dfSelO[7.0][2], 3)
+            #Linematcher with queries
+        #    dfXO.match_line()
+        #    dfXO.write2sql()
 
-        # Test function
-        try:
-            #test_linematching(dfXO)
-            test_emptyobj(dfXO)
-            test_wordmacthing(dfSelO)
-            test_lineobj(dfSelO)
-            dfXO.write2file(calc=True)
-        except Exception as e:
-            print("Testfunction-Error!")
-            traceback.print_exc()
+        # dfXO.write2file()
+
+        # Example for selecting all line with calc_line == 10
+        #dfSelO = dfXO.get_obj(query="calc_line == 10")
+        max_line = dfXO.df["calc_line_idx"].max()
+        #for idx in np.arange(0,max_line):
+        #dfXO.get_obj(query="calc_line_idx == 10")
+            #print(idx)
+        object = dfXO.get_obj(empty=True)
+        object.update_textspace(">>  >>",widx=1.0)
+        object.update_textspace(">>  >>", widx=3.0)
+        object.update_textspace(">>  >>", widx=2.0)
+        object.restore()
+        dfSelO = dfXO.get_line_obj()
+        for idx,lidx in enumerate(dfSelO):
+            print(idx)
+            for items in dfSelO[lidx]:
+                print(items.textstr)
+                for word in items.word["text"]:
+                    if "maßgeblich" in items.word["text"][word]:
+                        stio = "STIO"
+                    print(items.word["text"][word]+"\t",end="")
+                print("\n")
+        for lidx in dfSelO:
+            for items in dfSelO[lidx]:
+                #test_word(items)
+                print(items.textstr)
+                print(items)
+                txt = items.textstr
+                txt = txt[:1] + "|" + txt[1:]
+                if "Riekeberg" in txt:
+                    items.update_textspace("¦Dipl.¦¦¦¦¦","¦",widx=0.0)
+                    items.update_textspace("¦-Ing.","¦",widx=1.0)
+                    items.update_textspace("@@@@@","@",widx=3.0)
+                    items.restore()
+
+                    txt = txt[:0] + "||||||" + txt[0:]
+                #items.update_textspace(txt,"|")
+                print(items.textstr)
+                print(items.value("x_confs",3))
+                print(items.value("calc_char", 3))
+                print(items.value("char", 3))
+                print(items.value("x_confs", 10))
+                print(items.value("calc_char", 10))
+                print(items.value("char", 9))
+                print(items.value("x_confs", 9, wsval=10.0))
+                print(items.value("calc_char", 9))
+                print(items.value("char", 10))
+                print(items.data["UID"])
+                print(items.value("x_confs",2))
+                print(items.value("calc_char", 4))
+                print(items.value("x_confs",4))
+        return
+        text2 = dfSelO[1].textstr
+        text = text[:1] + "|" + text[1:]
+        text = text[:3] + "|" + text[3:]
+        text = text[:5] + " " + text[5:]
+        text = text[:3] + " " + text[3:]
+        dfSelO[0].update_textspace(text,"@")
+        dfSelO.update(dfResO)
+        dfSelO[0].text(1,"A")
+        dfSelO[0].text(3,"C")
+        dfSelO[0].text(0,cmd="pop")
+        dfSelO[0].value("calc_line_idx",4,10)
+        #obj[0].update()  - Optional
+        dfXO.update(dfSelO)
 
     # Plot DF (not working atm)
     if PLOT:
-        if dfXO is None:
-            dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
-        pltdf = dfXO.df.reset_index()["x_wconf"].astype(float)
-        type = pltdf.describe()
-        print(type)
-        pltdf.plot()
-        #plot_charinfo()
+        plot_charinfo()
 
 ### TEST FUNCTION
 
@@ -154,55 +316,6 @@ def test_linematching(dfXO):
             else:
                 print("No line found!")
     return
-
-def test_lineobj(dfSelO):
-    for lidx in dfSelO:
-        for items in dfSelO[lidx]:
-            # test_word(items)
-            print(items.textstr)
-            print(items)
-            txt = items.textstr
-            txt = txt[:1] + "|" + txt[1:]
-            if "Riekeberg" in txt:
-                items.update_textspace("¦Dipl.¦¦¦¦¦", "¦", widx=0.0)
-                items.update_textspace("¦-Ing.", "¦", widx=1.0)
-                items.update_textspace("@@@@@", "@", widx=3.0)
-                items.restore()
-
-                txt = txt[:0] + "||||||" + txt[0:]
-            # items.update_textspace(txt,"|")
-            print(items.textstr)
-            print(items.value("x_confs", 3))
-            print(items.value("calc_char", 3))
-            print(items.value("char", 3))
-            print(items.value("x_confs", 10))
-            print(items.value("calc_char", 10))
-            print(items.value("char", 9))
-            print(items.value("x_confs", 9, wsval=10.0))
-            print(items.value("calc_char", 9))
-            print(items.value("char", 10))
-            print(items.data["UID"])
-            print(items.value("x_confs", 2))
-            print(items.value("calc_char", 4))
-            print(items.value("x_confs", 4))
-
-def test_wordmacthing(dfSelO):
-    for idx, lidx in enumerate(dfSelO):
-        print(idx)
-        for items in dfSelO[lidx]:
-            print(items.textstr)
-            for word in items.word["text"]:
-                if "maßgeblich" in items.word["text"][word]:
-                    stio = "STIO"
-                print(items.word["text"][word] + "\t", end="")
-            print("\n")
-
-def test_emptyobj(dfXO):
-    object = dfXO.get_obj(empty=True)
-    object.update_textspace(">>  >>", widx=1.0)
-    object.update_textspace(">>  >>", widx=3.0)
-    object.update_textspace(">>  >>", widx=2.0)
-    object.restore()
 
 if __name__=="__main__":
     charinfo_process()

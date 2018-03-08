@@ -1,0 +1,1 @@
+interface based on Microsoft standards; there's no lengthy learning

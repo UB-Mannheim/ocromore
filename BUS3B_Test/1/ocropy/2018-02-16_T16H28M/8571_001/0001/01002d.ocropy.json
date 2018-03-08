@@ -1,0 +1,49 @@
+{
+    "global": {
+        "fpath": "/media/sf_ShareVB/many_years_firmprofiles_output/bus.3B//1/ocropy/2018-02-16_T16H28M/8571_001/0001.bin.png", 
+        "id": "01002d", 
+        "chars": "is"
+    }, 
+    "pad": {
+        "gpageseg": 3, 
+        "rpred": 16
+    }, 
+    "scale": {
+        "gpageseg": 22.978250586152114, 
+        "rpred": 0.9615384615384616
+    }, 
+    "bbox": {
+        "line": {
+            "chars": "is", 
+            "x0": 2378, 
+            "x1": 2447, 
+            "y0": 2797, 
+            "y1": 2824
+        }, 
+        "word": {
+            "0": {
+                "chars": "is", 
+                "x0": 2378, 
+                "x1": 2447, 
+                "y0": 2797, 
+                "y1": 2824
+            }
+        }
+    }, 
+    "chars": {
+        "0": {
+            "char": "i", 
+            "prob": 0.9920901842010341, 
+            "x0": 53, 
+            "x1": 60, 
+            "xmax": 61
+        }, 
+        "1": {
+            "char": "s", 
+            "prob": 0.9950884362014311, 
+            "x0": 67, 
+            "x1": 75, 
+            "xmax": 75
+        }
+    }
+}

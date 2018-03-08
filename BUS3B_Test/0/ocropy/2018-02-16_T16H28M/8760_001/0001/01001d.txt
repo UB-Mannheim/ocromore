@@ -1,0 +1,1 @@
+direct generation of charts from cross tabs, created by a simple

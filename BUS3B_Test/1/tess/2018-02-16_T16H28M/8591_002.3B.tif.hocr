@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>OCR Results</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="ocr-system" content="tesseract 4.00.00alpha" />
+<meta name="ocr-capabilities" content="ocr_page ocr_carea ocr_par ocr_line ocrx_word" />
+</head>
+<body><div class="ocr_page" id="page_1" title="image /media/sf_ShareVB/many_years_firmprofiles/bus.3B/1/8591_002.3B.tif; bbox 0 0 2560 3300; ppageno 0">
+   <div class="ocr_carea" id="block_1_1" title="bbox 11 8 651 11">
+    <p class="ocr_par" id="par_1_1" lang="deu" title="bbox 11 8 651 11" xml:lang="deu">
+     <span class="ocr_line" id="line_1_1" title="bbox 11 8 651 11; baseline 0 0; x_size 1.5; x_descenders -0.75; x_ascenders 0.75"><span class="ocrx_word" id="word_1_1" title="bbox 11 8 651 11; x_wconf 95;x_confs 95.0"><strong><em> </em></strong></span> 
+     </span>
+    </p>
+   </div>
+   <div class="ocr_carea" id="block_1_2" title="bbox 1591 10 2103 11">
+    <p class="ocr_par" id="par_1_2" lang="deu" title="bbox 1591 10 2103 11" xml:lang="deu">
+     <span class="ocr_line" id="line_1_2" title="bbox 1591 10 2103 11; baseline 0 0; x_size 0.5; x_descenders -0.25; x_ascenders 0.25"><span class="ocrx_word" id="word_1_2" title="bbox 1591 10 2103 11; x_wconf 95;x_confs 95.0"><strong><em> </em></strong></span> 
+     </span>
+    </p>
+   </div>
+   <div class="ocr_carea" id="block_1_3" title="bbox 424 316 2238 362">
+    <p class="ocr_par" id="par_1_3" lang="deu" title="bbox 424 316 2238 362" xml:lang="deu">
+     <span class="ocr_line" id="line_1_3" title="bbox 424 316 2238 362; baseline 0.003 -15; x_size 41; x_descenders 9; x_ascenders 8"><span class="ocrx_word" id="word_1_3" title="bbox 424 316 445 347; x_wconf 69;x_confs 98.1575698852539 99.48102569580078"><strong><em>It</em></strong></span> <span class="ocrx_word" id="word_1_4" title="bbox 463 316 491 347; x_wconf 69;x_confs 97.06593322753906 99.5542984008789"><strong><em>is</em></strong></span> <span class="ocrx_word" id="word_1_5" title="bbox 509 324 528 348; x_wconf 96;x_confs 99.56758880615234"><strong><em>a</em></strong></span> <span class="ocrx_word" id="word_1_6" title="bbox 546 316 711 357; x_wconf 96;x_confs 99.57401275634766 99.53959655761719 99.56647491455078 99.57392883300781 99.56305694580078 99.57361602783203 99.47042846679688 99.4491195678711"><strong><em>pleasure</em></strong></span> <span class="ocrx_word" id="word_1_7" title="bbox 729 319 768 348; x_wconf 94;x_confs 99.56730651855469 99.16740417480469"><strong><em>to</em></strong></span> <span class="ocrx_word" id="word_1_8" title="bbox 787 317 966 349; x_wconf 95;x_confs 99.56612396240234 99.44747161865234 99.53768157958984 99.47303771972656 99.55381774902344 99.57044219970703 99.4271469116211"><strong><em>welcome</em></strong></span> <span class="ocrx_word" id="word_1_9" title="bbox 985 326 1054 358; x_wconf 96;x_confs 99.48487091064453 99.52450561523438 99.50892639160156"><strong><em>you</em></strong></span> <span class="ocrx_word" id="word_1_10" title="bbox 1072 326 1112 350; x_wconf 96;x_confs 99.53402709960938 99.57420349121094"><strong><em>as</em></strong></span> <span class="ocrx_word" id="word_1_11" title="bbox 1130 326 1149 350; x_wconf 93;x_confs 99.57405853271484"><strong><em>a</em></strong></span> <span class="ocrx_word" id="word_1_12" title="bbox 1167 319 1335 359; x_wconf 91;x_confs 98.97969055175781 99.0376205444336 98.75939178466797 99.04227447509766 99.0105209350586 99.04227447509766 99.02832794189453 98.98499298095703"><strong><em>graduate</em></strong></span> <span class="ocrx_word" id="word_1_13" title="bbox 1354 320 1499 351; x_wconf 96;x_confs 99.55333709716797 99.57373046875 99.54920196533203 99.57460021972656 99.48544311523438 99.57392120361328 99.56587982177734"><strong><em>student</em></strong></span> <span class="ocrx_word" id="word_1_14" title="bbox 1516 322 1555 352; x_wconf 96;x_confs 99.56694030761719 99.48217010498047"><strong><em>to</em></strong></span> <span class="ocrx_word" id="word_1_15" title="bbox 1573 321 1632 353; x_wconf 96;x_confs 99.57234191894531 99.50424194335938 99.5744857788086"><strong><em>the</em></strong></span> <span class="ocrx_word" id="word_1_16" title="bbox 1651 321 1846 362; x_wconf 96;x_confs 99.55774688720703 99.55896759033203 99.57431030273438 99.55489349365234 99.57465362548828 99.55131530761719 99.57405090332031 99.55467987060547 99.57417297363281 99.56255340576172"><strong><em>University</em></strong></span> <span class="ocrx_word" id="word_1_17" title="bbox 1865 321 1907 354; x_wconf 96;x_confs 99.54694366455078 99.57331848144531"><strong><em>of</em></strong></span> <span class="ocrx_word" id="word_1_18" title="bbox 1926 321 2040 354; x_wconf 96;x_confs 99.5738754272461 99.54513549804688 99.57476806640625 99.52584838867188 99.55828857421875"><strong><em>Texas</em></strong></span> <span class="ocrx_word" id="word_1_19" title="bbox 2057 325 2092 354; x_wconf 96;x_confs 99.57447052001953 99.49091339111328"><strong><em>at</em></strong></span> <span class="ocrx_word" id="word_1_20" title="bbox 2110 322 2238 355; x_wconf 96;x_confs 99.57293701171875 99.57184600830078 99.55708312988281 99.4963150024414 99.43225860595703 99.55677032470703 99.56970977783203"><strong><em>Austin.</em></strong></span> 
+     </span>
+    </p>
+   </div>
+   <div class="ocr_carea" id="block_1_4" title="bbox 1174 418 1365 460">
+    <p class="ocr_par" id="par_1_4" lang="deu" title="bbox 1174 418 1365 460" xml:lang="deu">
+     <span class="ocr_line" id="line_1_4" title="bbox 1174 418 1365 460; baseline -0.005 -9; x_size 42; x_descenders 9; x_ascenders 9"><span class="ocrx_word" id="word_1_21" title="bbox 1174 418 1365 460; x_wconf 40;x_confs 99.03502655029297 98.92720794677734 99.03839111328125 98.91649627685547 99.0426254272461 98.97925567626953 97.82923126220703 91.49029541015625 97.57684326171875 98.95700073242188"><strong><em>Sincergly,</em></strong></span> 
+     </span>
+    </p>
+   </div>
+   <div class="ocr_carea" id="block_1_5" title="bbox 1148 466 1836 601">
+    <p class="ocr_par" id="par_1_5" lang="deu" title="bbox 1148 466 1836 601" xml:lang="deu">
+     <span class="ocr_line" id="line_1_5" title="bbox 1148 466 1836 601; baseline 0 2699; x_size 170; x_descenders 42.5; x_ascenders 42.5"><span class="ocrx_word" id="word_1_22" title="bbox 1148 466 1836 601; x_wconf 95;x_confs 95.0"><strong><em> </em></strong></span> 
+     </span>
+    </p>
+   </div>
+   <div class="ocr_carea" id="block_1_6" title="bbox 1173 618 1656 702">
+    <p class="ocr_par" id="par_1_6" lang="deu" title="bbox 1173 618 1656 702" xml:lang="deu">
+     <span class="ocr_line" id="line_1_6" title="bbox 1173 618 1509 660; baseline 0.006 -10; x_size 42; x_descenders 10; x_ascenders 9"><span class="ocrx_word" id="word_1_23" title="bbox 1173 618 1305 660; x_wconf 93;x_confs 99.57395935058594 99.57059478759766 99.52031707763672 99.57191467285156 99.43701171875 99.5732421875 99.54766082763672"><strong><em>Shirley</em></strong></span> <span class="ocrx_word" id="word_1_24" title="bbox 1332 619 1509 652; x_wconf 31;x_confs 99.00032806396484 98.78997802734375 90.1806640625 99.03858947753906 99.03408813476562 98.96276092529297 99.02225494384766 99.04153442382812"><strong><em>F.Binder</em></strong></span> 
+     </span>
+     <span class="ocr_line" id="line_1_7" title="bbox 1173 669 1656 702; baseline 0.004 -2; x_size 37.529789; x_descenders 5.5297875; x_ascenders 9"><span class="ocrx_word" id="word_1_25" title="bbox 1173 669 1336 701; x_wconf 96;x_confs 99.57291412353516 99.54046630859375 99.57379913330078 99.52295684814453 99.56106567382812 99.569091796875 99.56417083740234 99.45706176757812"><strong><em>Director</em></strong></span> <span class="ocrx_word" id="word_1_26" title="bbox 1363 669 1406 701; x_wconf 93;x_confs 99.38941955566406 99.23564910888672"><strong><em>of</em></strong></span> <span class="ocrx_word" id="word_1_27" title="bbox 1432 670 1656 702; x_wconf 91;x_confs 98.78109741210938 98.9332504272461 98.92576599121094 98.95805358886719 99.01348114013672 98.93405151367188 98.97386932373047 99.02375793457031 98.9995346069336 98.78421783447266"><strong><em>Admissions</em></strong></span> 
+     </span>
+    </p>
+   </div>
+  </div></body></html>
