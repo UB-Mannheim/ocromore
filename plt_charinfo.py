@@ -9,58 +9,174 @@ from utils.df_tools import get_con
 from utils.df_objectifier import DFObjectifier
 import glob
 from itertools import chain
+import inspect
 
 import numpy as np
 #import matplotlib.pyplot as plt
 #import seaborn as sns
 #import pandas as pd
+import os
+import shutil
+
 from pathlib import Path
 #import math
-class CharInfoConf1(object):
-    DBDIR = "./Testfiles"
+from configuration.configuration_handler import ConfigurationHandler
 
 
-class CharInfoConfJK(object):
-    DBDIR = "./Testfiles"
 
-
-class CharInfoConfJS(object):
-    DBDIR = "./Testfiles"
-
-
-used_info_conf = CharInfoConfJS()
+CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_dbtest.conf"
+config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, coded_configuration_path=CODED_CONFIGURATION_PATH)
+config = config_handler.get_config()
 
 
 def charinfo_process():
-    HOCR2SQL = True
-    PREPROCESSING = True
-    WORKWITHOBJ = False
 
-    PLOT = False
+
+    HOCR2SQL = config.HOCR2SQL
+    PREPROCESSING = config.PREPROCESSING
+    WORKWITHOBJ = config.WORKWITHOBJ
+
+    PLOT = config.PLOT
 
     # Read hocr and create sql-db
-    dbdir = './Testfiles/sql/'
-    dbdir = 'sqlite:///'+str(Path(used_info_conf.DBDIR).absolute())
+    DBDIR = config.DBDIR
 
-    filetypes = ["hocr","xml"]
-    files = chain.from_iterable(glob.iglob("./Testfiles/long/default/**/*."+filetype, recursive=True) for filetype in filetypes)
 
-    dbnamelast,con = "", None
+
+    dbdir = 'sqlite:///'+str(Path(DBDIR).absolute())
+
+    INPUT_FILETYPES = config.INPUT_FILETYPES
+    INPUT_FILEGLOB = config.INPUT_FILEGLOB
+
+
+    def fetch_dbs_and_files(fileglob, filetypes):
+
+        files = chain.from_iterable(
+            glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
+
+        dbs_and_files = {}
+
+        dbnamelast = ""
+        for  file in files:
+            fpath = Path(file)
+            ocr_profile = fpath.parts[-2]
+            # dbname = fpath.name.split("_")[1]
+            fp_dir_split = os.path.dirname(fpath).split('/')
+            dbname = fp_dir_split[0]+"_"+fp_dir_split[1] # new db name, todo @jk please create more common interface for dbname generation here
+
+
+            if dbname != dbnamelast:
+                db_fullname = dbdir + '/'+dbname+'.db'
+                dbs_and_files[db_fullname] = []
+                dbnamelast = dbname
+
+
+            dbs_and_files[db_fullname].append((file, ocr_profile))
+
+        return dbs_and_files
+
+
+    def convert_files_to_dbs(dbs_and_files, delete_and_create_dir=True):
+
+        if delete_and_create_dir is True:
+            # delete and recreate database directory
+            if os.path.exists(DBDIR):
+                shutil.rmtree(DBDIR)
+            os.makedirs(DBDIR)
+
+
+        exceptions = []
+        for db_fullname in dbs_and_files:
+            current_con = get_con(db_fullname)
+
+            values = dbs_and_files[db_fullname]
+            for (file, ocr_profile) in values:
+                print(f"\nConvert to sql:\t{file}")
+                try:
+                    HocrConverter().hocr2sql(file, current_con, ocr_profile)
+                except Exception as ex:
+                    print("Exception parsing file ", file, ":", ex)
+                    exceptions.append(ex)
+
+
+        return exceptions
+
+
+
+
+    def fetch_table_names(dbs_and_files):
+        print("fetching table names")
+        # create connection for each db and do the job
+
+    def do_preprocessing(dbs_and_files):
+        print("doing preprocessing")
+        exceptions = []
+
+        for db in dbs_and_files:
+            files = dbs_and_files[db]
+            print("preprocessing database:",db)
+            for (file, othervar) in files:
+
+                filename = os.path.basename(file)
+                table_name = filename.split('.')[0]
+
+                try:
+                    dataframe_wrapper = DFObjectifier(db, table_name)
+
+                    # Linematcher with queries
+                    if dataframe_wrapper.match_line(force=True):
+                        # Unspacing
+                        dataframe_wrapper.unspace()
+
+                        # Match words or segments of words into "word_match"
+                        dataframe_wrapper.match_words()
+
+                        # Write the calulated values into the db
+                        dataframe_wrapper.write2sql()
+                except Exception as ex:
+                    tr = inspect.trace()
+                    print("Exception parsing table ", table_name, ":", ex, "trace", tr)
+                    exceptions.append(ex)
+
+        return exceptions
+
+
+    dbs_and_files = fetch_dbs_and_files(INPUT_FILEGLOB, INPUT_FILETYPES)
+
+    if config.HOCR2SQL is True:
+        report_conv = convert_files_to_dbs(dbs_and_files)
+
+    if config.PREPROCESSING:
+        report_prep = do_preprocessing(dbs_and_files)
+
+
+
 
 
     if HOCR2SQL:
+
         for file in files:
             print(f"\nConvert to sql:\t{file}")
             fpath = Path(file)
             ocr_profile = fpath.parts[-2]
             dbname = fpath.name.split("_")[1]
+            fp_dir_split = os.path.dirname(fpath).split('/')
+            dbname = fp_dir_split[0]+"_"+fp_dir_split[1] # new db name, todo @jk please create more common interface for dbname generation here
+
+
             if dbname != dbnamelast:
-                con = get_con(dbdir + '/'+dbname+'.db')
+                db_fullname = dbdir + '/'+dbname+'.db'
+                con = get_con(db_fullname)
+                hocr2sql_db_names.append(db_fullname)
                 dbnamelast = dbname
             try:
-                HocrConverter().hocr2sql(file,con,ocr_profile)
-            except:
+                HocrConverter().hocr2sql(file, con, ocr_profile)
+            except Exception as ex:
+                print("Exception parsing file ", file, ":", ex)
                 pass
+
+
+
 
     dfXO = DFObjectifier(dbdir + '/1957.db', '0237_1957_hoppa-405844417-0050_0290')
 

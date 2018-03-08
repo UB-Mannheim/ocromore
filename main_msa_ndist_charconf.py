@@ -7,7 +7,7 @@ import importlib
 from configuration.configuration_handler import ConfigurationHandler
 
 
-
+# configuration
 CODED_CONFIGURATION_PATH = './configuration/config_debug_js.conf'  # configuration which is not given with cli args
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
@@ -15,7 +15,6 @@ config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
 #config_handler = ConfigurationHandler() # initialization in subclass
 
 config = config_handler.get_config()
-
 
 
 # Functional Code: ...
