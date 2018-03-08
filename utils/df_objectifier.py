@@ -4,6 +4,7 @@ from utils.df_tools import get_con, spinner
 import math
 import copy
 import sys
+from sklearn import cluster, neighbors
 
 class DFObjectifier(object):
     """
@@ -64,8 +65,9 @@ class DFObjectifier(object):
         """
         res_df = pd.DataFrame(columns=self.df.reset_index().columns)
         try:
-            del res_df["ocr"]
-            del res_df["ocr_profile"]
+            for value in list(res_df):
+                if not value in [*self.idxkeys,*self.imkeys]:
+                    del res_df[value]
         except:
             pass
         res_df["UID"] = []
@@ -85,8 +87,8 @@ class DFObjectifier(object):
         :param empty: Creates an empty obj (bool)
         :return:
         """
-        if res:
-            return DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
+        #if res:
+        #    return DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0])
         if empty:
             empty_df = pd.DataFrame(columns=self.df.reset_index().columns)
             empty_df["UID"] = []
@@ -106,9 +108,13 @@ class DFObjectifier(object):
             #_df_ = _df_.query(query)
         _df_ = _df_.reset_index().set_index("calc_line_idx")
         obj = {}
+        resobj = {}
         idxgroups = _df_.groupby(level=['calc_line_idx'])
         for idxname, idxgroup in idxgroups:
             obj[idxname] = []
+            if res:
+                #resobj[idxname] = []
+                resobj[idxname] = DFResObj("Result",self.res_df,self.idxkeys,self.imkeys,self.res_df.shape[0],lidx=idxname)
             grouped = idxgroup.set_index(['ocr','ocr_profile']).groupby(level=['ocr', 'ocr_profile'])
             for name, group in grouped:
                 #Needs to be copied cos of the addition of "UID"
@@ -118,7 +124,10 @@ class DFObjectifier(object):
                     cpgroup["UID"] = np.arange(0,size)
                     obj[idxname].append(DFSelObj(name,cpgroup,self.idxkeys,self.imkeys))
                     del cpgroup
-        return obj
+        if res:
+            return obj, resobj
+        else:
+            return obj
 
     def get_obj(self,*,ocr=None,ocr_profile=None,line_idx=None,word_idx=None,char_idx=None,col=None,query=None,res=False, empty=False):
         """
@@ -187,21 +196,64 @@ class DFObjectifier(object):
                 self.df.update(new_df)
         return
 
-    def _update_obsolete(self,obj,col=None):
-        combdata = {}
-        for dataidx in obj.data:
-            obj.data[dataidx][self.idxkeys[0]] = [obj.data[dataidx][self.idxkeys[0]]] * len(obj.data[dataidx]["line_idx"])
-            obj.data[dataidx][self.idxkeys[1]] = [obj.data[dataidx][self.idxkeys[1]]] * len(obj.data[dataidx]["line_idx"])
-            keys = obj.data[dataidx].keys()
-            if col is not None:
-                keys = self.idxkeys+col
-            for key in keys:
-                if key not in combdata: combdata[key] = []
-                combdata[key] = combdata[key]+obj.data[dataidx].get(key,[])
-        self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
+    def clean_data(self, outliercleaner = True,iqrmul=2.0, outlierex = None):
+        """
+        Unspaces the words in the dataset based on a pivot
+        :param sort_by: Set the pivot selectin order
+        :param pad: Set the multiplicator which calculats the padding value for the matching algo.
+                    Pad = Multiplicator * (Height of Line)
+        :param padrb: Special padding for right border
+        :return:
+        """
+        if outlierex is None:
+            outlierex = ["\"","§","'","*","A","O","Y","°","^","`"]
+        linedict = {}
+        tdf = self.df.reset_index().loc(axis=1)[
+            "ocr", "ocr_profile", 'calc_char','line_idx', 'word_idx', 'char_idx', "line_x0", "line_x1", "line_y0", "line_y1","word_x0", "word_x1", "word_y0", "word_y1", "x_wconf", "x_confs"]
+        lgroups = tdf.groupby(["line_idx", "ocr", "ocr_profile"])
+        for lidx, groups in lgroups:
+            if not lidx[0] in linedict:
+                linedict[lidx[0]] = {}
+                linedict[lidx[0]]["orig"] = {}
+            linedict[lidx[0]]["orig"][(lidx[1], lidx[2])] = groups.to_dict(orient="list")
+            linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["ocr"] = [lidx[1]]*len(linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["line_idx"])
+            linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["ocr_profile"] = [lidx[2]]*len(linedict[lidx[0]]["orig"][(lidx[1], lidx[2])]["line_idx"])
+        tdf = pd.DataFrame()
+        maxlines = max(set(linedict.keys()))
+        for line in linedict:
+            print(f"Clean data in line: {int(line)}/{int(maxlines)}")
+            for ocr in sorted(linedict[line]["orig"].keys()):
+                if outliercleaner:
+                    linf = linedict[line]["orig"][ocr]["word_y0"]
+                    quartile_1, quartile_3 = np.percentile(linf, [25, 75])
+                    iqr = quartile_3 - quartile_1
+                    lower_bound = quartile_1 - (iqr * iqrmul)
+                    outlierspos = np.where(linf < lower_bound)[0]
+                    for outlierpos in outlierspos:
+                        if outlierpos == 0 or outlierpos == len(linf)-1:
+                            wordidxarr = linedict[line]["orig"][ocr]["word_idx"]
+                            outlierwidx = wordidxarr[outlierpos]
+                            if len(np.where(np.array(wordidxarr) == outlierwidx)[0]) == 1:
+                                if not linedict[line]["orig"][ocr]["calc_char"][outlierpos] in outlierex:
+                                    if outlierpos == 0:
+                                        minx0 = np.array(linf[outlierpos + 1:]).min()
+                                    else:
+                                        minx0 = np.array(linf[:outlierpos]).min()
+                                    linf[outlierpos] = minx0
+                                    #linedict[line]["orig"][ocr]["calc_char"][outlierpos] = "_"
+                                    linedict[line]["orig"][ocr]["x_confs"][outlierpos] = 49.0
+                                    linedict[line]["orig"][ocr]["line_y0"] = [minx0]*len(linedict[line]["orig"][ocr]["line_y0"])
+                                    print(f"Clean data from outlier in {ocr[0]} ✓")
+                if tdf.empty:
+                    tdf = pd.DataFrame.from_dict(linedict[line]["orig"][ocr])
+                else:
+                    tdf = tdf.append(pd.DataFrame.from_dict(linedict[line]["orig"][ocr]), ignore_index=True)
+        if not tdf.empty:
+            self.df.update(tdf.reset_index().set_index(self.idxkeys))
+        print("Clean data ✓")
         return
 
-    def match_line(self,force=False,pad=20,lineheightmul=2):
+    def match_line(self,force=False,pad=5,padmid=0.75,lhm=2):
         """
         Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)
@@ -229,14 +281,12 @@ class DFObjectifier(object):
                     print("Match lines ✓")
                     break
                 y1_min = tdf.loc[tdf['line_y0'] == y0_min]["line_y1"].min()
-
                 y_diff = (y1_min - y0_min) * pad
                 y_diffmid = y_diff
-                if pad >0.5: y_diffmid =(y1_min - y0_min)*0.5
-
+                if pad > padmid: y_diffmid =(y1_min - y0_min)*padmid
                 tdf["line_height"] = tdf["line_y1"]-tdf["line_y0"]
                 # Select all y0 which are smaller as y0+25%diff and greater as y0+25%diff
-                tdf = tdf.loc[((tdf['line_height']*lineheightmul) > (y1_min-y0_min))&
+                tdf = tdf.loc[((tdf['line_height']*lhm) > (y1_min-y0_min))&
                               (tdf['line_y0'] > (y0_min - y_diff)) &
                               (tdf['line_y0'] < (y0_min + y_diffmid)) &
                               (tdf['line_y1'] > (y1_min - y_diffmid)) &
@@ -272,7 +322,7 @@ class DFObjectifier(object):
             pass
         return True
 
-    def unspace(self, sort_by=None, pad=0.75, padrb=0.15):
+    def unspace(self, sort_by=None, pad=1.0, padrb=0.00):
         """
         Unspaces the words in the dataset based on a pivot
         :param sort_by: Set the pivot selectin order
@@ -312,9 +362,13 @@ class DFObjectifier(object):
                     minx1 = curline[ocrO]["word_x1"][posx0]
                     diff = (curline[ocrO]["word_y1"][posx0]-curline[ocrO]["word_y0"][posx0])*pad
                     if diff > (minx1-minx0)/2: diff = (minx1-minx0)/2
+                    if diff < 0:
+                        print("Warning: X0 smaller than X1")
+                        diff = 0
+                        minx1=minx0
                     for ocrI in sorted(linedict[line]["orig"].keys(), key=lambda x: sort_by.index(x[0])):
                         x0arr = curline[ocrI]["word_x0"]
-                        result = np.where((np.array(list(x0arr))>minx0-diff)&(np.array(list(x0arr)) < minx1-(diff*padrb)))[0]
+                        result = np.where((np.array(list(x0arr))>=minx0-diff)&(np.array(list(x0arr)) <= minx1-(diff*padrb)))[0]
                         if result.size >0:
                             widx = curline[ocrI]["calc_word_idx"][min(set(result))]
                             max_widx = curline[ocrI]["calc_word_idx"][max(set(result))]
@@ -341,61 +395,6 @@ class DFObjectifier(object):
         self.df.update(tdf.set_index(self.idxkeys))
         print("Unspace lines ✓")
         return
-
-    def unspace_obsolete(self, sort_by=None, pad=0.7):
-        """
-        Unspaces the words in the dataset based on a pivot
-        :param sort_by: Set the pivot selectin order
-        :param pad: Set the multiplicator which calculats the padding value for the matching algo.
-                    Pad = Multiplicator * (Height of Line)
-        :return:
-        """
-        """
-        if sort_by is None:
-            sort_by = ["Tess", "Abbyy", "Ocro"]
-        # self.df["word_match"] = -1
-        tdf = self.df.reset_index().loc(axis=1)[
-            "ocr", "ocr_profile", "word_y0", "word_y1", "word_x0", "word_x1", "calc_line_idx", "calc_word_idx"]
-        groups = tdf.groupby(["ocr", "ocr_profile"])
-        groupnames = sorted(groups.indices.keys(), key=lambda x: sort_by.index(x[0]))
-        max_lidx = groups['calc_line_idx'].max().max()
-        for lidx in np.arange(0, max_lidx):
-            # sys.stdout.write(f"Unspace lines {next(spinner)} \r")
-            # sys.stdout.flush()
-            print(f"Unpsace words in line: {lidx}")
-            max_widx = tdf.loc[tdf['calc_line_idx'] == lidx]["calc_word_idx"].max()
-            for widx in np.arange(0, max_widx):
-                x0 = None
-                x1 = None
-                for name in groupnames:
-                    group = groups.get_group(name)
-                    group = group.loc[group["calc_line_idx"] == lidx]
-                    if group.shape[0] != 0:
-                        if x0 is None:
-                            if widx != max_widx:
-                                groupnext = group.loc[group["calc_word_idx"] == widx + 1.0]
-                                if groupnext.shape[0] != 0:
-                                    x1 = groupnext["word_x0"].iloc[0]
-                            group = group.loc[group["calc_word_idx"] == widx]
-                            if group.shape[0] == 0: break
-                            x0 = group["word_x0"].iloc[0]
-                            if x1 is None: x1 = group["word_x1"].iloc[0]
-                            diff = (group["word_y1"].iloc[0] - group["word_y0"].iloc[0]) * pad
-                        else:
-                            # Select all the words in the other groups which have the same borders
-                            tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x0'] < (x1 - diff)]
-                            max_widx = tmpgroup["calc_word_idx"].max()
-                            min_widx = tmpgroup["calc_word_idx"].min()
-                            tmpgroup["calc_word_idx"] = min_widx
-                            if not np.isnan(max_widx):
-                                group.update(tmpgroup)
-                                tmpgroup = group.loc[group["calc_word_idx"] > max_widx]["calc_word_idx"].sub(
-                                    max_widx - min_widx)
-                                group.update(tmpgroup)
-                            tdf.update(group)
-        print("Unspace lines ✓")
-        self.df.update(tdf.reset_index().set_index(self.df.index))
-        """
 
     def match_words(self, force=False,pad=1):
         """
@@ -457,34 +456,14 @@ class DFObjectifier(object):
                         curline["word_x0"][idx] = maxx1
                         curline["word_x1"][idx] = maxx1
                 widx += 1.0
-            if tdf.empty:tdf = pd.DataFrame.from_dict(linedict[line]["calc"])
+            if tdf.empty: tdf = pd.DataFrame.from_dict(linedict[line]["calc"])
             else: tdf = tdf.append(pd.DataFrame.from_dict(linedict[line]["calc"]),ignore_index=True)
         df1 = self.df.reset_index().set_index(["ocr","ocr_profile","calc_line_idx","calc_word_idx"])
         df2 = tdf.set_index(["ocr","ocr_profile","calc_line_idx","calc_word_idx"])
         df1.update(df2["word_match"])
-        df1 =df1.reset_index().set_index(self.idxkeys)
+        df1 = df1.reset_index().set_index(self.idxkeys)
         self.df.update(df1)
         print("Match words ✓")
-        return
-
-    def _match_words_obsolete(self):
-        """
-        for name, group in groups:
-            count = 0
-            print(f"Match words in line: {name}")
-            while True:
-                tgdf = group.loc[group["word_match"] == -1]
-                if tgdf.empty: break
-                minx0 = tgdf["word_x0"].min()
-                maxx1 = tgdf.loc[tgdf["word_x0"] == minx0]["word_x1"].max()
-                if isinstance(minx0,float) and isinstance(maxx1,float):
-                    found = group[group["word_x0"] >= minx0][group["word_x0"] <= maxx1]
-                    found["word_match"] = count
-                    group.update(found)
-                    count += 1
-            tdf.update(group)
-        self.df.update(tdf)
-        """
         return
 
     def write2sql(self,result=False,engine=None):
@@ -507,7 +486,7 @@ class DFObjectifier(object):
                 print(f'The result table:"{self.tablename}" was updated!')
         return
 
-    def write2file(self,path=None,fname=None,ftype='txt',calc=True,result=False,line_height_normalization = True):
+    def write2file(self,path=None,fname=None,ftype='txt',calc=True,result=False,lhnorm = True):
         """
         Writes the current state of the df to a file (e.g. hocr, text)
         :param path:
@@ -520,9 +499,9 @@ class DFObjectifier(object):
         """
         if ftype == 'txt':
             if result:
-                self._writeRes2txt(path, fname, line_height_normalization)
+                self._writeRes2txt(path, fname, lhnorm=lhnorm)
             else:
-                self._writeGrp2txt(path, fname, calc,line_height_normalization)
+                self._writeGrp2txt(path, fname, calc=calc,lhnorm=lhnorm)
         if ftype == 'hocr':
             if result:
                 self._writeRes2hocr(path, fname)
@@ -530,7 +509,7 @@ class DFObjectifier(object):
                 self._writeGrp2hocr(path, fname, calc)
         return
 
-    def _writeGrp2txt(self,path=None,fname=None, calc = True,line_height_normalization = True):
+    def _writeGrp2txt(self,path=None,fname=None, calc = True,lhnorm = True, maxlhinsert=2):
         if path is None:
             path = "./Testfiles/txt/"
         if fname is None:
@@ -543,17 +522,28 @@ class DFObjectifier(object):
         for name, group in groups:
             groupl = group[line]
             lidxarr = groupl.unique()
+            lhmean = None
+            if lhnorm:
+                lhmean = self._get_mean_lineheight(group,line,lidxarr)
+            eol = None
             with open(path+fname+"".join(name), 'w+', encoding='utf-8') as infile:
                 for lidx in lidxarr:
+                    if eol is not None and lhnorm and lhmean is not None:
+                        sol = group[groupl == lidx]["line_y1"].max()
+                        lc = int(round((sol-eol)/lhmean))-1
+                        if lc > maxlhinsert: lc = maxlhinsert
+                        for emptyln in range(0,lc):
+                                infile.write("\n")
                     groupw = group[groupl == lidx][word]
                     widxarr = groupw.unique()
                     txtline = []
                     for widx in widxarr:
                         txtline.append("".join(group.loc[groupl==lidx].loc[groupw == widx][char].tolist()))
                     infile.write(" ".join(txtline)+"\n")
+                    eol = group[groupl == lidx]["line_y1"].min()
         return
 
-    def _writeRes2txt(self,path, fname=None, line_height_normalization = True):
+    def _writeRes2txt(self,path, fname=None, lhnorm = True):
         return
 
     def _writeGrp2hocr(self,path, fname=None, calc = True):
@@ -642,8 +632,120 @@ class DFObjectifier(object):
     def _writeRes2hocr(self,path, fname=None):
         return
 
-    def _normalize_line_height(self):
+    def _get_mean_lineheight(self, df,linetype,lidxarr):
+        try:
+            lhu = []
+            lharr = df["line_y1"] - df["line_y0"]
+            for idx, lidx in enumerate(lidxarr[:-1]):
+                gap = df[df[linetype] == lidxarr[idx + 1]]["line_y0"].max() - df[df[linetype] == lidx]["line_y1"].min()
+                if gap > 0.0:
+                    lhu.append(gap)
+            lh = np.array(lhu)
+            lh = lh.reshape(-1, 1)
+            bandwidth = cluster.estimate_bandwidth(lh, quantile=0.3)
+            ms = cluster.MeanShift(bandwidth=bandwidth, bin_seeding=True)
+            ms.fit(lh)
+            lhmean = ms.cluster_centers_[0][0]
+            lhmean = lhmean + np.median(lharr)
+        except:
+            print("Lineheight calculation failed!")
+            return None
+        return lhmean
+
+    # ######## #
+    # OBSOLETE #
+    # ######## #
+
+    def _obsolete_update_(self,obj,col=None):
+        """""
+        combdata = {}
+        for dataidx in obj.data:
+            obj.data[dataidx][self.idxkeys[0]] = [obj.data[dataidx][self.idxkeys[0]]] * len(obj.data[dataidx]["line_idx"])
+            obj.data[dataidx][self.idxkeys[1]] = [obj.data[dataidx][self.idxkeys[1]]] * len(obj.data[dataidx]["line_idx"])
+            keys = obj.data[dataidx].keys()
+            if col is not None:
+                keys = self.idxkeys+col
+            for key in keys:
+                if key not in combdata: combdata[key] = []
+                combdata[key] = combdata[key]+obj.data[dataidx].get(key,[])
+        self.df.update(pd.DataFrame.from_dict(combdata).set_index(self.idxkeys))
+        """""
         return
+
+    def _obsolete_match_words_(self):
+        """
+        for name, group in groups:
+            count = 0
+            print(f"Match words in line: {name}")
+            while True:
+                tgdf = group.loc[group["word_match"] == -1]
+                if tgdf.empty: break
+                minx0 = tgdf["word_x0"].min()
+                maxx1 = tgdf.loc[tgdf["word_x0"] == minx0]["word_x1"].max()
+                if isinstance(minx0,float) and isinstance(maxx1,float):
+                    found = group[group["word_x0"] >= minx0][group["word_x0"] <= maxx1]
+                    found["word_match"] = count
+                    group.update(found)
+                    count += 1
+            tdf.update(group)
+        self.df.update(tdf)
+        """
+        return
+
+    def _obsolete_unspace_(self, sort_by=None, pad=0.7):
+        """
+        Unspaces the words in the dataset based on a pivot
+        :param sort_by: Set the pivot selectin order
+        :param pad: Set the multiplicator which calculats the padding value for the matching algo.
+                    Pad = Multiplicator * (Height of Line)
+        :return:
+        """
+        """
+        if sort_by is None:
+            sort_by = ["Tess", "Abbyy", "Ocro"]
+        # self.df["word_match"] = -1
+        tdf = self.df.reset_index().loc(axis=1)[
+            "ocr", "ocr_profile", "word_y0", "word_y1", "word_x0", "word_x1", "calc_line_idx", "calc_word_idx"]
+        groups = tdf.groupby(["ocr", "ocr_profile"])
+        groupnames = sorted(groups.indices.keys(), key=lambda x: sort_by.index(x[0]))
+        max_lidx = groups['calc_line_idx'].max().max()
+        for lidx in np.arange(0, max_lidx):
+            # sys.stdout.write(f"Unspace lines {next(spinner)} \r")
+            # sys.stdout.flush()
+            print(f"Unpsace words in line: {lidx}")
+            max_widx = tdf.loc[tdf['calc_line_idx'] == lidx]["calc_word_idx"].max()
+            for widx in np.arange(0, max_widx):
+                x0 = None
+                x1 = None
+                for name in groupnames:
+                    group = groups.get_group(name)
+                    group = group.loc[group["calc_line_idx"] == lidx]
+                    if group.shape[0] != 0:
+                        if x0 is None:
+                            if widx != max_widx:
+                                groupnext = group.loc[group["calc_word_idx"] == widx + 1.0]
+                                if groupnext.shape[0] != 0:
+                                    x1 = groupnext["word_x0"].iloc[0]
+                            group = group.loc[group["calc_word_idx"] == widx]
+                            if group.shape[0] == 0: break
+                            x0 = group["word_x0"].iloc[0]
+                            if x1 is None: x1 = group["word_x1"].iloc[0]
+                            diff = (group["word_y1"].iloc[0] - group["word_y0"].iloc[0]) * pad
+                        else:
+                            # Select all the words in the other groups which have the same borders
+                            tmpgroup = group.loc[group['word_x0'] > (x0 - diff)].loc[group['word_x0'] < (x1 - diff)]
+                            max_widx = tmpgroup["calc_word_idx"].max()
+                            min_widx = tmpgroup["calc_word_idx"].min()
+                            tmpgroup["calc_word_idx"] = min_widx
+                            if not np.isnan(max_widx):
+                                group.update(tmpgroup)
+                                tmpgroup = group.loc[group["calc_word_idx"] > max_widx]["calc_word_idx"].sub(
+                                    max_widx - min_widx)
+                                group.update(tmpgroup)
+                            tdf.update(group)
+        print("Unspace lines ✓")
+        self.df.update(tdf.reset_index().set_index(self.df.index))
+        """
 
 class DFSelObj(object):
     """
@@ -733,7 +835,7 @@ class DFSelObj(object):
         # widx = word index
         # word2text = update text with word elements
         offset = 0
-        if widx != None:
+        if widx is not None:
             wmidxset = set(np.where(np.array(list(self.data["word_match"])) == widx)[0].tolist())
             if len(wmidxset) != 0:
                 offset = min(set(list(wmidxset)))
@@ -763,7 +865,7 @@ class DFSelObj(object):
         if wc is not None:
             if wc in text:
                 self._update_wildcard(text,wc,offset)
-        if widx != None:
+        if widx is not None:
             textarr = []
             for idx in self.word["text"]:
                 if widx != idx:
@@ -793,10 +895,10 @@ class DFSelObj(object):
             for idx in np.nditer(np.where(chararr == wc)):
                 front = False
                 if idx == 0:
-                    front=True
+                    front = True
                     ws = 0
                 else:
-                    if text[idx-1] == " ": front=True
+                    if text[idx-1] == " ": front = True
                     ws = len(np.where(np.array(list(text[:idx+1])) == " ")[0])
                 self.text(offset+idx-ws,wc,insertfront=front)
         except Exception as ex:
@@ -955,11 +1057,29 @@ class DFResObj(DFSelObj):
     It serves to store the result.
     """
 
-    def __init__(self, name, df, idxkeys, imkeys,maxuid):
+    def __init__(self, name, df, idxkeys, imkeys,maxuid, lidx=None):
         DFSelObj.__init__(self,name,df,idxkeys,imkeys)
         self.result = True
         self.empty = False
         self.maxuid = maxuid
+        self.lineidx = int(lidx)
+        self.wordidx = 0
+        self.charidx = 0
+
+    def append(self,lineobj,UID):#
+        if UID == -1:
+            self.wordidx += 1
+            self.charidx = 0
+            return
+        self.data["ocr"].append(lineobj.name[0])
+        self.data["ocr_profile"].append(lineobj.name[1])
+        self.data["UID"].append(UID)
+        self.data["line_idx"].append(self.lineidx)
+        self.data["word_idx"].append(self.wordidx)
+        self.data["char_idx"].append(self.charidx)
+        for item in ["char","x_confs","x_wconf","line_x0","line_x1","line_y0","line_y1","word_x0","word_x1","word_y0","word_y1"]:
+            self.data[item].append(lineobj.data[item][UID])
+        self.charidx += 1
 
     def text(self,pos,val=None,cmd="insert",insertfront=False):
         if cmd == "insert":
@@ -977,45 +1097,11 @@ class DFResObj(DFSelObj):
         if cmd == "replace":
             self.data["calc_char"][pos] = val
 
-    def update_df(self,col=None):
-        if col is not None:
-            keys = ["UID"]+col
-        else:
-            keys = self.data.keys()
-        dfdict = {}
-        for idx, uidx in enumerate(self.data["UID"]):
-            if uidx == 1:
-                uidx = self.maxuid
-                self.maxuid += 1
-            for col in keys:
-                if col not in dfdict:
-                    dfdict[col] = []
-                    if col == "UID":
-                        dfdict[col].append(uidx)
-                    else:
-                        dfdict[col].append(self.data[col][idx])
-        df = pd.DataFrame.from_dict(dfdict).set_index("UID")
-        orig_df = self.orig_df
-        orig_df = orig_df.reset_index().set_index("UID")
-        orig_df.update(df)
-        self.orig_df = orig_df
-
-class DFEmptyObj(DFSelObj):
-    """
-    Derivates from DFSelObj.
-    Contains zero data from the start.
-    It serves as a replacement for lines, where no data exists in one or more of the datasets
-    """
-    def __init__(self, name, df, idxkeys, imkeys,maxuid):
-        DFSelObj.__init__(self,name,df,idxkeys,imkeys)
-        self.empty = True
-        self.maxuid = maxuid
-
     def update_textspace(self, text, wc=None, widx=None):
         # wc = wildcards
-        if widx != None:
+        if widx is not None:
             prevtxt = self.word["text"]
-            if  self.data["word_match"]==[]:
+            if self.data["word_match"]==[]:
                 self.data["word_match"] = [widx] * len(text)
             else:
                 if max(set(self.data["word_match"])) > widx:
@@ -1037,7 +1123,70 @@ class DFEmptyObj(DFSelObj):
         self.data["UID"] = [-1]*len(text)
         self.data["char_weight"] = [-1] * len(text)
         self.data["calc_word_idx"] = [-1] * len(text)
-        if widx != None:
+        if widx is not None:
+            self.data["calc_word_idx"] = self.data["word_match"]
+
+    def update_df(self,lineobj,res,col=None):
+
+
+        self.orig_df.append()
+        if col is not None:
+            keys = ["UID"]+col
+        else:
+            keys = self.data.keys()
+        dfdict = {}
+        for idx, uidx in enumerate(self.data["UID"]):
+            if uidx == 1:
+                uidx = self.maxuid
+                self.maxuid += 1
+            for col in keys:
+                if col not in dfdict:
+                    dfdict[col] = []
+                    if col == "UID":
+                        dfdict[col].append(uidx)
+                    else:
+                        dfdict[col].append(self.data[col][idx])
+        df = pd.DataFrame.from_dict(dfdict).set_index("UID")
+        self.orig_df.reset_index().set_index("UID").update(df)
+
+class DFEmptyObj(DFSelObj):
+    """
+    Derivates from DFSelObj.
+    Contains zero data from the start.
+    It serves as a replacement for lines, where no data exists in one or more of the datasets
+    """
+    def __init__(self, name, df, idxkeys, imkeys,maxuid):
+        DFSelObj.__init__(self,name,df,idxkeys,imkeys)
+        self.empty = True
+        self.maxuid = maxuid
+
+    def update_textspace(self, text, wc=None, widx=None):
+        # wc = wildcards
+        if widx is not None:
+            prevtxt = self.word["text"]
+            if self.data["word_match"]==[]:
+                self.data["word_match"] = [widx] * len(text)
+            else:
+                if max(set(self.data["word_match"])) > widx:
+                    nextidx = min(set(self.data["word_match"]).difference(x for x in np.arange(0.0,widx)))
+                    pos = min(np.where(np.array(list(self.data["word_match"])) == nextidx)[0])
+                    arr = [widx] * len(text)
+                    self.data["word_match"] = self.data["word_match"][:pos]+arr+self.data["word_match"][pos:]
+                else:
+                    self.data["word_match"].extend([widx]*len(text))
+                textarr = []
+                for idx in prevtxt:
+                    if widx != idx:
+                        textarr.append(prevtxt[idx])
+                    else:
+                        textarr.append(text)
+                        text = ""
+                text = "".join(textarr)+text
+        self.data["calc_char"] = list(text)
+        self.data["UID"] = [-1]*len(text)
+        self.data["char_weight"] = [-1] * len(text)
+        self.data["calc_word_idx"] = [-1] * len(text)
+        if widx is not None:
             self.data["calc_word_idx"] = self.data["word_match"]
 
 class Value(object):

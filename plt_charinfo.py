@@ -57,7 +57,7 @@ def charinfo_process():
         dbs_and_files = {}
 
         dbnamelast = ""
-        for  file in files:
+        for file in files:
             fpath = Path(file)
             ocr_profile = fpath.parts[-2]
             # dbname = fpath.name.split("_")[1]
