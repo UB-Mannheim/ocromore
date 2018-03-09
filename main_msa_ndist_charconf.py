@@ -23,7 +23,7 @@ dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FIL
 
 table_ctr = 0
 
-tableparser = TableParser(config)
+tableparser = TableParser(config, delete_and_create_output_dir=True)
 for db in dbs_and_files:
     print("Parsing database:", db)
     files = dbs_and_files[db]

@@ -2,16 +2,29 @@ from utils.df_objectifier import DFObjectifier
 from n_dist_keying.database_handler import DatabaseHandler
 from utils.pycharm_handler import PycharmHandler
 from ocr_validation.isri_handler import IsriHandler
-
+import os
+import shutil
 
 class TableParser(object):
 
 
-    def __init__(self, config):
+    def __init__(self, config, delete_and_create_output_dir=False):
         print("asd")
         self._config = config
+        # give the last element in split path
+        self._base_db_dir = os.path.basename(os.path.normpath(config.DBDIR))
+
+        if delete_and_create_output_dir is True:
+            # delete and recreate database directory
+            if os.path.exists(config.OUTPUT_ROOT_PATH):
+                shutil.rmtree(config.OUTPUT_ROOT_PATH)
+            os.makedirs(config.OUTPUT_ROOT_PATH)
+
 
     def parse_a_table(self, dbdir_abs, table):
+
+        basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))
+        basename_db = os.path.splitext(basename_db_ext)[0] # remove extension
 
         dataframe_wrapper = DFObjectifier(dbdir_abs, table)
         database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS)
@@ -59,7 +72,9 @@ class TableParser(object):
 
 
             #ocr_comparison.print_msa_best_results()
-            ocr_comparison.save_dataset_to_file(self._config.FILEPATH_MSA_BEST_RESULT, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
+
+            created_path = self._config.OUTPUT_ROOT_PATH+"/"+self._base_db_dir+"//"+basename_db+"//"+table+"_msa_best.txt"
+            ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
 
         ocr_comparison.print_sets(False)
 
