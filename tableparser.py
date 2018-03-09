@@ -75,21 +75,23 @@ class TableParser(object):
 
             created_path = self._config.OUTPUT_ROOT_PATH+"/"+self._base_db_dir+"//"+basename_db+"//"+table+"_msa_best.txt"
             ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
+            return created_path
 
-        ocr_comparison.print_sets(False)
 
 
+    def validate_table_against_gt(self,filepath_table, filepath_groundtruth):
         if self._config.DO_ISRI_VAL is True:
             isri_handler = IsriHandler()
 
             # Test 'accuracy'
-            isri_handler.accuracy(self._config.FILEPATH_GROUNDTRUTH, self._config.FILEPATH_NDIST_RESULT, self._config.FILEPATH_ACCURACY_REPORT_NDIST)
-            isri_handler.accuracy(self._config.FILEPATH_GROUNDTRUTH, self._config.FILEPATH_MSA_BEST_RESULT, self._config.FILEPATH_ACCURACY_REPORT_MSA)
+            isri_handler.accuracy(filepath_groundtruth, filepath_table, filepath_table+".accreport")
 
             # Test 'wordacc'
-            isri_handler.wordacc(self._config.FILEPATH_GROUNDTRUTH, self._config.FILEPATH_NDIST_RESULT, None, self._config.FILEPATH_WACCURACY_REPORT_NDIST)
-            isri_handler.wordacc(self._config.FILEPATH_GROUNDTRUTH, self._config.FILEPATH_MSA_BEST_RESULT, None, self._config.FILEPATH_WACCURACY_REPORT_MSA)
+            isri_handler.wordacc(filepath_groundtruth, filepath_table, None, filepath_table+".waccreport")
 
+
+    def display_stuff(self):
+        # not used atm
         if self._config.DISPLAY_DIFFERENCES:
             pyc_handler = PycharmHandler()
             pyc_handler.show_file_comparison(self._config.FILEPATH_GROUNDTRUTH, self._config.FILEPATH_NDIST_RESULT)
