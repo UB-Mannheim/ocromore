@@ -77,11 +77,9 @@ class DatabaseHandler(object):
             fpath = Path(file)
             fstruct.path = file
             fstruct.name = fpath.name
-            fstruct.tablename = fpath.parts[int(self.dirpos["tablename"])*-1].split(".")[0]
-            fstruct.ocr_profile = fpath.parts[int(self.dirpos["ocr_profile"])*-1]
-            fstruct.ocr = fpath.parts[int(self.dirpos["ocr"])*-1]
-            fstruct.dbname = fpath.parts[int(self.dirpos["dbname"])*-1]
-
+            for itempos in self.dirpos:
+                if int(self.dirpos[itempos]) == 0: fstruct.__dict__[itempos] = "default"
+                else: fstruct.__dict__[itempos] = fpath.parts[int(self.dirpos[itempos])*-1].split(".")[0]
             if fstruct.dbname != lastdbname:
                 fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
                 self.files[fstruct.dbname] = []

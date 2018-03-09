@@ -18,6 +18,8 @@ config = config_handler.get_config()
 DBDIR = config.DBDIR
 dbdir = 'sqlite:///'+str(Path(DBDIR).absolute())
 
+
+# 0 = set to 'default'
 TABLENAME_POS   = 1
 OCR_PROFILE_POS = 2
 OCR_POS         = 3
