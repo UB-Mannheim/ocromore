@@ -26,7 +26,6 @@ class FileStruct():
         self.dbname     = None
         self.tablename  = None
 
-
 class DatabaseHandler(object):
 
     def __init__(self,dbdir=None, dbnames=None, tablename_pos = 1,ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
