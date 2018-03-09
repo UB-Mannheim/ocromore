@@ -15,75 +15,80 @@ import os
 import shutil
 from pathlib import Path
 
-class Inputstruct():
+class FileStruct():
+
     def __init__(self):
-        self.ocr         = None
-        self.ocr_profile = None
-        self.name        = None
-        self.path        = None
-        self.dbname      = None
-        self.dbpath      = None
+        self.path       = None
+        self.name       = None
+        self.ocr        = None
+        self.ocr_profile= None
+        self.dbpath     = None
+        self.dbname     = None
+        self.tablename  = None
+
 
 class DatabaseHandler(object):
 
-    def __init__(self,dbdir=None):
-        self.input   = None
+    def __init__(self,dbdir=None, dbnames=None, tablename_pos = 1,ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
+        self.files   = None
         self.dbdir   = dbdir
-        self.dbinfo  = None
         self.table   = None
-        self._db     = None
-        self._con    = None
+        self.db      = None
+        if dbdir is not None:
+            self.update_db(dbnames=dbnames)
+        self.con     = None
+        self.dirpos  = self.set_dirpos(tablename_pos=tablename_pos,ocr_profile_pos=ocr_profile_pos,ocr_pos=ocr_pos,dbname_pos=dbname_pos)
 
+    def set_dirpos(self,tablename_pos=1, ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
+        return{"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
 
-    @property
-    def con(self):
-        return self._con
-
-    @con.setter
-    def con(self, dbpath, echo=False):
-        if self._con is not None:
-            self._con.close()
-        self._con = create_engine(dbpath, echo=echo)
+    def create_con(self, dbpath, echo=False):
+        if dbpath[:6] != "sqlite":
+            dbpath = 'sqlite:///' + dbpath
+        self.con = create_engine(dbpath, echo=echo)
         return
 
-    @property
-    def db(self):
-        return self._db
-
-    @db.setter
-    def db(self, dbnames=None):
+    def update_db(self, dbnames=None):
         if self.dbdir is not None:
             db = []
-            for dbpath in glob.glob(self.dbdir + "*.db", recursive=True):
+            for dbpath in glob.glob(self.dbdir + "/*.db", recursive=True):
                 dbname = str(Path(dbpath).name)
                 if dbnames is None:
-                    db.append(dbname)
+                    db.append(dbpath)
                 elif dbname in dbnames:
-                    db.append(dbname)
-            self._db = db
+                    db.append(dbpath)
+            if db:
+                self.db = db
         else:
             print("Please first set the database directory (dbir).")
         return
 
-    def fetch_input(self,fileglob, filetypes):
-        self.input = {}
-        inputstruct = Inputstruct
+    def fetch_and_parse(self,fileglob, filetypes,delete_and_create_dir=True):
+        self.fetch_files(fileglob, filetypes)
+        exceptions = self.parse_to_db(delete_and_create_dir=delete_and_create_dir)
+        return exceptions
+
+    def fetch_files(self,fileglob, filetypes):
+        self.files = {}
         files = chain.from_iterable(glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
-        lastname = ""
+        lastdbname = ""
         for file in files:
+            fstruct = FileStruct()
             fpath = Path(file)
-            inputstruct.path = file
-            inputstruct.name = fpath.name
-            inputstruct.ocr_profile = fpath.parts[-2]
-            inputstruct.ocr = fpath.parts[-3]
-            inputstruct.dbname = fpath.parts[-4]
+            fstruct.path = file
+            fstruct.name = fpath.name
+            fstruct.tablename = fpath.parts[int(self.dirpos["tablename"])*-1].split(".")[0]
+            fstruct.ocr_profile = fpath.parts[int(self.dirpos["ocr_profile"])*-1]
+            fstruct.ocr = fpath.parts[int(self.dirpos["ocr"])*-1]
+            fstruct.dbname = fpath.parts[int(self.dirpos["dbname"])*-1]
 
-            if inputstruct.dbname != lastname:
-                inputstruct.dbpath = self.dbdir + '/' + inputstruct.name + '.db'
-                self.input[inputstruct.dbname] = []
-                lastname = inputstruct.dbname
+            if fstruct.dbname != lastdbname:
+                fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
+                self.files[fstruct.dbname] = []
+                lastdbname = fstruct.dbname
+            else: fstruct.dbpath = lastdbname
 
-            self.input[inputstruct.dbname].append(inputstruct)
+            self.files[fstruct.dbname].append(fstruct)
         return
 
     def parse_to_db(self, delete_and_create_dir=True):
@@ -95,28 +100,30 @@ class DatabaseHandler(object):
             os.makedirs(self.dbdir)
 
         exceptions = []
-        for dbname in self.input:
-             = self.input[dbname][0].dbpath
-            self.con(self.input[dbname][0].dbpath)
-            for fileidx in self.input[dbname]:
-                print(f"\nConvert to sql:\t{self.input[dbname][fileidx].name}")
+        for dbname in self.files:
+            self.create_con(self.files[dbname][0].dbpath)
+            for file in self.files[dbname]:
+                print(f"\nConvert to sql:\t{file.name}")
                 try:
-                    HocrConverter().hocr2sql(self.input[dbname][fileidx].path, self.con, self.input[dbname][fileidx].ocr_profile)
+                    HocrConverter(fileinfo=file).hocr2sql(file.path, self.con, file.ocr_profile)
                 except Exception as ex:
-                    print("Exception parsing file ", self.input[dbname][fileidx].name, ":", ex)
+                    print("Exception parsing file ", file.name, ":", ex)
                     exceptions.append(ex)
 
         return exceptions
 
     def preprocess_dbdata(self):
-        print("doing preprocessing")
+        print("Preprocess the data")
         exceptions = []
         for db in self.db:
-            table_names = self.get_table_name_from_database(db)
-            print("preprocessing database:", db)
-            for table_name in table_names:
+            tablenames = self.get_tablenames_from_db(db)
+            if self.table is not None:
+                tablenames = self.table
+                if isinstance(tablenames,str): tablenames = list(tablenames)
+            print("Preprocessing database:", db)
+            for tablename in tablenames:
                 try:
-                    dataframe_wrapper = DFObjectifier(db, table_name)
+                    dataframe_wrapper = DFObjectifier(db, tablename)
 
                     # Linematcher with queries
                     if dataframe_wrapper.match_line(force=True):
@@ -130,13 +137,13 @@ class DatabaseHandler(object):
                         dataframe_wrapper.write2sql()
                 except Exception as ex:
                     tr = inspect.trace()
-                    print("Exception parsing table ", table_name, ":", ex, "trace", tr)
+                    print("Exception parsing table ", tablename, ":", ex, "trace", tr)
                     exceptions.append(ex)
 
         return exceptions
 
-    def get_table_name_from_database(self,db):
-        self.con(db)
+    def get_tablenames_from_db(self,db):
+        self.create_con(db)
         return self.con.table_names()
 
     @staticmethod
@@ -144,7 +151,7 @@ class DatabaseHandler(object):
         # get first db and first table/filename for the operation
         my_db = list(dbs_and_files.keys())[0]
         filename, somestuff = dbs_and_files[my_db][0]
-        table_name = FileToDatabaseHandler.get_table_name_from_filename(filename)
+        table_name = get_tablename_from_db(filename)
         dfXO = DFObjectifier(my_db, table_name)
 
         # for file in files:
@@ -226,7 +233,6 @@ class DatabaseHandler(object):
         dfSelO[0].value("calc_line_idx", 4, 10)
         # obj[0].update()  - Optional
         dfXO.update(dfSelO)
-
 
     @staticmethod
     def plot_charinfo(charinfo, date, GROUPS=False, years=False, plot="Histo"):

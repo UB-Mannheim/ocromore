@@ -7,7 +7,7 @@
 from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
 from file_to_database_handler import FileToDatabaseHandler as ftdh
-
+from utils.database_handler import DatabaseHandler
 
 CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_dbtest.conf"
 
@@ -18,14 +18,20 @@ config = config_handler.get_config()
 DBDIR = config.DBDIR
 dbdir = 'sqlite:///'+str(Path(DBDIR).absolute())
 
+TABLENAME_POS   = 1
+OCR_PROFILE_POS = 2
+OCR_POS         = 3
+DBPATH_POS      = 4
 
-dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
+dh = DatabaseHandler(dbdir=str(Path(DBDIR).absolute()))
+dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
+#dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
 
 if config.HOCR2SQL is True:
-    report_conv = ftdh.convert_files_to_dbs(dbs_and_files)
+    report_conv = dh.parse_to_db()
 
 if config.PREPROCESSING:
-    report_prep = ftdh.do_preprocessing(dbs_and_files)
+    report_prep = dh.preprocess_dbdata()
 
 
 if config.WORKWITHOBJ:
