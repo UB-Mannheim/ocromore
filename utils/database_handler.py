@@ -28,37 +28,39 @@ class DatabaseHandler(object):
 
     def __init__(self,dbdir=None):
         self.input   = None
-        self.dbdir   = None
+        self.dbdir   = dbdir
         self.dbinfo  = None
-        self.db      = None
         self.table   = None
-        self.con     = None
+        self._db     = None
+        self._con    = None
+
 
     @property
     def con(self):
-        return self.con
+        return self._con
 
     @con.setter
     def con(self, dbpath, echo=False):
-        if self.con is not None:
-            self.con.close()
-        self.con = create_engine(dbpath, echo=echo)
+        if self._con is not None:
+            self._con.close()
+        self._con = create_engine(dbpath, echo=echo)
         return
 
     @property
     def db(self):
-        return self.db
+        return self._db
 
     @db.setter
     def db(self, dbnames=None):
-        self.db=[]
         if self.dbdir is not None:
-            for dbpath in glob.iglob(self.dbdir + "*.sql", recursive=True):
-                dbname = str(dbpath(Path).name)
+            db = []
+            for dbpath in glob.glob(self.dbdir + "*.db", recursive=True):
+                dbname = str(Path(dbpath).name)
                 if dbnames is None:
-                    self.db.append(dbname)
+                    db.append(dbname)
                 elif dbname in dbnames:
-                    self.db.append(dbname)
+                    db.append(dbname)
+            self._db = db
         else:
             print("Please first set the database directory (dbir).")
         return
@@ -72,14 +74,14 @@ class DatabaseHandler(object):
             fpath = Path(file)
             inputstruct.path = file
             inputstruct.name = fpath.name
-            inputstruct.ocr_profile = fpath.parts[-1]
-            inputstruct.ocr = fpath.parts[-2]
-            inputstruct.dbname = fpath.parts[-3]
+            inputstruct.ocr_profile = fpath.parts[-2]
+            inputstruct.ocr = fpath.parts[-3]
+            inputstruct.dbname = fpath.parts[-4]
 
             if inputstruct.dbname != lastname:
                 inputstruct.dbpath = self.dbdir + '/' + inputstruct.name + '.db'
-                self.input[inputstruct.dbpath] = []
-                lastname = inputstruct.name
+                self.input[inputstruct.dbname] = []
+                lastname = inputstruct.dbname
 
             self.input[inputstruct.dbname].append(inputstruct)
         return
@@ -94,6 +96,7 @@ class DatabaseHandler(object):
 
         exceptions = []
         for dbname in self.input:
+             = self.input[dbname][0].dbpath
             self.con(self.input[dbname][0].dbpath)
             for fileidx in self.input[dbname]:
                 print(f"\nConvert to sql:\t{self.input[dbname][fileidx].name}")
