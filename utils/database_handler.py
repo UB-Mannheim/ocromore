@@ -48,9 +48,10 @@ class DatabaseHandler(object):
         return
 
     def update_db(self, dbnames=None):
+        dbdir = Path(self.dbdir).absolute()
         if self.dbdir is not None:
             db = []
-            for dbpath in glob.glob(self.dbdir + "/*.db", recursive=True):
+            for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
                 dbname = str(Path(dbpath).name)
                 if dbnames is None:
                     db.append(dbpath)
@@ -59,7 +60,7 @@ class DatabaseHandler(object):
             if db:
                 self.db = db
         else:
-            print("Please first set the database directory (dbir).")
+            print("Please set the database directory (dbir) first.")
         return
 
     def fetch_and_parse(self,fileglob, filetypes,delete_and_create_dir=True):
@@ -104,7 +105,7 @@ class DatabaseHandler(object):
                 try:
                     HocrConverter(fileinfo=file).hocr2sql(file.path, self.con, file.ocr_profile)
                 except Exception as ex:
-                    print("Exception parsing file ", file.name, ":", ex)
+                    print(f"Exception parsing file {file.name}:", ex)
                     exceptions.append(ex)
 
         return exceptions
@@ -134,13 +135,17 @@ class DatabaseHandler(object):
                         dataframe_wrapper.write2sql()
                 except Exception as ex:
                     tr = inspect.trace()
-                    print("Exception parsing table ", tablename, ":", ex, "trace", tr)
+                    print(f"Exception parsing table {tablename} :", ex, "trace", tr)
                     exceptions.append(ex)
 
         return exceptions
 
     def get_tablenames_from_db(self,db):
-        self.create_con(db)
+        try:
+            self.create_con(db)
+        except Exception as ex:
+            print("Connection to db failed:", ex)
+            return
         return self.con.table_names()
 
     ###############

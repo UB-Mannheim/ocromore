@@ -20,7 +20,6 @@ class TableParser(object):
                 shutil.rmtree(config.OUTPUT_ROOT_PATH)
             os.makedirs(config.OUTPUT_ROOT_PATH)
 
-
     def parse_a_table(self, dbdir_abs, table):
 
         basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))
@@ -77,8 +76,6 @@ class TableParser(object):
             ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
             return created_path
 
-
-
     def validate_table_against_gt(self,filepath_table, filepath_groundtruth):
         if self._config.DO_ISRI_VAL is True:
             isri_handler = IsriHandler()
@@ -88,7 +85,6 @@ class TableParser(object):
 
             # Test 'wordacc'
             isri_handler.wordacc(filepath_groundtruth, filepath_table, None, filepath_table+".waccreport")
-
 
     def display_stuff(self):
         # not used atm

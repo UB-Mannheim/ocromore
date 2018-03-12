@@ -31,7 +31,6 @@ class FileToDatabaseHandler():
         return groundtruths
         print("asd")
 
-
     @staticmethod
     def fetch_dbs_and_files(fileglob, filetypes, dbdir):
 
@@ -208,7 +207,6 @@ class FileToDatabaseHandler():
         dfSelO[0].value("calc_line_idx", 4, 10)
         # obj[0].update()  - Optional
         dfXO.update(dfSelO)
-
 
     @staticmethod
     def plot_charinfo(charinfo, date, GROUPS=False, years=False, plot="Histo"):
