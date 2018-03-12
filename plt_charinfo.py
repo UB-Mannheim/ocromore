@@ -36,6 +36,7 @@ if config.HOCR2SQL is True:
 
 dh.update_db()
 
+
 if config.PREPROCESSING:
     report_prep = dh.preprocess_dbdata()
 
