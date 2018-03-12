@@ -30,6 +30,7 @@ class DatabaseHandler(object):
 
     def __init__(self,dbdir=None, dbnames=None, tablename_pos =1, ocr_profile_pos=2, ocr_pos=3, dbname_pos=4):
         self.files   = None
+        self.gtfiles = None
         self.dbdir   = dbdir
         self.table   = None
         self.db      = None
@@ -90,6 +91,26 @@ class DatabaseHandler(object):
             else: fstruct.dbpath = lastdbname
 
             self.files[fstruct.dbname].append(fstruct)
+        return
+
+    def fetch_gtfiles(self,gtfileglob, gtflag=True):
+        self.gtfiles = {}
+        filetyp = "txt"
+        if gtflag: filetyp = "gt."+filetyp
+        files = glob.glob(gtfileglob+filetyp, recursive=True)
+        lastdbname = ""
+        for file in files:
+            fstruct = FileStruct()
+            fpath = Path(file)
+            fstruct.path = file
+            fstruct.name = fpath.name
+            fstruct.dbname = file.split("/")[-2]
+            if fstruct.dbname != lastdbname:
+                fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
+                self.gtfiles[fstruct.dbname] = {}
+                lastdbname = fstruct.dbname
+            else: fstruct.dbpath = lastdbname
+            self.gtfiles[fstruct.dbname][fstruct.name] = fstruct
         return
 
     def parse_to_db(self, delete_and_create_dir=True):
