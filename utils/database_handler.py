@@ -40,6 +40,13 @@ class DatabaseHandler(object):
         self.con     = None
         self.dirpos  = self.set_dirpos(tablename_pos=tablename_pos,ocr_profile_pos=ocr_profile_pos,ocr_pos=ocr_pos,dbname_pos=dbname_pos)
 
+    def get_groundtruths(self):
+        return self.gtfiles
+
+    def get_files(self):
+        return self.files
+
+
     def set_dirpos(self,tablename_pos=1, ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
         self.dirpos = {"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
         return self.dirpos
@@ -87,7 +94,8 @@ class DatabaseHandler(object):
                 else: fstruct.__dict__[itempos] = fpath.parts[int(self.dirpos[itempos])*-1].split(".")[0]
             if fstruct.dbname != lastdbname:
                 fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
-                self.files[fstruct.dbname] = []
+                if not fstruct.dbname in self.files:
+                    self.files[fstruct.dbname] = []
                 lastdbname = fstruct.dbname
             else: fstruct.dbpath = lastdbname
 
@@ -128,7 +136,7 @@ class DatabaseHandler(object):
             for file in self.files[dbname]:
                 print(f"\nConvert to sql:\t{file.name}")
                 try:
-                    HocrConverter(fileinfo=file).hocr2sql(file.path, self.con, file.ocr_profile)
+                    HocrConverter().hocr2sql(file.path, self.con, file.ocr_profile)
                 except Exception as ex:
                     print(f"Exception parsing file {file.name}:", ex)
                     exceptions.append(ex)

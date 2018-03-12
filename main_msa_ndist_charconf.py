@@ -7,6 +7,8 @@ import importlib
 from configuration.configuration_handler import ConfigurationHandler
 from file_to_database_handler import FileToDatabaseHandler as ftdh
 from tableparser import TableParser
+from utils.database_handler import DatabaseHandler
+
 
 # fetch configurations
 CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
@@ -19,39 +21,55 @@ config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
 config = config_handler.get_config()
 dbdir = 'sqlite:///'+str(Path(config.DBDIR).absolute())
 
-dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
+TABLENAME_POS   = 1 # in example '0585_...hocr'
+OCR_PROFILE_POS = 4 # in example: 'default'
+OCR_POS         = 2 # in example: 'tess'
+DBPATH_POS      = 3 # in example: '1969'
 
+dh = DatabaseHandler(dbdir=str(Path(config.DBDIR).absolute()))
+dh.set_dirpos(tablename_pos=TABLENAME_POS,ocr_profile_pos=OCR_PROFILE_POS,ocr_pos=OCR_POS,dbname_pos=DBPATH_POS)
+dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
+dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)
+filestructs = dh.get_files()
+filestructs_gt = dh.get_groundtruths()
 
-groundtruths = ftdh.fetch_groundtruths("./Testfiles/groundtruth/long/**/*.", ["gt.txt"])
+#dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
+#groundtruths = ftdh.fetch_groundtruths("./Testfiles/groundtruth/long/**/*.", ["gt.txt"])
+
 table_ctr = 0
 
 tableparser = TableParser(config, delete_and_create_output_dir=True)
 count = 1
-for db in dbs_and_files:
+for db in filestructs:
     print("Parsing database:", db)
-    files = dbs_and_files[db]
-    for file, mode in files:
-        if ".xml" in file:
-            count += 1
-            if count == 3: continue
-            table = ftdh.get_table_name_from_filename(file)
-            print("Parsing table: ", table, "in database: ", db)
-            table_ctr += 1
-            path_created_file = tableparser.parse_a_table(db, table)
-            foundgt = None
-            for gt in groundtruths:
-                if table in gt:
-                    print("found")
-                    foundgt = gt
-            if foundgt is not None:
-                tableparser.validate_table_against_gt(path_created_file,foundgt)
+    files = filestructs[db]
+    files_gt = filestructs_gt[db]
+    for file in files:
+        count += 1
+        if count == 3: continue
+        table = file.tablename
+        dbpath = 'sqlite:////' +file.dbpath
+        print("Parsing table: ", table, "in database: ", dbpath)
+        table_ctr += 1
+        path_created_file = tableparser.parse_a_table(dbpath, table)
+        foundgt = None
+        for gt in files_gt:
+            if table in gt:
+                print("found")
+                foundgt = gt
+        if foundgt is not None:
+            tableparser.validate_table_against_gt(path_created_file,foundgt)
 
-            #if table_ctr == 2: #j4t parse 4 tables then done
-            #    break
+        #if table_ctr == 2: #j4t parse 4 tables then done
+        #    break
 
 
 
 print("asd")
+
+
+
+
 
 
 
