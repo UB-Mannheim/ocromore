@@ -15,7 +15,7 @@ config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, co
 config = config_handler.get_config()
 
 # Read hocr and create sql-db
-dbdir = 'sqlite:///'+str(Path(config.DBDIR).absolute())
+dbdir = 'sqlite:////'+str(Path(config.DBDIR).absolute())
 
 # 0 = set to 'default'
 TABLENAME_POS   = 1 #necessary
@@ -23,13 +23,11 @@ OCR_PROFILE_POS = 2
 OCR_POS         = 3
 DBPATH_POS      = 4 #necessary
 
-## Add special pre or postfixes to POS names
-ADDPRE = {}
-ADDPOST = {}
-
 
 dh = DatabaseHandler(dbdir=dbdir)
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
+dh.fetch_gtfiles("./Testfiles/groundtruth/**/*.")
+test = dh.gtfiles['1957'][list(dh.gtfiles['1957'].keys())[0]]
 #dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
 
 if config.HOCR2SQL is True:
