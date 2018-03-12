@@ -32,7 +32,8 @@ class DatabaseHandler(object):
         self.files   = None
         self.gtfiles = None
         self.dbdir   = dbdir
-        self.table   = None
+        self.dbfilter = None
+        self.tablefilter   = None
         self.db      = None
         if dbdir is not None:
             self.update_db(dbnames=dbnames)
@@ -137,10 +138,13 @@ class DatabaseHandler(object):
     def preprocess_dbdata(self):
         print("Preprocess the data")
         exceptions = []
+        if self.dbfilter:
+            self.db = self.dbfilter
+            if isinstance(self.db, str): self.db = list(self.db)
         for db in self.db:
             tablenames = self.get_tablenames_from_db(db)
-            if self.table is not None:
-                tablenames = self.table
+            if self.tablefilter is not None:
+                tablenames = self.tablefilter
                 if isinstance(tablenames,str): tablenames = list(tablenames)
             print("Preprocessing database:", db)
             for tablename in tablenames:

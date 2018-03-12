@@ -23,10 +23,12 @@ OCR_PROFILE_POS = 2
 OCR_POS         = 3
 DBPATH_POS      = 4 #necessary
 
+GROUNDTRUTH_PATH = "./Testfiles/groundtruth/**/*."
+
 
 dh = DatabaseHandler(dbdir=dbdir)
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
-dh.fetch_gtfiles("./Testfiles/groundtruth/**/*.")
+dh.fetch_gtfiles(GROUNDTRUTH_PATH)
 test = dh.gtfiles['1957'][list(dh.gtfiles['1957'].keys())[0]]
 #dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
 
@@ -39,8 +41,8 @@ if config.PREPROCESSING:
 
 
 if config.WORKWITHOBJ:
-    ftdh.work_with_object(dbs_and_files)
+    dh.work_with_object()
 
 # Plot DF (not working atm)
 if config.PLOT:
-    ftdh.plot_charinfo()
+    dh.plot_charinfo()
