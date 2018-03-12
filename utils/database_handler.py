@@ -143,6 +143,110 @@ class DatabaseHandler(object):
         self.create_con(db)
         return self.con.table_names()
 
+    ###############
+    #STATICMETHODS#
+    ###############
+
+    @staticmethod
+    def fetch_groundtruths(fileglob, filetypes):
+        groundtruths = []
+        files = chain.from_iterable(
+            glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
+
+        for file in files:
+            groundtruths.append(file)
+
+        return groundtruths
+        print("asd")
+
+    @staticmethod
+    def fetch_dbs_and_files(fileglob, filetypes, dbdir):
+
+        files = chain.from_iterable(
+            glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
+
+        dbs_and_files = {}
+
+        dbnamelast = ""
+        for file in files:
+            fpath = Path(file)
+            ocr_profile = fpath.parts[-2]
+            # dbname = fpath.name.split("_")[1]
+            fp_dir_split = os.path.dirname(fpath).split('/')
+            dbname = fp_dir_split[0] + "_" + fp_dir_split[
+                1]  # new db name, todo @jk please create more common interface for dbname generation here
+
+            if dbname != dbnamelast:
+                db_fullname = dbdir + '/' + dbname + '.db'
+                dbs_and_files[db_fullname] = []
+                dbnamelast = dbname
+
+            dbs_and_files[db_fullname].append((file, ocr_profile))
+
+        return dbs_and_files
+
+    @staticmethod
+    def convert_files_to_dbs(dbs_and_files, delete_and_create_dir=True, dbdir=None):
+
+        if delete_and_create_dir is True:
+            # delete and recreate database directory
+            if os.path.exists(dbdir):
+                shutil.rmtree(dbdir)
+            os.makedirs(dbdir)
+
+        exceptions = []
+        for db_fullname in dbs_and_files:
+            current_con = get_con(db_fullname)
+
+            values = dbs_and_files[db_fullname]
+            for (file, ocr_profile) in values:
+                print(f"\nConvert to sql:\t{file}")
+                try:
+                    HocrConverter().hocr2sql(file, current_con, ocr_profile)
+                except Exception as ex:
+                    print("Exception parsing file ", file, ":", ex)
+                    exceptions.append(ex)
+
+        return exceptions
+
+    @staticmethod
+    def do_preprocessing(dbs_and_files):
+        print("doing preprocessing")
+        exceptions = []
+
+        for db in dbs_and_files:
+            files = dbs_and_files[db]
+            print("preprocessing database:", db)
+            for (file, othervar) in files:
+
+                table_name = FileToDatabaseHandler.get_table_name_from_filename(file)
+
+                try:
+                    dataframe_wrapper = DFObjectifier(db, table_name)
+
+                    # Linematcher with queries
+                    if dataframe_wrapper.match_line(force=True):
+                        # Unspacing
+                        dataframe_wrapper.unspace()
+
+                        # Match words or segments of words into "word_match"
+                        dataframe_wrapper.match_words()
+
+                        # Write the calulated values into the db
+                        dataframe_wrapper.write2sql()
+                except Exception as ex:
+                    tr = inspect.trace()
+                    print("Exception parsing table ", table_name, ":", ex, "trace", tr)
+                    exceptions.append(ex)
+
+        return exceptions
+
+    @staticmethod
+    def get_table_name_from_filename(file):
+        filename = os.path.basename(file)
+        table_name = filename.split('.')[0]
+        return table_name
+
     @staticmethod
     def work_with_object(dbs_and_files):
         # get first db and first table/filename for the operation
