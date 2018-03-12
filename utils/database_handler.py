@@ -110,7 +110,7 @@ class DatabaseHandler(object):
                 self.gtfiles[fstruct.dbname] = {}
                 lastdbname = fstruct.dbname
             else: fstruct.dbpath = lastdbname
-            self.gtfiles[fstruct.dbname][fstruct.name] = fstruct
+            self.gtfiles[fstruct.dbname][fstruct.name.split(".")[0]] = fstruct
         return
 
     def parse_to_db(self, delete_and_create_dir=True):
