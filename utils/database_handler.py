@@ -28,10 +28,12 @@ class FileStruct():
 
 class DatabaseHandler(object):
 
-    def __init__(self,dbdir=None, dbnames=None, tablename_pos = 1,ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
+    def __init__(self,dbdir=None, dbnames=None, tablename_pos =1, ocr_profile_pos=2, ocr_pos=3, dbname_pos=4):
         self.files   = None
+        self.gtfiles = None
         self.dbdir   = dbdir
-        self.table   = None
+        self.dbfilter = None
+        self.tablefilter   = None
         self.db      = None
         if dbdir is not None:
             self.update_db(dbnames=dbnames)
@@ -39,7 +41,8 @@ class DatabaseHandler(object):
         self.dirpos  = self.set_dirpos(tablename_pos=tablename_pos,ocr_profile_pos=ocr_profile_pos,ocr_pos=ocr_pos,dbname_pos=dbname_pos)
 
     def set_dirpos(self,tablename_pos=1, ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
-        return{"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
+        self.dirpos = {"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
+        return self.dirpos
 
     def create_con(self, dbpath, echo=False):
         if dbpath[:6] != "sqlite":
@@ -48,7 +51,9 @@ class DatabaseHandler(object):
         return
 
     def update_db(self, dbnames=None):
-        dbdir = Path(self.dbdir).absolute()
+        dbdir = self.dbdir
+        if dbdir[:6] == "sqlite":
+            dbdir = dbdir[11:]
         if self.dbdir is not None:
             db = []
             for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
@@ -60,10 +65,10 @@ class DatabaseHandler(object):
             if db:
                 self.db = db
         else:
-            print("Please set the database directory (dbir) first.")
+            print("Please set the database directory (dbdir) first.")
         return
 
-    def fetch_and_parse(self,fileglob, filetypes,delete_and_create_dir=True):
+    def fetch_and_parse(self, fileglob, filetypes,delete_and_create_dir=True):
         self.fetch_files(fileglob, filetypes)
         exceptions = self.parse_to_db(delete_and_create_dir=delete_and_create_dir)
         return exceptions
@@ -87,6 +92,26 @@ class DatabaseHandler(object):
             else: fstruct.dbpath = lastdbname
 
             self.files[fstruct.dbname].append(fstruct)
+        return
+
+    def fetch_gtfiles(self,gtfileglob, gtflag=True):
+        self.gtfiles = {}
+        filetyp = "txt"
+        if gtflag: filetyp = "gt."+filetyp
+        files = glob.glob(gtfileglob+filetyp, recursive=True)
+        lastdbname = ""
+        for file in files:
+            fstruct = FileStruct()
+            fpath = Path(file)
+            fstruct.path = file
+            fstruct.name = fpath.name
+            fstruct.dbname = file.split("/")[-2]
+            if fstruct.dbname != lastdbname:
+                fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
+                self.gtfiles[fstruct.dbname] = {}
+                lastdbname = fstruct.dbname
+            else: fstruct.dbpath = lastdbname
+            self.gtfiles[fstruct.dbname][fstruct.name.split(".")[0]] = fstruct
         return
 
     def parse_to_db(self, delete_and_create_dir=True):
@@ -113,10 +138,13 @@ class DatabaseHandler(object):
     def preprocess_dbdata(self):
         print("Preprocess the data")
         exceptions = []
+        if self.dbfilter:
+            self.db = self.dbfilter
+            if isinstance(self.db, str): self.db = list(self.db)
         for db in self.db:
             tablenames = self.get_tablenames_from_db(db)
-            if self.table is not None:
-                tablenames = self.table
+            if self.tablefilter is not None:
+                tablenames = self.tablefilter
                 if isinstance(tablenames,str): tablenames = list(tablenames)
             print("Preprocessing database:", db)
             for tablename in tablenames:
