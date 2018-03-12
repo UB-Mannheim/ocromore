@@ -32,6 +32,8 @@ class DatabaseHandler(object):
         self.files   = None
         self.gtfiles = None
         self.dbdir   = dbdir
+        self.dburl = 'sqlite:////'+dbdir
+
         self.dbfilter = None
         self.tablefilter   = None
         self.db      = None
@@ -59,9 +61,8 @@ class DatabaseHandler(object):
 
     def update_db(self, dbnames=None):
         dbdir = self.dbdir
-        if dbdir[:6] == "sqlite":
-            dbdir = dbdir[11:]
-        if self.dbdir is not None:
+
+        if dbdir is not None:
             db = []
             for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
                 dbname = str(Path(dbpath).name)
@@ -93,7 +94,7 @@ class DatabaseHandler(object):
                 if int(self.dirpos[itempos]) == 0: fstruct.__dict__[itempos] = "default"
                 else: fstruct.__dict__[itempos] = fpath.parts[int(self.dirpos[itempos])*-1].split(".")[0]
             if fstruct.dbname != lastdbname:
-                fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
+                fstruct.dbpath = self.dburl + '/' + fstruct.dbname + '.db'
                 if not fstruct.dbname in self.files:
                     self.files[fstruct.dbname] = []
                 lastdbname = fstruct.dbname
@@ -115,7 +116,7 @@ class DatabaseHandler(object):
             fstruct.name = fpath.name
             fstruct.dbname = file.split("/")[-2]
             if fstruct.dbname != lastdbname:
-                fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
+                fstruct.dbpath = self.dburl + '/' + fstruct.dbname + '.db'
                 self.gtfiles[fstruct.dbname] = {}
                 lastdbname = fstruct.dbname
             else: fstruct.dbpath = lastdbname
@@ -198,7 +199,6 @@ class DatabaseHandler(object):
             groundtruths.append(file)
 
         return groundtruths
-        print("asd")
 
     @staticmethod
     def fetch_dbs_and_files(fileglob, filetypes, dbdir):

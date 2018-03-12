@@ -6,7 +6,6 @@
 
 from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
-from file_to_database_handler import FileToDatabaseHandler as ftdh
 from utils.database_handler import DatabaseHandler
 
 CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
@@ -15,22 +14,21 @@ config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, co
 config = config_handler.get_config()
 
 # Read hocr and create sql-db
-dbdir = 'sqlite:////'+str(Path(config.DBDIR).absolute())
+#dbdir = 'sqlite:////'+str(Path(config.DBDIR).absolute())
+
+dbdir = str(Path(config.DBDIR).absolute())
 
 # 0 = set to 'default'
 TABLENAME_POS   = 1 #necessary
-OCR_PROFILE_POS = 2
-OCR_POS         = 3
-DBPATH_POS      = 4 #necessary
-
-GROUNDTRUTH_PATH = "./Testfiles/groundtruth/**/*."
+OCR_PROFILE_POS = 4
+OCR_POS         = 2
+DBPATH_POS      = 3 #necessary
 
 
 dh = DatabaseHandler(dbdir=dbdir)
+dh.set_dirpos(tablename_pos=TABLENAME_POS,ocr_profile_pos=OCR_PROFILE_POS,ocr_pos=OCR_POS,dbname_pos=DBPATH_POS)
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
-dh.fetch_gtfiles(GROUNDTRUTH_PATH)
-test = dh.gtfiles['1957'][list(dh.gtfiles['1957'].keys())[0]]
-#dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
+
 
 if config.HOCR2SQL is True:
     report_conv = dh.parse_to_db()
