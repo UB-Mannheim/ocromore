@@ -28,7 +28,7 @@ class FileStruct():
 
 class DatabaseHandler(object):
 
-    def __init__(self,dbdir=None, dbnames=None, tablename_pos = 1,ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
+    def __init__(self,dbdir=None, dbnames=None, tablename_pos =1, ocr_profile_pos=2, ocr_pos=3, dbname_pos=4):
         self.files   = None
         self.dbdir   = dbdir
         self.table   = None
@@ -39,7 +39,8 @@ class DatabaseHandler(object):
         self.dirpos  = self.set_dirpos(tablename_pos=tablename_pos,ocr_profile_pos=ocr_profile_pos,ocr_pos=ocr_pos,dbname_pos=dbname_pos)
 
     def set_dirpos(self,tablename_pos=1, ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
-        return{"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
+        self.dirpos = {"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
+        return self.dirpos
 
     def create_con(self, dbpath, echo=False):
         if dbpath[:6] != "sqlite":
@@ -48,7 +49,9 @@ class DatabaseHandler(object):
         return
 
     def update_db(self, dbnames=None):
-        dbdir = Path(self.dbdir).absolute()
+        dbdir = self.dbdir
+        if dbdir[:6] == "sqlite":
+            dbdir = dbdir[11:]
         if self.dbdir is not None:
             db = []
             for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
@@ -60,10 +63,10 @@ class DatabaseHandler(object):
             if db:
                 self.db = db
         else:
-            print("Please set the database directory (dbir) first.")
+            print("Please set the database directory (dbdir) first.")
         return
 
-    def fetch_and_parse(self,fileglob, filetypes,delete_and_create_dir=True):
+    def fetch_and_parse(self, fileglob, filetypes,delete_and_create_dir=True):
         self.fetch_files(fileglob, filetypes)
         exceptions = self.parse_to_db(delete_and_create_dir=delete_and_create_dir)
         return exceptions
