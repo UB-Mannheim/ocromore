@@ -28,12 +28,11 @@ class FileStruct():
 
 class DatabaseHandler(object):
 
-    def __init__(self,dbdir=None, dbnames=None, tablename_pos =1, ocr_profile_pos=2, ocr_pos=3, dbname_pos=4):
+    def __init__(self,dbdir=None, dbnames=None, tablename_pos =1, ocr_profile_pos=2, ocr_pos=3, dbname_pos=4, dburlscheme="sqlite:///"):
         self.files   = None
         self.gtfiles = None
         self.dbdir   = dbdir
-        self.dburl = 'sqlite:////'+dbdir
-
+        self.dburlscheme = dburlscheme
         self.dbfilter = None
         self.tablefilter   = None
         self.db      = None
@@ -54,14 +53,12 @@ class DatabaseHandler(object):
         return self.dirpos
 
     def create_con(self, dbpath, echo=False):
-        if dbpath[:6] != "sqlite":
-            dbpath = 'sqlite:///' + dbpath
+        dbpath = self.dburlscheme+dbpath
         self.con = create_engine(dbpath, echo=echo)
-        return
+        return self.con
 
     def update_db(self, dbnames=None):
         dbdir = self.dbdir
-
         if dbdir is not None:
             db = []
             for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
@@ -94,7 +91,7 @@ class DatabaseHandler(object):
                 if int(self.dirpos[itempos]) == 0: fstruct.__dict__[itempos] = "default"
                 else: fstruct.__dict__[itempos] = fpath.parts[int(self.dirpos[itempos])*-1].split(".")[0]
             if fstruct.dbname != lastdbname:
-                fstruct.dbpath = self.dburl + '/' + fstruct.dbname + '.db'
+                fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
                 if not fstruct.dbname in self.files:
                     self.files[fstruct.dbname] = []
                 lastdbname = fstruct.dbname
@@ -116,7 +113,7 @@ class DatabaseHandler(object):
             fstruct.name = fpath.name
             fstruct.dbname = file.split("/")[-2]
             if fstruct.dbname != lastdbname:
-                fstruct.dbpath = self.dburl + '/' + fstruct.dbname + '.db'
+                fstruct.dbpath = self.dbpath+ '/' + fstruct.dbname + '.db'
                 self.gtfiles[fstruct.dbname] = {}
                 lastdbname = fstruct.dbname
             else: fstruct.dbpath = lastdbname
@@ -152,6 +149,7 @@ class DatabaseHandler(object):
             if isinstance(self.db, str): self.db = list(self.db)
         for db in self.db:
             tablenames = self.get_tablenames_from_db(db)
+            db = self.dburlscheme+db
             if self.tablefilter is not None:
                 tablenames = self.tablefilter
                 if isinstance(tablenames,str): tablenames = list(tablenames)

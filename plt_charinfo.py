@@ -33,7 +33,7 @@ dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 if config.HOCR2SQL is True:
     report_conv = dh.parse_to_db()
 
-
+dh.update_db()
 if config.PREPROCESSING:
     report_prep = dh.preprocess_dbdata()
 
