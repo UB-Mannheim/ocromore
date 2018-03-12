@@ -9,15 +9,13 @@ from configuration.configuration_handler import ConfigurationHandler
 from file_to_database_handler import FileToDatabaseHandler as ftdh
 from utils.database_handler import DatabaseHandler
 
-CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_dbtest.conf"
+CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, coded_configuration_path=CODED_CONFIGURATION_PATH)
 config = config_handler.get_config()
 
 # Read hocr and create sql-db
-DBDIR = config.DBDIR
-dbdir = 'sqlite:///'+str(Path(DBDIR).absolute())
-
+dbdir = 'sqlite:///'+str(Path(config.DBDIR).absolute())
 
 # 0 = set to 'default'
 TABLENAME_POS   = 1
@@ -31,6 +29,7 @@ dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 
 if config.HOCR2SQL is True:
     report_conv = dh.parse_to_db()
+
 
 if config.PREPROCESSING:
     report_prep = dh.preprocess_dbdata()

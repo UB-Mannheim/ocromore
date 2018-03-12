@@ -18,6 +18,21 @@ from pathlib import Path
 class FileToDatabaseHandler():
 
     @staticmethod
+    def fetch_groundtruths(fileglob, filetypes):
+        groundtruths= []
+        files = chain.from_iterable(
+            glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
+
+
+        for file in files:
+            groundtruths.append(file)
+
+
+        return groundtruths
+        print("asd")
+
+
+    @staticmethod
     def fetch_dbs_and_files(fileglob, filetypes, dbdir):
 
         files = chain.from_iterable(
@@ -44,13 +59,13 @@ class FileToDatabaseHandler():
         return dbs_and_files
 
     @staticmethod
-    def convert_files_to_dbs(dbs_and_files, delete_and_create_dir=True):
+    def convert_files_to_dbs(dbs_and_files, delete_and_create_dir=True, dbdir=None):
 
         if delete_and_create_dir is True:
             # delete and recreate database directory
-            if os.path.exists(DBDIR):
-                shutil.rmtree(DBDIR)
-            os.makedirs(DBDIR)
+            if os.path.exists(dbdir):
+                shutil.rmtree(dbdir)
+            os.makedirs(dbdir)
 
         exceptions = []
         for db_fullname in dbs_and_files:

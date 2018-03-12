@@ -1,6 +1,7 @@
 from utils.typecasts import TypeCasts
 from utils.random import Random
 from n_dist_keying.text_corrector import TextCorrector
+import os
 
 class OCRcomparison:
     """
@@ -158,6 +159,12 @@ class OCRcomparison:
 
 
     def save_dataset_to_file(self, filename, set_index, mode_add_linebreaks = False, other_set=""):
+
+        dir = os.path.dirname(filename)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+
+
         file = open(filename, 'w+')
 
         previous_dataset_line = None

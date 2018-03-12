@@ -4,26 +4,27 @@ import configargparse
 
 class ConfigurationHandler(object):
 
-    def __init__(self, first_init = False, fill_unkown_args = False, coded_configuration_path=None):
+    def __init__(self, first_init = False, fill_unkown_args = False, coded_configuration_paths=None):
 
         self._initialized = False
         self._options = None
 
         if first_init is True:
             self._initialized = True
-            parser = configargparse.get_argument_parser(default_config_files=[coded_configuration_path])
+            parser = configargparse.get_argument_parser(default_config_files=coded_configuration_paths)
             options = self.add_all_args(parser, fill_unkown_args)
 
         else:
-            p = configargparse.get_argument_parser()
-            options, junk = p.parse_known_args()
+            parser = configargparse.get_argument_parser()
+            options, junk = parser.parse_known_args()
 
+        self._parser = parser
         self._options = options
 
     def add_all_args(self, parser, fill_unkown_args):
 
         # parse.add for specific type and name description
-        parser.add('-ne', '--number_example', type=int) #testing argument
+        # parser.add('-ne', '--number_example', type=int) #testing argument
 
 
 
