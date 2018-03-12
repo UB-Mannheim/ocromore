@@ -35,10 +35,11 @@ class HocrConverter(object):
                 df2sql                  -   Parse the dataframe to a sqlite db
         """
 
-    def __init__(self):
+    def __init__(self, datainfo=None):
         self._ocropus_page = None
         self._abbyy_page = None
         self._tesseract_page = None
+        self.datainfo = datainfo
 
     def get_hocr_document(self, filename):
         #dir_path = os.path.dirname(os.path.abspath(__file__))
@@ -64,7 +65,7 @@ class HocrConverter(object):
         if not index:
             index = ['ocr','ocr_profile', 'line_idx', 'word_idx', 'char_idx']
         df = self.hocr2df(filename,ocr,ocr_profile,index)
-        self.df2sql(df,filename, con, index=index)
+        self.df2sql(df,filename, con, index=index, datainfo=self.datainfo)
         return df
 
     def hocr2df(self,filename,ocr=None,ocr_profile=None,index=None):
@@ -255,7 +256,7 @@ class HocrConverter(object):
                 idx += 1
         return idx
 
-    def dict2df(self,df_dict, index=None):
+    def dict2df(self,df_dict,index=None):
         """
         Creates a dataframe fromt the dict
         :param df_dict:
@@ -267,7 +268,7 @@ class HocrConverter(object):
         df = df.set_index(index)
         return df
 
-    def df2sql(cls,df,filename, con,index=None):
+    def df2sql(cls,df,filename,con,index=None, datainfo=None):
         """
         Writes the dataframe to a db
         :param df:
@@ -278,6 +279,8 @@ class HocrConverter(object):
         """
         # creating and appending database
         tablename = str(os.path.basename(filename)).split(".")[0]
+        if datainfo is not None:
+            if "tablename" in dir(datainfo):tablename = datainfo.tablename
 
         # try to create a table
         try:

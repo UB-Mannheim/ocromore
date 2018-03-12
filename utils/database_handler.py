@@ -7,6 +7,7 @@ from itertools import chain
 import inspect
 
 import numpy as np
+from sqlalchemy import create_engine
 #import matplotlib.pyplot as plt
 #import seaborn as sns
 #import pandas as pd
@@ -14,19 +15,151 @@ import os
 import shutil
 from pathlib import Path
 
+class FileStruct():
 
-class FileToDatabaseHandler():
+    def __init__(self):
+        self.path       = None
+        self.name       = None
+        self.ocr        = None
+        self.ocr_profile= None
+        self.dbpath     = None
+        self.dbname     = None
+        self.tablename  = None
+
+class DatabaseHandler(object):
+
+    def __init__(self,dbdir=None, dbnames=None, tablename_pos = 1,ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
+        self.files   = None
+        self.dbdir   = dbdir
+        self.table   = None
+        self.db      = None
+        if dbdir is not None:
+            self.update_db(dbnames=dbnames)
+        self.con     = None
+        self.dirpos  = self.set_dirpos(tablename_pos=tablename_pos,ocr_profile_pos=ocr_profile_pos,ocr_pos=ocr_pos,dbname_pos=dbname_pos)
+
+    def set_dirpos(self,tablename_pos=1, ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
+        return{"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
+
+    def create_con(self, dbpath, echo=False):
+        if dbpath[:6] != "sqlite":
+            dbpath = 'sqlite:///' + dbpath
+        self.con = create_engine(dbpath, echo=echo)
+        return
+
+    def update_db(self, dbnames=None):
+        dbdir = Path(self.dbdir).absolute()
+        if self.dbdir is not None:
+            db = []
+            for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
+                dbname = str(Path(dbpath).name)
+                if dbnames is None:
+                    db.append(dbpath)
+                elif dbname in dbnames:
+                    db.append(dbpath)
+            if db:
+                self.db = db
+        else:
+            print("Please set the database directory (dbir) first.")
+        return
+
+    def fetch_and_parse(self,fileglob, filetypes,delete_and_create_dir=True):
+        self.fetch_files(fileglob, filetypes)
+        exceptions = self.parse_to_db(delete_and_create_dir=delete_and_create_dir)
+        return exceptions
+
+    def fetch_files(self,fileglob, filetypes):
+        self.files = {}
+        files = chain.from_iterable(glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
+        lastdbname = ""
+        for file in files:
+            fstruct = FileStruct()
+            fpath = Path(file)
+            fstruct.path = file
+            fstruct.name = fpath.name
+            for itempos in self.dirpos:
+                if int(self.dirpos[itempos]) == 0: fstruct.__dict__[itempos] = "default"
+                else: fstruct.__dict__[itempos] = fpath.parts[int(self.dirpos[itempos])*-1].split(".")[0]
+            if fstruct.dbname != lastdbname:
+                fstruct.dbpath = self.dbdir + '/' + fstruct.dbname + '.db'
+                self.files[fstruct.dbname] = []
+                lastdbname = fstruct.dbname
+            else: fstruct.dbpath = lastdbname
+
+            self.files[fstruct.dbname].append(fstruct)
+        return
+
+    def parse_to_db(self, delete_and_create_dir=True):
+
+        if delete_and_create_dir is True:
+            # delete and recreate database directory
+            if os.path.exists(self.dbdir):
+                shutil.rmtree(self.dbdir)
+            os.makedirs(self.dbdir)
+
+        exceptions = []
+        for dbname in self.files:
+            self.create_con(self.files[dbname][0].dbpath)
+            for file in self.files[dbname]:
+                print(f"\nConvert to sql:\t{file.name}")
+                try:
+                    HocrConverter(fileinfo=file).hocr2sql(file.path, self.con, file.ocr_profile)
+                except Exception as ex:
+                    print(f"Exception parsing file {file.name}:", ex)
+                    exceptions.append(ex)
+
+        return exceptions
+
+    def preprocess_dbdata(self):
+        print("Preprocess the data")
+        exceptions = []
+        for db in self.db:
+            tablenames = self.get_tablenames_from_db(db)
+            if self.table is not None:
+                tablenames = self.table
+                if isinstance(tablenames,str): tablenames = list(tablenames)
+            print("Preprocessing database:", db)
+            for tablename in tablenames:
+                try:
+                    dataframe_wrapper = DFObjectifier(db, tablename)
+
+                    # Linematcher with queries
+                    if dataframe_wrapper.match_line(force=True):
+                        # Unspacing
+                        dataframe_wrapper.unspace()
+
+                        # Match words or segments of words into "word_match"
+                        dataframe_wrapper.match_words()
+
+                        # Write the calulated values into the db
+                        dataframe_wrapper.write2sql()
+                except Exception as ex:
+                    tr = inspect.trace()
+                    print(f"Exception parsing table {tablename} :", ex, "trace", tr)
+                    exceptions.append(ex)
+
+        return exceptions
+
+    def get_tablenames_from_db(self,db):
+        try:
+            self.create_con(db)
+        except Exception as ex:
+            print("Connection to db failed:", ex)
+            return
+        return self.con.table_names()
+
+    ###############
+    #STATICMETHODS#
+    ###############
 
     @staticmethod
     def fetch_groundtruths(fileglob, filetypes):
-        groundtruths= []
+        groundtruths = []
         files = chain.from_iterable(
             glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
 
-
         for file in files:
             groundtruths.append(file)
-
 
         return groundtruths
         print("asd")
@@ -121,11 +254,10 @@ class FileToDatabaseHandler():
 
     @staticmethod
     def work_with_object(dbs_and_files):
-
         # get first db and first table/filename for the operation
         my_db = list(dbs_and_files.keys())[0]
         filename, somestuff = dbs_and_files[my_db][0]
-        table_name = FileToDatabaseHandler.get_table_name_from_filename(filename)
+        table_name = get_tablename_from_db(filename)
         dfXO = DFObjectifier(my_db, table_name)
 
         # for file in files:
