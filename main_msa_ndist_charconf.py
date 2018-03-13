@@ -40,7 +40,9 @@ table_ctr = 0
 tableparser = TableParser(config)
 
 # possibility to delete dir on restart
-# tableparser.delete_and_create_output_dir()
+
+tableparser.delete_output_dir()
+tableparser.create_output_dir()
 
 count = 1
 for db in filestructs:
@@ -54,7 +56,7 @@ for db in filestructs:
         dbpath = 'sqlite:////' +file.dbpath
         print("Parsing table: ", table, "in database: ", dbpath)
         table_ctr += 1
-        path_created_file = tableparser.parse_a_table(dbpath, table)
+        path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)
         foundgt = None
         for gt_key in files_gt:
             gt_file = files_gt[gt_key]
@@ -64,6 +66,11 @@ for db in filestructs:
                 print("found:", foundgt)
         if foundgt is not None:
             tableparser.validate_table_against_gt(path_created_file, foundgt)
+            for additional_file in additional_created_files:
+                # this validates the original outputs
+                tableparser.validate_table_against_gt(additional_file,foundgt)
+
+
 
         #if table_ctr == 2: #j4t parse 4 tables then done
         #    break
@@ -71,27 +78,7 @@ for db in filestructs:
 
 
 if config.SUMMARIZE_ISRI_REPORTS is True:
-
-    acc_reports = []
-    wacc_reports = []
-    db_root_path = ""
-    for db in filestructs:
-        files = filestructs[db]
-        file = files[0]
-        # assume that each db has different root folder, just take first file for path reference
-        dbpath = 'sqlite:////'+file.dbpath
-        dbname = file.dbname
-        db_root_path = tableparser.get_basic_output_directory(dbpath)
-        if os.path.exists(db_root_path):
-            fp_gen_acc_report, fp_gen_wacc_report = \
-                tableparser.summarize_accuracy_reports(db_root_path, dbname)
-            acc_reports.append(fp_gen_acc_report)
-            wacc_reports.append(fp_gen_wacc_report)
-
-
-    #create big accumulated report
-    output_root_path = os.path.dirname(db_root_path)
-    tableparser.summarize_accuracy_report_sums(wacc_reports,acc_reports,output_root_path)
-
-
-
+    tableparser.create_isri_reports(filestructs, "abbyy")
+    tableparser.create_isri_reports(filestructs, "ocro")
+    tableparser.create_isri_reports(filestructs, "tess")
+    tableparser.create_isri_reports(filestructs, "msa_best")

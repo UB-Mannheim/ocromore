@@ -1,0 +1,133 @@
+UNLV-ISRI OCR Accuracy Report Version 6.1
+-----------------------------------------
+   12378   Characters
+   12336   Errors
+    0.34%  Accuracy
+
+       0   Reject Characters
+       0   Suspect Markers
+       0   False Marks
+    0.00%  Characters Marked
+    0.34%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+   12336        0        0    12336   Unmarked
+   12336        0        0    12336   Total
+
+   Count   Missed   %Right
+       1        1     0.00   Unassigned
+    1870     1867     0.16   ASCII Spacing Characters
+    1075     1074     0.09   ASCII Special Symbols
+    1141     1141     0.00   ASCII Digits
+    1070     1032     3.55   ASCII Uppercase Letters
+    7059     7059     0.00   ASCII Lowercase Letters
+       1        1     0.00   Latin1 Uppercase Letters
+     153      153     0.00   Latin1 Lowercase Letters
+       8        8     0.00   General Punctuation
+   12378    12336     0.34   Total
+
+  Errors   Marked   Correct-Generated
+    3467        0   {von 1956<\n>Emissionsbet...}-{}
+    2149        0   {rankfurt (M):<\n>Dresdne...}-{}
+    1524        0   {rnst Rieche, Frankfurt (...}-{}
+    1350        0   {chweißgeräte und Elekt...}-{}
+    1192        0   {G, München<\n>Kapital: ...}-{}
+     868        0   {G-Hochhaus<\n>Fernruf:...}-{}
+     627        0   {o. AG, Berlin<\n>Kapital...}-{}
+     465        0   {eistung,<\n>Hoch- und Ni...}-{}
+     298        0   {, Berlin/München<\n>Kap...}-{}
+     143        0   {andwirtschaft und für W...}-{}
+     127        0   {tuttgart; +)<\n>Josef Mi...}-{}
+      58        0   {runewald, Hohenzol-<\n>l...}-{}
+      36        0   {eilschuldverschreibungen...}-{}
+      15        0   {itz: (1) Berlin}-{}
+      13        0   {ÄTS-GESELLSCH}-{}
+       2        0   {<FEFF> }-{}
+       1        0   {<\n>}-{}
+       1        0   {F}-{}
+
+   Count   Missed   %Right
+     404      402     0.50   {<\n>}
+    1466     1465     0.07   { }
+      13       13     0.00   {"}
+      61       61     0.00   {%}
+      12       12     0.00   {&}
+      55       55     0.00   {(}
+      80       80     0.00   {)}
+      17       17     0.00   {+}
+     197      197     0.00   {,}
+     185      184     0.54   {-}
+     256      256     0.00   {.}
+      18       18     0.00   {/}
+     367      367     0.00   {0}
+     186      186     0.00   {1}
+      66       66     0.00   {2}
+      61       61     0.00   {3}
+      57       57     0.00   {4}
+     148      148     0.00   {5}
+      43       43     0.00   {6}
+      46       46     0.00   {7}
+      51       51     0.00   {8}
+     116      116     0.00   {9}
+      88       88     0.00   {:}
+      90       90     0.00   {;}
+       3        3     0.00   {=}
+     112      108     3.57   {A}
+      92       92     0.00   {B}
+      27       25     7.41   {C}
+     134      134     0.00   {D}
+      60       52    13.33   {E}
+      29       28     3.45   {F}
+     117      114     2.56   {G}
+      64       63     1.56   {H}
+      28       25    10.71   {I}
+       7        7     0.00   {J}
+      44       43     2.27   {K}
+      26       21    19.23   {L}
+      82       81     1.22   {M}
+      25       24     4.00   {N}
+      20       20     0.00   {O}
+      14       14     0.00   {P}
+       1        1     0.00   {Q}
+      17       16     5.88   {R}
+      63       60     4.76   {S}
+      20       16    20.00   {T}
+      14       14     0.00   {U}
+      35       35     0.00   {V}
+      26       26     0.00   {W}
+       1        1     0.00   {Y}
+      12       12     0.00   {Z}
+     464      464     0.00   {a}
+     119      119     0.00   {b}
+     217      217     0.00   {c}
+     282      282     0.00   {d}
+    1075     1075     0.00   {e}
+     131      131     0.00   {f}
+     233      233     0.00   {g}
+     301      301     0.00   {h}
+     493      493     0.00   {i}
+      22       22     0.00   {j}
+     161      161     0.00   {k}
+     335      335     0.00   {l}
+     193      193     0.00   {m}
+     733      733     0.00   {n}
+     183      183     0.00   {o}
+      58       58     0.00   {p}
+       1        1     0.00   {q}
+     676      676     0.00   {r}
+     403      403     0.00   {s}
+     440      440     0.00   {t}
+     304      304     0.00   {u}
+      75       75     0.00   {v}
+      62       62     0.00   {w}
+       2        2     0.00   {x}
+      13       13     0.00   {y}
+      83       83     0.00   {z}
+       1        1     0.00   {Ä}
+      15       15     0.00   {ß}
+      59       59     0.00   {ä}
+      23       23     0.00   {ö}
+      56       56     0.00   {ü}
+       8        8     0.00   {’}
+       1        1     0.00   {<FEFF>}

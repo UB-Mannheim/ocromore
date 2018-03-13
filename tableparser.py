@@ -19,25 +19,51 @@ class TableParser(object):
         # give the last element in split path
         self._base_db_dir = os.path.basename(os.path.normpath(config.DBDIR))
 
-
-    def delete_and_create_output_dir(self):
-
-        # delete and recreate database directory
+    def delete_output_dir(self):
+        # delete database directory
         if os.path.exists(self._config.OUTPUT_ROOT_PATH):
             shutil.rmtree(self._config.OUTPUT_ROOT_PATH)
+
+    def create_output_dir(self):
+
+        # dcreate database directory
         os.makedirs(self._config.OUTPUT_ROOT_PATH)
 
+    def create_isri_reports(self, filestructs, addendum):
 
-    def get_basic_output_directory(self, dbdir_abs):
+        acc_reports = []
+        wacc_reports = []
+        db_root_path = ""
+        for db in filestructs:
+            files = filestructs[db]
+            file = files[0]
+            # assume that each db has different root folder, just take first file for path reference
+            dbpath = 'sqlite:////' + file.dbpath
+            dbname = file.dbname
+            db_root_path = self.get_basic_output_directory(dbpath, addendum)
+            if os.path.exists(db_root_path):
+                fp_gen_acc_report, fp_gen_wacc_report = \
+                    self.summarize_accuracy_reports(db_root_path, dbname)
+                acc_reports.append(fp_gen_acc_report)
+                wacc_reports.append(fp_gen_wacc_report)
+
+        # create big accumulated report
+        output_root_path = os.path.dirname(db_root_path)
+        self.summarize_accuracy_report_sums(wacc_reports, acc_reports, output_root_path)
+
+
+
+    def get_basic_output_directory(self, dbdir_abs, addendum):
         basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))
         basename_db = os.path.splitext(basename_db_ext)[0] # remove extension
-        basic_output_dir = self._config.OUTPUT_ROOT_PATH + "/" + self._base_db_dir + "/" + basename_db
+        basic_output_dir = self._config.OUTPUT_ROOT_PATH + "/" + self._base_db_dir+"_"+addendum + "/" + basename_db
         return basic_output_dir
 
     def parse_a_table(self, dbdir_abs, table):
 
         # basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))
         # basename_db = os.path.splitext(basename_db_ext)[0] # remove extension
+        additional_created_files = []
 
         dataframe_wrapper = DFObjectifier(dbdir_abs, table)
         database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS)
@@ -46,6 +72,25 @@ class TableParser(object):
         print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
         ocr_comparison.print_sets(False)
 
+        if self._config.SAVE_INPUT_DATASETS_TO_FILE:
+
+            output_path_abbyy = self.get_basic_output_directory(dbdir_abs, "abbyy") + "/" + table + "_abbyy.txt"
+            output_path_tess = self.get_basic_output_directory(dbdir_abs, "tess") + "/" + table + "_tess.txt"
+            output_path_ocro = self.get_basic_output_directory(dbdir_abs, "ocro") + "/" + table + "_ocro.txt"
+
+
+            ocr_comparison.save_dataset_to_file(output_path_abbyy, 0, mode_add_linebreaks=False)
+            ocr_comparison.save_dataset_to_file(output_path_tess, 1, mode_add_linebreaks=False)
+            ocr_comparison.save_dataset_to_file(output_path_ocro, 2, mode_add_linebreaks=False)
+
+            additional_created_files.append(output_path_abbyy)
+            additional_created_files.append(output_path_tess)
+            additional_created_files.append(output_path_ocro)
+
+
+
+            print("asd")
+            # ocr_comparison.save_dataset_to_file()
 
         if self._config.DO_N_DIST_KEYING:
             print("Doing: N_DIST_KEYING, WORDWISE KEYING: ", self._config.NDIST_USE_WORDWISE_KEYING)
@@ -88,10 +133,10 @@ class TableParser(object):
 
             # created_path = self._config.OUTPUT_ROOT_PATH+"/"+self._base_db_dir+"//"+basename_db+"//"+table+"_msa_best.txt"
 
-            created_path = self.get_basic_output_directory(dbdir_abs) + "/" + table + "_msa_best.txt"
+            created_path = self.get_basic_output_directory(dbdir_abs,"msa_best") + "/" + table + "_msa_best.txt"
 
             ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
-            return created_path
+            return created_path, additional_created_files
 
     def validate_table_against_gt(self, filepath_table, filepath_groundtruth):
         if self._config.DO_ISRI_VAL is True:
