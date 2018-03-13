@@ -2,8 +2,12 @@ from utils.df_objectifier import DFObjectifier
 from n_dist_keying.database_handler import DatabaseHandler
 from utils.pycharm_handler import PycharmHandler
 from ocr_validation.isri_handler import IsriHandler
+from os import listdir
+from os.path import isfile, join
 import os
 import shutil
+
+
 
 class TableParser(object):
 
@@ -99,17 +103,26 @@ class TableParser(object):
             # Test 'wordacc'
             isri_handler.wordacc(filepath_groundtruth, filepath_table, None, filepath_table+".waccreport")
 
-    def summarize_accuracy_reports(self, root_folder):
+    def summarize_accuracy_reports(self, root_folder, dbname):
         if self._config.SUMMARIZE_ISRI_REPORTS is True:
             isri_handler = IsriHandler()
             # isri_handler.accsum()
             # isri_handler.wordaccsum()
             # isri_handler.groupacc()
-            from os import listdir
-            from os.path import isfile, join
-            onlyfiles = [f for f in listdir(root_folder) if isfile(join(root_folder, f))]
-            print("asd")
 
+            onlyfiles = [f for f in listdir(root_folder) if isfile(join(root_folder, f))]
+
+            files_waccsum = []
+            files_accsum = []
+            for file in onlyfiles:
+                if file.endswith(".waccreport"):
+                    files_waccsum.append(root_folder+"/"+file)
+                elif file.endswith(".accreport"):
+                    files_accsum.append(root_folder+"/"+file)
+
+
+            isri_handler.accsum(files_accsum, root_folder+"/"+dbname+"_summarized_report.accsum")
+            isri_handler.wordaccsum(files_waccsum, root_folder+"/"+dbname+"_summarized_report.waccsum")
 
     def display_stuff(self):
         # not used atm

@@ -8,7 +8,7 @@ from configuration.configuration_handler import ConfigurationHandler
 from file_to_database_handler import FileToDatabaseHandler as ftdh
 from tableparser import TableParser
 from utils.database_handler import DatabaseHandler
-
+import os
 
 # fetch configurations
 CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
@@ -40,15 +40,7 @@ table_ctr = 0
 tableparser = TableParser(config)
 
 
-if config.SUMMARIZE_ISRI_REPORTS is True:
 
-    for db in filestructs:
-        files = filestructs[db]
-        file = files[0]
-        # assume that each db has different root folder, just take first file for path reference
-        dbpath = 'sqlite:////'+file.dbpath
-        db_root_path = tableparser.get_basic_output_directory(dbpath)
-        tableparser.summarize_accuracy_reports(db_root_path)
 
 
 
@@ -81,10 +73,17 @@ for db in filestructs:
         #if table_ctr == 2: #j4t parse 4 tables then done
         #    break
 
+if config.SUMMARIZE_ISRI_REPORTS is True:
 
-
-print("asd")
-
+    for db in filestructs:
+        files = filestructs[db]
+        file = files[0]
+        # assume that each db has different root folder, just take first file for path reference
+        dbpath = 'sqlite:////'+file.dbpath
+        dbname = file.dbname
+        db_root_path = tableparser.get_basic_output_directory(dbpath)
+        if os.path.exists(db_root_path):
+            tableparser.summarize_accuracy_reports(db_root_path, dbname)
 
 
 
