@@ -103,26 +103,43 @@ class TableParser(object):
             # Test 'wordacc'
             isri_handler.wordacc(filepath_groundtruth, filepath_table, None, filepath_table+".waccreport")
 
+    def summarize_accuracy_report_sums(self, waccreports, accreports, output_root_path):
+        if self._config.SUMMARIZE_ISRI_REPORTS is False:
+            return None, None
+
+        basename = os.path.basename(output_root_path)
+        isri_handler = IsriHandler()
+        isri_handler.accsum(accreports, output_root_path+"/"+basename+"_complete_summarized_report.accsum")
+        isri_handler.wordaccsum(waccreports, output_root_path+"/"+basename+"_complete_summarized_report.waccsum")
+
+
+
     def summarize_accuracy_reports(self, root_folder, dbname):
-        if self._config.SUMMARIZE_ISRI_REPORTS is True:
-            isri_handler = IsriHandler()
-            # isri_handler.accsum()
-            # isri_handler.wordaccsum()
-            # isri_handler.groupacc()
+        if self._config.SUMMARIZE_ISRI_REPORTS is False:
+            return None, None
 
-            onlyfiles = [f for f in listdir(root_folder) if isfile(join(root_folder, f))]
+        isri_handler = IsriHandler()
+        # isri_handler.accsum()
+        # isri_handler.wordaccsum()
+        # isri_handler.groupacc()
 
-            files_waccsum = []
-            files_accsum = []
-            for file in onlyfiles:
-                if file.endswith(".waccreport"):
-                    files_waccsum.append(root_folder+"/"+file)
-                elif file.endswith(".accreport"):
-                    files_accsum.append(root_folder+"/"+file)
+        onlyfiles = [f for f in listdir(root_folder) if isfile(join(root_folder, f))]
+
+        files_waccsum = []
+        files_accsum = []
+        for file in onlyfiles:
+            if file.endswith(".waccreport"):
+                files_waccsum.append(root_folder+"/"+file)
+            elif file.endswith(".accreport"):
+                files_accsum.append(root_folder+"/"+file)
+
+        generated_acc_report = root_folder+"/"+dbname+"_summarized_report.accsum"
+        generated_wacc_report = root_folder+"/"+dbname+"_summarized_report.waccsum"
+        isri_handler.accsum(files_accsum, generated_acc_report )
+        isri_handler.wordaccsum(files_waccsum, generated_wacc_report)
 
 
-            isri_handler.accsum(files_accsum, root_folder+"/"+dbname+"_summarized_report.accsum")
-            isri_handler.wordaccsum(files_waccsum, root_folder+"/"+dbname+"_summarized_report.waccsum")
+        return generated_acc_report, generated_wacc_report
 
     def display_stuff(self):
         # not used atm

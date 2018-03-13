@@ -39,11 +39,6 @@ filestructs_gt = dh.get_groundtruths()
 table_ctr = 0
 tableparser = TableParser(config)
 
-
-
-
-
-
 # possibility to delete dir on restart
 # tableparser.delete_and_create_output_dir()
 
@@ -66,15 +61,20 @@ for db in filestructs:
             if table in gt_key:
 
                 foundgt = gt_file.path
-                print("found:",foundgt)
+                print("found:", foundgt)
         if foundgt is not None:
             tableparser.validate_table_against_gt(path_created_file, foundgt)
 
         #if table_ctr == 2: #j4t parse 4 tables then done
         #    break
 
+
+
 if config.SUMMARIZE_ISRI_REPORTS is True:
 
+    acc_reports = []
+    wacc_reports = []
+    db_root_path = ""
     for db in filestructs:
         files = filestructs[db]
         file = files[0]
@@ -83,10 +83,15 @@ if config.SUMMARIZE_ISRI_REPORTS is True:
         dbname = file.dbname
         db_root_path = tableparser.get_basic_output_directory(dbpath)
         if os.path.exists(db_root_path):
-            tableparser.summarize_accuracy_reports(db_root_path, dbname)
+            fp_gen_acc_report, fp_gen_wacc_report = \
+                tableparser.summarize_accuracy_reports(db_root_path, dbname)
+            acc_reports.append(fp_gen_acc_report)
+            wacc_reports.append(fp_gen_wacc_report)
 
 
-
+    #create big accumulated report
+    output_root_path = os.path.dirname(db_root_path)
+    tableparser.summarize_accuracy_report_sums(wacc_reports,acc_reports,output_root_path)
 
 
 
