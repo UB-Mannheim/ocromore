@@ -37,8 +37,24 @@ filestructs_gt = dh.get_groundtruths()
 #groundtruths = ftdh.fetch_groundtruths("./Testfiles/groundtruth/long/**/*.", ["gt.txt"])
 
 table_ctr = 0
+tableparser = TableParser(config)
 
-tableparser = TableParser(config, delete_and_create_output_dir=True)
+
+if config.SUMMARIZE_ISRI_REPORTS is True:
+
+    for db in filestructs:
+        files = filestructs[db]
+        file = files[0]
+        # assume that each db has different root folder, just take first file for path reference
+        dbpath = 'sqlite:////'+file.dbpath
+        db_root_path = tableparser.get_basic_output_directory(dbpath)
+        tableparser.summarize_accuracy_reports(db_root_path)
+
+
+
+# possibility to delete dir on restart
+# tableparser.delete_and_create_output_dir()
+
 count = 1
 for db in filestructs:
     print("Parsing database:", db)
@@ -53,12 +69,14 @@ for db in filestructs:
         table_ctr += 1
         path_created_file = tableparser.parse_a_table(dbpath, table)
         foundgt = None
-        for gt in files_gt:
-            if table in gt:
-                print("found")
-                foundgt = gt
+        for gt_key in files_gt:
+            gt_file = files_gt[gt_key]
+            if table in gt_key:
+
+                foundgt = gt_file.path
+                print("found:",foundgt)
         if foundgt is not None:
-            tableparser.validate_table_against_gt(path_created_file,foundgt)
+            tableparser.validate_table_against_gt(path_created_file, foundgt)
 
         #if table_ctr == 2: #j4t parse 4 tables then done
         #    break

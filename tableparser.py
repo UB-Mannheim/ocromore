@@ -8,22 +8,32 @@ import shutil
 class TableParser(object):
 
 
-    def __init__(self, config, delete_and_create_output_dir=False):
+    def __init__(self, config):
+
         print("asd")
         self._config = config
         # give the last element in split path
         self._base_db_dir = os.path.basename(os.path.normpath(config.DBDIR))
 
-        if delete_and_create_output_dir is True:
-            # delete and recreate database directory
-            if os.path.exists(config.OUTPUT_ROOT_PATH):
-                shutil.rmtree(config.OUTPUT_ROOT_PATH)
-            os.makedirs(config.OUTPUT_ROOT_PATH)
+
+    def delete_and_create_output_dir(self):
+
+        # delete and recreate database directory
+        if os.path.exists(self._config.OUTPUT_ROOT_PATH):
+            shutil.rmtree(self._config.OUTPUT_ROOT_PATH)
+        os.makedirs(self._config.OUTPUT_ROOT_PATH)
+
+
+    def get_basic_output_directory(self, dbdir_abs):
+        basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))
+        basename_db = os.path.splitext(basename_db_ext)[0] # remove extension
+        basic_output_dir = self._config.OUTPUT_ROOT_PATH + "/" + self._base_db_dir + "/" + basename_db
+        return basic_output_dir
 
     def parse_a_table(self, dbdir_abs, table):
 
-        basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))
-        basename_db = os.path.splitext(basename_db_ext)[0] # remove extension
+        # basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))
+        # basename_db = os.path.splitext(basename_db_ext)[0] # remove extension
 
         dataframe_wrapper = DFObjectifier(dbdir_abs, table)
         database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS)
@@ -72,11 +82,14 @@ class TableParser(object):
 
             #ocr_comparison.print_msa_best_results()
 
-            created_path = self._config.OUTPUT_ROOT_PATH+"/"+self._base_db_dir+"//"+basename_db+"//"+table+"_msa_best.txt"
+            # created_path = self._config.OUTPUT_ROOT_PATH+"/"+self._base_db_dir+"//"+basename_db+"//"+table+"_msa_best.txt"
+
+            created_path = self.get_basic_output_directory(dbdir_abs) + "/" + table + "_msa_best.txt"
+
             ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
             return created_path
 
-    def validate_table_against_gt(self,filepath_table, filepath_groundtruth):
+    def validate_table_against_gt(self, filepath_table, filepath_groundtruth):
         if self._config.DO_ISRI_VAL is True:
             isri_handler = IsriHandler()
 
@@ -85,6 +98,18 @@ class TableParser(object):
 
             # Test 'wordacc'
             isri_handler.wordacc(filepath_groundtruth, filepath_table, None, filepath_table+".waccreport")
+
+    def summarize_accuracy_reports(self, root_folder):
+        if self._config.SUMMARIZE_ISRI_REPORTS is True:
+            isri_handler = IsriHandler()
+            # isri_handler.accsum()
+            # isri_handler.wordaccsum()
+            # isri_handler.groupacc()
+            from os import listdir
+            from os.path import isfile, join
+            onlyfiles = [f for f in listdir(root_folder) if isfile(join(root_folder, f))]
+            print("asd")
+
 
     def display_stuff(self):
         # not used atm

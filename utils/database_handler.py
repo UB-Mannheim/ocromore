@@ -95,7 +95,7 @@ class DatabaseHandler(object):
                 if not fstruct.dbname in self.files:
                     self.files[fstruct.dbname] = []
                 lastdbname = fstruct.dbname
-            else: fstruct.dbpath = lastdbname
+            else: fstruct.dbpath = self.dbdir + '/' + lastdbname + '.db'
 
             self.files[fstruct.dbname].append(fstruct)
         return
@@ -113,10 +113,13 @@ class DatabaseHandler(object):
             fstruct.name = fpath.name
             fstruct.dbname = file.split("/")[-2]
             if fstruct.dbname != lastdbname:
-                fstruct.dbpath = self.dbpath+ '/' + fstruct.dbname + '.db'
+                dbpath = ""
+                if hasattr(self,'dbpath'):
+                    dbpath = self.dbpath
+                fstruct.dbpath = dbpath + '/' + fstruct.dbname + '.db'
                 self.gtfiles[fstruct.dbname] = {}
                 lastdbname = fstruct.dbname
-            else: fstruct.dbpath = lastdbname
+            else: fstruct.dbpath = self.dbdir + '/' + lastdbname + '.db'
             self.gtfiles[fstruct.dbname][fstruct.name.split(".")[0]] = fstruct
         return
 
