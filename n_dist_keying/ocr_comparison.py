@@ -1,7 +1,12 @@
 from utils.typecasts import TypeCasts
 from utils.random import Random
 from n_dist_keying.text_corrector import TextCorrector
+from utils.conditional_print import ConditionalPrint
+from configuration.configuration_handler import ConfigurationHandler
+
 import os
+
+
 
 class OCRcomparison:
     """
@@ -11,6 +16,9 @@ class OCRcomparison:
     def __init__(self):
         self.ocr_sets = []
         self.line_height_information = []
+        config_handler = ConfigurationHandler(first_init=False)
+        self.config = config_handler.get_config()
+        self.cpr = ConditionalPrint(self.config.PRINT_OCR_COMPARISON)
 
     def add_set(self, set_to_add):
         self.ocr_sets.append(set_to_add)
@@ -88,12 +96,12 @@ class OCRcomparison:
             current_set.calculate_msa_best_all(use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, use_searchspaces)
 
     def print_n_distance_keying_results(self):
-        print("N_DISTANCE_KEYING_RESULTS ")
+        self.cpr.print("N_DISTANCE_KEYING_RESULTS ")
         for current_set in self.ocr_sets:
             current_set.print_shortest_n_distance_line()
 
     def print_msa_best_results(self):
-        print("MSA_BEST_RESULTS ")
+        self.cpr.print("MSA_BEST_RESULTS ")
         for current_set in self.ocr_sets:
             current_set.print_msa_best_line()
 
@@ -124,7 +132,7 @@ class OCRcomparison:
 
 
 
-        print("Undefined case reached shouldn't happen")
+        self.cpr.print("Undefined case reached shouldn't happen")
         return None
 
     def save_n_distance_keying_results_to_file(self,filename, mode_add_linebreaks=False):
@@ -211,7 +219,7 @@ class OCRcomparison:
             if sd_line is not None and sd_line is not False:
                 return_list.append(sd_line)
 
-        return sd_line
+        return return_list
 
     def do_postcorrection(self, postcorrect_keying, postcorrection_index=0):
         """

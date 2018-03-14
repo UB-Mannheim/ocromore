@@ -4,5 +4,5 @@ class ConditionalPrint(object):
         self._condition = condition
 
     def print(self,*args):
-        if self._condition:
+        if self._condition is True:
             print(*args)
