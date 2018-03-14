@@ -63,6 +63,9 @@ class DatabaseHandler(object):
             db = []
             for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
                 dbname = str(Path(dbpath).name)
+                if self.dbfilter:
+                    if not self.dbfilter in dbname:
+                        continue
                 if dbnames is None:
                     db.append(dbpath)
                 elif dbname in dbnames:
@@ -149,13 +152,13 @@ class DatabaseHandler(object):
         exceptions = []
         if self.dbfilter:
             self.db = self.dbfilter
-            if isinstance(self.db, str): self.db = list(self.db)
+            if isinstance(self.db, str): self.db = [self.db]
         for db in self.db:
             tablenames = self.get_tablenames_from_db(db)
             db = self.dburlscheme+db
             if self.tablefilter is not None:
-                tablenames = self.tablefilter
-                if isinstance(tablenames,str): tablenames = list(tablenames)
+                if isinstance(self.tablefilter, str): self.tablefilter = [self.tablefilter]
+                tablenames = set(tablenames)&set(self.tablefilter)
             print("Preprocessing database:", db)
             for tablename in tablenames:
                 try:
@@ -288,6 +291,19 @@ class DatabaseHandler(object):
         filename = os.path.basename(file)
         table_name = filename.split('.')[0]
         return table_name
+
+    @staticmethod
+    def print_object(my_db,table_name):
+        dfXO = DFObjectifier(my_db, table_name)
+        dfSelO = dfXO.get_line_obj()
+        for idx, lidx in enumerate(dfSelO):
+            print(idx)
+            for items in dfSelO[lidx]:
+                print(items.name[0])
+                print(items.textstr)
+                for word in items.word["text"]:
+                    print(items.word["text"][word] + "\t", end="")
+                print("\n")
 
     @staticmethod
     def work_with_object(dbs_and_files):

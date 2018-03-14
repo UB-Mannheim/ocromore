@@ -40,7 +40,7 @@ table_ctr = 0
 tableparser = TableParser(config)
 
 
-if config.SUMMARIZE_ISRI_REPORTS is True:
+if config.SUMMARIZE_ISRI_REPORTS is True and False:
 
     for db in filestructs:
         files = filestructs[db]
@@ -62,7 +62,7 @@ for db in filestructs:
     files_gt = filestructs_gt[db]
     for file in files:
         count += 1
-        if count == 3: continue
+        #if count == 3: continue
         table = file.tablename
         dbpath = 'sqlite:////' +file.dbpath
         print("Parsing table: ", table, "in database: ", dbpath)
