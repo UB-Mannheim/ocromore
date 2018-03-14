@@ -8,7 +8,7 @@ from configuration.configuration_handler import ConfigurationHandler
 from file_to_database_handler import FileToDatabaseHandler as ftdh
 from tableparser import TableParser
 from utils.database_handler import DatabaseHandler
-
+import os
 
 # fetch configurations
 CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
@@ -39,6 +39,7 @@ filestructs_gt = dh.get_groundtruths()
 table_ctr = 0
 tableparser = TableParser(config)
 
+<<<<<<< HEAD
 
 if config.SUMMARIZE_ISRI_REPORTS is True and False:
 
@@ -51,9 +52,10 @@ if config.SUMMARIZE_ISRI_REPORTS is True and False:
         tableparser.summarize_accuracy_reports(db_root_path)
 
 
-
 # possibility to delete dir on restart
-# tableparser.delete_and_create_output_dir()
+
+tableparser.delete_output_dir()
+tableparser.create_output_dir()
 
 count = 1
 for db in filestructs:
@@ -67,27 +69,29 @@ for db in filestructs:
         dbpath = 'sqlite:////' +file.dbpath
         print("Parsing table: ", table, "in database: ", dbpath)
         table_ctr += 1
-        path_created_file = tableparser.parse_a_table(dbpath, table)
+        path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)
         foundgt = None
         for gt_key in files_gt:
             gt_file = files_gt[gt_key]
             if table in gt_key:
 
                 foundgt = gt_file.path
-                print("found:",foundgt)
+                print("found:", foundgt)
         if foundgt is not None:
             tableparser.validate_table_against_gt(path_created_file, foundgt)
+            for additional_file in additional_created_files:
+                # this validates the original outputs
+                tableparser.validate_table_against_gt(additional_file,foundgt)
+
+
 
         #if table_ctr == 2: #j4t parse 4 tables then done
         #    break
 
 
 
-print("asd")
-
-
-
-
-
-
-
+if config.SUMMARIZE_ISRI_REPORTS is True:
+    tableparser.create_isri_reports(filestructs, "abbyy")
+    tableparser.create_isri_reports(filestructs, "ocro")
+    tableparser.create_isri_reports(filestructs, "tess")
+    tableparser.create_isri_reports(filestructs, "msa_best")

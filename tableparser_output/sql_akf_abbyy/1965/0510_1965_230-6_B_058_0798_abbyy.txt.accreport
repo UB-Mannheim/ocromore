@@ -1,0 +1,235 @@
+UNLV-ISRI OCR Accuracy Report Version 6.1
+-----------------------------------------
+    9979   Characters
+    9838   Errors
+    1.41%  Accuracy
+
+       0   Reject Characters
+       0   Suspect Markers
+       0   False Marks
+    0.00%  Characters Marked
+    1.41%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+    9822       16        0     9838   Unmarked
+    9822       16        0     9838   Total
+
+   Count   Missed   %Right
+       1        1     0.00   Unassigned
+    1493     1477     1.07   ASCII Spacing Characters
+    1164     1138     2.23   ASCII Special Symbols
+    1439     1439     0.00   ASCII Digits
+     865      834     3.58   ASCII Uppercase Letters
+    4909     4841     1.39   ASCII Lowercase Letters
+       1        1     0.00   Latin1 Uppercase Letters
+     106      106     0.00   Latin1 Lowercase Letters
+       1        1     0.00   General Punctuation
+    9979     9838     1.41   Total
+
+  Errors   Marked   Correct-Generated
+    2390        0   {" 1949 81,50 %<\n>" 1950...}-{}
+     696        0   {lter Hesselbach, Frankfu...}-{}
+     526        0   {a.-Nr.2 01 91 (Hauptverw...}-{}
+     514        0   {Pfalz und Nie-<\n>dersac...}-{}
+     448        0   {Höchst<\n>Kapital: DM 2...}-{}
+     332        0   {Bayerische Hypotheken- u...}-{}
+     302        0   {(über 50 %)<\n>Dividend...}-{}
+     222        0   {Ausschließlich Versorgu...}-{}
+     210        0   {g 1:1 auf DM 246 000 000...}-{}
+     198        0   {<\n>Westfalenbank AG, Bo...}-{}
+     170        0   {425 750 Inh.-Vorz.-Akt. ...}-{§}
+     157        0   {kraftwerk Kahl GmbH,<\n>...}-{}
+     156        0   {H.-V.v.6.2.1963 auf DM 9...}-{}
+     144        0   {tammak-<\n>tien die Stim...}-{}
+     139        0   { DM 75 000 000.-<\n>6 % ...}-{}
+     128        0   {apital: DM 60 000 000.- ...}-{}
+     124        0   {al. Oppenheim jr. & Cie....}-{}
+     112        0   { Köln<\n>Kapital: DM 22...}-{}
+     105        0   { AG, Mannheim<\n>Kapital...}-{}
+     104        0   {che Energie AG, Köln...}-{}
+     103        0   {apital: DM 12 000 000.- ...}-{}
+      99        0   {erkraftwerke AG, Münche...}-{}
+      93        0   {hut (Baden)<\n>Kapital: ...}-{}
+      91        0   {iner Disconto Bank AG; B...}-{}
+      88        0   {1 250 000 000.- (über 4...}-{}
+      84        0   {tskasse, Essen;<\n>Deuts...}-{}
+      83        0   {gau)<\n>Kapital: DM 55 0...}-{}
+      77        0   {-Akt. zu je DM 100.-<\n>...}-{’}
+      76        0   {nisch-Westfälisches Ele...}-{}
+      75        0   {ts-<\n>vertrag mit Gewin...}-{}
+      67        0   {fentlicher Hand, die zus...}-{§}
+      66        0   {io Einwohnern<\n>wesentl...}-{}
+      62        0   {en<\n>Kapital: DM 23 250...}-{;}
+      55        0   {örsennotiz:<\n>Düsseld...}-{}
+      52        0   {Dividenden ab 1957/58: 1...}-{}
+      48        0   {ftwerke GmbH, Andernach...}-{}
+      47        0   {timmrecht d.Aktien i.d.H...}-{}
+      42        0   { Gesellschaftsmit-<\n>te...}-{}
+      42        0   {werke GmbH, München<\n>...}-{|}
+      41        0   { DM 11 200 000.-)<\n>6 1...}-{}
+      40        0   {tuttgart, Zürich, Genf ...}-{C"}
+      39        0   {Rheinkraftwerk Albbruch-...}-{}
+      39        0   {timme;<\n>je nom. DM 100...}-{}
+      36        0   {betrag: DM 68 000 000,-...}-{}
+      36        0   {ng. E. h. Hans-Günther ...}-{L}
+      36        0   {t.-Akt. zu je DM 400,-...}-{}
+      32        0   {, Koblenz<\n>Kapital: DM...}-{}
+      32        0   {,<\n>Hamburg und Frankfu...}-{}
+      32        0   {rd Weiss, Dahlbruch übe...}-{}
+      32        0   {tim-<\n>men<\n>Zahlstell...}-{}
+      31        0   {chirner, Freiburg i. Br....}-{}
+      30        0   {t.-Akt.); 703703 (Vorz.-...}-{H}
+      30        0   {traße 5, Postfach<\n>27...}-{}
+      29        0   {Wertpapier-Kenn-Nr.:<\n>...}-{}
+      28        0   {.Lahmeyer &<\n>Co., Fran...}-{}
+      28        0   {aarländische Kreditbank...}-{}
+      27        0   {apital: 1 000 Kuxw (100 ...}-{}
+      26        0   { zu je DM 400,-<\n>40 62...}-{}
+      25        0   {dorf, 6. stellv. Vors.;...}-{}
+      25        0   {eewerk AG, Freiburg (Bre...}-{}
+      24        0   {)<\n>Kapital: DM 30 000 ...}-{U}
+      24        0   {aarbrücken;<\n>C.G. Tri...}-{!}
+      24        0   {chreibungen von<\n>1959...}-{}
+      24        0   {tückelung:<\n>851 125 I...}-{}
+      23        0   {einbarung<\n>Koblenzer E...}-{}
+      21        0   {, Luxem-<\n>burg<\n>Kapi...}-{}
+      21        0   {egen)<\n>Gründung: 1898...}-{C}
+      19        0   {bungen von 1949<\n>Emi}-{}
+      18        0   {16,20,16,20,18 %<\n>I}-{}
+      17        0   {ique de l’Our S,A}-{}
+      17        0   {nnover, München,<\n>}-{}
+      17        0   {rk und Verkehrs-<\n>}-{}
+      16        0   { Juli - 30. Juni}-{}
+      16        0   {aar-Elektrizität}-{}
+      16        0   {che Elektrizität}-{}
+      16        0   {schuldverschrei-}-{}
+      16        0   {ätigkeitsgebiet:}-{}
+      15        0   { DM 795 000 000}-{}
+      15        0   {ere<\n>Erhöhung au}-{}
+      15        0   {innausschluß-<\n>v}-{}
+      14        0   {zu je DM 100,-}-{*}
+      13        0   {- (über 50 %)}-{}
+      13        0   {aar-<\n>brücken<\n>}-{}
+      12        0   {, Düsseldorf}-{}
+      12        0   {-Namens-Akt.}-{}
+      12        0   {t.-Akt. = 1 }-{}
+      11        0   {- sowie wei}-{}
+      11        0   {sionsbetrag}-{}
+      10        0   { - und lt.}-{}
+      10        0   {-<\n>Umstellu}-{}
+      10        0   {al (Krs. S}-{}
+      10        0   {trizitätsw}-{}
+       8        0   { (100 %)}-{}
+       8        0   { Berlin;}-{}
+       8        0   {chuldver}-{}
+       8        0   {len, Rhe}-{}
+       8        0   {mburg, H}-{}
+       7        0   {os<\n>in ö}-{}
+       6        0   {- (25 }-{}
+       6        0   {che Wa}-{}
+       5        0   { lfrs}-{"}
+       5        0   {-AG, }-{}
+       5        0   {<FEFF><\n>Rhe}-{}
+       5        0   {chäft}-{&}
+       5        0   {nland}-{„}
+       5        0   {nscha}-{}
+       4        0   {-Akt}-{}
+       4        0   {25 %}-{}
+       4        0   {elkr}-{}
+       4        0   {jahr}-{}
+       3        0   {Ver}-{}
+       3        0   {ato}-{}
+       3        0   {ion}-{}
+       3        0   {uch}-{}
+       2        0   { 1}-{}
+       1        0   {)}-{}
+       1        0   {-}-{}
+       1        0   {a}-{}
+       1        0   {g}-{}
+       1        0   {p}-{}
+       1        0   {t}-{}
+
+   Count   Missed   %Right
+     340      327     3.82   {<\n>}
+    1153     1150     0.26   { }
+      14       14     0.00   {"}
+      94       93     1.06   {%}
+       6        6     0.00   {&}
+      67       66     1.49   {(}
+      72       71     1.39   {)}
+       8        8     0.00   {+}
+     212      208     1.89   {,}
+     169      166     1.78   {-}
+     342      330     3.51   {.}
+      22       22     0.00   {/}
+     364      364     0.00   {0}
+     262      262     0.00   {1}
+     114      114     0.00   {2}
+      90       90     0.00   {3}
+      67       67     0.00   {4}
+     178      178     0.00   {5}
+     102      102     0.00   {6}
+      78       78     0.00   {7}
+      78       78     0.00   {8}
+     106      106     0.00   {9}
+      85       82     3.53   {:}
+      71       70     1.41   {;}
+       2        2     0.00   {=}
+      91       90     1.10   {A}
+      51       50     1.96   {B}
+      10       10     0.00   {C}
+     114      114     0.00   {D}
+      55       55     0.00   {E}
+      19       18     5.26   {F}
+      69       68     1.45   {G}
+      52       51     1.92   {H}
+      21       20     4.76   {I}
+       7        7     0.00   {J}
+      53       50     5.66   {K}
+      13       13     0.00   {L}
+      80       77     3.75   {M}
+      34       34     0.00   {N}
+       9        9     0.00   {O}
+       8        8     0.00   {P}
+      18       18     0.00   {R}
+      60       43    28.33   {S}
+      11       10     9.09   {T}
+       5        5     0.00   {U}
+      55       55     0.00   {V}
+      26       25     3.85   {W}
+       4        4     0.00   {Z}
+     329      321     2.43   {a}
+     123      123     0.00   {b}
+     145      145     0.00   {c}
+     166      166     0.00   {d}
+     682      680     0.29   {e}
+      97       90     7.22   {f}
+     127      127     0.00   {g}
+     224      224     0.00   {h}
+     363      360     0.83   {i}
+      16       16     0.00   {j}
+     122      120     1.64   {k}
+     233      230     1.29   {l}
+     119      118     0.84   {m}
+     470      468     0.43   {n}
+     141      141     0.00   {o}
+      39       38     2.56   {p}
+       2        2     0.00   {q}
+     465      459     1.29   {r}
+     323      295     8.67   {s}
+     325      322     0.92   {t}
+     193      192     0.52   {u}
+      80       80     0.00   {v}
+      41       40     2.44   {w}
+       5        5     0.00   {x}
+       7        7     0.00   {y}
+      72       72     0.00   {z}
+       1        1     0.00   {Ö}
+       9        9     0.00   {ß}
+      27       27     0.00   {ä}
+       2        2     0.00   {é}
+      19       19     0.00   {ö}
+      49       49     0.00   {ü}
+       1        1     0.00   {’}
+       1        1     0.00   {<FEFF>}
