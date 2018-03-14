@@ -72,8 +72,8 @@ for db in filestructs:
 
 
 
-        if table_ctr == 2: #j4t parse 4 tables then done
-            break
+        #if table_ctr == 2: #j4t parse 4 tables then done
+        #    break
 
 
 

@@ -67,4 +67,3 @@ res_three_2_multi_3 = pairwise2.align.globalxx("(Westf.), Grevener", "†††�
 
 #this is the isolated issue: produces Process finished with exit code 139 (interrupted by signal 11: SIGSEGV)
 res_three_2_multi = pairwise2.align.globalxx("(Westf.), Grevener", "¦¦¦¦¦¦(Westf.), Grevener", gap_char='¦', force_generic=False)
-print("asd")

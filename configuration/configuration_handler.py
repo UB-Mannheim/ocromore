@@ -73,7 +73,6 @@ class ConfigurationHandler(object):
                     elif value.isdigit():
                         parser.add(key, type=int)
                     elif key in list_keys:
-                        print("list")
                         parser.add(key, nargs='+')
                         list_keys.remove(key)
                         list_appended_keys.append(key) # note key this list a

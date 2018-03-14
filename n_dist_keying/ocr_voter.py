@@ -129,8 +129,8 @@ class OCRVoter(object):
             self.cpr.print("vote_text1", line_1.textstr)
             self.cpr.print("vote_text2", line_2.textstr)
             self.cpr.print("vote_text3", line_3.textstr)
-            if "¦¦lt.H" in line_1.textstr:
-                self.cpr.print("asd")
+            #if "¦¦lt.H" in line_1.textstr:
+            #    self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
@@ -170,8 +170,6 @@ class OCRVoter(object):
 
     def vote_best_of_three_charconfs_searchspaces(self, line_1, line_2, line_3, index_best, wildcard_character='¦'):
         try:
-            PRINT_TO_CONSOLE = True
-            cp = ConditionalPrint(PRINT_TO_CONSOLE)
 
             def try_obtain_charconf(value, undef_value=0):
                 if value is None or value is False or value is True:
@@ -190,8 +188,8 @@ class OCRVoter(object):
             self.cpr.print("vote_text1", line_1.textstr)
             self.cpr.print("vote_text2", line_2.textstr)
             self.cpr.print("vote_text3", line_3.textstr)
-            if "Freiv." in line_1.textstr:
-                self.cpr.print("asd")
+            # if "Freiv." in line_1.textstr:
+            #     self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
@@ -205,7 +203,7 @@ class OCRVoter(object):
             SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR ='¦'
             SEARCH_SPACE_PROCESSING_USE_SIMILAR_CHARS = True
             SEARCH_RANGE = 1
-            PRINT_MATRICES = True
+            PRINT_MATRICES = self.config.PRINT_SEARCH_SPACE_MATRICES
 
             search_space_processor = SearchSpaceProcessor(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_INNER, \
                                                           wildcard_character, SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR)

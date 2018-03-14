@@ -163,10 +163,10 @@ class MsaHandler(object):
         list_two = list(text_2)  # this is the pivot element
         list_three = list(text_3)
 
-        res_one_1, res_two_1 = MsaHandler.compare(list_one, list_two)
+        res_one_1, res_two_1 = self.compare(list_one, list_two)
 
 
-        res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
+        res_two_2, res_three_2 = self.compare(list_two, list_three)
 
         list_res_one_1 = list(res_one_1)
         list_res_two_1 = list(res_two_1)
@@ -190,22 +190,22 @@ class MsaHandler(object):
         #if res_one_1.__contains__("Sitz:") is True:
         #    self.cpr.print("asd")
 
-        res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa)
-        res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa)
+        res_one_1_filled = self.fillup_wildcarded_result(res_one_1, pivot_msa)
+        res_three_2_filled = self.fillup_wildcarded_result(res_three_2, pivot_msa)
 
         res_final_1 = res_one_1_filled
         res_final_2 = pivot_msa
         # res_final_3 = res_three_2
         res_final_3 = res_three_2_filled
         """
-        res_final_1, holder1 = MsaHandler.compare(list_res_one_1, list_pivot_msa)
+        res_final_1, holder1 = self.compare(list_res_one_1, list_pivot_msa)
         res_final_2 = pivot_msa
-        res_final_3, holder2 = MsaHandler.compare(list_res_three_2, list_pivot_msa)
+        res_final_3, holder2 = self.compare(list_res_three_2, list_pivot_msa)
         """
         #j4t
-        #rres_final_1, rholder1 = MsaHandler.compare(list_pivot_msa, list_res_one_1)
+        #rres_final_1, rholder1 = self.compare(list_pivot_msa, list_res_one_1)
         #rres_final_2 = pivot_msa
-        #rres_final_3, rholder2 = MsaHandler.compare( list_pivot_msa, list_res_three_2)
+        #rres_final_3, rholder2 = self.compare( list_pivot_msa, list_res_three_2)
         return res_final_1, res_final_2, res_final_3
 
 
@@ -247,9 +247,9 @@ class MsaHandler(object):
 
 
             #alignment3, score3, start_end_positions3 = global_pairwise_align("Hallo das ist ein Test", "H4llo das ist Test", gap_open_penalty, gap_extend_penalty, substitution_matrix_equal)
-            #res_one_1, res_two_1 = MsaHandler.compare(list_one, list_two)
+            #res_one_1, res_two_1 = self.compare(list_one, list_two)
 
-            #res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
+            #res_two_2, res_three_2 = self.compare(list_two, list_three)
             res_one_1 = str(alignment12._seqs[0])
             res_two_1 = str(alignment12._seqs[1])
             res_two_2 = str(alignment23._seqs[0])
@@ -277,8 +277,8 @@ class MsaHandler(object):
             # if res_one_1.__contains__("Sitz:") is True:
             #    self.cpr.print("asd")
 
-            res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa, '@')
-            res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa, '@')
+            res_one_1_filled = self.fillup_wildcarded_result(res_one_1, pivot_msa, '@')
+            res_three_2_filled = self.fillup_wildcarded_result(res_three_2, pivot_msa, '@')
 
             res_final_1 = res_one_1_filled
             res_final_2 = pivot_msa
@@ -386,9 +386,9 @@ class MsaHandler(object):
                 res_3_final = Random.append_pad_values('',len(text_A),wildcard_character)
                 return  res_1_final, res_2_final, res_3_final
 
-            text_Ab, text_Ba = MsaHandler.pairwise_unicode(text_A, text_B, wildcard_character,None,True)
-            # text_Bc_old, text_Cb_old = MsaHandler.pairwise_unicode(text_B, text_C, wildcard_character,None,True)
-            text_Cb, text_Bc = MsaHandler.pairwise_unicode(text_C, text_B, wildcard_character, None, True)
+            text_Ab, text_Ba = self.pairwise_unicode(text_A, text_B, wildcard_character,None,True)
+            # text_Bc_old, text_Cb_old = self.pairwise_unicode(text_B, text_C, wildcard_character,None,True)
+            text_Cb, text_Bc = self.pairwise_unicode(text_C, text_B, wildcard_character, None, True)
             self.cpr.print("text_Ab..", text_Ab)
             self.cpr.print("text_Ba..", text_Ba)
             self.cpr.print("text_Bc..", text_Bc)
@@ -396,23 +396,23 @@ class MsaHandler(object):
 
             # p.identical,p.non_identical,p.opening_gap,p.extending_ap
             #gap_config_big_pivot = GapConfig(4, -4, -4, -2)
-            text_Babc, text_Bcba = MsaHandler.pairwise_unicode(text_Ba, text_Bc, wildcard_character)
+            text_Babc, text_Bcba = self.pairwise_unicode(text_Ba, text_Bc, wildcard_character)
 
             self.cpr.print("text_Babc", text_Babc)
             self.cpr.print("text_Bcba", text_Bcba)
 
 
-            text_Af, text_BabcfA = MsaHandler.pairwise_unicode(text_Ab, text_Babc, wildcard_character)
-            # text_Bf, text_BabcfB = MsaHandler.pairwise_unicode(text_B, text_Babc, wildcard_character)
-            text_Cf, text_BabcfC = MsaHandler.pairwise_unicode(text_Cb, text_Babc, wildcard_character)
+            text_Af, text_BabcfA = self.pairwise_unicode(text_Ab, text_Babc, wildcard_character)
+            # text_Bf, text_BabcfB = self.pairwise_unicode(text_B, text_Babc, wildcard_character)
+            text_Cf, text_BabcfC = self.pairwise_unicode(text_Cb, text_Babc, wildcard_character)
 
             self.cpr.print("text_Af..", text_Af)
             self.cpr.print("text_Babc", text_Babc)
             self.cpr.print("text_Cf..", text_Cf)
 
-            #text_Af_r = MsaHandler.reduce_double_wildcards_specific(text_Af, text_BabcfA,'@',wildcard_character)[0].replace('@',wildcard_character)
-            #text_Bf_r = MsaHandler.reduce_double_wildcards_specific(text_Bf, text_BabcfB,'@',wildcard_character)[0].replace('@',wildcard_character)
-            #text_Cf_r = MsaHandler.reduce_double_wildcards_specific(text_Cf, text_BabcfC,'@',wildcard_character)[0].replace('@',wildcard_character)
+            #text_Af_r = self.reduce_double_wildcards_specific(text_Af, text_BabcfA,'@',wildcard_character)[0].replace('@',wildcard_character)
+            #text_Bf_r = self.reduce_double_wildcards_specific(text_Bf, text_BabcfB,'@',wildcard_character)[0].replace('@',wildcard_character)
+            #text_Cf_r = self.reduce_double_wildcards_specific(text_Cf, text_BabcfC,'@',wildcard_character)[0].replace('@',wildcard_character)
 
             #print("text_Af.r", text_Af_r)
             #print("text_Bf.r", text_Bf_r)
@@ -550,7 +550,7 @@ class MsaHandler(object):
                 # self.cpr.print("ee one", TypeCasts.convert_unicodelist_to_string(alignmentee_multi[0][0]))
                 # self.cpr.print("ee two", TypeCasts.convert_unicodelist_to_string(alignmentee_multi[0][1]))
                 if len(alignmentff_multi[0][1]) > len(alignment12_multi[0][0]):
-                    redwc1, redwc2 = MsaHandler.reduce_double_wildcards_specific( \
+                    redwc1, redwc2 = self.reduce_double_wildcards_specific( \
                          TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][0]), \
                         TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1]))
                     self.cpr.print("ff onr", redwc1)
@@ -598,7 +598,7 @@ class MsaHandler(object):
                     self.cpr.print("ff twn", TypeCasts.convert_unicodelist_to_string(alignmentffNeu_multi[0][1]))
 
                     # ignore
-                    redwc1, redwc2 = MsaHandler.reduce_double_wildcards_specific(
+                    redwc1, redwc2 = self.reduce_double_wildcards_specific(
                         TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][0]),
                         TypeCasts.convert_unicodelist_to_string(alignmentff_multi[0][1]), wildcard_character, wildcard_character2)
                     self.cpr.print("ff onr", redwc1)
@@ -614,7 +614,7 @@ class MsaHandler(object):
 
                         self.cpr.print("ff thr", TypeCasts.convert_unicodelist_to_string(alignmentff2_multi[0][0]))
                         self.cpr.print("ff th2", TypeCasts.convert_unicodelist_to_string(alignmentff2_multi[0][1]))
-                        redwc3, redwc4 = MsaHandler.reduce_double_wildcards_specific(
+                        redwc3, redwc4 = self.reduce_double_wildcards_specific(
                             TypeCasts.convert_unicodelist_to_string(alignmentff2_multi[0][0]),
                             redwc2rep, wildcard_character,
                             wildcard_character2)
@@ -696,11 +696,11 @@ class MsaHandler(object):
 
             USE_OLD_FILLING = False
             if USE_OLD_FILLING is True:
-                res_one_1_filled = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa)
-                res_three_2_filled = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa)
+                res_one_1_filled = self.fillup_wildcarded_result(res_one_1, pivot_msa)
+                res_three_2_filled = self.fillup_wildcarded_result(res_three_2, pivot_msa)
             else:
-                if'Stra' in res_three_2:
-                    self.cpr.print("asd")
+                # if'Stra' in res_three_2:
+                #    self.cpr.print("asd")
 
                 pivot_index = 0
                 if pivot_index == 0:
@@ -739,8 +739,8 @@ class MsaHandler(object):
 
 
 
-            #res_one_1_filledOld = MsaHandler.fillup_wildcarded_result(res_one_1, pivot_msa, '¦')
-            #res_three_2_filledOld = MsaHandler.fillup_wildcarded_result(res_three_2, pivot_msa, '¦')
+            #res_one_1_filledOld = self.fillup_wildcarded_result(res_one_1, pivot_msa, '¦')
+            #res_three_2_filledOld = self.fillup_wildcarded_result(res_three_2, pivot_msa, '¦')
 
             res_final_1 = TypeCasts.convert_unicodelist_to_string(res_one_1_filled)
             res_final_2 = TypeCasts.convert_unicodelist_to_string(new_pivot)
@@ -765,9 +765,9 @@ class MsaHandler(object):
 
 
         # alignment3, score3, start_end_positions3 = global_pairwise_align("Hallo das ist ein Test", "H4llo das ist Test", gap_open_penalty, gap_extend_penalty, substitution_matrix_equal)
-        # res_one_1, res_two_1 = MsaHandler.compare(list_one, list_two)
+        # res_one_1, res_two_1 = self.compare(list_one, list_two)
 
-        # res_two_2, res_three_2 = MsaHandler.compare(list_two, list_three)
+        # res_two_2, res_three_2 = self.compare(list_two, list_three)
 
 
     def align_three_texts(self, text_1, text_2, text_3, wildcard_character = '¦', print_output=False):
@@ -777,13 +777,13 @@ class MsaHandler(object):
         MODE = MODE_BIOPYTHON
 
         if MODE == MODE_GONZALO:
-            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_gonzalo(text_1, text_2, text_3)
+            res_final_1, res_final_2, res_final_3 = self.msa_alignment_gonzalo(text_1, text_2, text_3)
 
         elif MODE == MODE_SKBIO:
-            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_skbio(text_1, text_2, text_3)
+            res_final_1, res_final_2, res_final_3 = self.msa_alignment_skbio(text_1, text_2, text_3)
         elif MODE == MODE_BIOPYTHON:
 
-            res_final_1, res_final_2, res_final_3 = MsaHandler.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character, print_output)
+            res_final_1, res_final_2, res_final_3 = self.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character, print_output)
 
         return res_final_1, res_final_2, res_final_3
 
@@ -854,8 +854,10 @@ class MsaHandler(object):
 
                 # sort by length (longest has index 1)
                 words_sorted, wlongest_index = sort_words_longest_mid(word1, word2, word3)
+                # if wildcard_character is True or wildcard_character is False:
+                #    print("asd")
 
-                word1_al, word2_al, word3_al = MsaHandler.align_three_texts(words_sorted[0], words_sorted[1], \
+                word1_al, word2_al, word3_al = self.align_three_texts(words_sorted[0], words_sorted[1], \
                                                                             words_sorted[2], wildcard_character, PRINT_ALIGNMENT_PROCESS)
 
                 # sort back ...
@@ -898,7 +900,7 @@ class MsaHandler(object):
         PRINT_RESULTS = True
         wildcard_character = '¦'
 
-        res_final_1, res_final_2, res_final_3 = MsaHandler.align_three_texts(text_1, text_2, text_3, wildcard_character)
+        res_final_1, res_final_2, res_final_3 = self.align_three_texts(text_1, text_2, text_3, wildcard_character)
 
         self.cpr.print("my final resolutions before vote")
         self.cpr.print("res_final_1", res_final_1)
