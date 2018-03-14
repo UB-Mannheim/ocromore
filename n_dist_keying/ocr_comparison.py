@@ -18,7 +18,7 @@ class OCRcomparison:
         self.line_height_information = []
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
-        self.cpr = ConditionalPrint(self.config.PRINT_OCR_COMPARISON)
+        self.cpr = ConditionalPrint(self.config.PRINT_OCR_COMPARISON, self.config.PRINT_EXCEPTION_LEVEL)
 
     def add_set(self, set_to_add):
         self.ocr_sets.append(set_to_add)

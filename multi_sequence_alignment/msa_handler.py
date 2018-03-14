@@ -22,7 +22,7 @@ class MsaHandler(object):
     def __init__(self):
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
-        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER)
+        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL)
         self.ocr_voter = OCRVoter()
 
 
@@ -289,7 +289,7 @@ class MsaHandler(object):
 
         except Exception as ex:
             tr = inspect.trace()
-            self.cpr.print("Exception raised in %s" % tr[-1][3])
+            self.cpr.printex("msa_handler.py Exception raised in %s" % tr[-1][3],ex)
 
 
 
@@ -345,9 +345,8 @@ class MsaHandler(object):
             return text_1_al, text_2_al
         except Exception as ex:
             tr = inspect.trace()
-            self.cpr.print("trace is",tr)
-            self.cpr.print("Exception in pairwise alignment unicode-biopython", ex)
-
+            self.cpr.printex("msa_handler.py Exception in pairwise alignment unicode-biopython", ex)
+            self.cpr.printex("trace is", tr)
 
     def msa_alignment_biopython(self, text_A, text_B, text_C, wildcard_character='¦', print_output=False):
 
@@ -447,9 +446,9 @@ class MsaHandler(object):
             return res_final_1, res_final_2, res_final_3
         except Exception as ex:
             tr = inspect.trace()
-            self.cpr.print("trace", tr)
-            self.cpr.print("Exception within alignment algo ", ex)
 
+            self.cpr.printex("msa_handler.py Exception within alignment algo ", ex)
+            self.cpr.printex("trace", tr)
 
     def msa_alignment_biopython_old(self, text_1, text_2, text_3, wildcard_character='¦'):
 
@@ -757,7 +756,7 @@ class MsaHandler(object):
             return res_final_1, res_final_2, res_final_3
 
         except Exception as ex:
-            self.cpr.print(ex)
+            self.cpr.printex("msa_handler.py exception", ex)
 
         #self.cpr.print(pairwise2.format_alignment(*alignmentsPW[0]))
         #self.cpr.print(pairwise2.format_alignment(*alignmentsPW[1]))
@@ -892,8 +891,8 @@ class MsaHandler(object):
             return best_stripped_non_multi_whitespace
         except Exception as ex:
             tr = inspect.trace()
-            self.cpr.print("tr", tr)
-
+            self.cpr.printex("msa_handler.py exception", ex)
+            self.cpr.printex("tr", tr)
 
 
     def get_best_of_three(self, text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None):

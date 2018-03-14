@@ -13,7 +13,7 @@ class OCRVoter(object):
     def __init__(self):
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
-        self.cpr = ConditionalPrint(self.config.PRINT_OCR_VOTER)
+        self.cpr = ConditionalPrint(self.config.PRINT_OCR_VOTER, self.config.PRINT_EXCEPTION_LEVEL)
 
 
 
@@ -163,9 +163,9 @@ class OCRVoter(object):
             return accumulated_chars, accumulated_chars_stripped
         except Exception as ex:
             tr = inspect.trace()
-            self.cpr.print("trace", tr)
 
-            self.cpr.print("Exception during confidence vote", ex)
+            self.cpr.printex("ocr_voter.py Exception during confidence vote:", ex)
+            self.cpr.printex("trace is:", tr)
 
 
     def vote_best_of_three_charconfs_searchspaces(self, line_1, line_2, line_3, index_best, wildcard_character='¦'):
@@ -271,6 +271,6 @@ class OCRVoter(object):
             return accumulated_chars, accumulated_chars_stripped
         except Exception as ex:
             tr = inspect.trace()
-            self.cpr.print("trace", tr)
 
-            self.cpr.print("Exception during confidence vote", ex)
+            self.cpr.printex("ocr_voter.py Exception during confidence vote", ex)
+            self.cpr.printex("trace", tr)

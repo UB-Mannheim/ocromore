@@ -38,7 +38,7 @@ class OCRset:
         self._database_handler = None
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
-        self._cpr = ConditionalPrint(self._config.PRINT_OCR_SET)
+        self._cpr = ConditionalPrint(self._config.PRINT_OCR_SET, self._config.PRINT_EXCEPTION_LEVEL)
         self._msa_handler = MsaHandler()
 
     def is_database_set(self, enabled, database_handler):
@@ -159,7 +159,8 @@ class OCRset:
 
     def calculate_n_distance_keying_wordwise(self):
         if self._is_origin_database is False:
-            raise Exception("Wordwise keying only possible with database originated ocr_sets")
+            self._cpr.printex("Wordwise keying only possible with database originated ocr_sets")
+            raise Exception
 
         # get maximum word index todo probably will be refactored
         max_word_indices = []
@@ -292,8 +293,9 @@ class OCRset:
 
             self._best_msa_text = result
         except Exception as e:
-            self._cpr.print("Exception in MSA, just taking line prio exception:", e)
+            self._cpr.printex("ocr_set.py Exception in MSA, just taking line prio exception:", e)
             tr = inspect.trace()
+            self._cpr.printex("trace is:", tr)
 
             self._best_msa_text = self.get_line_content(self._set_lines[1])
 
@@ -424,8 +426,9 @@ class OCRset:
 
             self._best_msa_text = result
         except Exception as e:
-            self._cpr.print("Exception in MSA, just taking line prio exception:", e)
+            self._cpr.printex("ocr_set.py Exception in MSA, just taking line prio exception:", e)
             tr = inspect.trace()
+            self._cpr.printex("trace is:",tr)
             if take_n_dist_best_index is True:
                 self._best_msa_text = self.get_line_content(self._set_lines[ldist_best_index])
             else:
