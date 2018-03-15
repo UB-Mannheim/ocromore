@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      605   Words
-      34   Misrecognized
-   94.38%  Accuracy
+      33   Misrecognized
+   94.55%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -19,7 +19,7 @@ Non-stopwords
       35        4    88.57        5
       41        3    92.68        6
       34        2    94.12        7
-      40        3    92.50        8
+      40        2    95.00        8
       29        3    89.66        9
       22        2    90.91       10
       24        2    91.67       11
@@ -28,7 +28,7 @@ Non-stopwords
        6        1    83.33       14
        5        2    60.00       15
        2        1    50.00       17
-     602       34    94.35    Total
+     602       33    94.52    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -45,14 +45,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     605       34    94.38        1
-     604       61    89.90        2
-     603       86    85.74        3
-     602      110    81.73        4
-     601      134    77.70        5
-     600      155    74.17        6
-     599      175    70.78        7
-     598      194    67.56        8
+     605       33    94.55        1
+     604       60    90.07        2
+     603       85    85.90        3
+     602      109    81.89        4
+     601      133    77.87        5
+     600      154    74.33        6
+     599      174    70.95        7
+     598      193    67.73        8
 
 Stopwords
    Count   Missed   %Right   
@@ -257,7 +257,7 @@ Non-stopwords
        2        0   100.00   für
        1        0   100.00   gegenüber
        1        1     0.00   gehälter30
-       3        1    66.67   geisweid
+       3        0   100.00   geisweid
        1        0   100.00   gerbershagen
        1        0   100.00   geschmiedetes
        2        1    50.00   geschäftsjahr

@@ -38,7 +38,8 @@ class OCRset:
         self._database_handler = None
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
-        self._cpr = ConditionalPrint(self._config.PRINT_OCR_SET, self._config.PRINT_EXCEPTION_LEVEL)
+        self._cpr = ConditionalPrint(self._config.PRINT_MSA_HANDLER, self._config.PRINT_EXCEPTION_LEVEL,
+                                    self._config.PRINT_WARNING_LEVEL)
         self._msa_handler = MsaHandler()
 
     def is_database_set(self, enabled, database_handler):

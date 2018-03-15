@@ -22,7 +22,8 @@ class MsaHandler(object):
     def __init__(self):
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
-        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL)
+        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
+                                    self.config.PRINT_WARNING_LEVEL)
         self.ocr_voter = OCRVoter()
 
 
@@ -339,6 +340,16 @@ class MsaHandler(object):
                                                          penalty_extending_gap, gap_char=wildcard_character_uclist,
                                                          penalize_end_gaps=False)
 
+            if len(alignment12) == 0:
+                self.cpr.printw("msa_handler.py Alignment between, ",text_1, "and",text_2," was not possible just padding up results")
+                len_text_1 = len(text_1)
+                len_text_2 = len(text_2)
+                if len_text_1 > len_text_2:
+                    text_2_padded = Random.append_pad_values(text_2,len_text_1-len_text_2,wildcard_character)
+                    return text_1, text_2_padded
+                else:
+                    text_1_padded = Random.append_pad_values(text_1, len_text_2-len_text_1, wildcard_character)
+                    return text_1_padded, text_2
 
             text_1_al = TypeCasts.convert_unicodelist_to_string(alignment12[0][0])
             text_2_al = TypeCasts.convert_unicodelist_to_string(alignment12[0][1])
@@ -781,7 +792,6 @@ class MsaHandler(object):
         elif MODE == MODE_SKBIO:
             res_final_1, res_final_2, res_final_3 = self.msa_alignment_skbio(text_1, text_2, text_3)
         elif MODE == MODE_BIOPYTHON:
-
             res_final_1, res_final_2, res_final_3 = self.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character, print_output)
 
         return res_final_1, res_final_2, res_final_3

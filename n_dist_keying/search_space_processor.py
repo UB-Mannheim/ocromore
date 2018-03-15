@@ -42,7 +42,8 @@ class SearchSpaceProcessor(object):
         # self.similar_chars.append(['e', 'é'])
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
-        self._cpr = ConditionalPrint(self._config.PRINT_SEARCH_SPACE_PROCESSOR, self._config.PRINT_EXCEPTION_LEVEL)
+        self._cpr = ConditionalPrint(self._config.PRINT_SEARCH_SPACE_PROCESSOR, self._config.PRINT_EXCEPTION_LEVEL,
+                                     self._config.PRINT_WARNING_LEVEL)
 
 
     def get_middle_index(self):

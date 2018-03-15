@@ -1,14 +1,8 @@
-from utils.df_objectifier import DFObjectifier
 from pathlib import Path
-from n_dist_keying.database_handler import DatabaseHandler
-from utils.pycharm_handler import PycharmHandler
-from ocr_validation.isri_handler import IsriHandler
-import importlib
 from configuration.configuration_handler import ConfigurationHandler
-from file_to_database_handler import FileToDatabaseHandler as ftdh
 from tableparser import TableParser
 from utils.database_handler import DatabaseHandler
-import os
+
 
 # fetch configurations
 CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
@@ -47,6 +41,9 @@ tableparser.create_output_dir()
 count = 1
 for db in filestructs:
     print("Parsing database:", db)
+    if db != "1957":
+        continue
+
     files = filestructs[db]
     files_gt = filestructs_gt[db]
     for file in files:
