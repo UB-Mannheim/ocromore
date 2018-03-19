@@ -1,34 +1,33 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     8693   Characters
-     163   Errors
-   98.12%  Accuracy
+     127   Errors
+   98.54%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   98.12%  Accuracy After Correction
+   98.54%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     137        9       17      163   Unmarked
-     137        9       17      163   Total
+     101        9       17      127   Unmarked
+     101        9       17      127   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
-    1226       39    96.82   ASCII Spacing Characters
-     585       24    95.90   ASCII Special Symbols
+    1226       35    97.15   ASCII Spacing Characters
+     585       23    96.07   ASCII Special Symbols
      529        3    99.43   ASCII Digits
-     711        6    99.16   ASCII Uppercase Letters
-    5532       64    98.84   ASCII Lowercase Letters
+     711        4    99.44   ASCII Uppercase Letters
+    5532       35    99.37   ASCII Lowercase Letters
        3        0   100.00   Latin1 Uppercase Letters
      105        8    92.38   Latin1 Lowercase Letters
        1        1     0.00   General Punctuation
-    8693      146    98.32   Total
+    8693      110    98.73   Total
 
   Errors   Marked   Correct-Generated
-      34        0   { Produktionsprogramm der...}-{}
       22        0   { }-{}
       14        0   {" }-{}
       10        0   {"}-{''}
@@ -45,7 +44,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   { K}-{}
        2        0   { S}-{}
        2        0   {a}-{}
-       2        0   {da}-{}
        2        0   {lü}-{}
        2        0   {ng}-{}
        2        0   {t}-{}
@@ -76,8 +74,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {}-{t}
 
    Count   Missed   %Right
-     294        1    99.66   {<\n>}
-     932       38    95.92   { }
+     294        0   100.00   {<\n>}
+     932       35    96.24   { }
       12       12     0.00   {"}
        1        0   100.00   {$}
       34        1    97.06   {%}
@@ -86,7 +84,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       27        0   100.00   {)}
        2        0   100.00   {+}
      122        1    99.18   {,}
-     105        3    97.14   {-}
+     105        2    98.10   {-}
      144        5    96.53   {.}
        8        1    87.50   {/}
      104        0   100.00   {0}
@@ -108,7 +106,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       48        0   100.00   {D}
       25        1    96.00   {E}
       19        0   100.00   {F}
-      85        1    98.82   {G}
+      85        0   100.00   {G}
       85        0   100.00   {H}
       26        1    96.15   {I}
        5        0   100.00   {J}
@@ -117,7 +115,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       41        0   100.00   {M}
       15        0   100.00   {N}
       10        0   100.00   {O}
-      27        1    96.30   {P}
+      27        0   100.00   {P}
        1        0   100.00   {Q}
       10        0   100.00   {R}
       67        1    98.51   {S}
@@ -126,27 +124,27 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       17        0   100.00   {V}
       13        0   100.00   {W}
        2        0   100.00   {Z}
-     340        5    98.53   {a}
+     340        3    99.12   {a}
       96        0   100.00   {b}
      150        0   100.00   {c}
-     259        3    98.84   {d}
-     927        7    99.24   {e}
+     259        0   100.00   {d}
+     927        4    99.57   {e}
       89        0   100.00   {f}
-     184        3    98.37   {g}
+     184        2    98.91   {g}
      227        1    99.56   {h}
-     385        4    98.96   {i}
+     385        3    99.22   {i}
        7        0   100.00   {j}
-     112        3    97.32   {k}
-     248        9    96.37   {l}
-     159        3    98.11   {m}
-     591        3    99.49   {n}
-     168        3    98.21   {o}
-      24        2    91.67   {p}
+     112        2    98.21   {k}
+     248        7    97.18   {l}
+     159        1    99.37   {m}
+     591        2    99.66   {n}
+     168        0   100.00   {o}
+      24        1    95.83   {p}
        3        0   100.00   {q}
-     464        5    98.92   {r}
-     326        4    98.77   {s}
-     365        6    98.36   {t}
-     212        2    99.06   {u}
+     464        1    99.78   {r}
+     326        1    99.69   {s}
+     365        5    98.63   {t}
+     212        1    99.53   {u}
       52        0   100.00   {v}
       67        0   100.00   {w}
        1        0   100.00   {x}

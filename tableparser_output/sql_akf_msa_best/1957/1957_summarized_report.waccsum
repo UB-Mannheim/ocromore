@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     2628   Words
-     172   Misrecognized
-   93.46%  Accuracy
+     167   Misrecognized
+   93.65%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -14,12 +14,12 @@ Non-stopwords
    Count   Missed   %Right   Length
      149       12    91.95        1
      349       27    92.26        2
-     591       17    97.12        3
+     591       15    97.46        3
      285       24    91.58        4
      179       13    92.74        5
-     194       17    91.24        6
+     194       16    91.75        6
      189        6    96.83        7
-     140        5    96.43        8
+     140        4    97.14        8
      110        6    94.55        9
       87        8    90.80       10
       76        5    93.42       11
@@ -30,17 +30,17 @@ Non-stopwords
        6        0   100.00       16
       10        2    80.00       17
        6        0   100.00       18
-      13        2    84.62       19
+      13        1    92.31       19
        6        2    66.67       20
        9        0   100.00       21
        1        0   100.00       22
        2        0   100.00       25
        1        0   100.00       32
-    2593      171    93.41    Total
+    2593      166    93.60    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    1046       82    92.16        1
+    1046       80    92.35        1
      189        5    97.35        2
       76        0   100.00        3
       33        0   100.00        4
@@ -51,18 +51,18 @@ Distinct Non-stopwords
        1        0   100.00        9
        5        0   100.00       10
       24        0   100.00      >10
-    1421       88    93.81    Total
+    1421       86    93.95    Total
 
 Phrases
    Count   Missed   %Right   Length
-    2628      172    93.46        1
-    2625      274    89.56        2
-    2622      368    85.96        3
-    2619      458    82.51        4
-    2616      546    79.13        5
-    2613      624    76.12        6
-    2610      693    73.45        7
-    2607      757    70.96        8
+    2628      167    93.65        1
+    2625      268    89.79        2
+    2622      361    86.23        3
+    2619      450    82.82        4
+    2616      537    79.47        5
+    2613      614    76.50        6
+    2610      682    73.87        7
+    2607      745    71.42        8
 
 Stopwords
    Count   Missed   %Right   
@@ -476,12 +476,12 @@ Non-stopwords
        1        0   100.00   dabei
        1        0   100.00   dane
        3        0   100.00   darunter
-       8        1    87.50   das
+       8        0   100.00   das
        3        0   100.00   davon
        1        0   100.00   de
        7        0   100.00   dem
       16        0   100.00   den
-      49        2    95.92   der
+      49        1    97.96   der
        5        0   100.00   deren
        1        0   100.00   ders
        5        1    80.00   des
@@ -604,7 +604,7 @@ Non-stopwords
        1        0   100.00   gehälter
        1        1     0.00   gehälter30
        2        0   100.00   gehört
-       3        1    66.67   geisweid
+       3        0   100.00   geisweid
        1        0   100.00   gerbershagen
        2        0   100.00   gerechtsame
        1        0   100.00   gerhardstr
@@ -612,7 +612,7 @@ Non-stopwords
        1        0   100.00   geschmiedetes
        4        1    75.00   geschäftsjahr
        3        1    66.67   geschäftslage
-       3        1    66.67   gesell
+       3        0   100.00   gesell
       18        1    94.44   gesellschaft
        1        0   100.00   gesellschaftsfahrten
        2        0   100.00   gesellschaftskasse
@@ -875,7 +875,7 @@ Non-stopwords
        1        0   100.00   poensgen
        1        0   100.00   preussag
        1        0   100.00   produktion
-       1        1     0.00   produktionsprogramm
+       1        0   100.00   produktionsprogramm
        1        0   100.00   produzierten
        2        1    50.00   pötzen
        3        0   100.00   qm

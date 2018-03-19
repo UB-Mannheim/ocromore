@@ -23,13 +23,10 @@ class FileToDatabaseHandler():
         files = chain.from_iterable(
             glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
 
-
         for file in files:
             groundtruths.append(file)
 
-
         return groundtruths
-        print("asd")
 
     @staticmethod
     def fetch_dbs_and_files(fileglob, filetypes, dbdir):

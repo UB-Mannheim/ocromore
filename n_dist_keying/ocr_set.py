@@ -5,6 +5,8 @@ from n_dist_keying.n_distance_voter import NDistanceVoter
 import numpy as np
 from multi_sequence_alignment.msa_handler import MsaHandler
 from utils.random import Random
+from utils.conditional_print import ConditionalPrint
+from configuration.configuration_handler import ConfigurationHandler
 
 
 import inspect
@@ -34,6 +36,11 @@ class OCRset:
         self._best_msa_text =""
         self._is_origin_database = False
         self._database_handler = None
+        config_handler = ConfigurationHandler(first_init=False)
+        self._config = config_handler.get_config()
+        self._cpr = ConditionalPrint(self._config.PRINT_MSA_HANDLER, self._config.PRINT_EXCEPTION_LEVEL,
+                                    self._config.PRINT_WARNING_LEVEL)
+        self._msa_handler = MsaHandler()
 
     def is_database_set(self, enabled, database_handler):
         self._is_origin_database = enabled
@@ -124,15 +131,15 @@ class OCRset:
                     lineset_acc = lineset_acc+ocr_text+"||"
 
             except:
-                print("problem creating printable lineset ")
+                self._cpr.print("problem creating printable lineset ")
 
         lineset_acc = lineset_acc + "||"
         msa_str = str(self._best_msa_text)
         if diff_only is True:
             if one_line_is_false is True:
-                print(str(self.y_mean) + "||"+msa_str+"||"+str(self.shortest_distance_line_index)+"||" + lineset_acc)
+                self._cpr.print(str(self.y_mean) + "||"+msa_str+"||"+str(self.shortest_distance_line_index)+"||" + lineset_acc)
         else:
-            print(str(self.y_mean)+"||"+msa_str+"||"+str(self.shortest_distance_line_index)+"||"+lineset_acc)
+            self._cpr.print(str(self.y_mean)+"||"+msa_str+"||"+str(self.shortest_distance_line_index)+"||"+lineset_acc)
 
 
 
@@ -153,7 +160,8 @@ class OCRset:
 
     def calculate_n_distance_keying_wordwise(self):
         if self._is_origin_database is False:
-            raise Exception("Wordwise keying only possible with database originated ocr_sets")
+            self._cpr.printex("Wordwise keying only possible with database originated ocr_sets")
+            raise Exception
 
         # get maximum word index todo probably will be refactored
         max_word_indices = []
@@ -165,7 +173,7 @@ class OCRset:
                 max_word_indices.append(max_word_index)
 
         max_word_index = max(max_word_indices)
-        print("mwi", max_word_index)
+        self._cpr.print("mwi", max_word_index)
 
 
         def get_word_at_calc_wordindex(line, word_index):
@@ -203,8 +211,8 @@ class OCRset:
             ndist_voter.set_texts(words)
             wordindex_result = ndist_voter.compare_texts()
             ndist_voter.reset()
-            print(words[wordindex_result])
-            print("--")
+            self._cpr.print(words[wordindex_result])
+            self._cpr.print("--")
             # just assume words is filled here and a 3 word list
 
 
@@ -228,7 +236,7 @@ class OCRset:
         len_pline_3 = len(lsval_3)
         # max_index_value = max([len_pline_1, len_pline_2, len_pline_3])
         max_index = np.argmax([len_pline_1, len_pline_2, len_pline_3])
-        print(max_index)
+        self._cpr.print(max_index)
         return max_index
 
     def calculate_msa_best(self, take_n_dist_best_index=False, take_longest_as_pivot = False):
@@ -247,17 +255,17 @@ class OCRset:
         index1 = indices[0]
         index2 = indices[1]
 
-        print("msa selection taking best:",best_index, "others:(", index1, "and", index2,")")
+        self._cpr.print("msa selection taking best:",best_index, "others:(", index1, "and", index2,")")
 
         try:
             line_1 = self.get_line_content(self._set_lines[index1])
             line_2 = self.get_line_content(self._set_lines[best_index]) # should be best
             line_3 = self.get_line_content(self._set_lines[index2])
 
-            print("ocr_set:")
-            print("text_A",line_1)
-            print("text_B",line_2)
-            print("text_C",line_3)
+            self._cpr.print("ocr_set:")
+            self._cpr.print("text_A",line_1)
+            self._cpr.print("text_B",line_2)
+            self._cpr.print("text_C",line_3)
 
 
             lines = [line_1, line_2, line_3]
@@ -282,12 +290,13 @@ class OCRset:
             elif ok_len == 2:
                 result = lines[ok_indices[0]]
             else:
-                result = MsaHandler.get_best_of_three(line_1, line_2, line_3)
+                result = self._msa_handler.get_best_of_three(line_1, line_2, line_3)
 
             self._best_msa_text = result
         except Exception as e:
-            print("Exception in MSA, just taking line prio exception:", e)
+            self._cpr.printex("ocr_set.py Exception in MSA, just taking line prio exception:", e)
             tr = inspect.trace()
+            self._cpr.printex("trace is:", tr)
 
             self._best_msa_text = self.get_line_content(self._set_lines[1])
 
@@ -316,10 +325,10 @@ class OCRset:
         text_2 = self.get_line_content(line_2)  # should be best
         text_3 = self.get_line_content(line_3)
 
-        print("ocr_set:")
-        print("text_A", text_1)
-        print("text_B", text_2)
-        print("text_C", text_3)
+        self._cpr.print("ocr_set:")
+        self._cpr.print("text_A", text_1)
+        self._cpr.print("text_B", text_2)
+        self._cpr.print("text_C", text_3)
 
 
         line_1_ok = not Random.is_false_true_or_none(line_1)
@@ -345,7 +354,7 @@ class OCRset:
 
         # get the pivot index and the other indices
         best_index, other_indices = self.obtain_best_index(use_ndist_pivot, use_longest_pivot,prefered_index)
-        print("msa selection taking best:", best_index, "others:(", other_indices[0], "and", other_indices[1], ")")
+        self._cpr.print("msa selection taking best:", best_index, "others:(", other_indices[0], "and", other_indices[1], ")")
 
         # fetch the lines to process and info which (and how many) lines are ok
         texts, lines, lines_ok, number_lines_ok = self.obtain_line_info(best_index, other_indices)
@@ -353,7 +362,7 @@ class OCRset:
         # do the msa if there is at least one line ok (confidence vote can be done with one line also :))
         if use_wordwise is True:
             if number_lines_ok != 0:
-                result = MsaHandler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], use_charconfs, use_searchspaces)
+                result = self._msa_handler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], use_charconfs, use_searchspaces)
             else:
                 result = None
 
@@ -377,7 +386,7 @@ class OCRset:
         index1 = indices[0]
         index2 = indices[1]
 
-        print("msa selection taking best:",best_index, "others:(", index1, "and", index2,")")
+        self._cpr.print("msa selection taking best:",best_index, "others:(", index1, "and", index2,")")
 
         try:
 
@@ -389,10 +398,10 @@ class OCRset:
             text_2 = self.get_line_content(line_2) # should be best
             text_3 = self.get_line_content(line_3)
 
-            print("ocr_set:")
-            print("text_A", text_1)
-            print("text_B", text_2)
-            print("text_C", text_3)
+            self._cpr.print("ocr_set:")
+            self._cpr.print("text_A", text_1)
+            self._cpr.print("text_B", text_2)
+            self._cpr.print("text_C", text_3)
 
 
             lines = [text_1, text_2, text_3]
@@ -413,13 +422,14 @@ class OCRset:
             if ok_len == 0:
                 result = None
             else:
-                result = MsaHandler.get_best_of_three(text_1, text_2, text_3, use_charconfs=True, \
+                result = self._msa_handler.get_best_of_three(text_1, text_2, text_3, use_charconfs=True, \
                                                       line_1=line_1,line_2=line_2,line_3=line_3)
 
             self._best_msa_text = result
         except Exception as e:
-            print("Exception in MSA, just taking line prio exception:", e)
+            self._cpr.printex("ocr_set.py Exception in MSA, just taking line prio exception:", e)
             tr = inspect.trace()
+            self._cpr.printex("trace is:",tr)
             if take_n_dist_best_index is True:
                 self._best_msa_text = self.get_line_content(self._set_lines[ldist_best_index])
             else:
@@ -465,14 +475,14 @@ class OCRset:
     def print_shortest_n_distance_line(self):
         line = self.get_shortest_n_distance_text()
         if line is not None and line is not False:
-            print(line)
+            self._cpr.print(line)
 
     def print_msa_best_line(self):
         msa_text = self._best_msa_text
         if msa_text is not None and msa_text is not False:
             print(msa_text)
         else:
-            print(str(msa_text))
+            self._cpr.print(str(msa_text))
 
 
 

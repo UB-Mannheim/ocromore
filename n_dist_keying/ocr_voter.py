@@ -3,11 +3,23 @@ from utils.queues import SearchSpace
 from n_dist_keying.search_space_processor import SearchSpaceProcessor
 import numpy as np
 import inspect
+from utils.conditional_print import ConditionalPrint
+from configuration.configuration_handler import ConfigurationHandler
+
+
 
 class OCRVoter(object):
 
-    @staticmethod
-    def get_same_count(c1, c2, c3):
+    def __init__(self):
+        config_handler = ConfigurationHandler(first_init=False)
+        self.config = config_handler.get_config()
+        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
+                                    self.config.PRINT_WARNING_LEVEL)
+
+
+
+
+    def get_same_count(self, c1, c2, c3):
         same_ctr = 0
         if c1 == c2:
             same_ctr += 1
@@ -17,8 +29,8 @@ class OCRVoter(object):
 
         return same_ctr
 
-    @staticmethod
-    def get_confidence_count(char1, char2, char3, cconf1, cconf2, cconf3, wildcard_char='¦' ):
+
+    def get_confidence_count(self, char1, char2, char3, cconf1, cconf2, cconf3, wildcard_char='¦' ):
 
         def get_other_char(char_first, char_sec, char_thrd, co1, co2,co3):
             if char_first != char_sec:
@@ -68,8 +80,8 @@ class OCRVoter(object):
         return same_ctr, cconf_ctr
 
 
-    @staticmethod
-    def vote_best_of_three_simple(text_1, text_2, text_3, index_best, wildcard_character='¦'):
+
+    def vote_best_of_three_simple(self, text_1, text_2, text_3, index_best, wildcard_character='¦'):
         list_line_1 = list(text_1)
         list_line_2 = list(text_2)
         list_line_3 = list(text_3)
@@ -81,9 +93,9 @@ class OCRVoter(object):
 
             clist = [character_1, character_2, character_3]
             # get the character which occurs the most
-            sc1 = OCRVoter.get_same_count(character_1, character_2, character_3)
-            sc2 = OCRVoter.get_same_count(character_2, character_1, character_3)
-            sc3 = OCRVoter.get_same_count(character_3, character_2, character_1)
+            sc1 = self.get_same_count(character_1, character_2, character_3)
+            sc2 = self.get_same_count(character_2, character_1, character_3)
+            sc3 = self.get_same_count(character_3, character_2, character_1)
             maxindices = np.argmax([sc2, sc1, sc3])
             if maxindices == 0:
                 accumulated_chars += character_2
@@ -96,8 +108,8 @@ class OCRVoter(object):
 
         return accumulated_chars, accumulated_chars_stripped
 
-    @staticmethod
-    def vote_best_of_three_charconfs(line_1, line_2, line_3, index_best, wildcard_character='¦'):
+
+    def vote_best_of_three_charconfs(self, line_1, line_2, line_3, index_best, wildcard_character='¦'):
         try:
 
             def try_obtain_charconf(value, undef_value=0):
@@ -115,11 +127,11 @@ class OCRVoter(object):
             key_confs_mapping = 'UID'
             key_confs = 'x_confs'
             key_char = 'calc_char'
-            print("vote_text1", line_1.textstr)
-            print("vote_text2", line_2.textstr)
-            print("vote_text3", line_3.textstr)
-            if "¦¦lt.H" in line_1.textstr:
-                print("asd")
+            self.cpr.print("vote_text1", line_1.textstr)
+            self.cpr.print("vote_text2", line_2.textstr)
+            self.cpr.print("vote_text3", line_3.textstr)
+            #if "¦¦lt.H" in line_1.textstr:
+            #    self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
@@ -136,9 +148,9 @@ class OCRVoter(object):
 
                 clist = [character_1, character_2, character_3]
                 # get the character which occurs the most
-                sc1, acc_conf_1 = OCRVoter.get_confidence_count(character_1, character_2, character_3, charconf_1, charconf_2, charconf_3)
-                sc2, acc_conf_2 = OCRVoter.get_confidence_count(character_2, character_1, character_3, charconf_2, charconf_1, charconf_3)
-                sc3, acc_conf_3 = OCRVoter.get_confidence_count(character_3, character_2, character_1, charconf_3, charconf_2, charconf_1)
+                sc1, acc_conf_1 = self.get_confidence_count(character_1, character_2, character_3, charconf_1, charconf_2, charconf_3)
+                sc2, acc_conf_2 = self.get_confidence_count(character_2, character_1, character_3, charconf_2, charconf_1, charconf_3)
+                sc3, acc_conf_3 = self.get_confidence_count(character_3, character_2, character_1, charconf_3, charconf_2, charconf_1)
                 maxindices = np.argmax([acc_conf_2, acc_conf_1, acc_conf_3]) # this takes in priorisation in case the chars are same
                 if maxindices == 0:
                     accumulated_chars += character_2
@@ -152,15 +164,13 @@ class OCRVoter(object):
             return accumulated_chars, accumulated_chars_stripped
         except Exception as ex:
             tr = inspect.trace()
-            print("trace", tr)
 
-            print("Exception during confidence vote", ex)
+            self.cpr.printex("ocr_voter.py Exception during confidence vote:", ex)
+            self.cpr.printex("trace is:", tr)
 
-    @staticmethod
-    def vote_best_of_three_charconfs_searchspaces(line_1, line_2, line_3, index_best, wildcard_character='¦'):
+
+    def vote_best_of_three_charconfs_searchspaces(self, line_1, line_2, line_3, index_best, wildcard_character='¦'):
         try:
-            PRINT_TO_CONSOLE = True
-            cp = ConditionalPrint(PRINT_TO_CONSOLE)
 
             def try_obtain_charconf(value, undef_value=0):
                 if value is None or value is False or value is True:
@@ -176,11 +186,11 @@ class OCRVoter(object):
             key_confs_mapping = 'UID'
             key_confs = 'x_confs'
             key_char = 'calc_char'
-            cp.print("vote_text1", line_1.textstr)
-            cp.print("vote_text2", line_2.textstr)
-            cp.print("vote_text3", line_3.textstr)
-            if "Freiv." in line_1.textstr:
-                 cp.print("asd")
+            self.cpr.print("vote_text1", line_1.textstr)
+            self.cpr.print("vote_text2", line_2.textstr)
+            self.cpr.print("vote_text3", line_3.textstr)
+            # if "Freiv." in line_1.textstr:
+            #     self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
@@ -194,7 +204,7 @@ class OCRVoter(object):
             SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR ='¦'
             SEARCH_SPACE_PROCESSING_USE_SIMILAR_CHARS = True
             SEARCH_RANGE = 1
-            PRINT_MATRICES = True
+            PRINT_MATRICES = self.config.PRINT_SEARCH_SPACE_MATRICES
 
             search_space_processor = SearchSpaceProcessor(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_INNER, \
                                                           wildcard_character, SEARCH_SPACE_PROCESSING_SUBSTITUTION_CHAR)
@@ -237,15 +247,15 @@ class OCRVoter(object):
                 charconf_2 = ssp_confs.get_value_around_middle(1, character_offset)
                 charconf_3 = ssp_confs.get_value_around_middle(2, character_offset)
                 if character_1 is None or character_2 is None or character_3 is None:
-                    print("test")
+                    self.cpr.print("test")
                     continue
                 clist = [character_1, character_2, character_3]
                 # get the character which occurs the most
-                sc1, acc_conf_1 = OCRVoter.get_confidence_count(character_1, character_2, character_3, charconf_1,
+                sc1, acc_conf_1 = self.get_confidence_count(character_1, character_2, character_3, charconf_1,
                                                                 charconf_2, charconf_3)
-                sc2, acc_conf_2 = OCRVoter.get_confidence_count(character_2, character_1, character_3, charconf_2,
+                sc2, acc_conf_2 = self.get_confidence_count(character_2, character_1, character_3, charconf_2,
                                                                 charconf_1, charconf_3)
-                sc3, acc_conf_3 = OCRVoter.get_confidence_count(character_3, character_2, character_1, charconf_3,
+                sc3, acc_conf_3 = self.get_confidence_count(character_3, character_2, character_1, charconf_3,
                                                                 charconf_2, charconf_1)
                 maxindices = np.argmax(
                     [acc_conf_2, acc_conf_1, acc_conf_3])  # this takes in priorisation in case the chars are same
@@ -262,6 +272,6 @@ class OCRVoter(object):
             return accumulated_chars, accumulated_chars_stripped
         except Exception as ex:
             tr = inspect.trace()
-            print("trace", tr)
 
-            print("Exception during confidence vote", ex)
+            self.cpr.printex("ocr_voter.py Exception during confidence vote", ex)
+            self.cpr.printex("trace", tr)

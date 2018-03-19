@@ -2,6 +2,8 @@
 import sys
 from utils.random import Random
 from enum import Enum, unique
+from utils.conditional_print import ConditionalPrint
+from configuration.configuration_handler import ConfigurationHandler
 
 @unique
 class ColumnFeatures(Enum):  # todo this can be normal class
@@ -38,6 +40,11 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append(['.', ','])
         self.similar_chars.append(['i', 'l']) # 1 l i also possible
         # self.similar_chars.append(['e', 'é'])
+        config_handler = ConfigurationHandler(first_init=False)
+        self._config = config_handler.get_config()
+        self._cpr = ConditionalPrint(self._config.PRINT_SEARCH_SPACE_PROCESSOR, self._config.PRINT_EXCEPTION_LEVEL,
+                                     self._config.PRINT_WARNING_LEVEL)
+
 
     def get_middle_index(self):
         return self._middle_index
@@ -77,7 +84,7 @@ class SearchSpaceProcessor(object):
         if reference_char is not None and count_up_similar_references is True:
             simchars = self.get_simchars_for_char(reference_char)
             if len(simchars) != 1:
-                print("evaluate")
+                self._cpr.print("evaluate")
 
         # gather data
         for y_index in range(0, self.get_y_size()):
@@ -182,7 +189,7 @@ class SearchSpaceProcessor(object):
                     or ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
 
             #if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
-            #   print("beep!")
+            #   self._cpr.print("beep!")
 
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)
