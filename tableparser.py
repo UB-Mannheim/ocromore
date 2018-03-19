@@ -1,6 +1,6 @@
 from utils.df_objectifier import DFObjectifier
 from n_dist_keying.database_handler import DatabaseHandler
-from utils.pycharm_handler import PycharmHandler
+from ocr_validation.visualization_handler import VisualizationHandler
 from ocr_validation.isri_handler import IsriHandler
 from os import listdir
 from os.path import isfile, join
@@ -181,13 +181,17 @@ class TableParser(object):
 
         return generated_acc_report, generated_wacc_report
 
-    def display_stuff(self):
-        # not used atm
-        if self._config.DISPLAY_DIFFERENCES:
-            pyc_handler = PycharmHandler()
-            pyc_handler.show_file_comparison(self._config.FILEPATH_GROUNDTRUTH, self._config.FILEPATH_NDIST_RESULT)
-            pyc_handler.show_file_comparison(self._config.FILEPATH_GROUNDTRUTH, self._config.FILEPATH_MSA_BEST_RESULT)
+    def display_stuff(self, path_groundtruth, path_file, firstcall):
 
-            #testing strange wordaccuracy report production
-            #pyc_handler.show_file_comparison(FILEPATH_NDIST_RESULT, FILEPATH_MSA_BEST_RESULT)
-            #pyc_handler.show_file_comparison(FILEPATH_WACCURACY_REPORT_NDIST, FILEPATH_WACCURACY_REPORT_MSA)
+        pyc_handler = VisualizationHandler()
+        if firstcall is True:
+            process =  pyc_handler.show_file_comparison_meld(path_groundtruth, path_file)
+        else:
+            process =  pyc_handler.show_file_comparison_meld(path_groundtruth, path_file, just_add_tab=True)
+
+
+        return process
+
+        #testing strange wordaccuracy report production
+        #pyc_handler.show_file_comparison(FILEPATH_NDIST_RESULT, FILEPATH_MSA_BEST_RESULT)
+        #pyc_handler.show_file_comparison(FILEPATH_WACCURACY_REPORT_NDIST, FILEPATH_WACCURACY_REPORT_MSA)
