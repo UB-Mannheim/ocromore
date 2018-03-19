@@ -9,7 +9,7 @@ from n_dist_keying.hocr_bbox_comparator import HocrBBoxComparator
 from n_dist_keying.hocr_line_height import LineHeightCalculator
 from n_dist_keying.textfile_generator import TextFileGenerator
 from ocr_validation.ocr_validator import OCRvalidator
-from utils.pycharm_handler import PycharmHandler
+from ocr_validation.visualization_handler import VisualizationHandler
 
 
 USE_REFSPACING = True # instead of unspacing algorithm use the respacing algorithm
@@ -135,7 +135,7 @@ ocr_validator.compare_ocrolib_edist(IGNORE_LINEFEED, IGNORE_WHITESPACE)
 
 
 if DISPLAY_DIFFERENCES:
-    pyc_handler = PycharmHandler()
+    pyc_handler = VisualizationHandler()
     # the lha visual comparison
     #pyc_handler.show_file_comparison(filepath_ocropus_lha_txt, filepath_ocropus_txt)
     #pyc_handler.show_file_comparison(filepath_abbyy_lha_txt, filepath_abbyy_txt)

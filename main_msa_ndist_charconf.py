@@ -15,13 +15,9 @@ config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
 config = config_handler.get_config()
 dbdir = 'sqlite:///'+str(Path(config.DBDIR).absolute())
 
-TABLENAME_POS   = 1 # in example '0585_...hocr'
-OCR_PROFILE_POS = 4 # in example: 'default'
-OCR_POS         = 2 # in example: 'tess'
-DBPATH_POS      = 3 # in example: '1969'
 
 dh = DatabaseHandler(dbdir=str(Path(config.DBDIR).absolute()))
-dh.set_dirpos(tablename_pos=TABLENAME_POS,ocr_profile_pos=OCR_PROFILE_POS,ocr_pos=OCR_POS,dbname_pos=DBPATH_POS)
+dh.set_dirpos(tablename_pos=config.TABLENAME_POS,ocr_profile_pos=config.OCR_PROFILE_POS,ocr_pos=config.OCR_POS,dbname_pos=config.DBPATH_POS)
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)
 filestructs = dh.get_files()

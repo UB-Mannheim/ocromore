@@ -31,6 +31,7 @@ class DatabaseHandler(object):
     def __init__(self,dbdir=None, dbnames=None, tablename_pos =1, ocr_profile_pos=2, ocr_pos=3, dbname_pos=4, dburlscheme="sqlite:///"):
         self.files   = None
         self.gtfiles = None
+        self.outputfiles = None
         self.dbdir   = dbdir
         self.dburlscheme = dburlscheme
         self.dbfilter = None
@@ -105,9 +106,9 @@ class DatabaseHandler(object):
 
     def fetch_gtfiles(self,gtfileglob, gtflag=True):
         self.gtfiles = {}
-        filetyp = "txt"
-        if gtflag: filetyp = "gt."+filetyp
-        files = glob.glob(gtfileglob+filetyp, recursive=True)
+        filetype = "txt"
+        if gtflag: filetyp = "gt."+filetype
+        files = glob.glob(gtfileglob+filetype, recursive=True)
         lastdbname = ""
         for file in files:
             fstruct = FileStruct()
@@ -125,6 +126,33 @@ class DatabaseHandler(object):
             else: fstruct.dbpath = self.dbdir + '/' + lastdbname + '.db'
             self.gtfiles[fstruct.dbname][fstruct.name.split(".")[0]] = fstruct
         return
+
+
+    def fetch_outputfiles(self, outputfileglob, prefix):
+        self.outputfiles = {}
+        filetype = "txt"
+        files = glob.glob(outputfileglob+"/"+prefix+"/**/*."+filetype)
+        lastdbname = ""
+        for file in files:
+            fstruct = FileStruct()
+            fpath = Path(file)
+            fstruct.path = file
+            fstruct.name = fpath.name
+            fstruct.dbname = file.split("/")[-2]
+            if fstruct.dbname != lastdbname:
+                dbpath = ""
+                if hasattr(self, 'dbpath'):
+                    dbpath = self.dbpath
+                fstruct.dbpath = dbpath + '/' + fstruct.dbname + '.db'
+                self.outputfiles[fstruct.dbname] = {}
+                lastdbname = fstruct.dbname
+            else:
+                fstruct.dbpath = self.dbdir + '/' + lastdbname + '.db'
+            self.outputfiles[fstruct.dbname][fstruct.name.split(".")[0]] = fstruct
+        return
+
+    def get_outputfiles(self):
+        return self.outputfiles
 
     def parse_to_db(self, delete_and_create_dir=True):
 
