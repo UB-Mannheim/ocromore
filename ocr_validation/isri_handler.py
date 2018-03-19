@@ -8,14 +8,20 @@ Other systems will raise exception
 
 """
 from subprocess import call
+import os
+from utils.conditional_print import ConditionalPrint
+from configuration.configuration_handler import ConfigurationHandler
 
 
 class IsriHandler(object):
 
-    def __init__(self, os='Linux'):
-        self.os = os
-
-        if self.os != 'Linux':
+    def __init__(self):
+        self.os = os.name.lower()
+        config_handler = ConfigurationHandler(first_init=False)
+        self.config = config_handler.get_config()
+        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
+                                    self.config.PRINT_WARNING_LEVEL)
+        if self.os != 'linux' or self.os != 'posix':
             raise OSError("Untested operating system adapt code and continue at own risk")
 
 
@@ -23,7 +29,7 @@ class IsriHandler(object):
             try:
                 call(["accuracy", path_correctfile, path_generatedfile, path_accuracy_report])
             except Exception as ex:
-                print("Exception calling pycharm", ex)
+                self.cpr.printex("Exception calling pycharm", ex)
 
 
     class SynctextConfig(object):
@@ -66,7 +72,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def accsum(self, filepaths_accreports, path_generatedfile=None):
 
@@ -82,7 +88,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
 
     def groupacc(self, path_groupfile, path_accuracy_report, path_groupacc_report = None):
@@ -101,7 +107,7 @@ class IsriHandler(object):
                 call(calls)
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def accdist(self, filepaths_accreports, path_generated_xyfile=None):
 
@@ -117,7 +123,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     class NGramConfig(object):
 
@@ -151,7 +157,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     class VoteConfig(object):
 
@@ -192,7 +198,7 @@ class IsriHandler(object):
             call(calls)
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
 
 
@@ -214,7 +220,7 @@ class IsriHandler(object):
             call(calls)
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
 
     def wordaccsum(self, filepaths_wordacc_reports, path_accsumreport=None):
@@ -231,7 +237,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def nonstopacc(self, path_stopwordfile, path_wordacc_report,  path_output_xyfile=None):
 
@@ -250,7 +256,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
 
 
@@ -268,7 +274,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def wordaccdist(self, filepaths_wordacc_reports,  path_output_xyfile=None):
 
@@ -284,7 +290,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def wordfreq(self, filepaths_inputtext,  path_resultfile=None):
 
@@ -300,7 +306,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     #todo add the zoning programs some day: point 4 in doc
     def editop(self, path_correctfile, path_comparison_file, path_editop_report = None):
@@ -318,7 +324,7 @@ class IsriHandler(object):
             call(calls)
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def editopsum(self, filepaths_editopreports,  path_summed_report=None):
 
@@ -334,7 +340,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def editopcost(self, path_editop_report, path_editop_report2=None, path_output_xyfile=None):
 
@@ -356,7 +362,7 @@ class IsriHandler(object):
                 filehandle.close()
 
         except Exception as ex:
-            print("Exception calling pycharm", ex)
+            self.cpr.printex("Exception calling pycharm", ex)
 
     def create_file_if_doesnt_exist(self, filepath, overwrite = False):
 
