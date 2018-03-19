@@ -7,6 +7,7 @@
 from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
 from utils.database_handler import DatabaseHandler
+from utils.df_objectifier import DFObjectifier
 
 CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
 
@@ -30,9 +31,11 @@ dh.dbfilter = "1957"
 dh.set_dirpos(tablename_pos=TABLENAME_POS,ocr_profile_pos=OCR_PROFILE_POS,ocr_pos=OCR_POS,dbname_pos=DBPATH_POS)
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 
+#dh.update_db()
+#dh.work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
 if config.HOCR2SQL is True:
-    report_conv = dh.parse_to_db(delete_and_create_dir=True)
+    report_conv = dh.parse_to_db(delete_and_create_dir=False)
 
 
 dh.update_db()
@@ -46,7 +49,7 @@ if config.PREPROCESSING:
 
 
 if config.WORKWITHOBJ:
-    dh.work_with_object()
+    dh.work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
 # Plot DF (not working atm)
 if config.PLOT:

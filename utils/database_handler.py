@@ -151,8 +151,7 @@ class DatabaseHandler(object):
         print("Preprocess the data")
         exceptions = []
         if self.dbfilter:
-            self.db = self.dbfilter
-            if isinstance(self.db, str): self.db = [self.db]
+            self.update_db()
         for db in self.db:
             tablenames = self.get_tablenames_from_db(db)
             db = self.dburlscheme+db
@@ -306,12 +305,12 @@ class DatabaseHandler(object):
                 print("\n")
 
     @staticmethod
-    def work_with_object(dbs_and_files):
+    def work_with_object(con, tablename):
         # get first db and first table/filename for the operation
-        my_db = list(dbs_and_files.keys())[0]
-        filename, somestuff = dbs_and_files[my_db][0]
-        table_name = get_tablename_from_db(filename)
-        dfXO = DFObjectifier(my_db, table_name)
+        #my_db = list(dbs_and_files.keys())[0]
+        #filename, somestuff = dbs_and_files[my_db][0]
+        #table_name = get_tablename_from_db(filename)
+        dfXO = DFObjectifier(con, tablename)
 
         # for file in files:
         #    fpath = Path(file)
@@ -330,7 +329,7 @@ class DatabaseHandler(object):
 
         # Example for selecting all line with calc_line == 10
         # dfSelO = dfXO.get_obj(query="calc_line == 10")
-        max_line = dfXO.df["calc_line_idx"].max()
+        #max_line = dfXO.df["calc_line_idx"].max()
         # for idx in np.arange(0,max_line):
         # dfXO.get_obj(query="calc_line_idx == 10")
         # print(idx)
