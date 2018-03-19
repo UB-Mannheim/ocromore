@@ -13,8 +13,6 @@ class TableParser(object):
 
 
     def __init__(self, config):
-
-        print("asd")
         self._config = config
         # give the last element in split path
         self._base_db_dir = os.path.basename(os.path.normpath(config.DBDIR))
@@ -69,7 +67,7 @@ class TableParser(object):
         database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS)
         ocr_comparison = database_handler.create_ocr_comparison()
         ocr_comparison.sort_set()
-        print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
+        # print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
         ocr_comparison.print_sets(False)
 
         if self._config.SAVE_INPUT_DATASETS_TO_FILE:
@@ -87,9 +85,6 @@ class TableParser(object):
             additional_created_files.append(output_path_tess)
             additional_created_files.append(output_path_ocro)
 
-
-
-            print("asd")
             # ocr_comparison.save_dataset_to_file()
 
         if self._config.DO_N_DIST_KEYING:

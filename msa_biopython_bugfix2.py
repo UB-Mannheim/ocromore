@@ -25,7 +25,8 @@ text_1_string = TypeCasts.convert_unicodelist_to_string(text_1_uclist)
 print("inp1", text_A)
 print("inp2", text_B)
 
-text_Ab, text_Ba = MsaHandler.pairwise_unicode(text_A,text_B)
+msa_handler = MsaHandler()
+text_Ab, text_Ba = msa_handler.pairwise_unicode(text_A,text_B)
 
 print("res1",text_Ab)
 print("res2",text_Ba)

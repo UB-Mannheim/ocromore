@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1227   Words
-      68   Misrecognized
-   94.46%  Accuracy
+      64   Misrecognized
+   94.78%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -14,10 +14,10 @@ Non-stopwords
    Count   Missed   %Right   Length
       61        3    95.08        1
      137       13    90.51        2
-     300        9    97.00        3
+     300        7    97.67        3
      116        6    94.83        4
       97        6    93.81        5
-      96        5    94.79        6
+      96        4    95.83        6
       80        2    97.50        7
       61        1    98.36        8
       53        3    94.34        9
@@ -30,16 +30,16 @@ Non-stopwords
        5        0   100.00       16
        3        0   100.00       17
        3        0   100.00       18
-      11        1    90.91       19
+      11        0   100.00       19
        4        1    75.00       20
        7        0   100.00       21
        1        0   100.00       25
        1        0   100.00       32
-    1207       67    94.45    Total
+    1207       63    94.78    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     444       33    92.57        1
+     444       31    93.02        1
       86        1    98.84        2
       31        0   100.00        3
       14        0   100.00        4
@@ -49,18 +49,18 @@ Distinct Non-stopwords
        1        0   100.00        8
        4        0   100.00       10
       11        0   100.00      >10
-     616       34    94.48    Total
+     616       32    94.81    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1227       68    94.46        1
-    1226      109    91.11        2
-    1225      147    88.00        3
-    1224      182    85.13        4
-    1223      217    82.26        5
-    1222      251    79.46        6
-    1221      283    76.82        7
-    1220      313    74.34        8
+    1227       64    94.78        1
+    1226      104    91.52        2
+    1225      141    88.49        3
+    1224      175    85.70        4
+    1223      209    82.91        5
+    1222      242    80.20        6
+    1221      273    77.64        7
+    1220      302    75.25        8
 
 Stopwords
    Count   Missed   %Right   
@@ -282,11 +282,11 @@ Non-stopwords
        1        0   100.00   d.aktien
        1        0   100.00   dane
        1        0   100.00   darunter
-       7        1    85.71   das
+       7        0   100.00   das
        1        0   100.00   davon
        2        0   100.00   dem
       10        0   100.00   den
-      27        2    92.59   der
+      27        1    96.30   der
        5        0   100.00   deren
        3        1    66.67   des
        1        0   100.00   det
@@ -372,7 +372,7 @@ Non-stopwords
        1        0   100.00   gerhardstr
        1        0   100.00   geschäftsjahr
        1        1     0.00   geschäftslage
-       1        1     0.00   gesell
+       1        0   100.00   gesell
        8        0   100.00   gesellschaft
        1        0   100.00   gesellschaftskasse
        1        0   100.00   geviertfelder
@@ -529,7 +529,7 @@ Non-stopwords
       18        0   100.00   peine
        3        0   100.00   peiner
        1        0   100.00   preussag
-       1        1     0.00   produktionsprogramm
+       1        0   100.00   produktionsprogramm
        1        0   100.00   produzierten
        2        1    50.00   pötzen
        3        0   100.00   qm

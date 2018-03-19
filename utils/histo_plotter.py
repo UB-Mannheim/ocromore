@@ -7,8 +7,8 @@ class HistogramPlotter(object):
         Basic class for plotting histogram data with numpy
     """
 
-    def __init__(self):
-        self._example = "ASD"
+    # def __init__(self):
+        # self._example = "ASD"
 
     def plot_histogram(self, hist_input, bins_input):
         fig = plt.figure()

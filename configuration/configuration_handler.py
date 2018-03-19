@@ -1,6 +1,18 @@
 import importlib
 import configargparse
 
+#singleton helper class for storing options
+class SingleTone(object):
+    __instance = None
+    def __new__(cls, val):
+        if SingleTone.__instance is None:
+            SingleTone.__instance = object.__new__(cls)
+        SingleTone.__instance.val = val
+        return SingleTone.__instance
+
+    @staticmethod
+    def get_value():
+        return SingleTone.__instance.val
 
 class ConfigurationHandler(object):
 
@@ -8,18 +20,21 @@ class ConfigurationHandler(object):
 
         self._initialized = False
         self._options = None
+        self._parser = None
 
         if first_init is True:
             self._initialized = True
             parser = configargparse.get_argument_parser(default_config_files=coded_configuration_paths)
             options = self.add_all_args(parser, fill_unkown_args)
+            self._options = options
+            singleton_options = SingleTone(options)
+            self._parser = parser
 
         else:
-            parser = configargparse.get_argument_parser()
-            options, junk = parser.parse_known_args()
+            #parser = configargparse.get_argument_parser()
+            #options, junk = parser.parse_known_args()
+            self._options = SingleTone.get_value()
 
-        self._parser = parser
-        self._options = options
 
     def add_all_args(self, parser, fill_unkown_args):
 
@@ -58,7 +73,6 @@ class ConfigurationHandler(object):
                     elif value.isdigit():
                         parser.add(key, type=int)
                     elif key in list_keys:
-                        print("list")
                         parser.add(key, nargs='+')
                         list_keys.remove(key)
                         list_appended_keys.append(key) # note key this list a
