@@ -64,6 +64,9 @@ class DatabaseHandler(object):
             db = []
             for dbpath in glob.glob(dbdir + "/*.db", recursive=True):
                 dbname = str(Path(dbpath).name)
+                if self.dbfilter:
+                    if not self.dbfilter in dbname:
+                        continue
                 if dbnames is None:
                     db.append(dbpath)
                 elif dbname in dbnames:
@@ -176,14 +179,13 @@ class DatabaseHandler(object):
         print("Preprocess the data")
         exceptions = []
         if self.dbfilter:
-            self.db = self.dbfilter
-            if isinstance(self.db, str): self.db = list(self.db)
+            self.update_db()
         for db in self.db:
             tablenames = self.get_tablenames_from_db(db)
             db = self.dburlscheme+db
             if self.tablefilter is not None:
-                tablenames = self.tablefilter
-                if isinstance(tablenames,str): tablenames = list(tablenames)
+                if isinstance(self.tablefilter, str): self.tablefilter = [self.tablefilter]
+                tablenames = set(tablenames)&set(self.tablefilter)
             print("Preprocessing database:", db)
             for tablename in tablenames:
                 try:
@@ -318,12 +320,25 @@ class DatabaseHandler(object):
         return table_name
 
     @staticmethod
-    def work_with_object(dbs_and_files):
-        # get first db and first table/filename for the operation
-        my_db = list(dbs_and_files.keys())[0]
-        filename, somestuff = dbs_and_files[my_db][0]
-        table_name = get_tablename_from_db(filename)
+    def print_object(my_db,table_name):
         dfXO = DFObjectifier(my_db, table_name)
+        dfSelO = dfXO.get_line_obj()
+        for idx, lidx in enumerate(dfSelO):
+            print(idx)
+            for items in dfSelO[lidx]:
+                print(items.name[0])
+                print(items.textstr)
+                for word in items.word["text"]:
+                    print(items.word["text"][word] + "\t", end="")
+                print("\n")
+
+    @staticmethod
+    def work_with_object(con, tablename):
+        # get first db and first table/filename for the operation
+        #my_db = list(dbs_and_files.keys())[0]
+        #filename, somestuff = dbs_and_files[my_db][0]
+        #table_name = get_tablename_from_db(filename)
+        dfXO = DFObjectifier(con, tablename)
 
         # for file in files:
         #    fpath = Path(file)
@@ -342,7 +357,7 @@ class DatabaseHandler(object):
 
         # Example for selecting all line with calc_line == 10
         # dfSelO = dfXO.get_obj(query="calc_line == 10")
-        max_line = dfXO.df["calc_line_idx"].max()
+        #max_line = dfXO.df["calc_line_idx"].max()
         # for idx in np.arange(0,max_line):
         # dfXO.get_obj(query="calc_line_idx == 10")
         # print(idx)

@@ -127,6 +127,8 @@ class HocrConverter(object):
         for element in contents:
             res = str(element).find("span")
             if res >= 1:
+                if lidx == 95:
+                    stop = "SIOT"
                 line = Line(document, element)
                 idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
                 lidx+=1

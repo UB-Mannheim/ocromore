@@ -30,6 +30,16 @@ tableparser = TableParser(config)
 
 table_ctr = 0
 
+if config.SUMMARIZE_ISRI_REPORTS is True and False:
+
+    for db in filestructs:
+        files = filestructs[db]
+        file = files[0]
+        # assume that each db has different root folder, just take first file for path reference
+        dbpath = 'sqlite:////'+file.dbpath
+        db_root_path = tableparser.get_basic_output_directory(dbpath)
+        tableparser.summarize_accuracy_reports(db_root_path)
+
 # possibility to delete dir on restart
 
 tableparser.delete_output_dir()
@@ -45,7 +55,7 @@ for db in filestructs:
     files_gt = filestructs_gt[db]
     for file in files:
         count += 1
-        if count == 3: continue
+        #if count == 3: continue
         table = file.tablename
         dbpath = 'sqlite:////' +file.dbpath
         print("Parsing table: ", table, "in database: ", dbpath)
@@ -68,8 +78,6 @@ for db in filestructs:
 
         #if table_ctr == 2: #j4t parse 4 tables then done
         #    break
-
-
 
 if config.SUMMARIZE_ISRI_REPORTS is True:
     tableparser.create_isri_reports(filestructs, "abbyy")
