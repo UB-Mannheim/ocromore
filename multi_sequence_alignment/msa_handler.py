@@ -823,7 +823,11 @@ class MsaHandler(object):
             word_obtained = line_to_check.word["text"].get(word_index, return_val_empty)
             return word_obtained
 
-        def update_word(line_in, word_index, new_value):
+        def update_word(line_in, word_index, new_value, remove_wildcards=False):
+
+            if remove_wildcards is True:
+                new_value = new_value.replace(wildcard_character, '')  # remove wildcards
+
             line_in.update_textspace(new_value, wildcard_character, widx=word_index)
 
 
@@ -897,6 +901,10 @@ class MsaHandler(object):
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
+
+
+
+
 
             return best_stripped_non_multi_whitespace
         except Exception as ex:

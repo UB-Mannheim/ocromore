@@ -247,7 +247,7 @@ class OCRVoter(object):
                 charconf_2 = ssp_confs.get_value_around_middle(1, character_offset)
                 charconf_3 = ssp_confs.get_value_around_middle(2, character_offset)
                 if character_1 is None or character_2 is None or character_3 is None:
-                    self.cpr.print("test")
+                    # self.cpr.print("test")
                     continue
                 clist = [character_1, character_2, character_3]
                 # get the character which occurs the most
