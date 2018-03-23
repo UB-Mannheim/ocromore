@@ -27,6 +27,9 @@ class OCRcomparison:
     def add_line_information(self, line_height_information):
         self.line_height_information.append(line_height_information)
 
+    def set_dataframe_wrapper(self, dataframe_wrapper):
+        self._dataframe_wrapper = dataframe_wrapper
+
     def sort_set(self):
         """
         Sort the ocr_sets by y_mean values
@@ -88,13 +91,20 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             current_set.calculate_msa_best_charconf(True)
 
-    def do_msa_best_new(self, use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, use_searchspaces):
+    def do_msa_best_new(self, use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, use_searchspaces, do_postcorrection):
 
         if use_ndist_pivot is True:
             self.do_n_distance_keying()
 
         for current_set in self.ocr_sets:
             current_set.calculate_msa_best_all(use_ndist_pivot, use_longest_pivot, use_charconfs, use_wordwise, use_searchspaces)
+
+
+        if do_postcorrection is True:
+            self.do_postcorrection(True)
+
+
+        print("done")
 
     def print_n_distance_keying_results(self):
         self.cpr.print("N_DISTANCE_KEYING_RESULTS ")

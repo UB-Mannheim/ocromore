@@ -103,7 +103,9 @@ class TableParser(object):
             if self._config.MSA_BEST_USE_WORDWISE_MSA:
                 # this is the new msa best invocation
                 ocr_comparison.do_msa_best_new(self._config.MSA_BEST_USE_N_DIST_PIVOT, self._config.MSA_BEST_USE_LONGEST_PIVOT, self._config.MSA_BEST_USE_CHARCONFS, \
-                                               self._config.MSA_BEST_USE_WORDWISE_MSA, self._config.MSA_BEST_USE_SEARCHSPACE)
+                                               self._config.MSA_BEST_USE_WORDWISE_MSA, self._config.MSA_BEST_USE_SEARCHSPACE, self._config.KEYING_RESULT_POSTCORRECTION)
+
+
             else:
                 #todo refactor this old stuff
                 if self._config.MSA_BEST_USE_CHARCONFS is False:

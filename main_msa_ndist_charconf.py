@@ -22,12 +22,13 @@ dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)
 filestructs = dh.get_files()
 filestructs_gt = dh.get_groundtruths()
+tableparser = TableParser(config)
+
 
 #dbs_and_files = ftdh.fetch_dbs_and_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES, dbdir)
 #groundtruths = ftdh.fetch_groundtruths("./Testfiles/groundtruth/long/**/*.", ["gt.txt"])
 
 table_ctr = 0
-tableparser = TableParser(config)
 
 # possibility to delete dir on restart
 
@@ -37,8 +38,8 @@ tableparser.create_output_dir()
 count = 1
 for db in filestructs:
     print("Parsing database:", db)
-    if db != "1957":
-        continue
+
+    # =if db != "1976": continue
 
     files = filestructs[db]
     files_gt = filestructs_gt[db]
