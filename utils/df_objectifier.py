@@ -447,8 +447,8 @@ class DFObjectifier(object):
                 for idx in reversed(result):
                     linedict[line]["calc"]["word_match"][idx] = widx
                     curline["word_x0"][idx] = maxx1
-                    curline["word_x1"][idx] = maxx1
                     if curline["word_x1"][idx] > lmaxx1: lmaxx1 = curline["word_x1"][idx]
+                    curline["word_x1"][idx] = maxx1        
                 if lmaxx1-2*diff > minx1:
                     resultmax1 = np.where(np.array(list(curline["word_x1"])) < lmaxx1+diff)[0]
                     for idx in reversed(resultmax1):
