@@ -175,7 +175,7 @@ class DatabaseHandler(object):
 
         return exceptions
 
-    def preprocess_dbdata(self):
+    def preprocess_dbdata(self, PRINTLINES=True):
         print("Preprocess the data")
         exceptions = []
         if self.dbfilter:
@@ -198,6 +198,25 @@ class DatabaseHandler(object):
 
                         # Match words or segments of words into "word_match"
                         dataframe_wrapper.match_words()
+
+                        if PRINTLINES:
+                            dfSelO = dataframe_wrapper.get_line_obj()
+                            for idx, lidx in enumerate(dfSelO):
+                                print(idx)
+                                itemlen = None
+                                for items in dfSelO[lidx]:
+                                    if itemlen is None:
+                                        itemlen = len(items.textstr)
+                                    if not round(len(items.textstr)*0.5) < itemlen < round(len(items.textstr)*1.5):
+                                        for items in dfSelO[lidx]:
+                                            print(items.name[0])
+                                            print("TEXT:")
+                                            print(items.textstr)
+                                            print("WORDMATCHES:")
+                                            for word in items.word["text"]:
+                                                print(items.word["text"][word] + "\t", end="")
+                                            print("\n")
+                                        break
 
                         # Write the calulated values into the db
                         dataframe_wrapper.write2sql()
@@ -366,7 +385,7 @@ class DatabaseHandler(object):
         object.update_textspace(">>  >>", widx=3.0)
         object.update_textspace(">>  >>", widx=2.0)
         object.restore()
-        dfSelO = dfXO.get_line_obj()
+        dfSelO, dfResO = dfXO.get_line_obj(res=True)
         for idx, lidx in enumerate(dfSelO):
             print(idx)
             for items in dfSelO[lidx]:
