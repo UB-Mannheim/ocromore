@@ -175,7 +175,7 @@ class DatabaseHandler(object):
 
         return exceptions
 
-    def preprocess_dbdata(self, PRINTLINES=True):
+    def preprocess_dbdata(self, PRINTLINES=False):
         print("Preprocess the data")
         exceptions = []
         if self.dbfilter:
@@ -188,6 +188,8 @@ class DatabaseHandler(object):
                 tablenames = set(tablenames)&set(self.tablefilter)
             print("Preprocessing database:", db)
             for tablename in tablenames:
+                print("Preprocessing database:", db)
+                print("Preprocess table:", tablename)
                 try:
                     dataframe_wrapper = DFObjectifier(db, tablename)
 

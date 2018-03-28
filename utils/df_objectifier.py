@@ -264,7 +264,7 @@ class DFObjectifier(object):
         print("Clean data ✓")
         return
 
-    def match_line(self,force=False,pad=3,padmid=0.45,lhm=2):
+    def match_line(self,force=False,pad=4,padmid=0.55,lhm=2):
         #TODO: rework other preprocesses...
         """
         Matches the lines over all datasets
@@ -288,6 +288,9 @@ class DFObjectifier(object):
                 print(f"Match line: {pparam.lineIdx}")
                 pparam.y0 = min(linedict["line_y0"])
                 pparam.y1 = linedict["line_y1"][linedict["line_y0"].index(pparam.y0)]
+                if pparam.y0 > pparam.y1:
+                    linedict["line_y1"][linedict["line_y0"].index(pparam.y0)] = pparam.y0+1
+                    pparam.y1 = pparam.y0+1
                 if -1 not in linedict["calc_line_idx"]:
                     print("Match lines ✓")
                     break

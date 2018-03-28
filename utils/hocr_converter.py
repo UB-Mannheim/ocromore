@@ -287,7 +287,7 @@ class HocrConverter(object):
         # try to create a table
         try:
             df.to_sql(tablename, con)
-            print(f'SQLite directory:\t\t{con.url.database}')
+            print(f'DB directory:\t{con.url.database}')
             print(f'Create table:\t{tablename}\t✓')
 
         except:

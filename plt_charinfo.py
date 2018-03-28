@@ -27,8 +27,8 @@ DBPATH_POS      = 4 #necessary
 
 dh = DatabaseHandler(dbdir=dbdir)
 #dh.tablefilter = "0650_1957_hoppa-405844417-0050_0805"
-#dh.tablefilter = "0237_1957_hoppa-405844417-0050_0290"
-#dh.dbfilter = "1957"
+#dh.tablefilter = "0359_1976_230-6_B_069_0642"
+#dh.dbfilter = "1976"
 dh.set_dirpos(tablename_pos=TABLENAME_POS,ocr_profile_pos=OCR_PROFILE_POS,ocr_pos=OCR_POS,dbname_pos=DBPATH_POS)
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 
@@ -44,9 +44,7 @@ dh.update_db()
 if config.PREPROCESSING:
     report_prep = dh.preprocess_dbdata()
 
-
 #dh.print_object(dh.dburlscheme+dh.db[0],ot dh.tablefilter)
-
 
 if not config.WORKWITHOBJ:
     dh.work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
