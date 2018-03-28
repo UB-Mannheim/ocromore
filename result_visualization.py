@@ -21,7 +21,7 @@ dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)
 dh.fetch_outputfiles(config.OUTPUT_ROOT_PATH,"sql_akf_msa_best")
 
-filestructs = dh.get_files()
+# filestructs = dh.get_files()
 filestructs_gt = dh.get_groundtruths()
 filestructs_output = dh.get_outputfiles()
 
@@ -31,6 +31,8 @@ for db in filestructs_output:
 
     files = filestructs_output[db]
     files_gt = filestructs_gt[db]
+
+    if db != "1957": continue
 
 
     for file in files:

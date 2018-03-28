@@ -16,6 +16,15 @@ class GapConfig(object):
         self.penalty_opening_gap = penalty_opening_gap
         self.penalty_extending_gap = penalty_extending_gap
 
+class MsaSimilarities(object):
+    similar_but_not_same_penalty = 0.4
+    similarity_1 = "l1j"
+    similarity_1_uclist = TypeCasts.convert_string_to_unicode_list(similarity_1)
+
+
+    sims = []
+    sims.append(similarity_1_uclist)
+
 
 class MsaHandler(object):
 
@@ -322,6 +331,9 @@ class MsaHandler(object):
 
 
         def custom_match_fn(charA, charB):
+            similarity_1 = "l1j"
+            similarity_1_uclist = TypeCasts.convert_string_to_unicode_list(similarity_1)
+
             match = points_identical_char
             mismatch = penalty_non_identical_char
             gap_match = points_identical_char-0.5
@@ -331,8 +343,14 @@ class MsaHandler(object):
                 return match
             elif charA == gap_char or charB == gap_char:
                 return gap_match
-            else:
-                return mismatch
+
+            elif self.config.MSA_BEST_USE_MSA_SIMILARITIES:
+
+                for sim in MsaSimilarities.sims:
+                    if charA in sim and charB in sim:
+                        return gap_match-MsaSimilarities.similar_but_not_same_penalty
+
+            return mismatch
 
         try:
             #ms without match fn  match_fn = identity_match_custom(points_identical_char, penality_non_identical_char, wildcard_character),
@@ -803,8 +821,6 @@ class MsaHandler(object):
         PRINT_ALIGNMENT_PROCESS = False
 
         # iterate words
-
-
         def get_max_wordlen(line_to_check):
             if line_to_check is None or line_to_check is False or line_to_check is True:
                 return -1
@@ -823,7 +839,11 @@ class MsaHandler(object):
             word_obtained = line_to_check.word["text"].get(word_index, return_val_empty)
             return word_obtained
 
-        def update_word(line_in, word_index, new_value):
+        def update_word(line_in, word_index, new_value, remove_wildcards=False):
+
+            if remove_wildcards is True:
+                new_value = new_value.replace(wildcard_character, '')  # remove wildcards
+
             line_in.update_textspace(new_value, wildcard_character, widx=word_index)
 
 
@@ -860,7 +880,8 @@ class MsaHandler(object):
                 self.cpr.print("word   1:", word1)
                 self.cpr.print("word   2:", word2)
                 self.cpr.print("word   3:", word3)
-
+                #if "Dill" in word1:
+                #    print("asd")
                 # sort by length (longest has index 1)
                 words_sorted, wlongest_index = sort_words_longest_mid(word1, word2, word3)
                 # if wildcard_character is True or wildcard_character is False:
@@ -894,9 +915,18 @@ class MsaHandler(object):
                 best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
             if PRINT_RESULTS:
+
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
+                if "Süntel" in best_stripped :
+                       # or "üttenwerke" in best_stripped \
+                       # or "Peiner" in best_stripped:
+                #if "ückauf" in best_stripped:
+                    print("asd")
+
+
+
 
             return best_stripped_non_multi_whitespace
         except Exception as ex:
