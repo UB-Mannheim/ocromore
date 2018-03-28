@@ -49,7 +49,7 @@ count = 1
 for db in filestructs:
     print("Parsing database:", db)
 
-    # =if db != "1976": continue
+    if db != "1957": continue
 
     files = filestructs[db]
     files_gt = filestructs_gt[db]
@@ -59,6 +59,8 @@ for db in filestructs:
         table = file.tablename
         dbpath = 'sqlite:////' +file.dbpath
         print("Parsing table: ", table, "in database: ", dbpath)
+        if "0140" not in table: continue
+
         table_ctr += 1
         path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)
         foundgt = None

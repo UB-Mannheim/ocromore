@@ -6,6 +6,11 @@ import inspect
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 
+class SpecialChars():
+    umlauts_caps = "ÄÜÖ"
+    umlauts = umlauts_caps.lower()
+    umlaut_increment = 18
+
 
 
 class OCRVoter(object):
@@ -168,6 +173,20 @@ class OCRVoter(object):
             self.cpr.printex("ocr_voter.py Exception during confidence vote:", ex)
             self.cpr.printex("trace is:", tr)
 
+    def increase_umlaut_confidence(self, chars, charconfs):
+
+        charconfs_adapted = []
+
+        for char_index, char in enumerate(chars):
+            if char in SpecialChars.umlauts_caps or char in SpecialChars.umlauts:
+                cconf_to_add = charconfs[char_index] + SpecialChars.umlaut_increment
+            else:
+                cconf_to_add = charconfs[char_index]
+
+            charconfs_adapted.append(cconf_to_add)
+
+        return charconfs_adapted
+
 
     def vote_best_of_three_charconfs_searchspaces(self, line_1, line_2, line_3, index_best, wildcard_character='¦'):
         try:
@@ -249,7 +268,16 @@ class OCRVoter(object):
                 if character_1 is None or character_2 is None or character_3 is None:
                     # self.cpr.print("test")
                     continue
-                clist = [character_1, character_2, character_3]
+                if self.config.MSA_BEST_INCREASE_UMLAUT_CONFIDENCE:
+                    clist = [character_1, character_2, character_3]
+                    conflist = [charconf_1, charconf_2, charconf_3]
+                    conflist_new = self.increase_umlaut_confidence(clist, conflist)
+                    charconf_1 = conflist_new[0]
+                    charconf_2 = conflist_new[1]
+                    charconf_3 = conflist_new[2]
+
+
+
                 # get the character which occurs the most
                 sc1, acc_conf_1 = self.get_confidence_count(character_1, character_2, character_3, charconf_1,
                                                                 charconf_2, charconf_3)

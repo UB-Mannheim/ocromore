@@ -32,7 +32,7 @@ for db in filestructs_output:
     files = filestructs_output[db]
     files_gt = filestructs_gt[db]
 
-    if db != "1973": continue
+    if db != "1957": continue
 
 
     for file in files:

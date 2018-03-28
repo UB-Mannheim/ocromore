@@ -253,7 +253,7 @@ class DFObjectifier(object):
         print("Clean data ✓")
         return
 
-    def match_line(self,force=False,pad=5,padmid=0.75,lhm=2):
+    def match_line(self,force=False,pad=5,padmid=0.65,lhm=2):
         """
         Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)

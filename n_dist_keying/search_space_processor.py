@@ -30,11 +30,19 @@ class SearchSpaceProcessor(object):
         self._substitution_character = substitution_character
         self.similar_chars = []
         self.similar_chars.append(['o', 'ö'])
-        self.similar_chars.append(['1', 'l'])
+        self.similar_chars.append(['<', 'o']) # untested is this really better?
+        self.similar_chars.append(['O', 'Ö'])
+        self.similar_chars.append(['0', 'O'])
+        self.similar_chars.append(['d', 'ö'])
+        #self.similar_chars.append(['1', 'l'])
+        self.similar_chars.append(['l', 'j', '1'])
         self.similar_chars.append(['u', 'ü'])
+        self.similar_chars.append(['U', 'Ü'])
         self.similar_chars.append(['a', 'ä'])
+        self.similar_chars.append(['A', 'Ä'])
         self.similar_chars.append([':', ';'])
         self.similar_chars.append(['-', '¬'])
+        self.similar_chars.append(['"', "'"])
 
         # just for testing ...
         self.similar_chars.append(['.', ','])
@@ -173,6 +181,20 @@ class SearchSpaceProcessor(object):
 
         return search_space, shifted
 
+    def set_space_to_value(self, search_space, y_index, x_index, used_subsitution_value=None):
+
+        if used_subsitution_value is not None:
+            used_substitution_char = used_subsitution_value
+        else:
+            used_substitution_char = self.get_substitution_char()
+
+        search_space[y_index][x_index] = used_substitution_char
+
+        shifted = True
+
+
+
+        return search_space, shifted
 
     def process_search_space(self, search_space, search_space_confs, use_similar_chars):
         processed_space = search_space
@@ -189,7 +211,8 @@ class SearchSpaceProcessor(object):
                     or ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
 
             #if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
-            #   self._cpr.print("beep!")
+            if otherchar_mid =="'":
+                self._cpr.print("beep!")
 
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)
@@ -205,9 +228,31 @@ class SearchSpaceProcessor(object):
                 left_right = False
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
             if shifted:
+
+                if self._config.MSA_BEST_SERCHSPACE_QUOTE_NORMALIZATION  \
+                        and (otherchar_mid == "'" or otherchar_mid == '"'):
+
+                    ## this part here merges '' to single ' and corrects the alignment
+                    x_middle_index = self.get_middle_index()
+                    if left_right is True:
+                        delete_index = x_middle_index + 1
+                        shift_index =  x_middle_index - 1
+                    else:
+                        delete_index = x_middle_index - 1
+                        shift_index = x_middle_index + 1
+
+                    if otherchar_mid == "'":
+                        processed_space, shiftedD1 = self.set_space_to_value(search_space,oc_mid_index, shift_index,'"')
+                        processed_space, shiftedD2 = self.set_space_to_value(processed_space,oc_mid_index, delete_index)
+                        search_space_confs, shiftedD3 = self.set_space_to_value(search_space_confs,oc_mid_index, delete_index, used_subsitution_value=0)
+                    else:
+                        # just push confidences because it was confusion with ' and " should be prioritized
+                        search_space_confs, shiftedD3 = self.set_space_to_value(search_space_confs, oc_mid_index,
+                                                                                shift_index, used_subsitution_value=1000)
+
                 processed_space_confs, shifted_confs = self.shift_from_mid(search_space_confs, oc_mid_index,left_right, 0)
                 change_done = True
-        elif ColumnFeatures.ONLY_WHITESPACE.value in mid_column_feats:
+        elif ColumnFeatures.ONLY_WHITESPACE.value in mid_column_feats or ColumnFeatures.MOSTLY_REFERENCE_CHAR:
             # this case checks for 'far-transitions' of similar chars and does them if possible
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)
@@ -240,6 +285,8 @@ class SearchSpaceProcessor(object):
                                                                                                 check_index,
                                                                                                 reference_char,
                                                                                                   use_similar_chars)
+
+                #print("search_space", search_space)
                 if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in other_column_feats:
                     processed_space, shifted_longtrans = self.shift_from_to(search_space, reference_char_y_index, \
                                                                   check_index_from, check_index)
