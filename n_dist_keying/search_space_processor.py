@@ -46,7 +46,7 @@ class SearchSpaceProcessor(object):
 
         # just for testing ...
         self.similar_chars.append(['.', ','])
-        self.similar_chars.append(['i', 'l']) # 1 l i also possible
+        self.similar_chars.append(['i', 'l','t','1']) # 1 l i also possible
         # self.similar_chars.append(['e', 'é'])
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()

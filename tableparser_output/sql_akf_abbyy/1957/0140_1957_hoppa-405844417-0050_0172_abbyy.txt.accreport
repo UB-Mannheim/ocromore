@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
-    8694   Characters
-     214   Errors
-   97.54%  Accuracy
+    8695   Characters
+     215   Errors
+   97.53%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   97.54%  Accuracy After Correction
+   97.53%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      18      137       59      214   Unmarked
-      18      137       59      214   Total
+      19      137       59      215   Unmarked
+      19      137       59      215   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
     1226        7    99.43   ASCII Spacing Characters
-     586       25    95.73   ASCII Special Symbols
+     587       26    95.57   ASCII Special Symbols
      529        3    99.43   ASCII Digits
      711        1    99.86   ASCII Uppercase Letters
     5533       10    99.82   ASCII Lowercase Letters
        3        3     0.00   Latin1 Uppercase Letters
      105      105     0.00   Latin1 Lowercase Letters
-    8694      155    98.22   Total
+    8695      156    98.21   Total
 
   Errors   Marked   Correct-Generated
       68        0   {ü}-{ii}
@@ -47,6 +47,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {-)}-{'}
        2        0   {10}-{lO}
        2        0   {l}-{i}
+       2        0   {o.}-{<}
        2        0   {sc}-{3C}
        2        0   {Ö}-{O}
        2        0   {ß}-{fl}
@@ -59,7 +60,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {<FEFF>}-{}
        1        0   {G}-{C}
        1        0   {l}-{I}
-       1        0   {o}-{<}
        1        0   {}-{-}
        1        0   {}-{<\n>}
        1        0   {Ü}-{O}
@@ -77,7 +77,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   100.00   {+}
      122        1    99.18   {,}
      105        7    93.33   {-}
-     144        1    99.31   {.}
+     145        2    98.62   {.}
        8        0   100.00   {/}
      104        1    99.04   {0}
       94        2    97.87   {1}

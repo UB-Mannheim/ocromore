@@ -18,12 +18,19 @@ class GapConfig(object):
 
 class MsaSimilarities(object):
     similar_but_not_same_penalty = 0.4
-    similarity_1 = "l1j"
-    similarity_1_uclist = TypeCasts.convert_string_to_unicode_list(similarity_1)
-
-
     sims = []
-    sims.append(similarity_1_uclist)
+
+
+    # old style sims setup
+    # similarity_1 = "l1j"
+    # similarity_1_uclist = TypeCasts.convert_string_to_unicode_list(similarity_1)
+    # sims.append(similarity_1_uclist)
+
+    similarities_texts = ["l1j"]
+
+    for sim in similarities_texts:
+        sim_uclist = TypeCasts.convert_string_to_unicode_list(sim)
+        sims.append(sim_uclist)
 
 
 class MsaHandler(object):
@@ -377,7 +384,7 @@ class MsaHandler(object):
             self.cpr.printex("msa_handler.py Exception in pairwise alignment unicode-biopython", ex)
             self.cpr.printex("trace is", tr)
 
-    def msa_alignment_biopython(self, text_A, text_B, text_C, wildcard_character='¦', print_output=False):
+    def msa_alignment_biopython(self, text_A, text_B, text_C, wildcard_character='¦', print_output=False, recursive=True):
 
         try:
             #text_A = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
@@ -457,6 +464,11 @@ class MsaHandler(object):
             if len(res_final_1) != len(res_final_2) or len(res_final_1) !=  len(res_final_3) \
                     or len(res_final_2) !=  len(res_final_3):
                 self.cpr.print("no equal lengths in alignment!") #todo this adds wildcard if the case, but could be problemati
+                if recursive is True: # try realign once recursively
+                    res_final_1, res_final_2, res_final_3 = self.msa_alignment_biopython(res_final_1, res_final_2, res_final_3,
+                                                                   wildcard_character, print_output, recursive=False)
+
+
                 final_arrs = [res_final_1, res_final_2, res_final_3]
                 maxlen = max([len(res_final_1), len(res_final_2), len(res_final_3)])
                 # maxindex = np.argmax([len(res_final_1), len(res_final_2), len(res_final_3)])  # this takes in priorisation in case the chars are same
@@ -919,7 +931,7 @@ class MsaHandler(object):
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
-                if "Süntel" in best_stripped :
+                if "tzen" in best_stripped :
                        # or "üttenwerke" in best_stripped \
                        # or "Peiner" in best_stripped:
                 #if "ückauf" in best_stripped:
