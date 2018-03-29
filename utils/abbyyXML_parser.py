@@ -28,15 +28,19 @@ def get_xml_document(fpath):
             clean_tag = item.tag.split("}")[-1]
             #print(clean_tag)
             if clean_tag == "line":
-                if doc.page != [] and line != None:
-                    line.words.append(word)
+                if doc.page != [] and line is not None:
+                    if len(word.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) < 0.5:
+                        line.words.append(word)
                 COW = True
+                if line is not None and line.words == []:
+                    del doc.page[-1]
                 line = Line(item.attrib)
                 word= Word()
                 doc.page.append(line)
             if clean_tag == "charParams":
                 if item.text == " ":
-                    line.words.append(word)
+                    if len(item.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) < 0.5:
+                        line.words.append(word)
                     word = Word()
                 else:
                     if not GETLINECOORDS and COW:
@@ -46,8 +50,13 @@ def get_xml_document(fpath):
                     word.update_coordinates(item.attrib)
                     word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
+                    if "suspicious" in item.attrib:
+                        word.suspicouscount += 1
         if word is not None:
-            line.words.append(word)
+            if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) < 0.5:
+                line.words.append(word)
+            if line is not None and line.words == []:
+                del doc.page[-1]
         if not doc.page:
             raise EOFError
     except EOFError:
@@ -76,13 +85,14 @@ class Line():
         if self.coordinates == (None,None,None,None):
             self.coordinates = (attr["l"],attr["t"],attr["r"],attr["b"])
         else:
-            if int(attr["t"]) > int(self.coordinates[1]): attr["t"] = self.coordinates[1]
-            if int(attr["b"]) < int(self.coordinates[3]): attr["b"] = self.coordinates[3]
-            if int(attr["l"]) > int(self.coordinates[0]): attr["l"] = self.coordinates[0]
-            if int(attr["r"]) < int(self.coordinates[2]): attr["r"] = self.coordinates[2]
-            if int(attr["t"]) > int(attr["b"]):
-                attr["b"] = str(int(attr["t"])+1)
-            self.coordinates = (attr["l"],attr["t"], attr["r"], attr["b"])
+            if "suspicious" not in attr:
+                if int(attr["t"]) > int(self.coordinates[1]): attr["t"] = self.coordinates[1]
+                if int(attr["b"]) < int(self.coordinates[3]): attr["b"] = self.coordinates[3]
+                if int(attr["l"]) > int(self.coordinates[0]): attr["l"] = self.coordinates[0]
+                if int(attr["r"]) < int(self.coordinates[2]): attr["r"] = self.coordinates[2]
+                if int(attr["t"]) > int(attr["b"]):
+                    attr["b"] = str(int(attr["t"])+1)
+                self.coordinates = (attr["l"],attr["t"], attr["r"], attr["b"])
 
 class Word():
 
@@ -90,6 +100,7 @@ class Word():
         self.coordinates = (None,None,None,None)
         self.ocr_text = []
         self._xconfs = []
+        self.suspicouscount = 0
 
     @property
     def _xwconf(self):
@@ -114,10 +125,11 @@ class Word():
         if self.coordinates == (None, None, None, None):
             self.coordinates = (attr["l"], attr["t"], attr["r"], attr["b"])
         else:
-            if int(attr["t"]) > int(self.coordinates[1]): attr["t"] = self.coordinates[1]
-            if int(attr["b"]) < int(self.coordinates[3]): attr["b"] = self.coordinates[3]
-            if int(attr["l"]) > int(self.coordinates[0]): attr["l"] = self.coordinates[0]
-            if int(attr["r"]) < int(self.coordinates[2]): attr["r"] = self.coordinates[2]
-            self.coordinates = (attr["l"], attr["t"], attr["r"], attr["b"])
+            if "suspicious" not in attr:
+                if int(attr["t"]) > int(self.coordinates[1]): attr["t"] = self.coordinates[1]
+                if int(attr["b"]) < int(self.coordinates[3]): attr["b"] = self.coordinates[3]
+                if int(attr["l"]) > int(self.coordinates[0]): attr["l"] = self.coordinates[0]
+                if int(attr["r"]) < int(self.coordinates[2]): attr["r"] = self.coordinates[2]
+                self.coordinates = (attr["l"], attr["t"], attr["r"], attr["b"])
 
 
