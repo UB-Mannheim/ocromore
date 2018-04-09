@@ -904,7 +904,7 @@ class MsaHandler(object):
 
                 # sort back ...
                 words_aligned = reverse_mid_sort(word1_al, word2_al, word3_al, wlongest_index)
-                if len(words_aligned[0])!= len(words_aligned[1]) or len(words_aligned[1]) != len(words_aligned[2]):
+                if len(words_aligned[0]) != len(words_aligned[1]) or len(words_aligned[1]) != len(words_aligned[2]):
                     self.cpr.print("shouldn't be")
 
                 self.cpr.print("word_al 1:", words_aligned[0])
@@ -931,7 +931,7 @@ class MsaHandler(object):
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
-                if "tzen" in best_stripped :
+                if "Bergarbeiter" in best_stripped :
                        # or "üttenwerke" in best_stripped \
                        # or "Peiner" in best_stripped:
                 #if "ückauf" in best_stripped:

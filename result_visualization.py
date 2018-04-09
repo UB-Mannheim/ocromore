@@ -15,7 +15,7 @@ config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
 config = config_handler.get_config()
 tableparser = TableParser(config)
 
-dh = DatabaseHandler(dbdir=str(Path(config.DBDIR).absolute()))
+dh = DatabaseHandler(dbdir=str(Path(config.DB_DIR_VOTER).absolute()))
 dh.set_dirpos(tablename_pos=config.TABLENAME_POS,ocr_profile_pos=config.OCR_PROFILE_POS,ocr_pos=config.OCR_POS,dbname_pos=config.DBPATH_POS)
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)

@@ -12,10 +12,15 @@ import shutil
 class TableParser(object):
 
 
-    def __init__(self, config):
+    def __init__(self, config, voter_mode = True):
         self._config = config
         # give the last element in split path
-        self._base_db_dir = os.path.basename(os.path.normpath(config.DBDIR))
+        if voter_mode is True:
+            dbpath = config.DB_DIR_VOTER
+        else:
+            dbpath = config.DB_DIR_READER
+
+        self._base_db_dir = os.path.basename(os.path.normpath(dbpath))
 
     def delete_output_dir(self):
         # delete database directory
@@ -27,7 +32,7 @@ class TableParser(object):
         # dcreate database directory
         os.makedirs(self._config.OUTPUT_ROOT_PATH)
 
-    def create_isri_reports(self, filestructs, addendum):
+    def create_isri_reports_old(self, filestructs, addendum):
 
         acc_reports = []
         wacc_reports = []
@@ -49,7 +54,31 @@ class TableParser(object):
         output_root_path = os.path.dirname(db_root_path)
         self.summarize_accuracy_report_sums(wacc_reports, acc_reports, output_root_path)
 
+    def create_isri_reports(self, databases, filestructs, addendum):
 
+        acc_reports = []
+        wacc_reports = []
+        db_root_path = ""
+        for db in databases:
+
+            temp = os.path.splitext(db)[0]
+            db_keyname = os.path.basename(temp)
+
+            files = filestructs[db_keyname]
+            # file = files[0]
+            # assume that each db has different root folder, just take first file for path reference
+            dbpath = 'sqlite:////' + db
+            dbname = db_keyname
+            db_root_path = self.get_basic_output_directory(dbpath, addendum)
+            if os.path.exists(db_root_path):
+                fp_gen_acc_report, fp_gen_wacc_report = \
+                    self.summarize_accuracy_reports(db_root_path, dbname)
+                acc_reports.append(fp_gen_acc_report)
+                wacc_reports.append(fp_gen_wacc_report)
+
+        # create big accumulated report
+        output_root_path = os.path.dirname(db_root_path)
+        self.summarize_accuracy_report_sums(wacc_reports, acc_reports, output_root_path)
 
     def get_basic_output_directory(self, dbdir_abs, addendum):
         basename_db_ext = os.path.basename(os.path.normpath(dbdir_abs))

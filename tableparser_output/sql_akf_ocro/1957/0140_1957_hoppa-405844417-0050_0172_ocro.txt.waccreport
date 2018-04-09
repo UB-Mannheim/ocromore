@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1227   Words
-      64   Misrecognized
-   94.78%  Accuracy
+      78   Misrecognized
+   93.64%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,21 +12,21 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      61        6    90.16        1
-     136        9    93.38        2
-     301        8    97.34        3
+      61        9    85.25        1
+     136       10    92.65        2
+     301       12    96.01        3
      116        3    97.41        4
       97        5    94.85        5
       96        5    94.79        6
-      80        1    98.75        7
+      80        2    97.50        7
       61        3    95.08        8
       53        3    94.34        9
       34        2    94.12       10
       42        6    85.71       11
-      53        4    92.45       12
+      53        7    86.79       12
       12        3    75.00       13
       17        3    82.35       14
-      13        1    92.31       15
+      13        3    76.92       15
        5        0   100.00       16
        3        0   100.00       17
        3        0   100.00       18
@@ -35,11 +35,11 @@ Non-stopwords
        7        0   100.00       21
        1        0   100.00       25
        1        0   100.00       32
-    1207       63    94.78    Total
+    1207       77    93.62    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     443       23    94.81        1
+     443       31    93.00        1
       86        1    98.84        2
       31        0   100.00        3
       14        0   100.00        4
@@ -49,18 +49,18 @@ Distinct Non-stopwords
        1        0   100.00        8
        4        0   100.00       10
       11        0   100.00      >10
-     615       24    96.10    Total
+     615       32    94.80    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1227       64    94.78        1
-    1226       97    92.09        2
-    1225      129    89.47        3
-    1224      158    87.09        4
-    1223      187    84.71        5
-    1222      215    82.41        6
-    1221      241    80.26        7
-    1220      264    78.36        8
+    1227       78    93.64        1
+    1226      116    90.54        2
+    1225      152    87.59        3
+    1224      185    84.89        4
+    1223      216    82.34        5
+    1222      245    79.95        6
+    1221      271    77.81        7
+    1220      294    75.90        8
 
 Stopwords
    Count   Missed   %Right   
@@ -117,14 +117,14 @@ Non-stopwords
        1        0   100.00   2,04
        1        0   100.00   2,88
        1        1     0.00   20
-       2        0   100.00   206
+       2        1    50.00   206
        1        0   100.00   20a
        1        0   100.00   21
        1        0   100.00   224
-       2        0   100.00   234
+       2        1    50.00   234
        3        0   100.00   240
        1        0   100.00   25,1
-       4        0   100.00   26
+       4        1    75.00   26
        1        1     0.00   26,33
        1        0   100.00   26.11.1952
        1        1     0.00   27
@@ -146,17 +146,17 @@ Non-stopwords
        1        0   100.00   475
        1        0   100.00   48
        1        0   100.00   49
-       5        0   100.00   5
+       5        1    80.00   5
        2        0   100.00   50
        1        0   100.00   519
        1        0   100.00   53
        1        0   100.00   560
        1        0   100.00   562
-       1        0   100.00   568
+       1        1     0.00   568
        1        0   100.00   570
        1        1     0.00   58
-       4        0   100.00   6
-       1        0   100.00   620
+       4        1    75.00   6
+       1        1     0.00   620
        1        0   100.00   620200
        1        1     0.00   63
        2        0   100.00   640
@@ -164,7 +164,7 @@ Non-stopwords
        1        0   100.00   66
        1        0   100.00   663
        1        0   100.00   696
-       5        0   100.00   7
+       5        1    80.00   7
        1        0   100.00   7,05
        1        0   100.00   712
        1        0   100.00   721
@@ -200,7 +200,7 @@ Non-stopwords
        1        0   100.00   anderes
        1        0   100.00   anlage
        1        0   100.00   anlagen
-       1        0   100.00   anlagevermögen
+       1        1     0.00   anlagevermögen
        3        0   100.00   anleihe
        1        0   100.00   anschluss
        1        0   100.00   anteil
@@ -312,7 +312,7 @@ Non-stopwords
        2        0   100.00   eigene
        1        0   100.00   eigenen
        1        0   100.00   eigener
-       1        0   100.00   eigenkapital
+       1        1     0.00   eigenkapital
        1        0   100.00   ein
        2        0   100.00   eine
        3        0   100.00   einem
@@ -355,7 +355,7 @@ Non-stopwords
        1        0   100.00   freiherr
        1        0   100.00   freiverkehr
        1        0   100.00   fremden
-       1        0   100.00   fremdkapital
+       1        1     0.00   fremdkapital
        1        0   100.00   fried
        2        0   100.00   friedrich
        1        0   100.00   fromme
@@ -442,7 +442,7 @@ Non-stopwords
        1        0   100.00   insgesamt
        1        0   100.00   interesse
        7        1    85.71   ist
-       1        0   100.00   jahresertrag
+       1        1     0.00   jahresertrag
        5        0   100.00   je
        1        0   100.00   jedem
        1        0   100.00   johann
@@ -598,7 +598,7 @@ Non-stopwords
        2        0   100.00   steinkohlenbergwerk
        1        0   100.00   stellv
        1        1     0.00   stellv.vors
-       1        0   100.00   steuern
+       1        1     0.00   steuern
        1        0   100.00   stimme
        1        0   100.00   stimmrecht
        1        0   100.00   strecken
@@ -623,7 +623,7 @@ Non-stopwords
        1        0   100.00   um
        1        0   100.00   umfassen
        1        0   100.00   umfaßt
-       1        0   100.00   umlaufvermögen
+       1        1     0.00   umlaufvermögen
        1        0   100.00   umstellung
        1        0   100.00   unabhängig
       53        2    96.23   und

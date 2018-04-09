@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     8695   Characters
-     268   Errors
-   96.92%  Accuracy
+     275   Errors
+   96.84%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   96.92%  Accuracy After Correction
+   96.84%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     202       52       14      268   Unmarked
-     202       52       14      268   Total
+     209       52       14      275   Unmarked
+     209       52       14      275   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
-    1226       39    96.82   ASCII Spacing Characters
+    1226       46    96.25   ASCII Spacing Characters
      587       38    93.53   ASCII Special Symbols
      529       14    97.35   ASCII Digits
      711       17    97.61   ASCII Uppercase Letters
     5533      139    97.49   ASCII Lowercase Letters
        3        3     0.00   Latin1 Uppercase Letters
      105        3    97.14   Latin1 Lowercase Letters
-    8695      254    97.08   Total
+    8695      261    97.00   Total
 
   Errors   Marked   Correct-Generated
       38        0   {nis-<\n>sen sowie Dünge...}-{;7z.72r}
@@ -34,6 +34,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       19        0   {editbank AG, Bremen}-{}
       14        0   {" }-{}
       14        0   {Norddeutsche K}-{CDLCD:2}
+      12        0   { }-{}
       11        0   {g}-{}
        8        0   { Stammka}-{A}
        8        0   {"}-{''}
@@ -43,7 +44,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        5        0   { 20 -}-{}
        5        0   { 8 63}-{}
        5        0   { Kalk}-{N-s}
-       5        0   { }-{}
        5        0   {}-{ }
        3        0   {/}-{}
        3        0   {zeu}-{}
@@ -73,7 +73,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
 
    Count   Missed   %Right
      293        3    98.98   {<\n>}
-     933       36    96.14   { }
+     933       43    95.39   { }
       13       13     0.00   {"}
        1        0   100.00   {$}
       34        3    91.18   {%}
