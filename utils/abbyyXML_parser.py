@@ -20,6 +20,7 @@ def get_xml_document(fpath):
         line = None
         word = None
         COW = True
+        DELLINE= False
         # Iterate line for line through the parsed xml
         # Search for the tags "line" (contains line coordinates)
         # and "charParams" (contains char, char_conf and coordinates)
@@ -29,18 +30,21 @@ def get_xml_document(fpath):
             #print(clean_tag)
             if clean_tag == "line":
                 if doc.page != [] and line is not None:
-                    if len(word.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) < 0.5:
-                        line.words.append(word)
+                    if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.575:
+                        DELLINE = True
+                    line.words.append(word)
                 COW = True
-                if line is not None and line.words == []:
+                if DELLINE:
                     del doc.page[-1]
+                    DELLINE = False
                 line = Line(item.attrib)
                 word= Word()
                 doc.page.append(line)
             if clean_tag == "charParams":
                 if item.text == " ":
-                    if len(item.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) < 0.5:
-                        line.words.append(word)
+                    if len(word.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) > 0.575:
+                        DELLINE = True
+                    line.words.append(word)
                     word = Word()
                 else:
                     if not GETLINECOORDS and COW:
@@ -53,9 +57,10 @@ def get_xml_document(fpath):
                     if "suspicious" in item.attrib:
                         word.suspicouscount += 1
         if word is not None:
-            if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) < 0.5:
-                line.words.append(word)
-            if line is not None and line.words == []:
+            line.words.append(word)
+            if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.575:
+                DELLINE = True
+            if DELLINE:
                 del doc.page[-1]
         if not doc.page:
             raise EOFError

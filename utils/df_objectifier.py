@@ -264,7 +264,7 @@ class DFObjectifier(object):
         print("Clean data ✓")
         return
 
-    def match_line(self,force=False,pad=3,padmid=0.5,lhm=2):
+    def match_line(self,force=False,pad=2,padmid=0.65,lhm=2):
         #TODO: rework other preprocesses...
         """
         Matches the lines over all datasets
