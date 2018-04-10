@@ -934,8 +934,9 @@ class MsaHandler(object):
                 if "Großhandel" in best_stripped:
                     print("beep")
                 if "Dortmund" in best_stripped or \
-                    "Commerz" in best_stripped or \
-                    "Metallgesellschaft" in best_stripped:
+                    "DiCsconto" in best_stripped or \
+                    "Norddeutsche" in best_stripped or \
+                    "Umstellung t." in best_stripped:
                     print("asd")
 
 

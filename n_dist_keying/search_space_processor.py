@@ -16,6 +16,7 @@ class ColumnFeatures(Enum):  # todo this can be normal class
     ONLY_WILDCARD = 6
     ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS = 7
     ONLY_WHITESPACE_OR_WILDCARD = 8
+    CONTAINS_REFERENCE_CHAR = 9
 
 
 class SearchSpaceProcessor(object):
@@ -37,6 +38,7 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append(['d', 'ö'])
         #self.similar_chars.append(['1', 'l'])
         self.similar_chars.append(['l', 'j', '1'])
+        self.similar_chars.append(['I', 'l'])
         self.similar_chars.append(['u', 'ü'])
         self.similar_chars.append(['U', 'Ü','O'])
         self.similar_chars.append(['a', 'ä'])
@@ -62,11 +64,15 @@ class SearchSpaceProcessor(object):
     def get_middle_index(self):
         return self._middle_index
 
-    def get_simchars_for_char(self, char):
+    def get_simchars_for_char(self, char): # todo similar chars for each char could be preprocessed once at start
+        simchars_return_array = []
 
         for simchars in self.similar_chars:
             if char in simchars:
-                return simchars
+                simchars_return_array.extend(simchars)
+
+        if len(simchars_return_array) >= 1:
+            return simchars_return_array
 
         return [char]
 
@@ -144,7 +150,8 @@ class SearchSpaceProcessor(object):
             features.append(ColumnFeatures.ONLY_WILDCARD.value)
         if counter_whitespace_and_wildcards == self.get_y_size():
             features.append(ColumnFeatures.ONLY_WHITESPACE_OR_WILDCARD.value)
-
+        if counter_reference_char >= 1:
+            features.append(ColumnFeatures.CONTAINS_REFERENCE_CHAR.value)
 
 
         return features, otherchar, otherchar_y_index
@@ -248,7 +255,7 @@ class SearchSpaceProcessor(object):
                     or ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
 
             #if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
-            if otherchar_mid =="'":
+            if otherchar_mid == "l":
                 self._cpr.print("beep!")
 
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
@@ -258,10 +265,15 @@ class SearchSpaceProcessor(object):
 
             shifted = False
             left_right = None
-            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in pre_column_feats:
+            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in pre_column_feats\
+                    or (ColumnFeatures.CONTAINS_REFERENCE_CHAR.value in pre_column_feats
+                        and ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in pre_column_feats):
+
                 left_right = True
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
-            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in nex_column_feats:
+            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in nex_column_feats \
+                    or (ColumnFeatures.CONTAINS_REFERENCE_CHAR.value in nex_column_feats
+                        and ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in nex_column_feats):
                 left_right = False
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
             if shifted:
