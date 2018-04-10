@@ -44,7 +44,7 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append([':', ';'])
         self.similar_chars.append(['-', '¬'])
         self.similar_chars.append(['"', "'"])
-        self.similar_chars.append(['C', "G"])
+        self.similar_chars.append(['C', "G","c"])
         # just for testing ...
         self.similar_chars.append(['.', ','])
         self.similar_chars.append(['v', 'V'])
@@ -289,7 +289,7 @@ class SearchSpaceProcessor(object):
 
                 processed_space_confs, shifted_confs = self.shift_from_mid(search_space_confs, oc_mid_index,left_right, 0)
                 change_done = True
-        elif ColumnFeatures.ONLY_WHITESPACE.value in mid_column_feats or ColumnFeatures.MOSTLY_REFERENCE_CHAR:
+        elif ColumnFeatures.ONLY_WHITESPACE.value in mid_column_feats or ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in mid_column_feats:
             # this case checks for 'far-transitions' of similar chars and does them if possible
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)

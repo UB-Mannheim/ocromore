@@ -159,6 +159,13 @@ class OCRVoter(object):
                 sc2, acc_conf_2 = self.get_confidence_count(character_2, character_1, character_3, charconf_2, charconf_1, charconf_3)
                 sc3, acc_conf_3 = self.get_confidence_count(character_3, character_2, character_1, charconf_3, charconf_2, charconf_1)
                 maxindices = np.argmax([acc_conf_2, acc_conf_1, acc_conf_3]) # this takes in priorisation in case the chars are same
+                if self.config.MSA_BEST_VOTER_DROP_CHARS_BELOW_TRESH == True:
+                    tresh = self.config.MSA_BEST_VOTER_DROPPING_TRESH
+                    maximum_conf = max(acc_conf_1,acc_conf_2,acc_conf_3)
+                    if maximum_conf <tresh:
+                        continue
+
+
                 if maxindices == 0:
                     accumulated_chars += character_2
                 elif maxindices == 1:
@@ -289,6 +296,13 @@ class OCRVoter(object):
                                                                 charconf_2, charconf_1)
                 maxindices = np.argmax(
                     [acc_conf_2, acc_conf_1, acc_conf_3])  # this takes in priorisation in case the chars are same
+
+                if self.config.MSA_BEST_VOTER_DROP_CHARS_BELOW_TRESH == True:
+                    tresh = self.config.MSA_BEST_VOTER_DROPPING_TRESH
+                    maximum_conf = max(acc_conf_1,acc_conf_2,acc_conf_3)
+                    if maximum_conf <tresh:
+                        continue
+
                 if maxindices == 0:
                     accumulated_chars += character_2
                 elif maxindices == 1:

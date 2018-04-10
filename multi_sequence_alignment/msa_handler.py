@@ -931,10 +931,11 @@ class MsaHandler(object):
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
-                if "Bergarbeiter" in best_stripped :
-                       # or "üttenwerke" in best_stripped \
-                       # or "Peiner" in best_stripped:
-                #if "ückauf" in best_stripped:
+                if "Großhandel" in best_stripped:
+                    print("beep")
+                if "Dortmund" in best_stripped or \
+                    "Commerz" in best_stripped or \
+                    "Metallgesellschaft" in best_stripped:
                     print("asd")
 
 

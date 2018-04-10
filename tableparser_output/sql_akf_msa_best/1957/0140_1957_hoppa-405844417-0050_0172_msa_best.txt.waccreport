@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1227   Words
-      64   Misrecognized
-   94.78%  Accuracy
+      65   Misrecognized
+   94.70%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,7 +12,7 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      61        6    90.16        1
+      61        7    88.52        1
      136       10    92.65        2
      301       18    94.02        3
      116        4    96.55        4
@@ -35,7 +35,7 @@ Non-stopwords
        7        0   100.00       21
        1        0   100.00       25
        1        0   100.00       32
-    1207       64    94.70    Total
+    1207       65    94.61    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -53,13 +53,13 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-    1227       64    94.78        1
-    1226       92    92.50        2
-    1225      118    90.37        3
-    1224      140    88.56        4
-    1223      160    86.92        5
-    1222      180    85.27        6
-    1221      200    83.62        7
+    1227       65    94.70        1
+    1226       93    92.41        2
+    1225      119    90.29        3
+    1224      141    88.48        4
+    1223      161    86.84        5
+    1222      181    85.19        6
+    1221      201    83.54        7
     1220      220    81.97        8
 
 Stopwords
@@ -164,7 +164,7 @@ Non-stopwords
        1        0   100.00   66
        1        1     0.00   663
        1        0   100.00   696
-       5        1    80.00   7
+       5        2    60.00   7
        1        0   100.00   7,05
        1        0   100.00   712
        1        0   100.00   721
