@@ -69,15 +69,17 @@ class OCRVoter(object):
                 return 1, SPACE_PUT_IN_VALUE
 
         elif char1 == wildcard_char and same_ctr ==1: #todo: differentiate type of character ??
-            return 1, 99.0 #todo j4t
+            # if there is two wildcards and one characters, characters confidence has to be higher than
+            # WILDCARD_TRESH to be taken
+            WILDCARD_TRESH = 98.5
+            return 1, WILDCARD_TRESH
             # if the confidence of the other character is below that value, space gets the high put in confidence value
-            WILDCARD_TRESH = 50.0
             WILDCARD_PUT_IN_VALUE = 99.0
             otherchar, otherconf = get_other_char(char1, char2, char3,cconf1,cconf2,cconf3)
             #print("wctr",WILDCARD_TRESH,"otherconf",otherconf)
             if otherconf < WILDCARD_TRESH:
                 return 1, WILDCARD_PUT_IN_VALUE
-        elif char1 == wildcard_char and same_ctr ==0:
+        elif char1 == wildcard_char and same_ctr == 0:
             pass  # todo maybe cover this case (cause wildcard has no confidence i.e if the two otherchars are very low prob, take wildcard)
         elif char1 == '' and same_ctr == 0:
             pass  # todo maybe cover this case (cause space has no confidence ...
@@ -208,8 +210,8 @@ class OCRVoter(object):
             self.cpr.print("vote_text1", line_1.textstr)
             self.cpr.print("vote_text2", line_2.textstr)
             self.cpr.print("vote_text3", line_3.textstr)
-            # if "Freiv." in line_1.textstr:
-            #     self.cpr.print("asd")
+            if "1150" in line_1.textstr:
+                 self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 

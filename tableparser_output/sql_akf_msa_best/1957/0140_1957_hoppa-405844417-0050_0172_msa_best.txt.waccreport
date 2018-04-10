@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1227   Words
-      18   Misrecognized
-   98.53%  Accuracy
+      64   Misrecognized
+   94.78%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,34 +12,34 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      61        0   100.00        1
-     136        5    96.32        2
-     301        1    99.67        3
-     116        2    98.28        4
-      97        3    96.91        5
-      96        0   100.00        6
-      80        0   100.00        7
+      61        6    90.16        1
+     136       10    92.65        2
+     301       18    94.02        3
+     116        4    96.55        4
+      97        4    95.88        5
+      96        1    98.96        6
+      80        1    98.75        7
       61        2    96.72        8
       53        1    98.11        9
-      34        1    97.06       10
+      34        2    94.12       10
       42        2    95.24       11
-      53        0   100.00       12
-      12        1    91.67       13
-      17        0   100.00       14
-      13        0   100.00       15
+      53        5    90.57       12
+      12        2    83.33       13
+      17        2    88.24       14
+      13        2    84.62       15
        5        0   100.00       16
        3        0   100.00       17
-       3        0   100.00       18
+       3        1    66.67       18
       11        0   100.00       19
-       4        0   100.00       20
+       4        1    75.00       20
        7        0   100.00       21
        1        0   100.00       25
        1        0   100.00       32
-    1207       18    98.51    Total
+    1207       64    94.70    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     443       12    97.29        1
+     443       27    93.91        1
       86        0   100.00        2
       31        0   100.00        3
       14        0   100.00        4
@@ -49,18 +49,18 @@ Distinct Non-stopwords
        1        0   100.00        8
        4        0   100.00       10
       11        0   100.00      >10
-     615       12    98.05    Total
+     615       27    95.61    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1227       18    98.53        1
-    1226       35    97.15        2
-    1225       52    95.76        3
-    1224       68    94.44        4
-    1223       84    93.13        5
-    1222       98    91.98        6
-    1221      112    90.83        7
-    1220      126    89.67        8
+    1227       64    94.78        1
+    1226       92    92.50        2
+    1225      118    90.37        3
+    1224      140    88.56        4
+    1223      160    86.92        5
+    1222      180    85.27        6
+    1221      200    83.62        7
+    1220      220    81.97        8
 
 Stopwords
    Count   Missed   %Right   
@@ -113,18 +113,18 @@ Non-stopwords
        3        0   100.00   1954
        2        0   100.00   1955
        1        0   100.00   1956
-       7        0   100.00   2
-       1        1     0.00   2,04
+       7        1    85.71   2
+       1        0   100.00   2,04
        1        0   100.00   2,88
-       1        0   100.00   20
-       2        0   100.00   206
+       1        1     0.00   20
+       2        1    50.00   206
        1        0   100.00   20a
        1        0   100.00   21
        1        0   100.00   224
-       2        0   100.00   234
+       2        1    50.00   234
        3        0   100.00   240
        1        0   100.00   25,1
-       4        0   100.00   26
+       4        1    75.00   26
        1        1     0.00   26,33
        1        0   100.00   26.11.1952
        1        1     0.00   27
@@ -134,7 +134,7 @@ Non-stopwords
        1        0   100.00   31.12.1954
        1        0   100.00   31.12.1955
        2        0   100.00   320
-       2        0   100.00   342
+       2        1    50.00   342
        1        0   100.00   350
        1        0   100.00   352
        1        0   100.00   39
@@ -143,53 +143,53 @@ Non-stopwords
        3        1    66.67   41
        1        0   100.00   423
        1        0   100.00   424
-       1        0   100.00   475
+       1        1     0.00   475
        1        0   100.00   48
        1        0   100.00   49
-       5        0   100.00   5
+       5        1    80.00   5
        2        0   100.00   50
        1        0   100.00   519
        1        0   100.00   53
-       1        0   100.00   560
+       1        1     0.00   560
        1        0   100.00   562
-       1        0   100.00   568
+       1        1     0.00   568
        1        0   100.00   570
-       1        0   100.00   58
-       4        0   100.00   6
-       1        0   100.00   620
+       1        1     0.00   58
+       4        1    75.00   6
+       1        1     0.00   620
        1        0   100.00   620200
        1        0   100.00   63
        2        0   100.00   640
        1        0   100.00   65
        1        0   100.00   66
-       1        0   100.00   663
+       1        1     0.00   663
        1        0   100.00   696
-       5        0   100.00   7
+       5        1    80.00   7
        1        0   100.00   7,05
-       1        1     0.00   712
+       1        0   100.00   712
        1        0   100.00   721
        1        0   100.00   722
        1        0   100.00   73
        1        0   100.00   73,5
-       3        0   100.00   75
-       4        0   100.00   8
+       3        1    66.67   75
+       4        1    75.00   8
        1        0   100.00   8.7.1955
        2        0   100.00   856
        1        0   100.00   869
        1        1     0.00   87,5
        1        0   100.00   874
-       1        1     0.00   88,24
-       3        0   100.00   9
+       1        0   100.00   88,24
+       3        1    66.67   9
        1        0   100.00   92,6
        1        1     0.00   93,75
-       1        0   100.00   939
+       1        1     0.00   939
        1        0   100.00   952
        2        0   100.00   99
        1        0   100.00   abgegeben
        1        0   100.00   absatz
-       1        0   100.00   abschreibungen
+       1        1     0.00   abschreibungen
        1        0   100.00   abteilungen
-      28        1    96.43   ag
+      28        2    92.86   ag
        2        0   100.00   akt
        1        0   100.00   aktiengesellschaft
        1        0   100.00   aktienkurse
@@ -200,7 +200,7 @@ Non-stopwords
        1        0   100.00   anderes
        1        0   100.00   anlage
        1        0   100.00   anlagen
-       1        0   100.00   anlagevermögen
+       1        1     0.00   anlagevermögen
        3        0   100.00   anleihe
        1        0   100.00   anschluss
        1        0   100.00   anteil
@@ -212,7 +212,7 @@ Non-stopwords
        1        0   100.00   ausge
        1        0   100.00   b
        1        0   100.00   bahnen
-      14        0   100.00   bank
+      14        1    92.86   bank
        1        0   100.00   bankverein
        1        0   100.00   barmittel
        2        0   100.00   baufeld
@@ -240,7 +240,7 @@ Non-stopwords
        1        0   100.00   bestehen
        1        0   100.00   besteht
        3        0   100.00   beteiligung
-       1        0   100.00   beteiligungserträge
+       1        1     0.00   beteiligungserträge
        1        0   100.00   betreibt
        1        0   100.00   betriebsanlagen
        1        0   100.00   betriebsbeschrei
@@ -286,9 +286,9 @@ Non-stopwords
        1        0   100.00   davon
        2        0   100.00   dem
       10        0   100.00   den
-      27        0   100.00   der
+      27        1    96.30   der
        5        0   100.00   deren
-       3        0   100.00   des
+       3        1    66.67   des
        1        0   100.00   det
        1        0   100.00   deutsche
       27        0   100.00   die
@@ -306,13 +306,13 @@ Non-stopwords
        1        0   100.00   drütte
        1        0   100.00   dännemark
        1        0   100.00   dörnten
-       1        0   100.00   düngemitteln
+       1        1     0.00   düngemitteln
        1        0   100.00   düsseldorf
        1        0   100.00   ebenso
        2        0   100.00   eigene
        1        0   100.00   eigenen
        1        0   100.00   eigener
-       1        0   100.00   eigenkapital
+       1        1     0.00   eigenkapital
        1        0   100.00   ein
        2        0   100.00   eine
        3        0   100.00   einem
@@ -321,7 +321,7 @@ Non-stopwords
        1        0   100.00   eines
        1        0   100.00   einige
        1        0   100.00   einrichtungen
-       2        0   100.00   eisen
+       2        1    50.00   eisen
        1        0   100.00   eisenbahnen
        1        0   100.00   eisenhandel
        1        0   100.00   eisenhandels
@@ -355,7 +355,7 @@ Non-stopwords
        1        0   100.00   freiherr
        1        0   100.00   freiverkehr
        1        0   100.00   fremden
-       1        0   100.00   fremdkapital
+       1        1     0.00   fremdkapital
        1        0   100.00   fried
        2        0   100.00   friedrich
        1        0   100.00   fromme
@@ -389,7 +389,7 @@ Non-stopwords
        1        0   100.00   grossaktionär
        2        0   100.00   grosse
        1        0   100.00   grossilsede
-       2        0   100.00   großhandel
+       2        1    50.00   großhandel
        3        0   100.00   grund
        1        0   100.00   grundkapital
        1        0   100.00   gründung
@@ -407,7 +407,7 @@ Non-stopwords
        1        0   100.00   hans
        1        0   100.00   hat
        1        0   100.00   haupterzeugnisse
-       1        1     0.00   hedwigshütte
+       1        0   100.00   hedwigshütte
        1        0   100.00   heine
        1        0   100.00   heinrich
        1        0   100.00   heintzmann
@@ -441,8 +441,8 @@ Non-stopwords
        4        0   100.00   industrie
        1        0   100.00   insgesamt
        1        0   100.00   interesse
-       7        0   100.00   ist
-       1        0   100.00   jahresertrag
+       7        1    85.71   ist
+       1        1     0.00   jahresertrag
        5        0   100.00   je
        1        0   100.00   jedem
        1        0   100.00   johann
@@ -450,7 +450,7 @@ Non-stopwords
        1        0   100.00   julius
        3        0   100.00   k
        1        0   100.00   kalenderjahr
-       1        0   100.00   kalk
+       1        1     0.00   kalk
        1        0   100.00   kalkwerk
        1        0   100.00   kapazität
        4        0   100.00   kapital
@@ -465,7 +465,7 @@ Non-stopwords
        1        0   100.00   kokswerke
        1        0   100.00   kommanditanteil
        2        0   100.00   konrad
-       3        0   100.00   kreditbank
+       3        1    66.67   kreditbank
        1        0   100.00   kräne
        1        0   100.00   kurs
        2        0   100.00   kurt
@@ -490,10 +490,10 @@ Non-stopwords
        3        0   100.00   mbh
        1        0   100.00   mehl
        1        0   100.00   mens
-       1        0   100.00   metallgesellschaft
+       1        1     0.00   metallgesellschaft
        2        0   100.00   minden
        6        0   100.00   mio
-      19        0   100.00   mit
+      19        2    89.47   mit
        1        0   100.00   montan
        1        0   100.00   muttern
        1        0   100.00   möglichst
@@ -508,7 +508,7 @@ Non-stopwords
        1        0   100.00   niedersachsen
        1        0   100.00   noch
        1        0   100.00   nom
-       4        0   100.00   norddeutsche
+       4        2    50.00   norddeutsche
        1        1     0.00   notthorn
        2        0   100.00   nr
        1        0   100.00   nunmehr
@@ -566,16 +566,16 @@ Non-stopwords
        1        0   100.00   schweig
        1        0   100.00   schweizer
        1        0   100.00   sellschaften
-       2        0   100.00   sen
+       2        1    50.00   sen
        1        0   100.00   sfrs
-       3        0   100.00   sich
+       3        1    66.67   sich
        3        0   100.00   sie
        4        0   100.00   sind
        1        0   100.00   smentek
        1        0   100.00   sogleich
        2        0   100.00   sonstiger
        1        0   100.00   soweit
-       5        0   100.00   sowie
+       5        1    80.00   sowie
        1        0   100.00   spantenprofile
        1        0   100.00   spezialitäten
        1        0   100.00   spundbohlen
@@ -586,19 +586,19 @@ Non-stopwords
        1        0   100.00   stadt
        1        0   100.00   stahl
        1        0   100.00   stahlbau
-       2        0   100.00   stahlerzeugnis
+       2        1    50.00   stahlerzeugnis
        1        0   100.00   stahlhochbauten
        1        0   100.00   stahlwerk
        2        0   100.00   stammaktien
        3        0   100.00   stammkapital
-       3        0   100.00   stammkapitals
+       3        1    66.67   stammkapitals
        1        0   100.00   stand
        1        0   100.00   stattet
        1        0   100.00   stehende
        2        0   100.00   steinkohlenbergwerk
        1        0   100.00   stellv
        1        1     0.00   stellv.vors
-       1        0   100.00   steuern
+       1        1     0.00   steuern
        1        0   100.00   stimme
        1        0   100.00   stimmrecht
        1        0   100.00   strecken
@@ -617,16 +617,16 @@ Non-stopwords
        1        0   100.00   thomasschlackenmühle
        5        0   100.00   tochtergesellschaften
        1        0   100.00   träger
-       1        0   100.00   tätig
+       1        1     0.00   tätig
        1        0   100.00   tätigkeitsgebiet
        1        0   100.00   ultimo
        1        0   100.00   um
        1        0   100.00   umfassen
        1        0   100.00   umfaßt
-       1        0   100.00   umlaufvermögen
+       1        1     0.00   umlaufvermögen
        1        0   100.00   umstellung
        1        0   100.00   unabhängig
-      53        0   100.00   und
+      53        3    94.34   und
        1        0   100.00   union
        1        0   100.00   universaleisen
        1        0   100.00   unter
@@ -685,4 +685,4 @@ Non-stopwords
        1        0   100.00   öffentlichen
        1        0   100.00   ölsburg
        1        0   100.00   über
-       1        1     0.00   überschuss
+       1        0   100.00   überschuss

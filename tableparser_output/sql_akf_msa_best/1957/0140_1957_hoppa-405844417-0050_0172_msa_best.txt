@@ -52,7 +52,7 @@ Abteilungen Erzbergbau, Hochofenwerk,
 Stahl- und Walzwerk und den Unterge-
 sellschaften Kalkwerk Marienhagen GmbH
 und Süntelschotterwerke Dr. Schmidt & Co.
-K.-G., Pötzen;;
+K.-G., Pötzen;
 b) Steinkohlenbergwerk Friedrich der
 Grosse AG mit den Kohlenzechen in Herne
 und Minden und der Untergesellschaft
@@ -67,7 +67,7 @@ mit einer Beteiligung von je 50 % gegrün-
 det wurde.
 Besitz- und Betriebsbeschrei-
 bung der Tochtergesellschaften:
-1. Hüttenwerke Ilsede-Peine AGG
+1. Hüttenwerke Ilsede-Peine AG
 Erzbergwerke (Brauneisenerze). Die ver-
 schiedenen Erzvorkommen bei Bülten,
 Lengede und im Salzgitterschen Höhenzug
@@ -81,7 +81,7 @@ Nebengewinnungsanlage, Erzsieberei,
 Erzagglomerieranlage; eine eigene Gicht-
 gaskraftanlage versorgt Bergbau, Hütte
 und Walzwerk und zahlreiche Ortschaften
-mit Strom, und der UÜberschuss an Koke-
+mit Strom, und der Überschuss an Koke-
 reigas wird als Ferngas an das Peiner
 Walzwerk, die Stadt Hiidesheim und die
 Landesgasversorgung Süd-Niedersachsen
@@ -100,7 +100,7 @@ Sonstiger Besitz:
 2 131 werkseigene sowie 722 werksge-
 bundene Wohnungen.
 Beteiligung:
-93, 75 des Stammkapitals der Kalk-
+93,75desStammkapitalsderKalk-
 werk Marienhagen GmbH
 40 % des Stammkapitals der Süntel-
 schotterwerke Dr. Schmidt & Co., K.-G.,
@@ -120,17 +120,17 @@ im Interesse einer möglichst wirtschaft-
 lichen Betriebsführung zu einer Anlage
 zusammengefasst.
 Gerechtsame in Minden: 10 Längenfelder
-mit 9 562 m streichender Länge und 4
+mit 9 562 m streichender Länge und4 4
 Geviertfelder mit 5 350 000 qm. Dane-
 ben besteht ein Pachtvertrag mit der
 Preussag.
-Schachtanlagen: No.thorn und Röcke.
+Schachtanlagen: Noithorn und Röcke.
 Kokerei in Herne: 53 Öfen; Kapazität
 1150 ta/to.
 Sonstiger Besitz:
 1 721 werkseigene Wohnungen.
 Beteiligung:
-75 % des Stammkapitals der Bergarbeiter- -
+75 % des Stammkapitals der Bergarbeiter-
 wohnungsgesellschaft mbH "Glückauf".
 Mit beiden Tochtergesellschaften, die
 100 % im Besitz der Gesellschaft sind,
@@ -144,7 +144,7 @@ stattet ist, ist eine reine Obergesellschaft.
 Ihre Tochtergesellschaften sind:
 die Norddeutsche Schrauben- und Muttern-
 werke AG, Peine, mit einem Grund-
-kapital von DM 2,88 Mio, das sich zu
+kapital von DM 2,88 Mio, das sichzu zu
 92,6 % in Händen der IHAG und zu 7,05 %
 in Händen der Ilseder Hütte befindet;
 das Produktionsprogramm der Gesell-
@@ -153,16 +153,16 @@ und anderes Baugerät sowie Kräne;
 die Peine-Ilseder Handelsgesellschaft
 mbH, deren Stammkapital von DM 4 Mio
 zu 100 % im IHAG-Besitz ist und die im
-Großhandel mit Eisen- und Stahlerzeugnis-
-sen sowie Düngemitteln tätig ist;
+GroßhandelmitEisen-undStahlerzeugnis-
+sensowieDüngemittelntätigist;
 die Peiner Stahlbau und Eisenhandel GmbH,
-Berlin, mit einem Stammkapital von
+Berlin, mnit einem Stammkapital von
 DM 1,2 Mio, das vollständig in Händen
 der IHAG (12,5 %) und der Peine-Ilseder
 Handelsgesellschaft (87, 5 %) ist;
 die Hermann Rüter OHG, Hannover-
-Langenhagen, deren Kapital von DM 2, 04
-Mio zu 88, 24 % der IHAG und zu 11,76 %
+Langenhagen, deren Kapital von DM 2,04
+Mio zu 88,24 % der IHAG und zu 11,76 %
 der Peine-Ilseder Handelsgesellschaft
 gehört und die ebenso wie die vorher ge-
 nannte Gesellschaft die Herstellung von
@@ -194,7 +194,7 @@ Je nom. DM 100.- = 1 Stimme.
 Zahlstellen:
 Gesellschaftskasse;
 Ilseder Bank, Sandow & Co.;
-Commerz- und DiaCconto-Bank AG;
+Commerz- und DiaCsconto-Bank AG;
 sämtlich Peine;
 Norddeutsche Bank AG;
 Commerz- und Disconto-Bank AG;
@@ -208,8 +208,8 @@ Berliner Handels-Gesellschaft;
 sämtlich Berlin;
 Braunschweigische Staatsbank, Braun-
 schweig;
-Norddeutsche Kreditbank AG, Bremen;
-Norddeutsche Bank AG;
+NorddeutscheKreditbankAG,Bremen;
+NorddeutscheBankAG;
 Hamburger Kreditbank AG; beide Celle;
 Deutsche Bank AG West;
 Rhein-Ruhr Bank AG;
@@ -221,12 +221,12 @@ Commerz- und Credit-Bank AG;
 sämtlich Frankfurt (Main) und München;
 Berliner Handels-Gesellschaft;
 Frankfurter Bank;
-Metallgesellschaft AG;
+MetallgesellschaftG AG;
 sämtlich Frankfurt (Main);
 Berenberg, Gossler & Co., Hamburg;
 Bayerische Vereinsbank, München.
 Grundkapital: DM 112 320 000.-
-Umstellung It. H.-V.v.26.11.1952 im
+Umstellung t. H.-V.v.26.11.1952 im
 Verh. 1:1, 75 und sogleich auf DM
 102 240 000.- herabgesetzt.
 Lt. H.-V. vom 8.7.1955 Erhöhung um
@@ -236,7 +236,7 @@ Hannover und im Freiverkehr Berlin
 und Hamburg.
 Ordnungsnr.d.Aktien: 620200.
 Stückelung:
-99 856 St.-Akt. zu je DM 1 000.-
+99 856 St.-Akt. zu je DM 1 000. -
 (Nr. 1 - 99 856)
 124 640 St.-Akt. zu je DM 100.-
 (Nr. 300 001 - 424 640)
@@ -266,7 +266,7 @@ Dividenden auf Stammaktien:
 1950: 0%
 1951: 5% (Div.Sch.Nr. 12)
 1952: 6 % (Div.Sch.Nr. 13)
-1953: 6 %
+1953:6 6 %
 1954: 7% (Div.Sch.Nr. 1)
 1955: 9% (Div.Sch.Nr. 2)
 Zur Geschäftslage:
@@ -276,21 +276,21 @@ zeugnisse.
 Aus den Bilanzen
 31.12.1954 31.12.1955
 (in 1 000 DM)
-Anlagevermögen 234 352 234 570
-Umlaufvermögen 6 560 2 939
+Anlagevermögen234 352 234 570
+Umlaufvermögen6 65602 2939
 (darunter
-Barmittel) 58 75
-Eigenkapital 206 874 206 869
+Barmittel)5875
+Eigenkapital206 874 206 869
 (davon A.-K.) 102 240 102 240
-Fremdkapital 26 696 21 165
-Gewinn nach Vortrag 7 342 9 475
+Fremdkapital2666 696 21 165
+Gewinn nach Vortrag 7 3429 9475
 
 Aus den Gewinn- und Verlust-
 rechnungen
-Löhne und Gehälter 568 620
-Abschreibungen 8 63
-Steuern 5 663 16 519
-Jahresertrag 7 7112 26 342
-Beteiligungserträge 20
+Löhne und Gehälter 568620
+Abschreibungen863
+Steuern5663 63 16 519
+Jahresertrag7 712 26 342
+Beteiligungserträge20 -
 
-HHedwigshüitte Kohlen-und Kokswerke Aktiengesellschaft
+Hedwigshütte Kohlen-undd Kokswerke Aktiengesellschaft

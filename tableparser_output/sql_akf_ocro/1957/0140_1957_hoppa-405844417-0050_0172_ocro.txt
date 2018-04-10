@@ -276,21 +276,21 @@ zeugnisse.
 Aus den Bilanzen
 31.12.1954 31.12.1955
 in 1 000 DM)
-Anlagevermögen 234 352 234 570
-Umlaufvermögen 6 560 2 939
+Anlagevermögen234 352 234 570
+Umlaufvermögen6 560 2 939
 (darunter
 Barmittel)
-Eigenkapital 206 874 206 869
+Eigenkapital206 874 206 869
 (davon A.-K.) 102 240 102 240
-Fremdkapital 26 696 21 165
+Fremdkapital26 696 21 165
 Gewinn nach Vortrag 7 342 9 475
 
 Aus den Gewinn- und Verlust-
 rechnungen
-Löhne und Gehälter 568 620
+Löhne und Gehälter 568620
 Abschreibungen
-Steuern 5 663 16 519
-Jahresertrag 7 712 26 342
+Steuern5 663 16 519
+Jahresertrag7 712 26 342
 Beteiligungserträge
 
 HHedwigshütte Kohlen-undd Kokswerke Aktiengesellschaft

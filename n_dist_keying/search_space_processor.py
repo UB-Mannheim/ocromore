@@ -8,13 +8,14 @@ from configuration.configuration_handler import ConfigurationHandler
 @unique
 class ColumnFeatures(Enum):  # todo this can be normal class
 
-    ONE_CHAR_REST_WILDCARDS  = 1
+    ONE_CHAR_REST_WILDCARDS = 1
     ONE_CHAR_REST_WHITESPACE = 2
     ONLY_NONE = 3
     MOSTLY_REFERENCE_CHAR = 4  # reference char is in there one or more times
     ONLY_WHITESPACE = 5
     ONLY_WILDCARD = 6
     ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS = 7
+    ONLY_WHITESPACE_OR_WILDCARD = 8
 
 
 class SearchSpaceProcessor(object):
@@ -37,16 +38,20 @@ class SearchSpaceProcessor(object):
         #self.similar_chars.append(['1', 'l'])
         self.similar_chars.append(['l', 'j', '1'])
         self.similar_chars.append(['u', 'ü'])
-        self.similar_chars.append(['U', 'Ü'])
+        self.similar_chars.append(['U', 'Ü','O'])
         self.similar_chars.append(['a', 'ä'])
         self.similar_chars.append(['A', 'Ä'])
         self.similar_chars.append([':', ';'])
         self.similar_chars.append(['-', '¬'])
         self.similar_chars.append(['"', "'"])
-
+        self.similar_chars.append(['C', "G"])
         # just for testing ...
         self.similar_chars.append(['.', ','])
-        self.similar_chars.append(['i', 'l']) # 1 l i also possible
+        self.similar_chars.append(['v', 'V'])
+        self.similar_chars.append(['i', 'l', 't', '1', '.']) # 1 l i also possible
+
+
+
         # self.similar_chars.append(['e', 'é'])
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
@@ -125,18 +130,22 @@ class SearchSpaceProcessor(object):
 
         if counter_nones == self.get_y_size():
             features.append(ColumnFeatures.ONLY_NONE.value)
-        elif counter_wildcards == self.get_y_size()-1 and counter_characters == 1:
+        if counter_wildcards == self.get_y_size()-1 and counter_characters == 1:
             features.append((ColumnFeatures.ONE_CHAR_REST_WILDCARDS).value)
-        elif counter_whitespaces == self.get_y_size()-1 and counter_characters == 1:
+        if counter_whitespaces == self.get_y_size()-1 and counter_characters == 1:
             features.append(ColumnFeatures.ONE_CHAR_REST_WHITESPACE.value)
-        elif counter_whitespace_and_wildcards == self.get_y_size()-1 and counter_characters == 1:
+        if counter_whitespace_and_wildcards == self.get_y_size()-1 and counter_characters == 1:
             features.append(ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value)
-        elif counter_reference_char == self.get_y_size()-1 and (counter_whitespaces == 1 or counter_wildcards == 1):
+        if counter_reference_char == self.get_y_size()-1 and (counter_whitespaces == 1 or counter_wildcards == 1):
             features.append(ColumnFeatures.MOSTLY_REFERENCE_CHAR.value)
-        elif counter_whitespaces == self.get_y_size():
+        if counter_whitespaces == self.get_y_size():
             features.append(ColumnFeatures.ONLY_WHITESPACE.value)
-        elif counter_reference_char == self.get_y_size():
+        if counter_reference_char == self.get_y_size():
             features.append(ColumnFeatures.ONLY_WILDCARD.value)
+        if counter_whitespace_and_wildcards == self.get_y_size():
+            features.append(ColumnFeatures.ONLY_WHITESPACE_OR_WILDCARD.value)
+
+
 
         return features, otherchar, otherchar_y_index
 
@@ -205,6 +214,34 @@ class SearchSpaceProcessor(object):
         # self.output_as_scrollbar(search_space) #todo build this in someday
 
         mid_column_feats, otherchar_mid, oc_mid_index = self.validate_column_features(search_space, self.get_middle_index())
+
+        if self._config.MSA_BEST_SEARCHSPACE_MITIGATE_SPACE_HOPS:
+            # some char 'hopped' over a whitespace, get the characters back together
+
+            if ColumnFeatures.ONLY_WHITESPACE_OR_WILDCARD.value in mid_column_feats:
+
+                pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
+                                                                            self.get_pre_middle_index(), reference_char=None)
+                nex_column_feats, otherchar_nex, oc_nex_index = self.validate_column_features(search_space, \
+                                                                            self.get_nex_middle_index(), reference_char=None)
+                if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in pre_column_feats and \
+                    ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in nex_column_feats:
+
+                    if otherchar_nex == otherchar_pre and \
+                        oc_pre_index != oc_nex_index:
+
+                        processed_space, shifted_longtrans = self.shift_from_to(search_space, oc_pre_index, 0, 2)
+
+                        if shifted_longtrans is True:
+
+                            processed_space_confs, shifted_confs_longtrangs = self.shift_from_to(search_space_confs, oc_pre_index, 0 , 2, 0)
+                            change_done = True
+
+                        if change_done:
+                            search_space = processed_space
+                            search_space_confs = processed_space_confs
+
+
 
         if ColumnFeatures.ONE_CHAR_REST_WILDCARDS.value in mid_column_feats \
                 or ColumnFeatures.ONE_CHAR_REST_WHITESPACE.value in mid_column_feats \
