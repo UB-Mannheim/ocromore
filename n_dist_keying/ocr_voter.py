@@ -13,13 +13,14 @@ class SpecialChars():
     umlauts = umlauts_caps.lower()
     umlaut_increment = 18
 
-class ConfidenceScale():
+class ConfidenceModifications():
     # scaling factors for confidence values of engines
     # used if configuration flag MSA_BEST_VOTER_SCALE_ENGINE_CONFIDENCES is active
     tesseract_factor = 1.00
     ocropus_factor = 0.96
     abby_factor = 0.83
 
+    whitespace_push = 100
 
 class OCRVoter(object):
 
@@ -208,30 +209,44 @@ class OCRVoter(object):
     def vote_best_of_three_charconfs_searchspaces(self, line_1, line_2, line_3, index_best, wildcard_character='¦'):
         try:
 
-            def try_obtain_charconf(value, undef_value=0, engine_key=None):
+            def try_obtain_charconf(value, undef_value=0, engine_key=None, one_line_empty=False, is_whitespace=False):
                 if value is None or value is False or value is True:
                     return undef_value
 
+
+                returnvalue = value
+
                 if self.config.MSA_BEST_VOTER_SCALE_ENGINE_CONFIDENCES and engine_key is not None:
                     if engine_key == 'Abbyy':
-                        returnvalue = ConfidenceScale.abby_factor * value
+                        returnvalue = ConfidenceModifications.abby_factor * value
                     elif engine_key == 'Tess':
-                        returnvalue = ConfidenceScale.tesseract_factor * value
+                        returnvalue = ConfidenceModifications.tesseract_factor * value
 
                     elif engine_key == 'Ocro':
-                        returnvalue = ConfidenceScale.ocropus_factor * value
-                    else:
-                        returnvalue = value
+                        returnvalue = ConfidenceModifications.ocropus_factor * value
 
-                    return returnvalue
 
-                return value
+
+                if self.config.MSA_BEST_VOTER_PUSH_LESS_LINES_WHITESPACE_CONFS and one_line_empty\
+                        and is_whitespace:
+                        returnvalue += ConfidenceModifications.whitespace_push
+
+                return returnvalue
 
             def try_obtain_char(charlist, index):
                 if index >= len(charlist):
                     return False  # j4t means not defined
                 else:
                     return charlist[index]
+
+
+
+            def check_if_one_line_empty(lines):
+                for line in lines:
+                    text_wo_wildcards  = line.textstr.replace(wildcard_character, '')
+                    if text_wo_wildcards == "":
+                        return True
+
 
             key_confs_mapping = 'UID'
             key_confs = 'x_confs'
@@ -262,15 +277,31 @@ class OCRVoter(object):
             ssp_chars = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_OUTER, SEARCH_SPACE_X_SEARCH_RANGE, True)
             ssp_confs = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_OUTER, SEARCH_SPACE_X_SEARCH_RANGE, True)
 
+            one_line_empty = False
+            if self.config.MSA_BEST_VOTER_PUSH_LESS_LINES_WHITESPACE_CONFS:
+                one_line_empty = check_if_one_line_empty([line_1, line_2, line_3])
+
+
             range_extension = SEARCH_SPACE_X_SIZE_INNER
             for character_index in range(0, maximum_char_number+range_extension+2):  # check: is list 1 always best reference?
                 if character_index < maximum_char_number:
                     line_vals = [line_1.value(key_char, character_index), line_2.value(key_char, character_index), \
                                  line_3.value(key_char, character_index)]
 
-                    charconf_1 = try_obtain_charconf(line_1.value(key_confs, character_index, wsval=50.0), engine_key = line_1.name[0])
-                    charconf_2 = try_obtain_charconf(line_2.value(key_confs, character_index, wsval=50.0), engine_key = line_2.name[0])
-                    charconf_3 = try_obtain_charconf(line_3.value(key_confs, character_index, wsval=50.0), engine_key = line_3.name[0])
+
+                    l_one_is_whitespace = line_vals[0] == ' '
+                    l_two_is_whitespace = line_vals[1] == ' '
+                    l_thr_is_whitespace = line_vals[2] == ' '
+
+                    charconf_1 = try_obtain_charconf(line_1.value(key_confs, character_index, wsval=50.0),
+                                                     engine_key = line_1.name[0], one_line_empty=one_line_empty,
+                                                     is_whitespace=l_one_is_whitespace)
+                    charconf_2 = try_obtain_charconf(line_2.value(key_confs, character_index, wsval=50.0),
+                                                     engine_key = line_2.name[0], one_line_empty=one_line_empty,
+                                                     is_whitespace=l_two_is_whitespace)
+                    charconf_3 = try_obtain_charconf(line_3.value(key_confs, character_index, wsval=50.0),
+                                                     engine_key = line_3.name[0], one_line_empty=one_line_empty,
+                                                     is_whitespace=l_thr_is_whitespace)
                     charconf_vals = [charconf_1, charconf_2, charconf_3]
                 else:
                     line_vals = [None, None, None]
