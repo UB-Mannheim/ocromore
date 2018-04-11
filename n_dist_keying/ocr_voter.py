@@ -7,10 +7,18 @@ from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 
 class SpecialChars():
+    # increment some special characters confidence when recognized
+    # used if configuration flag MSA_BEST_INCREASE_UMLAUT_CONFIDENCE is active
     umlauts_caps = "ÄÜÖ"
     umlauts = umlauts_caps.lower()
     umlaut_increment = 18
 
+class ConfidenceScale():
+    # scaling factors for confidence values of engines
+    # used if configuration flag MSA_BEST_VOTER_SCALE_ENGINE_CONFIDENCES is active
+    tesseract_factor = 1.00
+    ocropus_factor = 0.96
+    abby_factor = 0.83
 
 
 class OCRVoter(object):
@@ -200,9 +208,23 @@ class OCRVoter(object):
     def vote_best_of_three_charconfs_searchspaces(self, line_1, line_2, line_3, index_best, wildcard_character='¦'):
         try:
 
-            def try_obtain_charconf(value, undef_value=0):
+            def try_obtain_charconf(value, undef_value=0, engine_key=None):
                 if value is None or value is False or value is True:
                     return undef_value
+
+                if self.config.MSA_BEST_VOTER_SCALE_ENGINE_CONFIDENCES and engine_key is not None:
+                    if engine_key == 'Abbyy':
+                        returnvalue = ConfidenceScale.abby_factor * value
+                    elif engine_key == 'Tess':
+                        returnvalue = ConfidenceScale.tesseract_factor * value
+
+                    elif engine_key == 'Ocro':
+                        returnvalue = ConfidenceScale.ocropus_factor * value
+                    else:
+                        returnvalue = value
+
+                    return returnvalue
+
                 return value
 
             def try_obtain_char(charlist, index):
@@ -246,9 +268,9 @@ class OCRVoter(object):
                     line_vals = [line_1.value(key_char, character_index), line_2.value(key_char, character_index), \
                                  line_3.value(key_char, character_index)]
 
-                    charconf_1 = try_obtain_charconf(line_1.value(key_confs, character_index, wsval=50.0))
-                    charconf_2 = try_obtain_charconf(line_2.value(key_confs, character_index, wsval=50.0))
-                    charconf_3 = try_obtain_charconf(line_3.value(key_confs, character_index, wsval=50.0))
+                    charconf_1 = try_obtain_charconf(line_1.value(key_confs, character_index, wsval=50.0), engine_key = line_1.name[0])
+                    charconf_2 = try_obtain_charconf(line_2.value(key_confs, character_index, wsval=50.0), engine_key = line_2.name[0])
+                    charconf_3 = try_obtain_charconf(line_3.value(key_confs, character_index, wsval=50.0), engine_key = line_3.name[0])
                     charconf_vals = [charconf_1, charconf_2, charconf_3]
                 else:
                     line_vals = [None, None, None]

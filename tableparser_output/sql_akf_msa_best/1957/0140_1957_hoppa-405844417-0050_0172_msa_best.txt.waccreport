@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1227   Words
-      65   Misrecognized
-   94.70%  Accuracy
+      63   Misrecognized
+   94.87%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,8 +13,8 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       61        7    88.52        1
-     136       10    92.65        2
-     301       18    94.02        3
+     136       11    91.91        2
+     301       16    94.68        3
      116        4    96.55        4
       97        4    95.88        5
       96        1    98.96        6
@@ -29,13 +29,13 @@ Non-stopwords
       13        2    84.62       15
        5        0   100.00       16
        3        0   100.00       17
-       3        1    66.67       18
+       3        0   100.00       18
       11        0   100.00       19
        4        1    75.00       20
        7        0   100.00       21
        1        0   100.00       25
        1        0   100.00       32
-    1207       65    94.61    Total
+    1207       63    94.78    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -53,14 +53,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-    1227       65    94.70        1
-    1226       93    92.41        2
-    1225      119    90.29        3
-    1224      141    88.48        4
-    1223      161    86.84        5
-    1222      181    85.19        6
-    1221      201    83.54        7
-    1220      220    81.97        8
+    1227       63    94.87        1
+    1226       86    92.99        2
+    1225      108    91.18        3
+    1224      128    89.54        4
+    1223      146    88.06        5
+    1222      164    86.58        6
+    1221      181    85.18        7
+    1220      197    83.85        8
 
 Stopwords
    Count   Missed   %Right   
@@ -80,7 +80,7 @@ Non-stopwords
       11        0   100.00   1
        1        0   100.00   1,2
        1        0   100.00   1,8
-       6        1    83.33   10
+       6        0   100.00   10
        5        0   100.00   100
        3        0   100.00   102
        1        0   100.00   11,76
@@ -158,7 +158,7 @@ Non-stopwords
        4        1    75.00   6
        1        1     0.00   620
        1        0   100.00   620200
-       1        0   100.00   63
+       1        1     0.00   63
        2        0   100.00   640
        1        0   100.00   65
        1        0   100.00   66
@@ -490,7 +490,7 @@ Non-stopwords
        3        0   100.00   mbh
        1        0   100.00   mehl
        1        0   100.00   mens
-       1        1     0.00   metallgesellschaft
+       1        0   100.00   metallgesellschaft
        2        0   100.00   minden
        6        0   100.00   mio
       19        2    89.47   mit
@@ -626,7 +626,7 @@ Non-stopwords
        1        1     0.00   umlaufvermögen
        1        0   100.00   umstellung
        1        0   100.00   unabhängig
-      53        3    94.34   und
+      53        1    98.11   und
        1        0   100.00   union
        1        0   100.00   universaleisen
        1        0   100.00   unter
@@ -674,7 +674,7 @@ Non-stopwords
        1        0   100.00   zahlreiche
        1        0   100.00   zahlstellen
        1        0   100.00   zeugnisse
-      10        0   100.00   zu
+      10        1    90.00   zu
        1        0   100.00   zugeführt
        1        0   100.00   zugehörigen
        3        0   100.00   zum

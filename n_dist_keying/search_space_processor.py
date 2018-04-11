@@ -34,7 +34,7 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append(['o', 'ö'])
         self.similar_chars.append(['<', 'o']) # untested is this really better?
         self.similar_chars.append(['O', 'Ö'])
-        self.similar_chars.append(['0', 'O'])
+        self.similar_chars.append(['0', 'O','9'])
         self.similar_chars.append(['d', 'ö'])
         #self.similar_chars.append(['1', 'l'])
         self.similar_chars.append(['l', 'j', '1'])
@@ -255,8 +255,8 @@ class SearchSpaceProcessor(object):
                     or ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
 
             #if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
-            if otherchar_mid == "l":
-                self._cpr.print("beep!")
+            #if otherchar_mid == "l":
+            #    self._cpr.print("beep!")
 
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)
