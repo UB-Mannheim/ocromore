@@ -44,7 +44,7 @@ for db in dh.db:
     temp = os.path.splitext(db)[0]
     db_keyname = os.path.basename(temp)  # this returns just the filename (wildlife)
 
-    if "1957" != db_keyname: continue
+    #if "1957" != db_keyname: continue
 
     files_gt = filestructs_gt[db_keyname]
     for file in files:
@@ -53,7 +53,7 @@ for db in dh.db:
         table = file
         dbpath = 'sqlite:////' + db
         print("Parsing table: ", table, "in database: ", dbpath)
-        if "0140" not in table: continue
+        #if "0140" not in table: continue
 
         table_ctr += 1
         path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)

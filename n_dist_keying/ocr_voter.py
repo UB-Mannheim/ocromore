@@ -330,7 +330,7 @@ class OCRVoter(object):
                 if character_1 is None or character_2 is None or character_3 is None:
                     # self.cpr.print("test")
                     continue
-                if self.config.MSA_BEST_INCREASE_UMLAUT_CONFIDENCE:
+                if self.config.MSA_BEST_SEARCHSPACE_INCREASE_UMLAUT_CONFIDENCE:
                     clist = [character_1, character_2, character_3]
                     conflist = [charconf_1, charconf_2, charconf_3]
                     conflist_new = self.increase_umlaut_confidence(clist, conflist)

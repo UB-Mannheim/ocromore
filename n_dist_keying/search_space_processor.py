@@ -278,7 +278,7 @@ class SearchSpaceProcessor(object):
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
             if shifted:
 
-                if self._config.MSA_BEST_SERCHSPACE_QUOTE_NORMALIZATION  \
+                if self._config.MSA_BEST_SEARCHSPACE_QUOTE_NORMALIZATION  \
                         and (otherchar_mid == "'" or otherchar_mid == '"'):
 
                     ## this part here merges '' to single ' and corrects the alignment

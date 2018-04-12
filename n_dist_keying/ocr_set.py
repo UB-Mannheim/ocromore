@@ -366,6 +366,19 @@ class OCRset:
             else:
                 result = None
 
+        else:
+            if number_lines_ok != 0:
+
+                text_1 = self.get_line_content(lines[0])
+                text_2 = self.get_line_content(lines[1])  # should be best
+                text_3 = self.get_line_content(lines[2])
+
+                result = self._msa_handler.get_best_of_three(text_1, text_2, text_3,
+                                                             line_1= lines[0], line_2=lines[1], line_3=lines[2],
+                                                             use_charconfs=use_charconfs, use_searchspaces=use_searchspaces)
+            else:
+                result = None
+
         self._best_msa_text = result
 
 

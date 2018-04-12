@@ -945,7 +945,7 @@ class MsaHandler(object):
             self.cpr.printex("tr", tr)
 
 
-    def get_best_of_three(self, text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None):
+    def get_best_of_three(self, text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None, use_searchspaces=False):
         PRINT_RESULTS = True
         wildcard_character = '¦'
 
@@ -962,11 +962,21 @@ class MsaHandler(object):
             line_1.update_textspace(res_final_1, wildcard_character)
             line_2.update_textspace(res_final_2, wildcard_character)
             line_3.update_textspace(res_final_3, wildcard_character)
+
+            if use_searchspaces is False:
+                best, best_stripped = self.ocr_voter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1,
+                                                                                  wildcard_character)  # res two is the best element
+            else:
+                best, best_stripped = self.ocr_voter.vote_best_of_three_charconfs_searchspaces(line_1, line_2, line_3,
+                                                                                               1,
+                                                                                               wildcard_character)
+
             # This is the voting algorithm -
-            best, best_stripped = self.ocr_voter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1, wildcard_character)  # res two is the best element
+            #best, best_stripped = self.ocr_voter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1, wildcard_character)  # res two is the best element
             best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
         else:
+            # todo add searchspaces possibility here
             # This is the voting algorithm -
             best, best_stripped = self.ocr_voter.vote_best_of_three_simple(res_final_1, res_final_2, res_final_3, 1,wildcard_character)  # res two is the best element
             best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
