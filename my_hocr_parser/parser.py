@@ -81,7 +81,7 @@ class HOCRDocument(HOCRElement):
         if not is_path:
             hocr_html = BeautifulSoup(source, 'html.parser')
         else:
-            hocr_html = BeautifulSoup(open(source, 'r').read(), 'html.parser')
+            hocr_html = BeautifulSoup(open(source, 'r', encoding="utf-8").read(), 'html.parser')
 
         super(HOCRDocument, self).__init__(hocr_html, None, 'div', Page.HOCR_PAGE_TAG, Page)
 
