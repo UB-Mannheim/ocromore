@@ -184,7 +184,7 @@ class OCRcomparison:
             os.makedirs(dir)
 
 
-        file = open(filename, 'w+')
+        file = open(filename, 'w+', encoding="utf-8")
 
         previous_dataset_line = None
         previous_dataset_line_index = None
