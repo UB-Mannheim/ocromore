@@ -16,10 +16,15 @@ class SpecialChars():
 class ConfidenceModifications():
     # scaling factors for confidence values of engines
     # used if configuration flag MSA_BEST_VOTER_SCALE_ENGINE_CONFIDENCES is active
+    # 98,02 in 1969
     tesseract_factor = 1.00
     ocropus_factor = 0.96
     abby_factor = 0.83
 
+    # 97,62 in 1969
+    #abby_factor = 0.79
+    #ocropus_factor = 0.98
+    #tesseract_factor = 0.979
     whitespace_push = 100
 
 class OCRVoter(object):

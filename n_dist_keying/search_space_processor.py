@@ -51,10 +51,11 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append(['.', ','])
         self.similar_chars.append(['v', 'V'])
         self.similar_chars.append(['i', 'l', 't', '1', '.']) # 1 l i also possible
+        self.similar_chars.append(['r', 'n'])
+        self.similar_chars.append(['%', 'm'])
+        self.similar_chars.append(['&', 'é'])
+        self.similar_chars.append(['e', 'é'])
 
-
-
-        # self.similar_chars.append(['e', 'é'])
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
         self._cpr = ConditionalPrint(self._config.PRINT_SEARCH_SPACE_PROCESSOR, self._config.PRINT_EXCEPTION_LEVEL,

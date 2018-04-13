@@ -232,7 +232,9 @@ class OCRcomparison:
 
         return return_list
 
-    def do_postcorrection(self, postcorrect_keying, postcorrection_index=0):
+    def do_postcorrection(self, postcorrect_keying, postcorrect_ndist=False,
+                          postcorrect_msa=False , postcorrect_other=False,
+                          postcorrection_index=0):
         """
         Do postcorrection steps for a specified list of sets or for the resulting lines of n_distkeying
         :param postcorrect_keying: if this is true, the lines of n_distkeying are postcorrected, otherwise it's specified by pc_index
@@ -242,11 +244,15 @@ class OCRcomparison:
         if postcorrect_keying is True:
 
             for current_set in self.ocr_sets:
-                sd_line_text = current_set.get_shortest_n_distance_text()
-                if sd_line_text is not None and sd_line_text is not True and sd_line_text is not False:
-                    sd_line_text_corrected = TextCorrector.correct_line_text(sd_line_text)
-                    current_set.set_shortest_n_distance_text(sd_line_text_corrected)
-
-
+                if postcorrect_ndist:
+                    sd_line_text = current_set.get_shortest_n_distance_text()
+                    if sd_line_text is not None and sd_line_text is not True and sd_line_text is not False:
+                        sd_line_text_corrected = TextCorrector.correct_line_text(sd_line_text)
+                        current_set.set_shortest_n_distance_text(sd_line_text_corrected)
+                if postcorrect_msa:
+                    msa_best_text = current_set.get_msa_best_text()
+                    if msa_best_text is not None and msa_best_text is not True and msa_best_text is not False:
+                        msa_best_text_corrected = TextCorrector.correct_line_text(msa_best_text)
+                        current_set.set_msa_best_text(msa_best_text_corrected)
 
 

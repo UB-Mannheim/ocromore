@@ -60,6 +60,9 @@ class OCRset:
     def get_msa_best_text(self):
         return self._best_msa_text
 
+    def set_msa_best_text(self, value):
+        self._best_msa_text = value
+
     @property
     def size(self):
         return self._size

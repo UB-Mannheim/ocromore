@@ -44,7 +44,7 @@ for db in dh.db:
     temp = os.path.splitext(db)[0]
     db_keyname = os.path.basename(temp)  # this returns just the filename (wildlife)
 
-    #if "1957" != db_keyname: continue
+    if "1969" != db_keyname: continue
 
     files_gt = filestructs_gt[db_keyname]
     for file in files:
