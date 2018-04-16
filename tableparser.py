@@ -121,14 +121,23 @@ class TableParser(object):
             ocr_comparison.do_n_distance_keying(self._config.NDIST_USE_WORDWISE_KEYING)   # do the keying, which makes the decision which is the best line for each set
             #ocr_comparison.print_n_distance_keying_results()  # print keying results
             if self._config.KEYING_RESULT_POSTCORRECTION:
-                print("Doing: KEYING_RESULT_POSTCORRECTION")
-                ocr_comparison.do_postcorrection(True)
+                ocr_comparison.do_postcorrection(True, postcorrect_keying=True)
 
 
             ocr_comparison.save_n_distance_keying_results_to_file(self._config.FILEPATH_NDIST_RESULT, self._config.NDIST_MODE_ADD_LINEBREAKS)
 
         if self._config.DO_MSA_BEST:
+            ocr_comparison.do_msa_best_new(self._config.MSA_BEST_USE_N_DIST_PIVOT,
+                                           self._config.MSA_BEST_USE_LONGEST_PIVOT,
+                                           self._config.MSA_BEST_USE_CHARCONFS,
+                                           self._config.MSA_BEST_USE_WORDWISE_MSA,
+                                           self._config.MSA_BEST_USE_SEARCHSPACE,
+                                           self._config.KEYING_RESULT_POSTCORRECTION)
 
+            if self._config.KEYING_RESULT_POSTCORRECTION:
+                ocr_comparison.do_postcorrection(True,postcorrect_msa=True)
+
+            """
             if self._config.MSA_BEST_USE_WORDWISE_MSA:
                 # this is the new msa best invocation
                 ocr_comparison.do_msa_best_new(self._config.MSA_BEST_USE_N_DIST_PIVOT, self._config.MSA_BEST_USE_LONGEST_PIVOT, self._config.MSA_BEST_USE_CHARCONFS, \
@@ -153,7 +162,7 @@ class TableParser(object):
                     else:
                         print("Doing: DO_MSA_BEST without NDIST_PIVOT and CHARCONFS")
                         print("This is not implemented yet")
-
+            """
 
             #ocr_comparison.print_msa_best_results()
 

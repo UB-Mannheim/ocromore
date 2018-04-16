@@ -60,6 +60,9 @@ class OCRset:
     def get_msa_best_text(self):
         return self._best_msa_text
 
+    def set_msa_best_text(self, value):
+        self._best_msa_text = value
+
     @property
     def size(self):
         return self._size
@@ -363,6 +366,19 @@ class OCRset:
         if use_wordwise is True:
             if number_lines_ok != 0:
                 result = self._msa_handler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], use_charconfs, use_searchspaces)
+            else:
+                result = None
+
+        else:
+            if number_lines_ok != 0:
+
+                text_1 = self.get_line_content(lines[0])
+                text_2 = self.get_line_content(lines[1])  # should be best
+                text_3 = self.get_line_content(lines[2])
+
+                result = self._msa_handler.get_best_of_three(text_1, text_2, text_3,
+                                                             line_1= lines[0], line_2=lines[1], line_3=lines[2],
+                                                             use_charconfs=use_charconfs, use_searchspaces=use_searchspaces)
             else:
                 result = None
 

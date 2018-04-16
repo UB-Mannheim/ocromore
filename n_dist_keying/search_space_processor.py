@@ -16,6 +16,7 @@ class ColumnFeatures(Enum):  # todo this can be normal class
     ONLY_WILDCARD = 6
     ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS = 7
     ONLY_WHITESPACE_OR_WILDCARD = 8
+    CONTAINS_REFERENCE_CHAR = 9
 
 
 class SearchSpaceProcessor(object):
@@ -33,10 +34,11 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append(['o', 'ö'])
         self.similar_chars.append(['<', 'o']) # untested is this really better?
         self.similar_chars.append(['O', 'Ö'])
-        self.similar_chars.append(['0', 'O'])
+        self.similar_chars.append(['0', 'O','9'])
         self.similar_chars.append(['d', 'ö'])
         #self.similar_chars.append(['1', 'l'])
         self.similar_chars.append(['l', 'j', '1'])
+        self.similar_chars.append(['I', 'l'])
         self.similar_chars.append(['u', 'ü'])
         self.similar_chars.append(['U', 'Ü','O'])
         self.similar_chars.append(['a', 'ä'])
@@ -44,15 +46,16 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append([':', ';'])
         self.similar_chars.append(['-', '¬'])
         self.similar_chars.append(['"', "'"])
-        self.similar_chars.append(['C', "G"])
+        self.similar_chars.append(['C', "G","c"])
         # just for testing ...
         self.similar_chars.append(['.', ','])
         self.similar_chars.append(['v', 'V'])
         self.similar_chars.append(['i', 'l', 't', '1', '.']) # 1 l i also possible
+        self.similar_chars.append(['r', 'n'])
+        self.similar_chars.append(['%', 'm'])
+        self.similar_chars.append(['&', 'é'])
+        self.similar_chars.append(['e', 'é'])
 
-
-
-        # self.similar_chars.append(['e', 'é'])
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
         self._cpr = ConditionalPrint(self._config.PRINT_SEARCH_SPACE_PROCESSOR, self._config.PRINT_EXCEPTION_LEVEL,
@@ -62,11 +65,15 @@ class SearchSpaceProcessor(object):
     def get_middle_index(self):
         return self._middle_index
 
-    def get_simchars_for_char(self, char):
+    def get_simchars_for_char(self, char): # todo similar chars for each char could be preprocessed once at start
+        simchars_return_array = []
 
         for simchars in self.similar_chars:
             if char in simchars:
-                return simchars
+                simchars_return_array.extend(simchars)
+
+        if len(simchars_return_array) >= 1:
+            return simchars_return_array
 
         return [char]
 
@@ -144,7 +151,8 @@ class SearchSpaceProcessor(object):
             features.append(ColumnFeatures.ONLY_WILDCARD.value)
         if counter_whitespace_and_wildcards == self.get_y_size():
             features.append(ColumnFeatures.ONLY_WHITESPACE_OR_WILDCARD.value)
-
+        if counter_reference_char >= 1:
+            features.append(ColumnFeatures.CONTAINS_REFERENCE_CHAR.value)
 
 
         return features, otherchar, otherchar_y_index
@@ -248,8 +256,8 @@ class SearchSpaceProcessor(object):
                     or ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
 
             #if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in mid_column_feats:
-            if otherchar_mid =="'":
-                self._cpr.print("beep!")
+            #if otherchar_mid == "l":
+            #    self._cpr.print("beep!")
 
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)
@@ -258,15 +266,20 @@ class SearchSpaceProcessor(object):
 
             shifted = False
             left_right = None
-            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in pre_column_feats:
+            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in pre_column_feats\
+                    or (ColumnFeatures.CONTAINS_REFERENCE_CHAR.value in pre_column_feats
+                        and ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in pre_column_feats):
+
                 left_right = True
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
-            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in nex_column_feats:
+            if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in nex_column_feats \
+                    or (ColumnFeatures.CONTAINS_REFERENCE_CHAR.value in nex_column_feats
+                        and ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in nex_column_feats):
                 left_right = False
                 processed_space, shifted = self.shift_from_mid(search_space, oc_mid_index, left_right)
             if shifted:
 
-                if self._config.MSA_BEST_SERCHSPACE_QUOTE_NORMALIZATION  \
+                if self._config.MSA_BEST_SEARCHSPACE_QUOTE_NORMALIZATION  \
                         and (otherchar_mid == "'" or otherchar_mid == '"'):
 
                     ## this part here merges '' to single ' and corrects the alignment
@@ -289,7 +302,7 @@ class SearchSpaceProcessor(object):
 
                 processed_space_confs, shifted_confs = self.shift_from_mid(search_space_confs, oc_mid_index,left_right, 0)
                 change_done = True
-        elif ColumnFeatures.ONLY_WHITESPACE.value in mid_column_feats or ColumnFeatures.MOSTLY_REFERENCE_CHAR:
+        elif ColumnFeatures.ONLY_WHITESPACE.value in mid_column_feats or ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in mid_column_feats:
             # this case checks for 'far-transitions' of similar chars and does them if possible
             pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
                                                                         self.get_pre_middle_index(), otherchar_mid, use_similar_chars)
