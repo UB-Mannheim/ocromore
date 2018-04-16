@@ -26,6 +26,7 @@ class IsriHandler(object):
 
 
     def accuracy(self, path_correctfile, path_generatedfile, path_accuracy_report=""):
+
             try:
                 call(["accuracy", path_correctfile, path_generatedfile, path_accuracy_report])
             except Exception as ex:
@@ -245,8 +246,6 @@ class IsriHandler(object):
             calls = ["nonstopacc"]
             calls.append(path_stopwordfile)
             calls.append(path_wordacc_report)
-
-
 
             if path_output_xyfile is None:
                 call(calls)

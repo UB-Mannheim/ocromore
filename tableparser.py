@@ -173,9 +173,50 @@ class TableParser(object):
             ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
             return created_path, additional_created_files
 
-    def validate_table_against_gt(self, filepath_table, filepath_groundtruth):
+
+    def create_reduced_file(self, filepath, ignore_whitespace, ignore_emptyline, ignore_tabs):
+        file = open(filepath, 'r')
+        #read_data = file.read()
+        final_data = []
+
+        for line in file:
+            linetocheck = line
+
+            if ignore_whitespace:
+                linetocheck = linetocheck.replace(" ","")
+
+            if ignore_tabs:
+                linetocheck = linetocheck.replace("\t", "")
+
+            if ignore_emptyline and not linetocheck.isspace():
+                final_data.append(linetocheck)
+
+
+
+
+
+        new_filepath_table = filepath + ".red"
+        file_new = open(new_filepath_table, 'w')
+        file_new.writelines(final_data)
+        file_new.close()
+        file.close()
+        return new_filepath_table
+
+
+    def validate_table_against_gt(self, filepath_table, filepath_groundtruth, ignore_whitespace=True, ignore_emptyline=True, ignore_tabs=True):
         if self._config.DO_ISRI_VAL is True:
             isri_handler = IsriHandler()
+
+            ignore_whitespace = self._config.ISRI_IGNORE_SPACES
+            ignore_emptyline = self._config.ISRI_IGNORE_EMPTY_LINES
+            ignore_tabs = self._config.ISRI_IGNORE_TABS
+
+            
+            if ignore_whitespace:
+                filepath_table = self.create_reduced_file(filepath_table, ignore_whitespace, ignore_emptyline, ignore_tabs)
+                filepath_groundtruth = self.create_reduced_file(filepath_groundtruth, ignore_whitespace, ignore_emptyline, ignore_tabs)
+
+
 
             # Test 'accuracy'
             isri_handler.accuracy(filepath_groundtruth, filepath_table, filepath_table+".accreport")

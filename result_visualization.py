@@ -45,7 +45,16 @@ for db in filestructs_output:
 
         if foundgt is not None:
             print("do comparison here")
-            process = tableparser.display_stuff(filestruct.path, foundgt, firstcall=firstcall)
+
+
+            fs_path = filestruct.path
+            foundgt_path  = foundgt
+            if config.SHOW_REDUCED_RESULTS:
+                fs_path += ".red"
+                foundgt_path += ".red"
+
+
+            process = tableparser.display_stuff(fs_path, foundgt_path, firstcall=firstcall)
             if firstcall is True:
                 sleep(0.100)  # sleep for 100ms until meld finally appeared
             firstcall = False
