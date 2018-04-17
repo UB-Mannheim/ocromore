@@ -17,7 +17,7 @@ config = config_handler.get_config()
 
 # Read hocr and create sql-db
 
-dbdir = str(Path(config.DBDIR).absolute())
+dbdir = str(Path(config.DBDIR_READER).absolute())
 
 
 # TABLENAME_POS   = 1 #necessary
@@ -37,7 +37,7 @@ test = dh.get_files()
 #dh.update_db()
 #dh.work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
-if not config.HOCR2SQL is True:
+if config.HOCR2SQL is True:
     report_conv = dh.parse_to_db(delete_and_create_dir=config.DELETE_AND_CREATE_DBDIR)
 
 dh.update_db()

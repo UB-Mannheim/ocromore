@@ -42,7 +42,6 @@ class OCRcomparison:
         sorted_sets = sorted(self.ocr_sets, key=take_y_mean, reverse=False)
         self.ocr_sets = sorted_sets
 
-
     def unspace_list(self, list_index_to_unspace, unspaced_list_index):
         """
         apply the unspacing algorithm to one of the lists, take another list as
@@ -176,7 +175,6 @@ class OCRcomparison:
 
         file.close()
 
-
     def save_dataset_to_file(self, filename, set_index, mode_add_linebreaks = False, other_set=""):
 
         dir = os.path.dirname(filename)
@@ -214,6 +212,66 @@ class OCRcomparison:
             if dataset_text is not None and dataset_text is not False:
                 file.write(dataset_text + "\n")
 
+        file.close()
+
+    def save_dataset_to_hocr(self, filename, set_index, mode_add_linebreaks = False, other_set=""):
+        filename += ".hocr"
+        dir = os.path.dirname(filename)
+        if not os.path.exists(dir):
+            os.makedirs(dir)
+
+        file = open(filename, 'w+', encoding="utf-8")
+
+        for lidx, current_set in enumerate(self.ocr_sets):
+            if other_set == 'msa_best':
+                dataset_text = current_set.get_msa_best_text()
+                dataset_bbox = None
+                name = ["msa","combined"]
+                for lines in current_set._set_lines:
+                    ldata = lines.data
+                    if dataset_bbox is None and ldata["line_x0"]:
+                        dataset_bbox = [min(ldata["line_x0"]), min(ldata["line_y0"]), max(ldata["line_x1"]),
+                                        max(ldata["line_y1"])]
+                    elif ldata["line_x0"]:
+                        if min(ldata["line_x0"]) < dataset_bbox[0]:
+                            dataset_bbox[0] = min(ldata["line_x0"])
+                        if min(ldata["line_y0"]) < dataset_bbox[1]:
+                            dataset_bbox[1] = min(ldata["line_y0"])
+                        if max(ldata["line_x1"]) > dataset_bbox[2]:
+                            dataset_bbox[2] = max(ldata["line_x1"])
+                        if max(ldata["line_y1"]) > dataset_bbox[3]:
+                            dataset_bbox[3] = max(ldata["line_y1"])
+            else:
+                dataset_text = current_set.get_line_set_value_text(set_index)
+                dataset_bbox = None
+                ldata = current_set._set_lines[set_index].data
+                name =  current_set._set_lines[set_index].name
+                if ldata["line_x0"]:
+                    dataset_bbox = [min(ldata["line_x0"]), min(ldata["line_y0"]), max(ldata["line_x1"]),
+                                    max(ldata["line_y1"])]
+
+            if lidx == 0:
+                hocr_header = f'''<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <title>OCR Results</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name='AKF-OCR' content='{name[0]}-{name[1]}' />
+        <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
+    </head>
+    <body>
+        <div class='ocr_page' title='image /media/sf_ShareVB/many_years_firmprofiles_output/long//1961/ocropy/akfmodel/akfmodel_0037_1961_230-6_B_054_0072/0001.bin.png; bbox 0 0 2034 20632'>\n'''
+                file.write(hocr_header)
+            # do not print lines which are mostly recognized with no content at the moment
+            if dataset_text is not None and dataset_text is not False and dataset_bbox:
+                dtext = f'''            <span class ='ocr_line' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' ><br/>
+                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{dataset_text}</span > 
+            </span>\n'''
+                file.write(dtext)
+            if lidx == len(self.ocr_sets)-1:
+                file.write("\t\t</div>\n\t</body>\n</html>")
         file.close()
 
     def export_text_lines(self):

@@ -215,8 +215,8 @@ class DatabaseHandler(object):
                                 else:
                                     for items in dfSelO[lidx]:
                                         if itemlen is None:
-                                            itemlen = len(items.textstr)
-                                        if not round(len(items.textstr)*0.5) < itemlen < round(len(items.textstr)*1.5):
+                                            itemlen = len(items.textstr.replace(" ",""))
+                                        if not round(len(items.textstr.replace(" ",""))*0.5) < itemlen < round(len(items.textstr.replace(" ",""))*1.5):
                                             if CLEAN_ABBYY:
                                                 idxarr = dataframe_wrapper.df.loc[("Abbyy",slice(None),slice(None),slice(None),slice(None))].loc[dataframe_wrapper.df["calc_line_idx"] == lidx].index
                                                 dataframe_wrapper.df.drop(idxarr ,inplace=True)
