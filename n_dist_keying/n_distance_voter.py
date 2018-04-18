@@ -1,5 +1,7 @@
 from n_dist_keying.distance_storage import DistanceStorage
 from n_dist_keying.text_comparator import TextComparator
+import numpy as np
+
 
 class NDistanceVoter(object):
 
@@ -17,20 +19,41 @@ class NDistanceVoter(object):
         self.d_storage = DistanceStorage()
         self._texts = []
 
-    def compare_texts(self):
+    def compare_texts(self, take_longest_on_empty_lines=False, vote_without_spaces=False):
         """
         Compares an array of texts and gives the n_distance vote
         :param texts:
         :return:
         """
+        texts_loc = self.get_texts()
+        if vote_without_spaces:
+            for text_index, text in enumerate(texts_loc):
+                texts_loc[text_index] = text.replace(" ","")
+
+
+        if take_longest_on_empty_lines is True:
+            texts = self.get_texts()
+            textlens = []
+            number_empty = 0
+            for text in texts:
+                textlens.append(len(text))
+                if text.strip(" ") == "":
+                    number_empty += 1
+
+            too_less_text = (len(texts)-number_empty) <= 2
+            if too_less_text:
+                # if too less strings to compare, just take the longest string as result
+                selected_index = np.argmax(textlens)
+                return selected_index
+
 
         # do a text-wise comparison, which calculates a distance between all texts in this set
-        for text_index, text in enumerate(self.get_texts()):
+        for text_index, text in enumerate(texts_loc):
             self.compare_with_other_texts(text_index, text)
 
 
         # calculate the distance from each item in set to all others
-        for text_index, text in enumerate(self.get_texts()):
+        for text_index, text in enumerate(texts_loc):
             self.d_storage.calculate_accumulated_distance(text_index)
 
         # get the index of the item in set, which has the shortest distance to all others

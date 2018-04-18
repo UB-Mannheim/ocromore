@@ -46,7 +46,7 @@ for db in dh.db:
     temp = os.path.splitext(db)[0]
     db_keyname = os.path.basename(temp)  # this returns just the filename (wildlife)
 
-    # if "1969" != db_keyname: continue
+    #if "1969" != db_keyname: continue
 
     files_gt = filestructs_gt[db_keyname]
     for file in files:
@@ -80,4 +80,7 @@ if config.SUMMARIZE_ISRI_REPORTS is True:
     tableparser.create_isri_reports(dh.db, filestructs_gt, "abbyy")
     tableparser.create_isri_reports(dh.db, filestructs_gt, "ocro")
     tableparser.create_isri_reports(dh.db, filestructs_gt, "tess")
-    tableparser.create_isri_reports(dh.db, filestructs_gt, "msa_best")
+    if config.DO_N_DIST_KEYING:
+        tableparser.create_isri_reports(dh.db, filestructs_gt, "ndist_keying")
+    if config.DO_MSA_BEST:
+        tableparser.create_isri_reports(dh.db, filestructs_gt, "msa_best")

@@ -192,6 +192,8 @@ class OCRcomparison:
         for current_set in self.ocr_sets:
             if other_set == 'msa_best':
                 dataset_text = current_set.get_msa_best_text()
+            elif other_set == 'ndist_keying':
+                dataset_text = current_set.get_shortest_n_distance_text()
             else:
                 dataset_text = current_set.get_line_set_value_text(set_index)
 
@@ -232,7 +234,7 @@ class OCRcomparison:
 
         return return_list
 
-    def do_postcorrection(self, postcorrect_keying, postcorrect_ndist=False,
+    def do_postcorrection(self, postcorrect_keying=False, postcorrect_ndist=False,
                           postcorrect_msa=False , postcorrect_other=False,
                           postcorrection_index=0):
         """
