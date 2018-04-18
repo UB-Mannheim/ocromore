@@ -227,7 +227,7 @@ class OCRcomparison:
             if imgname[-3:] == "msa":
                 imgname = imgname[:-3]
             imgfolder = filename.split("/")[-2]
-            imgpath = IMG_PATH+"**/"+imgfolder+"/"+imgname+"*"
+            imgpath = IMG_PATH+"**/"+imgfolder+"/**/"+imgname+"*"
             imgdirs = list(chain.from_iterable(glob.iglob(imgpath+ filetype, recursive=True) for filetype in IMG_FILETYPES))
             if imgdirs is not None and len(imgdirs) > 0:
                 imgdir = imgdirs[0]
