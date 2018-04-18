@@ -175,6 +175,8 @@ class TableParser(object):
 
 
     def create_reduced_file(self, filepath, ignore_whitespace, ignore_emptyline, ignore_tabs):
+
+
         file = open(filepath, 'r')
         #read_data = file.read()
         final_data = []
