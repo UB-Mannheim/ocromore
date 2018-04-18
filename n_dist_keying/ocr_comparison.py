@@ -221,7 +221,7 @@ class OCRcomparison:
             os.makedirs(dir)
 
         file = open(filename, 'w+', encoding="utf-8")
-
+        wrote_header = False
         for lidx, current_set in enumerate(self.ocr_sets):
             if lidx == 0:
                 file_cords = self.ocr_sets[len(self.ocr_sets) - 1]._set_lines[0].data
@@ -252,22 +252,23 @@ class OCRcomparison:
                     dataset_bbox = [min(ldata["line_x0"]), min(ldata["line_y0"]), max(ldata["line_x1"]),
                                     max(ldata["line_y1"])]
 
-            if lidx == 0:
-                hocr_header = f'''<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <title>OCR Results</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name='AKF-OCR' content='{name[0]}-{name[1]}' />
-        <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
-    </head>
-    <body>
-        <div class='ocr_page' title='image None; bbox 0 0 {int(file_cords["line_x1"][0])} {int(file_cords["line_y1"][0])}'>\n'''
-                file.write(hocr_header)
             # do not print lines which are mostly recognized with no content at the moment
             if dataset_text is not None and dataset_text is not False and dataset_bbox:
+                if wrote_header == False:
+                    wrote_header = True
+                    hocr_header = f'''<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+            <title>OCR Results</title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name='AKF-OCR' content='{name[0]}-{name[1]}' />
+            <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
+        </head>
+        <body>
+            <div class='ocr_page' title='image None; bbox 0 0 {int(file_cords["line_x1"][0])} {int(file_cords["line_y1"][0])}'>\n'''
+                    file.write(hocr_header)
                 dtext = f'''            <span class ='ocr_line' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' ><br/>
                 <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{dataset_text}</span > 
             </span>\n'''
