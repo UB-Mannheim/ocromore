@@ -104,7 +104,7 @@ class TableParser(object):
             output_path_abbyy = self.get_basic_output_directory(dbdir_abs, "abbyy") + "/" + table + "_abbyy.txt"
             output_path_tess = self.get_basic_output_directory(dbdir_abs, "tess") + "/" + table + "_tess.txt"
             output_path_ocro = self.get_basic_output_directory(dbdir_abs, "ocro") + "/" + table + "_ocro.txt"
-
+            #TODO:write to config
             WRITE_HOCR=True
             ocr_comparison.save_dataset_to_file(output_path_abbyy, 0, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_tess, 1, mode_add_linebreaks=False)

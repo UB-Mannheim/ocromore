@@ -3,6 +3,8 @@ from utils.random import Random
 from n_dist_keying.text_corrector import TextCorrector
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
+import glob
+from itertools import chain
 
 import os
 
@@ -215,6 +217,21 @@ class OCRcomparison:
         file.close()
 
     def save_dataset_to_hocr(self, filename, set_index, mode_add_linebreaks = False, other_set=""):
+        #TODO: Import const to config or/and rework imagepath generating
+        filename = os.path.normpath(filename).replace("\\","/")
+        IMG_PATH = "/media/sf_ShareVB/many_years_firmprofiles/"
+        IMG_FILETYPES = [".jpg"]
+        imgdir = "None"
+        if IMG_PATH != "":
+            imgname = "_".join(filename.split("/")[-1].replace("msa_best","").split("_")[:-1])
+            if imgname[-3:] == "msa":
+                imgname = imgname[:-3]
+            imgfolder = filename.split("/")[-2]
+            imgpath = IMG_PATH+"**/"+imgfolder+"/"+imgname+"*"
+            imgdirs = list(chain.from_iterable(glob.iglob(imgpath+ filetype, recursive=True) for filetype in IMG_FILETYPES))
+            if imgdirs is not None and len(imgdirs) > 0:
+                imgdir = imgdirs[0]
+
         filename += ".hocr"
         dir = os.path.dirname(filename)
         if not os.path.exists(dir):
@@ -267,7 +284,7 @@ class OCRcomparison:
             <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
         </head>
         <body>
-            <div class='ocr_page' title='image None; bbox 0 0 {int(file_cords["line_x1"][0])} {int(file_cords["line_y1"][0])}'>\n'''
+            <div class='ocr_page' title='image {imgdir}; bbox 0 0 {int(file_cords["line_x1"][0])} {int(file_cords["line_y1"][0])}'>\n'''
                     file.write(hocr_header)
                 dtext = f'''            <span class ='ocr_line' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' ><br/>
                 <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{dataset_text}</span > 
