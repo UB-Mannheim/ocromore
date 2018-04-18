@@ -27,6 +27,8 @@ def get_xml_document(fpath):
         # The information are passed to the "Document"-Obj
         for item in root.iter():
             clean_tag = item.tag.split("}")[-1]
+            if doc.bbox is None and "width" in item.attrib:
+                doc.bbox= [0,0,item.attrib["width"],item.attrib["height"]]
             #print(clean_tag)
             if clean_tag == "line":
                 if doc.page != [] and line is not None:
@@ -74,6 +76,7 @@ class Document():
     def __init__(self):
         self.ocr = "AbbyyXML"
         self.page = []
+        self.bbox = None
 
 class Line():
 

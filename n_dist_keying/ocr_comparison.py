@@ -223,6 +223,8 @@ class OCRcomparison:
         file = open(filename, 'w+', encoding="utf-8")
 
         for lidx, current_set in enumerate(self.ocr_sets):
+            if lidx == 0:
+                file_cords = self.ocr_sets[len(self.ocr_sets) - 1]._set_lines[0].data
             if other_set == 'msa_best':
                 dataset_text = current_set.get_msa_best_text()
                 dataset_bbox = None
@@ -262,7 +264,7 @@ class OCRcomparison:
         <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
     </head>
     <body>
-        <div class='ocr_page' title='image /media/sf_ShareVB/many_years_firmprofiles_output/long//1961/ocropy/akfmodel/akfmodel_0037_1961_230-6_B_054_0072/0001.bin.png; bbox 0 0 2034 20632'>\n'''
+        <div class='ocr_page' title='image None; bbox 0 0 {int(file_cords["line_x1"][0])} {int(file_cords["line_y1"][0])}'>\n'''
                 file.write(hocr_header)
             # do not print lines which are mostly recognized with no content at the moment
             if dataset_text is not None and dataset_text is not False and dataset_bbox:
@@ -270,8 +272,9 @@ class OCRcomparison:
                 <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{dataset_text}</span > 
             </span>\n'''
                 file.write(dtext)
-            if lidx == len(self.ocr_sets)-1:
+            if lidx == len(self.ocr_sets)-2:
                 file.write("\t\t</div>\n\t</body>\n</html>")
+                break
         file.close()
 
     def export_text_lines(self):
