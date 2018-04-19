@@ -1,4 +1,3 @@
-from utils.conditional_print import ConditionalPrint
 from utils.queues import SearchSpace
 from n_dist_keying.search_space_processor import SearchSpaceProcessor
 import numpy as np
@@ -11,7 +10,9 @@ class SpecialChars():
     # used if configuration flag MSA_BEST_INCREASE_UMLAUT_CONFIDENCE is active
     umlauts_caps = "ÄÜÖ"
     umlauts = umlauts_caps.lower()
+    special_chars = "éáó£"
     umlaut_increment = 18
+    special_char_increment = 27
 
 class ConfidenceModifications():
     # scaling factors for confidence values of engines
@@ -202,6 +203,8 @@ class OCRVoter(object):
         for char_index, char in enumerate(chars):
             if char in SpecialChars.umlauts_caps or char in SpecialChars.umlauts:
                 cconf_to_add = charconfs[char_index] + SpecialChars.umlaut_increment
+            elif char in SpecialChars.special_chars:
+                cconf_to_add = charconfs[char_index] + SpecialChars.special_char_increment
             else:
                 cconf_to_add = charconfs[char_index]
 
