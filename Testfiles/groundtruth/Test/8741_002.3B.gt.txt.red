@@ -1,0 +1,16 @@
+Asoneexampleoftheoptionsyoumaysoonenjoy,withChaseyou
+canactuallychoosewhenyourpaymentisdueeachmonth.Andof
+course,you'llbeabletocallour24-hourCustomerServicefor
+assistancewhenevertheneedarises.
+Sotakeadvantageofthisrareopportunity,andacceptthis
+preapprovedofferpromptly.Ifyouwishtotransferyourcurrent
+higher-ratebalancestoyournew,lower-rateChaseaccount,
+remembertocompletetheBalanceTransferformonthebackof
+yourAcceptanceCertificate.
+Thesooneryourespond,thesooneryou'llhaveatrulysuperior
+Goldcardataremarkablylowcost.
+Yourstruly,
+P.S.YouarepreapprovedforaChaseGoldVisawith
+NOANNUALFEEandalow,variableAPRthat'snowjust
+9.4%.Butthisisaspecial,limited-timeoffer,soI
+urgeyoutorespondnow--beforeitexpires.

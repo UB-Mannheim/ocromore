@@ -1,0 +1,3 @@
+[submodule "isri-ocr-evaluation-tools"]
+	path = isri-ocr-evaluation-tools
+	url = https://github.com/eddieantonio/isri-ocr-evaluation-tools

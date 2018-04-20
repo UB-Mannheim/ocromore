@@ -1,0 +1,4 @@
+ItisapleasuretowelcomeyouasagraduatestudenttotheUniversityofTexasatAustin.
+Sincerely,
+ShirleyF.Binder
+DirectorofAdmissions

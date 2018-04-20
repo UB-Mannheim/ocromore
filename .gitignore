@@ -1,0 +1,8 @@
+.oneprof/
+.pynative/
+.idea/
+isri-ocr-evaluation-tools
+custom_ocropus_scripts
+Testfiles1/charconfs/
+Testfiles1/sql/
+Testfiles1/sql_akf/

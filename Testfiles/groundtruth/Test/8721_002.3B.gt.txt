@@ -1,0 +1,50 @@
+April 16, 1993
+
+
+Page Two
+
+OBJECT.MGR
+
+	OBJECT.MGR lets your students graphiclly browse the objects that are a part of
+their simulation models.  This allows them to quickly look at program organization,
+Module interdependencies, and Object hierarchy.
+
+        In addition to MODSIM II, we provide five other excellent products to the
+academic community:
+
+~       SIMSCRIPT II.5 is a high-level programming and simulation language with built-
+        in graphics.
+~       NETWORK II.5 uses simulation with animation to predict computer-
+        communications network performance with no programming delays.
+~       L~NET II.5 uses simulation with animation to predict Local Area Network
+        performance with no programming delays.
+~       COMNET II.5 uses simulation with animation to predict wide-area voice and data
+        network performance with no programming delays.
+~       SIMFACTORY II.5/SIMPROCESS uses simulation to predict factory and
+        business process performance with no programming delays.
+
+
+OUR OFFER TO YOU
+
+The following complete teaching packages are now available to you:
+
+        1.	Software Package
+                MODSIM II or our other products:  SIMSCRIPT II.5, NETWORK II.5,
+                L~NET II.5, COMNET II.5, and SIMFACTORY II.5/SIMPROCESS.
+
+        2.      Books
+                A complete set of documentation and paper copies of our course
+                transparencies .
+
+        3.      Support
+                Complete support from our developers.  You get immediate help when
+                questions or problems arise.
+
+        4.      Special training offer -- if you act now
+                One free enrollment in any scheduled class for a university faculty or staff
+                member.  This alone is worth $950.  Classes fill quickly -- act now to avoid
+                disappointment.
+
+
+CACI PRODUCTS COMPANY:  3333 NORTH TORREY PINES CT., LA JOLLA, CA  92037, TEL. (619) 457-9681, FAX (619) 457-1184
+A SUBSIDIARY OF CACI INTERNATIONAL ~ OFFICES THROUGHOUT THE UNITED STATES AND EUROPE

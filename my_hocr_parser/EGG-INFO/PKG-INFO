@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: hocr-parser
+Version: 0.1
+Summary: HOCR Specification Python Parser
+Home-page: https://github.com/athento/hocr-parser
+Author: Athento
+Author-email: rh@athento.com
+License: Apache 2.0 License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: OCR

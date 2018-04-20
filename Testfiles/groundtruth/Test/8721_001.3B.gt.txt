@@ -1,0 +1,55 @@
+CACI
+PRODUCTS COMPANY
+
+3333 North Torrey Pines Court
+La Jolla, California 92037
+
+Tel (619) 457-9681
+Fax (619) 457-1184
+
+
+April 16, 1993
+
+
+To:	Educators using Simulation
+
+
+Re:     MODSIM II with SIMGRAPHICS II, and the new graphical browser
+        OBJECT.MGR
+
+
+        CACI has always recognized the benefit of having its state-of-the-art systems used
+by universities for research and teaching.  It is our experience that students demand the
+tools that they know will solve their analysis problems when they go into industry.
+
+        For that reason we are now offering faculty members a complete teaching package
+with support for only a low distribution fee.
+
+        In addition to MODSIM II, we provide training, support, complete documentation,
+and sample problems -- everything you need to conveniently incorporate the new object-
+oriented technology into your teaching and research.
+
+        More than 3,750 university faculty members have already taken us up on our offer
+of MODSIM II or other products.  They have found that the ease of use and automatic
+error checking built into our systems greatly simplify the teaching of object-oriented and
+graphics concepts.  In addition, because MODSIM II can handle complex problems, they
+often select it for graduate studies and research.
+
+MODSIM II with SIMGRAPHICS
+
+        MODSIM II is a high-level object-oriented language with built-in graphics.
+
+        As an object-oriented programming language, MODSIM II is at a higher level
+than C++, just as FORTRAN is at a higher level than assembly language.  MODSIM II
+supports multiple inheritance and dynamic object creation.  Objects may redefine
+methods, and communicate through message passing.  The compiler is itself written in
+MODSIM II.
+
+        If your interest is simulation, MODSIM II has all the constructs you need.
+
+        SIMGRAPHICS lets your students define input forms, graphs and icons for
+animation with no programming.  This makes their results easy-to-understand.
+
+
+CACI PRODUCTS COMPANY:  3333 NORTH TORREY PINES CT., LA JOLLA, CA 92037,  TEL. (619) 457-9681, FAX (619) 457-1184
+A SUBSIDIARY OF CACI INTERNATIONAL ~ OFFICES THROUGHOUT THE UNITED STATES AND EUROPE

@@ -1,0 +1,8 @@
+setup.py
+hocr_parser.egg-info/PKG-INFO
+hocr_parser.egg-info/SOURCES.txt
+hocr_parser.egg-info/dependency_links.txt
+hocr_parser.egg-info/requires.txt
+hocr_parser.egg-info/top_level.txt
+src/hocr_parser/__init__.py
+src/hocr_parser/parser.py

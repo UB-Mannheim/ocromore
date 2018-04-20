@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>OCR Results</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="ocr-system" content="ocropy-1.3.3" />
+<meta name="ocr-capabilities" content="ocr_line ocr_page" />
+</head>
+<body>
+
+<div class='ocr_page' title='image /media/sf_ShareVB/many_years_firmprofiles_output/bus.3B//1/ocropy/2018-02-16_T16H28M/8591_002/0001.bin.png; bbox 0 0 2560 3300'>
+    <span class='ocr_line' title='bbox 424 316 2238 362'><br />
+        <span class='ocrx_word' title='bbox 424 316 469 362; x_wconf 77.1821285399; x_confs 77.8356010021 99.1604452798'>It</span>
+        <span class='ocrx_word' title='bbox 469 316 516 362; x_wconf 98.8111128685; x_confs 99.7216582733 99.0869130933'>is</span>
+        <span class='ocrx_word' title='bbox 516 316 551 362; x_wconf 99.2279335171; x_confs 99.2279335171'>a</span>
+        <span class='ocrx_word' title='bbox 551 316 734 362; x_wconf 92.9184988285; x_confs 99.0092602075 99.5374914792 98.6840310046 98.6272363914 99.3273650412 99.1497489816 99.670867401 98.6886393317'>pleasure</span>
+        <span class='ocrx_word' title='bbox 734 316 793 362; x_wconf 97.650259675; x_confs 98.8809211202 98.7554106179'>to</span>
+        <span class='ocrx_word' title='bbox 793 316 990 362; x_wconf 93.6792935768; x_confs 99.0196423991 98.7537481886 99.6469355053 99.2430000781 99.0714832138 99.1075347929 98.6619046725'>welcome</span>
+        <span class='ocrx_word' title='bbox 990 316 1079 362; x_wconf 94.6640255732; x_confs 98.43037594 98.4271671397 97.7104108206'>you</span>
+        <span class='ocrx_word' title='bbox 1079 316 1136 362; x_wconf 98.2367862852; x_confs 99.6082276193 98.6231646051'>as</span>
+        <span class='ocrx_word' title='bbox 1136 316 1174 362; x_wconf 99.5198999321; x_confs 99.5198999321'>a</span>
+        <span class='ocrx_word' title='bbox 1174 316 1361 362; x_wconf 91.7285060219; x_confs 99.4344672986 99.0957355317 99.3320289546 97.4652664288 98.9087765963 98.9394438224 99.2399356817 99.0107735507'>graduate</span>
+        <span class='ocrx_word' title='bbox 1361 316 1524 362; x_wconf 91.7767836063; x_confs 98.6894564653 99.444942527 99.257080359 98.2097893305 98.8369315432 97.9571928725 99.0849088725'>student</span>
+        <span class='ocrx_word' title='bbox 1524 316 1579 362; x_wconf 98.4840537521; x_confs 99.1909554185 99.2873325361'>to</span>
+        <span class='ocrx_word' title='bbox 1579 316 1656 362; x_wconf 97.2729572321; x_confs 99.5313360173 98.6611882384 99.0571762958'>the</span>
+        <span class='ocrx_word' title='bbox 1656 316 1872 362; x_wconf 92.7834413945; x_confs 99.5582403327 97.4330874613 99.4320111502 99.7764557225 99.0477313647 99.7328241306 99.0863182218 99.6407235193 99.5083274857 99.3435929572'>University</span>
+        <span class='ocrx_word' title='bbox 1872 316 1934 362; x_wconf 98.7843420661; x_confs 99.3437987576 99.4368478974'>of</span>
+        <span class='ocrx_word' title='bbox 1934 316 2065 362; x_wconf 93.8236069441; x_confs 97.0985360406 99.254324755 99.632099882 98.9283896905 98.7710748843'>Texas</span>
+        <span class='ocrx_word' title='bbox 2065 316 2118 362; x_wconf 98.3813783848; x_confs 99.1034394679 99.2714066364'>at</span>
+        <span class='ocrx_word' title='bbox 2118 316 2238 362; x_wconf 91.5517997709; x_confs 99.0800676727 99.607168606 97.8592756142 98.7303393723 99.9090832163 99.5436209706 96.5425935763'>Austin.</span>
+    </span>
+    <span class='ocr_line' title='bbox 1174 418 1365 460'><br />
+        <span class='ocrx_word' title='bbox 1174 418 1329 460; x_wconf 96.7529256437; x_confs 99.7600957026 99.8760301016 99.0564463336 99.3442020305 99.0268465935 99.6478100475'>Sincer</span>
+        <span class='ocrx_word' title='bbox 1329 418 1365 460; x_wconf 77.5397857998; x_confs 91.8152891887 98.9847373347 85.3181354026'>ly,</span>
+    </span>
+    <span class='ocr_line' title='bbox 1173 618 1509 660'><br />
+        <span class='ocrx_word' title='bbox 1173 618 1334 660; x_wconf 95.6124895952; x_confs 99.2505664118 99.4555077537 99.9307212212 99.6175557132 99.5232889944 99.2484641769 98.507517774'>Shirley</span>
+        <span class='ocrx_word' title='bbox 1334 618 1389 660; x_wconf 97.1949029991; x_confs 98.4032343358 98.7720613608'>F.</span>
+        <span class='ocrx_word' title='bbox 1389 618 1509 660; x_wconf 94.5427095088; x_confs 98.7707436702 99.8993048935 99.0092783975 97.8043988097 99.1997694681 99.7452695972'>Binder</span>
+    </span>
+    <span class='ocr_line' title='bbox 1173 669 1656 702'><br />
+        <span class='ocrx_word' title='bbox 1173 669 1366 702; x_wconf 94.7641629986; x_confs 98.8323327561 99.9007502132 99.3156360715 98.8167467571 99.3888883155 99.1784356754 99.4756119478 99.7370338951'>Director</span>
+        <span class='ocrx_word' title='bbox 1366 669 1436 702; x_wconf 99.06470966; x_confs 99.4059648466 99.6567055236'>of</span>
+        <span class='ocrx_word' title='bbox 1436 669 1656 702; x_wconf 90.5293120549; x_confs 99.1264440244 98.5183423568 99.0148128371 99.5010772063 98.7040690874 99.3131619064 99.6864877192 99.3501710432 98.485032253 98.409637644'>Admissions</span>
+    </span>
+</div>
+</body>
+</html>
+
