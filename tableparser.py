@@ -188,7 +188,7 @@ class TableParser(object):
     def create_reduced_file(self, filepath, ignore_whitespace, ignore_emptyline, ignore_tabs):
 
 
-        file = open(filepath, 'r')
+        file = open(filepath, 'r', encoding='utf-8')
         #read_data = file.read()
         final_data = []
 
@@ -209,7 +209,7 @@ class TableParser(object):
 
 
         new_filepath_table = filepath + ".red"
-        file_new = open(new_filepath_table, 'w')
+        file_new = open(new_filepath_table, 'w', encoding='utf-8')
         file_new.writelines(final_data)
         file_new.close()
         file.close()
