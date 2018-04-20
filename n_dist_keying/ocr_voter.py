@@ -1,4 +1,3 @@
-from utils.conditional_print import ConditionalPrint
 from utils.queues import SearchSpace
 from n_dist_keying.search_space_processor import SearchSpaceProcessor
 import numpy as np
@@ -11,7 +10,9 @@ class SpecialChars():
     # used if configuration flag MSA_BEST_INCREASE_UMLAUT_CONFIDENCE is active
     umlauts_caps = "ÄÜÖ"
     umlauts = umlauts_caps.lower()
+    special_chars = "éáó£"
     umlaut_increment = 18
+    special_char_increment = 27
 
 class ConfidenceModifications():
     # scaling factors for confidence values of engines
@@ -82,17 +83,16 @@ class OCRVoter(object):
             if otherconf < SPACE_TRESH:
                 return 1, SPACE_PUT_IN_VALUE
 
-        elif char1 == wildcard_char and same_ctr ==1: #todo: differentiate type of character ??
+        elif char1 == wildcard_char and same_ctr == 1: #todo: differentiate type of character ??
             # if there is two wildcards and one characters, characters confidence has to be higher than
             # WILDCARD_TRESH to be taken
-            WILDCARD_TRESH = 98.5
-            return 1, WILDCARD_TRESH
-            # if the confidence of the other character is below that value, space gets the high put in confidence value
-            WILDCARD_PUT_IN_VALUE = 99.0
-            otherchar, otherconf = get_other_char(char1, char2, char3,cconf1,cconf2,cconf3)
-            #print("wctr",WILDCARD_TRESH,"otherconf",otherconf)
-            if otherconf < WILDCARD_TRESH:
-                return 1, WILDCARD_PUT_IN_VALUE
+
+            wildcard_tresh = 98.5
+            if self.config.MSA_BEST_CHANGE_VOTING_TRESHS_ON_EMPTY_LINE:
+                wildcard_tresh -= 10  # 0:99,19%, 20:99.16%, 10:99.27%
+
+            return 1, wildcard_tresh
+
         elif char1 == wildcard_char and same_ctr == 0:
             pass  # todo maybe cover this case (cause wildcard has no confidence i.e if the two otherchars are very low prob, take wildcard)
         elif char1 == '' and same_ctr == 0:
@@ -203,6 +203,8 @@ class OCRVoter(object):
         for char_index, char in enumerate(chars):
             if char in SpecialChars.umlauts_caps or char in SpecialChars.umlauts:
                 cconf_to_add = charconfs[char_index] + SpecialChars.umlaut_increment
+            elif char in SpecialChars.special_chars:
+                cconf_to_add = charconfs[char_index] + SpecialChars.special_char_increment
             else:
                 cconf_to_add = charconfs[char_index]
 
@@ -283,7 +285,8 @@ class OCRVoter(object):
             ssp_confs = SearchSpace(SEARCH_SPACE_Y_SIZE, SEARCH_SPACE_X_SIZE_OUTER, SEARCH_SPACE_X_SEARCH_RANGE, True)
 
             one_line_empty = False
-            if self.config.MSA_BEST_VOTER_PUSH_LESS_LINES_WHITESPACE_CONFS:
+            if self.config.MSA_BEST_VOTER_PUSH_LESS_LINES_WHITESPACE_CONFS or \
+                self.config.MSA_BEST_CHANGE_VOTING_TRESHS_ON_EMPTY_LINE:
                 one_line_empty = check_if_one_line_empty([line_1, line_2, line_3])
 
 

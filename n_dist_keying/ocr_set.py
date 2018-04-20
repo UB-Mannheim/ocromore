@@ -155,7 +155,10 @@ class OCRset:
             texts.append(text)
 
         self._n_distance_voter = NDistanceVoter(texts)
-        shortest_dist_index = self._n_distance_voter.compare_texts()
+        shortest_dist_index = self._n_distance_voter.compare_texts( \
+                take_longest_on_empty_lines=self._config.NDIST_VOTE_LONGEST_IF_EMPTY_STRINGS, \
+                vote_without_spaces = self._config.NDIST_VOTE_WITHOUT_SPACES)
+
 
         # save the result
         self.shortest_distance_line_index = shortest_dist_index
@@ -212,7 +215,10 @@ class OCRset:
 
             words = words_mock[current_word_index]
             ndist_voter.set_texts(words)
-            wordindex_result = ndist_voter.compare_texts()
+            wordindex_result = ndist_voter.compare_texts( \
+                take_longest_on_empty_lines = self._config.NDIST_VOTE_LONGEST_IF_EMPTY_STRINGS, \
+                vote_without_spaces=self._config.NDIST_VOTE_WITHOUT_SPACES)
+
             ndist_voter.reset()
             self._cpr.print(words[wordindex_result])
             self._cpr.print("--")

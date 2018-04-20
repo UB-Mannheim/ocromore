@@ -334,7 +334,7 @@ class SearchSpaceProcessor(object):
                 other_column_feats, otherchar_other, oc_other_index = self.validate_column_features(search_space, \
                                                                                                 check_index,
                                                                                                 reference_char,
-                                                                                                  use_similar_chars)
+                                                                                                use_similar_chars)
 
                 #print("search_space", search_space)
                 if ColumnFeatures.MOSTLY_REFERENCE_CHAR.value in other_column_feats:

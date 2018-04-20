@@ -97,7 +97,7 @@ class TableParser(object):
         ocr_comparison = database_handler.create_ocr_comparison()
         ocr_comparison.sort_set()
         # print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
-        ocr_comparison.print_sets(False)
+        # ocr_comparison.print_sets(False)
 
         if self._config.SAVE_INPUT_DATASETS_TO_FILE:
 
@@ -124,12 +124,16 @@ class TableParser(object):
         if self._config.DO_N_DIST_KEYING:
             print("Doing: N_DIST_KEYING, WORDWISE KEYING: ", self._config.NDIST_USE_WORDWISE_KEYING)
             ocr_comparison.do_n_distance_keying(self._config.NDIST_USE_WORDWISE_KEYING)   # do the keying, which makes the decision which is the best line for each set
+            ocr_comparison.print_sets(False)
             #ocr_comparison.print_n_distance_keying_results()  # print keying results
             if self._config.KEYING_RESULT_POSTCORRECTION:
-                ocr_comparison.do_postcorrection(True, postcorrect_keying=True)
+                ocr_comparison.do_postcorrection(postcorrect_keying=True)
 
+            created_path = self.get_basic_output_directory(dbdir_abs,"ndist_keying") + "/" + table + "_ndist.txt"
 
-            ocr_comparison.save_n_distance_keying_results_to_file(self._config.FILEPATH_NDIST_RESULT, self._config.NDIST_MODE_ADD_LINEBREAKS)
+            ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "ndist_keying")
+            return created_path, additional_created_files
+
 
         if self._config.DO_MSA_BEST:
             ocr_comparison.do_msa_best_new(self._config.MSA_BEST_USE_N_DIST_PIVOT,
@@ -182,6 +186,8 @@ class TableParser(object):
 
 
     def create_reduced_file(self, filepath, ignore_whitespace, ignore_emptyline, ignore_tabs):
+
+
         file = open(filepath, 'r')
         #read_data = file.read()
         final_data = []
