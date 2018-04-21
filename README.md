@@ -1,6 +1,7 @@
-# ![ocromore](docs/img/ocromore_logo.png)
+# ![ocromore](./docs/img/ocromore_logo.png)
 
 ![license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)
+[![Docker Automated build](https://img.shields.io/docker/automated/ubma/ocropy.svg?maxAge=86400)](https://hub.docker.com/r/ubma/ocromore/)
 
 Originally written by Johannes Stegmüller and Jan Kamlah.
 
@@ -15,13 +16,14 @@ information about the ocr results or context, or just query various things.
 First, the program parses the different ocr-output files and saves the results to a sqlite-database.
 The purpose of this database is to serve as an exchange and store platform using 
 [pandas](https://pandas.pydata.org/) as handler.
-Using the [dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)-objectifier from pandas a wide-range of performant use-cases like Multiple sequence alignment (MSA) is possible.
+With an objectifier for the [dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
+from pandas a wide-range of performant use-cases is possible.
+The software has in implementation of the Multiple sequence alignment (MSA) algorithm for combining multiple ocr-outputs.
 To evaluate the results you can either use the commonly used
-[isri tools](https://github.com/eddieantonio/isri-ocr-evaluation-tools) to generate a accuracy report, or do visual comparison with diff-tools like [meld](http://meldmerge.org/).
-
-Note that the automatic processing will sometimes need some manual adjustments.
+[ISRI tools](https://github.com/eddieantonio/isri-ocr-evaluation-tools) to generate a accuracy report, or do visual comparison with diff-tools like [meld](http://meldmerge.org/).
 
 ### Beta Results
+
 The software is currently optimized for the [DFG-Project "Aktienführer II"](https://www.bib.uni-mannheim.de/projekte/aktienfuehrer2/) and our current character accuracy (ignoring whitespaces) results are:
 
 | OCR-Engine |   AKF-II   |  UNLV   |
@@ -53,39 +55,52 @@ You can find the UNLV results in [Testfiles/results](./Testfiles/results).
  
 ## Installation
 
-### Requirements
+This installation is tested with [Ubuntu][ubuntu-link] and we expect that it should
+work for other similar environments similarly.
 
-#### Install:
-
-- linux distribution, e.g. [Ubuntu][ubuntu-link]
-- [Python 3.6][python-link]
-- [PyCharm][pycharm-link] (some functions depend on the IDE)
+### 1. Requirements
+- [Python 3.6+][python-link]
 - [Meld][meld-link]
 - [ISRI Analytic Tools for OCR Evaluation][isri-link]
+- Recommended further:
+  - [PyCharm][pycharm-link]
+  - [hocr-tools][hocr-link]
 
-Recommended:
-
-- [hocr-tools][hocr-link]
-
-#### Alternative docker (for windows recommended):
-
-For the CLI commands:
-
+### 2. Copy this repository
 ```
+git clone https://github.com/UB-Mannheim/ocromore.git
+cd ocromore
+```
+
+### 3. Dependencies can be installed into a Python Virtual Environment:
+
+    $ virtualenv ocromore_venv/
+    $ source ocromore_venv/bin/activate
+    $ pip install -r requirements.txt
+
+## Docker (alternative way)
+
+If you want to use the CLI commands under windows we recommend to use the docker:
+
+```sh
+git clone https://github.com/UB-Mannheim/ocromore.git
+cd ocromore
+
+# build it yourself
 docker build -t ocromore .
-docker run -it -v `PWD`:/home/developer/coding/ocromore  ocromore
+docker run -it -v `PWD`:/home/developer/coding/ocromore ocromore
+
+# or use the container from docker hub
+docker pull ubma/ocromore
+docker run -it -v `PWD`:/home/developer/coding/ocromore ocromore
 ```
 
-To run the scripts for visual results in your OS:  
-(not available in the docker-image) 
+You can then run the scripts for visual results outside docker in your OS.
+For that you need Python and [Meld][meld-link] installed and add it to environment variables (ENV):
+ - Variable = "Path"
+ - Value = {directory to meld}\meld.exe
 
-- install Python and Requirements   
-- install [Meld][meld-link] (for windows)  
-- Add to environment variables (ENV)
-     - Variable = "Path"
-     - Value = {directory to meld}\meld.exe
-
-#### Developing
+## Developing
 
 The project was written in PyCharm 2017.3 (CE),   
 so if you are a developer it's recommended to use it. 
@@ -105,14 +120,7 @@ The ISRI Tools are necessary for the evaluation, but not for the combine process
 [meld-link]: http://meldmerge.org/
 [isri-link]: https://github.com/eddieantonio/isri-ocr-evaluation-tools
 [hocr-link]: https://github.com/tmbdev/hocr-tools
-    
-#### Building instructions
 
-Dependencies can be installed into a Python Virtual Environment:
-
-    $ virtualenv ocromore_venv/
-    $ source ocromore_venv/bin/activate
-    $ pip install -r requirements.txt
 
 ## Process steps
 
