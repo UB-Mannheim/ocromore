@@ -175,7 +175,9 @@ class DatabaseHandler(object):
 
         return exceptions
 
-    def preprocess_dbdata(self, force = True, PRINT_SUSPICIOUSLINES=False, CLEAN_ABBYY = True, VERBOSE = True, VERBOSEPATH= "/media/sf_ShareVB/AFKII/verbose/"):
+    def preprocess_dbdata(self, force = True, PRINT_SUSPICIOUSLINES=False, CLEAN_ABBYY = True, VERBOSE = False, VERBOSEPATH=None):
+        if VERBOSE and VERBOSEPATH is None:
+            VERBOSEPATH = "./Testfiles/"
         print("Preprocess the data")
         exceptions = []
         if self.dbfilter:

@@ -43,7 +43,8 @@ if config.HOCR2SQL:
 dh.update_db()
 
 if config.PREPROCESSING:
-    report_prep = dh.preprocess_dbdata(force = True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES)
+    #TODO: Add verbose to configfiles
+    report_prep = dh.preprocess_dbdata(force = True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES, VERBOSE = False, VERBOSEPATH= "/media/sf_ShareVB/AFKII/verbose/")
 #dh.print_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
 if not config.WORKWITHOBJ:
