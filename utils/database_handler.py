@@ -175,7 +175,7 @@ class DatabaseHandler(object):
 
         return exceptions
 
-    def preprocess_dbdata(self, force = True, PRINT_SUSPICIOUSLINES=False, CLEAN_ABBYY = True):
+    def preprocess_dbdata(self, force = True, PRINT_SUSPICIOUSLINES=False, CLEAN_ABBYY = True, VERBOSE = True, VERBOSEPATH= "/media/sf_ShareVB/AFKII/verbose/"):
         print("Preprocess the data")
         exceptions = []
         if self.dbfilter:
@@ -195,11 +195,19 @@ class DatabaseHandler(object):
 
                     # Linematcher with queries
                     if dataframe_wrapper.match_line(force=force):
+                        if VERBOSE:
+                            dbname = db.split("/")[-1].split(".")[0]
+                            dataframe_wrapper.write2file(path=VERBOSEPATH,fname=f"Matched_lines_{dbname}_{tablename}_")
+
                         # Unspacing
                         dataframe_wrapper.unspace()
+                        if VERBOSE:
+                            dataframe_wrapper.write2file(path=VERBOSEPATH,fname=f"Unspaced_lines_{dbname}_{tablename}_")
 
                         # Match words or segments of words into "word_match"
                         dataframe_wrapper.match_words()
+                        if VERBOSE:
+                            dataframe_wrapper.write2file(path=VERBOSEPATH,fname=f"Matched_words_{dbname}_{tablename}_")
 
                         if PRINT_SUSPICIOUSLINES or CLEAN_ABBYY:
                             dfSelO = dataframe_wrapper.get_line_obj()
