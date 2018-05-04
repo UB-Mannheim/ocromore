@@ -1,4 +1,5 @@
 from lxml import etree
+import copy
 
 def get_xml_document(fpath):
     """
@@ -52,10 +53,10 @@ def get_xml_document(fpath):
                     if not GETLINECOORDS and COW:
                         line.coordinates = (None, None, None, None)
                         COW = False
-                    line.update_coordinates(item.attrib)
                     word.update_coordinates(item.attrib)
                     word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
+                    line.update_coordinates(copy.copy(item.attrib))
                     if "suspicious" in item.attrib:
                         word.suspicouscount += 1
         if word is not None:
