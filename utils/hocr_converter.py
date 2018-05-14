@@ -127,11 +127,10 @@ class HocrConverter(object):
         for element in contents:
             res = str(element).find("span")
             if res >= 1:
-                if lidx == 95:
-                    stop = "SIOT"
                 line = Line(document, element)
                 idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
                 lidx+=1
+        idx = self.eof2dict(df_dict, ocr, ocr_profile,[page.coordinates[2], page.coordinates[3], page.coordinates[2], page.coordinates[3]], idx, lidx)
         return df_dict
 
     def create_dict_tesseract(self, document, ocr_profile=None):
@@ -155,6 +154,7 @@ class HocrConverter(object):
                 for line in paragraph.lines:
                     idx = self.line2dict(line,df_dict,ocr,ocr_profile,idx,lidx)
                     lidx += 1
+        idx = self.eof2dict(df_dict, ocr, ocr_profile,[page.coordinates[2], page.coordinates[3], page.coordinates[2], page.coordinates[3]], idx, lidx)
         return df_dict
 
     def create_dict_abbyy(self, document,ocr_profile=None):
@@ -194,6 +194,7 @@ class HocrConverter(object):
 
                 else:
                     raise Exception("Parsing Exception:\tCreate Abbyy dict\t✗")
+        idx = self.eof2dict(df_dict, ocr, ocr_profile,[page.coordinates[2], page.coordinates[3], page.coordinates[2], page.coordinates[3]], idx, lidx)
         return df_dict
 
     def create_dict_abbyyxml(self,document,ocr_profile=None):
@@ -210,7 +211,33 @@ class HocrConverter(object):
         for line in document.page:
             idx = self.line2dict(line, df_dict, ocr, ocr_profile, idx, lidx)
             lidx += 1
+        idx = self.eof2dict(df_dict, ocr, ocr_profile,[document.bbox[2], document.bbox[3], document.bbox[2], document.bbox[3]], idx, lidx)
         return df_dict
+
+    def eof2dict(self,df_dict,ocr,ocr_profile,bbox,idx,lidx):
+        df_dict[idx] = {
+            "ocr": ocr,
+            "ocr_profile": ocr_profile,
+            "line_idx": int(lidx),
+            "word_idx": 0,
+            "char_idx": 0,
+            "char": "\f",
+            "x_confs": float(0.0),
+            "x_wconf": float(0.0),
+            "line_x0": float(bbox[0])-3.0,
+            "line_x1": float(bbox[2]),
+            "line_y0": float(bbox[1])-3.0,
+            "line_y1": float(bbox[3]),
+            "word_x0": float(bbox[0])-3.0,
+            "word_x1": float(bbox[2]),
+            "word_y0": float(bbox[1])-3.0,
+            "word_y1": float(bbox[3]),
+            "calc_line_idx": float(-1),
+            "calc_word_idx": float(0),
+            "calc_char": "\f",
+            "char_weight": float(-1.0),
+        }
+        return idx+1
 
     def line2dict(self,line,df_dict,ocr,ocr_profile,idx,lidx):
         """
@@ -287,7 +314,7 @@ class HocrConverter(object):
         # try to create a table
         try:
             df.to_sql(tablename, con)
-            print(f'SQLite directory:\t\t{con.url.database}')
+            print(f'DB directory:\t{con.url.database}')
             print(f'Create table:\t{tablename}\t✓')
 
         except:

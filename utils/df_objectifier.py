@@ -3,8 +3,19 @@ import numpy as np
 from utils.df_tools import get_con, spinner
 import math
 import copy
+import collections
 import sys
 from sklearn import cluster, neighbors
+
+class PParam(object):
+    def __init__(self):
+        self.y0 = None
+        self.y1 = None
+        self.diff = 0
+        self.diffmid = 0
+        self.y1_max = 0
+        self.max_row = 0
+        self.lineIdx = 0
 
 class DFObjectifier(object):
     """
@@ -253,7 +264,60 @@ class DFObjectifier(object):
         print("Clean data ✓")
         return
 
-    def match_line(self,force=False,pad=5,padmid=0.65,lhm=2):
+    def match_line(self,force=False,pad=2,padmid=0.65,lhm=2):
+        #TODO: rework other preprocesses...
+        """
+        Matches the lines over all datasets
+        :param force: Force to calculate the matching lines (overwrites old values)
+        :param pad: Padding area where to find similar lines (0.25 -> 25 prc)
+        :param max_col: Maximum value for matching lines (prevent infinity loops)
+        :return:
+        """
+        try:
+            if force:
+                self.df["calc_line_idx"] = -1
+            if self.df.loc[self.df["calc_line_idx"] == -1].empty: return False
+            print("Start line matching")
+            tdf = self.df.reset_index()
+            tdf["line_height"] = tdf["line_y1"] - tdf["line_y0"]
+            linedict = tdf.to_dict(orient="list")
+            pparam = PParam()
+            pparam.max_row = max(linedict["line_idx"])*3
+            pparam.y1_max = max(linedict["line_y1"])+1
+            while True:
+                print(f"Match line: {pparam.lineIdx}")
+                pparam.y0 = min(linedict["line_y0"])
+                pparam.y1 = linedict["line_y1"][linedict["line_y0"].index(pparam.y0)]
+                if pparam.y0 > pparam.y1:
+                    linedict["line_y1"][linedict["line_y0"].index(pparam.y0)] = pparam.y0+1
+                    pparam.y1 = pparam.y0+1
+                if -1 not in linedict["calc_line_idx"]:
+                    print("Match lines ✓")
+                    break
+                pparam.diff = (pparam.y1 - pparam.y0) * pad
+                pparam.diffmid = pparam.diff
+                if pad > padmid: pparam.diffmid = (pparam.y1 - pparam.y0) * padmid
+                # Select all y0 which are smaller as y0+25%diff and greater as y0+25%diff
+                con =  ((pparam.y1-pparam.y0) < np.array([x*lhm for x in linedict['line_height']])) & \
+                       ((pparam.y0 - pparam.diff) < np.array(linedict['line_y0'])) & \
+                       ((pparam.y0 + pparam.diffmid) > np.array(linedict['line_y0'])) & \
+                       ((pparam.y1 - pparam.diffmid) < np.array(linedict['line_y1'])) & \
+                       ((pparam.y1 + pparam.diff) > (np.array(linedict['line_y1'])))
+                for idx in np.nonzero(con)[0].tolist():
+                    linedict["calc_line_idx"][idx] = pparam.lineIdx
+                    linedict["line_y0"][idx] = pparam.y1_max
+                pparam.lineIdx += 1
+                if pparam.lineIdx == pparam.max_row:
+                    print("Match lines ✗")
+                    print(f"The max of {pparam.max_row} col was reached. Maybe something went wrong?")
+                    break
+            self.df["calc_line_idx"] = linedict["calc_line_idx"]
+        except Exception as e:
+            print(f"Exception: {e}")
+            pass
+        return True
+
+    def obsolete_match_line(self,force=False, pad=5, padmid=0.55,lhm=2):
         """
         Matches the lines over all datasets
         :param force: Force to calculate the matching lines (overwrites old values)
@@ -440,6 +504,7 @@ class DFObjectifier(object):
                 minx0 = min(set(x0arr))
                 posx0 = np.where(np.array(list(x0arr)) == minx0)[0][0]
                 minx1 = curline["word_x1"][posx0]
+                if minx1 < minx0: minx1 = minx0+1
                 diff = (curline["word_y1"][posx0] - curline["word_y0"][posx0]) * pad
                 if diff > (minx1-minx0)/2: diff = (minx1-minx0)/2
                 result = np.where(np.array(list(x0arr)) < minx1-diff)[0]

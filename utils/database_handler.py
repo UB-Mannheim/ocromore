@@ -175,7 +175,9 @@ class DatabaseHandler(object):
 
         return exceptions
 
-    def preprocess_dbdata(self):
+    def preprocess_dbdata(self, force = True, PRINT_SUSPICIOUSLINES=False, CLEAN_ABBYY = True, VERBOSE = False, VERBOSEPATH=None):
+        if VERBOSE and VERBOSEPATH is None:
+            VERBOSEPATH = "./Testfiles/"
         print("Preprocess the data")
         exceptions = []
         if self.dbfilter:
@@ -188,16 +190,57 @@ class DatabaseHandler(object):
                 tablenames = set(tablenames)&set(self.tablefilter)
             print("Preprocessing database:", db)
             for tablename in tablenames:
+                print("Preprocessing database:", db)
+                print("Preprocess table:", tablename)
                 try:
                     dataframe_wrapper = DFObjectifier(db, tablename)
 
                     # Linematcher with queries
-                    if dataframe_wrapper.match_line(force=True):
+                    if dataframe_wrapper.match_line(force=force):
+                        if VERBOSE:
+                            dbname = db.split("/")[-1].split(".")[0]
+                            dataframe_wrapper.write2file(path=VERBOSEPATH,fname=f"Matched_lines_{dbname}_{tablename}_")
+
                         # Unspacing
                         dataframe_wrapper.unspace()
+                        if VERBOSE:
+                            dataframe_wrapper.write2file(path=VERBOSEPATH,fname=f"Unspaced_lines_{dbname}_{tablename}_")
 
                         # Match words or segments of words into "word_match"
                         dataframe_wrapper.match_words()
+                        if VERBOSE:
+                            dataframe_wrapper.write2file(path=VERBOSEPATH,fname=f"Matched_words_{dbname}_{tablename}_")
+
+                        if PRINT_SUSPICIOUSLINES or CLEAN_ABBYY:
+                            dfSelO = dataframe_wrapper.get_line_obj()
+                            for idx, lidx in enumerate(dfSelO):
+                                print(idx)
+                                itemlen = None
+                                if CLEAN_ABBYY and len(dfSelO[lidx]) == 1:
+                                    if "Abbyy" in dfSelO[lidx][0].name[0]:
+                                        idxarr = dataframe_wrapper.df.loc[dataframe_wrapper.df["calc_line_idx"] == lidx].index
+                                        #labelarr = ["Abbyy","default",idxarr._labels[2][0],idxarr._labels[3][0],idxarr._labels[4][0]]
+                                        #tdf = dataframe_wrapper.df.loc[labelarr]
+                                        #dataframe_wrapper.df.drop(idxarr, inplace=True)
+                                else:
+                                    for items in dfSelO[lidx]:
+                                        if itemlen is None:
+                                            itemlen = len(items.textstr.replace(" ",""))
+                                        if not round(len(items.textstr.replace(" ",""))*0.5) < itemlen < round(len(items.textstr.replace(" ",""))*1.5):
+                                            if CLEAN_ABBYY:
+                                                idxarr = dataframe_wrapper.df.loc[("Abbyy",slice(None),slice(None),slice(None),slice(None))].loc[dataframe_wrapper.df["calc_line_idx"] == lidx].index
+                                                dataframe_wrapper.df.drop(idxarr ,inplace=True)
+                                            for items in dfSelO[lidx]:
+                                                print(items.name[0])
+                                                print("TEXT:")
+                                                print(items.textstr)
+                                                print("WORDMATCHES:")
+                                                for word in items.word["text"]:
+                                                    print(items.word["text"][word] + "\t", end="")
+                                                print("\n")
+                                            break
+
+
 
                         # Write the calulated values into the db
                         dataframe_wrapper.write2sql()
@@ -362,11 +405,11 @@ class DatabaseHandler(object):
         # dfXO.get_obj(query="calc_line_idx == 10")
         # print(idx)
         object = dfXO.get_obj(empty=True)
-        object.update_textspace(">>  >>", widx=1.0)
-        object.update_textspace(">>  >>", widx=3.0)
-        object.update_textspace(">>  >>", widx=2.0)
-        object.restore()
-        dfSelO = dfXO.get_line_obj()
+        #object.update_textspace(">>  >>", widx=1.0)
+        #object.update_textspace(">>  >>", widx=3.0)
+        #object.update_textspace(">>  >>", widx=2.0)
+        #object.restore()
+        dfSelO, dfResO = dfXO.get_line_obj(res=True)
         for idx, lidx in enumerate(dfSelO):
             print(idx)
             for items in dfSelO[lidx]:

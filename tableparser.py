@@ -104,11 +104,16 @@ class TableParser(object):
             output_path_abbyy = self.get_basic_output_directory(dbdir_abs, "abbyy") + "/" + table + "_abbyy.txt"
             output_path_tess = self.get_basic_output_directory(dbdir_abs, "tess") + "/" + table + "_tess.txt"
             output_path_ocro = self.get_basic_output_directory(dbdir_abs, "ocro") + "/" + table + "_ocro.txt"
-
-
+            #TODO:write to config
+            WRITE_HOCR=True
             ocr_comparison.save_dataset_to_file(output_path_abbyy, 0, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_tess, 1, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_ocro, 2, mode_add_linebreaks=False)
+
+            if WRITE_HOCR:
+                ocr_comparison.save_dataset_to_hocr(output_path_abbyy, 0, mode_add_linebreaks=False)
+                ocr_comparison.save_dataset_to_hocr(output_path_tess, 1, mode_add_linebreaks=False)
+                ocr_comparison.save_dataset_to_hocr(output_path_ocro, 2, mode_add_linebreaks=False)
 
             additional_created_files.append(output_path_abbyy)
             additional_created_files.append(output_path_tess)
@@ -175,6 +180,8 @@ class TableParser(object):
             created_path = self.get_basic_output_directory(dbdir_abs,"msa_best") + "/" + table + "_msa_best.txt"
 
             ocr_comparison.save_dataset_to_file(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
+            if WRITE_HOCR:
+                ocr_comparison.save_dataset_to_hocr(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
             return created_path, additional_created_files
 
 
