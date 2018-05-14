@@ -290,3 +290,4 @@ Personalaufwand 904 012 1 042 442
 Abschreibungen 98 697 82 194
 EEV-Steuern 28 658 27 734
 Jahresüberschuß 24 111 42 386
+

@@ -11,7 +11,7 @@ WerkHamburg:(040)74091
 WerkNürnberg:(0911)181
 WerkMünchen:(089)14801
 WerkGustavsburg:Mainz-Kastel(06143)
-H51
+551H
 Telex:
 WerkAugsburg:53751
 WerkHamburg:211729
@@ -39,10 +39,10 @@ KlausHaniel,Oberhausen(Rhld.);;
 DietrichWilhelmvonMenges,Essen-
 Bredeney;
 SiegfriedSchiffbauer,Kiel;
-Arbeitnehmervertreter:
+Arbeitnehmervertreter::
 FranzKlemmer,Augsburg;;
 RudolfRhein,Mainz-Kostheim;;
-EduardSchleinkofer,München;;
+EduardSchleinkofer,München;
 FerdinandWolinsky,Oberhausen
 Gründung:1898
 Tätigkeitsgebiet:
@@ -157,7 +157,7 @@ Sydney
 Kapital:$A965000.-(91,7%)
 M.A.N.KamyonveOtobüsSanayiAnonim
 Sirketi,Istanbul
-Kapital:TLE.27000000.-(über25%)
+Kapital:TkE.27000000.-(über25%)
 M.A.N.TruckandBusS.A.(Pty)Ltd.,
 Johannesburg
 Kapital:R300.000.-(100%)
@@ -211,7 +211,7 @@ DM102,54undVorz.-Akt.DM87,15
 14(Vorz.-Akt.)
 1969ErhöhungaufDM170000000.-
 1970Bezugsrecht10:1zu190%auf
-DM187000000.-,rechn.WertSt.-Akt.
+DM187000000.-,rechn.WertSt.--Akt.
 undVorz.-Akt.DM5,09(10.7.),
 Div.Sch.Nr.23(St.-Akt.)und17(Vorz.-
 Akt.)ErhöhungaufDM197505000.-
@@ -222,7 +222,7 @@ DM10,94undVorz.-Akt.DM9,50
 (1.4.),dividendenberechtigtab1.4.,x
 Div.Sch.Nr.29(St.-Akt.)und25
 (Vorz.-Akt.)
-Aktionäre:
+Aktionäre::
 GutehoffnungshütteAktienverein,Nürn-
 berg/Oberhausen(rd.75,23%derStamm-
 aktienund91,09%derVorzugsaktien);
@@ -242,7 +242,7 @@ Stückelung:
 55100Inh.-Vorz.-Akt.zujeDM50.-
 Aktienkurse(ultimoabgerundet):
 ab16.6.1969StücknotizfürDM100.-und
-ab6.7.1970fürDM50.-
+aab6.7.1970fürDM50.-
 a)Stammaktien
 194836%1968507%1972168DM
 65460%69481DM73118DM
@@ -257,7 +257,7 @@ b)Vorzugsaktien(Notierungab26.1.1956)
 (30.9.)
 Dividenden:
 a)Stammaktien
-11I/1948/49-1968/69:insgesamt245%
+11II/1948/49-1968/69:insgesamt245%
 1969/70u.1970/71:je18%(Div.Sch.Nr.
 24u.25)
 1971/72-1973/74:je12%(Div.Sch.Nr.

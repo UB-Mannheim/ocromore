@@ -1,5 +1,3 @@
-MASCHINENFABRIKAUGS8UkG-NUkNBEkG
-1Or-AkTIENGrsElLuouLHAFi
 Sitz:8900Augsburg1,Stadtbachstraße1,
 Postfach
 Telefon:
@@ -86,7 +84,7 @@ WagnerHochdruck-DampfturbinenGmbH,
 Hamburg
 Kapital:DM100000.-(100%)
 DerGeschäftsbetriebruht
-ZahnräderfabrikRENKAG,Augsburg
+ZZahnräderfabrikRENKAG,Augsburg
 Kapital:DM9000000.-(25,49%)
 Dividendenab1968/69:10,10,10,12,14,14%
 Motoren-undTurbinen-UnionMünchen
@@ -154,12 +152,12 @@ Sydney
 Kapital:$A965000.-(91,7%)
 M.A.N.KamyonveOtobüsSanayiAnonim
 Sirketi,Istanbul
-Kapital:TL.27000000.-(über25%)
+Kapital:Tk.27000000.-(über25%)
 M.A.N.TruckandBusS.A.(Pty)Ltd.,
 Johannesburg
 Kapital:R300000.-(100%)
 MAN-GHH(Great-Britain)Ltd.,London
-Kapital:L100000.-(75%)
+Kapital:E100000.-(75%)
 EURO-MANS.A.R.L.,Brüssel
 Kapital:bfr.2500000.-(über50%)
 M.A.N.-GHHFranceS.A.,Paris
@@ -167,7 +165,7 @@ Kapital:FF1518000.-(über50%)
 M.A.N.(Japan)Ltd.,Tokio(Japan)
 Kapital:Yen9000000.-(über50%)
 GroupeEuropéenpourlaTechniquedes
-Turbinesävapeur,S.A.,Paris(Frank-
+Turbinesàvapeur,S.A.,Paris(Frank-
 reich)
 Kapital:FF200000.-(über25%)
 AmericanM.A.N.Corporation,NewYork
@@ -248,9 +246,9 @@ a)Stammaktien
 (30.9.)
 b)Vorzugsaktien(Notierungab26.1.1956)
 1956198%1968435%1972147DM
-65435%69423DM73103OM
+65435%69423DM73103DM
 66364%70136DM74122DM
-67600%71153DM75160DM
+67600%71153DM78160DM
 (30.9.)
 Dividenden:
 a)Stammaktien
@@ -266,7 +264,7 @@ b)Vorzugsaktien
 1971/72-1973/74:je12%(Div.Sch.Nr.
 22-24)
 AusdenBilanzen(in1000DM)
-iEEZMiCS
+1E21EM3z
 Anlagevermögen688646733367
 (Beteiligungen)182906240885
 Umlaufvermögen17919322110113
@@ -278,7 +276,7 @@ Bilanzgewinn2431524330
 Bilanzsumme24846232843480
 AusdenGewinn-undVerlust-
 rechnungen
-iaEC3Zz9ZM38
+iaEC3Zz9Z2CZ:
 Umsatzerlöse25117012635688
 Beteiligungser-
 träge2105434691

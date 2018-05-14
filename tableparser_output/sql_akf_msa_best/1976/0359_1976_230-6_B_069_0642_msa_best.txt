@@ -11,7 +11,7 @@ Werk Hamburg: (0 40) 7 40 91
 Werk Nürnberg: (09 11) 1 81
 Werk München: (0 89) 1 48 01
 Werk Gustavsburg: Mainz-Kastel (0 61 43)
-H51
+551H
 Telex:
 Werk Augsburg: 5 3 751
 Werk Hamburg: 2 11 729
@@ -25,7 +25,7 @@ Alfred Roth, Nürnberg;
 Adolf Schiff, Augsburg;
 Wolfram Thiele, Oberhausen;
 Otto Voisard, München;
-Friedrich Laußermair, München, stellv.;
+Friedrich Laußermair, München, stellv. ;
 Wolfgang Müller, München, stellv.;;
 Herbert Redlich, Gustavsburg, stellv.
 Aufsichtsrat:
@@ -39,10 +39,10 @@ Klaus Haniel, Oberhausen (Rhld.);;
 Dietrich Wilhelm von Menges, Essen-
 Bredeney;
 Siegfried Schiffbauer, Kiel;
-Arbeitnehmervertreter:
+Arbeitnehmervertreter::
 Franz Klemmer, Augsburg;;
 Rudolf Rhein, Mainz-Kostheim;;
-Eduard Schleinkofer, München;;
+Eduard Schleinkofer, München;
 Ferdinand Wolinsky, Oberhausen
 Gründung: 1898
 Tätigkeitsgebiet:
@@ -79,7 +79,7 @@ Kapital: DM 3 000 000.- (93, 3 %)
 SWF Süddeutsche Winden- und Förderan-
 lagenfabrik von Bechtolsheim & Stein KG,
 München
-Kapital: DM 2 972 500. -(94,62 %)
+Kapital: DM 2 972 500.- (94,62 %)
 MAN-Büttner Lagersysteme GmbH,
 München
 Kapital: DM 5 000 000. - (85 %)
@@ -91,13 +91,13 @@ Kapital: DM 100 000. - (100 %)
 Der Geschäftsbetrieb ruht
 Zahnräderfabrik RENK AG, Augsburg
 Kapital: DM 9 000 000. - (25,49 %)
-Dividenden ab 1968/69: 10,10,10,12,14,14%
+Dividenden ab 1968/69:10,10,10,12,14,14%
 Motoren- und Turbinen-Union München
 GmbH, München
-Kapital: DM 100 000 000. - (50 %)
+Kapital: DM 100 000 000.- (50 %)
 Baugesellschaft Gerberau mbH, Gustavs-
 burg/Hessen
-Kapital: DM 100 000. -(100 %; Organver-
+Kapital: DM 100 000. - (100 %; Organver-
 trag)
 M.A.N.-Ferrostaal-Bauunion GmbH,
 Gustavsburg/Hessen
@@ -121,7 +121,7 @@ Kapital: DM 250 000. - (36 %)
 Roland Offsetmaschinenfabrik Faber &
 Schleicher AG, Offenbach (M)
 Kapital: DM 26 000 000. - (50,62 %)
-Dividenden ab 1969: 18,18,14,7
+Dividenden ab 1969: 18,18, 14,7
 (1.1.-30,6,), 16,14 %
 W. Tümmels Buchdruckerei und Verlag
 GmbH, Nürnberg
@@ -157,7 +157,7 @@ Sydney
 Kapital: $A 965 000. - (91,7 %)
 M.A.N. Kamyon ve Otobüs Sanayi Anonim
 Sirketi, Istanbul
-Kapital: TLE. 27 000 000.- (über 25 %)
+Kapital: TkE. 27 000 000.- (über 25 %)
 M.A.N. Truck and Bus S.A. (Pty) Ltd.,
 Johannesburg
 Kapital: R 300.000. - (100 %)
@@ -186,7 +186,7 @@ Jenom. DM 50.- St.-Akt. = 1 Stimme
 Vorz.-Akt. ohne Stimmrecht
 Kapitalentwicklung und
 Bezugsrechte:
-Grundkapital: DM 250 000 000. -
+Grundkapital: DM 250 000 000.-
 DM 150 000 000. - Inh. -St. -Akt.
 DM 100 000 000.- Inh.-Vorz.-Akt. (ohne
 Stimmrecht; gleiche Dividende wie Stamm-
@@ -211,18 +211,18 @@ DM 102,54 und Vorz.-Akt. DM 87,15
 14 (Vorz.-Akt.)
 1969 Erhöhung auf DM 170 000 000. -
 1970 Bezugsrecht 10:1 zu 190 % auf
-DM 187 000 000.-, rechn. Wert St.-Akt.
+DM 187 000 000.-, rechn. Wert St.--Akt.
 und Vorz.-Akt. DM 5,09 (10.7.),
 Div.Sch.Nr. 23 (St.-Akt.) und 17 (Vorz.-
 Akt.) Erhöhung auf DM 197 505 000. -
-1972 Erhöhung auf DM 200 000 000.-
+1972 Erhöhung auf DM 200 000 000. -
 1975 Bezugsrecht 4:1 zu 190 % auf
 DM 250 000 000. -,rechn. Wert St. -Akt.
 DM 10,94 und Vorz.-Akt. DM 9,50
 (1.4.), dividendenberechtigt ab 1.4., x
 Div.Sch.Nr. 29 (St.-Akt.) und 25
 (Vorz.-Akt.)
-Aktionäre:
+Aktionäre::
 Gutehoffnungshütte Aktienverein, Nürn-
 berg/Oberhausen (rd. 75,23 % der Stamm-
 aktien und 91,09 % der Vorzugsaktien);
@@ -230,7 +230,7 @@ Rest Streubesitz
 Börsennotiz:
 Stamm- und Vorzugsaktien: Berlin, Düs-
 seldorf, Frankfurt (M), Hamburg und
-München(amtl.); Stuttgart (Freiv.)
+München (amtl.); Stuttgart (Freiv.)
 Wertpapier-Kenn-Nr.:
 506300 (St. -Akt.); 506303 (Vorz.-Akt.)
 Stückelung:
@@ -242,7 +242,7 @@ Stückelung:
 55 100 Inh.-Vorz.-Akt.zu je DM 50.-
 Aktienkurse (ultimo abgerundet):
 ab 16.6.1969 Stücknotiz für DM 100.- und
-ab 6.7.1970 für DM 50.-
+aab 6.7.1970 für DM 50.-
 a) Stammaktien
 1948 36 % 1968 507% 1972 168DM
 65 460 % 69 481DM 73 118DM
@@ -257,7 +257,7 @@ b) Vorzugsaktien (Notierung ab 26.1.1956)
 (30.9.)
 Dividenden:
 a) Stammaktien
-11I/1948/49-1968/69: insgesamt 245 %
+11II/1948/49-1968/69: insgesamt 245 %
 1969/70 u.1970/71: je 18 % (Div.Sch.Nr.
 24 u. 25)
 1971/72-1973/74: je 12 % (Div.Sch.Nr.
@@ -281,7 +281,7 @@ Bilanzgewinn24 315 24 330
 Bilanzsumme 2 484 623 2 843 480
 Aus den Gewinn- und Verlust-
 rechnungen
-1972/73 1973/74
+1972/731973/74
 Umsatzerlöse 2 511 701 2 635 688
 Beteiligungser-
 träge21 054 34 691
@@ -290,3 +290,4 @@ Personalaufwand 904 012 1 042 442
 Abschreibungen 98 697 82 194
 EEV-Steuern28 658 27 734
 Jahresüberschuß 24 111 42 386
+

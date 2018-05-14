@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      642   Words
-      21   Misrecognized
-   96.73%  Accuracy
+      23   Misrecognized
+   96.42%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,19 +22,19 @@ Non-stopwords
       36        0   100.00        7
       45        0   100.00        8
       23        2    91.30        9
-      34        0   100.00       10
+      34        1    97.06       10
       27        0   100.00       11
       34        1    97.06       12
       14        0   100.00       13
       21        1    95.24       14
-      17        0   100.00       15
-      22        2    90.91       16
+      17        1    94.12       15
+      22        1    95.45       16
       20        0   100.00       17
       14        3    78.57       18
        4        0   100.00       19
        5        0   100.00       20
        7        0   100.00       21
-       4        0   100.00       22
+       4        1    75.00       22
        5        2    60.00       23
        8        0   100.00       24
        3        0   100.00       25
@@ -49,11 +49,11 @@ Non-stopwords
        4        0   100.00       34
        1        0   100.00       35
        1        0   100.00       37
-     636       20    96.86    Total
+     636       22    96.54    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     413       13    96.85        1
+     413       15    96.37        1
       40        2    95.00        2
        8        0   100.00        3
        4        0   100.00        4
@@ -62,18 +62,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        3        0   100.00      >10
-     477       15    96.86    Total
+     477       17    96.44    Total
 
 Phrases
    Count   Missed   %Right   Length
-     642       21    96.73        1
-     641       32    95.01        2
-     640       43    93.28        3
-     639       54    91.55        4
-     638       65    89.81        5
-     637       76    88.07        6
-     636       86    86.48        7
-     635       96    84.88        8
+     642       23    96.42        1
+     641       36    94.38        2
+     640       49    92.34        3
+     639       62    90.30        4
+     638       75    88.24        5
+     637       88    86.19        6
+     636      100    84.28        7
+     635      111    82.52        8
 
 Stopwords
    Count   Missed   %Right   
@@ -186,14 +186,14 @@ Non-stopwords
        1        0   100.00   67600
        1        0   100.00   67658
        3        0   100.00   69
-       1        1     0.00   69423dm73103dm
+       1        0   100.00   69423dm73103dm
        1        0   100.00   69481dm73118dm
        1        0   100.00   7.1
        1        0   100.00   70136dm74122dm
        1        0   100.00   70163dm74130dm
        2        0   100.00   70u
        2        0   100.00   71
-       1        0   100.00   71153dm75160dm
+       1        1     0.00   71153dm75160dm
        1        0   100.00   71170dm75169dm
        2        0   100.00   72
        2        2     0.00   731973
@@ -406,9 +406,9 @@ Non-stopwords
        1        0   100.00   kapital:dm9000000
        1        0   100.00   kapital:ff1518000
        1        0   100.00   kapital:ff200000
-       1        0   100.00   kapital:l100000
+       1        1     0.00   kapital:l100000
        1        1     0.00   kapital:r300.000
-       1        0   100.00   kapital:tl
+       1        1     0.00   kapital:tl
        1        0   100.00   kapital:yen9000000
        1        0   100.00   kapital:ös52000000
        1        0   100.00   kapitalentwicklungund
@@ -508,7 +508,7 @@ Non-stopwords
        1        0   100.00   triebspachtvertrag
        1        0   100.00   träge2105434691
        1        0   100.00   tungen
-       1        1     0.00   turbinesàvapeur
+       1        0   100.00   turbinesàvapeur
        1        0   100.00   tätigkeitsgebiet
        1        0   100.00   ulrichneumann
        1        0   100.00   ultimoabgerundet
@@ -557,6 +557,6 @@ Non-stopwords
        1        0   100.00   wolfgangcurtius
        1        0   100.00   wolfgangmüller
        1        0   100.00   wolframthiele
-       1        0   100.00   zahnräderfabrikrenkag
+       1        1     0.00   zahnräderfabrikrenkag
        2        0   100.00   über25
        5        0   100.00   über50
