@@ -1,14 +1,17 @@
 from utils.df_objectifier import DFObjectifier
 from n_dist_keying.ocr_comparison import OCRcomparison
 from n_dist_keying.ocr_set import OCRset
+from multi_sequence_alignment.msa_handler import MsaHandler
 
 class DatabaseHandler():
 
-    def __init__(self, dataframe_wrapper, number_of_inputs):
+    def __init__(self, dataframe_wrapper, number_of_inputs, predictor):
 
         print("Init database handler")
         self._dataframe_wrapper = dataframe_wrapper
         self._number_of_inputs = number_of_inputs
+        self.msa_handler = MsaHandler()
+        self.msa_handler.add_predictor(predictor)
 
     def get_some_empty_object(self):
 
@@ -28,7 +31,7 @@ class DatabaseHandler():
         DEFAULT_OCROPUS_INDEX = 2
 
 
-        ocr_set = OCRset(self._number_of_inputs, line_index)
+        ocr_set = OCRset(self._number_of_inputs, line_index, self.msa_handler)
         ocr_set.is_database_set(True, self)
 
         for input_element in input_list_db:
@@ -60,18 +63,20 @@ class DatabaseHandler():
 
         return  ocr_set
 
-    def create_ocr_comparison(self):
+    def create_ocr_comparison(self,predictor=None):
         """
         Creates an ocr_comparison from dataframe,
         calls create_ocr_set multiple times
         :return: OCRComparison filled object
         """
-        ocr_comparison = OCRcomparison()
+        ocr_comparison = OCRcomparison(predictor=predictor)
         lines_object = self._dataframe_wrapper.get_line_obj()
 
         for line_index in lines_object:
             list_of_inputs = lines_object[line_index]
             ocr_set = self.create_ocr_set(list_of_inputs, line_index)
+            if ocr_comparison.predictor != None:
+                ocr_set.add_predictor(predictor=ocr_comparison.predictor)
             ocr_comparison.add_set(ocr_set)
 
 

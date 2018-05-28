@@ -6,7 +6,7 @@ from os import listdir
 from os.path import isfile, join
 import os
 import shutil
-
+from machine_learning_components.special_character_predictor import SpecialCharPredictor
 
 
 class TableParser(object):
@@ -92,9 +92,14 @@ class TableParser(object):
         # basename_db = os.path.splitext(basename_db_ext)[0] # remove extension
         additional_created_files = []
 
+        predictor = None
+        if self._config.PREDICTOR_AUFSICHTSRAT_ENABLED:
+            predictor = SpecialCharPredictor()
+            predictor.load_prediction_model()
+
         dataframe_wrapper = DFObjectifier(dbdir_abs, table)
-        database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS)
-        ocr_comparison = database_handler.create_ocr_comparison()
+        database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS, predictor)
+        ocr_comparison = database_handler.create_ocr_comparison(predictor=predictor)
         ocr_comparison.sort_set()
         # print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
         # ocr_comparison.print_sets(False)

@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+            <title>OCR Results</title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name='AKF-OCR' content='Ocro-default' />
+            <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
+        </head>
+        <body>
+            <div class='ocr_page' title='image None; bbox 0 0 2024 12290'>
+            <span class ='ocr_line' title='bbox 75 284 936 323' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 284 936 323' >Sitz: 5000 Köln 1, Oppenheimstraße 11,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 107 332 452 363' ><br/>
+                <span  class ='ocrx_word' title='bbox 107 332 452 363' >Postfach 140 129</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 399 820 436' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 399 820 436' >Telefon: (02 21)Sa.-Nr. 772 11</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 470 468 500' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 470 468 500' >Telex: 8 885 706</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 533 335 563' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 533 335 563' >Vorstand:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 574 993 617' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 574 993 617' >Dipl. -Kfm. Dieter Wendelstadt, Wuppertal,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 627 211 661' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 627 211 661' >Vors.;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 669 609 708' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 669 609 708' >Dr. Axel Biagosch, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 715 561 753' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 715 561 753' >Dr. Erich Frick, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 760 688 797' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 760 688 797' >Dr. Hans Dieter Grell, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 73 811 544 846' ><br/>
+                <span  class ='ocrx_word' title='bbox 73 811 544 846' >Claas Kleyboldt, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 848 570 884' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 848 570 884' >Dr. Franz Kratz, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 42 952 633 987' ><br/>
+                <span  class ='ocrx_word' title='bbox 42 952 633 987' >Hans Werner Staunau, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 996 914 1031' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 996 914 1031' >Hellmuth von Stockhausen, Rodenkirchen;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 1041 660 1080' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 1041 660 1080' >Dipl.-Ing. Otto Vossen, Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 40 1113 401 1142' ><br/>
+                <span  class ='ocrx_word' title='bbox 40 1113 401 1142' >Aufsichtsrat:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 41 1152 896 1190' ><br/>
+                <span  class ='ocrx_word' title='bbox 41 1152 896 1190' >Dr. Nikolaus Graf Strasoldo, Burg Gude-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 42 1200 695 1237' ><br/>
+                <span  class ='ocrx_word' title='bbox 42 1200 695 1237' >nau bei Bad Godesberg, Vors.;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 42 1243 899 1280' ><br/>
+                <span  class ='ocrx_word' title='bbox 42 1243 899 1280' >Hermann Heusch, Aachen, stellv. Vors.;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 1288 954 1329' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 1288 954 1329' >Rudolf von Bennigsen-Foerder, Düsseldorf;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 41 1335 908 1371' ><br/>
+                <span  class ='ocrx_word' title='bbox 41 1335 908 1371' >Dr.Dr.h.c.Kurt Birrenbach, Düsseldorf;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 42 1383 735 1419' ><br/>
+                <span  class ='ocrx_word' title='bbox 42 1383 735 1419' >Friedrich Carl Erasmus, Essen;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 42 1429 853 1467' ><br/>
+                <span  class ='ocrx_word' title='bbox 42 1429 853 1467' >Alfred Freiherr von Oppenheim, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 42 1475 642 1513' ><br/>
+                <span  class ='ocrx_word' title='bbox 42 1475 642 1513' >Heinz Pferdmenges, Rheydt;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 42 1520 508 1553' ><br/>
+                <span  class ='ocrx_word' title='bbox 42 1520 508 1553' >Albert Vahle, Aachen;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 1616 527 1654' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 1616 527 1654' >Hans Abschlag, Köln;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 1662 691 1699' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 1662 691 1699' >Karl-Heinz Bette, Dortmund;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 1707 606 1746' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 1707 606 1746' >Horst Grimm, Bensberg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 1752 508 1787' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 1752 508 1787' >Heinrich Paus, Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 1819 465 1856' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 1819 465 1856' >Gründung: 1838</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 1903 553 1941' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 1903 553 1941' >Tätigkeitsgebiet:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 1948 953 1978' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 1948 953 1978' >Die Gesellschaft betreibt im In- und Aus-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 1993 961 2031' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 1993 961 2031' >land alle Versicherungszweige, insbeson-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 2038 895 2073' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 2038 895 2073' >dere die Feuer-, Einbruch-Diebstahl-,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 2083 914 2121' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 2083 914 2121' >Leitungswasser-, Glas-, Sturm-Versi-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 2128 953 2166' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 2128 953 2166' >cherung, Verbundene Hausrat; Verbunde-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 64 2173 906 2211' ><br/>
+                <span  class ='ocrx_word' title='bbox 64 2173 906 2211' >neWohngebäude; Technische Versiche-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 2216 961 2255' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 2216 961 2255' >rungszweige (Maschinen-, Montage-, Ma-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 2262 938 2299' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 2262 938 2299' >schinengarantie-, Maschinen-BU-, Bau-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 2306 955 2341' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 2306 955 2341' >wesen-, Schwachstrom- und Elektro- und</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 2350 977 2388' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 2350 977 2388' >Gasgeräte-Versicherung); Transport-Ver-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 2394 937 2433' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 2394 937 2433' >sicherung (Waren- und Kasko-, Wasser-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 2440 961 2478' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 2440 961 2478' >sportfahrzeug-, Reisegepäck-, Reiseaus-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 2484 914 2523' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 2484 914 2523' >fallkosten-Valoren-Versicherung); Ein-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 2530 926 2569' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 2530 926 2569' >heits-Versicherung; Tier-Versicherung;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 2575 864 2614' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 2575 864 2614' >Haftpflicht- und Unfall-Versicherung;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 2620 814 2657' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 2620 814 2657' >Kraftfahr-Haftpflicht-, Unfall- und</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 83 2665 929 2703' ><br/>
+                <span  class ='ocrx_word' title='bbox 83 2665 929 2703' >-Fahrzeug-Versicherung; Kredit-Versi-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 2711 929 2749' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 2711 929 2749' >cherung; Sonstige Versicherungen, Aus-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 2755 937 2793' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 2755 937 2793' >stellungs-, Automaten-, Betriebsschlie-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 2799 922 2838' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 2799 922 2838' >ßungs-, Fahrrad-, Filmausfall-, Film-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 2845 921 2883' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 2845 921 2883' >theater-, Garderobe-, Jagd- und Sport-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 2890 882 2928' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 2890 882 2928' >waffen-, Kühlgüter-, Reiserücktritts-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 2935 904 2974' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 2935 904 2974' >kosten-, Tank- und Faßleckage-, Tief-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 2979 942 3018' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 2979 942 3018' >kühlgutversicherung; Luftfahrt (indirekt);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 3025 937 3067' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 3025 937 3067' >Lebens- und Hagel-Versicherung nur in-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 3067 891 3106' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 3067 891 3106' >direkt; Rechtsschutz nur in Osterreich</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 3161 471 3198' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 3161 471 3198' >Beteiligungen:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 3206 917 3241' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 3206 917 3241' >COLONIA LEBENSVERSICHERUNG AG,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 3251 168 3279' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 3251 168 3279' >Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3299 859 3338' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3299 859 3338' >Kapital: DM 12 000 000. - (über 25 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3344 958 3380' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3344 958 3380' >Dividenden ab 1969: 14, 14, 14,14,14,14 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 3409 878 3449' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 3409 878 3449' >Kölnische Rückversicherungs-Gesell-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 83 3455 339 3490' ><br/>
+                <span  class ='ocrx_word' title='bbox 83 3455 339 3490' >schaft, Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3499 859 3537' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3499 859 3537' >Kapital: DM 32 000 000. - (über 50 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3544 887 3582' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3544 887 3582' >Dividenden ab 1969: 14,10, 10, 15,17 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 3611 960 3651' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 3611 960 3651' >Nordstern Allgemeine Versicherungs-AG,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 3656 213 3687' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 3656 213 3687' >Berlin</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3702 859 3740' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3702 859 3740' >Kapital: DM 55 000 000. - (über 50 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3747 909 3785' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3747 909 3785' >Dividenden ab 1969: 16,0,12,16,8,10 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3816 909 3857' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3816 909 3857' >ROLAND Rechtsschutz-Versicherungs-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 3862 275 3899' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 3862 275 3899' >AG, Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 3908 834 3949' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 3908 834 3949' >Kapital: DM 6 000 000. - (über 25 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 3955 933 3992' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 3955 933 3992' >Dividenden ab 1969: 14,10,10, 12,12,0 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 4020 923 4060' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 4020 923 4060' >Kölnische Hagel-Versicherungs-Gesell-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 4065 338 4099' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 4065 338 4099' >schaft, Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 4108 932 4146' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 4108 932 4146' >Kapital: DM 1 500 000. - (über 50 %; Ge-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 4152 567 4192' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 4152 567 4192' >winnabführungsvertrag)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 4197 815 4235' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 4197 815 4235' >Dividenden ab 1969: 8, 6,8,0, 0,0 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 4297 914 4337' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 4297 914 4337' >Kölnische Verwaltungs-AG für Versiche-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 4344 413 4381' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 4344 413 4381' >rungswerte, Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 4388 714 4427' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 4388 714 4427' >Kapital: DM 20 000 000. - (25 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 4431 899 4471' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 4431 899 4471' >Dividenden ab 1969: 14,12,12,12,12,9 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 4501 857 4534' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 4501 857 4534' >Rheinisch-Westfälische Boden-Credit-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 4546 279 4580' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 4546 279 4580' >Bank, Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 4590 822 4630' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 4590 822 4630' >Kapital: DM 48 000 000. - (über 50 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 4635 921 4673' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 4635 921 4673' >Dividenden ab 1969: 18,18,19,20,20,20 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 4715 945 4755' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 4715 945 4755' >Schwäbische Zellstoff AG, Ehingen(Donau)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 4760 826 4799' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 4760 826 4799' >Kapital: DM 12 500 000. - (über 25 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 4805 925 4843' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 4805 925 4843' >Dividenden ab 1969: 14,14,12, 12,12,12 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 4872 880 4909' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 4872 880 4909' >COLONIA Bausparkasse AG, Dortmund</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 4917 804 4956' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 4917 804 4956' >Kapital: DM 6 000 000. - (über 25 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 4962 926 4999' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 4962 926 4999' >Dividenden ab 1969: 10,10,10,10,12,10 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 5028 835 5067' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 5028 835 5067' >COLONIA Krankenversicherungs-AG,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 5072 142 5102' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 5072 142 5102' >Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 5118 694 5157' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 5118 694 5157' >Kapital: DM 3 000 000. - (50 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 5162 785 5201' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 5162 785 5201' >Dividenden ab 1969: 4, 4, 4,4,0,0 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 5231 760 5270' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 5231 760 5270' >Geschäftsjahr: Kalenderjahr</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 5348 707 5381' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 5348 707 5381' >Stimmrecht der Aktien:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 5393 568 5428' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 5393 568 5428' >Je DM 12,50 = 1 Stimme</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 5460 693 5499' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 5460 693 5499' >Kapitalentwicklung und</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 5507 440 5543' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 5507 440 5543' >Bezugsrechte:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 52 5550 723 5587' ><br/>
+                <span  class ='ocrx_word' title='bbox 52 5550 723 5587' >Grundkapital: DM 100 000 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 51 5595 751 5635' ><br/>
+                <span  class ='ocrx_word' title='bbox 51 5595 751 5635' >DM 80 000 000. - (voll eingezahlt)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 51 5640 853 5680' ><br/>
+                <span  class ='ocrx_word' title='bbox 51 5640 853 5680' >DM 20 000 000.- (mit 50 % eingezahlt)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 5687 913 5724' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 5687 913 5724' >1955 Umstellung 10:3 auf DM 4 800 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 5729 768 5769' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 5729 768 5769' >1959 Bezugsrecht 2:1 zu 100 % auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 47 5778 891 5813' ><br/>
+                <span  class ='ocrx_word' title='bbox 47 5778 891 5813' >DM 7 200 000.-, rechn. Wert DM 733.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 51 5822 538 5859' ><br/>
+                <span  class ='ocrx_word' title='bbox 51 5822 538 5859' >(21.8.), Div.Sch.Nr. 5</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 5868 721 5905' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 5868 721 5905' >1960 Kapitalberichtigung f:1 auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 47 5913 970 5950' ><br/>
+                <span  class ='ocrx_word' title='bbox 47 5913 970 5950' >DM 8 400 000.-, rechn. Abschlag DM 500.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 51 5957 535 5994' ><br/>
+                <span  class ='ocrx_word' title='bbox 51 5957 535 5994' >(15.8.), Div.Sch.Nr. 8</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 6001 658 6039' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 6001 658 6039' >Bezugsrecht 4:1 zu 100 % auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 6047 914 6082' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 6047 914 6082' >DM 10 500 000.-, rechn. Wert DM 636.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 52 6090 513 6128' ><br/>
+                <span  class ='ocrx_word' title='bbox 52 6090 513 6128' >(2.9.), Div.Sch.Nr. 9</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 6134 861 6173' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 6134 861 6173' >Bezugsrecht 4:1 zu 100 %, rechn.Wert</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 6179 758 6217' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 6179 758 6217' >DM 106.- (2.9.), Div.Sch.Nr. 10</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 6228 655 6266' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 6228 655 6266' >Bezugsrecht 7:1 zu 100 % auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 6274 896 6310' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 6274 896 6310' >DM 12 000 000.-, rechn.Wert DM 280.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 6318 650 6356' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 6318 650 6356' >(27.1.1961), Div.Sch.Nr. 11</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 52 6378 771 6417' ><br/>
+                <span  class ='ocrx_word' title='bbox 52 6378 771 6417' >1961 Bezugsrecht 4:1 zu 100 % auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 6425 917 6462' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 6425 917 6462' >DM 15 000 000. -, rechn. Wert DM 360.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6469 561 6508' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6469 561 6508' >(10.8.), Div.Sch.Nr. 13</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 51 6515 771 6556' ><br/>
+                <span  class ='ocrx_word' title='bbox 51 6515 771 6556' >1965 Bezugsrecht 3:1 zu 100 % auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 6564 942 6602' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 6564 942 6602' >DM 20 000 000.-, rechn. Wert DM 255,75</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6608 562 6648' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6608 562 6648' >(19.7.), Div.Sch.Nr. 18</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 52 6656 799 6691' ><br/>
+                <span  class ='ocrx_word' title='bbox 52 6656 799 6691' >1969 Erhöhung auf DM 28 141 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6698 748 6736' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6698 748 6736' >1970 Kapitalberichtigung 19:1 auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 6744 788 6780' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 6744 788 6780' >DM 30 000 000.-, rechn. Abschlag</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 6784 757 6821' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 6784 757 6821' >DM 16,50 (5.10.), Div.Sch.Nr. 2</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 52 6827 771 6866' ><br/>
+                <span  class ='ocrx_word' title='bbox 52 6827 771 6866' >1972 Bezugsrecht 3:2 zu 150 % auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 6874 885 6911' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 6874 885 6911' >DM 50 000 000.-, 1. Bezugsrechtsnotiz</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 66 6977 927 7015' ><br/>
+                <span  class ='ocrx_word' title='bbox 66 6977 927 7015' >DM 116.- (10.10.), dividendenberechtigt</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 67 7025 566 7060' ><br/>
+                <span  class ='ocrx_word' title='bbox 67 7025 566 7060' >ab 1.7., Div.Sch.Nr. 5</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 70 7069 741 7108' ><br/>
+                <span  class ='ocrx_word' title='bbox 70 7069 741 7108' >1973 Kapitalberichtigung 5:3 auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 67 7114 805 7151' ><br/>
+                <span  class ='ocrx_word' title='bbox 67 7114 805 7151' >DM 80 000 000.-, rechn. Abschlag</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 67 7158 927 7196' ><br/>
+                <span  class ='ocrx_word' title='bbox 67 7158 927 7196' >DM 162.- (19.11.), dividendenberechtigt</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 68 7205 566 7241' ><br/>
+                <span  class ='ocrx_word' title='bbox 68 7205 566 7241' >ab 1.1., Div.Sch.Nr. 7</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 7244 790 7289' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 7244 790 7289' >1975 Bezugsrecht 4:1 zu 100 % auf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 70 7291 960 7329' ><br/>
+                <span  class ='ocrx_word' title='bbox 70 7291 960 7329' >DM 100 000 000.-, erste Bezugsrechtsno-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 67 7335 930 7376' ><br/>
+                <span  class ='ocrx_word' title='bbox 67 7335 930 7376' >tiz DM 45. - (1.3.), dividendenberechtigt</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 71 7383 551 7422' ><br/>
+                <span  class ='ocrx_word' title='bbox 71 7383 551 7422' >ab1.1., Div.Sch.Nr.2</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 69 7475 354 7504' ><br/>
+                <span  class ='ocrx_word' title='bbox 69 7475 354 7504' >Aktionäre:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 71 7513 751 7558' ><br/>
+                <span  class ='ocrx_word' title='bbox 71 7513 751 7558' >Sal.Oppenheim jr. & Cie., Köln</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 7561 316 7602' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 7561 316 7602' >(über 25 %);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 7599 938 7642' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 7599 938 7642' >Kölnische Verwaltungs-AG für Versiche-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 7643 703 7692' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 7643 703 7692' >rungswerte, Köln (über 25 %);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 7696 902 7733' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 7696 902 7733' >Aachener und Münchener Versicherung</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 7741 591 7784' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 7741 591 7784' >AG, Aachen (über 25 %);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 7792 421 7824' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 7792 421 7824' >Rest Streubesitz</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 7900 422 7931' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 7900 422 7931' >Börsennotiz:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 7938 884 7980' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 7938 884 7980' >Düsseldorf (amtl.) und Berlin (Freiv.)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 71 8029 696 8066' ><br/>
+                <span  class ='ocrx_word' title='bbox 71 8029 696 8066' >Wertpapier-Kenn-Nr.:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 8069 604 8112' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 8069 604 8112' >841000 (100 % eingezahlt)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 8117 603 8157' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 8117 603 8157' >841002 ( 50 % eingezahlt)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 8205 386 8243' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 8205 386 8243' >Stückelung:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 100 8248 811 8284' ><br/>
+                <span  class ='ocrx_word' title='bbox 100 8248 811 8284' >80 000 vink. Nam. -St. -Akt. zu je</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 704 8292 943 8323' ><br/>
+                <span  class ='ocrx_word' title='bbox 704 8292 943 8323' >DM 1 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 8337 812 8373' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 8337 812 8373' >120 000 vink. Nam. -St. -Akt. zu je</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 705 8381 944 8413' ><br/>
+                <span  class ='ocrx_word' title='bbox 705 8381 944 8413' >DM 100.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 8427 812 8464' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 8427 812 8464' >160 000 vink. Nam. -St. -Akt. zu je</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 705 8471 944 8502' ><br/>
+                <span  class ='ocrx_word' title='bbox 705 8471 944 8502' >DM 50.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 8537 858 8578' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 8537 858 8578' >Aktienkurse (ultimo abgerundet):</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 8588 477 8627' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 8588 477 8627' >a)100 % eingezahlt</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 8635 883 8676' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 8635 883 8676' >per Stück; ab 29.9.1969 Stücknotiz für</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 8683 254 8715' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 8683 254 8715' >DM 50.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 8725 986 8758' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 8725 986 8758' >1948 60 DM 1969 510 DM 1974 230 DM</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 127 8771 988 8803' ><br/>
+                <span  class ='ocrx_word' title='bbox 127 8771 988 8803' >65 850 DM 70 300 DM 75 253 DM</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 128 8814 848 8853' ><br/>
+                <span  class ='ocrx_word' title='bbox 128 8814 848 8853' >66 630 DM 71 337 DM (30.9.)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 128 8862 673 8893' ><br/>
+                <span  class ='ocrx_word' title='bbox 128 8862 673 8893' >67 695 DM 72 450 DM</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 128 8906 673 8936' ><br/>
+                <span  class ='ocrx_word' title='bbox 128 8906 673 8936' >68 665 DM 73 249 DM</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 8976 448 9015' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 8976 448 9015' >b) 50 % eingezahlt</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 9021 888 9059' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 9021 888 9059' >Notierung ab 24. 3.1975; Stücknotiz für</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 9066 248 9101' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 9066 248 9101' >DM 50,-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 9109 375 9140' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 9109 375 9140' >1975 209 DM</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 9153 222 9190' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 9153 222 9190' >(30.9.)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 9248 881 9279' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 9248 881 9279' >Dividenden auf Stammaktien:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 9289 790 9334' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 9289 790 9334' >II/1948/49-1969: insgesamt 202 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 9337 603 9377' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 9337 603 9377' >1970: 8 % (Div.Sch.Nr.3)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 9384 628 9423' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 9384 628 9423' >1971: 10 % (Div.Sch.Nr.4)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 9430 628 9470' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 9430 628 9470' >1972: 14 % (Div.Sch.Nr.6)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 9476 604 9514' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 9476 604 9514' >1973: 9 % (Div.Sch.Nr.1)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 9520 627 9556' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 9520 627 9556' >1974: 10 % (Div.Sch.Nr. 3)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 96 9656 885 9694' ><br/>
+                <span  class ='ocrx_word' title='bbox 96 9656 885 9694' >Aus den Bilanzen (in 1000 DM)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 41 9724 921 9757' ><br/>
+                <span  class ='ocrx_word' title='bbox 41 9724 921 9757' >Aktiva19731974</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 9791 919 9830' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 9791 919 9830' >Kapitalanlagen 943 787 1 094 605</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 9838 481 9876' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 9838 481 9876' >(Namensschuldver-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 9884 360 9921' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 9884 360 9921' >schreibungen,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 9928 473 9959' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 9928 473 9959' >Schuldscheinforde-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 9971 921 10011' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 9971 921 10011' >rungen u.Darlehen)152 622 265 873</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 10018 396 10055' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 10018 396 10055' >Forderungen aus</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 10062 418 10099' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 10062 418 10099' >dem selbstabge-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 10107 442 10138' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 10107 442 10138' >schlossenen Ver-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 10153 371 10189' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 10153 371 10189' >sicherungsge-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 10194 920 10227' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 10194 920 10227' >schäft104 090 101 987</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 10242 372 10272' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 10242 372 10272' >Andere Vermö-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 10284 923 10324' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 10284 923 10324' >gensgegenstände 75 014 70 364</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 10329 921 10367' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 10329 921 10367' >(Barmittel)44 497 44 361</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 47 10421 255 10450' ><br/>
+                <span  class ='ocrx_word' title='bbox 47 10421 255 10450' >Passiva</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 10486 923 10526' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 10486 923 10526' >Eigenkapital140 500 154 000</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 10531 923 10570' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 10531 923 10570' >(Grundkapital) 80 000 80 000</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 10579 459 10616' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 10579 459 10616' >Versicherungstech-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 10623 427 10654' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 10623 427 10654' >nische Rückstel-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 10666 924 10707' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 10666 924 10707' >lungen791 604 869 350</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 47 10714 475 10750' ><br/>
+                <span  class ='ocrx_word' title='bbox 47 10714 475 10750' >Nichtversicherungs-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 10758 436 10789' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 10758 436 10789' >technische Rück-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 10801 920 10841' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 10801 920 10841' >stellungen102 071 145 951</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 10846 923 10886' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 10846 923 10886' >Bilanzgewinn11 008 10 313</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 10906 921 10938' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 10906 921 10938' >Bilanzsumme 1139 447 1 278 316</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 47 11201 894 11235' ><br/>
+                <span  class ='ocrx_word' title='bbox 47 11201 894 11235' >Aus den Gewinn- und Verlust-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 333 11249 637 11285' ><br/>
+                <span  class ='ocrx_word' title='bbox 333 11249 637 11285' >rechnungen</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 555 11315 927 11344' ><br/>
+                <span  class ='ocrx_word' title='bbox 555 11315 927 11344' >19731974</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 11382 406 11422' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 11382 406 11422' >Beiträge einschl.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 11426 927 11466' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 11426 927 11466' >Nebenleistungen 1 025 547 1 045 040</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 11475 471 11511' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 11475 471 11511' >Rückversicherungs-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 11517 924 11557' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 11517 924 11557' >beiträge374 274 321 552</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 47 11564 416 11600' ><br/>
+                <span  class ='ocrx_word' title='bbox 47 11564 416 11600' >Aufwendungen für</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 11608 408 11645' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 11608 408 11645' >Versicherungs-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 11650 928 11683' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 11650 928 11683' >fälle440 103 542 250</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 11697 417 11734' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 11697 417 11734' >Aufwendungen für</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 83 11742 377 11773' ><br/>
+                <span  class ='ocrx_word' title='bbox 83 11742 377 11773' >den Versiche-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 90 11785 926 11825' ><br/>
+                <span  class ='ocrx_word' title='bbox 90 11785 926 11825' >rungsbetrieb 156 172 173 148</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 51 11831 432 11870' ><br/>
+                <span  class ='ocrx_word' title='bbox 51 11831 432 11870' >Erträge aus Kapi-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 11874 925 11914' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 11874 925 11914' >talanlagen86 899 91 127</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 11921 418 11959' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 11921 418 11959' >Aufwendungen für</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 11964 927 12004' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 11964 927 12004' >Kapitalanlagen 35 693 22 193</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 84 12011 427 12051' ><br/>
+                <span  class ='ocrx_word' title='bbox 84 12011 427 12051' >(Abschreibungen</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 12058 417 12091' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 12058 417 12091' >u. Wertberichti-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 85 12102 929 12144' ><br/>
+                <span  class ='ocrx_word' title='bbox 85 12102 929 12144' >gungen)28 299 13 350</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 52 12149 925 12181' ><br/>
+                <span  class ='ocrx_word' title='bbox 52 12149 925 12181' >Steuern13 080 7541</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 12192 926 12224' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 12192 926 12224' >JJahresüberschuß 20 674 20 005</span > 
+            </span>
+		</div>
+	</body>
+</html>

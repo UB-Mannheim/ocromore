@@ -27,7 +27,23 @@ class Filo(Stack):
         self.size_limit_filo = size_limit
         super().__init__()
 
-    def push(self, item):
+    def get_current_length(self):
+        return len(self.items)
+
+    def is_full(self):
+        if self.get_current_length() == self.size_limit_filo:
+            return True
+        else:
+            return False
+
+    def get_content_as_string(self):
+        content = ''.join(self.items)
+        return content
+
+    def push(self, item, filterchar=None):
+
+        if filterchar is not None and item == filterchar:
+            return # don't push the filtered char
 
         # add item
         super().push(item)

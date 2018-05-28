@@ -1,0 +1,221 @@
+UNLV-ISRI OCR Accuracy Report Version 6.1
+-----------------------------------------
+   16286   Characters
+    1315   Errors
+   91.93%  Accuracy
+
+       0   Reject Characters
+       0   Suspect Markers
+       0   False Marks
+    0.00%  Characters Marked
+   91.93%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       0        0        0        0   Marked
+    1227       80        8     1315   Unmarked
+    1227       80        8     1315   Total
+
+   Count   Missed   %Right
+       3        3     0.00   Unassigned
+     631       50    92.08   ASCII Spacing Characters
+    1475      257    82.58   ASCII Special Symbols
+    1463      227    84.48   ASCII Digits
+    1609      143    91.11   ASCII Uppercase Letters
+   10880      613    94.37   ASCII Lowercase Letters
+       4        1    75.00   Latin1 Uppercase Letters
+     221       13    94.12   Latin1 Lowercase Letters
+   16286     1307    91.97   Total
+
+  Errors   Marked   Correct-Generated
+      55        0   {-}-{¬}
+      46        0   {Jenom.DM100.-=1Stimme....}-{}
+      43        0   {Grundkapital:DM112320000...}-{}
+      36        0   {HeinrichWulff,Hamburg(Ar...}-{}
+      35        0   {<FEFF>Sitz:(24a)Hamburg1...}-{}
+      33        0   {(in1000DM)<\n>}-{}
+      33        0   {100%imBesitzderGesellsch...}-{}
+      32        0   {AG,Berlin/Bonn(25,1%)....}-{}
+      31        0   {tückB-Vorz.-Akt.zuDM166...}-{}
+      30        0   {bungderTochtergesellscha...}-{}
+      29        0   {Emissionsbetrag:$1000000...}-{}
+      28        0   {10898StückeC-Akt.zuDM10...}-{}
+      28        0   {4.einenAutobusbetriebvon...}-{}
+      27        0   {0StückeA-Akt.zuDM1000.-...}-{}
+      27        0   {Grundkapital:DM40000000....}-{}
+      26        0   {1721werkseigeneWohnungen...}-{}
+      26        0   {Grundkapital:DM69035000....}-{}
+      25        0   {Akt.zujeDM100.-=DM1000.-...}-{}
+      25        0   {C.G.Trinkaus,Düsseldorf...}-{}
+      25        0   {Kapital:DM100000.-(100%)...}-{}
+      23        0   {Fernschreiber:0212158....}-{}
+      23        0   {NamhafteBeteiligungen:...}-{}
+      22        0   {2.dasStraßenbahnnetz20}-{}
+      22        0   {Fernschreiber:031827....}-{}
+      21        0   {KreditbankAG;Com-<\n>mer}-{}
+      20        0   {000.-<\n>(Nr.1-99856)...}-{}
+      20        0   {remen;<\n>NorddeutscheB}-{}
+      19        0   {99856St.-Akt.zujeDM}-{}
+      19        0   {IHAGundzu11,76%<\n>der}-{}
+      18        0   {ZurGeschäftslage:<\n>}-{}
+      18        0   {rGeschäftslage:<\n>Zu}-{}
+      17        0   {-undStahlerzeugni}-{}
+      17        0   {.v.26.11.1952im<\n>V}-{}
+      17        0   {M18000000.-(3%)<\n>D}-{}
+      16        0   {-Vorzugsaktie.<\n>B}-{}
+      16        0   {2.stellv.Vors.;<\n>}-{}
+      16        0   {ALENSitz:<\n>(21b)G}-{}
+      16        0   {StückeB-Akt.zuDM}-{}
+      15        0   {2.Steinkohlenbe}-{}
+      15        0   {GroßhandelmitEi}-{}
+      15        0   {eschäftslage:<\n>G}-{}
+      14        0   {"}-{}
+      13        0   {KreditbankAG,}-{}
+      12        0   {:}-{}
+      11        0   {1150ta/to.<\n>}-{}
+      11        0   {Miozu88,24%}-{}
+      11        0   {undVerlust-}-{}
+      10        0   {=1Stimme;<\n>}-{}
+      10        0   {DM166400.-}-{}
+       9        0   {000.-<\n>201}-{}
+       9        0   {isweid<\n>(K}-{}
+       8        0   {<FEFF>SÜDWEST}-{}
+       8        0   {Kapital:}-{}
+       8        0   {trale;Ha}-{}
+       7        0   {gwerkFr}-{}
+       7        0   {s.Siege}-{}
+       6        0   {,818km}-{}
+       6        0   {-<\n>sens}-{}
+       6        0   {Peine<\n>}-{}
+       6        0   {ed-<\n>ri}-{}
+       5        0   {).<\n>Fe}-{}
+       5        0   {.Sch.}-{}
+       5        0   {.}-{}
+       5        0   {Divid}-{}
+       5        0   {n,<\n>ge}-{}
+       4        0   {%<\n>"1}-{}
+       4        0   {10}-{lO}
+       4        0   {19,5}-{}
+       4        0   {1937}-{}
+       4        0   {496,}-{}
+       4        0   {burg}-{}
+       4        0   {lini}-{}
+       4        0   {}-{<\n>}
+       3        0   {0%<\n>}-{<\n>1)}
+       3        0   {176}-{}
+       3        0   {179}-{}
+       3        0   {180}-{}
+       3        0   {184}-{}
+       3        0   {559}-{}
+       3        0   {<\n>3.}-{}
+       3        0   {Zur}-{}
+       3        0   {den}-{}
+       3        0   {l}-{i}
+       2        0   {"}-{II}
+       2        0   {-)}-{'}
+       2        0   {1)}-{}
+       2        0   {:0}-{}
+       2        0   {nr}-{}
+       2        0   {o.}-{<}
+       2        0   {sc}-{3C}
+       1        0   {)}-{]}
+       1        0   {,}-{.}
+       1        0   {,}-{}
+       1        0   {1}-{l}
+       1        0   {1}-{}
+       1        0   {3}-{}
+       1        0   {;}-{:}
+       1        0   {<FEFF>}-{}
+       1        0   {G}-{C}
+       1        0   {l}-{I}
+       1        0   {v}-{V}
+       1        0   {w}-{W}
+       1        0   {}-{-}
+       1        0   {}-{i}
+       1        0   {}-{|}
+       1        0   {é}-{ö}
+       1        0   {ö}-{o}
+
+   Count   Missed   %Right
+     631       50    92.08   {<\n>}
+      24       16    33.33   {"}
+       2        1    50.00   {$}
+      69        8    88.41   {%}
+      16        0   100.00   {&}
+      69       11    84.06   {(}
+      82       13    84.15   {)}
+       6        0   100.00   {+}
+     247       15    93.93   {,}
+     269       87    67.66   {-}
+     413       64    84.50   {.}
+      20        2    90.00   {/}
+     345       86    75.07   {0}
+     256       54    78.91   {1}
+     144       18    87.50   {2}
+      99        8    91.92   {3}
+     108        8    92.59   {4}
+     156       10    93.59   {5}
+      81       11    86.42   {6}
+      59        7    88.14   {7}
+      73       13    82.19   {8}
+     142       12    91.55   {9}
+     115       29    74.78   {:}
+     138        7    94.93   {;}
+       5        4    20.00   {=}
+     159       15    90.57   {A}
+     169        8    95.27   {B}
+      44        3    93.18   {C}
+     142       21    85.21   {D}
+      45        4    91.11   {E}
+      48        4    91.67   {F}
+     172       15    91.28   {G}
+     165        6    96.36   {H}
+      37        1    97.30   {I}
+      14        2    85.71   {J}
+      55        5    90.91   {K}
+      25        1    96.00   {L}
+     106       19    82.08   {M}
+      43        4    90.70   {N}
+      25        0   100.00   {O}
+      33        1    96.97   {P}
+       1        0   100.00   {Q}
+      30        0   100.00   {R}
+     148       18    87.84   {S}
+      22        4    81.82   {T}
+      14        1    92.86   {U}
+      51        5    90.20   {V}
+      46        3    93.48   {W}
+      15        3    80.00   {Z}
+     690       35    94.93   {a}
+     237       16    93.25   {b}
+     304       16    94.74   {c}
+     468       21    95.51   {d}
+    1713       87    94.92   {e}
+     194        9    95.36   {f}
+     360       19    94.72   {g}
+     467       19    95.93   {h}
+     746       50    93.30   {i}
+      17        2    88.24   {j}
+     265       21    92.08   {k}
+     481       32    93.35   {l}
+     335       21    93.73   {m}
+    1098       51    95.36   {n}
+     329       19    94.22   {o}
+      60        5    91.67   {p}
+       3        0   100.00   {q}
+     998       47    95.29   {r}
+     600       35    94.17   {s}
+     722       52    92.80   {t}
+     445       32    92.81   {u}
+     115        5    95.65   {v}
+      97        4    95.88   {w}
+       3        0   100.00   {x}
+       4        0   100.00   {y}
+     129       15    88.37   {z}
+       2        0   100.00   {Ö}
+       2        1    50.00   {Ü}
+      10        3    70.00   {ß}
+      70        3    95.71   {ä}
+       1        1     0.00   {é}
+      43        1    97.67   {ö}
+      97        5    94.85   {ü}
+       3        3     0.00   {<FEFF>}
