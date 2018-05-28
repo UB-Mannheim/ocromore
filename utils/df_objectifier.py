@@ -303,15 +303,25 @@ class DFObjectifier(object):
                        ((pparam.y0 + pparam.diffmid) > np.array(linedict['line_y0'])) & \
                        ((pparam.y1 - pparam.diffmid) < np.array(linedict['line_y1'])) & \
                        ((pparam.y1 + pparam.diff) > (np.array(linedict['line_y1'])))
+                old_lidx = None
+                old_idx = None
+                offset = 0
                 for idx in np.nonzero(con)[0].tolist():
+                    if old_lidx is None: old_lidx = linedict["line_idx"][idx]
+                    if linedict["line_idx"][idx] != old_lidx:
+                        old_lidx = linedict["line_idx"][idx]
+                        offset += linedict["word_idx"][old_idx]+1
                     linedict["calc_line_idx"][idx] = pparam.lineIdx
+                    linedict["word_idx"][idx] = linedict["word_idx"][idx]+offset
                     linedict["line_y0"][idx] = pparam.y1_max
+                    old_idx = idx
                 pparam.lineIdx += 1
                 if pparam.lineIdx == pparam.max_row:
                     print("Match lines ✗")
                     print(f"The max of {pparam.max_row} col was reached. Maybe something went wrong?")
                     break
             self.df["calc_line_idx"] = linedict["calc_line_idx"]
+            self.df["calc_word_idx"] = linedict["word_idx"]
         except Exception as e:
             print(f"Exception: {e}")
             pass
