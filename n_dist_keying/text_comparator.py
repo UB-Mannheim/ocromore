@@ -1,5 +1,5 @@
 import difflib
-from ocr_validation.ocrolib_edist import Edist3
+#from ocr_validation.ocrolib_edist import Edist3
 from utils.typecasts import TypeCasts
 from utils.random import Random
 from utils.myers import MyersSequenceMatcher
@@ -141,8 +141,8 @@ class TextComparator:
 
     @staticmethod
     def compare_ocr_strings_levensthein_normed(ocr_string1, ocr_string2):
-        ldist_normed, ldist = Edist3.normed_levenshtein(ocr_string1, ocr_string2)
-        # ldist_normed2 = distpkg.nlevenshtein(ocr_string1, ocr_string2, method=2) # this is the same - verified
+        #ldist_normed, ldist = Edist3.normed_levenshtein(ocr_string1, ocr_string2)
+        ldist_normed = distpkg.nlevenshtein(ocr_string1, ocr_string2, method=2) # this is the same - verified
         return ldist_normed
 
 

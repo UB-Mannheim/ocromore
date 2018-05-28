@@ -47,7 +47,7 @@ if config.PREPROCESSING:
     report_prep = dh.preprocess_dbdata(force = True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES, VERBOSE = False, VERBOSEPATH= "/media/sf_ShareVB/AFKII/verbose/")
 #dh.print_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
-if not config.WORKWITHOBJ:
+if config.WORKWITHOBJ:
     dh.work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
 # Plot DF (not working atm)

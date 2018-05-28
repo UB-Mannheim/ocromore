@@ -3,6 +3,24 @@
 class Random:
 
     @staticmethod
+    def is_special_character(text):
+        if type(text) == int:
+            return False
+
+        if text is None or text is False or text is True:
+            return False
+
+        if len(text) > 1:
+            return False
+
+        is_alphanumberical = text.isalnum()
+
+        if is_alphanumberical:
+            return False
+        else:
+            return True
+
+    @staticmethod
     def printc(*args, print_output):
         """
         Print conditionally if print_output is True 

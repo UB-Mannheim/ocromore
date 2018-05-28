@@ -20,7 +20,7 @@ class OCRset:
     """
     N_DISTANCE_SHORTEST_TAG = "n_distance_shortest"
 
-    def __init__(self, lines_size, y_mean):
+    def __init__(self, lines_size, y_mean, msa_handler):
         lineset = []
         for x in range(0, lines_size):
             lineset.append(False)
@@ -40,7 +40,11 @@ class OCRset:
         self._config = config_handler.get_config()
         self._cpr = ConditionalPrint(self._config.PRINT_MSA_HANDLER, self._config.PRINT_EXCEPTION_LEVEL,
                                     self._config.PRINT_WARNING_LEVEL)
-        self._msa_handler = MsaHandler()
+        self._msa_handler = msa_handler
+
+    def add_predictor(self,predictor):
+        self.predictor = predictor
+        self._msa_handler.add_predictor(predictor)
 
     def is_database_set(self, enabled, database_handler):
         self._is_origin_database = enabled

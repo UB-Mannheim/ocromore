@@ -3,7 +3,9 @@ from n_dist_keying.search_space_processor import SearchSpaceProcessor
 import numpy as np
 import inspect
 from utils.conditional_print import ConditionalPrint
+from utils.random import Random
 from configuration.configuration_handler import ConfigurationHandler
+from utils.queues import Filo
 
 class SpecialChars():
     # increment some special characters confidence when recognized
@@ -36,8 +38,12 @@ class OCRVoter(object):
         self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
                                     self.config.PRINT_WARNING_LEVEL)
 
+        self.filo_last_chars = Filo(250)
+        self.predictor = None
+        self.use_aufsichtsrat_prediction = False
 
-
+    def add_predictor(self, predictor):
+        self.predictor = predictor
 
     def get_same_count(self, c1, c2, c3):
         same_ctr = 0
@@ -261,8 +267,8 @@ class OCRVoter(object):
             self.cpr.print("vote_text1", line_1.textstr)
             self.cpr.print("vote_text2", line_2.textstr)
             self.cpr.print("vote_text3", line_3.textstr)
-            if "1150" in line_1.textstr:
-                 self.cpr.print("asd")
+            #if "1150" in line_1.textstr:
+            #     self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
@@ -347,6 +353,22 @@ class OCRVoter(object):
                     charconf_3 = conflist_new[2]
 
 
+                filo_content = self.filo_last_chars.get_content_as_string()
+
+                if self.config.PREDICTOR_AUFSICHTSRAT_ENABLED:
+                    if "Aufsichtsrat" in filo_content:
+                        self.use_aufsichtsrat_prediction = True
+                    if "Gründung:" in filo_content:
+                        self.use_aufsichtsrat_prediction = False
+
+                predicted_char= None
+                if self.use_aufsichtsrat_prediction:
+                    if len(filo_content) >= 19:
+
+                        len_aufsichtsrat = 19
+                        predicted_char = self.predictor.predict_next_aufsichtsrat_chars(len_aufsichtsrat,filo_content)
+                        # print("filo", filo_content,"predict:", predicted_char)
+                        # print("dd")
 
                 # get the character which occurs the most
                 sc1, acc_conf_1 = self.get_confidence_count(character_1, character_2, character_3, charconf_1,
@@ -364,13 +386,48 @@ class OCRVoter(object):
                     if maximum_conf <tresh:
                         continue
 
+                voted_char = None
+                voted_acc_conf = None
                 if maxindices == 0:
-                    accumulated_chars += character_2
+                    voted_char = character_2
+                    voted_acc_conf = acc_conf_2
                 elif maxindices == 1:
-                    accumulated_chars += character_1
+                    voted_char = character_1
+                    voted_acc_conf = acc_conf_1
                 else:
-                    accumulated_chars += character_3
+                    voted_char = character_3
+                    voted_acc_conf = acc_conf_3
 
+                if self.use_aufsichtsrat_prediction:
+                    if Random.is_special_character(predicted_char):
+                        one_char_sc =  Random.is_special_character(character_1) \
+                                or Random.is_special_character(character_2) or Random.is_special_character(character_3)
+                        voted_char_sc = Random.is_special_character(voted_char)
+
+                        if predicted_char != voted_char and (one_char_sc or voted_char_sc) and voted_char != wildcard_character:
+                            #print("FiloContent:", filo_content)
+                            #print("pc:", predicted_char, "vc:", voted_char, "vc_acc", voted_acc_conf)
+                            if voted_acc_conf <= 90.0:
+                                if voted_char != '\f': # don't swap formfeeds, they don't get predicted at all
+                                    #print("swap")
+                                    voted_char = predicted_char
+
+
+                accumulated_chars += voted_char
+                if self.config.PREDICTOR_AUFSICHTSRAT_ENABLED:
+                    # create pre semi-tokenized input strings in the filos from the voted characters for prediction
+                    if voted_char == ' ':
+                        # the models usally use the 'ƿ' char in substitution for spaces
+                        self.filo_last_chars.push(' ', filterchar='¦')
+                        self.filo_last_chars.push('ƿ', filterchar='¦')
+                        self.filo_last_chars.push(' ', filterchar='¦')
+                    elif Random.is_special_character(voted_char):
+                        self.filo_last_chars.push(' ', filterchar='¦')
+                        self.filo_last_chars.push(voted_char, filterchar='¦')
+                        self.filo_last_chars.push(' ', filterchar='¦')
+
+                    else:
+                        self.filo_last_chars.push(voted_char, filterchar='¦')
 
             accumulated_chars_stripped = accumulated_chars.replace(wildcard_character, '')
 

@@ -15,13 +15,18 @@ class OCRcomparison:
         Storage class for multiple Ocr_Sets
     """
 
-    def __init__(self):
+    def __init__(self, predictor = None):
         self.ocr_sets = []
         self.line_height_information = []
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
         self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
                                     self.config.PRINT_WARNING_LEVEL)
+
+        self.predictor = predictor
+
+    def load_predictor(self, predictor):
+        self.predictor = predictor
 
     def add_set(self, set_to_add):
         self.ocr_sets.append(set_to_add)

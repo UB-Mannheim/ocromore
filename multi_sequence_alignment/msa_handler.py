@@ -35,14 +35,20 @@ class MsaSimilarities(object):
 
 class MsaHandler(object):
 
-    def __init__(self):
+    def __init__(self, predictor = None):
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
         self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
                                     self.config.PRINT_WARNING_LEVEL)
         self.ocr_voter = OCRVoter()
 
+        if predictor != None:
+            self.predictor = predictor
+            self.ocr_voter.add_predictor(self.predictor)
 
+    def add_predictor(self,predictor):
+        self.predictor = predictor
+        self.ocr_voter.add_predictor(self.predictor)
 
     def compare(self, item_one, item_two, wildcard_character='¦'):
         sequences1 = [item_one]
@@ -950,7 +956,7 @@ class MsaHandler(object):
         wildcard_character = '¦'
 
         res_final_1, res_final_2, res_final_3 = self.align_three_texts(text_1, text_2, text_3, wildcard_character)
-
+        #if "Aufsichtsrat:" in res_final_1:
         self.cpr.print("my final resolutions before vote")
         self.cpr.print("res_final_1", res_final_1)
         self.cpr.print("res_final_2", res_final_2)
