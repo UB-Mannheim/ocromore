@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      741   Words
-      22   Misrecognized
-   97.03%  Accuracy
+      40   Misrecognized
+   94.60%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,23 +12,23 @@ Non-stopwords
    Count   Missed   %Right   Length
       25        0   100.00        1
       53        1    98.11        2
-      60        0   100.00        3
+      60        1    98.33        3
       61        5    91.80        4
       30        6    80.00        5
       33        1    96.97        6
-      56        4    92.86        7
+      56        5    91.07        7
       49        0   100.00        8
-      50        0   100.00        9
+      50        1    98.00        9
       45        0   100.00       10
-      39        0   100.00       11
-      27        1    96.30       12
-      21        0   100.00       13
+      39        3    92.31       11
+      27        7    74.07       12
+      21        1    95.24       13
       16        0   100.00       14
       23        2    91.30       15
       10        0   100.00       16
-      24        0   100.00       17
+      24        1    95.83       17
       17        0   100.00       18
-      10        0   100.00       19
+      10        1    90.00       19
        5        0   100.00       20
        7        0   100.00       21
        8        1    87.50       22
@@ -37,43 +37,43 @@ Non-stopwords
        5        0   100.00       25
       10        0   100.00       26
        5        0   100.00       27
-       4        0   100.00       28
-       9        0   100.00       29
+       4        1    75.00       28
+       9        1    88.89       29
        6        0   100.00       30
        2        0   100.00       31
        3        0   100.00       32
        4        0   100.00       33
-       5        0   100.00       34
+       5        1    80.00       34
        4        1    75.00       35
        1        0   100.00       36
        2        0   100.00       37
        1        0   100.00       39
        1        0   100.00       40
-     741       22    97.03    Total
+     741       40    94.60    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     443       22    95.03        1
+     443       34    92.33        1
       53        0   100.00        2
       13        0   100.00        3
        6        0   100.00        4
-       3        0   100.00        5
+       3        1    66.67        5
        2        0   100.00        6
        6        0   100.00        7
        1        0   100.00        8
        3        0   100.00      >10
-     530       22    95.85    Total
+     530       35    93.40    Total
 
 Phrases
    Count   Missed   %Right   Length
-     741       22    97.03        1
-     740       39    94.73        2
-     739       52    92.96        3
-     738       59    92.01        4
-     737       66    91.04        5
-     736       73    90.08        6
-     735       80    89.12        7
-     734       87    88.15        8
+     741       40    94.60        1
+     740       75    89.86        2
+     739      103    86.06        3
+     738      125    83.06        4
+     737      145    80.33        5
+     736      165    77.58        6
+     735      184    74.97        7
+     734      202    72.48        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -91,7 +91,7 @@ Non-stopwords
        1        1     0.00   1200000
        2        0   100.00   14
        1        0   100.00   15
-       1        0   100.00   1535nam
+       1        1     0.00   1535nam
        1        0   100.00   15wohnungsbaugesellschaften
        1        0   100.00   16
        1        0   100.00   16,2
@@ -214,7 +214,7 @@ Non-stopwords
        3        0   100.00   akt
        1        0   100.00   akt.sindnicht
        1        0   100.00   akt.zudm50
-       2        0   100.00   akt.zujedm100
+       2        1    50.00   akt.zujedm100
        2        0   100.00   akt.zujedm1000
        1        0   100.00   akt.zujedm50
        1        0   100.00   aktienkurse
@@ -312,7 +312,7 @@ Non-stopwords
        1        0   100.00   dorf
        3        0   100.00   dr
        1        0   100.00   dr.jur.hannsmartinschleyer
-       1        0   100.00   dr.jur.horstpavel
+       1        1     0.00   dr.jur.horstpavel
        1        0   100.00   dr.jur.joachimzahn
        1        1     0.00   dr.oec.rolfp.g.staelin
        1        0   100.00   dr.phil.h.c.herbertquandt
@@ -383,7 +383,7 @@ Non-stopwords
        1        0   100.00   heinzschmidt
        1        0   100.00   heizkraftwerkstuttgartgmbh
        1        0   100.00   henschelfahrzeugwerkegmbh
-       1        0   100.00   herbertlucy
+       1        1     0.00   herbertlucy
        2        0   100.00   holdings.a
        1        0   100.00   holzindustriebruchsalgmbh
        8        0   100.00   i.v
@@ -406,7 +406,7 @@ Non-stopwords
        1        0   100.00   jedoch30stimmenbeiderbeschlußfas
        1        1     0.00   jenom
        1        0   100.00   jenom.dm10
-       1        0   100.00   jürgenponto
+       1        1     0.00   jürgenponto
        1        0   100.00   k
        2        0   100.00   kapital
        1        0   100.00   kapital:a
@@ -431,21 +431,21 @@ Non-stopwords
        1        0   100.00   kapital:ptas972000000
        1        0   100.00   kapital:rand1500000
        1        0   100.00   kapital:rand256000
-       1        0   100.00   kapital:rls
+       1        1     0.00   kapital:rls
        2        0   100.00   kapital:rp
        1        0   100.00   kapital:rs194900000
        1        0   100.00   kapital:s
-       5        0   100.00   kapital:sfrs
+       5        5     0.00   kapital:sfrs
        1        0   100.00   kapital:tl26500000
        2        0   100.00   kapital:us
-       1        0   100.00   karlhauff
+       1        1     0.00   karlhauff
        1        0   100.00   kassel
        1        0   100.00   kenn
        1        0   100.00   kfm.arnoldwychodil
        1        0   100.00   kombinationskraftwagen
        1        0   100.00   konradkaletsch
        1        0   100.00   krankenwagen
-       1        0   100.00   krawakraftwagengmbh
+       1        1     0.00   krawakraftwagengmbh
        1        0   100.00   lie
        1        0   100.00   lieferforderungen530487432583
        2        0   100.00   lingen
@@ -469,7 +469,7 @@ Non-stopwords
        1        0   100.00   motorenver
        2        0   100.00   münchen
        1        0   100.00   münchenundstuttgart
-       1        0   100.00   nam
+       1        1     0.00   nam
        1        0   100.00   namens
        3        0   100.00   neckar
        1        0   100.00   newyork
@@ -489,7 +489,7 @@ Non-stopwords
        1        0   100.00   p.t.germanmotormanufacturing
        1        0   100.00   p.t.starmotorsindonesia
        2        0   100.00   paris
-       1        0   100.00   paulgerhold
+       1        1     0.00   paulgerhold
        1        0   100.00   paullichtenberg
        1        0   100.00   personalaufwand22431132410558
        1        0   100.00   post
@@ -525,7 +525,7 @@ Non-stopwords
        1        0   100.00   senerzeugnissen
        1        0   100.00   sindel
        2        0   100.00   sindelfingen
-       1        0   100.00   sindelfingerwohnstättengmbh
+       1        1     0.00   sindelfingerwohnstättengmbh
        1        0   100.00   singapur
        1        0   100.00   sirketi
        1        0   100.00   sitz
@@ -549,11 +549,11 @@ Non-stopwords
        1        0   100.00   stuttgarterversicherungsdienstgmbh
        1        0   100.00   stückelung
        1        0   100.00   sungüberbesetzungdesaufsichtsrats
-       1        0   100.00   supremestarengineeringptc.ltd
+       1        1     0.00   supremestarengineeringptc.ltd
        1        0   100.00   sämtl.berlin
        1        0   100.00   sämtl.saar
        1        0   100.00   sämtl.stuttgart
-       1        0   100.00   tataengineeringandlocomotiveco.ltd
+       1        1     0.00   tataengineeringandlocomotiveco.ltd
        1        0   100.00   telschlepper
        1        0   100.00   träge1684121727
        1        0   100.00   täbris

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      276   Words
-       8   Misrecognized
-   97.10%  Accuracy
+      11   Misrecognized
+   96.01%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,7 +13,7 @@ Non-stopwords
        4        0   100.00        1
       10        0   100.00        2
       16        0   100.00        3
-      31        0   100.00        4
+      31        1    96.77        4
        9        0   100.00        5
       14        0   100.00        6
       16        1    93.75        7
@@ -27,7 +27,7 @@ Non-stopwords
        5        1    80.00       15
        7        0   100.00       16
       10        0   100.00       17
-       4        1    75.00       18
+       4        2    50.00       18
        3        0   100.00       19
        3        1    66.67       20
        7        0   100.00       21
@@ -41,7 +41,7 @@ Non-stopwords
        1        0   100.00       30
        4        0   100.00       31
        4        1    75.00       32
-       5        0   100.00       33
+       5        1    80.00       33
        2        0   100.00       34
        2        0   100.00       35
        1        0   100.00       36
@@ -49,27 +49,27 @@ Non-stopwords
        2        0   100.00       38
        1        0   100.00       40
        1        0   100.00       49
-     276        8    97.10    Total
+     276       11    96.01    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     224        7    96.88        1
+     224       10    95.54        1
       15        0   100.00        2
        4        0   100.00        3
        1        0   100.00        4
        1        0   100.00        6
-     245        7    97.14    Total
+     245       10    95.92    Total
 
 Phrases
    Count   Missed   %Right   Length
-     276        8    97.10        1
-     275       15    94.55        2
-     274       20    92.70        3
-     273       24    91.21        4
-     272       28    89.71        5
-     271       32    88.19        6
-     270       36    86.67        7
-     269       40    85.13        8
+     276       11    96.01        1
+     275       21    92.36        2
+     274       29    89.42        3
+     273       35    87.18        4
+     272       41    84.93        5
+     271       47    82.66        6
+     270       53    80.37        7
+     269       59    78.07        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -91,7 +91,7 @@ Non-stopwords
        1        0   100.00   148
        1        0   100.00   149u
        1        0   100.00   150
-       1        0   100.00   1500kumulativevort
+       1        1     0.00   1500kumulativevort
        1        0   100.00   151
        1        0   100.00   1890
        1        0   100.00   193
@@ -171,7 +171,7 @@ Non-stopwords
        1        0   100.00   derbruttodivi
        1        0   100.00   derlandenbzw.ingroßbritannien.sie
        1        0   100.00   dernichter
-       1        0   100.00   derstandardoilnjanzweiterstelleun
+       1        1     0.00   derstandardoilnjanzweiterstelleun
        1        0   100.00   dertheshellpetroleumcompanylimi
        1        0   100.00   despublikumsandergruppe
        1        0   100.00   deutschebankag
@@ -279,7 +279,7 @@ Non-stopwords
        1        0   100.00   sichselbstabgeben
        1        0   100.00   sitz:denhaag
        1        1     0.00   soc.généraledebanque
-       1        0   100.00   sons
+       1        1     0.00   sons
        1        0   100.00   sonstigeauf
        1        0   100.00   sonstigenerzeugnissen
        1        0   100.00   spaght

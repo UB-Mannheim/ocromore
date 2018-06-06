@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      492   Words
-      13   Misrecognized
-   97.36%  Accuracy
+      20   Misrecognized
+   95.93%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,21 +20,21 @@ Non-stopwords
       23        0   100.00        7
       39        3    92.31        8
       30        0   100.00        9
-      18        0   100.00       10
+      18        1    94.44       10
       19        0   100.00       11
       16        0   100.00       12
-      19        0   100.00       13
+      19        3    84.21       13
        9        0   100.00       14
       20        0   100.00       15
       13        0   100.00       16
-      17        2    88.24       17
+      17        4    76.47       17
        5        0   100.00       18
        3        0   100.00       19
        9        1    88.89       20
        5        0   100.00       21
        6        0   100.00       22
        2        0   100.00       23
-       6        1    83.33       24
+       6        2    66.67       24
        4        2    50.00       25
        4        1    75.00       26
        7        0   100.00       27
@@ -49,11 +49,11 @@ Non-stopwords
        1        0   100.00       38
        1        0   100.00       39
        1        0   100.00       40
-     490       13    97.35    Total
+     490       20    95.92    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     312       12    96.15        1
+     312       19    93.91        1
       17        0   100.00        2
       14        0   100.00        3
        3        0   100.00        4
@@ -61,18 +61,18 @@ Distinct Non-stopwords
        2        0   100.00        6
        2        0   100.00        8
        3        0   100.00      >10
-     357       12    96.64    Total
+     357       19    94.68    Total
 
 Phrases
    Count   Missed   %Right   Length
-     492       13    97.36        1
-     491       23    95.32        2
-     490       30    93.88        3
-     489       36    92.64        4
-     488       42    91.39        5
-     487       47    90.35        6
-     486       52    89.30        7
-     485       57    88.25        8
+     492       20    95.93        1
+     491       37    92.46        2
+     490       50    89.80        3
+     489       62    87.32        4
+     488       74    84.84        5
+     487       85    82.55        6
+     486       96    80.25        7
+     485      107    77.94        8
 
 Stopwords
    Count   Missed   %Right   
@@ -167,7 +167,7 @@ Non-stopwords
        3        0   100.00   accumulatoren
        1        0   100.00   accumulatorenfabrikbergagmbh
        1        0   100.00   adolfborsum
-       1        0   100.00   afinagummi
+       1        1     0.00   afinagummi
        3        0   100.00   ag
        1        0   100.00   agseit1890
        1        0   100.00   akkumulatoren
@@ -176,7 +176,7 @@ Non-stopwords
        1        0   100.00   aktienkurse
        1        0   100.00   aktionsgemeinschaftdeutschesteinkoh
        1        0   100.00   aktionäre
-       1        0   100.00   alfredhaymann
+       1        1     0.00   alfredhaymann
        1        0   100.00   allgemeinegesellschaftfürindustriebetei
        1        0   100.00   amtl
        1        0   100.00   anlagevermögen168235164230
@@ -247,10 +247,10 @@ Non-stopwords
        1        0   100.00   dm100000
        1        0   100.00   dominitwerkegmbh
        3        0   100.00   dortmund
-       1        0   100.00   dr.jur.horstpavel
+       1        1     0.00   dr.jur.horstpavel
        1        0   100.00   dr.jur.kurtschneider
        1        0   100.00   dr.phil.h.c.herbertquandt
-       1        0   100.00   dr.rer.nat.gerhardlander
+       1        1     0.00   dr.rer.nat.gerhardlander
        1        0   100.00   dresdnerbankag
        1        0   100.00   düs
        3        0   100.00   düsseldorf
@@ -295,7 +295,7 @@ Non-stopwords
        6        0   100.00   hamburg
        4        0   100.00   hanno
        6        0   100.00   hannover
-       1        0   100.00   hansstillgmbh
+       1        1     0.00   hansstillgmbh
        1        0   100.00   hausderhannoverschenindustriegmbh
        1        0   100.00   heinzquandt
        1        0   100.00   herstellungundvertriebvonakkumula
@@ -417,7 +417,7 @@ Non-stopwords
        5        0   100.00   ver
        1        0   100.00   verkaufshäuser
        2        0   100.00   vertrag
-       1        0   100.00   villafrancadeoria
+       1        1     0.00   villafrancadeoria
        1        0   100.00   vonhalbfabrikaten
        1        0   100.00   vorräte6879057495
        2        0   100.00   vors
@@ -431,7 +431,7 @@ Non-stopwords
        1        0   100.00   wertpapiere8044499346
        5        0   100.00   westf
        1        0   100.00   westfalenbankag
-       1        0   100.00   wilhelmreinke
+       1        1     0.00   wilhelmreinke
        1        0   100.00   winnipeg
        1        0   100.00   wohnstättengmbh
        1        0   100.00   wuppertal

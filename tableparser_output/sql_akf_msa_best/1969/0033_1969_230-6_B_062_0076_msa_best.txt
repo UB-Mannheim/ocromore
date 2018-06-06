@@ -15,12 +15,12 @@ Vorstand:
 Ordentliche Mitglieder:
 Dr.rer.pol. Hans Bühler, Frankfurt (M),
 Vors,;
-Dr.-Ing. Felix Herriger, Ulm, stellv.
+Dr.-Ing. Felix Herringer, Ulm, stellv.
 Vors.;
-Dr. jur. Hans Groebe. Gehrden:
+Dr. jur. Hans Grebe. Gehrden:
 Dr.-Ing. Dr. -Ing. E.h. Friedricnh Hämmer-
 ling, Königstein;
-Dipl.-Ing. Paul Harke, Königstein;
+Dipl.-Ing. Paul Marke, Königstein;
 Dr.phil. Erhard Löwe, Ulm;
 Otto Mössner, Ulm;
 Prof. Dr.-Ing. Dr. -Ing.E.h. Werner
@@ -28,7 +28,7 @@ Nestel, Ulm;
 Carl W.Röder, Königstein;
 Prof.Dr.rer. pol. Matthias Schmitt, Berlin;
 Rechtsanwalt Johannes Semler, Oberursel;
-Heinz Zickler, Oberhöchstadt;
+Heinz Hickler, Oberhöchstadt;
 Stellvertretende Mitglieder:
 Josef Fuchs, Langen;
 Dr.-Ing. Enno Koch, Ulm;
@@ -51,7 +51,7 @@ August Neuburger, Heidelberg;
 Dr.h.c.Friedrich Carl Freiherr von Op-
 penheim, Köln
 Dipl. -Ing. Ulrich Petersen, Düsseldorf;
-Ernst Rieche, Königstein;
+Ernst Reiche, Königstein;
 Prof. Dr. phil. nat. Bernhard Timm, Heidel-
 berg
 Arbeitnehmervertreter:
@@ -59,7 +59,7 @@ Hans Dücker, Bremen;
 Heinz Dürrbeck, Frankfurt (M);
 Walter Förstl, Leipheim;
 Walter Franke, Berlin;
-Hans Rubke, Iserlohn;
+Hans Räbke, Iserlohn;
 Hans Rückdäschel, Nürnberg
 Gründung: 1883
 Tätigkeitsgebiet:
@@ -114,17 +114,17 @@ Sickingerstr. (Anlagen Hochfrequenz), Groß-
 maschinenfabrik, Kleinmaschinenfabrik,
 Stromrichterfabrik, Turbinenfabrik.
 im Bundesgebiet 37 Werke
-Fabrik Backnang; Fabrik Belecke; Fabrik
+Fabrik Backnang; Fabrik Benecke; Fabrik
 Celle; Fabrik Eiweiler; Fabrik Essen;
 Fabrik Eßlingen; Fabrik Gräfenberg; Be-
-trieb Schenefeld und Werk Schulau, Ham-
+trieb Schenefeld und Werk Schulak, Ham-
 burg; Fabriken Hameln; Fabriken Hameln-
 Zweigwerk Springe; Fabrik Hannover I
 (Geräte Rundfunk-Fernsehen); Fabrik Han-
 nover II (Geräte Rundfunk-Fernsehen Fa-
 brik Hannover (Geräte Mechanik); Fabrik
 Heilbronn; Fabrik Ingolstadt; Fahrkarten-
-druckerfabrik, Kassel; Hochspannungs -
+druckerfabrik, Kassel; Hochspannung -
 schaltgerätefabrik, Kassel; Isolierstoff-
 fabrik, Kassel; Kühlschrankfabrik, Kassel;
 Fabrik Kirchheim; Fabrik Konstanz; Fabrik
@@ -133,7 +133,7 @@ Saarn; Schaltgerätefabrik Neumünster;
 Schaltgerätefabrik Neumünster-Zweigwerk
 Menden; Fabrik für Elektrobeheizung,
 Nürnberg; Fabrik Nürnberg (Bauteile
-NSF); Fabrik Offenburg; Fabrik Oldenburg;
+BSF); Fabrik Offenburg; Fabrik Oldenburg;
 Fabrik Ulm (Anlagen Hochfrequenz); Fabrik
 Ulm (Röhren); Fabrik Rothenburg; Fabrik
 Seligenstadt; Fabrik Stuttgart; Fabrik für
@@ -141,7 +141,7 @@ Elektrowerkzeuge, Winnenden; Fabrik Zeil.
 Forschungsinstitute:
 Forschungsinstitut Berlin; Forschungsinsti-
 tut Frankfurt a.M.; Forschungsinstitut
-Ulm; Chemisches Zentrallaboratorium
+Ulm; Chemischer Zentrallaboratorium
 Kassel; Institut für Materialprüfung Frank-
 furt; Institut für Automation Berlin (mit
 Zweigstelle in Frankfurt a.M.); Hochspan-
@@ -237,7 +237,7 @@ Mechanik GmbH)
 Vereinigte Draht- und Kabelwerke AG,
 Berlin/Duisburg
 Kapital: DM 19 000 000. - (100 %)
-KKRT Kernreaktorteile GmbH, Frankfurt (M)
+KKR Kernreaktorteile GmbH, Frankfurt (M)
 Kapital: DM 8 000 000. - (55 %)
 F.Küppersbusch & Söhne AG, Gelsenkir-
 chen
@@ -283,10 +283,10 @@ Provinzialbank; Saarländische Kreditbank
 AG; C.G. Trinkaus; Westfalenbank AG;
 Württ. Landeskommunalbank -Girozentrale-;
 Schweizerische Kreditanstalt; Schweizeri-
-sScher Bankverein; Banque de 'Paris et des
+sScher Bankverein; Banque de Paris et des
 Pays-Bas; Banque Nationale de Paris;
 Cré&dit Lyonnais; Socié&té& Géené&rale; MM.
-Lazard Freres et Cie.; Banque de 1'’ Union
+Lazard Frères et Cie.; Banque de 1'’ Union
 Parisienne; Banque Rotschild; Société Gé-
 néerala Alsacienne de Banque
 Grundkapital: DM 509 899 900. -
@@ -304,7 +304,7 @@ Wandelschuldverschreibungen in Aktien).
 1965 auf DM 459 899 900. - und 1968 auf
 DM 509 899 900. -
 Börsennotiz:
-Berlin, Bremen, Düsseldorf, Frankfurt(M),
+Berlin, Bremen, Düsseldorf, Frankfurt/M),
 Hamburg, Hannover, München, Stuttgart,
 Basel, Zürich, Paris, Amsterdam
 Wertpapier-Kenn-Nr. : 503800
@@ -358,13 +358,13 @@ Bezugsrechte:
 1954: i.V. 4:1 zu 100 %; Abschlag 15,12 %
 (20.10.); Div. Sch. Nr. 3
 1955: i.V. 2:1 zu 135 %; Abschlag 34, 33 %
-(21.4:10.); Div.;Sch.; Nr.5
+(21.4:10.); Div.-Sch.; Nr.5
 1956: i.V. 3:1 zu 100 %; Abschlag 22, 33 %
 (9.211.5); Div.Sch.Nr.7
 1957: i.V. 4:1 zu 120 %; Abschlag 10, 84 %
 (12. 4.); Div.Sch. Nr. 9
 1958: i.V. 8:1 zu 100 %; Abschlag 13, 75 %
-(20.5.);2 Div.’Sch. Nr.11
+(20.5.);2 Div.-Sch. Nr.11
 i.V.11:2 zu 100 %; Abschlag 6,08 %
 (20. 5.); Div. Sch. Nr. 12+)
 1962: i.V. 5:1 zu 200 %; Abschlag 43, 125 %

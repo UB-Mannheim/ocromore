@@ -1,5 +1,5 @@
 �
-NATIONALAllgemeineVersicherungs-Aktien-Gesellschaft
+RATIONALAllgemeineVersicherungs-Aktien-Gesellschaft
 Sitz:(24a)Lübeck,TravemünderAllee9
 Fernruf:Sa.-Nr.25321
 Fernschreiber;
@@ -7,18 +7,18 @@ Fernschreiber;
 Vorstand:
 Dr.WernerPlath,Lübeck,Vors.;
 Dr.ErnstKircher,Lübeck;
-Dr.ErichCarus,Lübeck;
+Dr.ErichKarus,Lübeck;
 Dr.HeinrichLohmar,Lübeck,stellv.
 Aufsichtsrat:
 BrunoStieringer,Hannover,Vors.;
 Dr.h.c.CarlFr.Müller,Berlin,stellv.
 Vors.;
-ThomasEntz,Rendsburg;
+ThomasAntz,Rendsburg;
 KarlHaus,Köln;
 CarlMeister,Hamburg-Kleinflottbek;
-GeorgRieckmann,Lübeck;
+GeorgRickmann,Lübeck;
 Arbeitnehmervertreter:
-EduardBuchholtz,Dortmund;
+EduardBuchholz,Dortmund;
 WalterJantz,Berlin;
 MaxWilke,Lübeck
 Gründung:1845
@@ -120,7 +120,7 @@ seit21.6,1948:DM1075,-
 ZurGeschäftslage:
 DasGeschäftsjahr1959zeigtwiederum
 einenzufriedenstellendenVerlauf.Die
-Brutto-Beitragseinnahmestiegvon
+Brutto-Beitragseinnahmesiegvon
 DM58,820MioaufDM65,747Mio,das
 sindDM6,93Miooder11,8%mehr.
 AuchdasGeschäftsjahr1960läßteinebe-r
@@ -129,7 +129,7 @@ AusdenBilanzen
 31.12.195831.12.1959
 Aktiva(in1000DM)
 AusstehendeEin-»
-lagcenaufdas
+lagenaufdas
 Grundkapital12001600
 Anlagevermögen33609746012
 KurzfristigeFor-
@@ -147,7 +147,7 @@ Rückstellungen84539765
 KurzfristigeVer-
 bindlichkeiten944910663
 SonstigePassiva19242193
-GewinnnachVortrag438528
+GewinnnachVertrag438528
 AusdenGewinn-undVerlust-
 rechnungen
 31.12.195831.12.1959

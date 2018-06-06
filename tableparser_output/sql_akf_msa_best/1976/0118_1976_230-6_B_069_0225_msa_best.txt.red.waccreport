@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      488   Words
-      12   Misrecognized
-   97.54%  Accuracy
+      25   Misrecognized
+   94.88%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -18,21 +18,21 @@ Non-stopwords
       40        0   100.00        5
       31        1    96.77        6
       25        0   100.00        7
-      16        0   100.00        8
-      22        0   100.00        9
-      46        0   100.00       10
-      16        0   100.00       11
-      25        0   100.00       12
-      12        1    91.67       13
-      23        0   100.00       14
+      16        1    93.75        8
+      22        1    95.45        9
+      46        1    97.83       10
+      16        1    93.75       11
+      25        1    96.00       12
+      12        3    75.00       13
+      23        3    86.96       14
       15        0   100.00       15
       26        0   100.00       16
       14        0   100.00       17
-      18        0   100.00       18
-       4        0   100.00       19
+      18        1    94.44       18
+       4        1    75.00       19
        7        0   100.00       20
        7        1    85.71       21
-       5        0   100.00       22
+       5        1    80.00       22
        1        0   100.00       23
        9        1    88.89       24
        2        0   100.00       25
@@ -44,11 +44,11 @@ Non-stopwords
        1        0   100.00       33
        1        1     0.00       34
        1        0   100.00       37
-     487       12    97.54    Total
+     487       25    94.87    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     314        7    97.77        1
+     314       20    93.63        1
       28        0   100.00        2
       11        0   100.00        3
        2        0   100.00        4
@@ -57,18 +57,18 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        2        0   100.00      >10
-     363        7    98.07    Total
+     363       20    94.49    Total
 
 Phrases
    Count   Missed   %Right   Length
-     488       12    97.54        1
-     487       22    95.48        2
-     486       31    93.62        3
-     485       40    91.75        4
-     484       49    89.88        5
-     483       58    87.99        6
-     482       67    86.10        7
-     481       76    84.20        8
+     488       25    94.88        1
+     487       48    90.14        2
+     486       66    86.42        3
+     485       83    82.89        4
+     484       99    79.55        5
+     483      113    76.60        6
+     482      126    73.86        7
+     481      138    71.31        8
 
 Stopwords
    Count   Missed   %Right   
@@ -84,7 +84,7 @@ Non-stopwords
        1        0   100.00   10.8
        2        0   100.00   100
        1        0   100.00   11
-       1        0   100.00   120000vink.nam
+       1        1     0.00   120000vink.nam
        1        0   100.00   13
        1        0   100.00   14
        1        0   100.00   14,10,10,12,12,0
@@ -95,7 +95,7 @@ Non-stopwords
        1        0   100.00   15.8
        1        0   100.00   152622265873
        1        0   100.00   16,0,12,16,8,10
-       1        0   100.00   160000vink.nam
+       1        1     0.00   160000vink.nam
        1        0   100.00   18
        1        0   100.00   1838
        1        0   100.00   19.11
@@ -154,7 +154,7 @@ Non-stopwords
        2        0   100.00   8
        1        0   100.00   8,6,8,0,0,0
        1        0   100.00   8000080000
-       1        0   100.00   80000vink.nam
+       1        1     0.00   80000vink.nam
        1        0   100.00   841000
        1        0   100.00   841002
        1        0   100.00   8885706
@@ -171,7 +171,7 @@ Non-stopwords
        1        0   100.00   aktienkurse
        1        0   100.00   aktionäre
        1        0   100.00   aktiva19731974
-       1        0   100.00   albertvahle
+       1        1     0.00   albertvahle
        1        0   100.00   alfredfreiherrvonoppenheim
        1        0   100.00   amtl
        1        0   100.00   anderevermö
@@ -181,7 +181,7 @@ Non-stopwords
        1        0   100.00   aus
        1        0   100.00   ausdenbilanzen
        1        0   100.00   ausdengewinn
-       1        0   100.00   automaten
+       1        1     0.00   automaten
        1        0   100.00   b
        1        0   100.00   bank
        1        0   100.00   barmittel
@@ -244,7 +244,7 @@ Non-stopwords
        1        1     0.00   dr.dr.b.c.kurtbirrenbach
        1        0   100.00   dr.erichfrick
        1        0   100.00   dr.franzkratz
-       1        0   100.00   dr.hansdietergrell
+       1        1     0.00   dr.hansdietergrell
        1        0   100.00   dr.nikolausgrafstrasoldo
        3        0   100.00   düsseldorf
        1        0   100.00   ehingen
@@ -279,17 +279,17 @@ Non-stopwords
        2        0   100.00   haftpflicht
        1        0   100.00   hansabschlag
        1        0   100.00   hanswernerstaunau
-       1        0   100.00   heinrichpaus
-       1        0   100.00   heinzbette
+       1        1     0.00   heinrichpaus
+       1        1     0.00   heinzbette
        1        0   100.00   heinzpferdmenges
        1        0   100.00   heits
-       1        0   100.00   hellmuthvonstockhausen
-       1        0   100.00   hermannheusch
+       1        1     0.00   hellmuthvonstockhausen
+       1        1     0.00   hermannheusch
        1        0   100.00   horstgrimm
        1        1     0.00   ii
        1        0   100.00   in1000dm
        1        0   100.00   indirekt
-       1        0   100.00   ing.ottovossen
+       1        1     0.00   ing.ottovossen
        1        0   100.00   insbeson
        1        0   100.00   insgesamt202
        1        0   100.00   jagd
@@ -375,7 +375,7 @@ Non-stopwords
        1        0   100.00   schuldscheinforde
        1        0   100.00   schwachstrom
        1        0   100.00   schwäbischezellstoffag
-       1        0   100.00   schäft104090101987
+       1        1     0.00   schäft104090101987
        1        0   100.00   sicherung
        1        0   100.00   sicherungsge
        1        0   100.00   sitz
@@ -410,7 +410,7 @@ Non-stopwords
        1        0   100.00   undelektro
        1        0   100.00   undfaßleckage
        1        0   100.00   undhagel
-       1        0   100.00   undkasko
+       1        1     0.00   undkasko
        1        0   100.00   undsport
        1        0   100.00   undunfall
        1        0   100.00   undverlust

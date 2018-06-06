@@ -18,7 +18,7 @@ R.H. Del Mar, London;
 Dr. J. M. Goudswaard, Rotterdam;
 G.E.Graham, London;
 Mr.C.T.C.Heyning, Rotterdam;
-H.F.von den Hoven, Rotterdam;
+H.F.von den Hoeven, Rotterdam;
 J.J.H. Nagel, Rotterdam;
 M.Ormerod, Rotterdam;
 D.A.Orr, London;
@@ -30,8 +30,8 @@ Ir.K.H. Veldhuis, London
 Beratende Mitglieder:
 H.S.A.Hartog, Hamburg;
 Dr.jur. Rudolf Mueller, Frankfurt (M);
-Dr.J.H.van Roijen, Wassenaar;
-F.J. Tempel, Den Haag;
+Dr.J.H.van Oijen, Wassenaar;
+F.J. Hempel, Den Haag;
 Dr.H.J.Witteveen, Wassenaar
 Sekretäre:
 C.Zwagerman, London;
@@ -48,7 +48,7 @@ ren), Waschmittel und Körperpflegemittel
 Industrie, Toilettenseifen, Scheuermittel
 und sonstige Reinigungsmittel, Zahn-,
 Haar- und Hautpflegemittel, Rasiermittel,
-Parfüm), Futtermittel, Papier, Kunst-
+Parfüms), Futtermittel, Papier, Kunst-
 stoffe, Verpackungsmittel, chemische Pro-
 dukte und sonstige Erzeugnisse und Dienst-
 leistungen
@@ -57,20 +57,20 @@ Die Tochtergesellschaften und Beteiligungen
 der Unilever N.V. (z. Z.102) werden von
 folgenden Holdinggesellschaften verwaltet:
 ''Wemado'' Maatschappij tot Beheer van
-Aandeelen in Industrieele Ondernemingen
+Aandelen in Industrielle Ondernemingen
 N.V., Rotterdam
 "Saponia"', Maatschappij tot Beheer van
-Aandeelen in Industrieele Ondernemingen
+Aandelen in Industrielle Ondernemingen
 N.V., Rotterdam
 '"'Marga'', Maatschappij tot Beheer van
-Aandeelen in Industrieele Ondernemingen
+Aandelen in Industrielle Ondernemingen
 N.V., Rotterdam
 Mavibel (Maatschappij voor Internationale
 Beleggingen) N.V., Rotterdam
 "Lipoma'', Maatschappij tot Beheer van
-Aandeelen in Industrieele Ondernemingen
+Aandelen in Industrielle Ondernemingen
 N.V., Rotterdam
-Handelsmaatschappij Noorda N.V.,
+Handels-maatschappij Noorda N.V.,
 Amsterdam
 Van den Bergh'’s en Jurgens'’ Fabrieken
 N.V., Rotterdam
@@ -81,14 +81,14 @@ Zahlstellen:
 Amsterdam-Rotterdam Bank N.V.; Alge-
 mene Bank Nederland N. V.; beide Amster-
 dam, Rotterdam und Den Haag;
-MM. Pierson; Heldring & Pierson; beide
+MM. Person; Heldring & Person; beide
 Amsterdam und Den Haag;
 Kredietbank; Bank van Brussel; Bank van
 Antwerpen; Handelsbank; sämtl. Antwerpen;
 Bank van de Societe Generale de Belgique;
 Societe Belge de Banque; Bank Lambert;
 Credit General de Belgique; sämtl. Brüssel;
-Credit Commercial de Mons, Mons;
+Credit Commercial de Mohns, Mohns;
 Banque Rothschild, Paris;
 Creditanstalt-Bankverein; Österreichische
 Länderbank AG; Schoeller & Co. Bank-
@@ -105,7 +105,7 @@ Morgan Guaranty Trust Company of
 New York, New York
 Grundkapital:
 Autorisiertes Kapital: hfl 1 352 400 000, -
-Ausgegebenes Kapital:hfl 907 625 000.-
+Ausgegebenes Kapitalhfl 907 625 000.-
 hfl 29 000 000. - 7 % kumulative Vorz.-Akt.
 hfl 161 060 000. - 6 % kumulative Vorz.-Akt.
 hfl 75 000 000. - 4 % kumulative Vorz.-Akt.
@@ -133,7 +133,7 @@ Von der Dresdner Bank AG zum Handel an
 westdeutschen Börsen in Zertifikaten über
 hfl 20. - ausgegeben.
 Aktionäre:
-Am 31.12.1971 betrug die Anzahl der Ak-
+Am 31.12.1971 betrag die Anzahl der Ak-
 tionäre von LIMITED 91 457. Die Anzahl
 der Aktionäre von N.V. läßt sich nicht an-
 geben, weil der weitaus größte Teil des

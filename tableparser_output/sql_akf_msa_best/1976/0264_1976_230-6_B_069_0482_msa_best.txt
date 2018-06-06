@@ -9,9 +9,9 @@ Telex: 8 579 871
 Vorstand:
 Dr.-Ing. Albrecht Schumann, Frankfurt
 (M), Vors.;
-Wilhelm Holly, Essen;
+Wilhelm Holy, Essen;
 Dipl. -Ing. Enno Vocke, Essen;
-Dr. -Ing. Günther Herion, Essen, stellv.;
+Dr. -Ing. Günther Herdon, Essen, stellv.;
 Dr. -Ing. Heinrich Nagel, Frankfurt (M),
 stellv.;
 Dr.jur. Harald Peipers, Essen, stellv.
@@ -25,7 +25,7 @@ Wolfgang Kalinowski, Essen, stellv.
 Vors.;
 Kurt Brunner, Frankfurt (M);
 Dr. Hanns Deuss, Düsseldorf;
-Dr. Alfred Einnatz, Essen;
+Dr. Alfred Einsatz, Essen;
 August von Finck jr., München;
 Dr. Friedhelm Gieske, Essen;
 Erwin Holthoff, Essen;
@@ -70,13 +70,13 @@ Kapital: DM 20 000. - (100 %)
 Intermont Internationale Bau- und Montage-
 gesellschaft mbH, Essen
 Kapital: DM 100 000. - (50 %)
-Catalog Gesellschaft für Bausysteme mbH,
+JCatalog Gesellschaft für Bausysteme mbH,
 Frankfurt (M)
 Kapital: DM 20 000. - (50 %)
 Hochtief Nassbaggergesellschaft mbH,
 Bremen
 Kapital: DM 2 000 000. - (100 %)
-"DEUMO 2000" Montagebau GmbH & Co.
+"DEUMU 2000" Montagebau GmbH & Co.
 KG, Bremen
 Kapital: DM 314 819. - (46, 66 %)
 ""'DEUMO 2000'' Montagebau GmbH,
@@ -106,7 +106,7 @@ Grundkapital: DM 46 500 000. -
 1950 Umstellung 1:1 auf DM 7 750 000. -
 1961 Bezugsrecht 1:1 zu 150 % auf
 DM 15 500 000. -, rechn. Wert DM 290,87
-(31.7.), Div.Sch,.Nr. 9
+(31.7.), Div.Sch.Nr. 9
 1963 Bezugsrecht 2:1 zu 150 % auf
 DM 23 250 000.-, rechn. Wert DM 151, 37,
 Div.Sch.Nr. 13
@@ -122,7 +122,7 @@ DM 46 500 000. -, rechn. Wert DM 94, 67
 (14.8.), dividendenberechtigt ab1.l.l.,
 Div.Sch.Nr. 26
 Aktionäre:
-Rheinisch-Westfälisches Elektrizitätswerk
+Rheinisch-Westfälischer Elektrizitätswerk
 AG, Essen (mehr als 25 %);
 Commerzbank AG, Düsseldorf (mehr als
 25 %);
@@ -135,7 +135,7 @@ burg und München (amtl.)
 Wertpapier-Kenn-Nr.: 607000
 Stückelung:
 25 150 Inh. -St.-Akt. zu je DM 1 000. -
-17 500 Inh.-St.-Akt. zuje DM 100.-
+17 500 Inh.-St.-Akt. zuge DM 100.-
 392 000 Inh. -St.-Akt. zu je DM 50. -
 Aktienkurse (ultimo abgerundet):
 ab 22.12.1969 Stücknotiz für DM 50. -

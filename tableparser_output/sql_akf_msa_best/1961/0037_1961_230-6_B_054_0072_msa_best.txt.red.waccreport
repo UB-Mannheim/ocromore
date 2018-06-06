@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      773   Words
-      21   Misrecognized
-   97.28%  Accuracy
+      43   Misrecognized
+   94.44%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -14,25 +14,25 @@ Non-stopwords
       38        4    89.47        1
       48        1    97.92        2
       25        0   100.00        3
-      46        0   100.00        4
+      46        1    97.83        4
       32        0   100.00        5
-      62        2    96.77        6
-      38        0   100.00        7
+      62        3    95.16        6
+      38        2    94.74        7
       30        2    93.33        8
       33        1    96.97        9
-      39        3    92.31       10
-      36        0   100.00       11
+      39        4    89.74       10
+      36        2    94.44       11
       24        0   100.00       12
-      27        0   100.00       13
+      27        3    88.89       13
       48        0   100.00       14
-      13        1    92.31       15
+      13        2    84.62       15
       19        0   100.00       16
-      26        0   100.00       17
-      17        2    88.24       18
+      26        1    96.15       17
+      17        1    94.12       18
       18        0   100.00       19
-      12        0   100.00       20
+      12        1    91.67       20
        7        0   100.00       21
-       5        0   100.00       22
+       5        1    80.00       22
        4        0   100.00       23
       11        1    90.91       24
        8        0   100.00       25
@@ -40,21 +40,21 @@ Non-stopwords
        7        0   100.00       27
        5        0   100.00       28
        6        0   100.00       29
-      13        1    92.31       30
-       8        0   100.00       31
-      10        0   100.00       32
+      13        2    84.62       30
+       8        3    62.50       31
+      10        1    90.00       32
       11        2    81.82       33
-      15        1    93.33       34
-       9        0   100.00       35
+      15        2    86.67       34
+       9        3    66.67       35
        6        0   100.00       36
        2        0   100.00       37
        2        0   100.00       38
        2        0   100.00       39
-     771       21    97.28    Total
+     771       43    94.42    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     526       16    96.96        1
+     526       39    92.59        1
       35        0   100.00        2
       15        0   100.00        3
        5        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        1        0   100.00      >10
-     594       16    97.31    Total
+     594       39    93.43    Total
 
 Phrases
    Count   Missed   %Right   Length
-     773       21    97.28        1
-     772       37    95.21        2
-     771       51    93.39        3
-     770       64    91.69        4
-     769       76    90.12        5
-     768       88    88.54        6
-     767      100    86.96        7
-     766      112    85.38        8
+     773       43    94.44        1
+     772       79    89.77        2
+     771      112    85.47        3
+     770      141    81.69        4
+     769      167    78.28        5
+     768      192    75.00        6
+     767      213    72.23        7
+     766      232    69.71        8
 
 Stopwords
    Count   Missed   %Right   
@@ -205,8 +205,8 @@ Non-stopwords
        1        0   100.00   alsauchimauslandsgeschäftet
        1        0   100.00   alsergebnisderauftragseingangs
        1        0   100.00   anderenkapitaldieaegmit
-       1        0   100.00   andererseitsweiteran.indererwartung
-       1        0   100.00   angemessenesergebnis
+       1        1     0.00   andererseitsweiteran.indererwartung
+       1        1     0.00   angemessenesergebnis
        1        0   100.00   anlagen
        1        0   100.00   anlagevermögen477595517166
        1        0   100.00   anleihen
@@ -236,7 +236,7 @@ Non-stopwords
        1        0   100.00   bayerischestaatsbank
        1        0   100.00   bayerischezugspitzbahnag
        1        0   100.00   bei22
-       1        0   100.00   belecke
+       1        1     0.00   belecke
        1        0   100.00   berli
       23        0   100.00   berlin
        1        0   100.00   berlin0183581
@@ -269,12 +269,12 @@ Non-stopwords
        1        0   100.00   darunter
        1        0   100.00   dasfabrikationsprogrammder
        1        0   100.00   davona
-       1        0   100.00   daßesgelingt
-       2        1    50.00   delbrückschickler
-       1        0   100.00   demwertzuwachs.derüberwiegendeteil
+       1        1     0.00   daßesgelingt
+       2        0   100.00   delbrückschickler
+       1        1     0.00   demwertzuwachs.derüberwiegendeteil
        1        0   100.00   den
        1        0   100.00   der
-       1        0   100.00   derauftragseinganglagsowohlimin
+       1        1     0.00   derauftragseinganglagsowohlimin
        1        0   100.00   derauslandsumsatzerhöhtesichauf
        1        0   100.00   derdazugehörendengetriebe
        1        0   100.00   derumsatzdermaßgeblichentochter
@@ -295,7 +295,7 @@ Non-stopwords
        1        0   100.00   dividendeninsgesamt
        1        0   100.00   dm22000000
        1        0   100.00   dm3000000
-       1        0   100.00   dm309mio.deranteildesexportesam
+       1        1     0.00   dm309mio.deranteildesexportesam
        1        0   100.00   dm35000000
        3        0   100.00   dm55000000
        3        0   100.00   dr
@@ -313,7 +313,7 @@ Non-stopwords
        1        0   100.00   duisburg
        1        0   100.00   dustrieöfen
        4        0   100.00   düsseldorf
-       1        0   100.00   eerlin
+       1        1     0.00   eerlin
        1        0   100.00   eigenkapital395000395000
        1        0   100.00   einerseitsundzumdruckaufdiepreise
        1        0   100.00   einezunahmederauslandsbestellungen
@@ -331,7 +331,7 @@ Non-stopwords
        1        0   100.00   entwurfundbauvollständigerum
        1        0   100.00   erichvierhub
        1        0   100.00   ernstgamper
-       1        0   100.00   ernstrieche
+       1        1     0.00   ernstrieche
        1        0   100.00   erreichteimberichtsjahrdm2153
        1        0   100.00   ersichtlich
        1        0   100.00   erwerb
@@ -366,7 +366,7 @@ Non-stopwords
        1        0   100.00   genhaus
        1        0   100.00   georghauck
        1        0   100.00   gerätefürhochfrequenz
-       1        0   100.00   gesamtgeschäftlagdamitunverändert
+       1        1     0.00   gesamtgeschäftlagdamitunverändert
        1        0   100.00   gesamtumsatzderaegeinschließlich
        1        0   100.00   geschäft
        1        0   100.00   geschäftsjahr
@@ -375,7 +375,7 @@ Non-stopwords
        1        0   100.00   gesellschaftag
        1        0   100.00   gesellschaften
        1        0   100.00   gewerblicherausnutzungderelektrizität
-       1        0   100.00   gewinnohnevortrag
+       1        1     0.00   gewinnohnevortrag
        1        0   100.00   girozen
        1        0   100.00   girozentrale
        1        0   100.00   gischelandesbank
@@ -407,13 +407,13 @@ Non-stopwords
        1        0   100.00   hessischelandesbank
        2        0   100.00   hoch
        1        0   100.00   hochhaus
-       1        0   100.00   hofftdiegesellschaftauchfürdas
+       1        1     0.00   hofftdiegesellschaftauchfürdas
        1        0   100.00   hohenzol
        1        0   100.00   hohenzollerndamm150
        1        0   100.00   hydrawerkag
        1        0   100.00   hypothekarischgesicherteorder
        1        0   100.00   imallgemeinenzufriedenstellend
-       1        0   100.00   imganzenetwasabgesunkenenpreiselag
+       1        1     0.00   imganzenetwasabgesunkenenpreiselag
        1        0   100.00   imgeschäftsjahr1958
        1        0   100.00   imlaufendenjahrhatsichdasgeschäft
        1        0   100.00   imverhältnis3
@@ -431,7 +431,7 @@ Non-stopwords
        1        0   100.00   ing.e.h.heinzthörner
        1        0   100.00   ing.friedrichhämmerling
        1        0   100.00   ing.hermannwinkhaus
-       1        0   100.00   ing.paulharke
+       1        1     0.00   ing.paulharke
        1        0   100.00   inhamburg
        1        0   100.00   inhannover
        1        0   100.00   inköln
@@ -449,7 +449,7 @@ Non-stopwords
        1        0   100.00   jenom.dm100
        1        0   100.00   jenom.dm1000
        1        0   100.00   jenom.dm20
-       1        0   100.00   josefmichaely
+       1        1     0.00   josefmichaely
        1        0   100.00   junider
        1        0   100.00   k
        1        0   100.00   kapital:dm1000000
@@ -483,10 +483,10 @@ Non-stopwords
        1        0   100.00   lloyddynamowerkeag
        3        0   100.00   lt.ao.h
        2        0   100.00   lt.o.h
-       1        0   100.00   ludw.loewe
+       1        1     0.00   ludw.loewe
        1        0   100.00   ludwigkönigsheim
        1        0   100.00   lungs
-       1        0   100.00   löhneundgehälter361754365591
+       1        1     0.00   löhneundgehälter361754365591
       10        0   100.00   m
        1        0   100.00   men
        1        0   100.00   merck
@@ -523,7 +523,7 @@ Non-stopwords
        1        0   100.00   omnibusse
        1        0   100.00   ordnungsnr.d.aktien
        1        0   100.00   organvertragmitderaeg
-       1        0   100.00   orts
+       1        1     0.00   orts
        1        0   100.00   ortskennzahl0311
        1        0   100.00   ortskennzahl0611
        1        0   100.00   ortsruf
@@ -580,7 +580,7 @@ Non-stopwords
        3        0   100.00   st
        1        0   100.00   stellv
        3        0   100.00   stellv.vors
-       1        0   100.00   stiegimgleichen
+       1        1     0.00   stiegimgleichen
        1        0   100.00   stimmrechtd.aktieni.d.h
        1        0   100.00   straßenbahnen
        1        0   100.00   stromartundleistung
@@ -613,11 +613,11 @@ Non-stopwords
        1        1     0.00   ultimo194810,25
        1        0   100.00   umlaufvermögen771151726913
        1        0   100.00   umsatzderaeg
-       1        0   100.00   umsatzentwicklunghieltsichderauf
+       1        1     0.00   umsatzentwicklunghieltsichderauf
        1        0   100.00   umtauschrechtjeweilszum15
        3        0   100.00   und
-       1        0   100.00   undauslande
-       1        0   100.00   undauslandezuerrichten
+       1        1     0.00   undauslande
+       1        1     0.00   undauslandezuerrichten
        1        0   100.00   undfernruf
        1        0   100.00   undgröße
        1        0   100.00   undhütten
@@ -649,7 +649,7 @@ Non-stopwords
        1        0   100.00   vorräte283430296387
        3        0   100.00   vors
        1        0   100.00   vorstand
-       1        0   100.00   vortrag
+       1        1     0.00   vortrag
        1        0   100.00   wagenallerarteinschließlichderen
        1        0   100.00   waldemarkoch
        1        0   100.00   walterfranke

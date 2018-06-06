@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      359   Words
-       6   Misrecognized
-   98.33%  Accuracy
+      12   Misrecognized
+   96.66%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -18,16 +18,16 @@ Non-stopwords
       19        0   100.00        6
       12        0   100.00        7
       16        0   100.00        8
-      19        1    94.74        9
-      30        1    96.67       10
+      19        2    89.47        9
+      30        0   100.00       10
       14        0   100.00       11
-      16        0   100.00       12
-      11        0   100.00       13
+      16        1    93.75       12
+      11        1    90.91       13
       10        0   100.00       14
       12        0   100.00       15
-      12        0   100.00       16
+      12        1    91.67       16
       13        1    92.31       17
-       9        0   100.00       18
+       9        1    88.89       18
        6        0   100.00       19
        9        0   100.00       20
        2        0   100.00       21
@@ -39,35 +39,35 @@ Non-stopwords
        8        0   100.00       27
        1        1     0.00       28
        1        0   100.00       31
-       2        0   100.00       32
+       2        1    50.00       32
        1        0   100.00       33
        1        0   100.00       34
        2        0   100.00       35
-       1        0   100.00       36
+       1        1     0.00       36
        1        0   100.00       38
-     359        6    98.33    Total
+     359       12    96.66    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     247        5    97.98        1
+     247       11    95.55        1
       13        0   100.00        2
       10        0   100.00        3
        3        0   100.00        4
        3        0   100.00        7
        1        0   100.00        8
        1        0   100.00      >10
-     278        5    98.20    Total
+     278       11    96.04    Total
 
 Phrases
    Count   Missed   %Right   Length
-     359        6    98.33        1
-     358       12    96.65        2
-     357       18    94.96        3
-     356       24    93.26        4
-     355       30    91.55        5
-     354       36    89.83        6
-     353       41    88.39        7
-     352       45    87.22        8
+     359       12    96.66        1
+     358       24    93.30        2
+     357       36    89.92        3
+     356       48    86.52        4
+     355       60    83.10        5
+     354       71    79.94        6
+     353       80    77.34        7
+     352       88    75.00        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -144,7 +144,7 @@ Non-stopwords
        1        0   100.00   abschreibungen4985051798
        1        0   100.00   ag
        1        0   100.00   agseit1896
-       1        0   100.00   akt.zujedm100
+       1        1     0.00   akt.zujedm100
        1        0   100.00   akt.zujedm1000
        1        0   100.00   akt.zujedm50
        1        0   100.00   aktienkurse
@@ -178,15 +178,15 @@ Non-stopwords
        2        0   100.00   burg
        1        0   100.00   burgundmünchen
        1        0   100.00   börsennotiz
-       1        0   100.00   cataloggesellschaftfürbausystemembh
+       1        1     0.00   cataloggesellschaftfürbausystemembh
        3        0   100.00   co
        1        0   100.00   co.kg
        1        0   100.00   commerzbankag
-       2        0   100.00   deumo2000
+       2        1    50.00   deumo2000
        1        0   100.00   deutschebau
        1        0   100.00   diegesellschaft
        2        0   100.00   dipl
-       8        1    87.50   div.sch.nr
+       8        0   100.00   div.sch.nr
        1        0   100.00   dividendenaufstammaktien
        1        0   100.00   dividendenberechtigt
        1        1     0.00   dividendenberechtigtab1.1
@@ -197,7 +197,7 @@ Non-stopwords
        1        0   100.00   dm37200000
        1        0   100.00   dm46500000
        3        0   100.00   dr
-       1        0   100.00   dr.alfredeinnatz
+       1        1     0.00   dr.alfredeinnatz
        1        0   100.00   dr.friedhelmgieske
        1        0   100.00   dr.hannsdeuss
        1        0   100.00   dr.jur.haraldpeipers
@@ -245,7 +245,7 @@ Non-stopwords
        1        0   100.00   ing.e.h
        1        0   100.00   ing.e.h.helmutmeysen
        1        0   100.00   ing.ennovocke
-       1        0   100.00   ing.güntherherion
+       1        1     0.00   ing.güntherherion
        1        0   100.00   ing.heinrichnagel
        1        0   100.00   ingenieur
        1        0   100.00   insgesamt259
@@ -346,6 +346,6 @@ Non-stopwords
        1        0   100.00   walterkoppenburgkg
        1        0   100.00   weinsheim
        1        0   100.00   wertpapier
-       1        0   100.00   westfälischeselektrizitätswerk
-       1        0   100.00   wilhelmholly
+       1        1     0.00   westfälischeselektrizitätswerk
+       1        1     0.00   wilhelmholly
        1        0   100.00   wolfgangkalinowski

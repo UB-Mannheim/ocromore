@@ -5,10 +5,10 @@ Fernschreiber: 021 2158.
 Vorstand:
 Dr. -Ing. Dr. -Ing.E.h. Friedrich Lade-
 mann, Hamburg;
-Max Mross, Hamburg;
+Max Ross, Hamburg;
 Walter Heinze, Hamburg.
 Aufsichtsrat:
-Ernst Plate, Hamburg, Vors.;
+Ernst Platen, Hamburg, Vors.;
 Hugo Scharnberg, Hamburg, 1. stellv.Vors.;
 Franz Fock, Hamburg, 2. stellv. Vors.
 (Arbeitnehmervertreter);
@@ -17,15 +17,15 @@ Hamburg;
 Dr. Kurt Glässing, Hamburg;
 Wilhelm Joost, Hamburg (Arbeitnehmer-
 vertreter);
-Heinrich Mahler, Hamburg (Arbeitnehmer-
+Heinrich Wahler, Hamburg (Arbeitnehmer-
 vertreter);
 Dr. Joachim Riehle, Hamburg;
-Adolph Schönfelder, Hamburg;
-iWilhelm Schröder, Hamburg;
-lHerbert Spiesen, Hamburg;
+Adolphe Schönfelder, Hamburg;
+Wilhelm Schröder, Hamburg;
+Herbert Spielen, Hamburg;
 Franz Heinrich Ulrich, Hamburg;
 Claus Wiebusch, Hamburg (von der Ge-
-werkschaft gestellter Arbeitnehmer-
+werkschaft gestellten Arbeitnehmer-
 vertreter);
 Heinrich Wulff, Hamburg (Arbeitnehmer-
 vertreter).
@@ -55,7 +55,7 @@ zweig wurde nach Fertigstellung der
 ersten Baustrecke Harburg-Eissendorf
 eröffnet;
 6. die Walddörferbahn. Der Betrieb auf der
-Strecke Barmbek-Volksdorf-Gross-Hans-
+Strecker Barmbek-Volksdorf-Gross-Hans-
 dorf und Volksdorf-Wohldorf (Staatliche
 Walddörferbahn) wurde von der Gesell-
 schaft während der Zeit vom 6. September
@@ -65,7 +65,7 @@ Hamburgischen Staates geführt. Seit dem
 Betrieb mit Zuschußgewährung der Stadt
 für eigene Rechnung. Bahnlänge 30,980 km.
 7. die Langenhorner Bahn, Bahnlänge
-7,748 km. Der Betrieb auf der Strecke
+7,748 km. Der Betrieb auf der Strecker
 Ohlsdorf-Ochsenzoll (Staatliche Langen-
 horner Bahn) wurde von der Gesellschaft
 während der Zeit vom 1.Juli 1921 bis
@@ -127,7 +127,7 @@ DM 10 898 400. - C-Aktien
 DM 166 400. - B-Vorzugsaktie.
 Börsennotiz:
 Hamburg, Berlin, Düsseldorf, Frank-
-furt, Hannover, München (amtl!.).
+furt, Hannover, München (amtl.).
 Ordnungsnr.d.Aktien:
 82470 (A-Aktien).
 Stückelung:
@@ -142,7 +142,7 @@ Sämtliche Stammaktien sind lieferbar.
 Großaktionär:
 Freie und Hansestadt Hamburg (sämt-
 liche B- und C-Aktien und die B-Vorz.
-Akt. sowie A-Aktien im Betrage von
+Akt. sowie A-Aktien im Betrages von
 DM5921000.-).
 Anleihen:
 6 1/2 % Teilschuldverschreibungen
@@ -183,7 +183,7 @@ Barmittel)8 292 4 241
 Eigenkapital83 149 82 992
 (davon A. -K.) 69 035 69 035
 Fremdkapital68 870 57 435
-Gewinn nach Vortrag 3053
+Gewinn nach Vertrag 3053
 Aus den Gewinn- und Verlust-
 rechnungen
 Abschreibungen12 124 13 183

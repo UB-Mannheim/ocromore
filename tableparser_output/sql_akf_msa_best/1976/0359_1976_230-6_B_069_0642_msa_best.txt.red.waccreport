@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      642   Words
-      16   Misrecognized
-   97.51%  Accuracy
+      23   Misrecognized
+   96.42%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,25 +20,25 @@ Non-stopwords
       44        0   100.00        5
       27        0   100.00        6
       36        0   100.00        7
-      45        1    97.78        8
-      23        1    95.65        9
+      45        2    95.56        8
+      23        2    91.30        9
       34        1    97.06       10
       27        0   100.00       11
-      34        1    97.06       12
+      34        2    94.12       12
       14        0   100.00       13
-      21        0   100.00       14
+      21        1    95.24       14
       17        1    94.12       15
       22        1    95.45       16
       20        0   100.00       17
       14        2    85.71       18
        4        0   100.00       19
        5        0   100.00       20
-       7        0   100.00       21
+       7        1    85.71       21
        4        0   100.00       22
        5        1    80.00       23
        8        0   100.00       24
        3        0   100.00       25
-       8        1    87.50       26
+       8        2    75.00       26
        7        0   100.00       27
        3        1    66.67       28
        2        0   100.00       29
@@ -48,12 +48,12 @@ Non-stopwords
        3        1    66.67       33
        4        0   100.00       34
        1        0   100.00       35
-       1        0   100.00       37
-     636       15    97.64    Total
+       1        1     0.00       37
+     636       22    96.54    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     413       15    96.37        1
+     413       22    94.67        1
       40        0   100.00        2
        8        0   100.00        3
        4        0   100.00        4
@@ -62,18 +62,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        3        0   100.00      >10
-     477       15    96.86    Total
+     477       22    95.39    Total
 
 Phrases
    Count   Missed   %Right   Length
-     642       16    97.51        1
-     641       28    95.63        2
-     640       39    93.91        3
-     639       50    92.18        4
-     638       60    90.60        5
-     637       70    89.01        6
-     636       80    87.42        7
-     635       90    85.83        8
+     642       23    96.42        1
+     641       42    93.45        2
+     640       60    90.62        3
+     639       78    87.79        4
+     638       95    85.11        5
+     637      110    82.73        6
+     636      125    80.35        7
+     635      139    78.11        8
 
 Stopwords
    Count   Missed   %Right   
@@ -277,7 +277,7 @@ Non-stopwords
        1        0   100.00   buenos
        1        0   100.00   burg
        1        0   100.00   börsennotiz
-       1        0   100.00   büssingautomobilwerkegmbh
+       1        1     0.00   büssingautomobilwerkegmbh
        1        0   100.00   büttnerlagersystemegmbh
        1        0   100.00   co
        1        0   100.00   co.gmbh
@@ -326,7 +326,7 @@ Non-stopwords
        1        0   100.00   flüssigemittel
        2        0   100.00   frank
        1        0   100.00   frankfurt
-       1        0   100.00   franzklemmer
+       1        1     0.00   franzklemmer
        1        0   100.00   freiv
        1        0   100.00   fremdkapital19494072294616
        1        0   100.00   friedrichlaußermair
@@ -343,7 +343,7 @@ Non-stopwords
        1        0   100.00   ghhfrances.a
        1        0   100.00   gleichedividendewiestamm
        3        0   100.00   gmbh
-       1        0   100.00   gnvgesellschaftfürnukleareverfahrens
+       1        1     0.00   gnvgesellschaftfürnukleareverfahrens
        1        0   100.00   great
        1        1     0.00   groupeeuropéenpourlatechniquedes
        1        0   100.00   grundkapital
@@ -359,7 +359,7 @@ Non-stopwords
        1        0   100.00   hausen
        1        0   100.00   hebezeugegmbh
        1        0   100.00   heilbronn
-       1        0   100.00   herbertredlich
+       1        1     0.00   herbertredlich
        2        0   100.00   hessen
        1        1     0.00   ii
        1        0   100.00   in1000dm
@@ -375,7 +375,7 @@ Non-stopwords
        2        0   100.00   je18
        1        0   100.00   jenom.dm50
        1        0   100.00   johannesburg
-       1        0   100.00   jul.wolff
+       1        1     0.00   jul.wolff
        1        0   100.00   juli
        1        0   100.00   juni
        2        0   100.00   kapital
@@ -456,7 +456,7 @@ Non-stopwords
        1        0   100.00   ottovoisard
        2        0   100.00   paris
        1        0   100.00   partenkirchen
-       1        0   100.00   penzburg
+       1        1     0.00   penzburg
        1        0   100.00   personalaufwand9040121042442
        1        0   100.00   postfach
        1        0   100.00   printprojektdruckereiberatungs
@@ -496,7 +496,7 @@ Non-stopwords
        3        0   100.00   stuttgart
        1        0   100.00   stückelung
        1        0   100.00   swf
-       1        0   100.00   swfsüddeutschewinden
+       1        1     0.00   swfsüddeutschewinden
        1        0   100.00   sydney
        1        1     0.00   sáopaulo
        1        0   100.00   technikmbh

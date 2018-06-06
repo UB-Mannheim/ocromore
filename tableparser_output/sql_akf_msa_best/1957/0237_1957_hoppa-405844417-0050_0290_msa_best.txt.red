@@ -1,13 +1,13 @@
 �
 Sitz:l..SisunWESTFALEN(216)Geisweid
-ers"(Krs.Siegen).
+erst"(Krs.Siegen).
 Fernruf:SiegenSa.-Nr.5181.
 Fernschreiber:031827.
 Vorstand:
 Dipl.-Kfm.KarlBarich,Dillnhütten,Vors.;
 Dr.ErichDudziak,Dortmund:
 Dipl.-Ing.RudolfSchäfer,Geisweid;
-HeinzSolbach,Hagen,stellv.
+HeinzGolbach,Hagen,stellv.
 Aufsichtsrat:
 HubertBiernat,Strickherdicke,Vors.;
 Dr.RudolfHaus,Detmold,1.stellv.Vors.;
@@ -103,7 +103,7 @@ SämtlicheStammaktiensindlieferbar.
 Großaktionäre:
 Merck,Finck&Co.,München)
 OPRIBAHandels-undVerwal-)(maßgeblich')
-tungs-KG,Hannover.)
+tunis-KG,Hannover.)
 Aktienkurse:NotierungseitNovem-
 ber1953.
 ultimo1953115%
@@ -138,10 +138,10 @@ Barmiittel)56274736
 Eigenkapital7046070460
 (davonA.-K.)4000040000
 Fremdkapital7260994925
-GewinnnachVortrag24003200
+GewinnnachVertrag24003200
 AusdenGewinn-undVerlust-
 rechnungen
-LöhneundGehälter3033335932
+LöhneundBehälter3033335932
 Abschreibungen74308095
 Steuern1240223352
 Jahresertrag6769786795

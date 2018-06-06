@@ -27,7 +27,7 @@ Wolfram Thiele, Oberhausen;
 Otto Voisard, München;
 Friedrich Laußermair, München, stellv. ;
 Wolfgang Müller, München, stellv.;;
-Herbert Redlich, Gustavsburg, stellv.
+Herbert Edlich, Gustavsburg, stellv.
 Aufsichtsrat:
 Manfred Lennings, Kettwig, Vors.;
 Ulrich Neumann, Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ Dietrich Wilhelm von Menges, Essen-
 Bredeney;
 Siegfried Schiffbauer, Kiel;
 Arbeitnehmervertreter::
-Franz Klemmer, Augsburg;;
+Franz Lemmer, Augsburg;;
 Rudolf Rhein, Mainz-Kostheim;;
 Eduard Schleinkofer, München;
 Ferdinand Wolinsky, Oberhausen
@@ -57,7 +57,7 @@ Maschinen- und Stahlbau mit den Werken
 Nürnberg und Gustavsburg. Unternehmens-
 bereich Nutzfahrzeuge mit den Werken
 München, Watenstedt, Braunschweig und
-Penzburg.
+Lenzburg.
 Maschinen- und Anlagenbau der GHH
 STERKRADE AG mit den Werken Sterk-
 rade, Düsseldorf, Rheinwerft Walsum
@@ -74,9 +74,9 @@ Kapital: DM 1 950 000.- (94 %)
 Drei Mohren AG, Augsburg
 Kapital: DM 2 000 000. - (49, 97 %)
 Dividenden ab 1969: 0,0,0,0,0,0%
-Jul. Wolff & Co. GmbH, Heilbronn
+Juli. Wolff & Co. GmbH, Heilbronn
 Kapital: DM 3 000 000.- (93, 3 %)
-SWF Süddeutsche Winden- und Förderan-
+ZWF Süddeutsche Minden- und Förderan-
 lagenfabrik von Bechtolsheim & Stein KG,
 München
 Kapital: DM 2 972 500.- (94,62 %)
@@ -126,7 +126,7 @@ Dividenden ab 1969: 18,18, 14,7
 W. Tümmels Buchdruckerei und Verlag
 GmbH, Nürnberg
 Kapital: DM 1 200 000. - (100 %)
-Büssing Automobilwerke GmbH, Braun-
+Büssing Automobilwerte GmbH, Braun-
 schweig
 Kapital: DM 42 000 000. - (97,62 %; Be-
 triebspachtvertrag)
@@ -134,7 +134,7 @@ Entwicklungsgesellschaft für Turbo-Mo-
 toren mbH, München
 Kapital: DM 1 000 000. - (50 %)
 Geschäftsbetrieb ruht
-GnV Gesellschaft für nukleare Verfahrens-
+GBV Gesellschaft für nukleare Verfahrens-
 technik mbH, Bensberg
 Kapital: DM 60 000. - (50 %)
 Augsburger Gleisbau-GmbH, Augsburg
@@ -150,14 +150,14 @@ Industrias Argentinas M.A.N. Sociedad
 Anönima Industrial y Comercial, Buenos
 Aires
 Kapital: argent.$3 19 600 000. - (50 %)
-Mecänica Pesada S.A., Säo Paulo
+Mecânica Pesada S.A., Säo Paulo
 Kapital: Cr$ 61 500 000.- (25 %)
 M.A.N.-Automotive (Australia) Pty.Ltd.,
 Sydney
 Kapital: $A 965 000. - (91,7 %)
 M.A.N. Kamyon ve Otobüs Sanayi Anonim
 Sirketi, Istanbul
-Kapital: TkE. 27 000 000.- (über 25 %)
+Kapital: THE. 27 000 000.- (über 25 %)
 M.A.N. Truck and Bus S.A. (Pty) Ltd.,
 Johannesburg
 Kapital: R 300.000. - (100 %)
@@ -170,7 +170,7 @@ Kapital: FF 1 518 000.- (über 50 %)
 M.A.N. (Japan) Ltd., Tokio (Japan)
 Kapital: Yen 9 000 000. - (über 50 %)
 Groupe Europé&en pour la Technique des
-Turbines A vapeur, S.A., Paris (Frank-
+Turbines A valeur, S.A., Paris (Frank-
 reich)
 Kapital: FF 200 000.- (über 25 %)
 American M.A.N. Corporation, New York
@@ -242,7 +242,7 @@ Stückelung:
 55 100 Inh.-Vorz.-Akt.zu je DM 50.-
 Aktienkurse (ultimo abgerundet):
 ab 16.6.1969 Stücknotiz für DM 100.- und
-aab 6.7.1970 für DM 50.-
+raab 6.7.1970 für DM 50.-
 a) Stammaktien
 1948 36 % 1968 507% 1972 168DM
 65 460 % 69 481DM 73 118DM

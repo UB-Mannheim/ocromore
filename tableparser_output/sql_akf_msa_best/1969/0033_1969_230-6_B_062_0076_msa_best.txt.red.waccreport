@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      942   Words
-      26   Misrecognized
-   97.24%  Accuracy
+      35   Misrecognized
+   96.28%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,33 +13,33 @@ Non-stopwords
    Count   Missed   %Right   Length
       44        0   100.00        1
       58        0   100.00        2
-      64        1    98.44        3
+      64        2    96.88        3
       77        6    92.21        4
       53        2    96.23        5
       73        0   100.00        6
       40        0   100.00        7
       37        0   100.00        8
-      45        0   100.00        9
+      45        1    97.78        9
       44        2    95.45       10
-      39        0   100.00       11
-      36        1    97.22       12
-      27        1    96.30       13
+      39        1    97.44       11
+      36        2    94.44       12
+      27        4    85.19       13
       27        0   100.00       14
       32        2    93.75       15
       25        0   100.00       16
-      29        1    96.55       17
-      31        2    93.55       18
+      29        2    93.10       17
+      31        0   100.00       18
       16        2    87.50       19
       11        0   100.00       20
       13        0   100.00       21
        6        0   100.00       22
        9        1    88.89       23
        5        1    80.00       24
-      10        1    90.00       25
+      10        2    80.00       25
       11        0   100.00       26
        8        0   100.00       27
        6        1    83.33       28
-       9        1    88.89       29
+       9        3    66.67       29
        7        0   100.00       30
        6        0   100.00       31
       13        0   100.00       32
@@ -49,11 +49,11 @@ Non-stopwords
        4        0   100.00       36
        2        1    50.00       38
        1        0   100.00       40
-     941       26    97.24    Total
+     941       35    96.28    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     610       20    96.72        1
+     610       29    95.25        1
       45        1    97.78        2
       17        0   100.00        3
       10        0   100.00        4
@@ -61,18 +61,18 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        6        0   100.00      >10
-     697       21    96.99    Total
+     697       30    95.70    Total
 
 Phrases
    Count   Missed   %Right   Length
-     942       26    97.24        1
-     941       44    95.32        2
-     940       61    93.51        3
-     939       77    91.80        4
-     938       91    90.30        5
-     937      105    88.79        6
-     936      118    87.39        7
-     935      130    86.10        8
+     942       35    96.28        1
+     941       64    93.20        2
+     940       93    90.11        3
+     939      119    87.33        4
+     938      142    84.86        5
+     937      164    82.50        6
+     936      185    80.24        7
+     935      205    78.07        8
 
 Stopwords
    Count   Missed   %Right   
@@ -281,7 +281,7 @@ Non-stopwords
        1        0   100.00   bankfürhandelundindustrie
        1        0   100.00   bankhausgebrüderbethmann
        1        1     0.00   banquedel’union
-       1        1     0.00   banquedeparisetdes
+       1        0   100.00   banquedeparisetdes
        1        0   100.00   banquenationaledeparis
        1        0   100.00   banquerotschild
        1        0   100.00   barmitteleinschl
@@ -328,7 +328,7 @@ Non-stopwords
        1        0   100.00   ca
        1        0   100.00   carlw.röder
        1        0   100.00   celle
-       1        0   100.00   chemischeszentrallaboratorium
+       1        1     0.00   chemischeszentrallaboratorium
        1        0   100.00   chen
        1        0   100.00   cheschutzrechteaufdiesengebieten
        1        0   100.00   cie
@@ -376,7 +376,7 @@ Non-stopwords
        1        0   100.00   dr.h.c.friedrichcarlfreiherrvonop
        1        0   100.00   dr.hansc.boden
        1        0   100.00   dr.jur.eduardvonschwartzkoppen
-       1        0   100.00   dr.jur.hansgroebe.gehrden
+       1        1     0.00   dr.jur.hansgroebe.gehrden
        1        0   100.00   dr.phil.erhardlöwe
        1        0   100.00   dr.rer.pol.hansbühler
        1        0   100.00   dresdner
@@ -399,14 +399,14 @@ Non-stopwords
        1        0   100.00   entwicklung
        1        0   100.00   er
        7        0   100.00   ergebnisübernahmevertragmitderaeg
-       1        0   100.00   ernstrieche
+       1        1     0.00   ernstrieche
        3        0   100.00   essen
        1        0   100.00   f.küppersbusch
        1        0   100.00   fabeggmbh
        9        0   100.00   fabrik
        1        0   100.00   fabrikackerstraße
        1        0   100.00   fabrikbacknang
-       1        0   100.00   fabrikbelecke
+       1        1     0.00   fabrikbelecke
        1        0   100.00   fabrikeiweiler
        2        0   100.00   fabrikenhameln
        1        0   100.00   fabrikessen
@@ -475,7 +475,7 @@ Non-stopwords
        1        0   100.00   hanau
        2        0   100.00   hannover
        1        0   100.00   hansdücker
-       1        0   100.00   hansrubke
+       1        1     0.00   hansrubke
        1        0   100.00   hansrückdäschel
        1        0   100.00   hardy
        1        0   100.00   hasten
@@ -486,13 +486,13 @@ Non-stopwords
        1        0   100.00   heilbronn
        1        0   100.00   heinzdürrbeck
        1        0   100.00   heinzosterwind
-       1        0   100.00   heinzzickler
+       1        1     0.00   heinzzickler
        1        0   100.00   herstellung
        1        0   100.00   hessischelandesbank
        1        0   100.00   hirsch
        2        0   100.00   hochhaus
        1        0   100.00   hochspan
-       1        0   100.00   hochspannungs
+       1        1     0.00   hochspannungs
        1        0   100.00   hochtiefagfürhoch
        1        0   100.00   hohenzollerndamm150
        1        0   100.00   hohenzollerndamm150undfrankfurt
@@ -513,8 +513,8 @@ Non-stopwords
        1        0   100.00   ing.e.h.werner
        1        0   100.00   ing.ennokoch
        1        0   100.00   ing.erichmenzel
-       1        0   100.00   ing.felixherriger
-       1        0   100.00   ing.paulharke
+       1        1     0.00   ing.felixherriger
+       1        1     0.00   ing.paulharke
        1        0   100.00   ing.ulrichpetersen
        3        0   100.00   inhaber
        1        0   100.00   insbesondereauchzurerrichtung
@@ -574,7 +574,7 @@ Non-stopwords
        1        0   100.00   land
        1        0   100.00   langen
        1        0   100.00   lauf
-       1        1     0.00   lazardfrèresetcie
+       1        0   100.00   lazardfrèresetcie
        1        0   100.00   leipheim
        1        0   100.00   lieferforderungen684385877360
        1        0   100.00   lindau
@@ -608,7 +608,7 @@ Non-stopwords
        1        0   100.00   nisse
        1        0   100.00   noverii
        1        0   100.00   nr
-       1        0   100.00   nsf
+       1        1     0.00   nsf
        1        0   100.00   nungsinstitutkassel
        1        0   100.00   nutzungsolcheranlagen
        1        1     0.00   néralaalsaciennedebanque
@@ -693,7 +693,7 @@ Non-stopwords
        1        0   100.00   telefunkengmbh
        1        0   100.00   tieimnennbetragvondm100
        1        0   100.00   tigtundvertreibtsiegeräte
-       1        0   100.00   triebschenefeldundwerkschulau
+       1        1     0.00   triebschenefeldundwerkschulau
        1        0   100.00   trizitätundjedesonstigebetätigungauf
        1        0   100.00   trägenundunternehmensverträgen
        1        0   100.00   turbinenfabrik

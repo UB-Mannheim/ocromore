@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      737   Words
-      16   Misrecognized
-   97.83%  Accuracy
+      33   Misrecognized
+   95.52%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,48 +12,48 @@ Non-stopwords
    Count   Missed   %Right   Length
       46        0   100.00        1
       76        2    97.37        2
-      37        2    94.59        3
+      37        3    91.89        3
       57        0   100.00        4
       36        0   100.00        5
       30        0   100.00        6
       60        1    98.33        7
       38        0   100.00        8
-      31        3    90.32        9
+      31        4    87.10        9
       24        0   100.00       10
       32        2    93.75       11
-      35        1    97.14       12
-      29        0   100.00       13
-      21        0   100.00       14
+      35        4    88.57       12
+      29        1    96.55       13
+      21        1    95.24       14
       16        0   100.00       15
-      26        1    96.15       16
+      26        2    92.31       16
       18        0   100.00       17
       28        1    96.43       18
       10        0   100.00       19
        6        0   100.00       20
        4        0   100.00       21
-       5        0   100.00       22
-       7        0   100.00       23
+       5        1    80.00       22
+       7        1    85.71       23
        5        1    80.00       24
        3        0   100.00       25
        9        0   100.00       26
        5        0   100.00       27
        4        0   100.00       28
-       6        0   100.00       29
-       3        1    66.67       30
-       3        0   100.00       31
+       6        1    83.33       29
+       3        3     0.00       30
+       3        1    66.67       31
        4        0   100.00       32
-       4        0   100.00       33
+       4        2    50.00       33
        2        0   100.00       34
        6        0   100.00       35
        5        1    80.00       36
        1        0   100.00       37
-       4        0   100.00       38
+       4        1    75.00       38
        1        0   100.00       50
-     737       16    97.83    Total
+     737       33    95.52    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     432       13    96.99        1
+     432       29    93.29        1
       40        1    97.50        2
       14        0   100.00        3
        9        0   100.00        4
@@ -64,18 +64,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        4        0   100.00      >10
-     513       14    97.27    Total
+     513       30    94.15    Total
 
 Phrases
    Count   Missed   %Right   Length
-     737       16    97.83        1
-     736       31    95.79        2
-     735       46    93.74        3
-     734       60    91.83        4
-     733       74    89.90        5
-     732       88    87.98        6
-     731      102    86.05        7
-     730      116    84.11        8
+     737       33    95.52        1
+     736       62    91.58        2
+     735       90    87.76        3
+     734      116    84.20        4
+     733      141    80.76        5
+     732      165    77.46        6
+     731      189    74.15        7
+     730      212    70.96        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -154,8 +154,8 @@ Non-stopwords
        2        0   100.00   25.5
        1        0   100.00   27
        1        0   100.00   27.1.1961ausgesellschaftsmit
-       1        1     0.00   27.10.1959aufdm575000000
-       1        0   100.00   28100qkmundeinerbevöl
+       1        0   100.00   27.10.1959aufdm575000000
+       1        1     0.00   28100qkmundeinerbevöl
        1        0   100.00   29.5.1951
        3        0   100.00   3
        1        0   100.00   3,25
@@ -168,7 +168,7 @@ Non-stopwords
        9        0   100.00   4
        1        0   100.00   4,7,7,7,7,7
        2        0   100.00   40625inh
-       1        0   100.00   41,061mrdkwhgegenübereinerabgabe
+       1        1     0.00   41,061mrdkwhgegenübereinerabgabe
        1        0   100.00   425750inh
        1        0   100.00   43essen
        1        0   100.00   467375inh
@@ -223,7 +223,7 @@ Non-stopwords
        1        0   100.00   akt.vorz
        3        0   100.00   akt.zujedm100
        2        0   100.00   akt.zujedm1000
-       3        0   100.00   akt.zujedm400
+       3        1    66.67   akt.zujedm400
        1        0   100.00   aktienkurse
        1        0   100.00   altenkirchen
        1        0   100.00   amtl
@@ -301,13 +301,13 @@ Non-stopwords
        1        0   100.00   donau
        1        0   100.00   dorf
        3        0   100.00   dr
-       1        0   100.00   dr.alfredeinnatz
+       1        1     0.00   dr.alfredeinnatz
        1        0   100.00   dr.bernhardheun
        1        0   100.00   dr.dr.h.c.waltherhensel
        1        0   100.00   dr.ernstmawick
        1        0   100.00   dr.friedrich
        1        0   100.00   dr.gustavmertens
-       1        0   100.00   dr.h.c.hellmuthgreinert
+       1        1     0.00   dr.h.c.hellmuthgreinert
        1        0   100.00   dr.h.c.hermannj.abs
        1        0   100.00   dr.hannssinzig
        1        1     0.00   dr.ottokorn
@@ -336,7 +336,7 @@ Non-stopwords
        1        0   100.00   erstenotierungam2.11.1955
        1        0   100.00   es
       14        0   100.00   essen
-       1        0   100.00   eugenmork
+       1        1     0.00   eugenmork
        2        0   100.00   fast100
        1        0   100.00   faßtmitrd
        1        0   100.00   fernereineanzahl
@@ -348,8 +348,8 @@ Non-stopwords
        1        0   100.00   freiburg
        1        0   100.00   freiburgi.br
        1        0   100.00   fremdkapital15864261638059
-       1        0   100.00   friedrichdugel
-       1        0   100.00   fristigerabmachungenlaufendelektrische
+       1        1     0.00   friedrichdugel
+       1        1     0.00   fristigerabmachungenlaufendelektrische
        1        1     0.00   fritzandré
        1        0   100.00   gasundwasser
        1        0   100.00   geldern
@@ -359,7 +359,7 @@ Non-stopwords
        1        0   100.00   gesellschaft
        1        0   100.00   gesellschaftskasse
        1        0   100.00   gewerkschaftdessteinkohlenbergwerks
-       1        0   100.00   gewinnnachvortrag132489136845
+       1        1     0.00   gewinnnachvortrag132489136845
        1        0   100.00   girozen
        1        0   100.00   großaktionäre
        1        0   100.00   großwelzheim
@@ -420,9 +420,9 @@ Non-stopwords
        1        0   100.00   kapital:dm49539600
        2        0   100.00   kapital:dm55000000
        2        0   100.00   kapital:dm60000000
-       1        0   100.00   kapital:lfrs
+       1        1     0.00   kapital:lfrs
        1        0   100.00   karlposthofer
-       1        0   100.00   karlschirner
+       1        1     0.00   karlschirner
        1        0   100.00   kenn
        1        0   100.00   kernkraftwerkrwe
        1        0   100.00   kerungvonannähernd8,8mioeinwohnern
@@ -444,7 +444,7 @@ Non-stopwords
        3        0   100.00   lt.h
        1        0   100.00   ludwigs
        1        0   100.00   luxem
-       1        0   100.00   löhneundgehälter175917190530
+       1        1     0.00   löhneundgehälter175917190530
        8        0   100.00   m
        1        0   100.00   main
        2        0   100.00   mannheim
@@ -455,10 +455,10 @@ Non-stopwords
        1        0   100.00   mülheim
        5        0   100.00   münchen
        1        0   100.00   münster
-       1        0   100.00   nam
+       1        1     0.00   nam
        2        0   100.00   namens
        1        0   100.00   national
-       1        0   100.00   nehmeningroßemumfangaufgrundlang
+       1        1     0.00   nehmeningroßemumfangaufgrundlang
        1        0   100.00   nennwert
        1        0   100.00   nestimmrecht
        1        0   100.00   niederrhein
@@ -467,13 +467,13 @@ Non-stopwords
        1        0   100.00   nordhorn
        2        0   100.00   notizex
        2        0   100.00   nr
-       1        0   100.00   nutzbarestromabgabeeinehöhevon
+       1        1     0.00   nutzbarestromabgabeeinehöhevon
        1        0   100.00   oberbollheim
        2        0   100.00   oberstein
        1        0   100.00   organschafts
        1        0   100.00   organschaftsvertragmitgewinnaus
        1        0   100.00   organschaftsvertragmitgewinnausschluß
-       1        0   100.00   paulcullmann
+       1        1     0.00   paulcullmann
        1        0   100.00   peterjammers
        1        0   100.00   pfalzundnie
        1        0   100.00   poensgen
@@ -555,7 +555,7 @@ Non-stopwords
        1        0   100.00   undtiefbauten
        1        0   100.00   undverlust
        1        0   100.00   undwechsel
-       1        0   100.00   undösterreichinengeremverbund
+       1        1     0.00   undösterreichinengeremverbund
        3        0   100.00   v
        5        0   100.00   v.v
        1        0   100.00   vereinbarung
@@ -564,7 +564,7 @@ Non-stopwords
        1        0   100.00   versuchsatomkraftwerkkahlgmbh
        1        0   100.00   vertragmitgewinnausschlußvereinbarung
        1        0   100.00   victoriamathias
-       1        0   100.00   von34,763mrdkwhimvorjahr
+       1        1     0.00   von34,763mrdkwhimvorjahr
        1        0   100.00   vonstadt
        1        1     0.00   vorm.gebr.helfmann
        1        0   100.00   vorräte3110734084

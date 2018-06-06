@@ -27,7 +27,7 @@ WolframThiele,Oberhausen;
 OttoVoisard,München;
 FriedrichLaußermair,München,stellv.;
 WolfgangMüller,München,stellv.;;
-HerbertRedlich,Gustavsburg,stellv.
+HerbertEdlich,Gustavsburg,stellv.
 Aufsichtsrat:
 ManfredLennings,Kettwig,Vors.;
 UlrichNeumann,Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ DietrichWilhelmvonMenges,Essen-
 Bredeney;
 SiegfriedSchiffbauer,Kiel;
 Arbeitnehmervertreter::
-FranzKlemmer,Augsburg;;
+FranzLemmer,Augsburg;;
 RudolfRhein,Mainz-Kostheim;;
 EduardSchleinkofer,München;
 FerdinandWolinsky,Oberhausen
@@ -57,7 +57,7 @@ Maschinen-undStahlbaumitdenWerken
 NürnbergundGustavsburg.Unternehmens-
 bereichNutzfahrzeugemitdenWerken
 München,Watenstedt,Braunschweigund
-Penzburg.
+Lenzburg.
 Maschinen-undAnlagenbauderGHH
 STERKRADEAGmitdenWerkenSterk-
 rade,Düsseldorf,RheinwerftWalsum
@@ -74,9 +74,9 @@ Kapital:DM1950000.-(94%)
 DreiMohrenAG,Augsburg
 Kapital:DM2000000.-(49,97%)
 Dividendenab1969:0,0,0,0,0,0%
-Jul.Wolff&Co.GmbH,Heilbronn
+Juli.Wolff&Co.GmbH,Heilbronn
 Kapital:DM3000000.-(93,3%)
-SWFSüddeutscheWinden-undFörderan-
+ZWFSüddeutscheMinden-undFörderan-
 lagenfabrikvonBechtolsheim&SteinKG,
 München
 Kapital:DM2972500.-(94,62%)
@@ -126,7 +126,7 @@ Dividendenab1969:18,18,14,7
 W.TümmelsBuchdruckereiundVerlag
 GmbH,Nürnberg
 Kapital:DM1200000.-(100%)
-BüssingAutomobilwerkeGmbH,Braun-
+BüssingAutomobilwerteGmbH,Braun-
 schweig
 Kapital:DM42000000.-(97,62%;Be-
 triebspachtvertrag)
@@ -134,7 +134,7 @@ EntwicklungsgesellschaftfürTurbo-Mo-
 torenmbH,München
 Kapital:DM1000000.-(50%)
 Geschäftsbetriebruht
-GnVGesellschaftfürnukleareVerfahrens-
+GBVGesellschaftfürnukleareVerfahrens-
 technikmbH,Bensberg
 Kapital:DM60000.-(50%)
 AugsburgerGleisbau-GmbH,Augsburg
@@ -150,14 +150,14 @@ IndustriasArgentinasM.A.N.Sociedad
 AnönimaIndustrialyComercial,Buenos
 Aires
 Kapital:argent.$319600000.-(50%)
-MecänicaPesadaS.A.,SäoPaulo
+MecânicaPesadaS.A.,SäoPaulo
 Kapital:Cr$61500000.-(25%)
 M.A.N.-Automotive(Australia)Pty.Ltd.,
 Sydney
 Kapital:$A965000.-(91,7%)
 M.A.N.KamyonveOtobüsSanayiAnonim
 Sirketi,Istanbul
-Kapital:TkE.27000000.-(über25%)
+Kapital:THE.27000000.-(über25%)
 M.A.N.TruckandBusS.A.(Pty)Ltd.,
 Johannesburg
 Kapital:R300.000.-(100%)
@@ -170,7 +170,7 @@ Kapital:FF1518000.-(über50%)
 M.A.N.(Japan)Ltd.,Tokio(Japan)
 Kapital:Yen9000000.-(über50%)
 GroupeEuropé&enpourlaTechniquedes
-TurbinesAvapeur,S.A.,Paris(Frank-
+TurbinesAvaleur,S.A.,Paris(Frank-
 reich)
 Kapital:FF200000.-(über25%)
 AmericanM.A.N.Corporation,NewYork
@@ -242,7 +242,7 @@ Stückelung:
 55100Inh.-Vorz.-Akt.zujeDM50.-
 Aktienkurse(ultimoabgerundet):
 ab16.6.1969StücknotizfürDM100.-und
-aab6.7.1970fürDM50.-
+raab6.7.1970fürDM50.-
 a)Stammaktien
 194836%1968507%1972168DM
 65460%69481DM73118DM

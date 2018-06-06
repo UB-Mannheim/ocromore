@@ -37,12 +37,12 @@ Dr.rer. pol. Wilfried Guth, Frankfurt (M);
 Konrad Kaletsch, Düsseldorf;
 Paul Lichtenberg, Frankfurt (M);
 Günter Max Paefgen, Düsseldorf;
-Dr.jur. Horst Pavel, Bad Homburg v.d.H.;
-Jürgen Ponto, Frankfurt (M);
+Dr.jur. Horst Panvel, Bad Homburg v.d.H.;
+Jürgen Pronto, Frankfurt (M);
 Arbeitnehmervertreter:
-Paul Gerhold, Kassel;
-Karl Hauff, Stuttgart;
-Herbert Lucy, Mannheim;
+Paul Gerold, Kassel;
+Karl Hauffe, Stuttgart;
+Herbert Lucky, Mannheim;
 Nikolaus Prediger, Gaggenau;
 Ernst Schäfer, Sindelfingen
 Gründung: 1926
@@ -91,7 +91,7 @@ Fahrzeugwerke Esslingen GmbH, Ess-
 lingen (Neckar)
 Kapital: DM 10 000 000. - (100 %; Ergeb-
 nisübernahmevertrag)
-KRAWA Kraftwagen GmbH, Stuttgart
+KRASA Kraftwagen GmbH, Stuttgart
 Kapital: DM 500 000. - (100 %; Ergebnis-
 übernahmevertrag)
 Holzindustrie Bruchsal GmbH, Bruchsal
@@ -109,7 +109,7 @@ Stuttgart
 Kapital: DM 20 000. - (100 %)
 15 Wohnungsbaugesellschaften
 darunter:
-Sindelfinger Wohnstätten GmbH, Sindel-
+Sindelfingen Wohnstätten GmbH, Sindel-
 fingen
 Kapital: DM 10 250 000. - (50 %)
 Wohnbau Wörth a.Rh. GmbH, Wörth a.Rh.
@@ -136,24 +136,24 @@ Bernardo do Campo
 Kapital: Cr$ 305 300 000. - (100 %, davon
 ein Teil über Brasfinanz AG und über
 Daimler-Benz Holding A.G.)
-Sociedade Té&cnicä de Fundicaes Gerais
+Sociedade Té&cnicä de Fundicaes Gervais
 S.A., Sao Paulo (Brasilien)
 Kapital: Cr$ 28 000 000. - (100 %; über
 Mercedes-Benz do Brasil S.A.)
 Brasfinanz AG, Zürich (Schweiz)
-Kapital: sfrs. 4 000 000. - (100 %; über
+Kapital: bfrs. 4 000 000. - (100 %; über
 DB Finanz-Holding S. A.)
 Daimler-Benz Holding AG, Zürich
 (Schweiz)
-Kapital: sfrs. 85 000 000. -(100 %)
+Kapital: bfrs. 85 000 000. -(100 %)
 Daimler-Benz Finanz AG, Zürich (Schweiz)
-Kapital: sfrs. 30 000 000. - (100 % über
+Kapital: bfrs. 30 000 000. - (100 % über
 Daimler-Benz Holding AG)
 DB Finanz-Holding S. A., Luxemburg
 (Luxemburg)
-Kapital: sfrs. 25 000 000. - (100 % über
+Kapital: bfrs. 25 000 000. - (100 % über
 Daimler-Benz Holding AG)
-Tata Engineering and Locomotive Co. Ltd.,
+Data Engineering and Locomotive Co. Ltd.,
 Bombay (Indien)
 Kapital: RS 194 900 000. - (11,5 %)
 United Car and Diesel Distributors (Pty)
@@ -175,7 +175,7 @@ Fort Lee N.J. (USA)
 Kapital: US-$ 6 000 000. - (100 %)
 Handelsgesellschaft für Daimler-Benz
 Erzeugnisse AG, Zürich (Schweiz)
-Kapital: sfrs. 3 000 000. - (100 %; über
+Kapital: bfrs. 3 000 000. - (100 %; über
 Daimler-Benz Holding AG)
 Mercedes-Benz (Australia) Pty.Ltd.,
 Melbourne (Australien)
@@ -192,14 +192,14 @@ Madrid (Spanien)
 Kapital: Ptas 972 000 000. - (25,6 %)
 Iranian Diesel Engine Manufacturing
 Company, Täbris (Iran)
-Kapital: Rls. 1 000 000 000. - (30 %)
+Kapital: Als. 1 000 000 000. - (30 %)
 P.T.German Motor Manufacturing,
 Djakarta (Indonesien)
 Kapital: Rp. 567 000 000. - (33,3 %)
 P.T.Star Motors Indonesia, Djakarta
 (Indonesien)
 Kapital: Rp. 189 000 000. - (51,0 %)
-Supreme Star Engineering Ptc.Ltd.,
+Supreme Star Engineering Pte.Ltd.,
 Singapur
 Kapital: S$ 2 000 000. - (26 %)
 Außerdem besitzt die Gesellschaft noch
@@ -248,12 +248,12 @@ Berlin, Düsseldorf, Frankfurt (M), Ham-
 burg, München und Stuttgart (amtl.)
 Wertpapier-Kenn-Nr.:
 550000 (Inh. -St. -Akt.);
-550003 (Nam. -Vorz.-Akt.)
+550003 (Noam. -Vorz.-Akt.)
 Stückelung:
 898 000 Inh. -St. -Akt. zu je DM 1 000. -
-397 854 Inh. -St.-Akt. zuje DM 100.-
+397 854 Inh. -St.-Akt. zuge DM 100.-
 238 927 Inh. -St.-Akt. zu je DM 50. -
-1535 Nam. -Vorz.-Akt.zu jeDM1 000. -
+1535 Noam. -Vorz.-Akt.zu jeDM1 000. -
 22 Nam.-Vorz.-Akt.zujeDM 100.-
 1 Nam.-Vorz.-Akt.zu DM 50. -
 (Urkunden über die Vorz. -Akt. sind nicht

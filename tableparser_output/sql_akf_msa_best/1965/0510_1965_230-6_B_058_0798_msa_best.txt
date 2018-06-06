@@ -6,9 +6,9 @@ Fernruf:
 Sa.-Nr.2 01 91 (Hauptverwaltung)
 Fernschreiber: 0857 851
 Vorstand:
-Dr.h.c. Hellmuth Greinert, Essen;
+Dr.h.c. Hellmut Greinert, Essen;
 Helmut Meysenburg, Heiligenhaus;
-Dr. Alfred Einnatz, Essen;;
+Dr. Alfred Einsatz, Essen;;
 Wilhelm Gutmann, Essen, stellv.;;
 Professor Dr.Dr. Heinrich Mandel, Es-
 sen, stellv.
@@ -17,7 +17,7 @@ Dr.h.c. Hermann J.Abs, Frankfurt (M),
 Vors,;
 Dr.Hanns Sinzig, Altenkirchen, 1.stellv.
 Vors.;
-Paul Cullmann, Essen, 2.stellv. Vors.;
+Paul Kullmann, Essen, 2.stellv. Vors.;
 Heinrich Schöller, Essen, 3. stellv. Vors.;
 Karl Posthofer, Essen, 4. stellv. Vors.;
 Dr.Gustav Mertens, Geldern, 5.stellv.
@@ -30,11 +30,11 @@ Dr.Dr.h.c. Walther Hensel, Düsseldorf,
 8. stellv. Vors,.;
 Dr. Bernhard Heun, Krefeld, 9, stellv.
 Vors.;
-Fritz Andrée, Rottach-Egern;
+Fritz Andree, Rottach-Egern;
 Theodor Berger, Oberbollheim (Krs.
 Düren);
 Erich Berschkeit, Dürwiss (Krs. Jülich);
-Friedrich Dugel, Essen;;
+Friedrich Kugel, Essen;;
 Dr.Friedrich-Wilhelm Goldenbogen,
 Gummersbach;
 Josef Harnisch, Trier;
@@ -49,8 +49,8 @@ Dr.-Ing.E.h,. Heinrich Kost, Homberg
 (Niederrhein);
 Willi Kowalski, Bergheim (Erft);
 Dr.Ernst Mawick, Nordhorn;;
-Eugen Mork, Essen;
-Karl Schirner, Freiburg i. Br.;;
+Eugen York, Essen;
+Karl Schörner, Freiburg i. Br.;;
 Bernhard Weiss, Dahlbruch über Kreuz-
 tal (Krs. Siegen)
 Gründung: 1898
@@ -59,7 +59,7 @@ Ausschließlich Versorgung der Bevölke-
 rung mit Elektrizität, Gas und Wasser.
 Das Elektrizitäts-Versorgungsgebiet des
 RWE und seiner Tochterunternehmen um-
-faßt mit rd. 28 100 qkm und einer Bevöl-
+faßt mit rd. 28 100 wkm und einer Bevöl-
 kerung von annähernd 8,8 Mio Einwohnern
 wesentliche Teile der Bundesländer Nord-
 rhein-Westfalen, Rheinland-Pfalz und Nie-
@@ -69,10 +69,10 @@ und Hochspannungsnetz eine Vielzahl an-
 derer Versorgungsunternehmen des Bun-
 desgebietes und der angrenzenden Länder
 Holland, Belgien, Frankreich, Schweiz
-und Österreich in engerem Verbund, wo-
+und Österreich in engere Verbund, wo-
 bei insbesondere die süddeutschen Unter-
-nehmen in großem Umfang auf Grund lang-
-fristiger Abmachungen laufend elektrische
+nehmen in großer Umfang auf Grund lang-
+fristiger Abmachungen laufen elektrische
 Energie vom RWE beziehen.
 Beteiligungen:
 Gewerkschaft des Steinkohlenbergwerks
@@ -144,7 +144,7 @@ Kapital: DM 55 000 000. - (50 %)
 Dividenden ab 1958: 4,7,7,7,7,7%
 Societé& Electrique de l'’Our S.A., Luxem-
 burg
-Kapital: lfrs.1 250 000 000. - (über 40 %)
+Kapital: bfrs.1 250 000 000. - (über 40 %)
 Hochtief AG für Hoch- und Tiefbauten
 vorm.Gebr,. Helfmann, Essen
 Kapital: DM 23 250 000.- (über 25 %)
@@ -160,7 +160,7 @@ Kapital: DM 55 000 000.- (75 %)
 Geschäftsjahr: 1. Juli - 30. Juni
 Stimmrecht d.Aktien i.d.H.-V.:
 Je nom. DM 100, - St. -Akt. = 1 Stimme;
-je nom. DM 100.- Nam, -Akt. = 20 Stim-
+je nom. DM 100.- Noam, -Akt. = 20 Stim-
 men
 Zahlstellen:_
 Gesellschaftskasse, Essen;;
@@ -198,7 +198,7 @@ Umstellung 1:1 auf DM 246 000 000. - durch
 H.-V.v.29.5.1951. Lt.H.-V.v.1.3.1955
 Erhöhung auf DM 369 000 000.-, lt.H.-V.
 v.20.9.1955 auf DM 428 000 000. -, It.
-H.-V.v.27.10.1959 aurf DM 575 000 000. -,
+H.-V.v.27.10.1959 auf DM 575 000 000. -,
 lt.H.-V.v.27.1.1961 aus Gesellschaftsmit-
 teln auf DM 718 750 000. - sowie weitere
 Erhöhung auf DM 795 000 000. - und lt.
@@ -214,7 +214,7 @@ Stuttgart, Zürich, Genf und Basel (amtl.)
 Wertpapier-Kenn-Nr.:
 703700 (St.-Akt.); 703703 (Vorz.-Akt.)
 Stückelung:
-851 125 Inh. -St.-Akt. zuje DM 400; -
+851 125 Inh. -St.-Akt. zuge DM 400; -
 467 375 Inh. -St.-Akt. zu jeDM 100.-
 232 500 Inh, -St.-Akt. zu je DM 1 000. -
 40 625 Inh. -Namens-Akt. zu je DM 400.-
@@ -303,9 +303,9 @@ schlag 59 % (7.3.);;
 Div.Sch.Nr.17
 Zur Geschäftslage:
 Im Geschäftsjahr 1962/63 erreichte die
-nutzbare Stromabgabe eine Höhe von
-41,061 Mrd kWh gegenüber einer Abgabe
-von 34, 763 Mrd kWh im Vorjahr,
+nutzbar Stromabgabe eine Höhe von
+41,061 Mrd kvh gegenüber einer Abgabe
+von 34, 763 Mrd kvh im Vorjahr,
 In den ersten fünf Monaten des neuen Ge-
 schäftsjahres 1963/64 hat sich der Strom-
 absatz gegenüber dem gleichen Zeitraum
@@ -327,11 +327,11 @@ Eigenkapital 1 249 722 1 506 829
 Fremdkapital 1 586 426 1 638 059
 (darunter
 Anzahlungen)11 722 7 592
-Gewinnnach Vortrag 132 489 136 845
+Gewinnnach Vertrag 132 489 136 845
 Aus den Gewinn- und Verlust-
 rechnungen
 1961/62 1962/63
-Löhne und Gehälter 175 917 190 530
+Löhne und Behälter 175 917 190 530
 Abschreibungen 320 963 361 991
 EEV-Steuern u.LAG 275 253 277 644
 Sonstige Steuern 72 152 82 718

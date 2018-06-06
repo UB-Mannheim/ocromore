@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1399   Words
-      41   Misrecognized
-   97.07%  Accuracy
+      76   Misrecognized
+   94.57%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,23 +12,23 @@ Non-stopwords
    Count   Missed   %Right   Length
       39        0   100.00        1
       77        2    97.40        2
-      92        0   100.00        3
-     116        5    95.69        4
+      92        1    98.91        3
+     116        7    93.97        4
       51        6    88.24        5
       79        2    97.47        6
-      97        5    94.85        7
+      97        8    91.75        7
       70        0   100.00        8
-     105        1    99.05        9
-      80        0   100.00       10
-      80        1    98.75       11
-      50        1    98.00       12
-      47        1    97.87       13
+     105        2    98.10        9
+      80        2    97.50       10
+      80        4    95.00       11
+      50        7    86.00       12
+      47        2    95.74       13
       42        1    97.62       14
-      35        4    88.57       15
-      30        0   100.00       16
-      39        0   100.00       17
-      27        2    92.59       18
-      19        0   100.00       19
+      35        5    85.71       15
+      30        1    96.67       16
+      39        1    97.44       17
+      27        3    88.89       18
+      19        1    94.74       19
       14        1    92.86       20
       18        0   100.00       21
       15        3    80.00       22
@@ -37,45 +37,45 @@ Non-stopwords
        9        0   100.00       25
       19        1    94.74       26
       15        0   100.00       27
-      14        0   100.00       28
-      12        0   100.00       29
+      14        2    85.71       28
+      12        1    91.67       29
       10        0   100.00       30
        9        0   100.00       31
-       9        1    88.89       32
-      10        0   100.00       33
-       8        0   100.00       34
+       9        3    66.67       32
+      10        1    90.00       33
+       8        1    87.50       34
       10        1    90.00       35
-       9        1    88.89       36
+       9        5    44.44       36
        4        0   100.00       37
        3        1    66.67       38
        3        0   100.00       39
        4        0   100.00       40
        1        0   100.00       49
-    1399       41    97.07    Total
+    1399       76    94.57    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     951       39    95.90        1
+     951       64    93.27        1
       81        0   100.00        2
       22        0   100.00        3
-       9        0   100.00        4
-       4        0   100.00        5
+       9        1    88.89        4
+       4        1    75.00        5
        5        0   100.00        6
        6        0   100.00        7
        1        0   100.00        8
        5        0   100.00      >10
-    1084       39    96.40    Total
+    1084       66    93.91    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1399       41    97.07        1
-    1396       74    94.70        2
-    1393       99    92.89        3
-    1390      116    91.65        4
-    1387      133    90.41        5
-    1384      150    89.16        6
-    1381      166    87.98        7
-    1378      182    86.79        8
+    1399       76    94.57        1
+    1396      143    89.76        2
+    1393      196    85.93        3
+    1390      238    82.88        4
+    1387      278    79.96        5
+    1384      316    77.17        6
+    1381      351    74.58        7
+    1378      385    72.06        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -114,9 +114,9 @@ Non-stopwords
        1        0   100.00   149u
        1        0   100.00   15
        1        0   100.00   150
-       1        0   100.00   1500kumulativevort
+       1        1     0.00   1500kumulativevort
        1        0   100.00   151
-       1        0   100.00   1535nam
+       1        1     0.00   1535nam
        1        0   100.00   15wohnungsbaugesellschaften
        1        0   100.00   16
        1        0   100.00   16,2
@@ -279,7 +279,7 @@ Non-stopwords
        1        0   100.00   a.w.p.stenham
        1        0   100.00   a31147480
        1        0   100.00   a9283790
-       4        0   100.00   aandeeleninindustrieeleondernemingen
+       4        4     0.00   aandeeleninindustrieeleondernemingen
        1        0   100.00   ab1.1
        1        0   100.00   ab15.10.1968stücknotizfürdm50
        1        0   100.00   abschlagdm100,875
@@ -288,7 +288,7 @@ Non-stopwords
        1        0   100.00   akt.sindnicht
        1        0   100.00   akt.zu
        1        0   100.00   akt.zudm50
-       2        0   100.00   akt.zujedm100
+       2        1    50.00   akt.zujedm100
        2        0   100.00   akt.zujedm1000
        1        0   100.00   akt.zujedm50
        1        0   100.00   akt.zujehfl20
@@ -299,7 +299,7 @@ Non-stopwords
        1        0   100.00   alge
        1        0   100.00   allegroßenholländischenbanken
        1        0   100.00   alsträgerderbeteiligungen
-       1        0   100.00   am31.12.1971betrugdieanzahlderak
+       1        1     0.00   am31.12.1971betrugdieanzahlderak
        4        0   100.00   amsterdam
        1        0   100.00   amsterdamunddenhaag
        3        0   100.00   amtl
@@ -326,7 +326,7 @@ Non-stopwords
        1        0   100.00   ausdenkonsolidiertengewinn
        2        0   100.00   ausgegeben
        1        0   100.00   ausgegebeneskapital:hfl2681870440
-       1        0   100.00   ausgegebeneskapital:hfl907625000
+       1        1     0.00   ausgegebeneskapital:hfl907625000
        1        0   100.00   ausgesellschafts
        2        0   100.00   ausgesellschaftsmittelnauf
        1        0   100.00   ausland
@@ -436,7 +436,7 @@ Non-stopwords
        1        0   100.00   derlandenbzw.ingroßbritannien.sie
        1        0   100.00   derlandeneinerdividendensteuer
        2        0   100.00   dernichter
-       1        0   100.00   derstandardoilnjanzweiterstelleun
+       1        1     0.00   derstandardoilnjanzweiterstelleun
        1        0   100.00   dertheshellpetroleumcompanylimi
        1        0   100.00   derunilevern.v
        1        0   100.00   desgebietesundimwestsektorberlins
@@ -480,10 +480,10 @@ Non-stopwords
        1        0   100.00   dr.g.a.wagner
        1        0   100.00   dr.h.j.witteveen
        1        0   100.00   dr.j.g.collingwood
-       1        0   100.00   dr.j.h.vanroijen
+       1        1     0.00   dr.j.h.vanroijen
        1        0   100.00   dr.j.m.goudswaard
        1        0   100.00   dr.jur.hannsmartinschleyer
-       1        0   100.00   dr.jur.horstpavel
+       1        1     0.00   dr.jur.horstpavel
        1        0   100.00   dr.jur.joachimzahn
        1        0   100.00   dr.jur.rudolfmueller
        1        0   100.00   dr.m
@@ -526,7 +526,7 @@ Non-stopwords
        1        0   100.00   erzeugtwerdenpersonenkraftwagen
        1        0   100.00   ess
        2        0   100.00   esslingen
-       1        0   100.00   f.j.tempel
+       1        1     0.00   f.j.tempel
        1        0   100.00   fach202
        1        0   100.00   fahrge
        1        0   100.00   fahrzeugwerkeesslingengmbh
@@ -575,7 +575,7 @@ Non-stopwords
        3        0   100.00   gründung
        1        0   100.00   güntermaxpaefgen
        1        0   100.00   h.a.holmes
-       1        0   100.00   h.f.vondenhoven
+       1        1     0.00   h.f.vondenhoven
        1        0   100.00   h.s.a.hartog
        1        0   100.00   haar
        1        0   100.00   hafengmbh
@@ -585,7 +585,7 @@ Non-stopwords
        1        0   100.00   handelmitmi
        1        0   100.00   handelsbank
        1        0   100.00   handelsgesellschaftfürdaimler
-       1        0   100.00   handelsmaatschappijnoordan.v
+       1        1     0.00   handelsmaatschappijnoordan.v
        2        0   100.00   hannover
        1        0   100.00   hanomag
        1        0   100.00   hausruf
@@ -595,7 +595,7 @@ Non-stopwords
        1        0   100.00   heldring
        1        0   100.00   henmiteinernummer
        1        0   100.00   henschelfahrzeugwerkegmbh
-       1        0   100.00   herbertlucy
+       1        1     0.00   herbertlucy
        1        0   100.00   herstellungundauf
        1        0   100.00   hfl0,73sonderdividende
        1        0   100.00   hfl100
@@ -662,7 +662,7 @@ Non-stopwords
        2        0   100.00   jenom.hfl
        1        0   100.00   jenom.hfl20
        1        0   100.00   jonkheerdr.j.h.loudon
-       1        0   100.00   jürgenponto
+       1        1     0.00   jürgenponto
        3        0   100.00   k
        2        0   100.00   kapital
        1        0   100.00   kapital:a
@@ -687,14 +687,14 @@ Non-stopwords
        1        0   100.00   kapital:ptas972000000
        1        0   100.00   kapital:rand1500000
        1        0   100.00   kapital:rand256000
-       1        0   100.00   kapital:rls
+       1        1     0.00   kapital:rls
        2        0   100.00   kapital:rp
        1        0   100.00   kapital:rs194900000
        1        0   100.00   kapital:s
-       5        0   100.00   kapital:sfrs
+       5        5     0.00   kapital:sfrs
        1        0   100.00   kapital:tl26500000
        2        0   100.00   kapital:us
-       1        0   100.00   karlhauff
+       1        1     0.00   karlhauff
        1        0   100.00   kassel
        3        0   100.00   kenn
        1        0   100.00   kfm.arnoldwychodil
@@ -705,7 +705,7 @@ Non-stopwords
        1        0   100.00   konserven
        1        0   100.00   konzernwerdenfolgendepro
        1        0   100.00   krankenwagen
-       1        0   100.00   krawakraftwagengmbh
+       1        1     0.00   krawakraftwagengmbh
        1        0   100.00   kredietbank
        6        0   100.00   kumulativevorz
        1        1     0.00   kumulativevorz.akt
@@ -748,9 +748,9 @@ Non-stopwords
        7        0   100.00   mercedes
        1        0   100.00   mietanlagenindustrievertriebs
        1        0   100.00   mitteln
-       1        0   100.00   mm.pierson
+       1        1     0.00   mm.pierson
        1        1     0.00   mmlazardfréresetcie
-       1        0   100.00   mons
+       1        1     0.00   mons
        1        0   100.00   morganguarantytrustcompanyof
        1        0   100.00   moto
        2        0   100.00   motoren
@@ -763,7 +763,7 @@ Non-stopwords
        6        0   100.00   n.v
        1        0   100.00   n.v.koninklijkenederlandschepetroleummaatschappij
        2        0   100.00   nachdemdeutsch
-       1        0   100.00   nam
+       1        1     0.00   nam
        1        0   100.00   namens
        3        0   100.00   neckar
        1        0   100.00   neralienunderzeugnissen
@@ -788,14 +788,14 @@ Non-stopwords
        1        0   100.00   p.t.germanmotormanufacturing
        1        0   100.00   p.t.starmotorsindonesia
        1        0   100.00   papier
-       1        0   100.00   parfüm
+       1        1     0.00   parfüm
        6        0   100.00   paris
-       1        0   100.00   paulgerhold
+       1        1     0.00   paulgerhold
        1        0   100.00   paullichtenberg
        2        0   100.00   pelbesteuerungsabkommenwerdenan
        1        0   100.00   personalaufwand22431132410558
        1        0   100.00   perstückzuhfl20
-       1        0   100.00   pierson
+       1        1     0.00   pierson
        1        0   100.00   port
        1        0   100.00   post
        1        0   100.00   postfach162
@@ -862,7 +862,7 @@ Non-stopwords
        1        0   100.00   sichselbstabgeben
        1        0   100.00   sindel
        2        0   100.00   sindelfingen
-       1        0   100.00   sindelfingerwohnstättengmbh
+       1        1     0.00   sindelfingerwohnstättengmbh
        1        0   100.00   singapur
        1        0   100.00   sirketi
        1        0   100.00   sitz
@@ -872,7 +872,7 @@ Non-stopwords
        1        1     0.00   sociedadetécnicàdefundicaesgerais
        1        1     0.00   sociétébelgedebanque
        2        0   100.00   sofidels.a
-       1        0   100.00   sons
+       1        1     0.00   sons
        1        0   100.00   sonstigeauf
        1        0   100.00   sonstigenerzeugnissen
        2        0   100.00   sowieauf
@@ -902,14 +902,14 @@ Non-stopwords
        3        0   100.00   stückelung
        1        0   100.00   sungüberbesetzungdesaufsichtsrats
        1        0   100.00   suppen
-       1        0   100.00   supremestarengineeringptc.ltd
+       1        1     0.00   supremestarengineeringptc.ltd
        1        0   100.00   sämtl.antwerpen
        1        0   100.00   sämtl.berlin
        1        0   100.00   sämtl.brüssel
        1        0   100.00   sämtl.saar
        1        0   100.00   sämtl.stuttgart
        1        0   100.00   sämtl.wien
-       1        0   100.00   tataengineeringandlocomotiveco.ltd
+       1        1     0.00   tataengineeringandlocomotiveco.ltd
        1        0   100.00   tedbefindensichzu60
        1        0   100.00   telschlepper
        1        0   100.00   terdenerdölproduzenteninderwelt

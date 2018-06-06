@@ -9,9 +9,9 @@ Telex:8579871
 Vorstand:
 Dr.-Ing.AlbrechtSchumann,Frankfurt
 (M),Vors.;
-WilhelmHolly,Essen;
+WilhelmHoly,Essen;
 Dipl.-Ing.EnnoVocke,Essen;
-Dr.-Ing.GüntherHerion,Essen,stellv.;
+Dr.-Ing.GüntherHerdon,Essen,stellv.;
 Dr.-Ing.HeinrichNagel,Frankfurt(M),
 stellv.;
 Dr.jur.HaraldPeipers,Essen,stellv.
@@ -25,7 +25,7 @@ WolfgangKalinowski,Essen,stellv.
 Vors.;
 KurtBrunner,Frankfurt(M);
 Dr.HannsDeuss,Düsseldorf;
-Dr.AlfredEinnatz,Essen;
+Dr.AlfredEinsatz,Essen;
 AugustvonFinckjr.,München;
 Dr.FriedhelmGieske,Essen;
 ErwinHolthoff,Essen;
@@ -70,13 +70,13 @@ Kapital:DM20000.-(100%)
 IntermontInternationaleBau-undMontage-
 gesellschaftmbH,Essen
 Kapital:DM100000.-(50%)
-CatalogGesellschaftfürBausystemembH,
+JCatalogGesellschaftfürBausystemembH,
 Frankfurt(M)
 Kapital:DM20000.-(50%)
 HochtiefNassbaggergesellschaftmbH,
 Bremen
 Kapital:DM2000000.-(100%)
-"DEUMO2000"MontagebauGmbH&Co.
+"DEUMU2000"MontagebauGmbH&Co.
 KG,Bremen
 Kapital:DM314819.-(46,66%)
 ""'DEUMO2000''MontagebauGmbH,
@@ -106,7 +106,7 @@ Grundkapital:DM46500000.-
 1950Umstellung1:1aufDM7750000.-
 1961Bezugsrecht1:1zu150%auf
 DM15500000.-,rechn.WertDM290,87
-(31.7.),Div.Sch,.Nr.9
+(31.7.),Div.Sch.Nr.9
 1963Bezugsrecht2:1zu150%auf
 DM23250000.-,rechn.WertDM151,37,
 Div.Sch.Nr.13
@@ -122,7 +122,7 @@ DM46500000.-,rechn.WertDM94,67
 (14.8.),dividendenberechtigtab1.l.l.,
 Div.Sch.Nr.26
 Aktionäre:
-Rheinisch-WestfälischesElektrizitätswerk
+Rheinisch-WestfälischerElektrizitätswerk
 AG,Essen(mehrals25%);
 CommerzbankAG,Düsseldorf(mehrals
 25%);
@@ -135,7 +135,7 @@ burgundMünchen(amtl.)
 Wertpapier-Kenn-Nr.:607000
 Stückelung:
 25150Inh.-St.-Akt.zujeDM1000.-
-17500Inh.-St.-Akt.zujeDM100.-
+17500Inh.-St.-Akt.zugeDM100.-
 392000Inh.-St.-Akt.zujeDM50.-
 Aktienkurse(ultimoabgerundet):
 ab22.12.1969StücknotizfürDM50.-

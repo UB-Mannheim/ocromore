@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      232   Words
-       4   Misrecognized
-   98.28%  Accuracy
+      17   Misrecognized
+   92.67%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -15,14 +15,14 @@ Non-stopwords
        9        0   100.00        3
       23        1    95.65        4
       12        0   100.00        5
-       9        0   100.00        6
+       9        1    88.89        6
       13        0   100.00        7
        9        1    88.89        8
-      16        0   100.00        9
+      16        1    93.75        9
       12        0   100.00       10
-       8        0   100.00       11
+       8        1    87.50       11
        6        0   100.00       12
-       7        1    85.71       13
+       7        3    57.14       13
        7        0   100.00       14
        2        0   100.00       15
        3        0   100.00       16
@@ -31,43 +31,43 @@ Non-stopwords
        3        0   100.00       19
        7        0   100.00       20
        3        0   100.00       21
-       5        0   100.00       22
-      11        0   100.00       23
+       5        1    80.00       22
+      11        1    90.91       23
        1        0   100.00       24
        2        0   100.00       25
        2        0   100.00       27
        1        0   100.00       28
        1        0   100.00       29
        2        0   100.00       30
-       2        0   100.00       31
-       2        0   100.00       32
-       5        0   100.00       33
+       2        1    50.00       31
+       2        2     0.00       32
+       5        1    80.00       33
        4        0   100.00       34
        2        0   100.00       35
-       6        0   100.00       36
+       6        1    83.33       36
        1        0   100.00       37
-       2        0   100.00       38
-     232        4    98.28    Total
+       2        1    50.00       38
+     232       17    92.67    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     190        3    98.42        1
+     190       16    91.58        1
        3        0   100.00        2
        3        0   100.00        3
        3        0   100.00        4
        3        0   100.00        5
-     202        3    98.51    Total
+     202       16    92.08    Total
 
 Phrases
    Count   Missed   %Right   Length
-     232        4    98.28        1
-     231        8    96.54        2
-     230       12    94.78        3
-     229       16    93.01        4
-     228       20    91.23        5
-     227       24    89.43        6
-     226       28    87.61        7
-     225       32    85.78        8
+     232       17    92.67        1
+     231       32    86.15        2
+     230       45    80.43        3
+     229       57    75.11        4
+     228       69    69.74        5
+     227       79    65.20        6
+     226       87    61.50        7
+     225       94    58.22        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -126,12 +126,12 @@ Non-stopwords
        1        0   100.00   7
        1        0   100.00   ab2.3.1953kursfürdm
        1        0   100.00   ab24gr
-       1        0   100.00   abjunistelltesichziemlichplötzlichein
+       1        1     0.00   abjunistelltesichziemlichplötzlichein
        1        0   100.00   abschreibungen642979
        1        0   100.00   akt
        1        1     0.00   akt.zujedm100
        1        0   100.00   akt.zujedm1000
-       1        0   100.00   akt.zujedm500
+       1        1     0.00   akt.zujedm500
        1        0   100.00   aktienkurse
        1        0   100.00   amtl
        1        0   100.00   anlagevermögen52484596
@@ -146,7 +146,7 @@ Non-stopwords
        1        0   100.00   ausweispfl.steuern1076957
        1        0   100.00   barmittel
        1        0   100.00   bestandes
-       1        0   100.00   betroffenwurden.dasergabnichtnur
+       1        1     0.00   betroffenwurden.dasergabnichtnur
        1        0   100.00   bezugsrechtabschlägeinsgesamt
        1        0   100.00   bislangzufriedenstellendentwickelt
        1        0   100.00   bonus
@@ -156,12 +156,12 @@ Non-stopwords
        1        0   100.00   börsennotiz:stuttgart
        1        0   100.00   cie.papierfabrikenaktiengesellschaft
        1        0   100.00   co
-       1        0   100.00   danken
+       1        1     0.00   danken
        1        0   100.00   darunter
        1        0   100.00   dasjahr1959warbisindenfrühsommer
        1        0   100.00   davona
        1        0   100.00   denhauptsortendergesellschaftauchein
-       1        0   100.00   diesichvombeginnedesbe
+       1        1     0.00   diesichvombeginnedesbe
        1        0   100.00   dipl
        5        0   100.00   div.sch.nr
        1        0   100.00   dividendenaufstammaktien
@@ -180,13 +180,13 @@ Non-stopwords
        1        0   100.00   europafestzustellenwar
        1        0   100.00   fernruf:sa
        1        0   100.00   fernschreiber
-       1        0   100.00   ferzeitenstiegenbisendedesjahres
+       1        1     0.00   ferzeitenstiegenbisendedesjahres
        1        0   100.00   frank
        1        0   100.00   fremdkapital26172326
        1        0   100.00   furt
        1        0   100.00   geschäftsjahr:kalenderjahr
        1        0   100.00   gesellschaftskasse
-       1        0   100.00   gewinnnachvortrag638762
+       1        1     0.00   gewinnnachvortrag638762
        1        0   100.00   gewisserimportdruckbemerkbar.etwa
        1        0   100.00   großaktionär
        1        0   100.00   grundkapital:dm3937500
@@ -215,15 +215,15 @@ Non-stopwords
        3        1    66.67   lt.h
        1        0   100.00   löhneu.gehälter20842344
        1        0   100.00   m
-       1        0   100.00   machtesichbei
-       1        0   100.00   marktsituationennichtaufeineinzelnes
+       1        1     0.00   machtesichbei
+       1        1     0.00   marktsituationennichtaufeineinzelnes
        1        0   100.00   mehrheit
        1        0   100.00   nahezualleerzeugnissedergesellschaft
        1        0   100.00   nennwert
        1        0   100.00   neustadta.d.wein
        4        0   100.00   nr
        1        0   100.00   ordnungsnr.d.aktien
-       1        0   100.00   ottokieffer
+       1        1     0.00   ottokieffer
        1        0   100.00   papierfabrikinlindenburgbei
        5        0   100.00   pfalz
        1        0   100.00   pier
@@ -242,14 +242,14 @@ Non-stopwords
        1        0   100.00   sprochenelabilitätdesmarktes
        4        0   100.00   st
        1        0   100.00   stellv.vors
-       1        0   100.00   stetigan.wenntrotzdemauchimersten
+       1        1     0.00   stetigan.wenntrotzdemauchimersten
        1        0   100.00   stimmrechtd.aktieni.d.h
        1        0   100.00   straßeundstuttgart
        1        0   100.00   stuber
        2        0   100.00   stuttgart
        1        0   100.00   stückelung
        1        0   100.00   sämtlichestammaktiensindlieferbar
-       1        0   100.00   tenderproduktionhobsichkräftig
+       1        1     0.00   tenderproduktionhobsichkräftig
        1        0   100.00   tenrationalisierungs
        1        0   100.00   transparentepauspapiere
        1        0   100.00   tätigkeitsgebiet
@@ -257,7 +257,7 @@ Non-stopwords
        1        0   100.00   umlaufvermögen42204639
        1        0   100.00   umschwungein.derbedarfinallenspar
        1        0   100.00   umstellung1
-       1        0   100.00   undfarbig
+       1        1     0.00   undfarbig
        1        0   100.00   undverlust
        3        0   100.00   v
        3        0   100.00   v.v

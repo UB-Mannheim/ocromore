@@ -7,12 +7,12 @@ Fernschreiber:4/11765
 Vorstand:
 Dr.phil.h.c.HerbertQuandt,BadHom-
 burgv.d.H.,Vors.;
-Dr.jur.HorstPavel,BadHomburgv.d.H.,
+Dr.jur.HorstPanvel,BadHomburgv.d.H.,
 stellv.Vors.;
 Dipl.-Ing.FritzAlf,BadHomburgv.d.H.;
 WalterBuchholz,BadHomburgv.d.H.;
-AlfredHaymann,BadHomburgv.d.H.;
-Dr.rer.nat.GerhardLander,Falken-
+AlfredHeymann,BadHomburgv.d.H.;
+Dr.rer.nat.GerhardLeander,Falken-
 stein(Ts.)
 Aufsichtsrat:
 GerhardVieweg,BadHomburgv.d.H.,
@@ -23,7 +23,7 @@ Karl-HeinzQuandt,BergischGladbach;
 Dr.jur.KurtSchneider,Berlin;
 Arbeitnehmervertreter:
 AdolfBorsum,Hannover;
-WilhelmReinke,Dortmund-Brechten
+WilhelmReineke,Dortmund-Brechten
 Gründung:1887;AGseit1890
 Tätigkeitsgebiet:
 HerstellungundVertriebvonAkkumula-
@@ -55,7 +55,7 @@ Beteiligungen:
 DominitwerkeGmbH,Brilon(Westf.)
 Kapital:DM3000000.-(100%;Organ-
 vertrag)
-AfinaGummi-WerkeGmbH,Hannover-
+FinaGummi-WerkeGmbH,Hannover-
 Stöcken
 Kapital:DM20000.-(100%)
 Königswarter&EbellChemischeFabrik
@@ -76,7 +76,7 @@ trag)
 Girards-WerkzeugmaschinenGmbH,
 Hagen(Westf.)
 Kapital:DM20000.-(100%;Organvertrag)
-VARTA-WohnstättenGmbH,Frankfurt(M)
+VARTA-WohnstättenGmbH,Frankfurt/M)
 Kapital:DM50000.-(100%;Organvertrag)
 VARTAGmbH,Hagen(Westf.)
 Kapital:DM1000000.-(100%)
@@ -107,7 +107,7 @@ Kapital:DM20000.-(100%)
 GesellschaftfürelektrischeZugbeleuch-
 tungmbH,Berlin/Frankfurt(M)
 Kapital:DM350000.-(50%)
-HansStillGmbH,Hamburg-Billstedt
+HansStilleGmbH,Hamburg-Billstedt
 Kapital:DM15000000.-(40%)
 HausderHannoverschenIndustrieGmbH,
 Hannover
@@ -118,7 +118,7 @@ Kapital:DM64400000.-(DM100000.-)
 VARTABatterie-AG,Burgdorf
 Kapital:sfr100000.-(100%)
 InternacionaldeAcumuladoresS.A.
-(Internasa),VillafrancadeOria(Spanien)
+(Internasa),VillafrancadeTria(Spanien)
 Kapital:Ptas14000000.-(87,5%)
 BaroclemSA,CourbevoiebeiParis
 Kapital:FF6000000.-(10%)

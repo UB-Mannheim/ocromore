@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      532   Words
-      11   Misrecognized
-   97.93%  Accuracy
+      31   Misrecognized
+   94.17%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -15,62 +15,62 @@ Non-stopwords
       28        0   100.00        1
       21        0   100.00        2
       14        0   100.00        3
-      31        0   100.00        4
+      31        1    96.77        4
       24        0   100.00        5
-      32        1    96.88        6
-      29        0   100.00        7
-      34        1    97.06        8
+      32        2    93.75        6
+      29        2    93.10        7
+      34        2    94.12        8
       21        1    95.24        9
       22        1    95.45       10
       24        1    95.83       11
-      21        0   100.00       12
+      21        3    85.71       12
       10        0   100.00       13
       19        1    94.74       14
       23        0   100.00       15
        7        0   100.00       16
-      11        0   100.00       17
+      11        1    90.91       17
       15        0   100.00       18
       14        1    92.86       19
-      10        0   100.00       20
+      10        2    80.00       20
       12        1    91.67       21
        5        0   100.00       22
       10        0   100.00       23
-      16        1    93.75       24
-       7        0   100.00       25
+      16        2    87.50       24
+       7        3    57.14       25
        7        0   100.00       26
        5        0   100.00       27
        5        0   100.00       28
        4        0   100.00       29
-      10        0   100.00       30
+      10        2    80.00       30
        6        0   100.00       31
        6        2    66.67       32
-       8        0   100.00       33
-       4        0   100.00       34
-       9        0   100.00       35
+       8        1    87.50       33
+       4        1    75.00       34
+       9        1    88.89       35
        5        0   100.00       36
        1        0   100.00       38
-     530       11    97.92    Total
+     530       31    94.15    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     405        8    98.02        1
-      34        0   100.00        2
+     405       27    93.33        1
+      34        1    97.06        2
       10        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        1        0   100.00        9
-     454        8    98.24    Total
+     454       28    93.83    Total
 
 Phrases
    Count   Missed   %Right   Length
-     532       11    97.93        1
-     531       22    95.86        2
-     530       31    94.15        3
-     529       40    92.44        4
-     528       48    90.91        5
-     527       56    89.37        6
-     526       64    87.83        7
-     525       72    86.29        8
+     532       31    94.17        1
+     531       62    88.32        2
+     530       89    83.21        3
+     529      112    78.83        4
+     528      131    75.19        5
+     527      147    72.11        6
+     526      163    69.01        7
+     525      179    65.90        8
 
 Stopwords
    Count   Missed   %Right   
@@ -131,7 +131,7 @@ Non-stopwords
        1        0   100.00   49
        1        0   100.00   4und5mit
        1        0   100.00   5
-       1        0   100.00   53öfen
+       1        1     0.00   53öfen
        1        0   100.00   5875
        3        0   100.00   6
        1        0   100.00   620200
@@ -182,7 +182,7 @@ Non-stopwords
        1        0   100.00   berenberg
        1        0   100.00   berg
        1        0   100.00   bergarbeiterwohnungsgesellschaftmbh
-       4        1    75.00   berlin
+       4        0   100.00   berlin
        1        0   100.00   berlinercommerzbankag
        1        0   100.00   berlinerdiscontobankag
        2        0   100.00   berlinerhandels
@@ -226,9 +226,9 @@ Non-stopwords
        1        0   100.00   derenkapitalvondm2,04
        1        0   100.00   derenkuxenkapital
        1        0   100.00   derenstammkapitalvondm4mio
-       1        0   100.00   derhohenbehördedermontan
-       1        0   100.00   derihag
-       1        0   100.00   derihagundzu11,76
+       1        1     0.00   derhohenbehördedermontan
+       1        1     0.00   derihag
+       1        1     0.00   derihagundzu11,76
        1        0   100.00   derilsederhütteundderagfür
        1        0   100.00   derpeine
        1        0   100.00   derverbindungderwerksanlagenunter
@@ -245,7 +245,7 @@ Non-stopwords
        2        0   100.00   diegesellschaft
        1        0   100.00   diehermannrüterohg
        1        0   100.00   diehubertjosefheineeisenhandels
-       1        0   100.00   dieihageinenkommanditanteilinhöhe
+       1        1     0.00   dieihageinenkommanditanteilinhöhe
        1        0   100.00   dieilsederbank
        1        0   100.00   diemiteinemgrund
        1        0   100.00   dienorddeutscheschrauben
@@ -263,7 +263,7 @@ Non-stopwords
        1        0   100.00   dm423000
        1        0   100.00   dortmund
        1        0   100.00   dr.h.c.erichlotz
-       1        0   100.00   dr.hansfiehn
+       1        1     0.00   dr.hansfiehn
        1        0   100.00   dr.karlröhrs
        1        0   100.00   dr.kurtblanke
        1        0   100.00   dr.kurtrasch
@@ -274,7 +274,7 @@ Non-stopwords
        1        0   100.00   eineeigenegicht
        1        0   100.00   eisenbahnen.siedieneninersterlinie
        1        0   100.00   emissionsbetrag
-       1        0   100.00   emissionsbetrag:sfrs
+       1        1     0.00   emissionsbetrag:sfrs
        1        0   100.00   ernstböhme
        1        0   100.00   erzagglomerieranlage
        1        0   100.00   erzbergwerke
@@ -303,7 +303,7 @@ Non-stopwords
        1        0   100.00   gesellschaftskasse
        1        0   100.00   geviertfeldermit5350000qm.dane
        2        0   100.00   gewerkschaftkonrad
-       1        0   100.00   gewinnnachvortrag73429475
+       1        1     0.00   gewinnnachvortrag73429475
        1        0   100.00   gitter
        2        1    50.00   glückauf
        2        0   100.00   gossler
@@ -313,7 +313,7 @@ Non-stopwords
        2        0   100.00   großhandelmiteisen
        1        0   100.00   grundkapital:dm112320000
        1        0   100.00   gründung
-       1        0   100.00   guterabsatzallerimbereichderilseder
+       1        1     0.00   guterabsatzallerimbereichderilseder
        1        0   100.00   halbzeug
        1        0   100.00   ham
        2        0   100.00   hamburg
@@ -326,7 +326,7 @@ Non-stopwords
        1        1     0.00   hedwigshüttekohlen
        1        0   100.00   heinrichfreiherrvonberenberg
        1        0   100.00   helmuthheintzmann
-       1        0   100.00   herabgesetzt
+       1        1     0.00   herabgesetzt
        1        0   100.00   hermannbeermann
        3        0   100.00   herne
        2        0   100.00   hochofenwerk
@@ -348,15 +348,15 @@ Non-stopwords
        1        0   100.00   in1000dm
        2        0   100.00   industrie
        1        0   100.00   ineigenererzwä
-       1        0   100.00   inhändenderihagundzu7,05
+       1        1     0.00   inhändenderihagundzu7,05
        1        0   100.00   inhändenderilsederhüttebefindet
-       1        0   100.00   inhöhevondm1,8miodieihageinen
+       1        1     0.00   inhöhevondm1,8miodieihageinen
        1        0   100.00   ist
        1        0   100.00   isteinereineobergesellschaft
        1        0   100.00   istmitderherstellungvonlagermetall
        1        1     0.00   jahresertrag771226342
        1        0   100.00   je50
-       1        0   100.00   jedembezugfremdenerzes.dieroherze
+       1        1     0.00   jedembezugfremdenerzes.dieroherze
        1        0   100.00   jenom.dm100
        1        0   100.00   johannsmentek
        1        0   100.00   juliusfromme
@@ -364,7 +364,7 @@ Non-stopwords
        1        0   100.00   kapazität
        1        0   100.00   kapitalvondm10224000
        1        0   100.00   kapitalvondm2,88mio
-       1        0   100.00   karlschirner
+       1        1     0.00   karlschirner
        1        0   100.00   kg
        1        0   100.00   klöckner
        1        0   100.00   kohle
@@ -376,7 +376,7 @@ Non-stopwords
        1        0   100.00   lengedeundimsalzgitterschenhöhenzug
        1        0   100.00   lichenbetriebsführungzueineranlage
        1        0   100.00   lt.h
-       1        0   100.00   löhneundgehälter568620
+       1        1     0.00   löhneundgehälter568620
        1        0   100.00   machendashochofenwerkunabhängigvon
        3        0   100.00   main
        1        0   100.00   mainbankag
@@ -401,7 +401,7 @@ Non-stopwords
        2        0   100.00   norddeutschebankag
        1        0   100.00   norddeutschekreditbankag
        2        0   100.00   nr
-       1        0   100.00   nunmehrfolgendesbild
+       1        1     0.00   nunmehrfolgendesbild
        1        0   100.00   oberbaumaterial
        1        0   100.00   okt
        1        0   100.00   ordnungsnr.d.aktien
@@ -425,7 +425,7 @@ Non-stopwords
        1        0   100.00   rohstahl
        1        0   100.00   ruhrbankag
        1        0   100.00   salz
-       2        0   100.00   sandow
+       2        2     0.00   sandow
        1        1     0.00   schachtanlagen:notthornundröcke
        1        0   100.00   schaftumfaßtschrauben
        1        0   100.00   schalungsträger
@@ -475,14 +475,14 @@ Non-stopwords
        1        0   100.00   umlaufvermögen65602939
        1        1     0.00   umstellunglt.h
        2        0   100.00   und
-       1        0   100.00   undanderesbaugerätsowiekräne
+       1        1     0.00   undanderesbaugerätsowiekräne
        1        0   100.00   undbetriebsbeschrei
        1        0   100.00   undcredit
        1        0   100.00   undderpeine
        1        0   100.00   undderüberschussankoke
        2        1    50.00   unddisconto
        1        0   100.00   undgewinn
-       1        0   100.00   undgleit
+       1        1     0.00   undgleit
        1        0   100.00   undhamburg
        2        0   100.00   undhandels
        1        0   100.00   undhüttenbetriebe
@@ -508,7 +508,7 @@ Non-stopwords
        1        0   100.00   v.v
        1        0   100.00   v.vom8.7.1955erhöhungum
        1        0   100.00   vereinigteindustrie
-       1        0   100.00   verh
+       1        1     0.00   verh
        1        0   100.00   verlustübernahmverträge
        1        0   100.00   victor
        1        0   100.00   vonderenkapital
