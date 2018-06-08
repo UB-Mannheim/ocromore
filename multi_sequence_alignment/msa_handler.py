@@ -891,6 +891,8 @@ class MsaHandler(object):
         m3 = get_max_wordlen(line_3)
         max_range_word = int(max(m1, m2, m3)+1)  # add a one because it starts with zero
         try:
+            seg_counter = []
+            text_seg = None
             for current_word_index in range(0, max_range_word):
                 word1 = get_word_from_line(line_1, current_word_index)
                 word2 = get_word_from_line(line_2, current_word_index)
@@ -921,6 +923,8 @@ class MsaHandler(object):
                 update_word(line_2, current_word_index, words_aligned[1])
                 update_word(line_3, current_word_index, words_aligned[2])
 
+                seg_counter.extend([current_word_index]*(len(words_aligned[0])))
+                if current_word_index < max_range_word-1:seg_counter.append(-1)
 
             if use_charconfs:
                 if use_searchspaces is False:
@@ -937,14 +941,26 @@ class MsaHandler(object):
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
+                if len(best) == len(seg_counter):
+                    #seg_counter = np.array(seg_counter)
+                    wc_pos = [number for number, symbol in enumerate(best) if symbol == "¦"]
+                    for pos in reversed(wc_pos): del seg_counter[pos]
+                    #seg_counter = [number for number in seg_counter if number != -1]
+
+                    if len(best_stripped_non_multi_whitespace) == len(seg_counter):
+                        text_seg = {}
+                        ws_pos = np.where(np.array(seg_counter) == -1)
+                        ws_pos = np.ndarray.tolist(ws_pos[0])
+                        ws_pos.append(len(seg_counter))
+                        last_pos = 0
+                        for ws in ws_pos:
+                            text_seg[float(seg_counter[ws-1])]=best_stripped_non_multi_whitespace[last_pos:ws]
+                            last_pos = ws+1
                 if "DM 10" in best_stripped:
                     print("beep")
 
+            return best_stripped_non_multi_whitespace, text_seg
 
-
-
-
-            return best_stripped_non_multi_whitespace
         except Exception as ex:
             tr = inspect.trace()
             self.cpr.printex("msa_handler.py exception", ex)
