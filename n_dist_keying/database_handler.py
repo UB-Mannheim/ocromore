@@ -3,15 +3,17 @@ from n_dist_keying.ocr_comparison import OCRcomparison
 from n_dist_keying.ocr_set import OCRset
 from multi_sequence_alignment.msa_handler import MsaHandler
 
+# todo multiple classes with the name 'DatabaseHandler' in project
 class DatabaseHandler():
 
-    def __init__(self, dataframe_wrapper, number_of_inputs, predictor):
+    def __init__(self, dataframe_wrapper, number_of_inputs, predictor, vocab_checker):
 
         print("Init database handler")
         self._dataframe_wrapper = dataframe_wrapper
         self._number_of_inputs = number_of_inputs
         self.msa_handler = MsaHandler()
         self.msa_handler.add_predictor(predictor)
+        self.msa_handler.add_vocabulary_checker(vocab_checker)
 
     def get_some_empty_object(self):
 

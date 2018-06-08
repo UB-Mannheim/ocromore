@@ -46,9 +46,15 @@ class MsaHandler(object):
             self.predictor = predictor
             self.ocr_voter.add_predictor(self.predictor)
 
+        self.vocab_checker = None
+
     def add_predictor(self,predictor):
         self.predictor = predictor
         self.ocr_voter.add_predictor(self.predictor)
+
+    def add_vocabulary_checker(self, vocab_checker):
+        self.vocab_checker = vocab_checker
+        self.ocr_voter.add_vocab_checker(vocab_checker)
 
     def compare(self, item_one, item_two, wildcard_character='¦'):
         sequences1 = [item_one]
@@ -988,9 +994,9 @@ class MsaHandler(object):
             best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
 
         if PRINT_RESULTS:
-            self.cpr.print("A:",res_final_1)
-            self.cpr.print("B:",res_final_2)
-            self.cpr.print("C:",res_final_3)
+            self.cpr.print("A:", res_final_1)
+            self.cpr.print("B:", res_final_2)
+            self.cpr.print("C:", res_final_3)
             self.cpr.print("D:", best)
             self.cpr.print("E:", best_stripped)
             self.cpr.print("F:", best_stripped_non_multi_whitespace)

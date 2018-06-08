@@ -41,9 +41,13 @@ class OCRVoter(object):
         self.filo_last_chars = Filo(250)
         self.predictor = None
         self.use_aufsichtsrat_prediction = False
+        self.vocab_checker = None
 
     def add_predictor(self, predictor):
         self.predictor = predictor
+
+    def add_vocab_checker(self, vocab_checker):
+        self.vocab_checker = vocab_checker
 
     def get_same_count(self, c1, c2, c3):
         same_ctr = 0
@@ -114,6 +118,7 @@ class OCRVoter(object):
         list_line_3 = list(text_3)
 
         accumulated_chars = ""
+        accumulated_confs = Filo
         for character_index, character_1 in enumerate(list_line_1):
             character_2 = list_line_2[character_index]
             character_3 = list_line_3[character_index]
@@ -163,6 +168,7 @@ class OCRVoter(object):
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
             accumulated_chars = ""
+
             for character_index in range(0, maximum_char_number): # check: is list 1 always best reference?
 
                 character_1 = line_1.value(key_char, character_index)
@@ -273,6 +279,7 @@ class OCRVoter(object):
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
 
             accumulated_chars = ""
+            accumulated_confs = Filo(300)
 
 
             SEARCH_SPACE_Y_SIZE = 3
@@ -412,8 +419,10 @@ class OCRVoter(object):
                                     #print("swap")
                                     voted_char = predicted_char
 
-
+                accumulated_confs.push(voted_acc_conf)
                 accumulated_chars += voted_char
+
+
                 if self.config.PREDICTOR_AUFSICHTSRAT_ENABLED:
                     # create pre semi-tokenized input strings in the filos from the voted characters for prediction
                     if voted_char == ' ':
@@ -428,6 +437,9 @@ class OCRVoter(object):
 
                     else:
                         self.filo_last_chars.push(voted_char, filterchar='¦')
+                if self.config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
+                    print("ssss")
+
 
             accumulated_chars_stripped = accumulated_chars.replace(wildcard_character, '')
 

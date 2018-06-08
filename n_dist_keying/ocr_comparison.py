@@ -324,17 +324,16 @@ class OCRcomparison:
 
 
     def do_vocabulary_correction(self):
-        print("asd")
         store_last_entry = None
         for current_set in self.ocr_sets:
             msa_best_text = current_set.get_msa_best_text()
             msa_best_text_corrected = ""
             msa_best_ttokenized = msa_best_text.split()
-            # todo test and also filter 23a and mostly number or spchar stufs from checks
+
             len_tokens = len(msa_best_ttokenized)
             for word_index, word in enumerate(msa_best_ttokenized):
-                if "Tee" in word:
-                    print("asd")
+                #if "Tee" in word:
+                #    print("asd")
 
                 if self.config.KEYING_RESULT_VC_IGNORE_SEPERATE_WRITING_CORRECTION:
                     if store_last_entry !=None:
@@ -372,7 +371,7 @@ class OCRcomparison:
 
             msa_best_text_corrected = msa_best_text_corrected.lstrip(" ")
 
-            if msa_best_text_corrected != msa_best_text:
+            if self.config.KEYING_RESULT_VC_PRINTDIFF and msa_best_text_corrected != msa_best_text:
                 print("vocab in :", msa_best_text)
                 print("vocab out:", msa_best_text_corrected)
 

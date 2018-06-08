@@ -21,7 +21,9 @@ class TableParser(object):
         else:
             dbpath = config.DB_DIR_READER
 
-        if config.KEYING_RESULT_VOCABULARY_CORRECTION:
+        self.vocab_checker = None
+        if config.KEYING_RESULT_VOCABULARY_CORRECTION_POST or config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
+            # initialize spellchecker, if one of the vote modes is active
             self.vocab_checker = VocabularyChecker()
             self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH,
                                                 config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
@@ -105,10 +107,12 @@ class TableParser(object):
             predictor.load_prediction_model()
 
         dataframe_wrapper = DFObjectifier(dbdir_abs, table)
-        database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS, predictor)
+        database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS, predictor, self.vocab_checker)
+
+
         ocr_comparison = database_handler.create_ocr_comparison(predictor=predictor)
 
-        if self._config.KEYING_RESULT_VOCABULARY_CORRECTION:
+        if self._config.KEYING_RESULT_VOCABULARY_CORRECTION_POST or self._config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
             # hand over vocabulary checker if spellchecking is enabled
             ocr_comparison.set_vocabulary_checker(self.vocab_checker)
 
@@ -162,7 +166,7 @@ class TableParser(object):
 
 
 
-            if self._config.KEYING_RESULT_VOCABULARY_CORRECTION:
+            if self._config.KEYING_RESULT_VOCABULARY_CORRECTION_POST:
                 ocr_comparison.do_vocabulary_correction()
 
 
