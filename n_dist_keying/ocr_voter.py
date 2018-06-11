@@ -42,6 +42,7 @@ class OCRVoter(object):
         self.predictor = None
         self.use_aufsichtsrat_prediction = False
         self.vocab_checker = None
+        self.previous_word_with_seperator = False
 
     def add_predictor(self, predictor):
         self.predictor = predictor
@@ -437,8 +438,51 @@ class OCRVoter(object):
 
                     else:
                         self.filo_last_chars.push(voted_char, filterchar='¦')
-                if self.config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
-                    print("ssss")
+
+
+
+            if self.config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
+                accumulated_chars_final = ""
+                acc_split = accumulated_chars.split()
+                len_split = len(acc_split)
+
+
+                for word_index, word in enumerate(acc_split):
+
+                    if self.config.KEYING_RESULT_VC_IGNORE_SEPERATE_WRITING_CORRECTION:
+                        if word_index == len_split-1 and word.replace(wildcard_character,"").endswith('-'):
+                            self.previous_word_with_seperator = True
+                            accumulated_chars_final += word+" "
+                            continue
+                        if word_index == 0:
+                            if self.previous_word_with_seperator is True:
+                                self.previous_word_with_seperator = False
+                                accumulated_chars_final += word + " "
+                                continue
+
+                    acc_confs_word = accumulated_confs.pop_multi(len(word))
+                    acc_conf, rate, change, word_starting_borders, word_trailing_borders, word_reduced = \
+                            self.vocab_checker.get_accumulated_confidence_rate(word,acc_confs_word,wildcard_character)
+                    print("w:", word, "wr:", word_reduced, "accr:", acc_conf, "rate", rate)
+
+                    if rate < self.config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE_TRESH \
+                            and len(word_reduced)>2:
+                        # if the rate drops below tresh, try to fetch vocab entry
+                        word_reduced_correct, suggestions = self.vocab_checker.correct_text(word_reduced)
+                        if word_reduced_correct != None and word_reduced_correct != word_reduced:
+
+
+                            word_correct_withtrails = word_starting_borders + word_reduced_correct + word_trailing_borders
+
+                            print("w:", word, "wc:", word_correct_withtrails, "accr:", acc_conf, "rate", rate)
+                            accumulated_chars_final += word_correct_withtrails+" "
+                        else:
+                            accumulated_chars_final += word+" "
+                    else:
+                        accumulated_chars_final += word+" "
+
+
+                accumulated_chars = accumulated_chars_final
 
 
             accumulated_chars_stripped = accumulated_chars.replace(wildcard_character, '')

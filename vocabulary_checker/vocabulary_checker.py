@@ -16,7 +16,7 @@ class VocabularyChecker():
         self.max_edist = None
         self.suggenstion_verbosity = None
         self.spellchecker = None
-        self.special_chars_borders = "!1234567890,)(;.:\"-"
+        self.special_chars_borders = "!¦1234567890,)(;.:\"-"
 
         self.pattern_start = re.compile(r"^["+self.special_chars_borders+"]+")
         self.pattern_trail = re.compile(r"["+self.special_chars_borders+"]+$")
@@ -43,6 +43,30 @@ class VocabularyChecker():
         else:
             # there are only special characters
             return  input_text, 0
+
+    def get_accumulated_confidence_rate(self, word, word_acc_confs, wildcard_char):
+
+        word_reduced, word_starting_borders, word_trailing_borders, change = self.remove_and_give_borders(word)
+        wsplit = list(word)
+
+        if change == False:
+            acc_conf = 0
+            for i in range(0, len(wsplit)):
+                acc_conf += word_acc_confs[i]
+
+            return acc_conf, acc_conf/len(wsplit), False, word_starting_borders, word_trailing_borders, word
+        else:
+            acc_conf = 0
+
+            len_start = len(word_starting_borders)
+            len_trail = len(word_trailing_borders)
+            for i in range(len_start,len(wsplit)-len_trail):
+                acc_conf += word_acc_confs[i]
+
+            return acc_conf, acc_conf / (len(wsplit)-len_start-len_trail), True, word_starting_borders, word_trailing_borders, word_reduced
+
+
+
 
     def remove_and_give_borders(self, input_text):
 
