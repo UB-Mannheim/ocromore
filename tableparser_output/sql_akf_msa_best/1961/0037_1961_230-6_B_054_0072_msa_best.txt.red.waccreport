@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      773   Words
-      25   Misrecognized
-   96.77%  Accuracy
+      27   Misrecognized
+   96.51%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,14 +21,14 @@ Non-stopwords
       30        2    93.33        8
       33        1    96.97        9
       39        3    92.31       10
-      36        1    97.22       11
+      36        0   100.00       11
       24        0   100.00       12
-      27        1    96.30       13
+      27        0   100.00       13
       48        0   100.00       14
       13        2    84.62       15
       19        0   100.00       16
-      26        0   100.00       17
-      17        1    94.12       18
+      26        1    96.15       17
+      17        2    88.24       18
       18        0   100.00       19
       12        0   100.00       20
        7        0   100.00       21
@@ -42,19 +42,19 @@ Non-stopwords
        6        0   100.00       29
       13        1    92.31       30
        8        1    87.50       31
-      10        0   100.00       32
+      10        1    90.00       32
       11        2    81.82       33
       15        1    93.33       34
-       9        1    88.89       35
+       9        2    77.78       35
        6        0   100.00       36
        2        0   100.00       37
        2        0   100.00       38
        2        0   100.00       39
-     771       25    96.76    Total
+     771       27    96.50    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     526       21    96.01        1
+     526       22    95.82        1
       35        0   100.00        2
       15        0   100.00        3
        5        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        1        0   100.00      >10
-     594       21    96.46    Total
+     594       22    96.30    Total
 
 Phrases
    Count   Missed   %Right   Length
-     773       25    96.77        1
-     772       45    94.17        2
-     771       63    91.83        3
-     770       80    89.61        4
-     769       96    87.52        5
-     768      112    85.42        6
-     767      128    83.31        7
-     766      144    81.20        8
+     773       27    96.51        1
+     772       49    93.65        2
+     771       69    91.05        3
+     770       88    88.57        4
+     769      106    86.22        5
+     768      124    83.85        6
+     767      140    81.75        7
+     766      156    79.63        8
 
 Stopwords
    Count   Missed   %Right   
@@ -205,7 +205,7 @@ Non-stopwords
        1        0   100.00   alsauchimauslandsgeschäftet
        1        0   100.00   alsergebnisderauftragseingangs
        1        0   100.00   anderenkapitaldieaegmit
-       1        0   100.00   andererseitsweiteran.indererwartung
+       1        1     0.00   andererseitsweiteran.indererwartung
        1        0   100.00   angemessenesergebnis
        1        0   100.00   anlagen
        1        0   100.00   anlagevermögen477595517166
@@ -270,7 +270,7 @@ Non-stopwords
        1        0   100.00   dasfabrikationsprogrammder
        1        0   100.00   davona
        1        0   100.00   daßesgelingt
-       2        0   100.00   delbrückschickler
+       2        1    50.00   delbrückschickler
        1        0   100.00   demwertzuwachs.derüberwiegendeteil
        1        0   100.00   den
        1        0   100.00   der
@@ -375,7 +375,7 @@ Non-stopwords
        1        0   100.00   gesellschaftag
        1        0   100.00   gesellschaften
        1        0   100.00   gewerblicherausnutzungderelektrizität
-       1        0   100.00   gewinnohnevortrag
+       1        1     0.00   gewinnohnevortrag
        1        0   100.00   girozen
        1        0   100.00   girozentrale
        1        0   100.00   gischelandesbank
@@ -431,7 +431,7 @@ Non-stopwords
        1        0   100.00   ing.e.h.heinzthörner
        1        0   100.00   ing.friedrichhämmerling
        1        0   100.00   ing.hermannwinkhaus
-       1        1     0.00   ing.paulharke
+       1        0   100.00   ing.paulharke
        1        0   100.00   inhamburg
        1        0   100.00   inhannover
        1        0   100.00   inköln
@@ -613,10 +613,10 @@ Non-stopwords
        1        1     0.00   ultimo194810,25
        1        0   100.00   umlaufvermögen771151726913
        1        0   100.00   umsatzderaeg
-       1        0   100.00   umsatzentwicklunghieltsichderauf
+       1        1     0.00   umsatzentwicklunghieltsichderauf
        1        0   100.00   umtauschrechtjeweilszum15
        3        0   100.00   und
-       1        1     0.00   undauslande
+       1        0   100.00   undauslande
        1        0   100.00   undauslandezuerrichten
        1        0   100.00   undfernruf
        1        0   100.00   undgröße

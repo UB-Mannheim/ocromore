@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     8573   Words
-     308   Misrecognized
-   96.41%  Accuracy
+     316   Misrecognized
+   96.31%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,75 +13,75 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-     358        9    97.49        1
+     358        5    98.60        1
      551       18    96.73        2
      445       11    97.53        3
-     690       25    96.38        4
-     468       13    97.22        5
-     522       14    97.32        6
+     690       23    96.67        4
+     468       14    97.01        5
+     522       13    97.51        6
      528       17    96.78        7
-     462       15    96.75        8
-     433       17    96.07        9
-     460       14    96.96       10
+     462       17    96.32        8
+     433       14    96.77        9
+     460       17    96.30       10
      391        7    98.21       11
-     349       16    95.42       12
-     272       13    95.22       13
-     280        6    97.86       14
-     232        9    96.12       15
-     225        4    98.22       16
-     219        5    97.72       17
-     209       11    94.74       18
-     128        7    94.53       19
-     119        4    96.64       20
+     349       15    95.70       12
+     272       12    95.59       13
+     280        8    97.14       14
+     232       10    95.69       15
+     225        5    97.78       16
+     219        7    96.80       17
+     209       12    94.26       18
+     128        6    95.31       19
+     119        3    97.48       20
      106        4    96.23       21
       90        7    92.22       22
-     100        5    95.00       23
+     100        6    94.00       23
       98        7    92.86       24
-      80       10    87.50       25
+      80       12    85.00       25
       82        5    93.90       26
       97        0   100.00       27
-      62        3    95.16       28
+      62        4    93.55       28
       45        3    93.33       29
-      61        3    95.08       30
-      45        2    95.56       31
-      63        5    92.06       32
-      60        4    93.33       33
-      65        2    96.92       34
-      56        2    96.43       35
-      52        6    88.46       36
+      61        5    91.80       30
+      45        1    97.78       31
+      63        7    88.89       32
+      60        5    91.67       33
+      65        3    95.38       34
+      56        3    94.64       35
+      52        5    90.38       36
       17        0   100.00       37
       19        3    84.21       38
        6        0   100.00       39
        7        0   100.00       40
        1        0   100.00       49
        1        0   100.00       50
-    8554      306    96.42    Total
+    8554      314    96.33    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    5819      256    95.60        1
+    5819      274    95.29        1
      462        3    99.35        2
      154        0   100.00        3
       58        0   100.00        4
-      39        1    97.44        5
+      39        0   100.00        5
       18        0   100.00        6
       21        0   100.00        7
        9        0   100.00        8
       11        0   100.00        9
        4        0   100.00       10
       30        0   100.00      >10
-    6625      260    96.08    Total
+    6625      277    95.82    Total
 
 Phrases
    Count   Missed   %Right   Length
-    8573      308    96.41        1
-    8555      560    93.45        2
-    8537      780    90.86        3
-    8519      981    88.48        4
-    8501     1173    86.20        5
-    8483     1353    84.05        6
-    8465     1523    82.01        7
-    8447     1685    80.05        8
+    8573      316    96.31        1
+    8555      578    93.24        2
+    8537      811    90.50        3
+    8519     1024    87.98        4
+    8501     1226    85.58        5
+    8483     1417    83.30        6
+    8465     1594    81.17        7
+    8447     1763    79.13        8
 
 Stopwords
    Count   Missed   %Right   
@@ -824,7 +824,7 @@ Non-stopwords
        1        0   100.00   53165
        1        0   100.00   53314041
        1        0   100.00   53751
-       1        1     0.00   53öfen
+       1        0   100.00   53öfen
        4        0   100.00   54
        1        0   100.00   54142
        1        0   100.00   54185
@@ -1104,7 +1104,7 @@ Non-stopwords
        1        0   100.00   a965000
        8        0   100.00   aachen
        1        0   100.00   aachenerundmünchenerversicherung
-       4        3    25.00   aandeeleninindustrieeleondernemingen
+       4        2    50.00   aandeeleninindustrieeleondernemingen
        9        0   100.00   ab
        3        0   100.00   ab1.1
        1        0   100.00   ab1.1.1972
@@ -1204,7 +1204,7 @@ Non-stopwords
        3        0   100.00   akt.zudm1000
        1        0   100.00   akt.zudm166400
        1        0   100.00   akt.zudm50
-      19        2    89.47   akt.zujedm100
+      19        1    94.74   akt.zujedm100
       16        0   100.00   akt.zujedm1000
        2        0   100.00   akt.zujedm20
        3        1    66.67   akt.zujedm400
@@ -1227,7 +1227,7 @@ Non-stopwords
        1        0   100.00   aktiva
        1        0   100.00   aktiva19731974
        1        0   100.00   albertschwidden
-       1        0   100.00   albertvahle
+       1        1     0.00   albertvahle
        1        0   100.00   alfredfreiherrvonoppenheim
        1        0   100.00   alfredhaymann
        1        0   100.00   alfredhenze
@@ -1261,7 +1261,7 @@ Non-stopwords
        1        0   100.00   anderenkapitaldieaegmit
        1        0   100.00   anderenstammkapital
        1        0   100.00   anderenversicherungsunternehmungenzu
-       1        0   100.00   andererseitsweiteran.indererwartung
+       1        1     0.00   andererseitsweiteran.indererwartung
        1        0   100.00   anderevermö
        1        0   100.00   andernach
        1        0   100.00   andtradingcompanyltd.sindaktienge
@@ -1299,7 +1299,7 @@ Non-stopwords
        1        0   100.00   antriebeundsteuerungensowiegeräte
        2        0   100.00   antwerpen
        3        0   100.00   anzahlungen
-       1        0   100.00   anónimaindustrialycomercial
+       1        1     0.00   anónimaindustrialycomercial
        1        0   100.00   april1934führtdiegesellschaftdiesen
        1        0   100.00   arbeiten
        1        0   100.00   arbeitetwerdenkonnte
@@ -1370,7 +1370,7 @@ Non-stopwords
        1        0   100.00   austro
        1        0   100.00   ausweispfl.steuern1076957
        1        0   100.00   ausweispfl.steuern2950130500
-       1        1     0.00   automaten
+       1        0   100.00   automaten
        1        0   100.00   automotive
        1        0   100.00   autorisierteskapital:hfl1352400000
        1        0   100.00   autorisierteskapital:hfl4000000000
@@ -1741,7 +1741,7 @@ Non-stopwords
        2        0   100.00   dbfinanz
        1        0   100.00   debitoren28713852777953
        1        0   100.00   delbrück
-       2        0   100.00   delbrückschickler
+       2        1    50.00   delbrückschickler
        3        0   100.00   delundindustrieag
        1        0   100.00   dembereichdervereinigtenstahlwerke
        1        0   100.00   demgesellschaftsfahrten
@@ -1847,7 +1847,7 @@ Non-stopwords
        1        0   100.00   diehiermitzusammenhängendenund
        1        0   100.00   diehoch
        1        0   100.00   diehubertjosefheineeisenhandels
-       1        0   100.00   dieihageinenkommanditanteilinhöhe
+       1        1     0.00   dieihageinenkommanditanteilinhöhe
        1        0   100.00   dieilsederbank
        1        0   100.00   dielangenhornerbahn
        1        0   100.00   diemengenmäßigeumsatzsteigerungüber
@@ -1880,7 +1880,7 @@ Non-stopwords
        1        0   100.00   direktebeteiligungen
        1        0   100.00   disconto
        1        0   100.00   ditbankag
-     142        7    95.07   div.sch.nr
+     142        6    95.77   div.sch.nr
        1        1     0.00   div.sch.nr.l
        4        0   100.00   dividenden
        1        0   100.00   dividenden:organvertragmitdenaktio
@@ -1905,7 +1905,7 @@ Non-stopwords
        1        0   100.00   dividendenaufa
        1        0   100.00   dividendenaufstammakiten
       11        0   100.00   dividendenaufstammaktien
-       1        1     0.00   dividendenautstammaktien
+       1        0   100.00   dividendenautstammaktien
        4        0   100.00   dividendenberechtigt
        1        1     0.00   dividendenberechtigtab1.1
        1        0   100.00   dividendenberechtigtab1.4
@@ -2039,14 +2039,14 @@ Non-stopwords
        1        0   100.00   dr.hansfiehn
        1        0   100.00   dr.heinrichlohmar
        1        0   100.00   dr.j.g.collingwood
-       1        0   100.00   dr.j.h.vanroijen
+       1        1     0.00   dr.j.h.vanroijen
        1        0   100.00   dr.j.m.goudswaard
        1        0   100.00   dr.joachimriehle
        1        0   100.00   dr.jur.berndtlandmesser
        1        0   100.00   dr.jur.eduardvonschwartzkoppen
        1        0   100.00   dr.jur.friedrichwilhelmkärcher
        1        0   100.00   dr.jur.hannsmartinschleyer
-       1        0   100.00   dr.jur.hansgroebe.gehrden
+       1        1     0.00   dr.jur.hansgroebe.gehrden
        1        0   100.00   dr.jur.haraldpeipers
        1        1     0.00   dr.jur.herbertvonmalaisé
        2        0   100.00   dr.jur.horstpavel
@@ -2059,7 +2059,7 @@ Non-stopwords
        1        0   100.00   dr.kurtblanke
        1        0   100.00   dr.kurtglässing
        1        0   100.00   dr.kurtrasch
-       1        1     0.00   dr.m
+       1        0   100.00   dr.m
        1        0   100.00   dr.m.e
        1        0   100.00   dr.matthiasschmitt
        1        0   100.00   dr.maxtheodorreichmann
@@ -2069,7 +2069,7 @@ Non-stopwords
        1        0   100.00   dr.phil.erhardlöwe
        2        0   100.00   dr.phil.h.c.herbertquandt
        1        0   100.00   dr.phil.hermannreusch
-       1        0   100.00   dr.rer.nat.gerhardlander
+       1        1     0.00   dr.rer.nat.gerhardlander
        1        0   100.00   dr.rer.pol.friedrichkarlflick
        1        0   100.00   dr.rer.pol.h.c.hansklemm
        1        0   100.00   dr.rer.pol.h.c.hermannj.abs
@@ -2194,8 +2194,8 @@ Non-stopwords
        1        0   100.00   emissionsbetrag:hfl300000000
        1        0   100.00   emissionsbetrag:hfl50778000
        1        0   100.00   emissionsbetrag:rm112000000
-       1        1     0.00   emissionsbetrag:sfrs
-       1        0   100.00   ende1963guteauftragsbeständevor
+       1        0   100.00   emissionsbetrag:sfrs
+       1        1     0.00   ende1963guteauftragsbeständevor
        1        0   100.00   energie
        1        0   100.00   energieerzeugung
        1        0   100.00   energietechnik
@@ -2267,14 +2267,14 @@ Non-stopwords
        1        0   100.00   europafestzustellenwar
        1        0   100.00   exbaab7.12
        1        0   100.00   eßlingen
-       1        0   100.00   f.j.tempel
+       1        1     0.00   f.j.tempel
        1        0   100.00   f.küppersbusch
        1        0   100.00   fabeggmbh
        9        0   100.00   fabrik
        1        0   100.00   fabrikackerstraße
        1        0   100.00   fabrikag
        1        0   100.00   fabrikbacknang
-       1        0   100.00   fabrikbelecke
+       1        1     0.00   fabrikbelecke
        1        0   100.00   fabrikcurtgorschalki
        1        0   100.00   fabrikeiweiler
        2        0   100.00   fabrikenhameln
@@ -2312,10 +2312,10 @@ Non-stopwords
        1        0   100.00   falkenstein
        1        0   100.00   fallkosten
        1        0   100.00   faser
-       1        0   100.00   faserredon
+       1        1     0.00   faserredon
        2        0   100.00   fast100
        1        0   100.00   faßtmitrd
-       1        0   100.00   feinklinkerriemchenmitglatterund
+       1        1     0.00   feinklinkerriemchenmitglatterund
        2        0   100.00   fer
        1        0   100.00   ferdinandwolinsky
        2        0   100.00   ferner
@@ -2333,7 +2333,7 @@ Non-stopwords
        1        0   100.00   fertighausbau
        1        0   100.00   fertigteilbau
        2        0   100.00   fertigteilbauregensburggmbh
-       1        1     0.00   ferzeitenstiegenbisendedesjahres
+       1        0   100.00   ferzeitenstiegenbisendedesjahres
        1        0   100.00   feuerbach
        1        0   100.00   feuerungsbau
        1        0   100.00   feuerwehr
@@ -2370,7 +2370,7 @@ Non-stopwords
        3        0   100.00   frankreich
        1        0   100.00   franzfock
        2        0   100.00   franzheinrichulrich
-       1        0   100.00   franzklemmer
+       1        1     0.00   franzklemmer
        1        0   100.00   franzlechner
        3        0   100.00   freiburg
        1        0   100.00   freiburgi.br
@@ -2404,7 +2404,7 @@ Non-stopwords
        1        0   100.00   friedrichschön
        2        0   100.00   friedrichshafen
        1        1     0.00   fristigerabmachungenlaufendelektrische
-       1        1     0.00   fritzandré
+       1        0   100.00   fritzandré
        1        0   100.00   frontenacfloor
        1        0   100.00   frostsichere
        1        0   100.00   frühermanturbogmbh
@@ -2463,7 +2463,7 @@ Non-stopwords
        1        0   100.00   gerechnetwerden
        1        0   100.00   gerechtsameinherne
        1        0   100.00   gerechtsameinminden
-       1        0   100.00   gerhardkuhle
+       1        1     0.00   gerhardkuhle
        1        0   100.00   gerhardstr
        1        0   100.00   gerhardvieweg
        1        0   100.00   gerritdehaas
@@ -2499,14 +2499,14 @@ Non-stopwords
        1        0   100.00   gewerkschaftdessteinkohlenbergwerks
        2        0   100.00   gewerkschaftkonrad
        1        0   100.00   gewinnnachvortrag132489136845
-       1        1     0.00   gewinnnachvortrag20552062
-       1        0   100.00   gewinnnachvortrag24003200
-       1        0   100.00   gewinnnachvortrag3053
+       1        0   100.00   gewinnnachvortrag20552062
+       1        1     0.00   gewinnnachvortrag24003200
+       1        1     0.00   gewinnnachvortrag3053
        1        0   100.00   gewinnnachvortrag438528
        1        0   100.00   gewinnnachvortrag46335500
-       1        0   100.00   gewinnnachvortrag638762
-       1        0   100.00   gewinnnachvortrag73429475
-       1        0   100.00   gewinnohnevortrag
+       1        1     0.00   gewinnnachvortrag638762
+       1        1     0.00   gewinnnachvortrag73429475
+       1        1     0.00   gewinnohnevortrag
        2        0   100.00   gewinnung
        1        0   100.00   gewinnvortrag182567159957
        1        0   100.00   gewisserimportdruckbemerkbar.etwa
@@ -2522,7 +2522,7 @@ Non-stopwords
        1        0   100.00   glasiertetrennwandsteine
        1        0   100.00   glasierteundunglasier
        1        0   100.00   gleichedividendewiestamm
-       2        1    50.00   glückauf
+       2        0   100.00   glückauf
       15        0   100.00   gmbh
        1        0   100.00   gnvgesellschaftfürnukleareverfahrens
        1        0   100.00   goss
@@ -2585,7 +2585,7 @@ Non-stopwords
        1        0   100.00   günthersohl
        6        0   100.00   h
        1        0   100.00   h.a.holmes
-       1        0   100.00   h.f.vondenhoven
+       1        1     0.00   h.f.vondenhoven
        1        0   100.00   h.s.a.hartog
        1        0   100.00   haar
        1        0   100.00   hafenbauten
@@ -2632,7 +2632,7 @@ Non-stopwords
        1        0   100.00   hanshülsmann
        1        0   100.00   hanskröner
        1        0   100.00   hansmoll
-       1        0   100.00   hansrinn
+       1        1     0.00   hansrinn
        1        0   100.00   hansrubke
        1        0   100.00   hansruckdäschel
        1        0   100.00   hansrückdäschel
@@ -2665,12 +2665,12 @@ Non-stopwords
        1        0   100.00   heinrichfreiherrvonberenberg
        1        0   100.00   heinrichkirchholtes
        1        0   100.00   heinrichkost
-       1        0   100.00   heinrichmahler
+       1        1     0.00   heinrichmahler
        1        0   100.00   heinrichmandel
        1        1     0.00   heinrichpaus
        1        0   100.00   heinrichschöller
        1        0   100.00   heinrichwulff
-       1        0   100.00   heinzbette
+       1        1     0.00   heinzbette
        1        0   100.00   heinzc.hoppe
        2        0   100.00   heinzdürrbeck
        1        0   100.00   heinzheiderhoff
@@ -2679,7 +2679,7 @@ Non-stopwords
        1        0   100.00   heinzquandt
        1        0   100.00   heinzschmidt
        1        0   100.00   heinzsolbach
-       1        0   100.00   heinzzickler
+       1        1     0.00   heinzzickler
        1        0   100.00   heits
        1        0   100.00   heizkraftwerkstuttgartgmbh
        1        0   100.00   heiß
@@ -2691,11 +2691,11 @@ Non-stopwords
        1        0   100.00   henschelfahrzeugwerkegmbh
        1        0   100.00   herabgesetzt
        1        0   100.00   herbertlucy
-       1        1     0.00   herbertpavel
-       1        0   100.00   herbertredlich
+       1        0   100.00   herbertpavel
+       1        1     0.00   herbertredlich
        1        0   100.00   herbertspiesen
        1        0   100.00   hermannbeermann
-       1        0   100.00   hermannheusch
+       1        1     0.00   hermannheusch
        3        0   100.00   herne
        2        0   100.00   herstellung
        1        0   100.00   herstellungundauf
@@ -2857,7 +2857,7 @@ Non-stopwords
        1        0   100.00   ing.l.schepers
        1        0   100.00   ing.ottovossen
        1        0   100.00   ing.p.m
-       2        2     0.00   ing.paulharke
+       2        0   100.00   ing.paulharke
        1        0   100.00   ing.rudolfschäfer
        1        0   100.00   ing.ulrichpetersen
        1        0   100.00   ing.w.f.g.l.starrenburg
@@ -2952,7 +2952,7 @@ Non-stopwords
        1        0   100.00   je8
        1        0   100.00   jedeaktienom.dm500
        1        0   100.00   jedeausderwandlunghervorgehendeak
-       1        0   100.00   jedembezugfremdenerzes.dieroherze
+       1        1     0.00   jedembezugfremdenerzes.dieroherze
        1        0   100.00   jeder
        1        0   100.00   jedera
        1        0   100.00   jedm100
@@ -2972,7 +2972,7 @@ Non-stopwords
        1        0   100.00   joh.berenberg
        1        0   100.00   johannesburg
        1        0   100.00   johannsmentek
-       1        1     0.00   jonkheerdr.j.h.loudon
+       1        0   100.00   jonkheerdr.j.h.loudon
        1        0   100.00   joseffuchs
        1        0   100.00   josefharnisch
        1        0   100.00   josefmichaely
@@ -2985,8 +2985,8 @@ Non-stopwords
        1        0   100.00   jungeaktien
        2        0   100.00   juni
        1        0   100.00   junider
-       1        0   100.00   jürgenponto
-      17        4    76.47   k
+       1        1     0.00   jürgenponto
+      17        0   100.00   k
        1        0   100.00   kabel
        1        0   100.00   kabelwerk
        1        0   100.00   kaiserslautern
@@ -3101,8 +3101,8 @@ Non-stopwords
        1        0   100.00   kapital:s
        1        0   100.00   kapital:sfr
        1        0   100.00   kapital:sfr100000
-       5        5     0.00   kapital:sfrs
-       1        1     0.00   kapital:sfrs4500000
+       5        0   100.00   kapital:sfrs
+       1        0   100.00   kapital:sfrs4500000
        1        1     0.00   kapital:tl
        1        0   100.00   kapital:tl26500000
        2        0   100.00   kapital:us
@@ -3278,7 +3278,7 @@ Non-stopwords
       21        0   100.00   london
        1        1     0.00   lt
        4        1    75.00   lt.ao.h
-      12        4    66.67   lt.h
+      12        3    75.00   lt.h
        2        0   100.00   lt.o.h
        6        0   100.00   ltd
        1        0   100.00   ludw.loewe
@@ -3318,7 +3318,7 @@ Non-stopwords
        4        0   100.00   maatschappijtotbeheervan
        1        0   100.00   maatschappijvoorinternationale
        1        0   100.00   machendashochofenwerkunabhängigvon
-       1        1     0.00   machtesichbei
+       1        0   100.00   machtesichbei
        1        0   100.00   madrid
        1        0   100.00   maffei
        1        0   100.00   magnesiaag
@@ -3395,7 +3395,7 @@ Non-stopwords
        1        0   100.00   mischeundandereindustrien
        1        0   100.00   mit
        1        0   100.00   mit50
-       1        0   100.00   mit9562mstreichenderlängeund4
+       1        1     0.00   mit9562mstreichenderlängeund4
        1        0   100.00   mitbeidentochtergesellschaften
        1        0   100.00   mitdm340
        1        0   100.00   miteinemgrund
@@ -3519,7 +3519,7 @@ Non-stopwords
        1        0   100.00   nungsinstitutkassel
        1        0   100.00   nunmehrfolgendesbild
        1        0   100.00   nurfürdividenden
-       1        1     0.00   nutzbarestromabgabeeinehöhevon
+       1        0   100.00   nutzbarestromabgabeeinehöhevon
        1        0   100.00   nutzungsolcheranlagen
        1        0   100.00   nären
        1        1     0.00   néralaalsaciennedebanque
@@ -3573,7 +3573,7 @@ Non-stopwords
        1        0   100.00   ottojacob
        1        0   100.00   ottokieffer
        1        0   100.00   ottomöhle
-       1        0   100.00   ottomössner
+       1        1     0.00   ottomössner
        1        0   100.00   ottovoisard
        1        0   100.00   p.t.germanmotormanufacturing
        1        0   100.00   p.t.starmotorsindonesia
@@ -3722,7 +3722,7 @@ Non-stopwords
        1        0   100.00   resnachgezahlt
        4        0   100.00   reststreubesitz
        1        0   100.00   restüber
-       1        0   100.00   reyon
+       1        1     0.00   reyon
       10        0   100.00   rhein
        3        0   100.00   rheinisch
        1        0   100.00   rheinischebraunkohlenwerkeag
@@ -3796,7 +3796,7 @@ Non-stopwords
        6        0   100.00   sal.oppenheimjr
        1        0   100.00   salz
        1        0   100.00   sammenmitcoloniakölnischeversiche
-       2        1    50.00   sandow
+       2        0   100.00   sandow
        1        0   100.00   santiago
        1        0   100.00   sao
        1        0   100.00   saopaulo
@@ -4140,7 +4140,7 @@ Non-stopwords
        1        0   100.00   thechasemanhattanbank
        1        0   100.00   theodorberger
        1        0   100.00   thomas
-       1        0   100.00   thomasentz
+       1        1     0.00   thomasentz
        1        0   100.00   thomasschlackenmühle
        1        1     0.00   thomée
        1        0   100.00   tief
@@ -4240,7 +4240,7 @@ Non-stopwords
        1        0   100.00   umlaufvermögen84804338959333
        1        0   100.00   umrechnungskurs
        1        0   100.00   umsatzderaeg
-       1        0   100.00   umsatzentwicklunghieltsichderauf
+       1        1     0.00   umsatzentwicklunghieltsichderauf
        1        0   100.00   umsatzerlöse12398101290327
        1        0   100.00   umsatzerlöse21502582423689
        1        0   100.00   umsatzerlöse235732258352
@@ -4268,12 +4268,12 @@ Non-stopwords
        1        0   100.00   und1972herabsetzungauf
        1        0   100.00   und25
        1        0   100.00   undam
-       1        0   100.00   undanderesbaugerätsowiekräne
+       1        1     0.00   undanderesbaugerätsowiekräne
        1        0   100.00   undanlagenbauderghh
        1        0   100.00   undappa
        2        0   100.00   undaus
        2        0   100.00   undausland
-       1        1     0.00   undauslande
+       1        0   100.00   undauslande
        1        0   100.00   undauslandezuerrichten
        1        0   100.00   undauslandmitausnahme
        1        0   100.00   undauslandsowiezumab
@@ -4287,7 +4287,7 @@ Non-stopwords
        5        1    80.00   unddisconto
        1        0   100.00   unddüsseldorf
        1        0   100.00   undelektro
-       1        1     0.00   undfarbig
+       1        0   100.00   undfarbig
        1        0   100.00   undfaßleckage
        1        0   100.00   undfeinkeramik
        1        0   100.00   undfeinkeramikgmbh
@@ -4296,7 +4296,7 @@ Non-stopwords
        1        0   100.00   undförderan
        1        0   100.00   undgewinn
        1        0   100.00   undgewinnabführungsvertrag
-       1        0   100.00   undgleit
+       1        1     0.00   undgleit
        1        0   100.00   undgroßhandlungshaus
        1        0   100.00   undgröße
        1        0   100.00   undhagel
@@ -4462,7 +4462,7 @@ Non-stopwords
        1        0   100.00   vg
        1        0   100.00   victor
        1        0   100.00   victoriamathias
-       1        0   100.00   villafrancadeoria
+       1        1     0.00   villafrancadeoria
        1        0   100.00   vinzialbank
        1        0   100.00   viscounttrenchard
        1        0   100.00   viskoseschwämmenundsprit
@@ -4604,7 +4604,7 @@ Non-stopwords
        1        0   100.00   werkunterföhringbeimünchen:klinker
        1        0   100.00   werkzeugmaschinengmbh
        1        1     0.00   werneraretz
-       1        0   100.00   wernerdiehn
+       1        1     0.00   wernerdiehn
        1        0   100.00   wernerhoffmann
        1        0   100.00   wernerleibfried
        1        0   100.00   wertberichtigungen12632099
@@ -4638,7 +4638,7 @@ Non-stopwords
        1        0   100.00   wilhelmgutmann
        1        0   100.00   wilhelmholly
        1        0   100.00   wilhelmjoost
-       1        0   100.00   wilhelmreinke
+       1        1     0.00   wilhelmreinke
        1        1     0.00   wilhelmschröder
        2        0   100.00   wilhelmshaven
        1        0   100.00   wilhelmvonthelemann
@@ -4716,7 +4716,7 @@ Non-stopwords
        1        0   100.00   zweigwerk
        1        0   100.00   zweigwerkspringe
        1        0   100.00   zweigwurdenachfertigstellungder
-      12        0   100.00   zürich
+      12        1    91.67   zürich
        1        1     0.00   ßungs
        1        0   100.00   ähnlichelagevielmehrzumindestinganz
        1        0   100.00   öle

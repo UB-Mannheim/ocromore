@@ -20,7 +20,7 @@ Dr. -Ing., Dr. -Ing. E. h. Hans Scherenberg,
 Stuttgart;
 Dr.jur. Hanns Martin Schleyer, Stuttgart;
 Heinz Schmidt, Stuttgart;
-Dr.oec. h.c.Rolf E.G. Staelin, Stuttgart;
+Dr.oec. h.c.Rolf PMG. Staelin, Stuttgart;
 Dipl.-Kfm. Arnold Wychodil, Stuttgart;
 Friedrich Binder, Stuttgart, stellv.
 Aufsichtsrat:
@@ -38,10 +38,10 @@ Konrad Kaletsch, Düsseldorf;
 Paul Lichtenberg, Frankfurt (M);
 Günter Max Paefgen, Düsseldorf;
 Dr.jur. Horst Pavel, Bad Homburg v.d.H.;
-Jürgen Ponto, Frankfurt (M);
+Jürgen Conto, Frankfurt (M);
 Arbeitnehmervertreter:
 Paul Gerhold, Kassel;
-Karl Hauffe, Stuttgart;
+Karl Lauff, Stuttgart;
 Herbert Lucy, Mannheim;
 Nikolaus Prediger, Gaggenau;
 Ernst Schäfer, Sindelfingen
@@ -136,22 +136,22 @@ Bernardo do Campo
 Kapital: Cr$ 305 300 000. - (100 %, davon
 ein Teil über Brasfinanz AG und über
 Daimler-Benz Holding A.G.)
-Sociedade Té&cnicä de Fundicaes Gerais
+Sociedade Té&cnicä de Fundicaes Geris
 S.A., Sao Paulo (Brasilien)
 Kapital: Cr$ 28 000 000. - (100 %; über
 Mercedes-Benz do Brasil S.A.)
 Brasfinanz AG, Zürich (Schweiz)
-Kapital: bfrs. 4 000 000. - (100 %; über
+Kapital: sfrs. 4 000 000. - (100 %; über
 DB Finanz-Holding S. A.)
 Daimler-Benz Holding AG, Zürich
 (Schweiz)
-Kapital: bfrs. 85 000 000. -(100 %)
+Kapital: sfrs. 85 000 000. -(100 %)
 Daimler-Benz Finanz AG, Zürich (Schweiz)
-Kapital: bfrs. 30 000 000. - (100 % über
+Kapital: sfrs. 30 000 000. - (100 % über
 Daimler-Benz Holding AG)
 DB Finanz-Holding S. A., Luxemburg
 (Luxemburg)
-Kapital: bfrs. 25 000 000. - (100 % über
+Kapital: sfrs. 25 000 000. - (100 % über
 Daimler-Benz Holding AG)
 Tata Engineering and Locomotive Co. Ltd.,
 Bombay (Indien)
@@ -175,7 +175,7 @@ Fort Lee N.J. (USA)
 Kapital: US-$ 6 000 000. - (100 %)
 Handelsgesellschaft für Daimler-Benz
 Erzeugnisse AG, Zürich (Schweiz)
-Kapital: bfrs. 3 000 000. - (100 %; über
+Kapital: sfrs. 3 000 000. - (100 %; über
 Daimler-Benz Holding AG)
 Mercedes-Benz (Australia) Pty.Ltd.,
 Melbourne (Australien)
@@ -201,7 +201,7 @@ P.T.Star Motors Indonesia, Djakarta
 Kapital: Rp. 189 000 000. - (51,0 %)
 Supreme Star Engineering Pte.Ltd.,
 Singapur
-Kapital: S-$ 2 000 000. - (26 %)
+Kapital: S$ 2 000 000. - (26 %)
 Außerdem besitzt die Gesellschaft noch
 verschiedene kleinere Beteiligungen
 Geschäftsjahr: Kalenderjahr
@@ -253,7 +253,7 @@ Stückelung:
 898 000 Inh. -St. -Akt. zu je DM 1 000. -
 397 854 Inh. -St.-Akt. zuje DM 100.-
 238 927 Inh. -St.-Akt. zu je DM 50. -
-1535 Noam. -Vorz.-Akt.zu jeDM1 000. -
+1535 Fam. -Vorz.-Akt.zu jeDM1 000. -
 22 Nam.-Vorz.-Akt.zujeDM 100.-
 1 Nam.-Vorz.-Akt.zu DM 50. -
 (Urkunden über die Vorz. -Akt. sind nicht

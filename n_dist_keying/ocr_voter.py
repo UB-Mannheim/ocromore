@@ -460,21 +460,51 @@ class OCRVoter(object):
                                 accumulated_chars_final += word + " "
                                 continue
 
+
+
                     acc_confs_word = accumulated_confs.pop_multi(len(word))
                     acc_conf, rate, change, word_starting_borders, word_trailing_borders, word_reduced = \
                             self.vocab_checker.get_accumulated_confidence_rate(word,acc_confs_word,wildcard_character)
                     print("w:", word, "wr:", word_reduced, "accr:", acc_conf, "rate", rate)
 
+                    if self.config.KEYING_RESULT_VC_CORRECT_ONLY_ERRONOUS_CHARS:
+                        swappable_char_indices=[]
+                        acc_confs_reduce = acc_confs_word[len(word_starting_borders):(
+                                len(acc_confs_word) - len(word_trailing_borders))]
+
+                        for conf_index, conf in enumerate(acc_confs_reduce):
+                            if conf <= 215:
+                                swappable_char_indices.append(conf_index)
+
+                        if len(swappable_char_indices) >= 1:
+                            word_reduced_correct = self.vocab_checker.correct_text_at_certain_indices_only(word_reduced, swappable_char_indices)
+                            if word_reduced_correct != None:
+                                print("won")
+                                word_correct_withtrails = word_starting_borders + word_reduced_correct + word_trailing_borders
+                                # only print the changed results
+                                if word != word_correct_withtrails:
+                                    print("w:", word, "wc:", word_correct_withtrails, "accr:", acc_conf, "rate", rate)
+                                accumulated_chars_final += word_correct_withtrails + " "
+                            else:
+                                accumulated_chars_final += word + " "
+                        else:
+                            accumulated_chars_final += word+" "
+
+                        continue
+
+
+
                     if rate < self.config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE_TRESH \
                             and len(word_reduced)>2:
                         # if the rate drops below tresh, try to fetch vocab entry
-                        word_reduced_correct, suggestions = self.vocab_checker.correct_text(word_reduced)
+                        word_reduced_correct, suggestions, flh = self.vocab_checker.correct_text(word_reduced)
                         if word_reduced_correct != None and word_reduced_correct != word_reduced:
 
 
                             word_correct_withtrails = word_starting_borders + word_reduced_correct + word_trailing_borders
 
                             print("w:", word, "wc:", word_correct_withtrails, "accr:", acc_conf, "rate", rate)
+
                             accumulated_chars_final += word_correct_withtrails+" "
                         else:
                             accumulated_chars_final += word+" "

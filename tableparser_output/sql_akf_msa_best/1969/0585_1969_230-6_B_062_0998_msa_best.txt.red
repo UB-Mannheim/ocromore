@@ -12,7 +12,7 @@ stellv.Vors.;
 Dipl.-Ing.FritzAlf,BadHomburgv.d.H.;
 WalterBuchholz,BadHomburgv.d.H.;
 AlfredHaymann,BadHomburgv.d.H.;
-Dr.rer.nat.GerhardLander,Falken-
+Dr.rer.nat.GerhardSander,Falken-
 stein(Ts.)
 Aufsichtsrat:
 GerhardVieweg,BadHomburgv.d.H.,
@@ -23,7 +23,7 @@ Karl-HeinzQuandt,BergischGladbach;
 Dr.jur.KurtSchneider,Berlin;
 Arbeitnehmervertreter:
 AdolfBorsum,Hannover;
-WilhelmReinke,Dortmund-Brechten
+WilhelmMeinke,Dortmund-Brechten
 Gründung:1887;AGseit1890
 Tätigkeitsgebiet:
 HerstellungundVertriebvonAkkumula-
@@ -118,7 +118,7 @@ Kapital:DM64400000.-(DM100000.-)
 VARTABatterie-AG,Burgdorf
 Kapital:sfr100000.-(100%)
 InternacionaldeAcumuladoresS.A.
-(Internasa),VillafrancadeOria(Spanien)
+(Internasa),VillafrancadeOrga(Spanien)
 Kapital:Ptas14000000.-(87,5%)
 BaroclemSA,CourbevoiebeiParis
 Kapital:FF6000000.-(10%)
@@ -207,7 +207,7 @@ Lieferforderungen4287869805
 Barmitteleinschl.
 Wertpapiere8044499346
 Eigenkapital164464164241
-(davonA.-R.)8800088000
+(davonA.-K.)8800088000
 Wertberichtigungen12632099
 Fremdkapital256600269485
 (darunter

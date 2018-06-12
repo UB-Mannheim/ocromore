@@ -27,7 +27,7 @@ Wolfram Thiele, Oberhausen;
 Otto Voisard, München;
 Friedrich Laußermair, München, stellv. ;
 Wolfgang Müller, München, stellv.;;
-Herbert Redlich, Gustavsburg, stellv.
+Herbert Edlich, Gustavsburg, stellv.
 Aufsichtsrat:
 Manfred Lennings, Kettwig, Vors.;
 Ulrich Neumann, Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ Dietrich Wilhelm von Menges, Essen-
 Bredeney;
 Siegfried Schiffbauer, Kiel;
 Arbeitnehmervertreter::
-Franz Klemmer, Augsburg;;
+Franz Lemmer, Augsburg;;
 Rudolf Rhein, Mainz-Kostheim;;
 Eduard Schleinkofer, München;
 Ferdinand Wolinsky, Oberhausen
@@ -57,7 +57,7 @@ Maschinen- und Stahlbau mit den Werken
 Nürnberg und Gustavsburg. Unternehmens-
 bereich Nutzfahrzeuge mit den Werken
 München, Watenstedt, Braunschweig und
-Lenzburg.
+Penzberg.
 Maschinen- und Anlagenbau der GHH
 STERKRADE AG mit den Werken Sterk-
 rade, Düsseldorf, Rheinwerft Walsum
@@ -76,7 +76,7 @@ Kapital: DM 2 000 000. - (49, 97 %)
 Dividenden ab 1969: 0,0,0,0,0,0%
 Jul. Wolff & Co. GmbH, Heilbronn
 Kapital: DM 3 000 000.- (93, 3 %)
-SWF Süddeutsche Minden- und Förderan-
+SWF Süddeutsche Wenden- und Förderan-
 lagenfabrik von Bechtolsheim & Stein KG,
 München
 Kapital: DM 2 972 500.- (94,62 %)
@@ -147,17 +147,17 @@ Austro-M.A.N. Fahrzeug-Vertrieb GmbH,
 Wien
 Kapital: öS 52 000 000. - (über 50 %)
 Industrias Argentinas M.A.N. Sociedad
-Anónima Industrial y Comercial, Buenos
+Anönima Industrial y Comercial, Buenos
 Aires
 Kapital: argent.$3 19 600 000. - (50 %)
-Mecänica Pesada S.A., São Paulo
+Mecänica Pesada S.A., Säo Paulo
 Kapital: Ar$ 61 500 000.- (25 %)
 M.A.N.-Automotive (Australia) Pty.Ltd.,
 Sydney
 Kapital: $A 965 000. - (91,7 %)
 M.A.N. Kamyon ve Otobüs Sanayi Anonim
 Sirketi, Istanbul
-Kapital: THE. 27 000 000.- (über 25 %)
+Kapital: TkE. 27 000 000.- (über 25 %)
 M.A.N. Truck and Bus S.A. (Pty) Ltd.,
 Johannesburg
 Kapital: R 300.000. - (100 %)
@@ -211,7 +211,7 @@ DM 102,54 und Vorz.-Akt. DM 87,15
 14 (Vorz.-Akt.)
 1969 Erhöhung auf DM 170 000 000. -
 1970 Bezugsrecht 10:1 zu 190 % auf
-DM 187 000 000.-, rechn. Wert St.-Akt.
+DM 187 000 000.-, rechn. Wert St.--Akt.
 und Vorz.-Akt. DM 5,09 (10.7.),
 Div.Sch.Nr. 23 (St.-Akt.) und 17 (Vorz.-
 Akt.) Erhöhung auf DM 197 505 000. -

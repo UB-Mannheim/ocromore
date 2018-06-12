@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      385   Words
-       9   Misrecognized
-   97.66%  Accuracy
+      11   Misrecognized
+   97.14%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -24,14 +24,14 @@ Non-stopwords
       16        0   100.00       11
       19        0   100.00       12
       13        0   100.00       13
-      13        0   100.00       14
+      13        1    92.31       14
        6        1    83.33       15
       10        1    90.00       16
        3        0   100.00       17
        8        0   100.00       18
        4        0   100.00       19
        3        0   100.00       20
-       5        0   100.00       21
+       5        1    80.00       21
        5        0   100.00       22
       10        0   100.00       23
        4        0   100.00       24
@@ -48,29 +48,29 @@ Non-stopwords
        5        0   100.00       35
        5        0   100.00       36
        2        0   100.00       37
-     383        9    97.65    Total
+     383       11    97.13    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     266        9    96.62        1
+     266       11    95.86        1
       18        0   100.00        2
        9        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        2        0   100.00        7
        1        0   100.00      >10
-     300        9    97.00    Total
+     300       11    96.33    Total
 
 Phrases
    Count   Missed   %Right   Length
-     385        9    97.66        1
-     384       13    96.61        2
-     383       16    95.82        3
-     382       19    95.03        4
-     381       22    94.23        5
-     380       25    93.42        6
-     379       28    92.61        7
-     378       31    91.80        8
+     385       11    97.14        1
+     384       17    95.57        2
+     383       22    94.26        3
+     382       27    92.93        4
+     381       32    91.60        5
+     380       37    90.26        6
+     379       42    88.92        7
+     378       47    87.57        8
 
 Stopwords
    Count   Missed   %Right   
@@ -248,7 +248,7 @@ Non-stopwords
        1        0   100.00   gesell
        2        0   100.00   gesellschaft
        1        0   100.00   gesellschaftskasse
-       1        0   100.00   gewinnnachvortrag3053
+       1        1     0.00   gewinnnachvortrag3053
        1        0   100.00   girozen
        2        0   100.00   gmbh
        1        0   100.00   goss
@@ -268,7 +268,7 @@ Non-stopwords
        2        0   100.00   hannover
        1        0   100.00   hans
        1        0   100.00   hanseatischesiedlungs
-       1        0   100.00   heinrichmahler
+       1        1     0.00   heinrichmahler
        1        0   100.00   heinrichwulff
        1        0   100.00   herbertspiesen
        1        0   100.00   hornerbahn

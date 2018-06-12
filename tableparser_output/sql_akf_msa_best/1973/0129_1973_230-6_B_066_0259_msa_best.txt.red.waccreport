@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      741   Words
-      32   Misrecognized
-   95.68%  Accuracy
+      28   Misrecognized
+   96.22%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,7 +21,7 @@ Non-stopwords
       50        2    96.00        9
       45        0   100.00       10
       39        1    97.44       11
-      27        6    77.78       12
+      27        2    92.59       12
       21        0   100.00       13
       16        0   100.00       14
       23        2    91.30       15
@@ -49,15 +49,15 @@ Non-stopwords
        2        0   100.00       37
        1        0   100.00       39
        1        0   100.00       40
-     741       32    95.68    Total
+     741       28    96.22    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     443       27    93.91        1
+     443       28    93.68        1
       53        0   100.00        2
       13        0   100.00        3
        6        0   100.00        4
-       3        1    66.67        5
+       3        0   100.00        5
        2        0   100.00        6
        6        0   100.00        7
        1        0   100.00        8
@@ -66,14 +66,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     741       32    95.68        1
-     740       58    92.16        2
-     739       80    89.17        3
-     738       96    86.99        4
-     737      112    84.80        5
-     736      128    82.61        6
-     735      144    80.41        7
-     734      159    78.34        8
+     741       28    96.22        1
+     740       50    93.24        2
+     739       68    90.80        3
+     738       80    89.16        4
+     737       92    87.52        5
+     736      104    85.87        6
+     735      115    84.35        7
+     734      126    82.83        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -406,7 +406,7 @@ Non-stopwords
        1        0   100.00   jedoch30stimmenbeiderbeschlußfas
        1        1     0.00   jenom
        1        0   100.00   jenom.dm10
-       1        0   100.00   jürgenponto
+       1        1     0.00   jürgenponto
        1        0   100.00   k
        2        0   100.00   kapital
        1        1     0.00   kapital:a
@@ -435,7 +435,7 @@ Non-stopwords
        2        0   100.00   kapital:rp
        1        0   100.00   kapital:rs194900000
        1        0   100.00   kapital:s
-       5        5     0.00   kapital:sfrs
+       5        0   100.00   kapital:sfrs
        1        0   100.00   kapital:tl26500000
        2        0   100.00   kapital:us
        1        1     0.00   karlhauff

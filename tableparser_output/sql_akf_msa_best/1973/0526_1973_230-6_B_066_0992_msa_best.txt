@@ -18,7 +18,7 @@ R.H. Del Mar, London;
 Dr. J. M. Goudswaard, Rotterdam;
 G.E.Graham, London;
 Mr.C.T.C.Heyning, Rotterdam;
-H.F.von den Hoven, Rotterdam;
+H.F.von den Hohen, Rotterdam;
 J.J.H. Nagel, Rotterdam;
 M.Ormerod, Rotterdam;
 D.A.Orr, London;
@@ -30,8 +30,8 @@ Ir.K.H. Veldhuis, London
 Beratende Mitglieder:
 H.S.A.Hartog, Hamburg;
 Dr.jur. Rudolf Mueller, Frankfurt (M);
-Dr.J.H.van Roijen, Wassenaar;
-F.J. Tempel, Den Haag;
+Dr.J.H.van Oijen, Wassenaar;
+F.J. Hempel, Den Haag;
 Dr.H.J.Witteveen, Wassenaar
 Sekretäre:
 C.Zwagerman, London;
@@ -60,15 +60,15 @@ folgenden Holdinggesellschaften verwaltet:
 Aandeelen in Industrieele Ondernemingen
 N.V., Rotterdam
 "Saponia"', Maatschappij tot Beheer van
-Aandelen in Industrielle Ondernemingen
+Aandeelen in Industrieele Ondernemingen
 N.V., Rotterdam
 '"'Marga'', Maatschappij tot Beheer van
-Aandeelen in Industrielle Ondernemingen
+Aandelen in Industrieele Ondernemingen
 N.V., Rotterdam
 Mavibel (Maatschappij voor Internationale
 Beleggingen) N.V., Rotterdam
 "Lipoma'', Maatschappij tot Beheer van
-Aandelen in Industrielle Ondernemingen
+Aandeelen in Industrielle Ondernemingen
 N.V., Rotterdam
 Handelsmaatschappij Noorda N.V.,
 Amsterdam
@@ -88,7 +88,7 @@ Antwerpen; Handelsbank; sämtl. Antwerpen;
 Bank van de Societe Generale de Belgique;
 Societe Belge de Banque; Bank Lambert;
 Credit General de Belgique; sämtl. Brüssel;
-Credit Commercial de Mons, Mohns;
+Credit Commercial de Moos, Mond;
 Banque Rothschild, Paris;
 Creditanstalt-Bankverein; Österreichische
 Länderbank AG; Schoeller & Co. Bank-

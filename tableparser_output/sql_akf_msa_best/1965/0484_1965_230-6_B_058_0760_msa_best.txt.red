@@ -8,7 +8,7 @@ Vorstand:
 MichaelZahn,Hamburg,Vors.;
 Dr.FranzKaiser,Hamburg
 Aufsichtsrat:
-HansRinn,Hamburg,Vors.;
+HansZinn,Hamburg,Vors.;
 Dr.HannsDeuss,Düsseldorf,stellv.
 Vors.;
 Dr.-Ing.HellmutLey,Frankfurt(M);
@@ -16,15 +16,15 @@ MartinLuther,Hamburg;
 KurtvonOswald,Hamburg;
 ErichSelbach,OedtbeiKrefeld;
 Arbeitnehmervertreter:
-WernerDiehn,Hamburg;
+WernerRiehn,Hamburg;
 AlbertSchwidden,Siegburg;
 RudolfVolkland,Krefeld
 Gründung:1941
 Tätigkeitsgebiet:
 Erzeugung,VerarbeitungundVertrieb
-vonChemiefasern(Zellwolle,Reyon,
+vonChemiefasern(Zellwolle,Rebon,
 Perlon-Seide,Perlon-Faser,Acryl-
-FaserRedon),Zellstoff,Papier,Phri-
+FaserHedon),Zellstoff,Papier,Phri-
 phan-Zellglas,Polyäthylen-Folien
 (Phrithen),Cellulose-DerivatenPhrikolat,
 ViskoseschwämmenundSprit.
@@ -79,7 +79,7 @@ Sal.Oppenheimjr.&Cie.,I.H.Stein;
 beideKöln
 Grundkapital:DM77000000.-
 Umstellung2:1durchH.-I.v.26.5.1951
-aufDM35000000.-.L.H.-V.v.17.8.1955
+aufDM35000000.-.Lt.H.-V.v.17.8.1955
 ErhöhungaufDM42500000.-.ImOkto-
 ber1955gem.ErmächtigungIlt.H.-I.v.
 17.8.1955ErhöhungaufDM55000000.-
@@ -114,7 +114,7 @@ N1962148
 DividendenaufStammaktien:
 11I/1948/49-1958:insgesamt15%
 1959:6%(Div.Sch.Nr.4)
-1960-1962:je8%(Div.Sach.Nr.5-7)
+1960-1962:je8%(Div.Sch.Nr.5-7)
 1963:10%(Div.Sch.Nr.8)
 Bezugsrechte:
 1955:i.V.4:1zu110%;Abschlag3,2%
@@ -123,7 +123,7 @@ Bezugsrechte:
 (26.6.);Div.Sch.Nr.9
 ZurGeschäftslage:
 BeiallenErzeugnissenlagenamJahres-
-ende1963guteAuftragsbeständevor.
+ende1963gateAuftragsbeständevor.
 DieAbsatzentwicklungwarbisjetztgut,
 sodaßdieProduktionsanlagenbefriedi-
 gendausgelastetwaren.Eskannmit

@@ -11,9 +11,9 @@ Dipl.-Ing. E.G.G.Werner;
 Dipl.-Ing. K.Swart;
 A.P.J.Béenard
 Aufsichtsrat:
-Jonkheer Dr. F.H. Loudon, Vors.;
+Jonkheer Dr. J.H. Loudon, Vors.;
 Dipl. -Ing. L.E.J.Brouwer; Dipl. -Ing.P.M.
-van Doormaal; Dr.-Ing.H.Ebbinge; Dr.r.
+van Doormaal; Dr.-Ing.H.Ebbinge; Dr.M.
 W.Holtrop; R.E.Marjolin; Wm.McC.Mar-
 tin Jr.; Dipl.-Ing. L.Schepers; Dr.M.E.
 Spaght; Dipl. -Ing.W.F.G.L.Starrenburg;
@@ -62,8 +62,8 @@ seldorf, Hamburg, München und Saar-
 brücken;
 Saarländische Kreditbank AG, Saarbrücken;
 The Chase Manhattan Bank, New York;
-N.M. Rothschild & Sonst, London;
-Schweizerische Kreditanstalt, Zürich;
+N.M. Rothschild & Cons, London;
+Schweizerische Kreditanstalt, Züriıch;
 Soc. Generale de Banque, Brüssel;
 Credit Lyonnais, Brüssel;
 Banque Internationale & Luxembourg,

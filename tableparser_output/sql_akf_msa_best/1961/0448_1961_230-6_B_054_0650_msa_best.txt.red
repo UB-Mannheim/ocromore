@@ -13,7 +13,7 @@ Aufsichtsrat:
 BrunoStieringer,Hannover,Vors.;
 Dr.h.c.CarlFr.Müller,Berlin,stellv.
 Vors.;
-ThomasEntz,Rendsburg;
+ThomasAntz,Rendsburg;
 KarlHaus,Köln;
 CarlMeister,Hamburg-Kleinflottbek;
 GeorgRieckmann,Lübeck;
@@ -105,7 +105,7 @@ ultimo194965DM
 +)ab17.10.1956KursfürDM-Nennwert
 DividendenaufStammaktien:
 11II/1948/49-1951:je0%
-1952:6%(Div.-Sch,.Nr.100)
+1952:6%(Div.Sch,.Nr.100)
 1953:8%(Div.Sch.Nr.101)
 1954:8%(Div.Sch.Nr.102)
 1955:10%(Div.Sch.Nr.103)
@@ -139,7 +139,7 @@ SonstigeAktiva7441055
 :31.12.195831.12.1959
 PassivaeEeeaee
 Eigenkapital77009450
-(davonA.-R.)37505000
+(davonA.-K.)37505000
 TechnischeRück-
 stellungen3481341099
 Sonstigeallgemeine

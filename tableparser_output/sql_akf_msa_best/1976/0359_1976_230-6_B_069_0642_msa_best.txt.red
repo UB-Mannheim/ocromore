@@ -27,7 +27,7 @@ WolframThiele,Oberhausen;
 OttoVoisard,München;
 FriedrichLaußermair,München,stellv.;
 WolfgangMüller,München,stellv.;;
-HerbertRedlich,Gustavsburg,stellv.
+HerbertEdlich,Gustavsburg,stellv.
 Aufsichtsrat:
 ManfredLennings,Kettwig,Vors.;
 UlrichNeumann,Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ DietrichWilhelmvonMenges,Essen-
 Bredeney;
 SiegfriedSchiffbauer,Kiel;
 Arbeitnehmervertreter::
-FranzKlemmer,Augsburg;;
+FranzLemmer,Augsburg;;
 RudolfRhein,Mainz-Kostheim;;
 EduardSchleinkofer,München;
 FerdinandWolinsky,Oberhausen
@@ -57,7 +57,7 @@ Maschinen-undStahlbaumitdenWerken
 NürnbergundGustavsburg.Unternehmens-
 bereichNutzfahrzeugemitdenWerken
 München,Watenstedt,Braunschweigund
-Lenzburg.
+Penzberg.
 Maschinen-undAnlagenbauderGHH
 STERKRADEAGmitdenWerkenSterk-
 rade,Düsseldorf,RheinwerftWalsum
@@ -76,7 +76,7 @@ Kapital:DM2000000.-(49,97%)
 Dividendenab1969:0,0,0,0,0,0%
 Jul.Wolff&Co.GmbH,Heilbronn
 Kapital:DM3000000.-(93,3%)
-SWFSüddeutscheMinden-undFörderan-
+SWFSüddeutscheWenden-undFörderan-
 lagenfabrikvonBechtolsheim&SteinKG,
 München
 Kapital:DM2972500.-(94,62%)
@@ -147,17 +147,17 @@ Austro-M.A.N.Fahrzeug-VertriebGmbH,
 Wien
 Kapital:öS52000000.-(über50%)
 IndustriasArgentinasM.A.N.Sociedad
-AnónimaIndustrialyComercial,Buenos
+AnönimaIndustrialyComercial,Buenos
 Aires
 Kapital:argent.$319600000.-(50%)
-MecänicaPesadaS.A.,SãoPaulo
+MecänicaPesadaS.A.,SäoPaulo
 Kapital:Ar$61500000.-(25%)
 M.A.N.-Automotive(Australia)Pty.Ltd.,
 Sydney
 Kapital:$A965000.-(91,7%)
 M.A.N.KamyonveOtobüsSanayiAnonim
 Sirketi,Istanbul
-Kapital:THE.27000000.-(über25%)
+Kapital:TkE.27000000.-(über25%)
 M.A.N.TruckandBusS.A.(Pty)Ltd.,
 Johannesburg
 Kapital:R300.000.-(100%)
@@ -211,7 +211,7 @@ DM102,54undVorz.-Akt.DM87,15
 14(Vorz.-Akt.)
 1969ErhöhungaufDM170000000.-
 1970Bezugsrecht10:1zu190%auf
-DM187000000.-,rechn.WertSt.-Akt.
+DM187000000.-,rechn.WertSt.--Akt.
 undVorz.-Akt.DM5,09(10.7.),
 Div.Sch.Nr.23(St.-Akt.)und17(Vorz.-
 Akt.)ErhöhungaufDM197505000.-

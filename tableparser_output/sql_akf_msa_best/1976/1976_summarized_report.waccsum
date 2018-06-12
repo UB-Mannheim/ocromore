@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1489   Words
-      42   Misrecognized
-   97.18%  Accuracy
+      47   Misrecognized
+   96.84%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,12 +21,12 @@ Non-stopwords
       77        1    98.70        6
       73        0   100.00        7
       77        2    97.40        8
-      64        3    95.31        9
-     110        3    97.27       10
-      57        0   100.00       11
-      75        2    97.33       12
-      37        2    94.59       13
-      54        1    98.15       14
+      64        2    96.88        9
+     110        4    96.36       10
+      57        1    98.25       11
+      75        3    96.00       12
+      37        3    91.89       13
+      54        2    96.30       14
       44        1    97.73       15
       60        1    98.33       16
       47        1    97.87       17
@@ -40,7 +40,7 @@ Non-stopwords
        6        1    83.33       25
       16        2    87.50       26
       22        0   100.00       27
-       6        1    83.33       28
+       6        2    66.67       28
        3        0   100.00       29
        3        0   100.00       30
        4        0   100.00       31
@@ -51,11 +51,11 @@ Non-stopwords
        1        0   100.00       36
        2        0   100.00       37
        1        0   100.00       38
-    1482       41    97.23    Total
+    1482       46    96.90    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     974       35    96.41        1
+     974       40    95.89        1
       81        0   100.00        2
       29        0   100.00        3
        9        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        4        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1118       35    96.87    Total
+    1118       40    96.42    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1489       42    97.18        1
-    1486       77    94.82        2
-    1483      106    92.85        3
-    1480      135    90.88        4
-    1477      164    88.90        5
-    1474      191    87.04        6
-    1471      217    85.25        7
-    1468      241    83.58        8
+    1489       47    96.84        1
+    1486       87    94.15        2
+    1483      122    91.77        3
+    1480      157    89.39        4
+    1477      190    87.14        5
+    1474      220    85.07        6
+    1471      248    83.14        7
+    1468      274    81.34        8
 
 Stopwords
    Count   Missed   %Right   
@@ -361,7 +361,7 @@ Non-stopwords
        1        0   100.00   aktienund91,09
        3        0   100.00   aktionäre
        1        0   100.00   aktiva19731974
-       1        0   100.00   albertvahle
+       1        1     0.00   albertvahle
        1        0   100.00   alfredfreiherrvonoppenheim
        1        0   100.00   alfredroth
        1        0   100.00   aloisalzheimer
@@ -371,7 +371,7 @@ Non-stopwords
        1        0   100.00   anlagenundeinrichtungzurgrundstoff
        1        0   100.00   anlagevermögen197791227692
        1        0   100.00   anlagevermögen688646733367
-       1        0   100.00   anónimaindustrialycomercial
+       1        1     0.00   anónimaindustrialycomercial
        1        0   100.00   arbeiten
        1        0   100.00   arbeitnehmervertreter
        1        0   100.00   arnopaulbäumer
@@ -389,7 +389,7 @@ Non-stopwords
        1        0   100.00   ausschlußvereinbarung
        1        0   100.00   australia
        1        0   100.00   austro
-       1        1     0.00   automaten
+       1        0   100.00   automaten
        1        0   100.00   automotive
        3        0   100.00   b
        1        0   100.00   bank
@@ -576,7 +576,7 @@ Non-stopwords
        1        0   100.00   forderungenaus
        2        0   100.00   frank
        8        0   100.00   frankfurt
-       1        0   100.00   franzklemmer
+       1        1     0.00   franzklemmer
        2        0   100.00   freiv
        1        0   100.00   fremdkapital19494072294616
        1        0   100.00   fremdkapital749400869825
@@ -632,12 +632,12 @@ Non-stopwords
        1        0   100.00   heiligenhaus
        1        0   100.00   heinrichmandel
        1        1     0.00   heinrichpaus
-       1        0   100.00   heinzbette
+       1        1     0.00   heinzbette
        1        0   100.00   heinzpferdmenges
        1        0   100.00   heits
        1        0   100.00   hellmuthvonstockhausen
-       1        0   100.00   herbertredlich
-       1        0   100.00   hermannheusch
+       1        1     0.00   herbertredlich
+       1        1     0.00   hermannheusch
        2        0   100.00   hessen
        1        0   100.00   hochtiefaktiengesellschaftfürhoch
        1        0   100.00   hochtiefchilenaltda

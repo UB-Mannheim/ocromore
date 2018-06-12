@@ -220,7 +220,7 @@ Non-stopwords
        1        0   100.00   freiv
        1        1     0.00   fremdkapital2518424892
        1        0   100.00   gen
-       1        0   100.00   gerhardkuhle
+       1        1     0.00   gerhardkuhle
        1        1     0.00   ges.vorm.casp.noell
        1        0   100.00   geschäftsjahr:kalenderjahr
        1        0   100.00   gesellschaftskasse
@@ -232,7 +232,7 @@ Non-stopwords
        1        0   100.00   hagenundlüdenscheid
        1        0   100.00   hannswalter
        1        0   100.00   hausi.d.herstattkgaa
-       1        1     0.00   herbertpavel
+       1        0   100.00   herbertpavel
        1        0   100.00   hähnelgmbh
        2        0   100.00   i.v
        1        1     0.00   ii

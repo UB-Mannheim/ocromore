@@ -20,7 +20,7 @@ WernerLeibfried,Lindenberg
 Gründung:1923
 Tätigkeitsgebiet:
 ErzeugungvonPergamynpapieren,weiß
-undfarbige,auchgeprägt,ab24gr/qm;
+undfarbig,auchgeprägt,ab24gr/qm;
 TransparentePauspapiere;Buchungspa-
 pier;Wachsrohpapiere;Asbestpapier.
 PapierfabrikinLindenburgbei
@@ -47,7 +47,7 @@ Stückelung:
 (Nr.1-2625)
 1605Inh.-St.-Akt.zugeDM500.-
 (Nr.1-1605)
-5100Inh.-St.-Akt.zujeDML100.-
+5100Inh.-St.-Akt.zugeDML100.-
 (Nr.1-5100)
 SämtlicheStammaktiensindlieferbar
 Großaktionär:
@@ -90,13 +90,13 @@ bußenhinsichtlichderErlöse.Dasolche
 Marktsituationennichtaufeineinzelnes
 Landbeschränktzubleibenpflegen,eine
 ähnlicheLagevielmehrzumindestinganz
-Europafestzustellenwar,machtensichbei
+Europafestzustellenwar,machtesichbei
 denHauptsortenderGesellschaftauchein
 gewisserImportdruckbemerkbar.Etwa
 abJunistelltesichziemlichplötzlichein
 Umschwungein.DerBedarfinallenSpar-
 tenderProduktionhobsichkräftig,Lie-
-ferzeitensiegenbisEndedesJahres
+ferzeitenstiegenbisEndedesJahres
 stetigan.Wenntrotzdemauchimersten
 Halbjahrimmerhinzufriedenstellendge-
 arbeitetwerdenkonnte,soistdiesnicht
@@ -118,7 +118,7 @@ Barmittel)14301079
 Eigenkapital62136147
 (davonA.-K.)26252625
 Fremdkapital26172326
-GewinnnachVortrag638762
+GewinnnachVertrag638762
 AusdenGewinn-undVerlust-
 rechnungen
 Löhneu.Gehälter20842344

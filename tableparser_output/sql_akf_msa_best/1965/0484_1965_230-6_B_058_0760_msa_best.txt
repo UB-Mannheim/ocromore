@@ -8,7 +8,7 @@ Vorstand:
 Michael Zahn, Hamburg, Vors.;
 Dr. Franz Kaiser, Hamburg
 Aufsichtsrat:
-Hans Rinn, Hamburg, Vors.;
+Hans Zinn, Hamburg, Vors.;
 Dr. Hanns Deuss, Düsseldorf, stellv.
 Vors.;
 Dr.-Ing. Hellmut Ley, Frankfurt (M);
@@ -16,15 +16,15 @@ Martin Luther, Hamburg;
 Kurt von Oswald, Hamburg;
 Erich Selbach, Oedt bei Krefeld;
 Arbeitnehmervertreter:
-Werner Diehn, Hamburg;
+Werner Riehn, Hamburg;
 Albert Schwidden, Siegburg;
 Rudolf Volkland, Krefeld
 Gründung: 1941
 Tätigkeitsgebiet:
 Erzeugung, Verarbeitung und Vertrieb
-von Chemiefasern (Zellwolle, Reyon,
+von Chemiefasern (Zellwolle, Rebon,
 Perlon-Seide, Perlon-Faser, Acryl-
-Faser Redon), Zellstoff, Papier, Phri-
+Faser Hedon), Zellstoff, Papier, Phri-
 phan-Zellglas, Polyäthylen-Folien
 (Phrithen), Cellulose-Derivaten Phrikolat,
 Viskoseschwämmen und Sprit.
@@ -79,7 +79,7 @@ Sal. Oppenheim jr. & Cie., I.H. Stein;
 beide Köln
 Grundkapital: DM 77 000 000. -
 Umstellung 2:1 durch H. -I.v. 26.5.1951
-auf DM 35 000 000. -. L.H. -V.v. 17.8.1955
+auf DM 35 000 000. -. Lt.H. -V.v. 17.8.1955
 Erhöhung auf DM 42 500 000.-. Im Okto-
 ber 1955 gem. Ermächtigung Ilt.H. -I.v.
 17.8.1955 Erhöhung auf DM 55 000 000. -
@@ -114,7 +114,7 @@ N 1962 148
 Dividenden auf Stammaktien:
 11I/1948/49-1958: insgesamt 15 %
 1959: 6 % (Div. Sch. Nr. 4)
-1960-1962:je 8 % (Div. Sach. Nr. 5-7)
+1960-1962:je 8 % (Div. Sch. Nr. 5-7)
 1963: 10 % (Div. Sch. Nr. 8)
 Bezugsrechte:
 
@@ -125,7 +125,7 @@ Bezugsrechte:
 (26.6.); Div. Sch. Nr. 9
 Zur Geschäftslage:
 Bei allen Erzeugnissen lagen am Jahres-
-ende 1963 gute Auftragsbestände vor.
+ende 1963 gate Auftragsbestände vor.
 Die Absatzentwicklung war bis jetzt gut,
 so daß die Produktionsanlagen befriedi-
 gend ausgelastet waren. Es kann mit

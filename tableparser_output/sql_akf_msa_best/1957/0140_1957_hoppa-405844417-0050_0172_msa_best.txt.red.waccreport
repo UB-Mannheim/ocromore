@@ -12,15 +12,15 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      28        3    89.29        1
+      28        1    96.43        1
       21        0   100.00        2
       14        0   100.00        3
       31        0   100.00        4
       24        0   100.00        5
-      32        3    90.62        6
-      29        2    93.10        7
-      34        1    97.06        8
-      21        1    95.24        9
+      32        2    93.75        6
+      29        1    96.55        7
+      34        2    94.12        8
+      21        0   100.00        9
       22        1    95.45       10
       24        1    95.83       11
       21        0   100.00       12
@@ -31,21 +31,21 @@ Non-stopwords
       11        1    90.91       17
       15        0   100.00       18
       14        1    92.86       19
-      10        1    90.00       20
+      10        0   100.00       20
       12        1    91.67       21
        5        0   100.00       22
       10        0   100.00       23
       16        1    93.75       24
-       7        1    85.71       25
+       7        2    71.43       25
        7        0   100.00       26
        5        0   100.00       27
        5        0   100.00       28
        4        0   100.00       29
-      10        0   100.00       30
+      10        2    80.00       30
        6        0   100.00       31
        6        2    66.67       32
-       8        0   100.00       33
-       4        0   100.00       34
+       8        1    87.50       33
+       4        1    75.00       34
        9        0   100.00       35
        5        0   100.00       36
        1        0   100.00       38
@@ -53,24 +53,24 @@ Non-stopwords
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     405       14    96.54        1
+     405       18    95.56        1
       34        0   100.00        2
       10        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        1        0   100.00        9
-     454       14    96.92    Total
+     454       18    96.04    Total
 
 Phrases
    Count   Missed   %Right   Length
      532       22    95.86        1
-     531       42    92.09        2
-     530       58    89.06        3
-     529       74    86.01        4
-     528       88    83.33        5
-     527      101    80.83        6
-     526      114    78.33        7
-     525      127    75.81        8
+     531       43    91.90        2
+     530       62    88.30        3
+     529       80    84.88        4
+     528       94    82.20        5
+     527      107    79.70        6
+     526      120    77.19        7
+     525      132    74.86        8
 
 Stopwords
    Count   Missed   %Right   
@@ -131,7 +131,7 @@ Non-stopwords
        1        0   100.00   49
        1        0   100.00   4und5mit
        1        0   100.00   5
-       1        1     0.00   53öfen
+       1        0   100.00   53öfen
        1        0   100.00   5875
        3        0   100.00   6
        1        0   100.00   620200
@@ -245,7 +245,7 @@ Non-stopwords
        2        0   100.00   diegesellschaft
        1        0   100.00   diehermannrüterohg
        1        0   100.00   diehubertjosefheineeisenhandels
-       1        0   100.00   dieihageinenkommanditanteilinhöhe
+       1        1     0.00   dieihageinenkommanditanteilinhöhe
        1        0   100.00   dieilsederbank
        1        0   100.00   diemiteinemgrund
        1        0   100.00   dienorddeutscheschrauben
@@ -274,7 +274,7 @@ Non-stopwords
        1        0   100.00   eineeigenegicht
        1        0   100.00   eisenbahnen.siedieneninersterlinie
        1        0   100.00   emissionsbetrag
-       1        1     0.00   emissionsbetrag:sfrs
+       1        0   100.00   emissionsbetrag:sfrs
        1        0   100.00   ernstböhme
        1        0   100.00   erzagglomerieranlage
        1        0   100.00   erzbergwerke
@@ -303,9 +303,9 @@ Non-stopwords
        1        0   100.00   gesellschaftskasse
        1        0   100.00   geviertfeldermit5350000qm.dane
        2        0   100.00   gewerkschaftkonrad
-       1        0   100.00   gewinnnachvortrag73429475
+       1        1     0.00   gewinnnachvortrag73429475
        1        0   100.00   gitter
-       2        1    50.00   glückauf
+       2        0   100.00   glückauf
        2        0   100.00   gossler
        1        0   100.00   grossaktionär
        1        0   100.00   grosseagmitdenkohlenzecheninherne
@@ -356,11 +356,11 @@ Non-stopwords
        1        0   100.00   istmitderherstellungvonlagermetall
        1        1     0.00   jahresertrag771226342
        1        0   100.00   je50
-       1        0   100.00   jedembezugfremdenerzes.dieroherze
+       1        1     0.00   jedembezugfremdenerzes.dieroherze
        1        0   100.00   jenom.dm100
        1        0   100.00   johannsmentek
        1        0   100.00   juliusfromme
-       3        2    33.33   k
+       3        0   100.00   k
        1        0   100.00   kapazität
        1        0   100.00   kapitalvondm10224000
        1        0   100.00   kapitalvondm2,88mio
@@ -386,7 +386,7 @@ Non-stopwords
        1        0   100.00   mens
        1        0   100.00   metallgesellschaftag
        1        0   100.00   miozu88,24
-       1        0   100.00   mit9562mstreichenderlängeund4
+       1        1     0.00   mit9562mstreichenderlängeund4
        1        0   100.00   mitbeidentochtergesellschaften
        1        0   100.00   miteinemgrund
        1        0   100.00   miteinemstammkapitalvon
@@ -425,7 +425,7 @@ Non-stopwords
        1        0   100.00   rohstahl
        1        0   100.00   ruhrbankag
        1        0   100.00   salz
-       2        1    50.00   sandow
+       2        0   100.00   sandow
        1        1     0.00   schachtanlagen:notthornundröcke
        1        0   100.00   schaftumfaßtschrauben
        1        0   100.00   schalungsträger
@@ -475,14 +475,14 @@ Non-stopwords
        1        0   100.00   umlaufvermögen65602939
        1        1     0.00   umstellunglt.h
        2        0   100.00   und
-       1        0   100.00   undanderesbaugerätsowiekräne
+       1        1     0.00   undanderesbaugerätsowiekräne
        1        0   100.00   undbetriebsbeschrei
        1        0   100.00   undcredit
        1        0   100.00   undderpeine
        1        0   100.00   undderüberschussankoke
        2        1    50.00   unddisconto
        1        0   100.00   undgewinn
-       1        0   100.00   undgleit
+       1        1     0.00   undgleit
        1        0   100.00   undhamburg
        2        0   100.00   undhandels
        1        0   100.00   undhüttenbetriebe

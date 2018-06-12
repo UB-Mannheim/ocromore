@@ -13,7 +13,7 @@ Aufsichtsrat:
 Bruno Stieringer, Hannover, Vors.;
 Dr.h.c. Carl Fr. Müller, Berlin, stellv.
 Vors.;
-Thomas Entz, Rendsburg;
+Thomas Antz, Rendsburg;
 Karl Haus, Köln;
 Carl Meister, Hamburg-Kleinflottbek;
 Georg Rieckmann, Lübeck;
@@ -105,7 +105,7 @@ ultimo 1949 65 DM
 +) ab 17.10. 1956 Kurs für DM-Nennwert
 Dividenden auf Stammaktien:
 11II/1948/49-1951: je 0 %
-1952: 6 % (Div.-Sch,. Nr. 100)
+1952: 6 % (Div.Sch,. Nr. 100)
 1953: 8 % (Div.Sch.Nr. 101)
 1954: 8 % (Div.Sch. Nr. 102)
 1955: 10 % (Div.Sch. Nr. 103)
@@ -140,7 +140,7 @@ Sonstige Aktiva 7441 055
 
 PassivaeEeeaee
 Eigenkapital7 700 9 450
-(davon A.-R.) 3 750 5 000
+(davon A.-K.) 3 750 5 000
 Technische Rück-
 stellungen34 813 41 099
 Sonstige allgemeine

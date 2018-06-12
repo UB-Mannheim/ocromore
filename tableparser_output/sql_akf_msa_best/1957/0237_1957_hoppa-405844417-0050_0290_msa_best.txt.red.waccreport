@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      304   Words
-       5   Misrecognized
-   98.36%  Accuracy
+       6   Misrecognized
+   98.03%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -34,7 +34,7 @@ Non-stopwords
        8        0   100.00       22
        3        0   100.00       23
        1        0   100.00       24
-       6        0   100.00       25
+       6        1    83.33       25
        1        0   100.00       26
        3        0   100.00       27
        2        0   100.00       28
@@ -45,28 +45,28 @@ Non-stopwords
        1        0   100.00       36
        1        0   100.00       37
        1        0   100.00       38
-     304        5    98.36    Total
+     304        6    98.03    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     210        4    98.10        1
+     210        5    97.62        1
       21        0   100.00        2
        8        0   100.00        3
        3        0   100.00        5
        1        0   100.00        6
        1        0   100.00        7
-     244        4    98.36    Total
+     244        5    97.95    Total
 
 Phrases
    Count   Missed   %Right   Length
-     304        5    98.36        1
-     303        9    97.03        2
-     302       13    95.70        3
-     301       17    94.35        4
-     300       21    93.00        5
-     299       25    91.64        6
-     298       29    90.27        7
-     297       33    88.89        8
+     304        6    98.03        1
+     303       11    96.37        2
+     302       16    94.70        3
+     301       21    93.02        4
+     300       26    91.33        5
+     299       31    89.63        6
+     298       36    87.92        7
+     297       40    86.53        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -198,7 +198,7 @@ Non-stopwords
        1        0   100.00   geschmiedetesmaterial
        1        0   100.00   geschäftsjahr
        2        0   100.00   gesellschaft
-       1        0   100.00   gewinnnachvortrag24003200
+       1        1     0.00   gewinnnachvortrag24003200
        1        0   100.00   gmbh
        1        0   100.00   greven
        1        0   100.00   grevenbrückerkalkwerkegmbh

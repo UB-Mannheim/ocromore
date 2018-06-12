@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      737   Words
-      32   Misrecognized
-   95.66%  Accuracy
+      29   Misrecognized
+   96.07%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,7 +20,7 @@ Non-stopwords
       38        0   100.00        8
       31        4    87.10        9
       24        1    95.83       10
-      32        2    93.75       11
+      32        1    96.88       11
       35        3    91.43       12
       29        1    96.55       13
       21        1    95.24       14
@@ -33,14 +33,14 @@ Non-stopwords
        4        0   100.00       21
        5        1    80.00       22
        7        1    85.71       23
-       5        2    60.00       24
+       5        1    80.00       24
        3        0   100.00       25
        9        0   100.00       26
        5        0   100.00       27
        4        0   100.00       28
        6        0   100.00       29
        3        2    33.33       30
-       3        1    66.67       31
+       3        0   100.00       31
        4        0   100.00       32
        4        1    75.00       33
        2        0   100.00       34
@@ -49,11 +49,11 @@ Non-stopwords
        1        0   100.00       37
        4        1    75.00       38
        1        0   100.00       50
-     737       32    95.66    Total
+     737       29    96.07    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     432       27    93.75        1
+     432       24    94.44        1
       40        1    97.50        2
       14        0   100.00        3
        9        0   100.00        4
@@ -64,18 +64,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        4        0   100.00      >10
-     513       28    94.54    Total
+     513       25    95.13    Total
 
 Phrases
    Count   Missed   %Right   Length
-     737       32    95.66        1
-     736       60    91.85        2
-     735       86    88.30        3
-     734      110    85.01        4
-     733      134    81.72        5
-     732      157    78.55        6
-     731      180    75.38        7
-     730      203    72.19        8
+     737       29    96.07        1
+     736       56    92.39        2
+     735       81    88.98        3
+     734      104    85.83        4
+     733      127    82.67        5
+     732      149    79.64        6
+     731      171    76.61        7
+     730      193    73.56        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -293,7 +293,7 @@ Non-stopwords
       14        1    92.86   div.sch.nr
        3        0   100.00   dividendenab1957
       12        1    91.67   dividendenab1958
-       1        1     0.00   dividendenautstammaktien
+       1        0   100.00   dividendenautstammaktien
        1        0   100.00   dm20312500namensaktien
        1        0   100.00   dm320000000inhaber
        1        0   100.00   dm619687500inhaber
@@ -350,7 +350,7 @@ Non-stopwords
        1        0   100.00   fremdkapital15864261638059
        1        1     0.00   friedrichdugel
        1        1     0.00   fristigerabmachungenlaufendelektrische
-       1        1     0.00   fritzandré
+       1        0   100.00   fritzandré
        1        0   100.00   gasundwasser
        1        0   100.00   geldern
        1        0   100.00   gelsenkirchen
@@ -467,7 +467,7 @@ Non-stopwords
        1        0   100.00   nordhorn
        2        0   100.00   notizex
        2        0   100.00   nr
-       1        1     0.00   nutzbarestromabgabeeinehöhevon
+       1        0   100.00   nutzbarestromabgabeeinehöhevon
        1        0   100.00   oberbollheim
        2        0   100.00   oberstein
        1        0   100.00   organschafts

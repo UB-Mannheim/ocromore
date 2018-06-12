@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      276   Words
-      12   Misrecognized
-   95.65%  Accuracy
+      11   Misrecognized
+   96.01%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,10 +13,10 @@ Non-stopwords
        4        0   100.00        1
       10        0   100.00        2
       16        0   100.00        3
-      31        2    93.55        4
+      31        1    96.77        4
        9        0   100.00        5
       14        0   100.00        6
-      16        0   100.00        7
+      16        1    93.75        7
        9        0   100.00        8
       17        2    88.24        9
       15        0   100.00       10
@@ -30,7 +30,7 @@ Non-stopwords
        4        2    50.00       18
        3        0   100.00       19
        3        1    66.67       20
-       7        1    85.71       21
+       7        0   100.00       21
        2        1    50.00       22
        6        0   100.00       23
        3        0   100.00       24
@@ -49,27 +49,27 @@ Non-stopwords
        2        0   100.00       38
        1        0   100.00       40
        1        0   100.00       49
-     276       12    95.65    Total
+     276       11    96.01    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     224       12    94.64        1
+     224       10    95.54        1
       15        0   100.00        2
        4        0   100.00        3
        1        0   100.00        4
        1        0   100.00        6
-     245       12    95.10    Total
+     245       10    95.92    Total
 
 Phrases
    Count   Missed   %Right   Length
-     276       12    95.65        1
-     275       24    91.27        2
-     274       33    87.96        3
-     273       41    84.98        4
-     272       48    82.35        5
-     271       55    79.70        6
-     270       62    77.04        7
-     269       69    74.35        8
+     276       11    96.01        1
+     275       21    92.36        2
+     274       29    89.42        3
+     273       35    87.18        4
+     272       41    84.93        5
+     271       47    82.66        6
+     270       53    80.37        7
+     269       59    78.07        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -189,7 +189,7 @@ Non-stopwords
        1        0   100.00   dr
        1        0   100.00   dr.c.r.c.wijckerheldbisdom
        1        0   100.00   dr.g.a.wagner
-       1        1     0.00   dr.m
+       1        0   100.00   dr.m
        1        0   100.00   dr.m.e
        1        0   100.00   dresdnerbankag
        1        0   100.00   düs
@@ -233,7 +233,7 @@ Non-stopwords
        1        0   100.00   jehfl1000
        1        1     0.00   jehfl7,25
        2        0   100.00   jenom.hfl
-       1        1     0.00   jonkheerdr.j.h.loudon
+       1        0   100.00   jonkheerdr.j.h.loudon
        1        0   100.00   k
        1        0   100.00   kenn
        1        0   100.00   kommen
@@ -316,5 +316,5 @@ Non-stopwords
        1        0   100.00   wm.mcc.mar
        1        0   100.00   z.zt
        1        0   100.00   zahlstellen
-       2        0   100.00   zürich
+       2        1    50.00   zürich
        1        0   100.00   übenselbstnichtunmittelbarbetriebstä

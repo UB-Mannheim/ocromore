@@ -44,7 +44,7 @@ fliesen, glasierte Trennwandsteine,
 Schwimmbeckensteine;
 Werk Ismaning bei München: Mauerziegel,
 Vormauerziegel (Hartbrandverblender),
-Feinklinkerriemchen mit glatter und
+Feinklinkerriemchen mit gatter und
 profilierter Oberfläche, frostsichere
 Wandfliesen, großformatige Ziegelfliesen,
 Straßenmarkierungsklinker, Bordstein-
@@ -73,7 +73,7 @@ HAGROB Handelsgesellschaft für Grob-
 und Feinkeramik GmbH, München
 Kapital: DM 22 000. - (50 %)
 AGROB Holding AG, Basel (Schweiz)
-Kapital: bfrs 4 500 000. - (100 %)
+Kapital: sfrs 4 500 000. - (100 %)
 Toronto Brick Co.Ltd., Toronto (Kanada)
 Kapital: can. $ 225 125. - (23,32 %)
 Frontenac Floor & Wall Tile Ltd.,
@@ -111,7 +111,7 @@ Stückelung:
 8 400 Inh. -St.-Akt. zu je DM 1 000. -
 5 000 Inh. -St. -Akt. zu je DM 100.-
 4 250 Inh. -Vorz. -Akt. zu je DM 1 000. -
-2 000 Inh. -Vorz. -Akt. zuge DM 100.-
+2 000 Inh. -Vorz. -Akt. zuje DM 100.-
 Besondere Rechte der an der
 Börse in München (amtl.) no-
 tierten Vorzugsaktien:
@@ -194,13 +194,13 @@ Wertpapiere) 2 144 2 243
 Eigenkapital 35 375 35 196
 (davon A. -K.) 13 350 13 350
 Fremdkapital 33 348 31 871
-Gewinnnach Vertrag 2 055 2 062
+Gewinnnach Vortrag 2 055 2 062
 Aus den Gewinn- und Verlust-
 rechnungen
 19621963
 Löhne und Gehälter 25 671 24 207
 Abschreibungen 5 842 4 711
-EEV-Steuern u. ALAG 2 231 2 754
+EEV-Steuern u. LSG 2 231 2 754
 Sonstige Steuern 2 688 2 504
 Umsatzerlöse 73 156 71 356
 Beteiligungserträge 7065

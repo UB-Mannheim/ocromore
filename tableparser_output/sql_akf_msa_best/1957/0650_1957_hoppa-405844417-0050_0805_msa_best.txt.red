@@ -5,7 +5,7 @@ Fernschreiber:0212158.
 Vorstand:
 Dr.-Ing.Dr.-Ing.E.h.FriedrichLade-
 mann,Hamburg;
-MaxRoss,Hamburg;
+MaxCross,Hamburg;
 WalterHeinze,Hamburg.
 Aufsichtsrat:
 ErnstPlate,Hamburg,Vors.;
@@ -17,7 +17,7 @@ Hamburg;
 Dr.KurtGlässing,Hamburg;
 WilhelmJoost,Hamburg(Arbeitnehmer-
 vertreter);
-HeinrichMahler,Hamburg(Arbeitnehmer-
+HeinrichKahler,Hamburg(Arbeitnehmer-
 vertreter);
 Dr.JoachimRiehle,Hamburg;
 AdolphSchönfelder,Hamburg;
@@ -183,7 +183,7 @@ Barmittel)82924241
 Eigenkapital8314982992
 (davonA.-K.)6903569035
 Fremdkapital6887057435
-GewinnnachVortrag3053
+GewinnnachVertrag3053
 AusdenGewinn-undVerlust-
 rechnungen
 Abschreibungen1212413183

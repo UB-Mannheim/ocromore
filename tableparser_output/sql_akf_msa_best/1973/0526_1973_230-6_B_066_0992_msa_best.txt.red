@@ -18,7 +18,7 @@ R.H.DelMar,London;
 Dr.J.M.Goudswaard,Rotterdam;
 G.E.Graham,London;
 Mr.C.T.C.Heyning,Rotterdam;
-H.F.vondenHoven,Rotterdam;
+H.F.vondenHohen,Rotterdam;
 J.J.H.Nagel,Rotterdam;
 M.Ormerod,Rotterdam;
 D.A.Orr,London;
@@ -30,8 +30,8 @@ Ir.K.H.Veldhuis,London
 BeratendeMitglieder:
 H.S.A.Hartog,Hamburg;
 Dr.jur.RudolfMueller,Frankfurt(M);
-Dr.J.H.vanRoijen,Wassenaar;
-F.J.Tempel,DenHaag;
+Dr.J.H.vanOijen,Wassenaar;
+F.J.Hempel,DenHaag;
 Dr.H.J.Witteveen,Wassenaar
 Sekretäre:
 C.Zwagerman,London;
@@ -60,15 +60,15 @@ folgendenHoldinggesellschaftenverwaltet:
 AandeeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 "Saponia"',MaatschappijtotBeheervan
-AandeleninIndustrielleOndernemingen
+AandeeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 '"'Marga'',MaatschappijtotBeheervan
-AandeeleninIndustrielleOndernemingen
+AandeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 Mavibel(MaatschappijvoorInternationale
 Beleggingen)N.V.,Rotterdam
 "Lipoma'',MaatschappijtotBeheervan
-AandeleninIndustrielleOndernemingen
+AandeeleninIndustrielleOndernemingen
 N.V.,Rotterdam
 HandelsmaatschappijNoordaN.V.,
 Amsterdam
@@ -88,7 +88,7 @@ Antwerpen;Handelsbank;sämtl.Antwerpen;
 BankvandeSocieteGeneraledeBelgique;
 SocieteBelgedeBanque;BankLambert;
 CreditGeneraldeBelgique;sämtl.Brüssel;
-CreditCommercialdeMons,Mohns;
+CreditCommercialdeMoos,Mond;
 BanqueRothschild,Paris;
 Creditanstalt-Bankverein;Österreichische
 LänderbankAG;Schoeller&Co.Bank-

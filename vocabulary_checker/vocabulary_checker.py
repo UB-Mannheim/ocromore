@@ -1,6 +1,7 @@
 from pysymspell.symspell import SymSpell
 from configuration.configuration_handler import ConfigurationHandler
 from utils.conditional_print import ConditionalPrint
+import numpy as np
 import re
 
 class VocabularyChecker():
@@ -98,14 +99,6 @@ class VocabularyChecker():
         else:
             return False
 
-    def _border_text_removal(self, input_text):
-        print("asd")
-        if len(input_text)>2:
-            print("asd")
-
-        else:
-            return
-
     def initialize_lines(self, dict_file_path, remove_special_border_chars):
         doc = self._load_doc(dict_file_path)
 
@@ -149,23 +142,88 @@ class VocabularyChecker():
         sym_spell.create_dictionary_by_list(self.dict_lines)
         self.spellchecker = sym_spell
 
+    def correct_text_at_certain_indices_only(self, input_text, possible_error_indices):
 
-    def correct_text(self, input_text):
+        replacement_char = "‖"
+        return_term, suggestions, first_letter_high = self.correct_text(input_text, suggestion_verbosity = SymSpell.Verbosity.ALL)
 
+        if input_text == return_term:
+            return return_term
+        #print("asd")
+
+        input_text_array = list(input_text)
+
+        #if "Vortrag" in input_text or len(suggestions)>=2:
+        #    print("asd")
+
+        suggestion_number_error_correction_count = []
+
+        num_of_possible_suggestions = 0
+
+        for suggestion in suggestions:
+            input_text_array_c = input_text_array[:]  # copy input text array
+            sug_array = list(suggestion.term)
+
+            for char_index_it, char_it in enumerate(input_text_array):
+                for char_index_sug, char_sug in enumerate(sug_array):
+
+                    if input_text_array_c[char_index_it] == sug_array[char_index_sug]:
+                        input_text_array_c[char_index_it] = replacement_char
+                        sug_array[char_index_sug] = replacement_char
+                        continue
+            # print("asd")
+
+
+            number_of_possible_errors_corrected = 0
+            # check if char was sustracted in possible error indices
+            for index in possible_error_indices:
+                char_to_check = input_text_array_c[index]
+                char_previous = input_text_array[index]
+                if char_to_check == char_previous:
+                    number_of_possible_errors_corrected += 1
+
+            if number_of_possible_errors_corrected >= 1:
+                num_of_possible_suggestions += 1
+
+            suggestion_number_error_correction_count.append(number_of_possible_errors_corrected)
+
+        if len(suggestion_number_error_correction_count) <= 0:
+            return None
+
+        # if num_of_possible_suggestions >=2:
+        #     print("asd")
+
+        best_suggestion_index = np.argmax(suggestion_number_error_correction_count)
+        best_suggestion_ecccount = suggestion_number_error_correction_count[best_suggestion_index]
+        if best_suggestion_ecccount > 0:
+            best_suggestion_value = suggestions[best_suggestion_index].term
+            if first_letter_high:
+                best_suggestion_value = best_suggestion_value[0].upper() + best_suggestion_value[1:]
+            return best_suggestion_value
+        else:
+            return None
+
+
+    def correct_text(self, input_text, suggestion_verbosity=None):
 
         first_letter_high = False
         if self.config.KEYING_RESULT_VC_DOWNCAST_ALL_CASES:
             first_letter = input_text[0]
             first_letter_high = first_letter.islower() == False
         #    input_text = input_text.lower()
-        suggestions = self.spellchecker.lookup(input_text, self.suggenstion_verbosity, self.max_edist)
+
+        suggestion_verbosity_used = self.suggenstion_verbosity
+        if suggestion_verbosity != None:
+            suggestion_verbosity_used = suggestion_verbosity
+
+        suggestions = self.spellchecker.lookup(input_text, suggestion_verbosity_used, self.max_edist)
 
         if len(suggestions) >= 1:
             return_term  = suggestions[0]._term
             if self.config.KEYING_RESULT_VC_DOWNCAST_ALL_CASES and first_letter_high:
                 return_term = return_term[0].upper() + return_term[1:]
 
-            return return_term, suggestions
+            return return_term, suggestions, first_letter_high
         else:
-            return None, suggestions
+            return None, suggestions, first_letter_high
 

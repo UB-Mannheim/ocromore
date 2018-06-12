@@ -20,7 +20,7 @@ Dr.HansC.Boden,Vors.;
 Dr.jur.HugoEBäurle,stellv.Vors.;
 Dr.-Ing.E.h.HeinzThörner,stellv.Vors.;
 Dr.-Ing.FriedrichHämmerling;
-Dipl.-Ing.PaulMarke;
+Dipl.-Ing.PaulHarke;
 Dr.rer.pol.h.c.HansKlemm;
 LudwigKönigsheim
 Aufsichtsrat:
@@ -57,7 +57,7 @@ Tätigkeitsgebiet:
 GegenstanddesUnternehmensistjedeArt
 gewerblicherAusnutzungderElektrizität
 undjedesonstigeBetätigungaufindustriel-
-lemGebieteimIn-undAusland,nament-
+lemGebieteimIn-undAuslande,nament-
 lichHerstellung,VertrieboderVerwertung
 industriellerErzeugnisse,Herstellung,
 Einrichtung,Erwerb,Pachtung,Bewirt-
@@ -203,7 +203,7 @@ inBerlin:
 BankfürHandelundIndustrieAG;Berli-
 nerDiscontoBankAG;BerlinerHandels-
 Gesellschaft;BerlinerBankAG;Berliner
-CommerzbankAG;DelbrückSchickler&
+CommerzbankAG;DellbrückSchickler&
 Co.;Hardy&Co.GmbH;
 inBremen:
 BremerBankNiederlassungderDresdner
@@ -341,12 +341,12 @@ derUmsatzzunahmeentfielaufdasWaren-
 geschäft.
 DerAuslandsumsatzerhöhtesichauf
 DM309Mio.DerAnteildesExportesam
-Gesamtgeschäftlagedamitunverändert
+Gesamtgeschäftfagdamitunverändert
 bei22%.
 DerUmsatzdermaßgeblichenTochter-
 gesellschaften,d.h.derjenigenGesell-
 schaften,anderenKapitaldieAEGmit
-über50%beteiligtist,siegimgleichen
+über50%beteiligtist,stierimgleichen
 Zeitraumvon793um19%aufDM943
 Mio.AndieserZunahmehattedieTele-
 funkenGmbHwesentlichenAnteil.Der
@@ -355,7 +355,7 @@ dieserTochtergesellschaften-jedoch
 unterAbzugdergegenseitigenLieferun-
 gen-erreichteimBerichtsjahrDM2153
 MiogegenüberDM1955MioimVorjahr.
-DerAuftragseinganglagesowohlimIn-
+DerAuftragseinganglsgsowohlimIn-
 lands-alsauchimAuslandsgeschäftet-
 wasüberdenBestelleingängendesVor-
 jahres.EinemRückgangderAuslands-
@@ -363,7 +363,7 @@ aufträgeimtechnischenGeschäftstand
 eineZunahmederAuslandsbestellungen
 imWarengeschäftgegenüber.
 AlsErgebnisderAuftragseingangs-und
-UmsatzentwicklunghieltsichderAuf-
+UmsatzentwicklungzieltsichderAuf-
 tragsbestandnahezuunverändertaufder
 zuBeginndesGeschäftsjahresvorhande-
 nenHöhe.DerAnteildesAuslandsge-
@@ -375,7 +375,7 @@ ImlaufendenJahrhatsichdasGeschäft
 bisherbefriedigendentwickelt.Allerdings
 haltendieTendenzenzurKostensteigerung
 einerseitsundzumDruckaufdiePreise
-andererseitsweiteran.InderErwartung,
+andererseitsweiteran.InterErwartung,
 daßesgelingt,dieAuswirkungdieser
 TendenzeninerträglichenGrenzenzu
 halten,hofftdieGesellschaftauchfürdas
@@ -393,7 +393,7 @@ Barmittel)138500105375
 Eigenkapital395000395000
 (davonA.-K.)310000310000
 Fremdkapital818444811488
-GewinnohneVortrag
+GewinnohneVertrag
 (1958/59nach
 Vortrag)3530237591
 AusdenGewinn-undVerlust-

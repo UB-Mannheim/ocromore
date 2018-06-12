@@ -44,7 +44,7 @@ fliesen,glasierteTrennwandsteine,
 Schwimmbeckensteine;
 WerkIsmaningbeiMünchen:Mauerziegel,
 Vormauerziegel(Hartbrandverblender),
-Feinklinkerriemchenmitglatterund
+Feinklinkerriemchenmitgatterund
 profilierterOberfläche,frostsichere
 Wandfliesen,großformatigeZiegelfliesen,
 Straßenmarkierungsklinker,Bordstein-
@@ -73,7 +73,7 @@ HAGROBHandelsgesellschaftfürGrob-
 undFeinkeramikGmbH,München
 Kapital:DM22000.-(50%)
 AGROBHoldingAG,Basel(Schweiz)
-Kapital:bfrs4500000.-(100%)
+Kapital:sfrs4500000.-(100%)
 TorontoBrickCo.Ltd.,Toronto(Kanada)
 Kapital:can.$225125.-(23,32%)
 FrontenacFloor&WallTileLtd.,
@@ -111,7 +111,7 @@ Stückelung:
 8400Inh.-St.-Akt.zujeDM1000.-
 5000Inh.-St.-Akt.zujeDM100.-
 4250Inh.-Vorz.-Akt.zujeDM1000.-
-2000Inh.-Vorz.-Akt.zugeDM100.-
+2000Inh.-Vorz.-Akt.zujeDM100.-
 BesondereRechtederander
 BörseinMünchen(amtl.)no-
 tiertenVorzugsaktien:
@@ -194,13 +194,13 @@ Wertpapiere)21442243
 Eigenkapital3537535196
 (davonA.-K.)1335013350
 Fremdkapital3334831871
-GewinnnachVertrag20552062
+GewinnnachVortrag20552062
 AusdenGewinn-undVerlust-
 rechnungen
 19621963
 LöhneundGehälter2567124207
 Abschreibungen58424711
-EEV-Steuernu.ALAG22312754
+EEV-Steuernu.LSG22312754
 SonstigeSteuern26882504
 Umsatzerlöse7315671356
 Beteiligungserträge7065

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      382   Words
-      16   Misrecognized
-   95.81%  Accuracy
+      18   Misrecognized
+   95.29%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -19,13 +19,13 @@ Non-stopwords
       25        1    96.00        7
       12        0   100.00        8
       38        0   100.00        9
-      20        0   100.00       10
+      20        1    95.00       10
       26        1    96.15       11
       14        0   100.00       12
       10        0   100.00       13
       17        1    94.12       14
-       7        1    85.71       15
-      13        0   100.00       16
+       7        2    71.43       15
+      13        1    92.31       16
        5        0   100.00       17
        6        1    83.33       18
        6        0   100.00       19
@@ -45,34 +45,34 @@ Non-stopwords
        1        0   100.00       33
        1        0   100.00       34
        4        0   100.00       35
-       7        4    42.86       36
+       7        3    57.14       36
        1        0   100.00       37
        1        1     0.00       38
        2        0   100.00       39
        2        0   100.00       40
-     382       16    95.81    Total
+     382       18    95.29    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     284       12    95.77        1
+     284       15    94.72        1
       13        0   100.00        2
        5        0   100.00        3
        2        0   100.00        4
        1        0   100.00        5
        2        0   100.00        6
        2        0   100.00      >10
-     309       12    96.12    Total
+     309       15    95.15    Total
 
 Phrases
    Count   Missed   %Right   Length
-     382       16    95.81        1
-     381       29    92.39        2
-     380       40    89.47        3
-     379       50    86.81        4
-     378       60    84.13        5
-     377       68    81.96        6
-     376       75    80.05        7
-     375       82    78.13        8
+     382       18    95.29        1
+     381       33    91.34        2
+     380       45    88.16        3
+     379       56    85.22        4
+     378       67    82.28        5
+     377       77    79.58        6
+     376       86    77.13        7
+     375       95    74.67        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -126,7 +126,7 @@ Non-stopwords
        1        0   100.00   a.i.anderson
        1        0   100.00   a.w.j.caron
        1        0   100.00   a.w.p.stenham
-       4        3    25.00   aandeeleninindustrieeleondernemingen
+       4        2    50.00   aandeeleninindustrieeleondernemingen
        6        0   100.00   akt
        1        0   100.00   aktienkapitalsinformvoninhaberpapie
        1        0   100.00   aktienkurse
@@ -205,7 +205,7 @@ Non-stopwords
        1        0   100.00   dr.e.smitt
        1        0   100.00   dr.h.j.witteveen
        1        0   100.00   dr.j.g.collingwood
-       1        0   100.00   dr.j.h.vanroijen
+       1        1     0.00   dr.j.h.vanroijen
        1        0   100.00   dr.j.m.goudswaard
        1        0   100.00   dr.jur.rudolfmueller
        1        0   100.00   dresdnerbankag
@@ -221,7 +221,7 @@ Non-stopwords
        1        0   100.00   emissionsbetrag:hfl50778000
        1        0   100.00   ertragssteuern658960766367
        1        0   100.00   erträge4111430992
-       1        0   100.00   f.j.tempel
+       1        1     0.00   f.j.tempel
        1        0   100.00   fernruf
        1        0   100.00   fernschreiber
        1        0   100.00   fisch
@@ -237,7 +237,7 @@ Non-stopwords
        1        0   100.00   grundkapital
        1        0   100.00   gründung
        1        0   100.00   h.a.holmes
-       1        0   100.00   h.f.vondenhoven
+       1        1     0.00   h.f.vondenhoven
        1        0   100.00   h.s.a.hartog
        1        0   100.00   haar
        1        0   100.00   hamburg

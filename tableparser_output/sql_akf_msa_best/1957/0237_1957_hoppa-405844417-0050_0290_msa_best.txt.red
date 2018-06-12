@@ -1,6 +1,6 @@
 �
 Sitz:l..SisunWESTFALEN(216)Geisweid
-erst"(Krs.Siegen).
+urs"(Krs.Siegen).
 Fernruf:SiegenSa.-Nr.5181.
 Fernschreiber:031827.
 Vorstand:
@@ -138,7 +138,7 @@ Barmiittel)56274736
 Eigenkapital7046070460
 (davonA.-K.)4000040000
 Fremdkapital7260994925
-GewinnnachVortrag24003200
+GewinnnachVertrag24003200
 AusdenGewinn-undVerlust-
 rechnungen
 LöhneundGehälter3033335932

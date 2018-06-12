@@ -1,31 +1,31 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     8833   Characters
-     148   Errors
-   98.32%  Accuracy
+     144   Errors
+   98.37%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   98.32%  Accuracy After Correction
+   98.37%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      47       32       69      148   Unmarked
-      47       32       69      148   Total
+      46       32       66      144   Unmarked
+      46       32       66      144   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
      339        1    99.71   ASCII Spacing Characters
     1172       40    96.59   ASCII Special Symbols
     1439        0   100.00   ASCII Digits
-     865       10    98.84   ASCII Uppercase Letters
-    4909       26    99.47   ASCII Lowercase Letters
+     865       11    98.73   ASCII Uppercase Letters
+    4909       25    99.49   ASCII Lowercase Letters
        1        0   100.00   Latin1 Uppercase Letters
-     106        1    99.06   Latin1 Lowercase Letters
+     106        0   100.00   Latin1 Lowercase Letters
        1        0   100.00   General Punctuation
-    8833       79    99.11   Total
+    8833       78    99.12   Total
 
   Errors   Marked   Correct-Generated
       16        0   {}-{WestfalenbankAG,}
@@ -43,9 +43,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {.-}-{,=}
        2        0   {I}-{11}
        2        0   {We}-{}
-       2        0   {W}-{v}
+       2        0   {W}-{i}
        2        0   {}-{%}
-       2        0   {é}-{ee}
        1        0   {"}-{'}
        1        0   {"}-{N}
        1        0   {"}-{R}
@@ -55,15 +54,15 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {.}-{;}
        1        0   {;}-{:}
        1        0   {<FEFF>}-{�}
-       1        0   {C}-{K}
+       1        0   {C}-{B}
        1        0   {D}-{K}
        1        0   {M}-{Y}
+       1        0   {N}-{F}
        1        0   {d}-{}
-       1        0   {e}-{}
-       1        0   {h}-{}
+       1        0   {f}-{a}
        1        0   {j}-{g}
        1        0   {l}-{I}
-       1        0   {l}-{b}
+       1        0   {l}-{}
        1        0   {m}-{}
        1        0   {n}-{r}
        1        0   {q}-{w}
@@ -75,8 +74,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {}-{<\n>}
        1        0   {}-{_}
        1        0   {}-{i}
-       1        0   {}-{o}
-       1        0   {}-{s}
        1        0   {}-{‚}
 
    Count   Missed   %Right
@@ -117,7 +114,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       53        0   100.00   {K}
       13        0   100.00   {L}
       80        1    98.75   {M}
-      34        0   100.00   {N}
+      34        1    97.06   {N}
        9        0   100.00   {O}
        8        0   100.00   {P}
       18        0   100.00   {R}
@@ -131,10 +128,10 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      123        1    99.19   {b}
      145        1    99.31   {c}
      166        1    99.40   {d}
-     682        3    99.56   {e}
-      97        1    98.97   {f}
+     682        2    99.71   {e}
+      97        2    97.94   {f}
      127        0   100.00   {g}
-     224        2    99.11   {h}
+     224        1    99.55   {h}
      363        0   100.00   {i}
       16        1    93.75   {j}
      122        1    99.18   {k}
@@ -156,7 +153,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   100.00   {Ö}
        9        0   100.00   {ß}
       27        0   100.00   {ä}
-       2        1    50.00   {é}
+       2        0   100.00   {é}
       19        0   100.00   {ö}
       49        0   100.00   {ü}
        1        0   100.00   {’}

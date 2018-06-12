@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      642   Words
-      20   Misrecognized
-   96.88%  Accuracy
+      23   Misrecognized
+   96.42%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -24,9 +24,9 @@ Non-stopwords
       23        1    95.65        9
       34        2    94.12       10
       27        0   100.00       11
-      34        1    97.06       12
+      34        2    94.12       12
       14        0   100.00       13
-      21        0   100.00       14
+      21        1    95.24       14
       17        1    94.12       15
       22        1    95.45       16
       20        0   100.00       17
@@ -40,7 +40,7 @@ Non-stopwords
        3        0   100.00       25
        8        2    75.00       26
        7        0   100.00       27
-       3        0   100.00       28
+       3        1    66.67       28
        2        0   100.00       29
        3        0   100.00       30
        3        0   100.00       31
@@ -49,11 +49,11 @@ Non-stopwords
        4        0   100.00       34
        1        0   100.00       35
        1        0   100.00       37
-     636       19    97.01    Total
+     636       22    96.54    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     413       19    95.40        1
+     413       22    94.67        1
       40        0   100.00        2
        8        0   100.00        3
        4        0   100.00        4
@@ -62,18 +62,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        3        0   100.00      >10
-     477       19    96.02    Total
+     477       22    95.39    Total
 
 Phrases
    Count   Missed   %Right   Length
-     642       20    96.88        1
-     641       35    94.54        2
-     640       48    92.50        3
-     639       61    90.45        4
-     638       74    88.40        5
-     637       85    86.66        6
-     636       96    84.91        7
-     635      107    83.15        8
+     642       23    96.42        1
+     641       41    93.60        2
+     640       57    91.09        3
+     639       73    88.58        4
+     638       88    86.21        5
+     637      101    84.14        6
+     636      114    82.08        7
+     635      127    80.00        8
 
 Stopwords
    Count   Missed   %Right   
@@ -240,7 +240,7 @@ Non-stopwords
        1        0   100.00   amtl
        1        0   100.00   anlagenundeinrichtungzurgrundstoff
        1        0   100.00   anlagevermögen688646733367
-       1        0   100.00   anónimaindustrialycomercial
+       1        1     0.00   anónimaindustrialycomercial
        1        0   100.00   arbeitnehmervertreter
        1        0   100.00   arnopaulbäumer
        5        0   100.00   auf
@@ -326,7 +326,7 @@ Non-stopwords
        1        0   100.00   flüssigemittel
        2        0   100.00   frank
        1        0   100.00   frankfurt
-       1        0   100.00   franzklemmer
+       1        1     0.00   franzklemmer
        1        0   100.00   freiv
        1        0   100.00   fremdkapital19494072294616
        1        0   100.00   friedrichlaußermair
@@ -359,7 +359,7 @@ Non-stopwords
        1        0   100.00   hausen
        1        0   100.00   hebezeugegmbh
        1        0   100.00   heilbronn
-       1        0   100.00   herbertredlich
+       1        1     0.00   herbertredlich
        2        0   100.00   hessen
        1        1     0.00   ii
        1        0   100.00   in1000dm

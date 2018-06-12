@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      300   Words
-      15   Misrecognized
-   95.00%  Accuracy
+      18   Misrecognized
+   94.00%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,14 +13,14 @@ Non-stopwords
       15        0   100.00        1
        8        1    87.50        2
       18        2    88.89        3
-      25        1    96.00        4
-       9        0   100.00        5
+      25        0   100.00        4
+       9        1    88.89        5
       18        0   100.00        6
       29        1    96.55        7
-      22        2    90.91        8
+      22        3    86.36        8
       16        1    93.75        9
       20        2    90.00       10
-      16        0   100.00       11
+      16        1    93.75       11
       13        1    92.31       12
       10        0   100.00       13
        9        1    88.89       14
@@ -39,35 +39,35 @@ Non-stopwords
        4        1    75.00       28
        1        0   100.00       30
        1        0   100.00       31
-       1        0   100.00       32
+       1        1     0.00       32
        1        0   100.00       33
        1        0   100.00       34
        1        0   100.00       35
        1        0   100.00       36
        1        0   100.00       37
-     300       15    95.00    Total
+     300       18    94.00    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     225       11    95.11        1
+     225       15    93.33        1
       15        0   100.00        2
        2        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        1        0   100.00        9
        1        0   100.00      >10
-     248       11    95.56    Total
+     248       15    93.95    Total
 
 Phrases
    Count   Missed   %Right   Length
-     300       15    95.00        1
-     299       28    90.64        2
-     298       40    86.58        3
-     297       50    83.16        4
-     296       59    80.07        5
-     295       67    77.29        6
-     294       74    74.83        7
-     293       81    72.35        8
+     300       18    94.00        1
+     299       34    88.63        2
+     298       49    83.56        3
+     297       63    78.79        4
+     296       76    74.32        5
+     295       89    69.83        6
+     294      100    65.99        7
+     293      111    62.12        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -173,7 +173,7 @@ Non-stopwords
        1        0   100.00   davona
        1        0   100.00   derivatenphrikolat
        1        0   100.00   dieabsatzentwicklungwarbisjetztgut
-       5        2    60.00   div.sch.nr
+       5        1    80.00   div.sch.nr
        1        0   100.00   dividendenaufstammaktien
        1        0   100.00   dm77000000
        1        0   100.00   dr
@@ -185,14 +185,14 @@ Non-stopwords
        1        0   100.00   eev
        1        0   100.00   eigenkapital6800069500
        1        0   100.00   einemzufriedenstellendenabschluß1964
-       1        0   100.00   ende1963guteauftragsbeständevor
+       1        1     0.00   ende1963guteauftragsbeständevor
        1        0   100.00   erhöhungaufdm42500000
        1        0   100.00   erichselbach
        1        0   100.00   erzeugnisse
        1        0   100.00   erzeugung
        2        0   100.00   essen
        1        0   100.00   faser
-       1        0   100.00   faserredon
+       1        1     0.00   faserredon
        1        0   100.00   fernruf
        1        0   100.00   fernschreiber
        1        0   100.00   folien
@@ -213,7 +213,7 @@ Non-stopwords
        1        0   100.00   grundkapital:dm77000000
        1        0   100.00   gründung
       12        0   100.00   hamburg
-       1        0   100.00   hansrinn
+       1        1     0.00   hansrinn
        2        0   100.00   holstein
        1        0   100.00   hygiene
        1        0   100.00   i.h.stein
@@ -240,7 +240,7 @@ Non-stopwords
        1        0   100.00   kurtvonoswald
        1        0   100.00   lauen
        1        0   100.00   lieferforderungen1936921165
-       1        1     0.00   lt.h
+       1        0   100.00   lt.h
        1        0   100.00   löhneundgehälter5885462740
        4        0   100.00   m
        1        0   100.00   martinluther
@@ -268,7 +268,7 @@ Non-stopwords
        1        0   100.00   ratebaugesellschaftmbh
        1        0   100.00   rechnungen
        1        0   100.00   restüber
-       1        0   100.00   reyon
+       1        1     0.00   reyon
        1        0   100.00   rheinischegirozentrale
        1        0   100.00   rudolfvolkland
        1        0   100.00   sal.oppenheimjr
@@ -310,7 +310,7 @@ Non-stopwords
        1        0   100.00   vorstand
        1        0   100.00   werkeaktiengesellschaft
        1        0   100.00   werkeinsiegburg
-       1        0   100.00   wernerdiehn
+       1        1     0.00   wernerdiehn
        1        0   100.00   wertpapier
        1        0   100.00   wertpapiere
        1        0   100.00   westfälischebau

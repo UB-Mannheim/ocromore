@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      374   Words
-      16   Misrecognized
-   95.72%  Accuracy
+      14   Misrecognized
+   96.26%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -23,52 +23,52 @@ Non-stopwords
       18        0   100.00       10
       21        0   100.00       11
       12        1    91.67       12
-      10        1    90.00       13
+      10        0   100.00       13
       10        0   100.00       14
        8        0   100.00       15
        4        0   100.00       16
        7        0   100.00       17
        8        0   100.00       18
-      14        1    92.86       19
+      14        0   100.00       19
        7        1    85.71       20
        7        0   100.00       21
        8        0   100.00       22
        6        0   100.00       23
        5        0   100.00       24
-       6        2    66.67       25
+       6        1    83.33       25
        2        0   100.00       26
        6        0   100.00       27
        4        0   100.00       28
        1        0   100.00       29
        1        0   100.00       30
        3        0   100.00       31
-       4        0   100.00       32
+       4        1    75.00       32
        1        0   100.00       33
        5        0   100.00       34
        1        0   100.00       35
        5        0   100.00       36
        1        0   100.00       38
-     373       16    95.71    Total
+     373       14    96.25    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     293       15    94.88        1
+     293       14    95.22        1
       27        0   100.00        2
        3        0   100.00        3
        1        0   100.00        4
        1        0   100.00      >10
-     325       15    95.38    Total
+     325       14    95.69    Total
 
 Phrases
    Count   Missed   %Right   Length
-     374       16    95.72        1
-     373       28    92.49        2
-     372       40    89.25        3
-     371       52    85.98        4
-     370       63    82.97        5
-     369       74    79.95        6
-     368       83    77.45        7
-     367       91    75.20        8
+     374       14    96.26        1
+     373       24    93.57        2
+     372       34    90.86        3
+     371       44    88.14        4
+     370       53    85.68        5
+     369       62    83.20        6
+     368       69    81.25        7
+     367       75    79.56        8
 
 Stopwords
    Count   Missed   %Right   
@@ -157,7 +157,7 @@ Non-stopwords
        1        0   100.00   agrobholdingag
        1        0   100.00   agrobinvestmentsltd
        2        0   100.00   akt
-       2        1    50.00   akt.zujedm100
+       2        0   100.00   akt.zujedm100
        2        0   100.00   akt.zujedm1000
        1        0   100.00   aktienkurse
        1        0   100.00   aktionäre
@@ -221,7 +221,7 @@ Non-stopwords
        1        0   100.00   emissionsbetrag:dm10000000
        1        0   100.00   erheblicheumsatzsteigerungen
        1        0   100.00   erhöhungaufdm10000000
-       1        0   100.00   feinklinkerriemchenmitglatterund
+       1        1     0.00   feinklinkerriemchenmitglatterund
        1        0   100.00   fernruf:münchen368555
        1        0   100.00   fernschreiber
        2        0   100.00   fliesen
@@ -239,7 +239,7 @@ Non-stopwords
        1        0   100.00   geschäftsjahr:kalenderjahr
        1        0   100.00   gesellschaft
        1        0   100.00   gesellschaftskasse
-       1        1     0.00   gewinnnachvortrag20552062
+       1        0   100.00   gewinnnachvortrag20552062
        1        0   100.00   glasiertetrennwandsteine
        1        0   100.00   glasierteundunglasier
        1        0   100.00   großformatigeziegelfliesen
@@ -273,7 +273,7 @@ Non-stopwords
        2        0   100.00   kapital:can
        1        0   100.00   kapital:dm22000
        1        0   100.00   kapital:dm940000
-       1        1     0.00   kapital:sfrs4500000
+       1        0   100.00   kapital:sfrs4500000
        1        0   100.00   karlwild
        1        0   100.00   ken
        1        0   100.00   kenn

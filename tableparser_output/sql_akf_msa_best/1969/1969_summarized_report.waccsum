@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1756   Words
-      56   Misrecognized
-   96.81%  Accuracy
+      61   Misrecognized
+   96.53%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,7 +12,7 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      89        1    98.88        1
+      89        0   100.00        1
      115        5    95.65        2
      107        1    99.07        3
      152        7    95.39        4
@@ -23,20 +23,20 @@ Non-stopwords
       89        0   100.00        9
       79        2    97.47       10
       76        1    98.68       11
-      69        2    97.10       12
-      61        2    96.72       13
+      69        4    94.20       12
+      61        3    95.08       13
       41        0   100.00       14
       56        1    98.21       15
       51        0   100.00       16
-      48        3    93.75       17
+      48        4    91.67       17
       42        4    90.48       18
       22        3    86.36       19
       26        1    96.15       20
       22        0   100.00       21
       16        2    87.50       22
       15        1    93.33       23
-      13        2    84.62       24
-      19        4    78.95       25
+      13        3    76.92       24
+      19        5    73.68       25
       16        1    93.75       26
       19        0   100.00       27
       11        1    90.91       28
@@ -52,11 +52,11 @@ Non-stopwords
        4        1    75.00       38
        1        0   100.00       39
        2        0   100.00       40
-    1751       56    96.80    Total
+    1751       61    96.52    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    1131       48    95.76        1
+    1131       53    95.31        1
       91        1    98.90        2
       37        0   100.00        3
       14        0   100.00        4
@@ -67,18 +67,18 @@ Distinct Non-stopwords
        1        0   100.00        9
        1        0   100.00       10
       10        0   100.00      >10
-    1303       49    96.24    Total
+    1303       54    95.86    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1756       56    96.81        1
-    1753       99    94.35        2
-    1750      136    92.23        3
-    1747      170    90.27        4
-    1744      201    88.47        5
-    1741      227    86.96        6
-    1738      251    85.56        7
-    1735      274    84.21        8
+    1756       61    96.53        1
+    1753      109    93.78        2
+    1750      151    91.37        3
+    1747      189    89.18        4
+    1744      225    87.10        5
+    1741      256    85.30        6
+    1738      286    83.54        7
+    1735      315    81.84        8
 
 Stopwords
    Count   Missed   %Right   
@@ -576,12 +576,12 @@ Non-stopwords
        1        0   100.00   dr.h.c.friedrichcarlfreiherrvonop
        1        0   100.00   dr.hansc.boden
        1        0   100.00   dr.jur.eduardvonschwartzkoppen
-       1        0   100.00   dr.jur.hansgroebe.gehrden
+       1        1     0.00   dr.jur.hansgroebe.gehrden
        1        0   100.00   dr.jur.horstpavel
        1        0   100.00   dr.jur.kurtschneider
        1        0   100.00   dr.phil.erhardlöwe
        1        0   100.00   dr.phil.h.c.herbertquandt
-       1        0   100.00   dr.rer.nat.gerhardlander
+       1        1     0.00   dr.rer.nat.gerhardlander
        1        0   100.00   dr.rer.pol.hansbühler
        1        0   100.00   dr.wernervonsimson
        2        0   100.00   dresdner
@@ -631,7 +631,7 @@ Non-stopwords
        1        0   100.00   fabrikackerstraße
        1        0   100.00   fabrikag
        1        0   100.00   fabrikbacknang
-       1        0   100.00   fabrikbelecke
+       1        1     0.00   fabrikbelecke
        1        0   100.00   fabrikcurtgorschalki
        1        0   100.00   fabrikeiweiler
        2        0   100.00   fabrikenhameln
@@ -688,7 +688,7 @@ Non-stopwords
        1        0   100.00   genehmigteskapital:can
        1        0   100.00   genf
        1        0   100.00   georg
-       1        0   100.00   gerhardkuhle
+       1        1     0.00   gerhardkuhle
        1        0   100.00   gerhardvieweg
        1        0   100.00   gerritdehaas
        1        0   100.00   gerätemechanik
@@ -743,8 +743,8 @@ Non-stopwords
        1        0   100.00   heinzdürrbeck
        1        0   100.00   heinzosterwind
        1        0   100.00   heinzquandt
-       1        0   100.00   heinzzickler
-       1        1     0.00   herbertpavel
+       1        1     0.00   heinzzickler
+       1        0   100.00   herbertpavel
        1        0   100.00   herstellung
        1        0   100.00   herstellungundvertriebvonakkumula
        1        0   100.00   hessen
@@ -783,7 +783,7 @@ Non-stopwords
        1        0   100.00   ing.felixherriger
        1        0   100.00   ing.fritzalf
        1        0   100.00   ing.hansp.goossens
-       1        1     0.00   ing.paulharke
+       1        0   100.00   ing.paulharke
        1        0   100.00   ing.ulrichpetersen
        4        0   100.00   inhaber
        1        0   100.00   insbesondereauchzurerrichtung
@@ -813,7 +813,7 @@ Non-stopwords
        1        0   100.00   jenom.dm20
        1        0   100.00   joseffuchs
        1        0   100.00   jr
-       3        1    66.67   k
+       3        0   100.00   k
        1        0   100.00   kabel
        1        0   100.00   kabelwerk
        1        0   100.00   kanadischezwischenholdingausländische
@@ -949,7 +949,7 @@ Non-stopwords
        1        0   100.00   originalhanauquarzlampengesellschaft
        1        0   100.00   osnabrück
        1        0   100.00   osramgmbh
-       1        0   100.00   ottomössner
+       1        1     0.00   ottomössner
        1        0   100.00   pachtung
        1        0   100.00   papierfabrikgmbhvorm.brüderkäm
        2        0   100.00   paris
@@ -1127,7 +1127,7 @@ Non-stopwords
        1        0   100.00   verwaltunggmbh
        1        0   100.00   verwandtengebieteeinschließlichder
        1        0   100.00   verwertungvonindustriellenundver
-       1        0   100.00   villafrancadeoria
+       1        1     0.00   villafrancadeoria
        1        0   100.00   volta
        1        0   100.00   von1963
        1        0   100.00   vonhalbfabrikaten
@@ -1171,7 +1171,7 @@ Non-stopwords
        2        0   100.00   westfalenbankag
        1        0   100.00   westkupfermetall
        1        0   100.00   wiesbaden
-       1        0   100.00   wilhelmreinke
+       1        1     0.00   wilhelmreinke
        1        0   100.00   wilhelmshaven
        1        0   100.00   winnenden
        1        0   100.00   winnipeg

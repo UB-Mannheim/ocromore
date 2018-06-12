@@ -11,7 +11,7 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      62        5    91.94        1
+      62        4    93.55        1
       83        4    95.18        2
       48        1    97.92        3
       92        1    98.91        4
@@ -19,21 +19,21 @@ Non-stopwords
       87        2    97.70        6
       74        2    97.30        7
       54        3    94.44        8
-      65        3    95.38        9
-      71        5    92.96       10
-      52        1    98.08       11
+      65        2    96.92        9
+      71        6    91.55       10
+      52        0   100.00       11
       40        1    97.50       12
-      42        6    85.71       13
+      42        4    90.48       13
       64        0   100.00       14
       23        2    91.30       15
       27        1    96.30       16
-      35        0   100.00       17
-      28        1    96.43       18
+      35        1    97.14       17
+      28        2    92.86       18
       25        2    92.00       19
       27        0   100.00       20
       15        0   100.00       21
       13        1    92.31       22
-      21        0   100.00       23
+      21        1    95.24       23
       14        1    92.86       24
       13        1    92.31       25
       11        1    90.91       26
@@ -45,7 +45,7 @@ Non-stopwords
       12        1    91.67       32
       18        2    88.89       33
       22        1    95.45       34
-      14        1    92.86       35
+      14        2    85.71       35
       13        0   100.00       36
        4        0   100.00       37
        4        0   100.00       38
@@ -55,7 +55,7 @@ Non-stopwords
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     932       42    95.49        1
+     932       41    95.60        1
       54        1    98.15        2
       20        0   100.00        3
       10        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        2        0   100.00      >10
-    1036       43    95.85    Total
+    1036       42    95.95    Total
 
 Phrases
    Count   Missed   %Right   Length
     1297       51    96.07        1
     1294       93    92.81        2
     1291      132    89.78        3
-    1288      167    87.03        4
-    1285      201    84.36        5
-    1282      235    81.67        6
-    1279      266    79.20        7
-    1276      294    76.96        8
+    1288      168    86.96        4
+    1285      203    84.20        5
+    1282      238    81.44        6
+    1279      268    79.05        7
+    1276      296    76.80        8
 
 Stopwords
    Count   Missed   %Right   
@@ -290,7 +290,7 @@ Non-stopwords
        2        0   100.00   amtl
        1        0   100.00   anderenkapitaldieaegmit
        1        0   100.00   anderenversicherungsunternehmungenzu
-       1        0   100.00   andererseitsweiteran.indererwartung
+       1        1     0.00   andererseitsweiteran.indererwartung
        1        0   100.00   angemessenesergebnis
        1        0   100.00   anlagen
        1        1     0.00   anlagevermögen3609746012
@@ -392,7 +392,7 @@ Non-stopwords
        1        0   100.00   dasjahr1959warbisindenfrühsommer
        3        0   100.00   davona
        1        0   100.00   daßesgelingt
-       2        0   100.00   delbrückschickler
+       2        1    50.00   delbrückschickler
        1        0   100.00   demwertzuwachs.derüberwiegendeteil
        1        0   100.00   den
        1        0   100.00   denhauptsortendergesellschaftauchein
@@ -502,7 +502,7 @@ Non-stopwords
        2        0   100.00   fernruf
        2        0   100.00   fernruf:sa
        3        0   100.00   fernschreiber
-       1        1     0.00   ferzeitenstiegenbisendedesjahres
+       1        0   100.00   ferzeitenstiegenbisendedesjahres
        1        0   100.00   finck
        2        0   100.00   frank
        9        0   100.00   frankfurt
@@ -542,8 +542,8 @@ Non-stopwords
        2        0   100.00   gesellschaftskasse
        1        0   100.00   gewerblicherausnutzungderelektrizität
        1        0   100.00   gewinnnachvortrag438528
-       1        0   100.00   gewinnnachvortrag638762
-       1        0   100.00   gewinnohnevortrag
+       1        1     0.00   gewinnnachvortrag638762
+       1        1     0.00   gewinnohnevortrag
        1        0   100.00   gewisserimportdruckbemerkbar.etwa
        1        0   100.00   girozen
        1        0   100.00   girozentrale
@@ -611,7 +611,7 @@ Non-stopwords
        1        0   100.00   ing.friedrichhämmerling
        1        0   100.00   ing.fritzschmidt
        1        0   100.00   ing.hermannwinkhaus
-       1        1     0.00   ing.paulharke
+       1        0   100.00   ing.paulharke
        1        0   100.00   inhamburg
        1        0   100.00   inhannover
        1        0   100.00   inköln
@@ -637,7 +637,7 @@ Non-stopwords
        1        0   100.00   jenom.dm20
        1        0   100.00   josefmichaely
        1        0   100.00   junider
-       3        1    66.67   k
+       3        0   100.00   k
        1        0   100.00   kaiserslautern
        3        0   100.00   kapital:dm1000000
        1        0   100.00   kapital:dm100000000
@@ -699,7 +699,7 @@ Non-stopwords
        1        0   100.00   lü
       12        0   100.00   lübeck
       12        0   100.00   m
-       1        1     0.00   machtesichbei
+       1        0   100.00   machtesichbei
        1        0   100.00   majoritätzu
        1        0   100.00   mannheim
        1        0   100.00   marktsituationennichtaufeineinzelnes
@@ -864,7 +864,7 @@ Non-stopwords
        1        0   100.00   tendrucker
        1        0   100.00   tenrationalisierungs
        1        0   100.00   tenundelektrischbetriebenekleinge
-       1        0   100.00   thomasentz
+       1        1     0.00   thomasentz
        1        0   100.00   tionellerundnuklearerwärmekraft
        1        0   100.00   tochtergesellschaftenundson
        1        0   100.00   tragsbestandnahezuunverändertaufder
@@ -884,16 +884,16 @@ Non-stopwords
        1        0   100.00   umlaufvermögen42204639
        1        0   100.00   umlaufvermögen771151726913
        1        0   100.00   umsatzderaeg
-       1        0   100.00   umsatzentwicklunghieltsichderauf
+       1        1     0.00   umsatzentwicklunghieltsichderauf
        1        0   100.00   umschwungein.derbedarfinallenspar
        1        0   100.00   umstellung1
        1        0   100.00   umstellung14
        1        0   100.00   umtauschrechtjeweilszum15
        3        0   100.00   und
-       1        1     0.00   undauslande
+       1        0   100.00   undauslande
        1        0   100.00   undauslandezuerrichten
        1        0   100.00   undauslandmitausnahme
-       1        1     0.00   undfarbig
+       1        0   100.00   undfarbig
        1        0   100.00   undfernruf
        1        0   100.00   undgröße
        1        0   100.00   undhamburg

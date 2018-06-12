@@ -6,7 +6,7 @@ Fernruf:
 Sa.-Nr.20191(Hauptverwaltung)
 Fernschreiber:0857851
 Vorstand:
-Dr.h.c.HellmutGreinert,Essen;
+Dr.h.c.HelmuthGreinert,Essen;
 HelmutMeysenburg,Heiligenhaus;
 Dr.AlfredEinnatz,Essen;;
 WilhelmGutmann,Essen,stellv.;;
@@ -17,7 +17,7 @@ Dr.h.c.HermannJ.Abs,Frankfurt(M),
 Vors,;
 Dr.HannsSinzig,Altenkirchen,1.stellv.
 Vors.;
-PaulKullmann,Essen,2.stellv.Vors.;
+PaulBullmann,Essen,2.stellv.Vors.;
 HeinrichSchöller,Essen,3.stellv.Vors.;
 KarlPosthofer,Essen,4.stellv.Vors.;
 Dr.GustavMertens,Geldern,5.stellv.
@@ -30,7 +30,7 @@ Dr.Dr.h.c.WaltherHensel,Düsseldorf,
 8.stellv.Vors,.;
 Dr.BernhardHeun,Krefeld,9,stellv.
 Vors.;
-FritzAndree,Rottach-Egern;
+FritzAndré,Rottach-Egern;
 TheodorBerger,Oberbollheim(Krs.
 Düren);
 ErichBerschkeit,Dürwiss(Krs.Jülich);
@@ -144,7 +144,7 @@ Kapital:DM55000000.-(50%)
 Dividendenab1958:4,7,7,7,7,7%
 Societé&Electriquedel'’OurS.A.,Luxem-
 burg
-Kapital:bfrs.1250000000.-(über40%)
+Kapital:lars.1250000000.-(über40%)
 HochtiefAGfürHoch-undTiefbauten
 vorm.Gebr,.Helfmann,Essen
 Kapital:DM23250000.-(über25%)
@@ -160,7 +160,7 @@ Kapital:DM55000000.-(75%)
 Geschäftsjahr:1.Juli-30.Juni
 Stimmrechtd.Aktieni.d.H.-V.:
 Jenom.DM100,-St.-Akt.=1Stimme;
-jenom.DM100.-Noam,-Akt.=20Stim-
+jenom.DM100.-Fam,-Akt.=20Stim-
 men
 Zahlstellen:_
 Gesellschaftskasse,Essen;;
@@ -261,7 +261,7 @@ N1958365%3477/8%
 30.Sept.1964563,5%551,5%
 +)ErsteNotierungam2.11.1955
 ++)ab3.8.1953KursfürDM-Nennwert
-DividendenaustStammaktien:
+DividendenautStammaktien:
 11I/1948/49-1957/58:insgesamt66,5%
 1958/59:13%(Div.Sch.Nr.9)
 1959/60:13%+3,25%Ausgleichsdivi-
@@ -303,9 +303,9 @@ schlag59%(7.3.);;
 Div.Sch.Nr.17
 ZurGeschäftslage:
 ImGeschäftsjahr1962/63erreichtedie
-nutzbarStromabgabeeineHöhevon
-41,061MrdkvhgegenübereinerAbgabe
-von34,763MrdkvhimVorjahr,
+nutzbareStromabgabeeineHöhevon
+41,061MrdkihgegenübereinerAbgabe
+von34,763MrdkihimVorjahr,
 IndenerstenfünfMonatendesneuenGe-
 schäftsjahres1963/64hatsichderStrom-
 absatzgegenüberdemgleichenZeitraum
