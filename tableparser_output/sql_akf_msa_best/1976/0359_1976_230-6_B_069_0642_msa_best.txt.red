@@ -27,7 +27,7 @@ WolframThiele,Oberhausen;
 OttoVoisard,München;
 FriedrichLaußermair,München,stellv.;
 WolfgangMüller,München,stellv.;;
-HerbertEdlich,Gustavsburg,stellv.
+HerbertRedlich,Gustavsburg,stellv.
 Aufsichtsrat:
 ManfredLennings,Kettwig,Vors.;
 UlrichNeumann,Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ DietrichWilhelmvonMenges,Essen-
 Bredeney;
 SiegfriedSchiffbauer,Kiel;
 Arbeitnehmervertreter::
-FranzLemmer,Augsburg;;
+FranzKlemmer,Augsburg;;
 RudolfRhein,Mainz-Kostheim;;
 EduardSchleinkofer,München;
 FerdinandWolinsky,Oberhausen
@@ -123,10 +123,10 @@ SchleicherAG,Offenbach(M)
 Kapital:DM26000000.-(50,62%)
 Dividendenab1969:18,18,14,7
 (1.1.-30,6,),16,14%
-W.TemmelsBuchdruckereiundVerlag
+W.TümmelsBuchdruckereiundVerlag
 GmbH,Nürnberg
 Kapital:DM1200000.-(100%)
-GüssingAutomobilwerteGmbH,Braun-
+BüssingAutomobilwerteGmbH,Braun-
 schweig
 Kapital:DM42000000.-(97,62%;Be-
 triebspachtvertrag)
@@ -151,7 +151,7 @@ AnönimaIndustrialyComercial,Buenos
 Aires
 Kapital:argent.$319600000.-(50%)
 MecänicaPesadaS.A.,SäoPaulo
-Kapital:Ar$61500000.-(25%)
+Kapital:Cr$61500000.-(25%)
 M.A.N.-Automotive(Australia)Pty.Ltd.,
 Sydney
 Kapital:$A965000.-(91,7%)
@@ -170,7 +170,7 @@ Kapital:FF1518000.-(über50%)
 M.A.N.(Japan)Ltd.,Tokio(Japan)
 Kapital:Yen9000000.-(über50%)
 GroupeEuropé&enpourlaTechniquedes
-TurbinesAvaleur,S.A.,Paris(Frank-
+TurbinesAvapeur,S.A.,Paris(Frank-
 reich)
 Kapital:FF200000.-(über25%)
 AmericanM.A.N.Corporation,NewYork
@@ -182,7 +182,7 @@ GesellschaftenvonuntergeordneterBe-
 deutung
 Geschäftsjahr:1.Juli-30.Juni
 StimmrechtderAktien::
-Venom.DM50.-St.-Akt.=1Stimme
+Jenom.DM50.-St.-Akt.=1Stimme
 Vorz.-Akt.ohneStimmrecht
 Kapitalentwicklungund
 Bezugsrechte:
@@ -242,7 +242,7 @@ Stückelung:
 55100Inh.-Vorz.-Akt.zujeDM50.-
 Aktienkurse(ultimoabgerundet):
 ab16.6.1969StücknotizfürDM100.-und
-agab6.7.1970fürDM50.-
+aab6.7.1970fürDM50.-
 a)Stammaktien
 194836%1968507%1972168DM
 65460%69481DM73118DM

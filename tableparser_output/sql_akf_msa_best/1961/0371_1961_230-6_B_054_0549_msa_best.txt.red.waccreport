@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      232   Words
-       5   Misrecognized
-   97.84%  Accuracy
+       4   Misrecognized
+   98.28%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,7 +22,7 @@ Non-stopwords
       12        0   100.00       10
        8        0   100.00       11
        6        0   100.00       12
-       7        2    71.43       13
+       7        1    85.71       13
        7        0   100.00       14
        2        0   100.00       15
        3        0   100.00       16
@@ -47,27 +47,27 @@ Non-stopwords
        6        0   100.00       36
        1        0   100.00       37
        2        0   100.00       38
-     232        5    97.84    Total
+     232        4    98.28    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     190        4    97.89        1
+     190        3    98.42        1
        3        0   100.00        2
        3        0   100.00        3
        3        0   100.00        4
        3        0   100.00        5
-     202        4    98.02    Total
+     202        3    98.51    Total
 
 Phrases
    Count   Missed   %Right   Length
-     232        5    97.84        1
-     231       10    95.67        2
-     230       15    93.48        3
-     229       20    91.27        4
-     228       25    89.04        5
-     227       30    86.78        6
-     226       34    84.96        7
-     225       38    83.11        8
+     232        4    98.28        1
+     231        8    96.54        2
+     230       12    94.78        3
+     229       16    93.01        4
+     228       20    91.23        5
+     227       24    89.43        6
+     226       28    87.61        7
+     225       32    85.78        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -131,7 +131,7 @@ Non-stopwords
        1        0   100.00   akt
        1        1     0.00   akt.zujedm100
        1        0   100.00   akt.zujedm1000
-       1        1     0.00   akt.zujedm500
+       1        0   100.00   akt.zujedm500
        1        0   100.00   aktienkurse
        1        0   100.00   amtl
        1        0   100.00   anlagevermögen52484596

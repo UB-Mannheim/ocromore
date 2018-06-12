@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1756   Words
-      64   Misrecognized
-   96.36%  Accuracy
+      52   Misrecognized
+   97.04%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,21 +22,21 @@ Non-stopwords
       92        3    96.74        8
       89        0   100.00        9
       79        2    97.47       10
-      76        2    97.37       11
-      69        4    94.20       12
-      61        5    91.80       13
+      76        0   100.00       11
+      69        1    98.55       12
+      61        1    98.36       13
       41        0   100.00       14
-      56        1    98.21       15
+      56        2    96.43       15
       51        0   100.00       16
-      48        4    91.67       17
+      48        3    93.75       17
       42        4    90.48       18
-      22        3    86.36       19
+      22        2    90.91       19
       26        1    96.15       20
       22        0   100.00       21
       16        2    87.50       22
       15        1    93.33       23
-      13        3    76.92       24
-      19        5    73.68       25
+      13        2    84.62       24
+      19        4    78.95       25
       16        1    93.75       26
       19        0   100.00       27
       11        1    90.91       28
@@ -52,11 +52,11 @@ Non-stopwords
        4        1    75.00       38
        1        0   100.00       39
        2        0   100.00       40
-    1751       64    96.34    Total
+    1751       52    97.03    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    1131       56    95.05        1
+    1131       44    96.11        1
       91        1    98.90        2
       37        0   100.00        3
       14        0   100.00        4
@@ -67,18 +67,18 @@ Distinct Non-stopwords
        1        0   100.00        9
        1        0   100.00       10
       10        0   100.00      >10
-    1303       57    95.63    Total
+    1303       45    96.55    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1756       64    96.36        1
-    1753      115    93.44        2
-    1750      159    90.91        3
-    1747      199    88.61        4
-    1744      235    86.53        5
-    1741      266    84.72        6
-    1738      296    82.97        7
-    1735      325    81.27        8
+    1756       52    97.04        1
+    1753       90    94.87        2
+    1750      123    92.97        3
+    1747      153    91.24        4
+    1744      180    89.68        5
+    1741      203    88.34        6
+    1738      225    87.05        7
+    1735      246    85.82        8
 
 Stopwords
    Count   Missed   %Right   
@@ -380,7 +380,7 @@ Non-stopwords
        3        0   100.00   aktienkurse
        1        0   100.00   aktionsgemeinschaftdeutschesteinkoh
        1        0   100.00   aktionäre
-       1        1     0.00   alfredhaymann
+       1        0   100.00   alfredhaymann
        1        0   100.00   allengrößerenstädtendesbundesgebietes
        1        0   100.00   allgemeinegesellschaftfürindustriebetei
        1        0   100.00   altena
@@ -524,7 +524,7 @@ Non-stopwords
        1        0   100.00   commerzbankagdelbrück
        1        0   100.00   companygmbh
        1        0   100.00   courbevoiebeiparis
-       1        0   100.00   créditlyonnais
+       1        1     0.00   créditlyonnais
        1        0   100.00   dadasbe
        7        0   100.00   darunter
        3        0   100.00   davona
@@ -576,12 +576,12 @@ Non-stopwords
        1        0   100.00   dr.h.c.friedrichcarlfreiherrvonop
        1        0   100.00   dr.hansc.boden
        1        0   100.00   dr.jur.eduardvonschwartzkoppen
-       1        1     0.00   dr.jur.hansgroebe.gehrden
+       1        0   100.00   dr.jur.hansgroebe.gehrden
        1        0   100.00   dr.jur.horstpavel
        1        0   100.00   dr.jur.kurtschneider
        1        0   100.00   dr.phil.erhardlöwe
        1        0   100.00   dr.phil.h.c.herbertquandt
-       1        1     0.00   dr.rer.nat.gerhardlander
+       1        0   100.00   dr.rer.nat.gerhardlander
        1        0   100.00   dr.rer.pol.hansbühler
        1        0   100.00   dr.wernervonsimson
        2        0   100.00   dresdner
@@ -631,7 +631,7 @@ Non-stopwords
        1        0   100.00   fabrikackerstraße
        1        0   100.00   fabrikag
        1        0   100.00   fabrikbacknang
-       1        1     0.00   fabrikbelecke
+       1        0   100.00   fabrikbelecke
        1        0   100.00   fabrikcurtgorschalki
        1        0   100.00   fabrikeiweiler
        2        0   100.00   fabrikenhameln
@@ -688,12 +688,12 @@ Non-stopwords
        1        0   100.00   genehmigteskapital:can
        1        0   100.00   genf
        1        0   100.00   georg
-       1        1     0.00   gerhardkuhle
+       1        0   100.00   gerhardkuhle
        1        0   100.00   gerhardvieweg
        1        0   100.00   gerritdehaas
        1        0   100.00   gerätemechanik
        2        0   100.00   geräterundfunk
-       1        1     0.00   ges.vorm.casp.noell
+       1        0   100.00   ges.vorm.casp.noell
        3        0   100.00   geschäftsjahr:kalenderjahr
        5        1    80.00   gesellschaft
        1        0   100.00   gesellschaftaeg
@@ -743,7 +743,7 @@ Non-stopwords
        1        0   100.00   heinzdürrbeck
        1        0   100.00   heinzosterwind
        1        0   100.00   heinzquandt
-       1        1     0.00   heinzzickler
+       1        0   100.00   heinzzickler
        1        0   100.00   herbertpavel
        1        0   100.00   herstellung
        1        0   100.00   herstellungundvertriebvonakkumula
@@ -783,7 +783,7 @@ Non-stopwords
        1        0   100.00   ing.felixherriger
        1        0   100.00   ing.fritzalf
        1        0   100.00   ing.hansp.goossens
-       1        1     0.00   ing.paulharke
+       1        0   100.00   ing.paulharke
        1        0   100.00   ing.ulrichpetersen
        4        0   100.00   inhaber
        1        0   100.00   insbesondereauchzurerrichtung
@@ -809,7 +809,7 @@ Non-stopwords
        2        0   100.00   je16
        1        0   100.00   je19
        1        0   100.00   jedeausderwandlunghervorgehendeak
-       2        1    50.00   jenom.dm100
+       2        0   100.00   jenom.dm100
        1        0   100.00   jenom.dm20
        1        0   100.00   joseffuchs
        1        0   100.00   jr
@@ -949,7 +949,7 @@ Non-stopwords
        1        0   100.00   originalhanauquarzlampengesellschaft
        1        0   100.00   osnabrück
        1        0   100.00   osramgmbh
-       1        1     0.00   ottomössner
+       1        0   100.00   ottomössner
        1        0   100.00   pachtung
        1        0   100.00   papierfabrikgmbhvorm.brüderkäm
        2        0   100.00   paris
@@ -1127,7 +1127,7 @@ Non-stopwords
        1        0   100.00   verwaltunggmbh
        1        0   100.00   verwandtengebieteeinschließlichder
        1        0   100.00   verwertungvonindustriellenundver
-       1        1     0.00   villafrancadeoria
+       1        0   100.00   villafrancadeoria
        1        0   100.00   volta
        1        0   100.00   von1963
        1        0   100.00   vonhalbfabrikaten
@@ -1161,7 +1161,7 @@ Non-stopwords
        1        0   100.00   werkeinlüdenscheidundhellebei
        1        0   100.00   werkstättenundwohnungengmbh
        1        0   100.00   werkzeugmaschinengmbh
-       1        1     0.00   werneraretz
+       1        0   100.00   werneraretz
        1        0   100.00   wertberichtigungen12632099
        1        0   100.00   wertberichtigungen353114
        3        0   100.00   wertpapier
@@ -1171,7 +1171,7 @@ Non-stopwords
        2        0   100.00   westfalenbankag
        1        0   100.00   westkupfermetall
        1        0   100.00   wiesbaden
-       1        1     0.00   wilhelmreinke
+       1        0   100.00   wilhelmreinke
        1        0   100.00   wilhelmshaven
        1        0   100.00   winnenden
        1        0   100.00   winnipeg

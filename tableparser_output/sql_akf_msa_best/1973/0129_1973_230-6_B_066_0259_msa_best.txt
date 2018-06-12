@@ -20,7 +20,7 @@ Dr. -Ing., Dr. -Ing. E. h. Hans Scherenberg,
 Stuttgart;
 Dr.jur. Hanns Martin Schleyer, Stuttgart;
 Heinz Schmidt, Stuttgart;
-Dr.oec. h.c.Rolf PMG. Staelin, Stuttgart;
+Dr.oec. h.c.Rolf P.G. Staelin, Stuttgart;
 Dipl.-Kfm. Arnold Wychodil, Stuttgart;
 Friedrich Binder, Stuttgart, stellv.
 Aufsichtsrat:
@@ -38,10 +38,10 @@ Konrad Kaletsch, Düsseldorf;
 Paul Lichtenberg, Frankfurt (M);
 Günter Max Paefgen, Düsseldorf;
 Dr.jur. Horst Pavel, Bad Homburg v.d.H.;
-Jürgen Konto, Frankfurt (M);
+Jürgen Ponto, Frankfurt (M);
 Arbeitnehmervertreter:
 Paul Gerhold, Kassel;
-Karl Haufe, Stuttgart;
+Karl Hauff, Stuttgart;
 Herbert Lucy, Mannheim;
 Nikolaus Prediger, Gaggenau;
 Ernst Schäfer, Sindelfingen
@@ -136,7 +136,7 @@ Bernardo do Campo
 Kapital: Cr$ 305 300 000. - (100 %, davon
 ein Teil über Brasfinanz AG und über
 Daimler-Benz Holding A.G.)
-Sociedade Té&cnicä de Fundicaes Geris
+Sociedade Té&cnicä de Fundicaes Gerais
 S.A., Sao Paulo (Brasilien)
 Kapital: Cr$ 28 000 000. - (100 %; über
 Mercedes-Benz do Brasil S.A.)
@@ -179,7 +179,7 @@ Kapital: sfrs. 3 000 000. - (100 %; über
 Daimler-Benz Holding AG)
 Mercedes-Benz (Australia) Pty.Ltd.,
 Melbourne (Australien)
-Kapital: Aug 1 200 000. - (100 %)
+Kapital: A$g 1 200 000. - (100 %)
 SOFIDEL S.A., Paris (Frankreich)
 Kapital: FF 34 100 000. - (92,1 %)
 Mercedes-Benz France S.A., Paris
@@ -192,14 +192,14 @@ Madrid (Spanien)
 Kapital: Ptas 972 000 000. - (25,6 %)
 Iranian Diesel Engine Manufacturing
 Company, Täbris (Iran)
-Kapital: Als. 1 000 000 000. - (30 %)
+Kapital: Rls. 1 000 000 000. - (30 %)
 P.T.German Motor Manufacturing,
 Djakarta (Indonesien)
 Kapital: Rp. 567 000 000. - (33,3 %)
 P.T.Star Motors Indonesia, Djakarta
 (Indonesien)
 Kapital: Rp. 189 000 000. - (51,0 %)
-Supreme Star Engineering Pte.Ltd.,
+Supreme Star Engineering Ptc.Ltd.,
 Singapur
 Kapital: S$ 2 000 000. - (26 %)
 Außerdem besitzt die Gesellschaft noch

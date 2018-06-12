@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      300   Words
-      17   Misrecognized
-   94.33%  Accuracy
+      10   Misrecognized
+   96.67%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,15 +12,15 @@ Non-stopwords
    Count   Missed   %Right   Length
       15        0   100.00        1
        8        1    87.50        2
-      18        2    88.89        3
+      18        0   100.00        3
       25        0   100.00        4
-       9        1    88.89        5
+       9        0   100.00        5
       18        0   100.00        6
       29        1    96.55        7
-      22        3    86.36        8
+      22        2    90.91        8
       16        1    93.75        9
-      20        2    90.00       10
-      16        1    93.75       11
+      20        0   100.00       10
+      16        0   100.00       11
       13        1    92.31       12
       10        0   100.00       13
        9        1    88.89       14
@@ -45,29 +45,29 @@ Non-stopwords
        1        0   100.00       35
        1        0   100.00       36
        1        0   100.00       37
-     300       17    94.33    Total
+     300       10    96.67    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     225       14    93.78        1
+     225       10    95.56        1
       15        0   100.00        2
        2        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        1        0   100.00        9
        1        0   100.00      >10
-     248       14    94.35    Total
+     248       10    95.97    Total
 
 Phrases
    Count   Missed   %Right   Length
-     300       17    94.33        1
-     299       32    89.30        2
-     298       46    84.56        3
-     297       59    80.13        4
-     296       71    76.01        5
-     295       83    71.86        6
-     294       93    68.37        7
-     293      103    64.85        8
+     300       10    96.67        1
+     299       19    93.65        2
+     298       27    90.94        3
+     297       34    88.55        4
+     296       40    86.49        5
+     295       46    84.41        6
+     294       51    82.65        7
+     293       56    80.89        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -173,7 +173,7 @@ Non-stopwords
        1        0   100.00   davona
        1        0   100.00   derivatenphrikolat
        1        0   100.00   dieabsatzentwicklungwarbisjetztgut
-       5        1    80.00   div.sch.nr
+       5        0   100.00   div.sch.nr
        1        0   100.00   dividendenaufstammaktien
        1        0   100.00   dm77000000
        1        0   100.00   dr
@@ -192,7 +192,7 @@ Non-stopwords
        1        0   100.00   erzeugung
        2        0   100.00   essen
        1        0   100.00   faser
-       1        1     0.00   faserredon
+       1        0   100.00   faserredon
        1        0   100.00   fernruf
        1        0   100.00   fernschreiber
        1        0   100.00   folien
@@ -213,7 +213,7 @@ Non-stopwords
        1        0   100.00   grundkapital:dm77000000
        1        0   100.00   gründung
       12        0   100.00   hamburg
-       1        1     0.00   hansrinn
+       1        0   100.00   hansrinn
        2        0   100.00   holstein
        1        0   100.00   hygiene
        1        0   100.00   i.h.stein
@@ -268,7 +268,7 @@ Non-stopwords
        1        0   100.00   ratebaugesellschaftmbh
        1        0   100.00   rechnungen
        1        0   100.00   restüber
-       1        1     0.00   reyon
+       1        0   100.00   reyon
        1        0   100.00   rheinischegirozentrale
        1        0   100.00   rudolfvolkland
        1        0   100.00   sal.oppenheimjr
@@ -300,7 +300,7 @@ Non-stopwords
        1        0   100.00   undtextil
        1        0   100.00   undverlust
        1        0   100.00   v
-       4        2    50.00   v.v
+       4        0   100.00   v.v
        1        0   100.00   verarbeitungundvertrieb
        1        0   100.00   viskoseschwämmenundsprit
        1        0   100.00   viskovita
@@ -310,7 +310,7 @@ Non-stopwords
        1        0   100.00   vorstand
        1        0   100.00   werkeaktiengesellschaft
        1        0   100.00   werkeinsiegburg
-       1        1     0.00   wernerdiehn
+       1        0   100.00   wernerdiehn
        1        0   100.00   wertpapier
        1        0   100.00   wertpapiere
        1        0   100.00   westfälischebau

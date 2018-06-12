@@ -28,7 +28,7 @@ Querum;
 OttoMöhle,Langenhagen;
 Dr.KarlRöhrs,Bonn;
 FriedrichSchiwon,Herne;
-JohannSmentek,Dürnten.
+JohannSmentek,Dörnten.
 Gründung:1858.
 Tätigkeitsgebiet:
 Erzeugungvon:Erze,Kohle,Strom,
@@ -72,7 +72,7 @@ Erzbergwerke(Brauneisenerze).Diever-
 schiedenenErzvorkommenbeiBüiten,
 LengedeundimSalzgitterschenHöhenzug
 machendasHochofenwerkunabhängigvon
-jedemBezugfremdenErkes.DieRoherze
+jedemBezugfremdenErzes.DieRoherze
 werden,soweitnötig,ineigenerErzwä-
 schegewaschenundaufeigenenBahnen
 demHüttenwerkzugeführt.
@@ -126,7 +126,7 @@ benbestehteinPachtvertragmitder
 Preussag.
 Schachtanlagen:NoithornundRöcke.
 KokereiinHerne:53Öfen;Kapazität
-1150taito.
+1150ta/to.
 SonstigerBesitz:
 1721werkseigeneWohnungen.
 Beteiligung:
@@ -145,7 +145,7 @@ IhreTochtergesellschaftensind:
 dieNorddeutscheSchrauben-undMuttern-
 werkeAG,Peine,miteinemGrund-
 kapitalvonDM2,88Mio,dassichzu
-92,6%inHändenderAHAGundzu7,05%
+92,6%inHändenderIHAGundzu7,05%
 inHändenderIlsederHüttebefindet;
 dasProduktionsprogrammderGesell-
 schaftumfaßtSchrauben,Schalungsträger
@@ -158,11 +158,11 @@ sensowieDüngemittelntätigist;
 diePeinerStahlbauundEisenhandelGmbH,
 Berli-n,miteinemStammkapitalvon
 DM1,2Mio,dasvollständiginHänden
-derAHAG(12,5%)undderPeine-Ilseder
+derIHAG(12,5%)undderPeine-Ilseder
 Handelsgesellschaft(87,5%)ist;
 dieHermannRüterOHG,Hannover-
 Langenhagen,derenKapitalvonDM2,04
-Miozu88,24%derAHAGundzu11,76%
+Miozu88,24%derIHAGundzu11,76%
 derPeine-IlsederHandelsgesellschaft
 gehörtunddieebensowiedievorherge-
 nannteGesellschaftdieHerstellungvon
@@ -171,7 +171,7 @@ GroßhandelmitEisen-undStahlerzeugnis-
 senbetreibt;
 dieHubertJosefHeineEisenhandels-KG,
 Dortmund,vonderenKapital(DM423000.-)
-dieAHAGeinenKommanditanteilinHöhe
+dieIHAGeinenKommanditanteilinHöhe
 vonDM300000.-besitzt;
 dieIlsederBank,Sandow&&Co.,Peine,
 diezu100%imIHAG-Besitzistsowie
@@ -180,7 +180,7 @@ Braunschweig,anderenStammkapital
 inHöhevonDM1,8MiodieIHAGeinen
 Anteilvon26,33%hat;dieseGesellschaft
 istmitderHerstellungvonLagermetall
-undLeit-undWalzlagernbeschäftigt.
+undGleit-undWalzlagernbeschäftigt.
 4.GewerkschaftKonrad,Salz-
 gitter-Drütte
 DieGesellschaft,derenKuxenkapital

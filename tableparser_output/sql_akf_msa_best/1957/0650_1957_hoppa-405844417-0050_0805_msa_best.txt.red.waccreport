@@ -18,13 +18,13 @@ Non-stopwords
       14        0   100.00        5
       29        4    86.21        6
       37        0   100.00        7
-      25        3    88.00        8
+      25        2    92.00        8
       18        0   100.00        9
       24        0   100.00       10
       16        0   100.00       11
       19        0   100.00       12
       13        0   100.00       13
-      13        0   100.00       14
+      13        1    92.31       14
        6        1    83.33       15
       10        1    90.00       16
        3        0   100.00       17
@@ -65,12 +65,12 @@ Phrases
    Count   Missed   %Right   Length
      385        9    97.66        1
      384       13    96.61        2
-     383       16    95.82        3
-     382       19    95.03        4
-     381       22    94.23        5
-     380       25    93.42        6
-     379       28    92.61        7
-     378       31    91.80        8
+     383       15    96.08        3
+     382       17    95.55        4
+     381       19    95.01        5
+     380       21    94.47        6
+     379       23    93.93        7
+     378       25    93.39        8
 
 Stopwords
    Count   Missed   %Right   
@@ -270,7 +270,7 @@ Non-stopwords
        1        0   100.00   hanseatischesiedlungs
        1        0   100.00   heinrichmahler
        1        0   100.00   heinrichwulff
-       1        0   100.00   herbertspiesen
+       1        1     0.00   herbertspiesen
        1        0   100.00   hornerbahn
        1        0   100.00   hugoscharnberg
        1        0   100.00   imsommer
@@ -298,7 +298,7 @@ Non-stopwords
        1        0   100.00   main
        2        0   100.00   mainbank
        1        0   100.00   mann
-       1        1     0.00   maxmross
+       1        0   100.00   maxmross
        1        0   100.00   mbh
        1        0   100.00   merz
        1        0   100.00   merzbankag

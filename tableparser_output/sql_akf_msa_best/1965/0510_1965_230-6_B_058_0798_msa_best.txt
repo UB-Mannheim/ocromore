@@ -30,11 +30,11 @@ Dr.Dr.h.c. Walther Hensel, Düsseldorf,
 8. stellv. Vors,.;
 Dr. Bernhard Heun, Krefeld, 9, stellv.
 Vors.;
-Fritz André, Rottach-Egern;
+Fritz Andrée, Rottach-Egern;
 Theodor Berger, Oberbollheim (Krs.
 Düren);
 Erich Berschkeit, Dürwiss (Krs. Jülich);
-Friedrich Kugel, Essen;;
+Friedrich Dugel, Essen;;
 Dr.Friedrich-Wilhelm Goldenbogen,
 Gummersbach;
 Josef Harnisch, Trier;
@@ -47,9 +47,9 @@ Peter Jammers, Bad Godesberg;;
 Dr, Otto Korn, Aachen;
 Dr.-Ing.E.h,. Heinrich Kost, Homberg
 (Niederrhein);
-Willi Kowalski, Bergheim (Erst);
+Willi Kowalski, Bergheim (Erft);
 Dr.Ernst Mawick, Nordhorn;;
-Eugen York, Essen;
+Eugen Mork, Essen;
 Karl Schirner, Freiburg i. Br.;;
 Bernhard Weiss, Dahlbruch über Kreuz-
 tal (Krs. Siegen)
@@ -69,7 +69,7 @@ und Hochspannungsnetz eine Vielzahl an-
 derer Versorgungsunternehmen des Bun-
 desgebietes und der angrenzenden Länder
 Holland, Belgien, Frankreich, Schweiz
-und Österreich in engere Verbund, wo-
+und Österreich in engerem Verbund, wo-
 bei insbesondere die süddeutschen Unter-
 nehmen in großem Umfang auf Grund lang-
 fristiger Abmachungen laufend elektrische
@@ -144,7 +144,7 @@ Kapital: DM 55 000 000. - (50 %)
 Dividenden ab 1958: 4,7,7,7,7,7%
 Societé& Electrique de l'’Our S.A., Luxem-
 burg
-Kapital: lars.1 250 000 000. - (über 40 %)
+Kapital: lfrs.1 250 000 000. - (über 40 %)
 Hochtief AG für Hoch- und Tiefbauten
 vorm.Gebr,. Helfmann, Essen
 Kapital: DM 23 250 000.- (über 25 %)
@@ -198,10 +198,10 @@ Umstellung 1:1 auf DM 246 000 000. - durch
 H.-V.v.29.5.1951. Lt.H.-V.v.1.3.1955
 Erhöhung auf DM 369 000 000.-, lt.H.-V.
 v.20.9.1955 auf DM 428 000 000. -, It.
-H.-V.v.27.10.1959 auf DM 575 000 000. -,
+H.-V.v.27.10.1959 aurf DM 575 000 000. -,
 lt.H.-V.v.27.1.1961 aus Gesellschaftsmit-
 teln auf DM 718 750 000. - sowie weitere
-Erhöhung auf DM 795 000 000. - und lit.
+Erhöhung auf DM 795 000 000. - und lt.
 H.-V.v.6.2.1963 auf DM 960 000 000.-.
 DM 619 687 500 Inhaber-Stammaktien
 DM 20 312 500 Namensaktien
@@ -214,7 +214,7 @@ Stuttgart, Zürich, Genf und Basel (amtl.)
 Wertpapier-Kenn-Nr.:
 703700 (St.-Akt.); 703703 (Vorz.-Akt.)
 Stückelung:
-851 125 Inh. -St.-Akt. zuge DM 400; -
+851 125 Inh. -St.-Akt. zuje DM 400; -
 467 375 Inh. -St.-Akt. zu jeDM 100.-
 232 500 Inh, -St.-Akt. zu je DM 1 000. -
 40 625 Inh. -Namens-Akt. zu je DM 400.-

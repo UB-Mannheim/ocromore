@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1489   Words
-      47   Misrecognized
-   96.84%  Accuracy
+      36   Misrecognized
+   97.58%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,15 +22,15 @@ Non-stopwords
       73        0   100.00        7
       77        2    97.40        8
       64        2    96.88        9
-     110        6    94.55       10
-      57        1    98.25       11
-      75        3    96.00       12
-      37        2    94.59       13
-      54        1    98.15       14
+     110        2    98.18       10
+      57        0   100.00       11
+      75        1    98.67       12
+      37        1    97.30       13
+      54        0   100.00       14
       44        1    97.73       15
       60        1    98.33       16
       47        1    97.87       17
-      41        3    92.68       18
+      41        2    95.12       18
       14        0   100.00       19
       21        0   100.00       20
       16        1    93.75       21
@@ -44,18 +44,18 @@ Non-stopwords
        3        0   100.00       29
        3        0   100.00       30
        4        0   100.00       31
-       7        1    85.71       32
+       7        0   100.00       32
        5        1    80.00       33
        6        1    83.33       34
        3        0   100.00       35
        1        0   100.00       36
        2        0   100.00       37
        1        0   100.00       38
-    1482       46    96.90    Total
+    1482       35    97.64    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     974       40    95.89        1
+     974       29    97.02        1
       81        0   100.00        2
       29        0   100.00        3
        9        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        4        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1118       40    96.42    Total
+    1118       29    97.41    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1489       47    96.84        1
-    1486       87    94.15        2
-    1483      124    91.64        3
-    1480      161    89.12        4
-    1477      196    86.73        5
-    1474      228    84.53        6
-    1471      257    82.53        7
-    1468      285    80.59        8
+    1489       36    97.58        1
+    1486       66    95.56        2
+    1483       94    93.66        3
+    1480      122    91.76        4
+    1477      149    89.91        5
+    1474      175    88.13        6
+    1471      200    86.40        7
+    1468      223    84.81        8
 
 Stopwords
    Count   Missed   %Right   
@@ -361,7 +361,7 @@ Non-stopwords
        1        0   100.00   aktienund91,09
        3        0   100.00   aktionäre
        1        0   100.00   aktiva19731974
-       1        1     0.00   albertvahle
+       1        0   100.00   albertvahle
        1        0   100.00   alfredfreiherrvonoppenheim
        1        0   100.00   alfredroth
        1        0   100.00   aloisalzheimer
@@ -525,7 +525,7 @@ Non-stopwords
        1        0   100.00   dr.franzkratz
        1        0   100.00   dr.friedhelmgieske
        1        0   100.00   dr.hannsdeuss
-       1        1     0.00   dr.hansdietergrell
+       1        0   100.00   dr.hansdietergrell
        1        0   100.00   dr.jur.haraldpeipers
        1        0   100.00   dr.nikolausgrafstrasoldo
        1        0   100.00   dreimohrenag
@@ -576,7 +576,7 @@ Non-stopwords
        1        0   100.00   forderungenaus
        2        0   100.00   frank
        8        0   100.00   frankfurt
-       1        1     0.00   franzklemmer
+       1        0   100.00   franzklemmer
        2        0   100.00   freiv
        1        0   100.00   fremdkapital19494072294616
        1        0   100.00   fremdkapital749400869825
@@ -631,13 +631,13 @@ Non-stopwords
        1        0   100.00   heilbronn
        1        0   100.00   heiligenhaus
        1        0   100.00   heinrichmandel
-       1        1     0.00   heinrichpaus
-       1        1     0.00   heinzbette
+       1        0   100.00   heinrichpaus
+       1        0   100.00   heinzbette
        1        0   100.00   heinzpferdmenges
        1        0   100.00   heits
        1        0   100.00   hellmuthvonstockhausen
-       1        1     0.00   herbertredlich
-       1        1     0.00   hermannheusch
+       1        0   100.00   herbertredlich
+       1        0   100.00   hermannheusch
        2        0   100.00   hessen
        1        0   100.00   hochtiefaktiengesellschaftfürhoch
        1        0   100.00   hochtiefchilenaltda
@@ -679,7 +679,7 @@ Non-stopwords
        1        0   100.00   je16
        3        0   100.00   je18
        1        0   100.00   jedm12,50
-       2        2     0.00   jenom.dm50
+       2        0   100.00   jenom.dm50
        1        0   100.00   johannesburg
        1        0   100.00   jul.wolff
        1        0   100.00   juli
@@ -688,7 +688,7 @@ Non-stopwords
        1        0   100.00   kapital:argent
        1        0   100.00   kapital:bfr
        1        0   100.00   kapital:chilesc10000
-       2        1    50.00   kapital:cr
+       2        0   100.00   kapital:cr
        5        0   100.00   kapital:dm100000
        2        0   100.00   kapital:dm1000000
        1        0   100.00   kapital:dm10000000
@@ -1017,7 +1017,7 @@ Non-stopwords
        3        0   100.00   vorstand
       11        0   100.00   vorz
        2        0   100.00   vorzugsaktien
-       1        1     0.00   w.tümmelsbuchdruckereiundverlag
+       1        0   100.00   w.tümmelsbuchdruckereiundverlag
        1        0   100.00   waffen
        1        0   100.00   wagnerhochdruck
        1        0   100.00   walterkoppenburgkg

@@ -5,7 +5,7 @@ Fernschreiber:0212158.
 Vorstand:
 Dr.-Ing.Dr.-Ing.E.h.FriedrichLade-
 mann,Hamburg;
-MaxCross,Hamburg;
+MaxMross,Hamburg;
 WalterHeinze,Hamburg.
 Aufsichtsrat:
 ErnstPlate,Hamburg,Vors.;
@@ -22,7 +22,7 @@ vertreter);
 Dr.JoachimRiehle,Hamburg;
 AdolphSchönfelder,Hamburg;
 iWilhelmSchröder,Hamburg;
-HerbertSpiesen,Hamburg;
+lHerbertSpiesen,Hamburg;
 FranzHeinrichUlrich,Hamburg;
 ClausWiebusch,Hamburg(vonderGe-
 werkschaftgestellterArbeitnehmer-

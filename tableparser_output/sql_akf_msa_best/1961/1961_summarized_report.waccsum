@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1297   Words
-      45   Misrecognized
-   96.53%  Accuracy
+      42   Misrecognized
+   96.76%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,17 +13,17 @@ Non-stopwords
    Count   Missed   %Right   Length
       62        4    93.55        1
       83        4    95.18        2
-      48        1    97.92        3
+      48        0   100.00        3
       92        1    98.91        4
       57        0   100.00        5
       87        2    97.70        6
       74        2    97.30        7
       54        3    94.44        8
       65        2    96.92        9
-      71        6    91.55       10
+      71        5    92.96       10
       52        1    98.08       11
       40        1    97.50       12
-      42        4    90.48       13
+      42        3    92.86       13
       64        0   100.00       14
       23        1    95.65       15
       27        1    96.30       16
@@ -51,11 +51,11 @@ Non-stopwords
        4        0   100.00       38
        2        0   100.00       39
        1        0   100.00       40
-    1295       45    96.53    Total
+    1295       42    96.76    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     932       35    96.24        1
+     932       33    96.46        1
       54        1    98.15        2
       20        0   100.00        3
       10        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        2        0   100.00      >10
-    1036       36    96.53    Total
+    1036       34    96.72    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1297       45    96.53        1
-    1294       81    93.74        2
-    1291      114    91.17        3
-    1288      144    88.82        4
-    1285      173    86.54        5
-    1282      202    84.24        6
-    1279      228    82.17        7
-    1276      252    80.25        8
+    1297       42    96.76        1
+    1294       76    94.13        2
+    1291      106    91.79        3
+    1288      133    89.67        4
+    1285      159    87.63        5
+    1282      185    85.57        6
+    1279      209    83.66        7
+    1276      232    81.82        8
 
 Stopwords
    Count   Missed   %Right   
@@ -279,7 +279,7 @@ Non-stopwords
        2        1    50.00   akt.zujedm100
        2        0   100.00   akt.zujedm1000
        1        0   100.00   akt.zujedm20
-       2        1    50.00   akt.zujedm500
+       2        0   100.00   akt.zujedm500
        2        0   100.00   aktien
        3        0   100.00   aktienkurse
        1        0   100.00   aktiva
@@ -484,7 +484,7 @@ Non-stopwords
        1        0   100.00   entwurfundbauvollständigerum
        1        0   100.00   erhöhungaufdm2100000
        1        0   100.00   erichvierhub
-       1        1     0.00   ernstgamper
+       1        0   100.00   ernstgamper
        1        0   100.00   ernstrieche
        1        0   100.00   erreichteimberichtsjahrdm2153
        1        0   100.00   ersichtlich
@@ -670,7 +670,7 @@ Non-stopwords
        1        0   100.00   kölnischerückversicherungs
        1        0   100.00   kühlschränke
        1        0   100.00   lagen
-       1        0   100.00   lagenaufdas
+       1        1     0.00   lagenaufdas
        5        0   100.00   lambrecht
        1        0   100.00   landbeschränktzubleibenpflegen
        1        0   100.00   lands
@@ -864,7 +864,7 @@ Non-stopwords
        1        0   100.00   tendrucker
        1        0   100.00   tenrationalisierungs
        1        0   100.00   tenundelektrischbetriebenekleinge
-       1        1     0.00   thomasentz
+       1        0   100.00   thomasentz
        1        0   100.00   tionellerundnuklearerwärmekraft
        1        0   100.00   tochtergesellschaftenundson
        1        0   100.00   tragsbestandnahezuunverändertaufder
@@ -909,7 +909,7 @@ Non-stopwords
        1        0   100.00   undwechsel
        1        0   100.00   unterabzugdergegenseitigenlieferun
        5        0   100.00   v
-      11        1    90.91   v.v
+      11        0   100.00   v.v
        1        0   100.00   vereinigteisolatorenwerkeag
        1        0   100.00   verkehrstechnik
        1        0   100.00   vertei

@@ -119,7 +119,11 @@ class VocabularyChecker():
 
                 # print("laft",line)
 
-            if len(line) > 2:
+            linelen = len(line)
+            if linelen > 2:
+                if linelen < self.config.KEYING_RESULT_VC_MIN_VOCAB_WORD_LENGTH:
+                    continue # filter out lengths which are shorter than minimum
+
                 if self.config.KEYING_RESULT_VC_DOWNCAST_ALL_CASES:
                     line_low = line.lower()
                     if line_low != line:

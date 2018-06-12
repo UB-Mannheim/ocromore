@@ -17,7 +17,7 @@ vanDoormaal;Dr.-Ing.H.Ebbinge;Dr.M.
 W.Holtrop;R.E.Marjolin;Wm.McC.Mar-
 tinJr.;Dipl.-Ing.L.Schepers;Dr.M.E.
 Spaght;Dipl.-Ing.W.F.G.L.Starrenburg;
-Dr.C.R.C.WijckerheldWisdom
+Dr.C.R.C.WijckerheldBisdom
 Gründung:1890
 Tätigkeitsgebiet:
 Aufsuchung,Gewinnung,Beförderungund
@@ -108,7 +108,7 @@ DividendenaufStammaktien:
 140-144)
 1969:hfl7,25+11,1%+)(Div.Sch.Nr.
 145-147)
-1970u.1971:joehfl7,25(Div.Sch.Nr.
+1970u.1971:jehfl7,25(Div.Sch.Nr.
 148/149u.150/151)
 +)inFormvonAktienzuteilung
 DieDividendenunterliegenindenNieder-

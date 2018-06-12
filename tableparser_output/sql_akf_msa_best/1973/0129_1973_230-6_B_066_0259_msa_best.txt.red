@@ -20,7 +20,7 @@ Dr.-Ing.,Dr.-Ing.E.h.HansScherenberg,
 Stuttgart;
 Dr.jur.HannsMartinSchleyer,Stuttgart;
 HeinzSchmidt,Stuttgart;
-Dr.oec.h.c.RolfPMG.Staelin,Stuttgart;
+Dr.oec.h.c.RolfP.G.Staelin,Stuttgart;
 Dipl.-Kfm.ArnoldWychodil,Stuttgart;
 FriedrichBinder,Stuttgart,stellv.
 Aufsichtsrat:
@@ -38,10 +38,10 @@ KonradKaletsch,Düsseldorf;
 PaulLichtenberg,Frankfurt(M);
 GünterMaxPaefgen,Düsseldorf;
 Dr.jur.HorstPavel,BadHomburgv.d.H.;
-JürgenKonto,Frankfurt(M);
+JürgenPonto,Frankfurt(M);
 Arbeitnehmervertreter:
 PaulGerhold,Kassel;
-KarlHaufe,Stuttgart;
+KarlHauff,Stuttgart;
 HerbertLucy,Mannheim;
 NikolausPrediger,Gaggenau;
 ErnstSchäfer,Sindelfingen
@@ -136,7 +136,7 @@ BernardodoCampo
 Kapital:Cr$305300000.-(100%,davon
 einTeilüberBrasfinanzAGundüber
 Daimler-BenzHoldingA.G.)
-SociedadeTé&cnicädeFundicaesGeris
+SociedadeTé&cnicädeFundicaesGerais
 S.A.,SaoPaulo(Brasilien)
 Kapital:Cr$28000000.-(100%;über
 Mercedes-BenzdoBrasilS.A.)
@@ -179,7 +179,7 @@ Kapital:sfrs.3000000.-(100%;über
 Daimler-BenzHoldingAG)
 Mercedes-Benz(Australia)Pty.Ltd.,
 Melbourne(Australien)
-Kapital:Aug1200000.-(100%)
+Kapital:A$g1200000.-(100%)
 SOFIDELS.A.,Paris(Frankreich)
 Kapital:FF34100000.-(92,1%)
 Mercedes-BenzFranceS.A.,Paris
@@ -192,14 +192,14 @@ Madrid(Spanien)
 Kapital:Ptas972000000.-(25,6%)
 IranianDieselEngineManufacturing
 Company,Täbris(Iran)
-Kapital:Als.1000000000.-(30%)
+Kapital:Rls.1000000000.-(30%)
 P.T.GermanMotorManufacturing,
 Djakarta(Indonesien)
 Kapital:Rp.567000000.-(33,3%)
 P.T.StarMotorsIndonesia,Djakarta
 (Indonesien)
 Kapital:Rp.189000000.-(51,0%)
-SupremeStarEngineeringPte.Ltd.,
+SupremeStarEngineeringPtc.Ltd.,
 Singapur
 Kapital:S$2000000.-(26%)
 AußerdembesitztdieGesellschaftnoch

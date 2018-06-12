@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      382   Words
-      17   Misrecognized
-   95.55%  Accuracy
+      13   Misrecognized
+   96.60%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,10 +13,10 @@ Non-stopwords
       10        0   100.00        1
       14        1    92.86        2
       16        0   100.00        3
-      24        1    95.83        4
+      24        0   100.00        4
       12        0   100.00        5
       32        1    96.88        6
-      25        1    96.00        7
+      25        0   100.00        7
       12        0   100.00        8
       38        0   100.00        9
       20        0   100.00       10
@@ -24,8 +24,8 @@ Non-stopwords
       14        0   100.00       12
       10        0   100.00       13
       17        1    94.12       14
-       7        2    71.43       15
-      13        1    92.31       16
+       7        1    85.71       15
+      13        0   100.00       16
        5        0   100.00       17
        6        1    83.33       18
        6        0   100.00       19
@@ -50,29 +50,29 @@ Non-stopwords
        1        1     0.00       38
        2        0   100.00       39
        2        0   100.00       40
-     382       17    95.55    Total
+     382       13    96.60    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     284       14    95.07        1
+     284       10    96.48        1
       13        0   100.00        2
        5        0   100.00        3
        2        0   100.00        4
        1        0   100.00        5
        2        0   100.00        6
        2        0   100.00      >10
-     309       14    95.47    Total
+     309       10    96.76    Total
 
 Phrases
    Count   Missed   %Right   Length
-     382       17    95.55        1
-     381       31    91.86        2
-     380       43    88.68        3
-     379       54    85.75        4
-     378       65    82.80        5
-     377       75    80.11        6
-     376       84    77.66        7
-     375       93    75.20        8
+     382       13    96.60        1
+     381       24    93.70        2
+     380       33    91.32        3
+     379       41    89.18        4
+     378       49    87.04        5
+     377       56    85.15        6
+     376       62    83.51        7
+     375       68    81.87        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -205,7 +205,7 @@ Non-stopwords
        1        0   100.00   dr.e.smitt
        1        0   100.00   dr.h.j.witteveen
        1        0   100.00   dr.j.g.collingwood
-       1        1     0.00   dr.j.h.vanroijen
+       1        0   100.00   dr.j.h.vanroijen
        1        0   100.00   dr.j.m.goudswaard
        1        0   100.00   dr.jur.rudolfmueller
        1        0   100.00   dresdnerbankag
@@ -237,7 +237,7 @@ Non-stopwords
        1        0   100.00   grundkapital
        1        0   100.00   gründung
        1        0   100.00   h.a.holmes
-       1        1     0.00   h.f.vondenhoven
+       1        0   100.00   h.f.vondenhoven
        1        0   100.00   h.s.a.hartog
        1        0   100.00   haar
        1        0   100.00   hamburg
@@ -294,7 +294,7 @@ Non-stopwords
        1        0   100.00   mavibel
        1        0   100.00   menebanknederlandn.v
        1        0   100.00   mm.pierson
-       1        1     0.00   mons
+       1        0   100.00   mons
        1        0   100.00   morganguarantytrustcompanyof
        1        0   100.00   mr.c.t.c.heyning
        1        0   100.00   münchen
@@ -308,7 +308,7 @@ Non-stopwords
        1        0   100.00   parfüm
        2        0   100.00   paris
        1        0   100.00   pelbesteuerungsabkommenwerdenan
-       1        1     0.00   pierson
+       1        0   100.00   pierson
        1        0   100.00   postfach760
        1        0   100.00   prostückzuhfl20
        1        0   100.00   quel

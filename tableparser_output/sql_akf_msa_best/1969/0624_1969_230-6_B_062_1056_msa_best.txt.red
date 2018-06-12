@@ -1,11 +1,11 @@
 �
-WestfälischeKupfer-undMessingwerkeAkt.-Ges.vorm.Cap.Noell
+WestfälischeKupfer-undMessingwerkeAkt.-Ges.vorm.Casp.Noell
 Sitz:5880Lüdenscheid,Altenaer
 Straße38-52,Postfach187
 Fernruf:(02351)Sa.-Nr.3541
 Fernschreiber:8/26855
 Vorstand:
-WernerKretz,Lüdenscheid,Vors.;
+WernerAretz,Lüdenscheid,Vors.;
 Dr.-Ing.HansP.Goossens,Lüdenscheid,
 stellv.
 Aufsichtsrat:
@@ -16,7 +16,7 @@ Dr.GustavKüpper,Frankfurt(M);
 Dr.WernervonSimson,Luxemburg;
 Arbeitnehmervertreter:
 RudolfFischer,Lüdenscheid;
-GerhardPuhle,Lüdenscheid
+GerhardKuhle,Lüdenscheid
 Gründung:1898
 Tätigkeitsgebiet:
 ErzeugungvonBlechen,Bändern,Dräh-
@@ -44,7 +44,7 @@ schaftmbH,Lüdenscheid
 Beteiligung:76%
 Geschäftsjahr:Kalenderjahr
 Stimmrechtd.Aktieni.d.H.-V.:
-Venom.DM100.-St.-Akt.=1Stimme;
+Jenom.DM100.-St.-Akt.=1Stimme;
 VorzugsaktienohneStimmrecht
 Zahlstellen:
 Gesellschaftskasse,Lüdenscheid;Deutsche

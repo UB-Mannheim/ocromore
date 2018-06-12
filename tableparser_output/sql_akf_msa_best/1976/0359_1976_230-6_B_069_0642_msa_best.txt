@@ -27,7 +27,7 @@ Wolfram Thiele, Oberhausen;
 Otto Voisard, München;
 Friedrich Laußermair, München, stellv. ;
 Wolfgang Müller, München, stellv.;;
-Herbert Edlich, Gustavsburg, stellv.
+Herbert Redlich, Gustavsburg, stellv.
 Aufsichtsrat:
 Manfred Lennings, Kettwig, Vors.;
 Ulrich Neumann, Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ Dietrich Wilhelm von Menges, Essen-
 Bredeney;
 Siegfried Schiffbauer, Kiel;
 Arbeitnehmervertreter::
-Franz Lemmer, Augsburg;;
+Franz Klemmer, Augsburg;;
 Rudolf Rhein, Mainz-Kostheim;;
 Eduard Schleinkofer, München;
 Ferdinand Wolinsky, Oberhausen
@@ -123,10 +123,10 @@ Schleicher AG, Offenbach (M)
 Kapital: DM 26 000 000. - (50,62 %)
 Dividenden ab 1969: 18,18, 14,7
 (1.1.-30,6,), 16,14 %
-W. Temmels Buchdruckerei und Verlag
+W. Tümmels Buchdruckerei und Verlag
 GmbH, Nürnberg
 Kapital: DM 1 200 000. - (100 %)
-Güssing Automobilwerte GmbH, Braun-
+Büssing Automobilwerte GmbH, Braun-
 schweig
 Kapital: DM 42 000 000. - (97,62 %; Be-
 triebspachtvertrag)
@@ -151,7 +151,7 @@ Anönima Industrial y Comercial, Buenos
 Aires
 Kapital: argent.$3 19 600 000. - (50 %)
 Mecänica Pesada S.A., Säo Paulo
-Kapital: Ar$ 61 500 000.- (25 %)
+Kapital: Cr$ 61 500 000.- (25 %)
 M.A.N.-Automotive (Australia) Pty.Ltd.,
 Sydney
 Kapital: $A 965 000. - (91,7 %)
@@ -170,7 +170,7 @@ Kapital: FF 1 518 000.- (über 50 %)
 M.A.N. (Japan) Ltd., Tokio (Japan)
 Kapital: Yen 9 000 000. - (über 50 %)
 Groupe Europé&en pour la Technique des
-Turbines A valeur, S.A., Paris (Frank-
+Turbines A vapeur, S.A., Paris (Frank-
 reich)
 Kapital: FF 200 000.- (über 25 %)
 American M.A.N. Corporation, New York
@@ -182,7 +182,7 @@ Gesellschaften von untergeordneter Be-
 deutung
 Geschäftsjahr: 1. Juli - 30. Juni
 Stimmrecht der Aktien::
-Venom. DM 50.- St.-Akt. = 1 Stimme
+Jenom. DM 50.- St.-Akt. = 1 Stimme
 Vorz.-Akt. ohne Stimmrecht
 Kapitalentwicklung und
 Bezugsrechte:
@@ -242,7 +242,7 @@ Stückelung:
 55 100 Inh.-Vorz.-Akt.zu je DM 50.-
 Aktienkurse (ultimo abgerundet):
 ab 16.6.1969 Stücknotiz für DM 100.- und
-agab 6.7.1970 für DM 50.-
+aab 6.7.1970 für DM 50.-
 a) Stammaktien
 1948 36 % 1968 507% 1972 168DM
 65 460 % 69 481DM 73 118DM

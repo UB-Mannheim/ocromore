@@ -28,7 +28,7 @@ Querum;
 Otto Möhle, Langenhagen;
 Dr. Karl Röhrs, Bonn;
 Friedrich Schiwon, Herne;
-Johann Smentek, Dürnten.
+Johann Smentek, Dörnten.
 Gründung: 1858.
 Tätigkeitsgebiet:
 Erzeugung von: Erze, Kohle, Strom,
@@ -72,7 +72,7 @@ Erzbergwerke (Brauneisenerze). Die ver-
 schiedenen Erzvorkommen bei Büiten,
 Lengede und im Salzgitterschen Höhenzug
 machen das Hochofenwerk unabhängig von
-jedem Bezug fremden Erkes. Die Roherze
+jedem Bezug fremden Erzes. Die Roherze
 werden, soweit nötig, in eigener Erzwä-
 sche gewaschen und auf eigenen Bahnen
 dem Hüttenwerk zugeführt.
@@ -126,7 +126,7 @@ ben besteht ein Pachtvertrag mit der
 Preussag.
 Schachtanlagen: Noithorn und Röcke.
 Kokerei in Herne: 53 Öfen; Kapazität
-1150 taito.
+1150 ta/to.
 Sonstiger Besitz:
 1 721 werkseigene Wohnungen.
 Beteiligung:
@@ -145,7 +145,7 @@ Ihre Tochtergesellschaften sind:
 die Norddeutsche Schrauben- und Muttern-
 werke AG, Peine, mit einem Grund-
 kapital von DM 2,88 Mio, das sich zu
-92,6 % in Händen der AHAG und zu 7,05 %
+92,6 % in Händen der IHAG und zu 7,05 %
 in Händen der Ilseder Hütte befindet;
 das Produktionsprogramm der Gesell-
 schaft umfaßt Schrauben, Schalungsträger
@@ -158,11 +158,11 @@ sen sowie Düngemitteln tätig ist;
 die Peiner Stahlbau und Eisenhandel GmbH,
 Berli-n, mit einem Stammkapital von
 DM 1,2 Mio, das vollständig in Händen
-der AHAG (12,5 %) und der Peine-Ilseder
+der IHAG (12,5 %) und der Peine-Ilseder
 Handelsgesellschaft (87, 5 %) ist;
 die Hermann Rüter OHG, Hannover-
 Langenhagen, deren Kapital von DM 2, 04
-Mio zu 88, 24 % der AHAG und zu 11,76 %
+Mio zu 88, 24 % der IHAG und zu 11,76 %
 der Peine-Ilseder Handelsgesellschaft
 gehört und die ebenso wie die vorher ge-
 nannte Gesellschaft die Herstellung von
@@ -171,7 +171,7 @@ Großhandel mit Eisen- und Stahlerzeugnis-
 sen betreibt;
 die Hubert Josef Heine Eisenhandels-KG,
 Dortmund, von deren Kapital (DM 423 000.-)
-die AHAG einen Kommanditanteil in Höhe
+die IHAG einen Kommanditanteil in Höhe
 von DM 300 000.- besitzt;
 die Ilseder Bank, Sandow && Co., Peine,
 die zu 100 % im IHAG-Besitz ist sowie
@@ -180,7 +180,7 @@ Braunschweig, an deren Stammkapital
 in Höhe von DM 1,8 Mio die IHAG einen
 Anteil von 26, 33 % hat; diese Gesellschaft
 ist mit der Herstellung von Lagermetall
-und Leit- und Walzlagern beschäftigt.
+und Gleit- und Walzlagern beschäftigt.
 4. Gewerkschaft Konrad, Salz-
 gitter-Drütte
 Die Gesellschaft, deren Kuxenkapital

@@ -18,7 +18,7 @@ R.H.DelMar,London;
 Dr.J.M.Goudswaard,Rotterdam;
 G.E.Graham,London;
 Mr.C.T.C.Heyning,Rotterdam;
-H.F.vondenHohen,Rotterdam;
+H.F.vondenHoven,Rotterdam;
 J.J.H.Nagel,Rotterdam;
 M.Ormerod,Rotterdam;
 D.A.Orr,London;
@@ -30,7 +30,7 @@ Ir.K.H.Veldhuis,London
 BeratendeMitglieder:
 H.S.A.Hartog,Hamburg;
 Dr.jur.RudolfMueller,Frankfurt(M);
-Dr.J.H.vanOijen,Wassenaar;
+Dr.J.H.vanRoijen,Wassenaar;
 F.J.Tempel,DenHaag;
 Dr.H.J.Witteveen,Wassenaar
 Sekretäre:
@@ -81,14 +81,14 @@ Zahlstellen:
 Amsterdam-RotterdamBankN.V.;Alge-
 meneBankNederlandN.V.;beideAmster-
 dam,RotterdamundDenHaag;
-MM.Pierson;Heldring&Person;beide
+MM.Pierson;Heldring&Pierson;beide
 AmsterdamundDenHaag;
 Kredietbank;BankvanBrussel;Bankvan
 Antwerpen;Handelsbank;sämtl.Antwerpen;
 BankvandeSocieteGeneraledeBelgique;
 SocieteBelgedeBanque;BankLambert;
 CreditGeneraldeBelgique;sämtl.Brüssel;
-CreditCommercialdeMoos,Mond;
+CreditCommercialdeMons,Mons;
 BanqueRothschild,Paris;
 Creditanstalt-Bankverein;Österreichische
 LänderbankAG;Schoeller&Co.Bank-

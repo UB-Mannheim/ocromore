@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      292   Words
-      18   Misrecognized
-   93.84%  Accuracy
+      17   Misrecognized
+   94.18%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,15 +12,15 @@ Non-stopwords
    Count   Missed   %Right   Length
       12        0   100.00        1
       16        2    87.50        2
-      14        1    92.86        3
+      14        0   100.00        3
       23        0   100.00        4
       13        0   100.00        5
       16        0   100.00        6
       23        2    91.30        7
       15        0   100.00        8
       16        1    93.75        9
-      20        3    85.00       10
-       8        0   100.00       11
+      20        2    90.00       10
+       8        1    87.50       11
       10        1    90.00       12
        8        2    75.00       13
        9        0   100.00       14
@@ -46,7 +46,7 @@ Non-stopwords
        1        0   100.00       36
        1        0   100.00       37
        1        0   100.00       40
-     292       18    93.84    Total
+     292       17    94.18    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -62,14 +62,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     292       18    93.84        1
-     291       32    89.00        2
-     290       45    84.48        3
-     289       56    80.62        4
-     288       67    76.74        5
-     287       78    72.82        6
-     286       87    69.58        7
-     285       94    67.02        8
+     292       17    94.18        1
+     291       31    89.35        2
+     290       43    85.17        3
+     289       53    81.66        4
+     288       63    78.12        5
+     287       73    74.56        6
+     286       81    71.68        7
+     285       88    69.12        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -236,7 +236,7 @@ Non-stopwords
        1        0   100.00   kurzfristigever
        6        0   100.00   köln
        1        0   100.00   kölnischerückversicherungs
-       1        0   100.00   lagenaufdas
+       1        1     0.00   lagenaufdas
        1        0   100.00   licheabgaben623660
        1        0   100.00   lichegeschäftsstellen
        1        1     0.00   lt.ao.h
@@ -288,7 +288,7 @@ Non-stopwords
        1        0   100.00   stückelung
        1        0   100.00   sämtlichestammaktiensindlieferbar
        1        0   100.00   technischerück
-       1        1     0.00   thomasentz
+       1        0   100.00   thomasentz
        1        0   100.00   tochtergesellschaftenundson
        1        0   100.00   travemünderallee9
        1        0   100.00   tätigkeitsgebiet
@@ -299,7 +299,7 @@ Non-stopwords
        1        0   100.00   undkreditversi
        1        0   100.00   undverlust
        1        0   100.00   v
-       2        1    50.00   v.v
+       2        0   100.00   v.v
        1        1     0.00   verwaltungskosten949310579
        3        0   100.00   vors
        1        0   100.00   vorstand

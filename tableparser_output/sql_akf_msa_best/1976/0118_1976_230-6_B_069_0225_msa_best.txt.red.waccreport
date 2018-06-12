@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      488   Words
-      17   Misrecognized
-   96.52%  Accuracy
+      12   Misrecognized
+   97.54%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,15 +20,15 @@ Non-stopwords
       25        0   100.00        7
       16        0   100.00        8
       22        0   100.00        9
-      46        1    97.83       10
-      16        1    93.75       11
-      25        1    96.00       12
-      12        2    83.33       13
+      46        0   100.00       10
+      16        0   100.00       11
+      25        0   100.00       12
+      12        1    91.67       13
       23        0   100.00       14
       15        0   100.00       15
       26        0   100.00       16
       14        0   100.00       17
-      18        1    94.44       18
+      18        0   100.00       18
        4        0   100.00       19
        7        0   100.00       20
        7        1    85.71       21
@@ -44,11 +44,11 @@ Non-stopwords
        1        0   100.00       33
        1        1     0.00       34
        1        0   100.00       37
-     487       17    96.51    Total
+     487       12    97.54    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     314       12    96.18        1
+     314        7    97.77        1
       28        0   100.00        2
       11        0   100.00        3
        2        0   100.00        4
@@ -57,18 +57,18 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        2        0   100.00      >10
-     363       12    96.69    Total
+     363        7    98.07    Total
 
 Phrases
    Count   Missed   %Right   Length
-     488       17    96.52        1
-     487       32    93.43        2
-     486       46    90.53        3
-     485       60    87.63        4
-     484       73    84.92        5
-     483       85    82.40        6
-     482       96    80.08        7
-     481      107    77.75        8
+     488       12    97.54        1
+     487       22    95.48        2
+     486       31    93.62        3
+     485       40    91.75        4
+     484       49    89.88        5
+     483       58    87.99        6
+     482       67    86.10        7
+     481       76    84.20        8
 
 Stopwords
    Count   Missed   %Right   
@@ -171,7 +171,7 @@ Non-stopwords
        1        0   100.00   aktienkurse
        1        0   100.00   aktionäre
        1        0   100.00   aktiva19731974
-       1        1     0.00   albertvahle
+       1        0   100.00   albertvahle
        1        0   100.00   alfredfreiherrvonoppenheim
        1        0   100.00   amtl
        1        0   100.00   anderevermö
@@ -244,7 +244,7 @@ Non-stopwords
        1        1     0.00   dr.dr.b.c.kurtbirrenbach
        1        0   100.00   dr.erichfrick
        1        0   100.00   dr.franzkratz
-       1        1     0.00   dr.hansdietergrell
+       1        0   100.00   dr.hansdietergrell
        1        0   100.00   dr.nikolausgrafstrasoldo
        3        0   100.00   düsseldorf
        1        0   100.00   ehingen
@@ -279,12 +279,12 @@ Non-stopwords
        2        0   100.00   haftpflicht
        1        0   100.00   hansabschlag
        1        0   100.00   hanswernerstaunau
-       1        1     0.00   heinrichpaus
-       1        1     0.00   heinzbette
+       1        0   100.00   heinrichpaus
+       1        0   100.00   heinzbette
        1        0   100.00   heinzpferdmenges
        1        0   100.00   heits
        1        0   100.00   hellmuthvonstockhausen
-       1        1     0.00   hermannheusch
+       1        0   100.00   hermannheusch
        1        0   100.00   horstgrimm
        1        1     0.00   ii
        1        0   100.00   in1000dm

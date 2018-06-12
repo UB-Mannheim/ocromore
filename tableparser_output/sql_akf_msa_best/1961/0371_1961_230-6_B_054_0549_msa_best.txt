@@ -45,9 +45,9 @@ Ordnungsnr.d.Aktien: 629600
 Stückelung:
 2 625 Inh, -St.-Akt. zu je DM 1 000. -
 (Nr. 1 - 2 625)
-1 605 Inh. -St.-Akt. zuge DM 500.-
+1 605 Inh. -St.-Akt. zuje DM 500.-
 (Nr. 1 -1 605)
-5 100 Inh.-St.-Akt. zuge DM L100.-
+5 100 Inh.-St.-Akt. zuje DM L100.-
 (Nr. 1-5 100)
 Sämtliche Stammaktien sind lieferbar
 Großaktionär:

@@ -85,7 +85,7 @@ Bank,München;
 Merck,Finck&Co.,München;
 Waldthausen&Co.,Düsseldorf.
 Grundkapital:DM40000000.-.
-Urspr.DM200000.-.L.H.-V.v.29.9.
+Urspr.DM200000.-.Lt.H.-V.v.29.9.
 1951ErhöhungumDM19800000.-und
 lt.H.-V.v.13.4.1953ErhöhungumDM
 20000000.-aufDM40000000.-.

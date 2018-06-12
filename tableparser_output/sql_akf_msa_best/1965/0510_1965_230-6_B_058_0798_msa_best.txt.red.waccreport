@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      737   Words
-      22   Misrecognized
-   97.01%  Accuracy
+      17   Misrecognized
+   97.69%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,17 +13,17 @@ Non-stopwords
       46        0   100.00        1
       76        2    97.37        2
       37        2    94.59        3
-      57        1    98.25        4
-      36        1    97.22        5
+      57        0   100.00        4
+      36        0   100.00        5
       30        0   100.00        6
       60        1    98.33        7
       38        0   100.00        8
-      31        4    87.10        9
+      31        3    90.32        9
       24        1    95.83       10
-      32        1    96.88       11
-      35        2    94.29       12
-      29        1    96.55       13
-      21        1    95.24       14
+      32        2    93.75       11
+      35        1    97.14       12
+      29        0   100.00       13
+      21        0   100.00       14
       16        0   100.00       15
       26        1    96.15       16
       18        0   100.00       17
@@ -33,13 +33,13 @@ Non-stopwords
        4        0   100.00       21
        5        0   100.00       22
        7        0   100.00       23
-       5        0   100.00       24
+       5        1    80.00       24
        3        0   100.00       25
        9        0   100.00       26
        5        0   100.00       27
        4        0   100.00       28
        6        0   100.00       29
-       3        2    33.33       30
+       3        1    66.67       30
        3        0   100.00       31
        4        0   100.00       32
        4        0   100.00       33
@@ -49,11 +49,11 @@ Non-stopwords
        1        0   100.00       37
        4        0   100.00       38
        1        0   100.00       50
-     737       22    97.01    Total
+     737       17    97.69    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     432       17    96.06        1
+     432       13    96.99        1
       40        1    97.50        2
       14        0   100.00        3
        9        0   100.00        4
@@ -64,18 +64,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        4        0   100.00      >10
-     513       18    96.49    Total
+     513       14    97.27    Total
 
 Phrases
    Count   Missed   %Right   Length
-     737       22    97.01        1
-     736       43    94.16        2
-     735       64    91.29        3
-     734       82    88.83        4
-     733      100    86.36        5
-     732      117    84.02        6
-     731      134    81.67        7
-     730      151    79.32        8
+     737       17    97.69        1
+     736       33    95.52        2
+     735       49    93.33        3
+     734       63    91.42        4
+     733       77    89.50        5
+     732       91    87.57        6
+     731      105    85.64        7
+     730      119    83.70        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -154,7 +154,7 @@ Non-stopwords
        2        0   100.00   25.5
        1        0   100.00   27
        1        0   100.00   27.1.1961ausgesellschaftsmit
-       1        0   100.00   27.10.1959aufdm575000000
+       1        1     0.00   27.10.1959aufdm575000000
        1        0   100.00   28100qkmundeinerbevöl
        1        0   100.00   29.5.1951
        3        0   100.00   3
@@ -223,7 +223,7 @@ Non-stopwords
        1        0   100.00   akt.vorz
        3        0   100.00   akt.zujedm100
        2        0   100.00   akt.zujedm1000
-       3        1    66.67   akt.zujedm400
+       3        0   100.00   akt.zujedm400
        1        0   100.00   aktienkurse
        1        0   100.00   altenkirchen
        1        0   100.00   amtl
@@ -328,7 +328,7 @@ Non-stopwords
        1        0   100.00   emissionsbetrag:dm75000000
        1        0   100.00   emissionsbetrag:rm112000000
        1        0   100.00   energievomrwebeziehen
-       1        1     0.00   erft
+       1        0   100.00   erft
        1        0   100.00   erhöht
        1        0   100.00   erhöhungaufdm369000000
        1        0   100.00   erhöhungaufdm795000000
@@ -336,7 +336,7 @@ Non-stopwords
        1        0   100.00   erstenotierungam2.11.1955
        1        0   100.00   es
       14        0   100.00   essen
-       1        1     0.00   eugenmork
+       1        0   100.00   eugenmork
        2        0   100.00   fast100
        1        0   100.00   faßtmitrd
        1        0   100.00   fernereineanzahl
@@ -348,9 +348,9 @@ Non-stopwords
        1        0   100.00   freiburg
        1        0   100.00   freiburgi.br
        1        0   100.00   fremdkapital15864261638059
-       1        1     0.00   friedrichdugel
+       1        0   100.00   friedrichdugel
        1        0   100.00   fristigerabmachungenlaufendelektrische
-       1        0   100.00   fritzandré
+       1        1     0.00   fritzandré
        1        0   100.00   gasundwasser
        1        0   100.00   geldern
        1        0   100.00   gelsenkirchen
@@ -420,7 +420,7 @@ Non-stopwords
        1        0   100.00   kapital:dm49539600
        2        0   100.00   kapital:dm55000000
        2        0   100.00   kapital:dm60000000
-       1        1     0.00   kapital:lfrs
+       1        0   100.00   kapital:lfrs
        1        0   100.00   karlposthofer
        1        0   100.00   karlschirner
        1        0   100.00   kenn
@@ -551,11 +551,11 @@ Non-stopwords
        1        0   100.00   undkraftwerke
        1        0   100.00   undkraftwerkegmbh
        1        0   100.00   undkreissparkassenimversor
-       1        1     0.00   undlt
+       1        0   100.00   undlt
        1        0   100.00   undtiefbauten
        1        0   100.00   undverlust
        1        0   100.00   undwechsel
-       1        1     0.00   undösterreichinengeremverbund
+       1        0   100.00   undösterreichinengeremverbund
        3        0   100.00   v
        5        0   100.00   v.v
        1        0   100.00   vereinbarung

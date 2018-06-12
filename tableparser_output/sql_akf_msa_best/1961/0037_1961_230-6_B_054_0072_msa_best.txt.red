@@ -34,7 +34,7 @@ HeinzDürrbeck,Frankfurt(M);'’)
 IreneFleischhauer,Berlin;'’)
 Dr.FriedrichFlick,Düsseldorf;+)
 WalterFranke,Berlin;'’)
-ErnstCamper,Zürich;+)
+ErnstGamper,Zürich;+)
 AlfredHenze,Eerlin;'’)
 ProfessorDr.Dr.-Ing.Dr.oec.h.c.
 WaldemarKoch,Berlin;+)

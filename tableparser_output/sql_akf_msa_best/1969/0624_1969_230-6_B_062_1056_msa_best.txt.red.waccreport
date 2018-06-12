@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      322   Words
-      17   Misrecognized
-   94.72%  Accuracy
+      13   Misrecognized
+   95.96%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,15 +21,15 @@ Non-stopwords
       16        0   100.00        8
       14        0   100.00        9
       17        0   100.00       10
-      18        2    88.89       11
-      17        1    94.12       12
+      18        0   100.00       11
+      17        0   100.00       12
       15        0   100.00       13
        5        0   100.00       14
        4        0   100.00       15
       13        0   100.00       16
        2        0   100.00       17
        6        2    66.67       18
-       3        1    66.67       19
+       3        0   100.00       19
        6        0   100.00       20
        4        0   100.00       21
        4        2    50.00       22
@@ -43,29 +43,29 @@ Non-stopwords
        1        0   100.00       32
        1        0   100.00       36
        1        0   100.00       38
-     320       17    94.69    Total
+     320       13    95.94    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     209       16    92.34        1
+     209       12    94.26        1
       29        0   100.00        2
        6        0   100.00        3
        1        0   100.00        4
        2        0   100.00        5
        1        0   100.00       10
        1        0   100.00      >10
-     249       16    93.57    Total
+     249       12    95.18    Total
 
 Phrases
    Count   Missed   %Right   Length
-     322       17    94.72        1
-     321       31    90.34        2
-     320       43    86.56        3
-     319       54    83.07        4
-     318       64    79.87        5
-     317       71    77.60        6
-     316       78    75.32        7
-     315       85    73.02        8
+     322       13    95.96        1
+     321       23    92.83        2
+     320       32    90.00        3
+     319       40    87.46        4
+     318       47    85.22        5
+     317       51    83.91        6
+     316       55    82.59        7
+     315       59    81.27        8
 
 Stopwords
    Count   Missed   %Right   
@@ -220,8 +220,8 @@ Non-stopwords
        1        0   100.00   freiv
        1        1     0.00   fremdkapital2518424892
        1        0   100.00   gen
-       1        1     0.00   gerhardkuhle
-       1        1     0.00   ges.vorm.casp.noell
+       1        0   100.00   gerhardkuhle
+       1        0   100.00   ges.vorm.casp.noell
        1        0   100.00   geschäftsjahr:kalenderjahr
        1        0   100.00   gesellschaftskasse
        1        0   100.00   graetzkg
@@ -245,7 +245,7 @@ Non-stopwords
        1        0   100.00   jahresfehlbetrag
        1        0   100.00   jahresüberschuß471
        1        0   100.00   je16
-       1        1     0.00   jenom.dm100
+       1        0   100.00   jenom.dm100
        1        0   100.00   k
        1        0   100.00   kapital:dm100000
        1        0   100.00   kapital:dm1000000
@@ -313,7 +313,7 @@ Non-stopwords
        1        0   100.00   vorzugsaktienohnestimmrecht
        1        0   100.00   vorzugsdividendemitnach
        1        0   100.00   werkeinlüdenscheidundhellebei
-       1        1     0.00   werneraretz
+       1        0   100.00   werneraretz
        1        0   100.00   wertberichtigungen353114
        1        0   100.00   wertpapier
        1        0   100.00   wertpapiere

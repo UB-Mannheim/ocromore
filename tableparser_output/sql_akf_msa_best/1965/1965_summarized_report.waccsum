@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1411   Words
-      53   Misrecognized
-   96.24%  Accuracy
+      39   Misrecognized
+   97.24%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,34 +13,34 @@ Non-stopwords
    Count   Missed   %Right   Length
       68        0   100.00        1
      103        4    96.12        2
-      67        4    94.03        3
-     110        3    97.27        4
-      62        3    95.16        5
+      67        2    97.01        3
+     110        1    99.09        4
+      62        1    98.39        5
       73        2    97.26        6
      128        5    96.09        7
-      90        5    94.44        8
-      58        6    89.66        9
-      62        3    95.16       10
+      90        3    96.67        8
+      58        4    93.10        9
+      62        1    98.39       10
       69        2    97.10       11
-      60        4    93.33       12
-      49        1    97.96       13
-      40        2    95.00       14
+      60        3    95.00       12
+      49        0   100.00       13
+      40        1    97.50       14
       40        0   100.00       15
       37        1    97.30       16
       32        0   100.00       17
       38        1    97.37       18
-      26        0   100.00       19
+      26        1    96.15       19
       16        0   100.00       20
       13        0   100.00       21
       18        0   100.00       22
       18        1    94.44       23
-      13        0   100.00       24
+      13        1    92.31       24
       15        2    86.67       25
       11        0   100.00       26
       13        0   100.00       27
       12        1    91.67       28
        7        0   100.00       29
-       5        2    60.00       30
+       5        1    80.00       30
        7        0   100.00       31
        9        0   100.00       32
        6        0   100.00       33
@@ -50,11 +50,11 @@ Non-stopwords
        2        0   100.00       37
        5        0   100.00       38
        1        0   100.00       50
-    1410       53    96.24    Total
+    1410       39    97.23    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     950       45    95.26        1
+     950       35    96.32        1
       82        1    98.78        2
       19        0   100.00        3
       12        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1086       46    95.76    Total
+    1086       36    96.69    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1411       53    96.24        1
-    1408       98    93.04        2
-    1405      142    89.89        3
-    1402      182    87.02        4
-    1399      221    84.20        5
-    1396      258    81.52        6
-    1393      292    79.04        7
-    1390      325    76.62        8
+    1411       39    97.24        1
+    1408       72    94.89        2
+    1405      104    92.60        3
+    1402      133    90.51        4
+    1399      161    88.49        5
+    1396      189    86.46        6
+    1393      214    84.64        7
+    1390      238    82.88        8
 
 Stopwords
    Count   Missed   %Right   
@@ -224,7 +224,7 @@ Non-stopwords
        1        0   100.00   26.6
        1        0   100.00   27
        1        0   100.00   27.1.1961ausgesellschaftsmit
-       1        0   100.00   27.10.1959aufdm575000000
+       1        1     0.00   27.10.1959aufdm575000000
        1        0   100.00   28100qkmundeinerbevöl
        1        0   100.00   29.5.1951
        1        0   100.00   29.7.1960aufdm10350000
@@ -330,13 +330,13 @@ Non-stopwords
        4        0   100.00   ag
        1        0   100.00   agfürenergiewirtschaft
        1        0   100.00   agrobholdingag
-       1        0   100.00   agrobinvestmentsltd
+       1        1     0.00   agrobinvestmentsltd
        8        0   100.00   akt
       10        0   100.00   akt.i.v
        1        0   100.00   akt.vorz
        6        0   100.00   akt.zujedm100
        5        0   100.00   akt.zujedm1000
-       3        1    66.67   akt.zujedm400
+       3        0   100.00   akt.zujedm400
        3        0   100.00   aktienkurse
        1        0   100.00   aktionäre
        1        0   100.00   albertschwidden
@@ -450,7 +450,7 @@ Non-stopwords
        1        0   100.00   dienamensaktienbefindensichrestlos
        1        0   100.00   diezusammenmit
        2        0   100.00   dipl
-      21        2    90.48   div.sch.nr
+      21        1    95.24   div.sch.nr
        3        0   100.00   dividendenab1957
       12        1    91.67   dividendenab1958
        2        0   100.00   dividendenaufstammaktien
@@ -492,8 +492,8 @@ Non-stopwords
        3        0   100.00   eev
        1        0   100.00   egern
        2        0   100.00   ehrang
-       1        1     0.00   ehrang04
-       1        1     0.00   ehrangbei
+       1        0   100.00   ehrang04
+       1        0   100.00   ehrangbei
        1        0   100.00   eigenkapital12497221506829
        1        0   100.00   eigenkapital3537535196
        1        0   100.00   eigenkapital6800069500
@@ -510,7 +510,7 @@ Non-stopwords
        1        0   100.00   emissionsbetrag:rm112000000
        1        0   100.00   ende1963guteauftragsbeständevor
        1        0   100.00   energievomrwebeziehen
-       1        1     0.00   erft
+       1        0   100.00   erft
        1        0   100.00   erheblicheumsatzsteigerungen
        1        0   100.00   erhöht
        1        0   100.00   erhöhungaufdm10000000
@@ -524,9 +524,9 @@ Non-stopwords
        1        0   100.00   erzeugung
        1        0   100.00   es
       16        0   100.00   essen
-       1        1     0.00   eugenmork
+       1        0   100.00   eugenmork
        1        0   100.00   faser
-       1        1     0.00   faserredon
+       1        0   100.00   faserredon
        2        0   100.00   fast100
        1        0   100.00   faßtmitrd
        1        0   100.00   feinklinkerriemchenmitglatterund
@@ -548,10 +548,10 @@ Non-stopwords
        1        0   100.00   fremdkapital15864261638059
        1        0   100.00   fremdkapital3334831871
        1        0   100.00   fremdkapital7868884626
-       1        1     0.00   friedrichdugel
+       1        0   100.00   friedrichdugel
        1        0   100.00   friedrichshafen
        1        0   100.00   fristigerabmachungenlaufendelektrische
-       1        0   100.00   fritzandré
+       1        1     0.00   fritzandré
        1        0   100.00   frontenacfloor
        1        0   100.00   frostsichere
        2        0   100.00   furt
@@ -601,7 +601,7 @@ Non-stopwords
        3        0   100.00   hannover
        1        0   100.00   hanshülsmann
        1        0   100.00   hanskröner
-       1        1     0.00   hansrinn
+       1        0   100.00   hansrinn
        1        0   100.00   hardy
        1        0   100.00   hartbrandverblend
        1        0   100.00   hartbrandverblender
@@ -681,7 +681,7 @@ Non-stopwords
        2        0   100.00   kapital:dm60000000
        1        0   100.00   kapital:dm850000
        1        0   100.00   kapital:dm940000
-       1        1     0.00   kapital:lfrs
+       1        0   100.00   kapital:lfrs
        1        0   100.00   kapital:sfrs4500000
        1        0   100.00   karlposthofer
        1        0   100.00   karlschirner
@@ -716,7 +716,7 @@ Non-stopwords
        1        0   100.00   lieferforderungen179727185363
        1        0   100.00   lieferforderungen1936921165
        1        1     0.00   lt
-       5        1    80.00   lt.h
+       5        0   100.00   lt.h
        1        0   100.00   ludwigring
        1        0   100.00   ludwigs
        1        0   100.00   luxem
@@ -803,7 +803,7 @@ Non-stopwords
        1        0   100.00   remagen8202
        1        0   100.00   resnachgezahlt
        1        0   100.00   restüber
-       1        1     0.00   reyon
+       1        0   100.00   reyon
        2        0   100.00   rhein
        1        0   100.00   rheinisch
        1        0   100.00   rheinischebraunkohlenwerkeag
@@ -929,7 +929,7 @@ Non-stopwords
        1        0   100.00   undkraftwerke
        1        0   100.00   undkraftwerkegmbh
        1        0   100.00   undkreissparkassenimversor
-       1        1     0.00   undlt
+       1        0   100.00   undlt
        1        0   100.00   undlt.h
        2        0   100.00   undmontage
        1        1     0.00   undneumünster
@@ -940,10 +940,10 @@ Non-stopwords
        3        0   100.00   undverlust
        1        0   100.00   undwasserbauklinker
        3        0   100.00   undwechsel
-       1        1     0.00   undösterreichinengeremverbund
+       1        0   100.00   undösterreichinengeremverbund
        1        0   100.00   unterföh
        5        0   100.00   v
-      13        2    84.62   v.v
+      13        0   100.00   v.v
        1        0   100.00   verarbeitungundvertrieb
        1        0   100.00   vereinbarung
        1        0   100.00   vereinigtesaar
@@ -985,7 +985,7 @@ Non-stopwords
        1        0   100.00   werkmarktschwaben:mauerziegel
        1        0   100.00   werksinzigamrhein:steinzeug
        1        0   100.00   werkunterföhringbeimünchen:klinker
-       1        1     0.00   wernerdiehn
+       1        0   100.00   wernerdiehn
        1        0   100.00   wernerhoffmann
        3        0   100.00   wertpapier
        3        0   100.00   wertpapiere

@@ -9,7 +9,7 @@ Trier6046-48,6044
 Fernschreiber:
 München05/22189München
 Sinzig(Rhein)08/61856
-Ehrung04/7887Ehrang
+Ehrang04/7887Ehrang
 Vorstand:
 Dipl.-Kfm.KarlHeinzJacobs,München;
 HansKröner,München;
@@ -60,7 +60,7 @@ WerkGaustadtbeiBamberg:Klinkerfür
 Hoch-undTiefbau,Hartbrandverblend-
 steine,Mauerziegel;
 WerkMarktSchwaben:Mauerziegel
-Werke:SinzigamRhein;Ehrungbei
+Werke:SinzigamRhein;Ehrangbei
 Trier;IsmaningbeiMünchen;Unterföh-
 ringbeiMünchen;GaustadtbeiBamberg;
 MarktSchwaben;Poschinger(Pachtwerk),
@@ -79,7 +79,7 @@ Kapital:can.$225125.-(23,32%)
 FrontenacFloor&WallTileLtd.,
 Kingston,Ontario(Kanada)
 Kapital:can.$2900000.-(über67%)
-AGROBInvestmentsLtd.,Nassau(Ba-
+AGEROBInvestmentsLtd.,Nassau(Ba-
 hamaIslands)
 Kapital:300005.-(100%)
 Geschäftsjahr:Kalenderjahr
@@ -95,7 +95,7 @@ BerlinerHandels-Gesellschaft;Hardy&
 Co.GmbH;beideFrankfurt(M)
 Grundkapital:DM13350000.-
 Umstellung10:7aufDM7000000.-durch
-H.-V.v.30.6.1950.L.H.-V.v.31.7.1955
+H.-V.v.30.6.1950.Lt.H.-V.v.31.7.1955
 ErhöhungaufDM10000000.-,am
 31.12.1960gem.Ermächtigunglt.H.-V.v.
 29.7.1960aufDM10350000.-undam

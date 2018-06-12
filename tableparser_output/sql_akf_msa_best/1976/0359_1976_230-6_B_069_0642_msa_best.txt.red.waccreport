@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      642   Words
-      23   Misrecognized
-   96.42%  Accuracy
+      18   Misrecognized
+   97.20%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,11 +22,11 @@ Non-stopwords
       36        0   100.00        7
       45        2    95.56        8
       23        1    95.65        9
-      34        3    91.18       10
+      34        1    97.06       10
       27        0   100.00       11
-      34        2    94.12       12
+      34        1    97.06       12
       14        0   100.00       13
-      21        1    95.24       14
+      21        0   100.00       14
       17        1    94.12       15
       22        1    95.45       16
       20        0   100.00       17
@@ -44,16 +44,16 @@ Non-stopwords
        2        0   100.00       29
        3        0   100.00       30
        3        0   100.00       31
-       4        1    75.00       32
+       4        0   100.00       32
        3        1    66.67       33
        4        0   100.00       34
        1        0   100.00       35
        1        0   100.00       37
-     636       22    96.54    Total
+     636       17    97.33    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     413       22    94.67        1
+     413       17    95.88        1
       40        0   100.00        2
        8        0   100.00        3
        4        0   100.00        4
@@ -62,18 +62,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        3        0   100.00      >10
-     477       22    95.39    Total
+     477       17    96.44    Total
 
 Phrases
    Count   Missed   %Right   Length
-     642       23    96.42        1
-     641       41    93.60        2
-     640       57    91.09        3
-     639       73    88.58        4
-     638       88    86.21        5
-     637      101    84.14        6
-     636      114    82.08        7
-     635      127    80.00        8
+     642       18    97.20        1
+     641       32    95.01        2
+     640       45    92.97        3
+     639       58    90.92        4
+     638       70    89.03        5
+     637       81    87.28        6
+     636       92    85.53        7
+     635      102    83.94        8
 
 Stopwords
    Count   Missed   %Right   
@@ -326,7 +326,7 @@ Non-stopwords
        1        0   100.00   flüssigemittel
        2        0   100.00   frank
        1        0   100.00   frankfurt
-       1        1     0.00   franzklemmer
+       1        0   100.00   franzklemmer
        1        0   100.00   freiv
        1        0   100.00   fremdkapital19494072294616
        1        0   100.00   friedrichlaußermair
@@ -359,7 +359,7 @@ Non-stopwords
        1        0   100.00   hausen
        1        0   100.00   hebezeugegmbh
        1        0   100.00   heilbronn
-       1        1     0.00   herbertredlich
+       1        0   100.00   herbertredlich
        2        0   100.00   hessen
        1        1     0.00   ii
        1        0   100.00   in1000dm
@@ -373,7 +373,7 @@ Non-stopwords
        2        0   100.00   japan
        2        0   100.00   je12
        2        0   100.00   je18
-       1        1     0.00   jenom.dm50
+       1        0   100.00   jenom.dm50
        1        0   100.00   johannesburg
        1        0   100.00   jul.wolff
        1        0   100.00   juli
@@ -381,7 +381,7 @@ Non-stopwords
        2        0   100.00   kapital
        1        0   100.00   kapital:argent
        1        0   100.00   kapital:bfr
-       1        1     0.00   kapital:cr
+       1        0   100.00   kapital:cr
        3        0   100.00   kapital:dm100000
        2        0   100.00   kapital:dm1000000
        1        0   100.00   kapital:dm10000000
@@ -542,7 +542,7 @@ Non-stopwords
        1        0   100.00   vorstand
       11        0   100.00   vorz
        2        0   100.00   vorzugsaktien
-       1        1     0.00   w.tümmelsbuchdruckereiundverlag
+       1        0   100.00   w.tümmelsbuchdruckereiundverlag
        1        0   100.00   wagnerhochdruck
        1        0   100.00   watenstedt
        2        0   100.00   werkaugsburg

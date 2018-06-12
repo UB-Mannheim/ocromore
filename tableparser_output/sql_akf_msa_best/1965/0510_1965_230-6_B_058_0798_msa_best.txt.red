@@ -30,11 +30,11 @@ Dr.Dr.h.c.WaltherHensel,Düsseldorf,
 8.stellv.Vors,.;
 Dr.BernhardHeun,Krefeld,9,stellv.
 Vors.;
-FritzAndré,Rottach-Egern;
+FritzAndrée,Rottach-Egern;
 TheodorBerger,Oberbollheim(Krs.
 Düren);
 ErichBerschkeit,Dürwiss(Krs.Jülich);
-FriedrichKugel,Essen;;
+FriedrichDugel,Essen;;
 Dr.Friedrich-WilhelmGoldenbogen,
 Gummersbach;
 JosefHarnisch,Trier;
@@ -47,9 +47,9 @@ PeterJammers,BadGodesberg;;
 Dr,OttoKorn,Aachen;
 Dr.-Ing.E.h,.HeinrichKost,Homberg
 (Niederrhein);
-WilliKowalski,Bergheim(Erst);
+WilliKowalski,Bergheim(Erft);
 Dr.ErnstMawick,Nordhorn;;
-EugenYork,Essen;
+EugenMork,Essen;
 KarlSchirner,Freiburgi.Br.;;
 BernhardWeiss,DahlbruchüberKreuz-
 tal(Krs.Siegen)
@@ -69,7 +69,7 @@ undHochspannungsnetzeineVielzahlan-
 dererVersorgungsunternehmendesBun-
 desgebietesundderangrenzendenLänder
 Holland,Belgien,Frankreich,Schweiz
-undÖsterreichinengereVerbund,wo-
+undÖsterreichinengeremVerbund,wo-
 beiinsbesonderediesüddeutschenUnter-
 nehmeningroßemUmfangaufGrundlang-
 fristigerAbmachungenlaufendelektrische
@@ -144,7 +144,7 @@ Kapital:DM55000000.-(50%)
 Dividendenab1958:4,7,7,7,7,7%
 Societé&Electriquedel'’OurS.A.,Luxem-
 burg
-Kapital:lars.1250000000.-(über40%)
+Kapital:lfrs.1250000000.-(über40%)
 HochtiefAGfürHoch-undTiefbauten
 vorm.Gebr,.Helfmann,Essen
 Kapital:DM23250000.-(über25%)
@@ -198,10 +198,10 @@ Umstellung1:1aufDM246000000.-durch
 H.-V.v.29.5.1951.Lt.H.-V.v.1.3.1955
 ErhöhungaufDM369000000.-,lt.H.-V.
 v.20.9.1955aufDM428000000.-,It.
-H.-V.v.27.10.1959aufDM575000000.-,
+H.-V.v.27.10.1959aurfDM575000000.-,
 lt.H.-V.v.27.1.1961ausGesellschaftsmit-
 telnaufDM718750000.-sowieweitere
-ErhöhungaufDM795000000.-undlit.
+ErhöhungaufDM795000000.-undlt.
 H.-V.v.6.2.1963aufDM960000000.-.
 DM619687500Inhaber-Stammaktien
 DM20312500Namensaktien
@@ -214,7 +214,7 @@ Stuttgart,Zürich,GenfundBasel(amtl.)
 Wertpapier-Kenn-Nr.:
 703700(St.-Akt.);703703(Vorz.-Akt.)
 Stückelung:
-851125Inh.-St.-Akt.zugeDM400;-
+851125Inh.-St.-Akt.zujeDM400;-
 467375Inh.-St.-Akt.zujeDM100.-
 232500Inh,-St.-Akt.zujeDM1000.-
 40625Inh.-Namens-Akt.zujeDM400.-

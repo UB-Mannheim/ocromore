@@ -13,7 +13,7 @@ Aufsichtsrat:
 BrunoStieringer,Hannover,Vors.;
 Dr.h.c.CarlFr.Müller,Berlin,stellv.
 Vors.;
-ThomasAntz,Rendsburg;
+ThomasEntz,Rendsburg;
 KarlHaus,Köln;
 CarlMeister,Hamburg-Kleinflottbek;
 GeorgRieckmann,Lübeck;
@@ -73,7 +73,7 @@ Sal.Oppenheimjr.&Cie.,Köln;
 BankfürHandelundIndustrieAG,Berlin
 Grundkapital;DM5000000,-
 Umstellung14:5aufDM3750000.-d.
-H.-=V.v.13,12,1955;1t.ao.H.-I.v.20.11,
+H.-=V.v.13,12,1955;1t.ao.H.-V.v.20.11,
 1959ErhöhungaufDM5000000.-.
 Börsennotiz:
 Hamburg,DüsseldorfundBerlin(amtl.)
@@ -129,7 +129,7 @@ AusdenBilanzen
 31.12.195831.12.1959
 Aktiva(in1000DM)
 AusstehendeEin-»
-lagenaufdas
+lagcenaufdas
 Grundkapital12001600
 Anlagevermögen33609746012
 KurzfristigeFor-

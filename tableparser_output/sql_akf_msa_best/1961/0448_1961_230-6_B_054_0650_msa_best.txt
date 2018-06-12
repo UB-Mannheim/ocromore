@@ -13,7 +13,7 @@ Aufsichtsrat:
 Bruno Stieringer, Hannover, Vors.;
 Dr.h.c. Carl Fr. Müller, Berlin, stellv.
 Vors.;
-Thomas Antz, Rendsburg;
+Thomas Entz, Rendsburg;
 Karl Haus, Köln;
 Carl Meister, Hamburg-Kleinflottbek;
 Georg Rieckmann, Lübeck;
@@ -73,7 +73,7 @@ Sal. Oppenheim jr. & Cie., Köln;
 Bank für Handel und Industrie AG, Berlin
 Grundkapital; DM 5 000 000, -
 Umstellung 14:5 auf DM 3 750 000. -d.
-H.-=V.v.13,12, 1955; 1t.ao.H. -I.v.20.11,
+H.-=V.v.13,12, 1955; 1t.ao.H. -V.v.20.11,
 1959 Erhöhung auf DM 5 000 000. -.
 Börsennotiz:
 Hamburg, Düsseldorf und Berlin (amtl.)
@@ -129,7 +129,7 @@ Aus den Bilanzen
 31.12.1958 31.12.1959
 Aktiva (in 1 000 DM)
 Ausstehende Ein-»
-lagen auf das
+lagcen auf das
 Grundkapital1 200 1 600
 Anlagevermögen336 097 46 012
 Kurzfristige For-

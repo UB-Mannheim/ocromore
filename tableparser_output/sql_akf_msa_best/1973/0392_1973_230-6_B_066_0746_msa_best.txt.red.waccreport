@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      276   Words
-      11   Misrecognized
-   96.01%  Accuracy
+       9   Misrecognized
+   96.74%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -18,7 +18,7 @@ Non-stopwords
       14        0   100.00        6
       16        1    93.75        7
        9        0   100.00        8
-      17        2    88.24        9
+      17        1    94.12        9
       15        0   100.00       10
       15        0   100.00       11
        9        0   100.00       12
@@ -35,7 +35,7 @@ Non-stopwords
        6        0   100.00       23
        3        0   100.00       24
        2        0   100.00       25
-       4        1    75.00       26
+       4        0   100.00       26
        5        0   100.00       27
        1        0   100.00       28
        1        0   100.00       30
@@ -49,27 +49,27 @@ Non-stopwords
        2        0   100.00       38
        1        0   100.00       40
        1        0   100.00       49
-     276       11    96.01    Total
+     276        9    96.74    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     224       10    95.54        1
+     224        8    96.43        1
       15        0   100.00        2
        4        0   100.00        3
        1        0   100.00        4
        1        0   100.00        6
-     245       10    95.92    Total
+     245        8    96.73    Total
 
 Phrases
    Count   Missed   %Right   Length
-     276       11    96.01        1
-     275       21    92.36        2
-     274       29    89.42        3
-     273       36    86.81        4
-     272       43    84.19        5
-     271       50    81.55        6
-     270       57    78.89        7
-     269       64    76.21        8
+     276        9    96.74        1
+     275       17    93.82        2
+     274       23    91.61        3
+     273       28    89.74        4
+     272       33    87.87        5
+     271       38    85.98        6
+     270       43    84.07        7
+     269       48    82.16        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -187,7 +187,7 @@ Non-stopwords
        1        0   100.00   dividendensteueristaufdiedeutscheein
        1        0   100.00   dorf
        1        0   100.00   dr
-       1        1     0.00   dr.c.r.c.wijckerheldbisdom
+       1        0   100.00   dr.c.r.c.wijckerheldbisdom
        1        0   100.00   dr.g.a.wagner
        1        0   100.00   dr.m
        1        0   100.00   dr.m.e
@@ -231,7 +231,7 @@ Non-stopwords
        1        0   100.00   ing.w.f.g.l.starrenburg
        1        0   100.00   insgesamthfl76,20
        1        0   100.00   jehfl1000
-       1        1     0.00   jehfl7,25
+       1        0   100.00   jehfl7,25
        2        0   100.00   jenom.hfl
        1        0   100.00   jonkheerdr.j.h.loudon
        1        0   100.00   k
