@@ -892,7 +892,7 @@ class MsaHandler(object):
         max_range_word = int(max(m1, m2, m3)+1)  # add a one because it starts with zero
         try:
             seg_counter = []
-            text_seg = None
+            text_seg = {}
             for current_word_index in range(0, max_range_word):
                 word1 = get_word_from_line(line_1, current_word_index)
                 word2 = get_word_from_line(line_2, current_word_index)
@@ -957,7 +957,6 @@ class MsaHandler(object):
                     #seg_counter = [number for number in seg_counter if number != -1]
 
                     if len(best_stripped_non_multi_whitespace) == len(seg_counter):
-                        text_seg = {}
                         ws_pos = np.where(np.array(seg_counter) == -1)
                         ws_pos = np.ndarray.tolist(ws_pos[0])
                         ws_pos.append(len(seg_counter))
