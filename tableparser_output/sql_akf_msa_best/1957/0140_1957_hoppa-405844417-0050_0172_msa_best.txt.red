@@ -28,7 +28,7 @@ Querum;
 OttoMöhle,Langenhagen;
 Dr.KarlRöhrs,Bonn;
 FriedrichSchiwon,Herne;
-JohannSmentek,Dörnten.
+JohannSmentek,Dürnten.
 Gründung:1858.
 Tätigkeitsgebiet:
 Erzeugungvon:Erze,Kohle,Strom,
@@ -103,7 +103,7 @@ Beteiligung:
 93,75%desStammkapitalsderKalk-
 werkMarienhagenGmbH
 40%desStammkapitalsderSüntel-
-schotterwerkeDr.Schmidt&Co.,K.-H.,
+schotterwerkeDr.Schmidt&Co.,K.-G.,
 Pötzen.
 2.SteinkohlenbergwerkFried-
 richderGrosseAG
@@ -120,11 +120,11 @@ imInteresseeinermöglichstwirtschaft-
 lichenBetriebsführungzueinerAnlage
 zusammengefasst.
 GerechtsameinMinden:10Längenfelder
-mit9562mstreichenderLängund4
+mit9562mstreichenderLängeund4
 Geviertfeldermit5350000qm.Dane-
 benbestehteinPachtvertragmitder
 Preussag.
-Schachtanlagen:NoithornundRöpke.
+Schachtanlagen:NoithornundRöcke.
 KokereiinHerne:53Öfen;Kapazität
 1150taito.
 SonstigerBesitz:
@@ -149,7 +149,7 @@ kapitalvonDM2,88Mio,dassichzu
 inHändenderIlsederHüttebefindet;
 dasProduktionsprogrammderGesell-
 schaftumfaßtSchrauben,Schalungsträger
-undandersBaugerätsowieKräne;
+undanderesBaugerätsowieKräne;
 diePeine-IlsederHandelsgesellschaft
 mbH,derenStammkapitalvonDM4Mio
 zu100%imIHAG-Besitzistunddieim
@@ -283,7 +283,7 @@ Barmittel)5875
 Eigenkapital206874206869
 (davonA.-K.)102240102240
 Fremdkapital2669621165
-GewinnnachVertrag73429475
+GewinnnachVortrag73429475
 �
 AusdenGewinn-undVerlust-
 rechnungen

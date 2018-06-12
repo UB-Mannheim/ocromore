@@ -22,7 +22,7 @@ Non-stopwords
       36        0   100.00        7
       45        2    95.56        8
       23        1    95.65        9
-      34        2    94.12       10
+      34        3    91.18       10
       27        0   100.00       11
       34        2    94.12       12
       14        0   100.00       13
@@ -33,7 +33,7 @@ Non-stopwords
       14        2    85.71       18
        4        0   100.00       19
        5        0   100.00       20
-       7        1    85.71       21
+       7        0   100.00       21
        4        0   100.00       22
        5        1    80.00       23
        8        0   100.00       24
@@ -373,7 +373,7 @@ Non-stopwords
        2        0   100.00   japan
        2        0   100.00   je12
        2        0   100.00   je18
-       1        0   100.00   jenom.dm50
+       1        1     0.00   jenom.dm50
        1        0   100.00   johannesburg
        1        0   100.00   jul.wolff
        1        0   100.00   juli
@@ -496,7 +496,7 @@ Non-stopwords
        3        0   100.00   stuttgart
        1        0   100.00   stückelung
        1        0   100.00   swf
-       1        1     0.00   swfsüddeutschewinden
+       1        0   100.00   swfsüddeutschewinden
        1        0   100.00   sydney
        1        1     0.00   sáopaulo
        1        0   100.00   technikmbh

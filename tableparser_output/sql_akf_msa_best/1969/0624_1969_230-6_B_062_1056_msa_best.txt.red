@@ -44,7 +44,7 @@ schaftmbH,Lüdenscheid
 Beteiligung:76%
 Geschäftsjahr:Kalenderjahr
 Stimmrechtd.Aktieni.d.H.-V.:
-Jenom.DM100.-St.-Akt.=1Stimme;
+Venom.DM100.-St.-Akt.=1Stimme;
 VorzugsaktienohneStimmrecht
 Zahlstellen:
 Gesellschaftskasse,Lüdenscheid;Deutsche

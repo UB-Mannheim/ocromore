@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1399   Words
-      57   Misrecognized
-   95.93%  Accuracy
+      55   Misrecognized
+   96.07%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,13 +13,13 @@ Non-stopwords
       39        0   100.00        1
       77        2    97.40        2
       92        0   100.00        3
-     116        7    93.97        4
+     116        6    94.83        4
       51        6    88.24        5
       79        2    97.47        6
-      97        7    92.78        7
+      97        6    93.81        7
       70        0   100.00        8
      105        4    96.19        9
-      80        1    98.75       10
+      80        0   100.00       10
       80        2    97.50       11
       50        2    96.00       12
       47        1    97.87       13
@@ -35,7 +35,7 @@ Non-stopwords
       15        1    93.33       23
       13        0   100.00       24
        9        0   100.00       25
-      19        1    94.74       26
+      19        2    89.47       26
       15        0   100.00       27
       14        0   100.00       28
       12        1    91.67       29
@@ -51,11 +51,11 @@ Non-stopwords
        3        0   100.00       39
        4        0   100.00       40
        1        0   100.00       49
-    1399       57    95.93    Total
+    1399       55    96.07    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     951       53    94.43        1
+     951       51    94.64        1
       81        0   100.00        2
       22        0   100.00        3
        9        0   100.00        4
@@ -64,18 +64,18 @@ Distinct Non-stopwords
        6        0   100.00        7
        1        0   100.00        8
        5        0   100.00      >10
-    1084       53    95.11    Total
+    1084       51    95.30    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1399       57    95.93        1
-    1396      104    92.55        2
-    1393      142    89.81        3
-    1390      171    87.70        4
-    1387      200    85.58        5
-    1384      228    83.53        6
-    1381      254    81.61        7
-    1378      280    79.68        8
+    1399       55    96.07        1
+    1396      100    92.84        2
+    1393      137    90.17        3
+    1390      166    88.06        4
+    1387      195    85.94        5
+    1384      223    83.89        6
+    1381      249    81.97        7
+    1378      275    80.04        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -116,7 +116,7 @@ Non-stopwords
        1        0   100.00   150
        1        1     0.00   1500kumulativevort
        1        0   100.00   151
-       1        1     0.00   1535nam
+       1        0   100.00   1535nam
        1        0   100.00   15wohnungsbaugesellschaften
        1        0   100.00   16
        1        0   100.00   16,2
@@ -474,7 +474,7 @@ Non-stopwords
        1        0   100.00   dm949731750
        2        0   100.00   dorf
        4        0   100.00   dr
-       1        0   100.00   dr.c.r.c.wijckerheldbisdom
+       1        1     0.00   dr.c.r.c.wijckerheldbisdom
        1        0   100.00   dr.e.g.woodroofe
        1        0   100.00   dr.e.smitt
        1        0   100.00   dr.g.a.wagner
@@ -526,7 +526,7 @@ Non-stopwords
        1        0   100.00   erzeugtwerdenpersonenkraftwagen
        1        0   100.00   ess
        2        0   100.00   esslingen
-       1        1     0.00   f.j.tempel
+       1        0   100.00   f.j.tempel
        1        0   100.00   fach202
        1        0   100.00   fahrge
        1        0   100.00   fahrzeugwerkeesslingengmbh
@@ -872,7 +872,7 @@ Non-stopwords
        1        1     0.00   sociedadetécnicàdefundicaesgerais
        1        1     0.00   sociétébelgedebanque
        2        0   100.00   sofidels.a
-       1        1     0.00   sons
+       1        0   100.00   sons
        1        0   100.00   sonstigeauf
        1        0   100.00   sonstigenerzeugnissen
        2        0   100.00   sowieauf

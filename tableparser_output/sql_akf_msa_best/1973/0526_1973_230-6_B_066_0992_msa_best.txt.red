@@ -31,7 +31,7 @@ BeratendeMitglieder:
 H.S.A.Hartog,Hamburg;
 Dr.jur.RudolfMueller,Frankfurt(M);
 Dr.J.H.vanOijen,Wassenaar;
-F.J.Hempel,DenHaag;
+F.J.Tempel,DenHaag;
 Dr.H.J.Witteveen,Wassenaar
 Sekretäre:
 C.Zwagerman,London;

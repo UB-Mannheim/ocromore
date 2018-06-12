@@ -9,7 +9,7 @@ Dipl. -Kfm. Dieter Wendelstadt, Wuppertal,
 Vors.;
 Dr. Axel Biagosch, Köln;
 Dr. Erich Frick, Köln;
-Dr. Hans Dieter Grell, Köln;
+Dr. Hans Dieter Grill, Köln;
 Claas Kleyboldt, Köln;
 Dr. Franz Kratz, Köln;
 Hans Werner Staunau, Köln;
@@ -156,9 +156,9 @@ Wertpapier-Kenn-Nr.:
 841000 (100 % eingezahlt)
 841002 ( 50 % eingezahlt)
 Stückelung:
-80 000 vink. Fam. -St. -Akt. zu je
+80 000 vink. Nam. -St. -Akt. zu je
 DM 1 000, -
-120 000 vink. Fam. -St. -Akt, zu je
+120 000 vink. Nam. -St. -Akt, zu je
 DM 100. -
 160 000 vink. Nam. -St. -Akt. zu je
 DM 50. -

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1756   Words
-      61   Misrecognized
-   96.53%  Accuracy
+      64   Misrecognized
+   96.36%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,9 +22,9 @@ Non-stopwords
       92        3    96.74        8
       89        0   100.00        9
       79        2    97.47       10
-      76        1    98.68       11
+      76        2    97.37       11
       69        4    94.20       12
-      61        3    95.08       13
+      61        5    91.80       13
       41        0   100.00       14
       56        1    98.21       15
       51        0   100.00       16
@@ -52,11 +52,11 @@ Non-stopwords
        4        1    75.00       38
        1        0   100.00       39
        2        0   100.00       40
-    1751       61    96.52    Total
+    1751       64    96.34    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    1131       53    95.31        1
+    1131       56    95.05        1
       91        1    98.90        2
       37        0   100.00        3
       14        0   100.00        4
@@ -67,18 +67,18 @@ Distinct Non-stopwords
        1        0   100.00        9
        1        0   100.00       10
       10        0   100.00      >10
-    1303       54    95.86    Total
+    1303       57    95.63    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1756       61    96.53        1
-    1753      109    93.78        2
-    1750      151    91.37        3
-    1747      189    89.18        4
-    1744      225    87.10        5
-    1741      256    85.30        6
-    1738      286    83.54        7
-    1735      315    81.84        8
+    1756       64    96.36        1
+    1753      115    93.44        2
+    1750      159    90.91        3
+    1747      199    88.61        4
+    1744      235    86.53        5
+    1741      266    84.72        6
+    1738      296    82.97        7
+    1735      325    81.27        8
 
 Stopwords
    Count   Missed   %Right   
@@ -380,7 +380,7 @@ Non-stopwords
        3        0   100.00   aktienkurse
        1        0   100.00   aktionsgemeinschaftdeutschesteinkoh
        1        0   100.00   aktionäre
-       1        0   100.00   alfredhaymann
+       1        1     0.00   alfredhaymann
        1        0   100.00   allengrößerenstädtendesbundesgebietes
        1        0   100.00   allgemeinegesellschaftfürindustriebetei
        1        0   100.00   altena
@@ -783,7 +783,7 @@ Non-stopwords
        1        0   100.00   ing.felixherriger
        1        0   100.00   ing.fritzalf
        1        0   100.00   ing.hansp.goossens
-       1        0   100.00   ing.paulharke
+       1        1     0.00   ing.paulharke
        1        0   100.00   ing.ulrichpetersen
        4        0   100.00   inhaber
        1        0   100.00   insbesondereauchzurerrichtung
@@ -809,7 +809,7 @@ Non-stopwords
        2        0   100.00   je16
        1        0   100.00   je19
        1        0   100.00   jedeausderwandlunghervorgehendeak
-       2        0   100.00   jenom.dm100
+       2        1    50.00   jenom.dm100
        1        0   100.00   jenom.dm20
        1        0   100.00   joseffuchs
        1        0   100.00   jr

@@ -17,7 +17,7 @@ Hamburg;
 Dr.KurtGlässing,Hamburg;
 WilhelmJoost,Hamburg(Arbeitnehmer-
 vertreter);
-HeinrichKahler,Hamburg(Arbeitnehmer-
+HeinrichMahler,Hamburg(Arbeitnehmer-
 vertreter);
 Dr.JoachimRiehle,Hamburg;
 AdolphSchönfelder,Hamburg;
@@ -183,7 +183,7 @@ Barmittel)82924241
 Eigenkapital8314982992
 (davonA.-K.)6903569035
 Fremdkapital6887057435
-GewinnnachVertrag3053
+GewinnnachVortrag3053
 AusdenGewinn-undVerlust-
 rechnungen
 Abschreibungen1212413183

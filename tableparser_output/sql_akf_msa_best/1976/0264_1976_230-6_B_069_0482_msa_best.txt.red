@@ -99,7 +99,7 @@ HochtiefdoBrasilSA,SäoPaulo
 Kapital:Cr$10000000.-(94%)
 Geschäftsjahr:Kalenderjahr
 StimmrechtderAktien:
-Jenom.DM50,-=1Stimme
+Venom.DM50,-=1Stimme
 Kapitalentwicklungund
 Bezugsrechte:
 Grundkapital:DM46500000.-

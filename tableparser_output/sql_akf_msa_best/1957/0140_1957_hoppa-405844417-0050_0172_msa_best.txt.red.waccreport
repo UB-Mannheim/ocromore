@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      532   Words
-      22   Misrecognized
-   95.86%  Accuracy
+      19   Misrecognized
+   96.43%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,14 +12,14 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      28        1    96.43        1
+      28        0   100.00        1
       21        0   100.00        2
       14        0   100.00        3
       31        0   100.00        4
       24        0   100.00        5
       32        2    93.75        6
       29        1    96.55        7
-      34        2    94.12        8
+      34        3    91.18        8
       21        0   100.00        9
       22        1    95.45       10
       24        1    95.83       11
@@ -36,12 +36,12 @@ Non-stopwords
        5        0   100.00       22
       10        0   100.00       23
       16        1    93.75       24
-       7        2    71.43       25
+       7        1    85.71       25
        7        0   100.00       26
        5        0   100.00       27
        5        0   100.00       28
        4        0   100.00       29
-      10        2    80.00       30
+      10        0   100.00       30
        6        0   100.00       31
        6        2    66.67       32
        8        1    87.50       33
@@ -49,28 +49,28 @@ Non-stopwords
        9        0   100.00       35
        5        0   100.00       36
        1        0   100.00       38
-     530       21    96.04    Total
+     530       18    96.60    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     405       18    95.56        1
+     405       16    96.05        1
       34        0   100.00        2
       10        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        1        0   100.00        9
-     454       18    96.04    Total
+     454       16    96.48    Total
 
 Phrases
    Count   Missed   %Right   Length
-     532       22    95.86        1
-     531       43    91.90        2
-     530       62    88.30        3
-     529       80    84.88        4
-     528       94    82.20        5
-     527      107    79.70        6
-     526      120    77.19        7
-     525      132    74.86        8
+     532       19    96.43        1
+     531       37    93.03        2
+     530       53    90.00        3
+     529       68    87.15        4
+     528       80    84.85        5
+     527       92    82.54        6
+     526      104    80.23        7
+     525      116    77.90        8
 
 Stopwords
    Count   Missed   %Right   
@@ -269,7 +269,7 @@ Non-stopwords
        1        0   100.00   dr.kurtrasch
        1        0   100.00   dr.wolfgangbode
        1        0   100.00   drütte
-       1        0   100.00   dörnten
+       1        1     0.00   dörnten
        1        0   100.00   eigenkapital206874206869
        1        0   100.00   eineeigenegicht
        1        0   100.00   eisenbahnen.siedieneninersterlinie
@@ -289,7 +289,7 @@ Non-stopwords
        1        0   100.00   freiburg
        1        0   100.00   fremdkapital2669621165
        1        0   100.00   friedrichschiwon
-       2        1    50.00   g
+       2        0   100.00   g
        1        0   100.00   gas
        1        0   100.00   gaskraftanlageversorgtbergbau
        1        0   100.00   gegrün
@@ -303,7 +303,7 @@ Non-stopwords
        1        0   100.00   gesellschaftskasse
        1        0   100.00   geviertfeldermit5350000qm.dane
        2        0   100.00   gewerkschaftkonrad
-       1        1     0.00   gewinnnachvortrag73429475
+       1        0   100.00   gewinnnachvortrag73429475
        1        0   100.00   gitter
        2        0   100.00   glückauf
        2        0   100.00   gossler
@@ -386,7 +386,7 @@ Non-stopwords
        1        0   100.00   mens
        1        0   100.00   metallgesellschaftag
        1        0   100.00   miozu88,24
-       1        1     0.00   mit9562mstreichenderlängeund4
+       1        0   100.00   mit9562mstreichenderlängeund4
        1        0   100.00   mitbeidentochtergesellschaften
        1        0   100.00   miteinemgrund
        1        0   100.00   miteinemstammkapitalvon
@@ -475,7 +475,7 @@ Non-stopwords
        1        0   100.00   umlaufvermögen65602939
        1        1     0.00   umstellunglt.h
        2        0   100.00   und
-       1        1     0.00   undanderesbaugerätsowiekräne
+       1        0   100.00   undanderesbaugerätsowiekräne
        1        0   100.00   undbetriebsbeschrei
        1        0   100.00   undcredit
        1        0   100.00   undderpeine

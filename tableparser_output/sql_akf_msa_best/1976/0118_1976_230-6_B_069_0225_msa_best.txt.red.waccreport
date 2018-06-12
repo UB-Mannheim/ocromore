@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      488   Words
-      18   Misrecognized
-   96.31%  Accuracy
+      17   Misrecognized
+   96.52%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -23,12 +23,12 @@ Non-stopwords
       46        1    97.83       10
       16        1    93.75       11
       25        1    96.00       12
-      12        3    75.00       13
-      23        1    95.65       14
+      12        2    83.33       13
+      23        0   100.00       14
       15        0   100.00       15
       26        0   100.00       16
       14        0   100.00       17
-      18        0   100.00       18
+      18        1    94.44       18
        4        0   100.00       19
        7        0   100.00       20
        7        1    85.71       21
@@ -44,11 +44,11 @@ Non-stopwords
        1        0   100.00       33
        1        1     0.00       34
        1        0   100.00       37
-     487       18    96.30    Total
+     487       17    96.51    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     314       13    95.86        1
+     314       12    96.18        1
       28        0   100.00        2
       11        0   100.00        3
        2        0   100.00        4
@@ -57,18 +57,18 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        2        0   100.00      >10
-     363       13    96.42    Total
+     363       12    96.69    Total
 
 Phrases
    Count   Missed   %Right   Length
-     488       18    96.31        1
-     487       34    93.02        2
-     486       47    90.33        3
+     488       17    96.52        1
+     487       32    93.43        2
+     486       46    90.53        3
      485       60    87.63        4
-     484       72    85.12        5
-     483       83    82.82        6
-     482       93    80.71        7
-     481      102    78.79        8
+     484       73    84.92        5
+     483       85    82.40        6
+     482       96    80.08        7
+     481      107    77.75        8
 
 Stopwords
    Count   Missed   %Right   
@@ -84,7 +84,7 @@ Non-stopwords
        1        0   100.00   10.8
        2        0   100.00   100
        1        0   100.00   11
-       1        1     0.00   120000vink.nam
+       1        0   100.00   120000vink.nam
        1        0   100.00   13
        1        0   100.00   14
        1        0   100.00   14,10,10,12,12,0
@@ -154,7 +154,7 @@ Non-stopwords
        2        0   100.00   8
        1        0   100.00   8,6,8,0,0,0
        1        0   100.00   8000080000
-       1        1     0.00   80000vink.nam
+       1        0   100.00   80000vink.nam
        1        0   100.00   841000
        1        0   100.00   841002
        1        0   100.00   8885706
@@ -244,7 +244,7 @@ Non-stopwords
        1        1     0.00   dr.dr.b.c.kurtbirrenbach
        1        0   100.00   dr.erichfrick
        1        0   100.00   dr.franzkratz
-       1        0   100.00   dr.hansdietergrell
+       1        1     0.00   dr.hansdietergrell
        1        0   100.00   dr.nikolausgrafstrasoldo
        3        0   100.00   düsseldorf
        1        0   100.00   ehingen

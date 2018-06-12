@@ -13,7 +13,7 @@ class VocabularyChecker():
         self.config = config_handler.get_config()
         self.cpr = ConditionalPrint(self.config.PRINT_VOCABULARY_CHECKER, self.config.PRINT_EXCEPTION_LEVEL,
                                     self.config.PRINT_WARNING_LEVEL)
-        self.dict_lines = None
+        self.dict_lines = []
         self.max_edist = None
         self.suggenstion_verbosity = None
         self.spellchecker = None
@@ -101,7 +101,11 @@ class VocabularyChecker():
 
     def initialize_lines(self, dict_file_path, remove_special_border_chars):
         doc = self._load_doc(dict_file_path)
+        lines_doc = self._get_lines(doc, remove_special_border_chars)
+        self.dict_lines.extend(lines_doc)
+        print("asd")
 
+    def _get_lines(self, doc, remove_special_border_chars):
         lines_doc = []
         for line in doc:
             if "--------------" in line:
@@ -123,9 +127,7 @@ class VocabularyChecker():
 
                 lines_doc.append(line)
 
-        self.dict_lines = lines_doc
-
-
+        return lines_doc
     def initialize_spellchecker(self):
         if self.dict_lines == None:
             self.cpr.printw("can't initialize spellchecker, please first call initialize_lines")

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1297   Words
-      51   Misrecognized
-   96.07%  Accuracy
+      45   Misrecognized
+   96.53%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,19 +21,19 @@ Non-stopwords
       54        3    94.44        8
       65        2    96.92        9
       71        6    91.55       10
-      52        0   100.00       11
+      52        1    98.08       11
       40        1    97.50       12
       42        4    90.48       13
       64        0   100.00       14
-      23        2    91.30       15
+      23        1    95.65       15
       27        1    96.30       16
-      35        1    97.14       17
+      35        0   100.00       17
       28        2    92.86       18
       25        2    92.00       19
       27        0   100.00       20
       15        0   100.00       21
       13        1    92.31       22
-      21        1    95.24       23
+      21        0   100.00       23
       14        1    92.86       24
       13        1    92.31       25
       11        1    90.91       26
@@ -41,21 +41,21 @@ Non-stopwords
       11        0   100.00       28
        7        0   100.00       29
       17        1    94.12       30
-      11        1    90.91       31
-      12        1    91.67       32
+      11        0   100.00       31
+      12        0   100.00       32
       18        2    88.89       33
       22        1    95.45       34
-      14        2    85.71       35
+      14        0   100.00       35
       13        0   100.00       36
        4        0   100.00       37
        4        0   100.00       38
        2        0   100.00       39
        1        0   100.00       40
-    1295       51    96.06    Total
+    1295       45    96.53    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     932       41    95.60        1
+     932       35    96.24        1
       54        1    98.15        2
       20        0   100.00        3
       10        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        2        0   100.00      >10
-    1036       42    95.95    Total
+    1036       36    96.53    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1297       51    96.07        1
-    1294       93    92.81        2
-    1291      132    89.78        3
-    1288      168    86.96        4
-    1285      203    84.20        5
-    1282      238    81.44        6
-    1279      268    79.05        7
-    1276      296    76.80        8
+    1297       45    96.53        1
+    1294       81    93.74        2
+    1291      114    91.17        3
+    1288      144    88.82        4
+    1285      173    86.54        5
+    1282      202    84.24        6
+    1279      228    82.17        7
+    1276      252    80.25        8
 
 Stopwords
    Count   Missed   %Right   
@@ -290,7 +290,7 @@ Non-stopwords
        2        0   100.00   amtl
        1        0   100.00   anderenkapitaldieaegmit
        1        0   100.00   anderenversicherungsunternehmungenzu
-       1        1     0.00   andererseitsweiteran.indererwartung
+       1        0   100.00   andererseitsweiteran.indererwartung
        1        0   100.00   angemessenesergebnis
        1        0   100.00   anlagen
        1        1     0.00   anlagevermögen3609746012
@@ -397,7 +397,7 @@ Non-stopwords
        1        0   100.00   den
        1        0   100.00   denhauptsortendergesellschaftauchein
        1        0   100.00   der
-       1        1     0.00   derauftragseinganglagsowohlimin
+       1        0   100.00   derauftragseinganglagsowohlimin
        1        0   100.00   derauslandsumsatzerhöhtesichauf
        1        0   100.00   derdazugehörendengetriebe
        1        0   100.00   derenzweckmitdemdergesellschaft
@@ -484,7 +484,7 @@ Non-stopwords
        1        0   100.00   entwurfundbauvollständigerum
        1        0   100.00   erhöhungaufdm2100000
        1        0   100.00   erichvierhub
-       1        0   100.00   ernstgamper
+       1        1     0.00   ernstgamper
        1        0   100.00   ernstrieche
        1        0   100.00   erreichteimberichtsjahrdm2153
        1        0   100.00   ersichtlich
@@ -530,7 +530,7 @@ Non-stopwords
        1        0   100.00   georghauck
        1        0   100.00   georgrieckmann
        1        0   100.00   gerätefürhochfrequenz
-       1        1     0.00   gesamtgeschäftlagdamitunverändert
+       1        0   100.00   gesamtgeschäftlagdamitunverändert
        1        0   100.00   gesamtumsatzderaegeinschließlich
        1        0   100.00   geschäft
        1        0   100.00   geschäftsjahr
@@ -542,8 +542,8 @@ Non-stopwords
        2        0   100.00   gesellschaftskasse
        1        0   100.00   gewerblicherausnutzungderelektrizität
        1        0   100.00   gewinnnachvortrag438528
-       1        1     0.00   gewinnnachvortrag638762
-       1        1     0.00   gewinnohnevortrag
+       1        0   100.00   gewinnnachvortrag638762
+       1        0   100.00   gewinnohnevortrag
        1        0   100.00   gewisserimportdruckbemerkbar.etwa
        1        0   100.00   girozen
        1        0   100.00   girozentrale
@@ -837,7 +837,7 @@ Non-stopwords
        1        0   100.00   stetigan.wenntrotzdemauchimersten
        2        0   100.00   stettinerrückversicherungs
        1        1     0.00   steuernu.öffent
-       1        1     0.00   stiegimgleichen
+       1        0   100.00   stiegimgleichen
        1        0   100.00   stigebeteiligungen
        3        0   100.00   stimmrechtd.aktieni.d.h
        1        0   100.00   straßenbahnen
@@ -884,7 +884,7 @@ Non-stopwords
        1        0   100.00   umlaufvermögen42204639
        1        0   100.00   umlaufvermögen771151726913
        1        0   100.00   umsatzderaeg
-       1        1     0.00   umsatzentwicklunghieltsichderauf
+       1        0   100.00   umsatzentwicklunghieltsichderauf
        1        0   100.00   umschwungein.derbedarfinallenspar
        1        0   100.00   umstellung1
        1        0   100.00   umstellung14

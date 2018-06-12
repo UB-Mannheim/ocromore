@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1221   Words
-      39   Misrecognized
-   96.81%  Accuracy
+      33   Misrecognized
+   97.30%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,36 +12,36 @@ Stopwords
 
 Non-stopwords
    Count   Missed   %Right   Length
-      67        1    98.51        1
+      67        0   100.00        1
       63        0   100.00        2
       32        1    96.88        3
       89        1    98.88        4
       57        0   100.00        5
       88        6    93.18        6
       81        2    97.53        7
-      79        5    93.67        8
+      79        6    92.41        8
       52        1    98.08        9
       58        1    98.28       10
       57        1    98.25       11
       55        0   100.00       12
       36        0   100.00       13
-      39        3    92.31       14
+      39        2    94.87       14
       34        1    97.06       15
       20        1    95.00       16
       18        1    94.44       17
       33        0   100.00       18
       22        1    95.45       19
       15        0   100.00       20
-      22        2    90.91       21
+      22        1    95.45       21
       18        0   100.00       22
       23        0   100.00       23
       21        1    95.24       24
-      18        3    83.33       25
+      18        1    94.44       25
        9        0   100.00       26
       12        0   100.00       27
        8        0   100.00       28
        5        0   100.00       29
-      16        2    87.50       30
+      16        0   100.00       30
        8        0   100.00       31
       10        2    80.00       32
       12        1    91.67       33
@@ -50,11 +50,11 @@ Non-stopwords
       11        0   100.00       36
        3        0   100.00       37
        2        0   100.00       38
-    1217       38    96.88    Total
+    1217       32    97.37    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     881       34    96.14        1
+     881       29    96.71        1
       73        0   100.00        2
       27        0   100.00        3
        4        0   100.00        4
@@ -63,18 +63,18 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        1        0   100.00      >10
-     998       34    96.59    Total
+     998       29    97.09    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1221       39    96.81        1
-    1218       71    94.17        2
-    1215      100    91.77        3
-    1212      128    89.44        4
-    1209      152    87.43        5
-    1206      175    85.49        6
-    1203      198    83.54        7
-    1200      219    81.75        8
+    1221       33    97.30        1
+    1218       59    95.16        2
+    1215       82    93.25        3
+    1212      104    91.42        4
+    1209      123    89.83        5
+    1206      142    88.23        6
+    1203      161    86.62        7
+    1200      180    85.00        8
 
 Stopwords
    Count   Missed   %Right   
@@ -437,7 +437,7 @@ Non-stopwords
        1        0   100.00   dr.wolfgangbode
        1        0   100.00   drütte
        1        0   100.00   dustrie
-       1        0   100.00   dörnten
+       1        1     0.00   dörnten
        1        0   100.00   düssel
        9        0   100.00   düsseldorf
        1        0   100.00   eigenenschleppfahrzeugenbetrieben
@@ -491,7 +491,7 @@ Non-stopwords
        3        0   100.00   furt
        1        0   100.00   führtdiegesellschaftdiesenbetriebin
        1        0   100.00   füreigenerechnung.bahnlänge30,980km
-       2        1    50.00   g
+       2        0   100.00   g
        1        0   100.00   gas
        1        0   100.00   gaskraftanlageversorgtbergbau
        1        0   100.00   gegrün
@@ -510,9 +510,9 @@ Non-stopwords
        2        0   100.00   gesellschaftskasse
        1        0   100.00   geviertfeldermit5350000qm.dane
        2        0   100.00   gewerkschaftkonrad
-       1        1     0.00   gewinnnachvortrag24003200
-       1        1     0.00   gewinnnachvortrag3053
-       1        1     0.00   gewinnnachvortrag73429475
+       1        0   100.00   gewinnnachvortrag24003200
+       1        0   100.00   gewinnnachvortrag3053
+       1        0   100.00   gewinnnachvortrag73429475
        1        0   100.00   girozen
        1        0   100.00   gitter
        2        0   100.00   glückauf
@@ -555,7 +555,7 @@ Non-stopwords
        1        0   100.00   haupterzeugnisse
        1        1     0.00   hedwigshüttekohlen
        1        0   100.00   heinrichfreiherrvonberenberg
-       1        1     0.00   heinrichmahler
+       1        0   100.00   heinrichmahler
        1        0   100.00   heinrichwulff
        1        0   100.00   heinzsolbach
        1        0   100.00   helmuthheintzmann
@@ -670,7 +670,7 @@ Non-stopwords
        1        0   100.00   merzbankag
        1        0   100.00   metallgesellschaftag
        1        0   100.00   miozu88,24
-       1        1     0.00   mit9562mstreichenderlängeund4
+       1        0   100.00   mit9562mstreichenderlängeund4
        1        0   100.00   mitbeidentochtergesellschaften
        1        0   100.00   miteinemgrund
        1        0   100.00   miteinemstammkapitalvon
@@ -806,7 +806,7 @@ Non-stopwords
        1        0   100.00   umstellung10
        1        1     0.00   umstellunglt.h
        3        0   100.00   und
-       1        1     0.00   undanderesbaugerätsowiekräne
+       1        0   100.00   undanderesbaugerätsowiekräne
        1        0   100.00   undbetriebsbeschrei
        1        0   100.00   undc
        4        0   100.00   undcredit

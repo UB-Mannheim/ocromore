@@ -9,7 +9,7 @@ Dipl.-Kfm.DieterWendelstadt,Wuppertal,
 Vors.;
 Dr.AxelBiagosch,Köln;
 Dr.ErichFrick,Köln;
-Dr.HansDieterGrell,Köln;
+Dr.HansDieterGrill,Köln;
 ClaasKleyboldt,Köln;
 Dr.FranzKratz,Köln;
 HansWernerStaunau,Köln;
@@ -156,9 +156,9 @@ Wertpapier-Kenn-Nr.:
 841000(100%eingezahlt)
 841002(50%eingezahlt)
 Stückelung:
-80000vink.Fam.-St.-Akt.zuje
+80000vink.Nam.-St.-Akt.zuje
 DM1000,-
-120000vink.Fam.-St.-Akt,zuje
+120000vink.Nam.-St.-Akt,zuje
 DM100.-
 160000vink.Nam.-St.-Akt.zuje
 DM50.-

@@ -9,7 +9,7 @@ Trier6046-48,6044
 Fernschreiber:
 München05/22189München
 Sinzig(Rhein)08/61856
-Ehrang04/7887Ehrang
+Ehrung04/7887Ehrang
 Vorstand:
 Dipl.-Kfm.KarlHeinzJacobs,München;
 HansKröner,München;
@@ -44,7 +44,7 @@ fliesen,glasierteTrennwandsteine,
 Schwimmbeckensteine;
 WerkIsmaningbeiMünchen:Mauerziegel,
 Vormauerziegel(Hartbrandverblender),
-Feinklinkerriemchenmitgatterund
+Feinklinkerriemchenmitglatterund
 profilierterOberfläche,frostsichere
 Wandfliesen,großformatigeZiegelfliesen,
 Straßenmarkierungsklinker,Bordstein-
@@ -60,7 +60,7 @@ WerkGaustadtbeiBamberg:Klinkerfür
 Hoch-undTiefbau,Hartbrandverblend-
 steine,Mauerziegel;
 WerkMarktSchwaben:Mauerziegel
-Werke:SinzigamRhein;Ehrangbei
+Werke:SinzigamRhein;Ehrungbei
 Trier;IsmaningbeiMünchen;Unterföh-
 ringbeiMünchen;GaustadtbeiBamberg;
 MarktSchwaben;Poschinger(Pachtwerk),
@@ -200,7 +200,7 @@ rechnungen
 19621963
 LöhneundGehälter2567124207
 Abschreibungen58424711
-EEV-Steuernu.LSG22312754
+EEV-Steuernu.LAG22312754
 SonstigeSteuern26882504
 Umsatzerlöse7315671356
 Beteiligungserträge7065

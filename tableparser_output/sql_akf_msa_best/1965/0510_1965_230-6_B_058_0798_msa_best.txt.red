@@ -6,7 +6,7 @@ Fernruf:
 Sa.-Nr.20191(Hauptverwaltung)
 Fernschreiber:0857851
 Vorstand:
-Dr.h.c.HelmuthGreinert,Essen;
+Dr.h.c.HellmuthGreinert,Essen;
 HelmutMeysenburg,Heiligenhaus;
 Dr.AlfredEinnatz,Essen;;
 WilhelmGutmann,Essen,stellv.;;
@@ -17,7 +17,7 @@ Dr.h.c.HermannJ.Abs,Frankfurt(M),
 Vors,;
 Dr.HannsSinzig,Altenkirchen,1.stellv.
 Vors.;
-PaulBullmann,Essen,2.stellv.Vors.;
+PaulCullmann,Essen,2.stellv.Vors.;
 HeinrichSchöller,Essen,3.stellv.Vors.;
 KarlPosthofer,Essen,4.stellv.Vors.;
 Dr.GustavMertens,Geldern,5.stellv.
@@ -47,7 +47,7 @@ PeterJammers,BadGodesberg;;
 Dr,OttoKorn,Aachen;
 Dr.-Ing.E.h,.HeinrichKost,Homberg
 (Niederrhein);
-WilliKowalski,Bergheim(Erft);
+WilliKowalski,Bergheim(Erst);
 Dr.ErnstMawick,Nordhorn;;
 EugenYork,Essen;
 KarlSchirner,Freiburgi.Br.;;
@@ -59,7 +59,7 @@ AusschließlichVersorgungderBevölke-
 rungmitElektrizität,GasundWasser.
 DasElektrizitäts-Versorgungsgebietdes
 RWEundseinerTochterunternehmenum-
-faßtmitrd.28100wkmundeinerBevöl-
+faßtmitrd.28100qkmundeinerBevöl-
 kerungvonannähernd8,8MioEinwohnern
 wesentlicheTeilederBundesländerNord-
 rhein-Westfalen,Rheinland-PfalzundNie-
@@ -70,9 +70,9 @@ dererVersorgungsunternehmendesBun-
 desgebietesundderangrenzendenLänder
 Holland,Belgien,Frankreich,Schweiz
 undÖsterreichinengereVerbund,wo-
-beiinsbesonderediesüddeutscherUnter-
+beiinsbesonderediesüddeutschenUnter-
 nehmeningroßemUmfangaufGrundlang-
-fristigerAbmachungenlaufenelektrische
+fristigerAbmachungenlaufendelektrische
 EnergievomRWEbeziehen.
 Beteiligungen:
 GewerkschaftdesSteinkohlenbergwerks
@@ -160,7 +160,7 @@ Kapital:DM55000000.-(75%)
 Geschäftsjahr:1.Juli-30.Juni
 Stimmrechtd.Aktieni.d.H.-V.:
 Jenom.DM100,-St.-Akt.=1Stimme;
-jenom.DM100.-Fam,-Akt.=20Stim-
+jenom.DM100.-Nam,-Akt.=20Stim-
 men
 Zahlstellen:_
 Gesellschaftskasse,Essen;;
@@ -304,8 +304,8 @@ Div.Sch.Nr.17
 ZurGeschäftslage:
 ImGeschäftsjahr1962/63erreichtedie
 nutzbareStromabgabeeineHöhevon
-41,061MrdkihgegenübereinerAbgabe
-von34,763MrdkihimVorjahr,
+41,061MrdkWhgegenübereinerAbgabe
+von34,763MrdkWhimVorjahr,
 IndenerstenfünfMonatendesneuenGe-
 schäftsjahres1963/64hatsichderStrom-
 absatzgegenüberdemgleichenZeitraum

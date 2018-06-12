@@ -123,7 +123,7 @@ Bezugsrechte:
 (26.6.);Div.Sch.Nr.9
 ZurGeschäftslage:
 BeiallenErzeugnissenlagenamJahres-
-ende1963gateAuftragsbeständevor.
+ende1963guteAuftragsbeständevor.
 DieAbsatzentwicklungwarbisjetztgut,
 sodaßdieProduktionsanlagenbefriedi-
 gendausgelastetwaren.Eskannmit

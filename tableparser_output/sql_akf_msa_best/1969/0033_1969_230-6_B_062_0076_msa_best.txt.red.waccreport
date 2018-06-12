@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      942   Words
-      29   Misrecognized
-   96.92%  Accuracy
+      30   Misrecognized
+   96.82%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -23,7 +23,7 @@ Non-stopwords
       44        2    95.45       10
       39        0   100.00       11
       36        3    91.67       12
-      27        2    92.59       13
+      27        3    88.89       13
       27        0   100.00       14
       32        1    96.88       15
       25        0   100.00       16
@@ -49,11 +49,11 @@ Non-stopwords
        4        0   100.00       36
        2        1    50.00       38
        1        0   100.00       40
-     941       29    96.92    Total
+     941       30    96.81    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     610       23    96.23        1
+     610       24    96.07        1
       45        1    97.78        2
       17        0   100.00        3
       10        0   100.00        4
@@ -61,17 +61,17 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        6        0   100.00      >10
-     697       24    96.56    Total
+     697       25    96.41    Total
 
 Phrases
    Count   Missed   %Right   Length
-     942       29    96.92        1
-     941       51    94.58        2
-     940       72    92.34        3
-     939       91    90.31        4
-     938      109    88.38        5
-     937      126    86.55        6
-     936      142    84.83        7
+     942       30    96.82        1
+     941       53    94.37        2
+     940       75    92.02        3
+     939       95    89.88        4
+     938      112    88.06        5
+     937      128    86.34        6
+     936      143    84.72        7
      935      157    83.21        8
 
 Stopwords
@@ -514,7 +514,7 @@ Non-stopwords
        1        0   100.00   ing.ennokoch
        1        0   100.00   ing.erichmenzel
        1        0   100.00   ing.felixherriger
-       1        0   100.00   ing.paulharke
+       1        1     0.00   ing.paulharke
        1        0   100.00   ing.ulrichpetersen
        3        0   100.00   inhaber
        1        0   100.00   insbesondereauchzurerrichtung

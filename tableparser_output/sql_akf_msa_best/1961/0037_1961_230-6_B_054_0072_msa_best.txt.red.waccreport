@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      773   Words
-      27   Misrecognized
-   96.51%  Accuracy
+      22   Misrecognized
+   97.15%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,13 +21,13 @@ Non-stopwords
       30        2    93.33        8
       33        1    96.97        9
       39        3    92.31       10
-      36        0   100.00       11
+      36        1    97.22       11
       24        0   100.00       12
       27        0   100.00       13
       48        0   100.00       14
-      13        2    84.62       15
+      13        1    92.31       15
       19        0   100.00       16
-      26        1    96.15       17
+      26        0   100.00       17
       17        2    88.24       18
       18        0   100.00       19
       12        0   100.00       20
@@ -41,20 +41,20 @@ Non-stopwords
        5        0   100.00       28
        6        0   100.00       29
       13        1    92.31       30
-       8        1    87.50       31
-      10        1    90.00       32
+       8        0   100.00       31
+      10        0   100.00       32
       11        2    81.82       33
       15        1    93.33       34
-       9        2    77.78       35
+       9        0   100.00       35
        6        0   100.00       36
        2        0   100.00       37
        2        0   100.00       38
        2        0   100.00       39
-     771       27    96.50    Total
+     771       22    97.15    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     526       22    95.82        1
+     526       17    96.77        1
       35        0   100.00        2
       15        0   100.00        3
        5        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        1        0   100.00      >10
-     594       22    96.30    Total
+     594       17    97.14    Total
 
 Phrases
    Count   Missed   %Right   Length
-     773       27    96.51        1
-     772       49    93.65        2
-     771       69    91.05        3
-     770       88    88.57        4
-     769      106    86.22        5
-     768      124    83.85        6
-     767      140    81.75        7
-     766      156    79.63        8
+     773       22    97.15        1
+     772       39    94.95        2
+     771       54    93.00        3
+     770       68    91.17        4
+     769       81    89.47        5
+     768       94    87.76        6
+     767      107    86.05        7
+     766      120    84.33        8
 
 Stopwords
    Count   Missed   %Right   
@@ -205,7 +205,7 @@ Non-stopwords
        1        0   100.00   alsauchimauslandsgeschäftet
        1        0   100.00   alsergebnisderauftragseingangs
        1        0   100.00   anderenkapitaldieaegmit
-       1        1     0.00   andererseitsweiteran.indererwartung
+       1        0   100.00   andererseitsweiteran.indererwartung
        1        0   100.00   angemessenesergebnis
        1        0   100.00   anlagen
        1        0   100.00   anlagevermögen477595517166
@@ -274,7 +274,7 @@ Non-stopwords
        1        0   100.00   demwertzuwachs.derüberwiegendeteil
        1        0   100.00   den
        1        0   100.00   der
-       1        1     0.00   derauftragseinganglagsowohlimin
+       1        0   100.00   derauftragseinganglagsowohlimin
        1        0   100.00   derauslandsumsatzerhöhtesichauf
        1        0   100.00   derdazugehörendengetriebe
        1        0   100.00   derumsatzdermaßgeblichentochter
@@ -330,7 +330,7 @@ Non-stopwords
        1        0   100.00   entwurfundbauvollständigerkonven
        1        0   100.00   entwurfundbauvollständigerum
        1        0   100.00   erichvierhub
-       1        0   100.00   ernstgamper
+       1        1     0.00   ernstgamper
        1        0   100.00   ernstrieche
        1        0   100.00   erreichteimberichtsjahrdm2153
        1        0   100.00   ersichtlich
@@ -366,7 +366,7 @@ Non-stopwords
        1        0   100.00   genhaus
        1        0   100.00   georghauck
        1        0   100.00   gerätefürhochfrequenz
-       1        1     0.00   gesamtgeschäftlagdamitunverändert
+       1        0   100.00   gesamtgeschäftlagdamitunverändert
        1        0   100.00   gesamtumsatzderaegeinschließlich
        1        0   100.00   geschäft
        1        0   100.00   geschäftsjahr
@@ -375,7 +375,7 @@ Non-stopwords
        1        0   100.00   gesellschaftag
        1        0   100.00   gesellschaften
        1        0   100.00   gewerblicherausnutzungderelektrizität
-       1        1     0.00   gewinnohnevortrag
+       1        0   100.00   gewinnohnevortrag
        1        0   100.00   girozen
        1        0   100.00   girozentrale
        1        0   100.00   gischelandesbank
@@ -580,7 +580,7 @@ Non-stopwords
        3        0   100.00   st
        1        0   100.00   stellv
        3        0   100.00   stellv.vors
-       1        1     0.00   stiegimgleichen
+       1        0   100.00   stiegimgleichen
        1        0   100.00   stimmrechtd.aktieni.d.h
        1        0   100.00   straßenbahnen
        1        0   100.00   stromartundleistung
@@ -613,7 +613,7 @@ Non-stopwords
        1        1     0.00   ultimo194810,25
        1        0   100.00   umlaufvermögen771151726913
        1        0   100.00   umsatzderaeg
-       1        1     0.00   umsatzentwicklunghieltsichderauf
+       1        0   100.00   umsatzentwicklunghieltsichderauf
        1        0   100.00   umtauschrechtjeweilszum15
        3        0   100.00   und
        1        0   100.00   undauslande

@@ -1,31 +1,31 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
    21275   Characters
-     125   Errors
-   99.41%  Accuracy
+     128   Errors
+   99.40%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.41%  Accuracy After Correction
+   99.40%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       8       28       89      125   Unmarked
-       8       28       89      125   Total
+       9       30       89      128   Unmarked
+       9       30       89      128   Total
 
    Count   Missed   %Right
        3        3     0.00   Unassigned
      795        0   100.00   ASCII Spacing Characters
     2444        8    99.67   ASCII Special Symbols
     2939       11    99.63   ASCII Digits
-    2309        7    99.70   ASCII Uppercase Letters
-   12534        6    99.95   ASCII Lowercase Letters
+    2309        9    99.61   ASCII Uppercase Letters
+   12534        7    99.94   ASCII Lowercase Letters
        1        0   100.00   Latin1 Uppercase Letters
      249        1    99.60   Latin1 Lowercase Letters
        1        0   100.00   General Punctuation
-   21275       36    99.83   Total
+   21275       39    99.82   Total
 
   Errors   Marked   Correct-Generated
        7        0   {<FEFF>}-{�<\n>MN<\n>><\n>}
@@ -70,11 +70,14 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {:}-{;}
        1        0   {;}-{}
        1        0   {A}-{K}
+       1        0   {H}-{F}
+       1        0   {J}-{V}
        1        0   {K}-{P}
        1        0   {L}-{S}
        1        0   {M}-{W}
        1        0   {R}-{M}
        1        0   {Z}-{H}
+       1        0   {e}-{}
        1        0   {i}-{g}
        1        0   {i}-{t}
        1        0   {l}-{n}
@@ -127,9 +130,9 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      118        0   100.00   {E}
      133        0   100.00   {F}
      190        0   100.00   {G}
-     174        0   100.00   {H}
+     174        1    99.43   {H}
       69        1    98.55   {I}
-      10        0   100.00   {J}
+      10        1    90.00   {J}
      133        1    99.25   {K}
       59        1    98.31   {L}
      187        1    99.47   {M}
@@ -149,7 +152,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      337        0   100.00   {b}
      372        0   100.00   {c}
      433        0   100.00   {d}
-    1752        0   100.00   {e}
+    1752        1    99.94   {e}
      242        0   100.00   {f}
      380        0   100.00   {g}
      466        0   100.00   {h}

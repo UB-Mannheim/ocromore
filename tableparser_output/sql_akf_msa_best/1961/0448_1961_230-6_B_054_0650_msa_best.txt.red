@@ -1,5 +1,5 @@
 �
-RATIONALAllgemeineVersicherungs-Aktien-Gesellschaft
+NATIONALAllgemeineVersicherungs-Aktien-Gesellschaft
 Sitz:(24a)Lübeck,TravemünderAllee9
 Fernruf:Sa.-Nr.25321
 Fernschreiber;

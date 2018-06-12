@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      322   Words
-      16   Misrecognized
-   95.03%  Accuracy
+      17   Misrecognized
+   94.72%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,7 +21,7 @@ Non-stopwords
       16        0   100.00        8
       14        0   100.00        9
       17        0   100.00       10
-      18        1    94.44       11
+      18        2    88.89       11
       17        1    94.12       12
       15        0   100.00       13
        5        0   100.00       14
@@ -43,29 +43,29 @@ Non-stopwords
        1        0   100.00       32
        1        0   100.00       36
        1        0   100.00       38
-     320       16    95.00    Total
+     320       17    94.69    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     209       15    92.82        1
+     209       16    92.34        1
       29        0   100.00        2
        6        0   100.00        3
        1        0   100.00        4
        2        0   100.00        5
        1        0   100.00       10
        1        0   100.00      >10
-     249       15    93.98    Total
+     249       16    93.57    Total
 
 Phrases
    Count   Missed   %Right   Length
-     322       16    95.03        1
-     321       29    90.97        2
-     320       40    87.50        3
-     319       50    84.33        4
-     318       59    81.45        5
-     317       65    79.50        6
-     316       71    77.53        7
-     315       77    75.56        8
+     322       17    94.72        1
+     321       31    90.34        2
+     320       43    86.56        3
+     319       54    83.07        4
+     318       64    79.87        5
+     317       71    77.60        6
+     316       78    75.32        7
+     315       85    73.02        8
 
 Stopwords
    Count   Missed   %Right   
@@ -245,7 +245,7 @@ Non-stopwords
        1        0   100.00   jahresfehlbetrag
        1        0   100.00   jahresüberschuß471
        1        0   100.00   je16
-       1        0   100.00   jenom.dm100
+       1        1     0.00   jenom.dm100
        1        0   100.00   k
        1        0   100.00   kapital:dm100000
        1        0   100.00   kapital:dm1000000

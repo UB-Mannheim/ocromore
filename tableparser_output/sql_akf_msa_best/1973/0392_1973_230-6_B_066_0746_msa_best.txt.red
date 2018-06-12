@@ -17,7 +17,7 @@ vanDoormaal;Dr.-Ing.H.Ebbinge;Dr.M.
 W.Holtrop;R.E.Marjolin;Wm.McC.Mar-
 tinJr.;Dipl.-Ing.L.Schepers;Dr.M.E.
 Spaght;Dipl.-Ing.W.F.G.L.Starrenburg;
-Dr.C.R.C.WijckerheldBisdom
+Dr.C.R.C.WijckerheldWisdom
 Gründung:1890
 Tätigkeitsgebiet:
 Aufsuchung,Gewinnung,Beförderungund
@@ -62,7 +62,7 @@ seldorf,Hamburg,MünchenundSaar-
 brücken;
 SaarländischeKreditbankAG,Saarbrücken;
 TheChaseManhattanBank,NewYork;
-N.M.Rothschild&Cons,London;
+N.M.Rothschild&Sons,London;
 SchweizerischeKreditanstalt,Züriıch;
 Soc.GeneraledeBanque,Brüssel;
 CreditLyonnais,Brüssel;

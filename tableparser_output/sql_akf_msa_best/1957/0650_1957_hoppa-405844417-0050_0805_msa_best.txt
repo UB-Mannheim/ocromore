@@ -17,7 +17,7 @@ Hamburg;
 Dr. Kurt Glässing, Hamburg;
 Wilhelm Joost, Hamburg (Arbeitnehmer-
 vertreter);
-Heinrich Kahler, Hamburg (Arbeitnehmer-
+Heinrich Mahler, Hamburg (Arbeitnehmer-
 vertreter);
 Dr. Joachim Riehle, Hamburg;
 Adolph Schönfelder, Hamburg;
@@ -183,7 +183,7 @@ Barmittel)8 292 4 241
 Eigenkapital83 149 82 992
 (davon A. -K.) 69 035 69 035
 Fremdkapital68 870 57 435
-Gewinn nach Vertrag 3053
+Gewinn nach Vortrag 3053
 Aus den Gewinn- und Verlust-
 rechnungen
 Abschreibungen12 124 13 183

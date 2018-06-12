@@ -34,7 +34,7 @@ HeinzDürrbeck,Frankfurt(M);'’)
 IreneFleischhauer,Berlin;'’)
 Dr.FriedrichFlick,Düsseldorf;+)
 WalterFranke,Berlin;'’)
-ErnstGamper,Zürich;+)
+ErnstCamper,Zürich;+)
 AlfredHenze,Eerlin;'’)
 ProfessorDr.Dr.-Ing.Dr.oec.h.c.
 WaldemarKoch,Berlin;+)
@@ -341,12 +341,12 @@ derUmsatzzunahmeentfielaufdasWaren-
 geschäft.
 DerAuslandsumsatzerhöhtesichauf
 DM309Mio.DerAnteildesExportesam
-Gesamtgeschäftfagdamitunverändert
+Gesamtgeschäftlagdamitunverändert
 bei22%.
 DerUmsatzdermaßgeblichenTochter-
 gesellschaften,d.h.derjenigenGesell-
 schaften,anderenKapitaldieAEGmit
-über50%beteiligtist,stierimgleichen
+über50%beteiligtist,stiegimgleichen
 Zeitraumvon793um19%aufDM943
 Mio.AndieserZunahmehattedieTele-
 funkenGmbHwesentlichenAnteil.Der
@@ -355,7 +355,7 @@ dieserTochtergesellschaften-jedoch
 unterAbzugdergegenseitigenLieferun-
 gen-erreichteimBerichtsjahrDM2153
 MiogegenüberDM1955MioimVorjahr.
-DerAuftragseinganglsgsowohlimIn-
+DerAuftragseinganglagsowohlimIn-
 lands-alsauchimAuslandsgeschäftet-
 wasüberdenBestelleingängendesVor-
 jahres.EinemRückgangderAuslands-
@@ -363,7 +363,7 @@ aufträgeimtechnischenGeschäftstand
 eineZunahmederAuslandsbestellungen
 imWarengeschäftgegenüber.
 AlsErgebnisderAuftragseingangs-und
-UmsatzentwicklungzieltsichderAuf-
+UmsatzentwicklunghieltsichderAuf-
 tragsbestandnahezuunverändertaufder
 zuBeginndesGeschäftsjahresvorhande-
 nenHöhe.DerAnteildesAuslandsge-
@@ -375,7 +375,7 @@ ImlaufendenJahrhatsichdasGeschäft
 bisherbefriedigendentwickelt.Allerdings
 haltendieTendenzenzurKostensteigerung
 einerseitsundzumDruckaufdiePreise
-andererseitsweiteran.InterErwartung,
+andererseitsweiteran.InderErwartung,
 daßesgelingt,dieAuswirkungdieser
 TendenzeninerträglichenGrenzenzu
 halten,hofftdieGesellschaftauchfürdas
@@ -393,7 +393,7 @@ Barmittel)138500105375
 Eigenkapital395000395000
 (davonA.-K.)310000310000
 Fremdkapital818444811488
-GewinnohneVertrag
+GewinnohneVortrag
 (1958/59nach
 Vortrag)3530237591
 AusdenGewinn-undVerlust-

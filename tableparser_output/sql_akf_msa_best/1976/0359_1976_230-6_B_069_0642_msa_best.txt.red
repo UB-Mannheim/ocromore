@@ -76,7 +76,7 @@ Kapital:DM2000000.-(49,97%)
 Dividendenab1969:0,0,0,0,0,0%
 Jul.Wolff&Co.GmbH,Heilbronn
 Kapital:DM3000000.-(93,3%)
-SWFSüddeutscheWenden-undFörderan-
+SWFSüddeutscheWinden-undFörderan-
 lagenfabrikvonBechtolsheim&SteinKG,
 München
 Kapital:DM2972500.-(94,62%)
@@ -126,7 +126,7 @@ Dividendenab1969:18,18,14,7
 W.TemmelsBuchdruckereiundVerlag
 GmbH,Nürnberg
 Kapital:DM1200000.-(100%)
-BüssingAutomobilwerteGmbH,Braun-
+GüssingAutomobilwerteGmbH,Braun-
 schweig
 Kapital:DM42000000.-(97,62%;Be-
 triebspachtvertrag)
@@ -182,7 +182,7 @@ GesellschaftenvonuntergeordneterBe-
 deutung
 Geschäftsjahr:1.Juli-30.Juni
 StimmrechtderAktien::
-Jenom.DM50.-St.-Akt.=1Stimme
+Venom.DM50.-St.-Akt.=1Stimme
 Vorz.-Akt.ohneStimmrecht
 Kapitalentwicklungund
 Bezugsrechte:

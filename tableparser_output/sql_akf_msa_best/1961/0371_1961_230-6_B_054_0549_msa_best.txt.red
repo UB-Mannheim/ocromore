@@ -118,7 +118,7 @@ Barmittel)14301079
 Eigenkapital62136147
 (davonA.-K.)26252625
 Fremdkapital26172326
-GewinnnachVertrag638762
+GewinnnachVortrag638762
 AusdenGewinn-undVerlust-
 rechnungen
 Löhneu.Gehälter20842344

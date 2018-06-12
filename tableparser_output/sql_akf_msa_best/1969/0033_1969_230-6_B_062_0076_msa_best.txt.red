@@ -20,7 +20,7 @@ Vors.;
 Dr.jur.HansGrebe.Gehrden:
 Dr.-Ing.Dr.-Ing.E.h.FriedricnhHämmer-
 ling,Königstein;
-Dipl.-Ing.PaulHarke,Königstein;
+Dipl.-Ing.PaulHark,Königstein;
 Dr.phil.ErhardLöwe,Ulm;
 OttoWössner,Ulm;
 Prof.Dr.-Ing.Dr.-Ing.E.h.Werner

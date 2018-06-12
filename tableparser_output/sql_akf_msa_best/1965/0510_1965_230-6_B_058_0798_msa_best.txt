@@ -6,7 +6,7 @@ Fernruf:
 Sa.-Nr.2 01 91 (Hauptverwaltung)
 Fernschreiber: 0857 851
 Vorstand:
-Dr.h.c. Helmuth Greinert, Essen;
+Dr.h.c. Hellmuth Greinert, Essen;
 Helmut Meysenburg, Heiligenhaus;
 Dr. Alfred Einnatz, Essen;;
 Wilhelm Gutmann, Essen, stellv.;;
@@ -17,7 +17,7 @@ Dr.h.c. Hermann J.Abs, Frankfurt (M),
 Vors,;
 Dr.Hanns Sinzig, Altenkirchen, 1.stellv.
 Vors.;
-Paul Bullmann, Essen, 2.stellv. Vors.;
+Paul Cullmann, Essen, 2.stellv. Vors.;
 Heinrich Schöller, Essen, 3. stellv. Vors.;
 Karl Posthofer, Essen, 4. stellv. Vors.;
 Dr.Gustav Mertens, Geldern, 5.stellv.
@@ -47,7 +47,7 @@ Peter Jammers, Bad Godesberg;;
 Dr, Otto Korn, Aachen;
 Dr.-Ing.E.h,. Heinrich Kost, Homberg
 (Niederrhein);
-Willi Kowalski, Bergheim (Erft);
+Willi Kowalski, Bergheim (Erst);
 Dr.Ernst Mawick, Nordhorn;;
 Eugen York, Essen;
 Karl Schirner, Freiburg i. Br.;;
@@ -59,7 +59,7 @@ Ausschließlich Versorgung der Bevölke-
 rung mit Elektrizität, Gas und Wasser.
 Das Elektrizitäts-Versorgungsgebiet des
 RWE und seiner Tochterunternehmen um-
-faßt mit rd. 28 100 wkm und einer Bevöl-
+faßt mit rd. 28 100 qkm und einer Bevöl-
 kerung von annähernd 8,8 Mio Einwohnern
 wesentliche Teile der Bundesländer Nord-
 rhein-Westfalen, Rheinland-Pfalz und Nie-
@@ -70,9 +70,9 @@ derer Versorgungsunternehmen des Bun-
 desgebietes und der angrenzenden Länder
 Holland, Belgien, Frankreich, Schweiz
 und Österreich in engere Verbund, wo-
-bei insbesondere die süddeutscher Unter-
+bei insbesondere die süddeutschen Unter-
 nehmen in großem Umfang auf Grund lang-
-fristiger Abmachungen laufen elektrische
+fristiger Abmachungen laufend elektrische
 Energie vom RWE beziehen.
 Beteiligungen:
 Gewerkschaft des Steinkohlenbergwerks
@@ -160,7 +160,7 @@ Kapital: DM 55 000 000.- (75 %)
 Geschäftsjahr: 1. Juli - 30. Juni
 Stimmrecht d.Aktien i.d.H.-V.:
 Je nom. DM 100, - St. -Akt. = 1 Stimme;
-je nom. DM 100.- Fam, -Akt. = 20 Stim-
+je nom. DM 100.- Nam, -Akt. = 20 Stim-
 men
 Zahlstellen:_
 Gesellschaftskasse, Essen;;
@@ -304,8 +304,8 @@ Div.Sch.Nr.17
 Zur Geschäftslage:
 Im Geschäftsjahr 1962/63 erreichte die
 nutzbare Stromabgabe eine Höhe von
-41,061 Mrd kih gegenüber einer Abgabe
-von 34, 763 Mrd kih im Vorjahr,
+41,061 Mrd kWh gegenüber einer Abgabe
+von 34, 763 Mrd kWh im Vorjahr,
 In den ersten fünf Monaten des neuen Ge-
 schäftsjahres 1963/64 hat sich der Strom-
 absatz gegenüber dem gleichen Zeitraum

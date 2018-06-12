@@ -27,6 +27,9 @@ class TableParser(object):
             self.vocab_checker = VocabularyChecker()
             self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH,
                                                 config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
+            self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH_2,
+                                                    config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
+
             self.vocab_checker.initialize_spellchecker()
 
         self._base_db_dir = os.path.basename(os.path.normpath(dbpath))

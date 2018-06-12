@@ -38,10 +38,10 @@ KonradKaletsch,Düsseldorf;
 PaulLichtenberg,Frankfurt(M);
 GünterMaxPaefgen,Düsseldorf;
 Dr.jur.HorstPavel,BadHomburgv.d.H.;
-JürgenConto,Frankfurt(M);
+JürgenKonto,Frankfurt(M);
 Arbeitnehmervertreter:
 PaulGerhold,Kassel;
-KarlLauff,Stuttgart;
+KarlHaufe,Stuttgart;
 HerbertLucy,Mannheim;
 NikolausPrediger,Gaggenau;
 ErnstSchäfer,Sindelfingen
@@ -253,7 +253,7 @@ Stückelung:
 898000Inh.-St.-Akt.zujeDM1000.-
 397854Inh.-St.-Akt.zujeDM100.-
 238927Inh.-St.-Akt.zujeDM50.-
-1535Fam.-Vorz.-Akt.zujeDM1000.-
+1535Nam.-Vorz.-Akt.zujeDM1000.-
 22Nam.-Vorz.-Akt.zujeDM100.-
 1Nam.-Vorz.-Akt.zuDM50.-
 (UrkundenüberdieVorz.-Akt.sindnicht
