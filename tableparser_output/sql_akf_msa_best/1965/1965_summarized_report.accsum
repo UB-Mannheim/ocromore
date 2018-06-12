@@ -1,41 +1,41 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
    17570   Characters
-     251   Errors
-   98.57%  Accuracy
+     256   Errors
+   98.54%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   98.57%  Accuracy After Correction
+   98.54%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      91       41      119      251   Unmarked
-      91       41      119      251   Total
+      95       45      116      256   Unmarked
+      95       45      116      256   Total
 
    Count   Missed   %Right
        3        3     0.00   Unassigned
      698        3    99.57   ASCII Spacing Characters
-    2107       93    95.59   ASCII Special Symbols
+    2107      102    95.16   ASCII Special Symbols
     2743        7    99.74   ASCII Digits
     1718        6    99.65   ASCII Uppercase Letters
-   10074       19    99.81   ASCII Lowercase Letters
+   10074       18    99.82   ASCII Lowercase Letters
        1        1     0.00   Latin1 Special Symbols
        2        0   100.00   Latin1 Uppercase Letters
      223        0   100.00   Latin1 Lowercase Letters
        1        0   100.00   General Punctuation
-   17570      132    99.25   Total
+   17570      140    99.20   Total
 
   Errors   Marked   Correct-Generated
       37        0   {"}-{}
       19        0   {152}-{»eu<\n>SonstigeSteuern}
       16        0   {%}-{}
       16        0   {}-{WestfalenbankAG,}
-      15        0   {}-{;}
       14        0   {tfalenbankAG,B}-{}
-      10        0   {.}-{,}
+      12        0   {}-{;}
+       9        0   {.}-{,}
        8        0   {;}-{}
        8        0   {chum;<\n>so}-{}
        8        0   {}-{ochum;<\n>B}
@@ -46,15 +46,19 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        4        0   {<FEFF>}-{�<\n>}
        4        0   {I}-{11}
        4        0   {}-{Grun}
-       3        0   {}-{-}
+       3        0   {-}-{}
        3        0   {}-{<\n>}
        3        0   {}-{Dr,}
        2        0   {"}-{5}
        2        0   {"}-{N}
        2        0   {+}-{}
+       2        0   {,}-{;}
        2        0   {.-}-{,=}
+       2        0   {.-}-{,}
+       2        0   {:}-{,}
        2        0   {We}-{}
        2        0   {}-{%}
+       2        0   {}-{-}
        2        0   {}-{.}
        2        0   {}-{11}
        2        0   {}-{57}
@@ -70,6 +74,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {"}-{v}
        1        0   {"}-{”}
        1        0   {,}-{.}
+       1        0   {-}-{n}
        1        0   {.}-{;}
        1        0   {0}-{}
        1        0   {1}-{h}
@@ -78,11 +83,11 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {;}-{:}
        1        0   {<FEFF>}-{�}
        1        0   {<\n>}-{l}
-       1        0   {d}-{e}
        1        0   {l}-{I}
        1        0   {}-{&}
        1        0   {}-{'}
        1        0   {}-{(}
+       1        0   {}-{)}
        1        0   {}-{4}
        1        0   {}-{:}
        1        0   {}-{E}
@@ -103,8 +108,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      127        0   100.00   {(}
      138        0   100.00   {)}
       14        2    85.71   {+}
-     323        2    99.38   {,}
-     323        1    99.69   {-}
+     323        4    98.76   {,}
+     323        6    98.14   {-}
      604       12    98.01   {.}
       30        0   100.00   {/}
      656        1    99.85   {0}
@@ -117,7 +122,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      130        0   100.00   {7}
      142        0   100.00   {8}
      241        0   100.00   {9}
-     170        0   100.00   {:}
+     170        2    98.82   {:}
      139       10    92.81   {;}
        4        0   100.00   {=}
      150        1    99.33   {A}
@@ -147,7 +152,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      686        2    99.71   {a}
      241        1    99.59   {b}
      293        1    99.66   {c}
-     334        1    99.70   {d}
+     334        0   100.00   {d}
     1439        2    99.86   {e}
      195        1    99.49   {f}
      323        0   100.00   {g}

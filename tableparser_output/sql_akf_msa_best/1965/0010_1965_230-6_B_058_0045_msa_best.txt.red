@@ -33,7 +33,7 @@ Gründung:
 Tätigkeitsgebiet:
 Produktionsprogramm:
 WerkSinzigamRhein:Steinzeug-Boden-
-fliesen,Klein-,Mittel-,Streifen-und
+fliesen,Klein-,Mitteln,Streifen-und
 Kombi-Mosaik,Labortischfliesen;
 WerkEhrangbeiTrier:Hochspannungs-
 isolatorenfürFreileitungen,Geräteisola-
@@ -108,7 +108,7 @@ Börsennotiz:München(amtl.)
 Wertpapier-Kenn-Nr.:
 501900(St.-Akt.);501903(Vorz.-Akt.)
 Stückelung:
-8400Inh.-St.-Akt.zujeDM1000.-
+8400Inh.St.-Akt.zujeDM1000.-
 5000Inh.-St.-Akt.zujeDM100.-
 4250Inh.-Vorz.-Akt.zujeDM1000.-
 2000Inh.-Vorz.-Akt.zujeDM100.-
@@ -131,7 +131,7 @@ München(25%)
 Anleihe:
 7%Teilschuldverschreibungenvon1958
 Emissionsbetrag:DM10000000.-
-Aktienkurse(München):
+Aktienkurse(München),
 Stammaktien:
 ultimo1948445%
 4194970%

@@ -10,7 +10,7 @@ Werk Augsburg: (08 21) 32 21
 Werk Hamburg: (0 40) 7 40 91
 Werk Nürnberg: (09 11) 1 81
 Werk München: (0 89) 1 48 01
-Werk Gustavsburg: Mainz-Kastel (0 61 43)
+Werk Gustavsburg. Mainz-Kastel (0 61 43)
 551H
 Telex:
 Werk Augsburg: 5 3 751
@@ -26,8 +26,8 @@ Adolf Schiff, Augsburg;
 Wolfram Thiele, Oberhausen;
 Otto Voisard, München;
 Friedrich Laußermair, München, stellv. ;
-Wolfgang Müller, München, stellv.;;
-Herbert Redlich, Gustavsburg, stellv.
+Wolfgang Müller, München, stellv.;
+Herbert Redlich, Gustavsburg. stellv.
 Aufsichtsrat:
 Manfred Lennings, Kettwig, Vors.;
 Ulrich Neumann, Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ Dietrich Wilhelm von Menges, Essen-
 Bredeney;
 Siegfried Schiffbauer, Kiel;
 Arbeitnehmervertreter::
-Franz Klemmer, Augsburg;;
+Franz Klemmer, Augsburg);
 Rudolf Rhein, Mainz-Kostheim;;
 Eduard Schleinkofer, München;
 Ferdinand Wolinsky, Oberhausen
@@ -57,7 +57,7 @@ Maschinen- und Stahlbau mit den Werken
 Nürnberg und Gustavsburg. Unternehmens-
 bereich Nutzfahrzeuge mit den Werken
 München, Watenstedt, Braunschweig und
-Penzberg.
+Penzburg.
 Maschinen- und Anlagenbau der GHH
 STERKRADE AG mit den Werken Sterk-
 rade, Düsseldorf, Rheinwerft Walsum
@@ -126,7 +126,7 @@ Dividenden ab 1969: 18,18, 14,7
 W. Tümmels Buchdruckerei und Verlag
 GmbH, Nürnberg
 Kapital: DM 1 200 000. - (100 %)
-Büssing Automobilwerte GmbH, Braun-
+Büssing Automobilwerke GmbH, Braun-
 schweig
 Kapital: DM 42 000 000. - (97,62 %; Be-
 triebspachtvertrag)
@@ -211,7 +211,7 @@ DM 102,54 und Vorz.-Akt. DM 87,15
 14 (Vorz.-Akt.)
 1969 Erhöhung auf DM 170 000 000. -
 1970 Bezugsrecht 10:1 zu 190 % auf
-DM 187 000 000.-, rechn. Wert St.--Akt.
+DM 187 000 000.-, rechn. Wert St.-Akt.
 und Vorz.-Akt. DM 5,09 (10.7.),
 Div.Sch.Nr. 23 (St.-Akt.) und 17 (Vorz.-
 Akt.) Erhöhung auf DM 197 505 000. -
@@ -235,8 +235,8 @@ Wertpapier-Kenn-Nr.:
 506300 (St. -Akt.); 506303 (Vorz.-Akt.)
 Stückelung:
 143 900 Inh.-St.-Akt. zu je DM 1 000. -
-35 000 Inh. -St.-Akt. zu je DM 100.-
-52 000 Inh. -St.-Akt. zu je DM 50. -
+35 000 Inh. St.-Akt. zu je DM 100.-
+52 000 Inh. St.-Akt. zu je DM 50. -
 91 295 Inh.-Vorz.-Akt.zu jeDM 1 000, -
 59 500 Inh. -Vorz.-Akt.zu je DM 100.-
 55 100 Inh.-Vorz.-Akt.zu je DM 50.-

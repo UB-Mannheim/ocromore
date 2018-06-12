@@ -16,10 +16,10 @@ Non-stopwords
       24        0   100.00        4
       12        0   100.00        5
       32        1    96.88        6
-      25        0   100.00        7
+      25        1    96.00        7
       12        0   100.00        8
       38        0   100.00        9
-      20        0   100.00       10
+      20        1    95.00       10
       26        1    96.15       11
       14        0   100.00       12
       10        0   100.00       13
@@ -45,7 +45,7 @@ Non-stopwords
        1        0   100.00       33
        1        0   100.00       34
        4        0   100.00       35
-       7        3    57.14       36
+       7        1    85.71       36
        1        0   100.00       37
        1        1     0.00       38
        2        0   100.00       39
@@ -54,25 +54,25 @@ Non-stopwords
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     284       10    96.48        1
+     284       11    96.13        1
       13        0   100.00        2
        5        0   100.00        3
        2        0   100.00        4
        1        0   100.00        5
        2        0   100.00        6
        2        0   100.00      >10
-     309       10    96.76    Total
+     309       11    96.44    Total
 
 Phrases
    Count   Missed   %Right   Length
      382       13    96.60        1
-     381       24    93.70        2
-     380       33    91.32        3
-     379       41    89.18        4
-     378       49    87.04        5
-     377       56    85.15        6
-     376       62    83.51        7
-     375       68    81.87        8
+     381       23    93.96        2
+     380       31    91.84        3
+     379       38    89.97        4
+     378       45    88.10        5
+     377       52    86.21        6
+     376       58    84.57        7
+     375       64    82.93        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -126,7 +126,7 @@ Non-stopwords
        1        0   100.00   a.i.anderson
        1        0   100.00   a.w.j.caron
        1        0   100.00   a.w.p.stenham
-       4        2    50.00   aandeeleninindustrieeleondernemingen
+       4        0   100.00   aandeeleninindustrieeleondernemingen
        6        0   100.00   akt
        1        0   100.00   aktienkapitalsinformvoninhaberpapie
        1        0   100.00   aktienkurse
@@ -196,7 +196,7 @@ Non-stopwords
        1        0   100.00   diebardividendenunterliegenindennie
        1        0   100.00   dietochtergesellschaftenundbeteiligungen
        1        0   100.00   disconto
-       3        0   100.00   div.sch.nr
+       3        1    66.67   div.sch.nr
        1        0   100.00   dividendenaufstammaktien
        1        0   100.00   dividendensteuer
        1        0   100.00   dividendensteueristaufdiedeutscheein
@@ -253,7 +253,7 @@ Non-stopwords
        1        0   100.00   hfl4,67
        1        0   100.00   hfl4,70
        2        0   100.00   hfl5,43
-       1        0   100.00   hfl6,20
+       1        1     0.00   hfl6,20
        1        0   100.00   hfl642565000
        1        0   100.00   hfl75000000
        1        0   100.00   imunilever

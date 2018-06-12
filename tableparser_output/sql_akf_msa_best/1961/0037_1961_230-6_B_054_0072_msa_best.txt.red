@@ -124,7 +124,7 @@ tenundelektrischbetriebeneKleinge-
 räte.
 Werkein:
 Berlin,Belecke,Essen,Hameln,Heili-
-genhaus,Kassel,Kirchheim-Teck,Men-
+genhaus,Kassel,Kirchheim/Teck,Men-
 den,Mülheim/Ruhr,Mülheim-Saarn,
 Neumünster,Nürnberg,Oldenburg,Stutt-
 gart
@@ -228,7 +228,7 @@ inHamburg:
 DresdnerBankAG;DeutscheBankAG;
 Brinckmann,Wirtz&Co.;Commerzbank
 AG;DelbrückSchickler&Co.;Hambur-
-gischeLandesbank-Girozentrale-;
+gischeLandesbank-Girozentrale-,
 inHannover:
 DresdnerBankAG;DeutscheBankAG;
 CommerzbankAG;
@@ -275,7 +275,7 @@ Berlin,Bremen,Düsseldorf,Frankfurt
 Stuttgart,BaselundZürich
 Ordnungsnr.d.Aktien:503800
 Stückelung:
-270000Inh.-St.-Akt.zujeDM1000.-
+270000Inh.St.-Akt.zujeDM1000.-
 (Nr.1-270000)
 398000Inh.-St.-Akt.zujeDM100.-
 (Nr.400001-798000)

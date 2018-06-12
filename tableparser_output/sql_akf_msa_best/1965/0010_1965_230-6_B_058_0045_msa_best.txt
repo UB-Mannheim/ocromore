@@ -33,7 +33,7 @@ Gründung:
 Tätigkeitsgebiet:
 Produktionsprogramm:
 Werk Sinzig am Rhein: Steinzeug-Boden-
-fliesen, Klein-, Mittel-, Streifen- und
+fliesen, Klein-, Mitteln, Streifen- und
 Kombi-Mosaik, Labortischfliesen;
 Werk Ehrang bei Trier: Hochspannungs-
 isolatoren für Freileitungen, Geräteisola-
@@ -108,7 +108,7 @@ Börsennotiz: München (amtl.)
 Wertpapier-Kenn-Nr.:
 501900 (St.-Akt.); 501903 (Vorz.-Akt.)
 Stückelung:
-8 400 Inh. -St.-Akt. zu je DM 1 000. -
+8 400 Inh. St.-Akt. zu je DM 1 000. -
 5 000 Inh. -St. -Akt. zu je DM 100.-
 4 250 Inh. -Vorz. -Akt. zu je DM 1 000. -
 2 000 Inh. -Vorz. -Akt. zuje DM 100.-
@@ -131,7 +131,7 @@ München (25 %)
 Anleihe:
 7 % Teilschuldverschreibungen von 1958
 Emissionsbetrag: DM 10 000 000. -
-Aktienkurse (München):
+Aktienkurse (München),
 Stammaktien:
 ultimo 1948445%
 41949 70%

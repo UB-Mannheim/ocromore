@@ -84,7 +84,7 @@ Kapital: DM 833 000. - (100 %)
 Zentral-Omnibusbahnhof "'ZOB''" GmbH,
 Hamburg
 Beteil.: 51 %.
-Geschäftsjahr: Kalenderjahr.
+Geschäftsjahr: Kalenderjahr;
 Stimmrecht d. Aktien i.d.H.-V.:
 Je DM 100.- jeder A-Aktie, jeder
 B-Stamm-Aktie und jeder C-Aktie
@@ -124,7 +124,7 @@ DM 200. -
 DM 36 008 600. - A-Aktien
 DM 21 961 600. - B-Aktien
 DM 10 898 400. - C-Aktien
-DM 166 400. - B-Vorzugsaktie.
+DM 166 400. - B-Vorzugsaktien
 Börsennotiz:
 Hamburg, Berlin, Düsseldorf, Frank-
 furt, Hannover, München (amtl!.).

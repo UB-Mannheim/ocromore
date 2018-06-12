@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1399   Words
-      44   Misrecognized
-   96.85%  Accuracy
+      43   Misrecognized
+   96.93%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -16,10 +16,10 @@ Non-stopwords
      116        5    95.69        4
       51        6    88.24        5
       79        2    97.47        6
-      97        5    94.85        7
+      97        6    93.81        7
       70        0   100.00        8
      105        1    99.05        9
-      80        0   100.00       10
+      80        1    98.75       10
       80        1    98.75       11
       50        1    98.00       12
       47        1    97.87       13
@@ -27,7 +27,7 @@ Non-stopwords
       35        4    88.57       15
       30        0   100.00       16
       39        0   100.00       17
-      27        3    88.89       18
+      27        2    92.59       18
       19        0   100.00       19
       14        1    92.86       20
       18        0   100.00       21
@@ -45,13 +45,13 @@ Non-stopwords
       10        0   100.00       33
        8        0   100.00       34
       10        1    90.00       35
-       9        3    66.67       36
+       9        1    88.89       36
        4        0   100.00       37
        3        1    66.67       38
        3        0   100.00       39
        4        0   100.00       40
        1        0   100.00       49
-    1399       44    96.85    Total
+    1399       43    96.93    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -68,14 +68,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-    1399       44    96.85        1
-    1396       80    94.27        2
-    1393      108    92.25        3
-    1390      128    90.79        4
-    1387      148    89.33        5
-    1384      167    87.93        6
-    1381      185    86.60        7
-    1378      203    85.27        8
+    1399       43    96.93        1
+    1396       77    94.48        2
+    1393      103    92.61        3
+    1390      121    91.29        4
+    1387      139    89.98        5
+    1384      157    88.66        6
+    1381      174    87.40        7
+    1378      191    86.14        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -114,7 +114,7 @@ Non-stopwords
        1        0   100.00   149u
        1        0   100.00   15
        1        0   100.00   150
-       1        1     0.00   1500kumulativevort
+       1        0   100.00   1500kumulativevort
        1        0   100.00   151
        1        0   100.00   1535nam
        1        0   100.00   15wohnungsbaugesellschaften
@@ -279,7 +279,7 @@ Non-stopwords
        1        0   100.00   a.w.p.stenham
        1        0   100.00   a31147480
        1        0   100.00   a9283790
-       4        2    50.00   aandeeleninindustrieeleondernemingen
+       4        0   100.00   aandeeleninindustrieeleondernemingen
        1        0   100.00   ab1.1
        1        0   100.00   ab15.10.1968stücknotizfürdm50
        1        0   100.00   abschlagdm100,875
@@ -454,7 +454,7 @@ Non-stopwords
        1        0   100.00   dietochtergesellschaftenundbeteiligungen
        7        0   100.00   dipl
        1        0   100.00   disconto
-      20        0   100.00   div.sch.nr
+      20        1    95.00   div.sch.nr
        2        0   100.00   dividendenab1966
        1        0   100.00   dividendenaufstammakiten
        2        0   100.00   dividendenaufstammaktien
@@ -608,7 +608,7 @@ Non-stopwords
        1        0   100.00   hfl4,67
        1        0   100.00   hfl4,70
        2        0   100.00   hfl5,43
-       1        0   100.00   hfl6,20
+       1        1     0.00   hfl6,20
        1        0   100.00   hfl6,85
        1        0   100.00   hfl642565000
        1        0   100.00   hfl7

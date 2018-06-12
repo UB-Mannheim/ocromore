@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1489   Words
-      36   Misrecognized
-   97.58%  Accuracy
+      43   Misrecognized
+   97.11%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -14,16 +14,16 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       33        0   100.00        1
-     110        3    97.27        2
+     110        6    94.55        2
       99        3    96.97        3
      131        5    96.18        4
      115        0   100.00        5
-      77        1    98.70        6
+      77        2    97.40        6
       73        0   100.00        7
-      77        2    97.40        8
+      77        4    94.81        8
       64        2    96.88        9
      110        2    98.18       10
-      57        0   100.00       11
+      57        1    98.25       11
       75        1    98.67       12
       37        1    97.30       13
       54        0   100.00       14
@@ -33,12 +33,12 @@ Non-stopwords
       41        2    95.12       18
       14        0   100.00       19
       21        0   100.00       20
-      16        1    93.75       21
+      16        2    87.50       21
       10        0   100.00       22
        8        1    87.50       23
       24        1    95.83       24
        6        1    83.33       25
-      16        2    87.50       26
+      16        1    93.75       26
       22        0   100.00       27
        6        2    66.67       28
        3        0   100.00       29
@@ -51,11 +51,11 @@ Non-stopwords
        1        0   100.00       36
        2        0   100.00       37
        1        0   100.00       38
-    1482       35    97.64    Total
+    1482       42    97.17    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     974       29    97.02        1
+     974       31    96.82        1
       81        0   100.00        2
       29        0   100.00        3
        9        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        4        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1118       29    97.41    Total
+    1118       31    97.23    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1489       36    97.58        1
-    1486       66    95.56        2
-    1483       94    93.66        3
-    1480      122    91.76        4
-    1477      149    89.91        5
-    1474      175    88.13        6
-    1471      200    86.40        7
-    1468      223    84.81        8
+    1489       43    97.11        1
+    1486       76    94.89        2
+    1483      106    92.85        3
+    1480      135    90.88        4
+    1477      163    88.96        5
+    1474      191    87.04        6
+    1471      218    85.18        7
+    1468      244    83.38        8
 
 Stopwords
    Count   Missed   %Right   
@@ -210,7 +210,7 @@ Non-stopwords
        7        0   100.00   25
        1        0   100.00   25,49
        1        0   100.00   2500000
-       1        0   100.00   25150inh
+       1        1     0.00   25150inh
        2        0   100.00   26
        1        0   100.00   265016320396
        1        0   100.00   27
@@ -228,7 +228,7 @@ Non-stopwords
        1        0   100.00   31.7
        1        0   100.00   3221
        1        0   100.00   331
-       1        0   100.00   35000inh
+       1        1     0.00   35000inh
        1        0   100.00   36
        1        0   100.00   392000inh
        1        0   100.00   3auf
@@ -255,7 +255,7 @@ Non-stopwords
        1        0   100.00   5000köln1
        1        0   100.00   506300
        1        0   100.00   506303
-       1        0   100.00   52000inh
+       1        1     0.00   52000inh
        1        0   100.00   528333
        1        0   100.00   53751
        1        0   100.00   55100inh
@@ -441,7 +441,7 @@ Non-stopwords
        1        0   100.00   burggude
        1        0   100.00   burgundmünchen
        3        0   100.00   börsennotiz
-       1        1     0.00   büssingautomobilwerkegmbh
+       1        0   100.00   büssingautomobilwerkegmbh
        1        0   100.00   büttnerlagersystemegmbh
        1        0   100.00   cataloggesellschaftfürbausystemembh
        2        0   100.00   cherung
@@ -615,7 +615,7 @@ Non-stopwords
        3        0   100.00   gründung
        1        0   100.00   gungen
        1        0   100.00   gustavs
-       2        0   100.00   gustavsburg
+       2        1    50.00   gustavsburg
        1        0   100.00   gutehoffnungshütteaktienverein
        1        0   100.00   gutehoffnungshüttesterkradeag
        1        0   100.00   hafenbauten
@@ -822,7 +822,7 @@ Non-stopwords
        1        0   100.00   partenkirchen
        1        0   100.00   passiva
        1        0   100.00   paullichtenberg
-       1        1     0.00   penzburg
+       1        0   100.00   penzburg
        1        0   100.00   personalaufwand463114459017
        1        0   100.00   personalaufwand9040121042442
        1        0   100.00   perstück
@@ -903,7 +903,7 @@ Non-stopwords
        1        0   100.00   sonstigeversicherungen
        1        0   100.00   spannbetonbaunach
        1        0   100.00   sportfahrzeug
-      16        0   100.00   st
+      16        3    81.25   st
        1        0   100.00   stadtbachstraße1
        1        0   100.00   stamm
        2        0   100.00   stammaktien
@@ -911,7 +911,7 @@ Non-stopwords
        1        0   100.00   steinkg
        1        0   100.00   stellungen102071145951
        1        0   100.00   stellungs
-       7        0   100.00   stellv
+       7        1    85.71   stellv
        5        0   100.00   stellv.vors
        1        0   100.00   sterkradeagmitdenwerkensterk
        1        0   100.00   steuern130807541
@@ -1027,7 +1027,7 @@ Non-stopwords
        1        0   100.00   weinsheim
        2        0   100.00   werkaugsburg
        1        0   100.00   werkgustavsburg
-       1        0   100.00   werkgustavsburg:mainz
+       1        1     0.00   werkgustavsburg:mainz
        2        0   100.00   werkhamburg
        2        0   100.00   werkmünchen
        2        0   100.00   werknürnberg

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      322   Words
-      13   Misrecognized
-   95.96%  Accuracy
+      17   Misrecognized
+   94.72%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,18 +12,18 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       15        0   100.00        1
-      37        3    91.89        2
+      37        4    89.19        2
       15        0   100.00        3
       31        1    96.77        4
       25        3    88.00        5
       20        0   100.00        6
-      12        1    91.67        7
-      16        0   100.00        8
+      12        2    83.33        7
+      16        1    93.75        8
       14        0   100.00        9
       17        0   100.00       10
       18        0   100.00       11
       17        0   100.00       12
-      15        0   100.00       13
+      15        1    93.33       13
        5        0   100.00       14
        4        0   100.00       15
       13        0   100.00       16
@@ -43,29 +43,29 @@ Non-stopwords
        1        0   100.00       32
        1        0   100.00       36
        1        0   100.00       38
-     320       13    95.94    Total
+     320       17    94.69    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     209       12    94.26        1
+     209       15    92.82        1
       29        0   100.00        2
        6        0   100.00        3
        1        0   100.00        4
        2        0   100.00        5
        1        0   100.00       10
        1        0   100.00      >10
-     249       12    95.18    Total
+     249       15    93.98    Total
 
 Phrases
    Count   Missed   %Right   Length
-     322       13    95.96        1
-     321       23    92.83        2
-     320       32    90.00        3
-     319       40    87.46        4
-     318       47    85.22        5
-     317       51    83.91        6
-     316       55    82.59        7
-     315       59    81.27        8
+     322       17    94.72        1
+     321       29    90.97        2
+     320       40    87.50        3
+     319       50    84.33        4
+     318       59    81.45        5
+     317       65    79.50        6
+     316       71    77.53        7
+     315       77    75.56        8
 
 Stopwords
    Count   Missed   %Right   
@@ -118,7 +118,7 @@ Non-stopwords
        1        0   100.00   3541
        1        0   100.00   49
        1        0   100.00   49100
-       1        0   100.00   4934inh
+       1        1     0.00   4934inh
        1        0   100.00   5
        1        0   100.00   50
        1        0   100.00   500inh
@@ -270,7 +270,7 @@ Non-stopwords
        2        0   100.00   nr
        1        0   100.00   personalaufwand88717499
        1        0   100.00   postfach187
-       1        0   100.00   profilen
+       1        1     0.00   profilen
        1        0   100.00   rechn
        1        0   100.00   rechn.wert20
        1        0   100.00   rechnungen
@@ -280,10 +280,10 @@ Non-stopwords
        1        0   100.00   sa
        1        0   100.00   schaftmbh
        1        0   100.00   scheid
-       1        0   100.00   seilenusw.aus
+       1        1     0.00   seilenusw.aus
        1        0   100.00   sitz
        1        0   100.00   sowieauf
-       5        0   100.00   st
+       5        1    80.00   st
        3        0   100.00   stammaktien
        1        0   100.00   stangen
        1        0   100.00   stellv

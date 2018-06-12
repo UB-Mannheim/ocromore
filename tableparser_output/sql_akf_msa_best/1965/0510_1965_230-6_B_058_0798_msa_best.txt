@@ -9,16 +9,16 @@ Vorstand:
 Dr.h.c. Hellmuth Greinert, Essen;
 Helmut Meysenburg, Heiligenhaus;
 Dr. Alfred Einnatz, Essen;;
-Wilhelm Gutmann, Essen, stellv.;;
+Wilhelm Gutmann, Essen, stellv.;
 Professor Dr.Dr. Heinrich Mandel, Es-
 sen, stellv.
 Aufsichtsrat:
 Dr.h.c. Hermann J.Abs, Frankfurt (M),
 Vors,;
-Dr.Hanns Sinzig, Altenkirchen, 1.stellv.
+Dr.Hanns Sinzig, Altenkirchen; 1.stellv.
 Vors.;
 Paul Cullmann, Essen, 2.stellv. Vors.;
-Heinrich Schöller, Essen, 3. stellv. Vors.;
+Heinrich Schöller; Essen, 3. stellv. Vors.;
 Karl Posthofer, Essen, 4. stellv. Vors.;
 Dr.Gustav Mertens, Geldern, 5.stellv.
 Vors,;
@@ -42,7 +42,7 @@ Heinz Heiderhoff, Mülheim (Ruhr);
 Dr.-Ing.E.h. Franz Hellberg, Köln;;
 Kurt Hoffmann, Hannover;
 Werner Hoffmann, Essen;
-Hans Hülsmann, Gelsenkirchen;;
+Hans Hülsmann, Gelsenkirchen);
 Peter Jammers, Bad Godesberg;;
 Dr, Otto Korn, Aachen;
 Dr.-Ing.E.h,. Heinrich Kost, Homberg
@@ -178,7 +178,7 @@ Burkhardt & Co,., Essen;
 GrunGrunelius & Co., Frankfurt (M);
 Landesbank für Westfalen Girozentrale,
 Münster (Westf.);
-Merck, Finck & Co., München;;
+Merck, Finck & Co., München;
 National-Bank AG, Essen;
 Niedersächsische Landesbank - Girozen-
 trale -, Hannover;
@@ -214,9 +214,9 @@ Stuttgart, Zürich, Genf und Basel (amtl.)
 Wertpapier-Kenn-Nr.:
 703700 (St.-Akt.); 703703 (Vorz.-Akt.)
 Stückelung:
-851 125 Inh. -St.-Akt. zuje DM 400; -
-467 375 Inh. -St.-Akt. zu jeDM 100.-
-232 500 Inh, -St.-Akt. zu je DM 1 000. -
+851 125 Inh. St.-Akt. zuje DM 400; -
+467 375 Inh. St.-Akt. zu jeDM 100.-
+232 500 Inh, St.-Akt. zu je DM 1 000. -
 40 625 Inh. -Namens-Akt. zu je DM 400.-
 40 625 Inh. -Namens-Akt. zu je DM 100, -
 425 750 Inh.-Vorz.-Akt. zu je DM 400.-
@@ -239,7 +239,7 @@ Emissionsbetrag: DM 68 000 000.-
 Emissionsbetrag: DM 75 000 000.-
 6 % Teilschuldverschreibungen von 1963
 Emissionsbetrag: DM 100 000 000.-
-Aktienkurse (Düsseldorf):
+Aktienkurse (Düsseldorf),
 St. -Akt.
 ultimo 1948 36,25 %
 1949 81,50 %
@@ -294,7 +294,7 @@ BA ab 2.3.);
 Div.Sch.Nr.14
 Vorz.-Akt.i.V. 4:1, BA; (Notiz ex
 BA ab 2.3.);
-Div.-Sch. Nr. 14
+Div.Sch. Nr. 14
 1963: St.-Akt. i.V. 5:1 zu 150 % Ab-
 schlag 62,5 % (7.3.);
 Div.Sch.Nr.17

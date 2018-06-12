@@ -67,7 +67,7 @@ Tätigkeitsgebiet:
 ArtgewerblicherAusnutzungderElek-
 trizitätundjedesonstigeBetätigungauf
 industriellemGebietimIn-undAus-
-land,namentlichHerstellung.Vertrieb
+land,namentlichHerstellung,Vertrieb
 oderVerwertungindustriellerErzeug-
 nisse,Herstellung,Einrichtung,Er-
 werb,Pachtung,Bewirtschaftungoder
@@ -190,7 +190,7 @@ NationaleAutomobil-GesellschaftAG,
 Berlin
 Kapital:DM3000000.-(100%)
 Dividendenab1960/61:12,12,12;ab
-1963(1.7.-31.12.):,1214,16,16.%
+1963(1.7.31.12.):,1214,16,16.%
 BetefaBerlinerTelefonschnur-Fabrik
 GmbH,Berlin
 Kapital:DM100000.-(100%)
@@ -358,7 +358,7 @@ Bezugsrechte:
 1954:i.V.4:1zu100%;Abschlag15,12%
 (20.10.);Div.Sch.Nr.3
 1955:i.V.2:1zu135%;Abschlag34,33%
-(21.4:10.);Div.-Sch.;Nr.5
+(21.4:10.);Div.;Sch.;Nr.5
 1956:i.V.3:1zu100%;Abschlag22,33%
 (9.211.5);Div.Sch.Nr.7
 1957:i.V.4:1zu120%;Abschlag10,84%

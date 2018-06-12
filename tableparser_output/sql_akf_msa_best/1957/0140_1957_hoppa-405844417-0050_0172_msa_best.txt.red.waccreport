@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      532   Words
-      10   Misrecognized
-   98.12%  Accuracy
+      11   Misrecognized
+   97.93%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,7 +20,7 @@ Non-stopwords
       32        1    96.88        6
       29        0   100.00        7
       34        1    97.06        8
-      21        0   100.00        9
+      21        1    95.24        9
       22        1    95.45       10
       24        1    95.83       11
       21        0   100.00       12
@@ -49,7 +49,7 @@ Non-stopwords
        9        0   100.00       35
        5        0   100.00       36
        1        0   100.00       38
-     530       10    98.11    Total
+     530       11    97.92    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -63,14 +63,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     532       10    98.12        1
-     531       20    96.23        2
-     530       28    94.72        3
-     529       36    93.19        4
-     528       43    91.86        5
-     527       50    90.51        6
-     526       57    89.16        7
-     525       64    87.81        8
+     532       11    97.93        1
+     531       22    95.86        2
+     530       31    94.15        3
+     529       40    92.44        4
+     528       48    90.91        5
+     527       56    89.37        6
+     526       64    87.83        7
+     525       72    86.29        8
 
 Stopwords
    Count   Missed   %Right   
@@ -305,7 +305,7 @@ Non-stopwords
        2        0   100.00   gewerkschaftkonrad
        1        0   100.00   gewinnnachvortrag73429475
        1        0   100.00   gitter
-       2        0   100.00   glückauf
+       2        1    50.00   glückauf
        2        0   100.00   gossler
        1        0   100.00   grossaktionär
        1        0   100.00   grosseagmitdenkohlenzecheninherne

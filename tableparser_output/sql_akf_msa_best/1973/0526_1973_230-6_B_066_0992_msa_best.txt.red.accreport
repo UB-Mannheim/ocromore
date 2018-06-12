@@ -18,10 +18,10 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
    Count   Missed   %Right
        1        1     0.00   Unassigned
      199        0   100.00   ASCII Spacing Characters
-     501        7    98.60   ASCII Special Symbols
+     501        9    98.20   ASCII Special Symbols
      566        0   100.00   ASCII Digits
      520        0   100.00   ASCII Uppercase Letters
-    3474        2    99.94   ASCII Lowercase Letters
+    3474        0   100.00   ASCII Lowercase Letters
        1        0   100.00   Latin1 Uppercase Letters
       59       10    83.05   Latin1 Lowercase Letters
        2        0   100.00   General Punctuation
@@ -33,10 +33,10 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        5        0   {}-{'}
        2        0   {.}-{,}
        2        0   {}-{’”}
+       1        0   {(}-{}
        1        0   {.}-{}
+       1        0   {;}-{,}
        1        0   {<FEFF>}-{�}
-       1        0   {e}-{l}
-       1        0   {e}-{}
        1        0   {}-{&}
        1        0   {}-{,}
        1        0   {}-{-}
@@ -51,7 +51,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       11        0   100.00   {%}
        2        0   100.00   {&}
        1        0   100.00   {'}
-      24        0   100.00   {(}
+      24        1    95.83   {(}
       24        0   100.00   {)}
        1        0   100.00   {+}
       92        0   100.00   {,}
@@ -69,7 +69,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       33        0   100.00   {8}
       54        0   100.00   {9}
       34        0   100.00   {:}
-      60        0   100.00   {;}
+      60        1    98.33   {;}
        3        0   100.00   {=}
       53        0   100.00   {A}
       50        0   100.00   {B}
@@ -100,7 +100,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       40        0   100.00   {b}
       67        0   100.00   {c}
      182        0   100.00   {d}
-     539        2    99.63   {e}
+     539        0   100.00   {e}
       65        0   100.00   {f}
       92        0   100.00   {g}
      110        0   100.00   {h}

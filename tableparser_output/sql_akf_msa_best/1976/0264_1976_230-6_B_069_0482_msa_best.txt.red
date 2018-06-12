@@ -134,7 +134,7 @@ Berlin,Düsseldorf,Frankfurt(M),Ham-
 burgundMünchen(amtl.)
 Wertpapier-Kenn-Nr.:607000
 Stückelung:
-25150Inh.-St.-Akt.zujeDM1000.-
+25150Inh.St.-Akt.zujeDM1000.-
 17500Inh.-St.-Akt.zujeDM100.-
 392000Inh.-St.-Akt.zujeDM50.-
 Aktienkurse(ultimoabgerundet):

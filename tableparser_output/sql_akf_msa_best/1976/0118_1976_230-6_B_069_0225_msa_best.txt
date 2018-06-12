@@ -23,9 +23,9 @@ Rudolf von Bennigsen-Foerder, Düsseldorf;,
 Dr.Dr.h.c.Kurt Birrenbach, Düsseldorf;;
 Friedrich Carl Erasmus, Essen;
 Alfred Freiherr von Oppenheim, Köln;
-Heinz Pferdmenges, Rheydt;
+Heinz Pferdmenges; Rheydt;
 Albert Vahle, Aachen;
-Hans Abschlag, Köln;
+Hans Abschlag; Köln;
 Karl-Heinz Bette, Dortmund;
 Horst Grimm, Bensberg;
 Heinrich Paus, Köln

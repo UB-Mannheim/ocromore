@@ -468,19 +468,48 @@ class OCRVoter(object):
                     print("w:", word, "wr:", word_reduced, "accr:", acc_conf, "rate", rate)
 
                     if self.config.KEYING_RESULT_VC_CORRECT_ONLY_ERRONOUS_CHARS:
-                        swappable_char_indices=[]
-                        acc_confs_reduce = acc_confs_word[len(word_starting_borders):(
-                                len(acc_confs_word) - len(word_trailing_borders))]
+                        swappable_char_indices = []
 
-                        for conf_index, conf in enumerate(acc_confs_reduce):
-                            if conf <= 215:
-                                swappable_char_indices.append(conf_index)
+                        acc_confs_used = None
+                        word_used = None
+
+                        if self.config.KEYING_RESULT_VC_CORRECT_ERRONOUS_SPECIAL_CHARS:
+                            # use the full length confidences array including trailing and leading special characters
+                            acc_confs_used = acc_confs_word
+                            word_used = word
+                        else:
+                            # don't use trailing and starting special characters if no special chars needed
+                            acc_confs_used = acc_confs_word[len(word_starting_borders):(
+                                len(acc_confs_word) - len(word_trailing_borders))]
+                            word_used = word_reduced
+
+                        for conf_index, conf in enumerate(acc_confs_used):
+                            if self.config.KEYING_RESULT_VC_CORRECT_ERRONOUS_SPECIAL_CHARS:
+                                if conf <= 250:
+                                    character_related = word_used[conf_index]
+                                    is_special_char = Random.is_special_character(character_related)
+                                    if is_special_char and character_related != wildcard_character:
+                                        # only swap special character indices
+                                        swappable_char_indices.append(conf_index)
+                            else:
+                                if conf <= 215:
+                                    swappable_char_indices.append(conf_index)
 
                         if len(swappable_char_indices) >= 1:
-                            word_reduced_correct = self.vocab_checker.correct_text_at_certain_indices_only(word_reduced, swappable_char_indices)
+                            word_reduced_correct = self.vocab_checker.correct_text_at_certain_indices_only(word_used, swappable_char_indices)
                             if word_reduced_correct != None:
-                                print("won")
-                                word_correct_withtrails = word_starting_borders + word_reduced_correct + word_trailing_borders
+                                word_correct_withtrails = None
+
+                                if self.config.KEYING_RESULT_VC_CORRECT_ERRONOUS_SPECIAL_CHARS:
+                                    if Random.has_special_character(word_reduced_correct):
+                                        # if special character was replaced with special character
+                                        word_correct_withtrails = word_reduced_correct
+                                    else:
+                                        # if special character was replaced by alphanumerical character
+                                        word_correct_withtrails = word
+                                else:
+                                    word_correct_withtrails = word_starting_borders + word_reduced_correct + word_trailing_borders
+
                                 # only print the changed results
                                 if word != word_correct_withtrails:
                                     print("w:", word, "wc:", word_correct_withtrails, "accr:", acc_conf, "rate", rate)

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      773   Words
-      21   Misrecognized
-   97.28%  Accuracy
+      23   Misrecognized
+   97.02%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,14 +12,14 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       38        4    89.47        1
-      48        1    97.92        2
+      48        2    95.83        2
       25        0   100.00        3
       46        0   100.00        4
       32        0   100.00        5
       62        2    96.77        6
       38        0   100.00        7
       30        2    93.33        8
-      33        1    96.97        9
+      33        2    93.94        9
       39        3    92.31       10
       36        0   100.00       11
       24        0   100.00       12
@@ -50,11 +50,11 @@ Non-stopwords
        2        0   100.00       37
        2        0   100.00       38
        2        0   100.00       39
-     771       21    97.28    Total
+     771       23    97.02    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     526       16    96.96        1
+     526       17    96.77        1
       35        0   100.00        2
       15        0   100.00        3
        5        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        1        0   100.00      >10
-     594       16    97.31    Total
+     594       17    97.14    Total
 
 Phrases
    Count   Missed   %Right   Length
-     773       21    97.28        1
-     772       37    95.21        2
-     771       51    93.39        3
-     770       64    91.69        4
-     769       76    90.12        5
-     768       88    88.54        6
-     767      100    86.96        7
-     766      112    85.38        8
+     773       23    97.02        1
+     772       40    94.82        2
+     771       55    92.87        3
+     770       69    91.04        4
+     769       82    89.34        5
+     768       95    87.63        6
+     767      108    85.92        7
+     766      121    84.20        8
 
 Stopwords
    Count   Missed   %Right   
@@ -141,7 +141,7 @@ Non-stopwords
        1        0   100.00   22.9.1955erhöhungum
        1        0   100.00   27.3.1958erhöhungum
        1        0   100.00   270000
-       1        0   100.00   270000inh
+       1        1     0.00   270000inh
        1        1     0.00   3
        2        0   100.00   30
        1        0   100.00   30.9.195830.9.1959
@@ -577,7 +577,7 @@ Non-stopwords
        1        0   100.00   sowiedieschaffungvonunternehmungen
        1        0   100.00   spann
        1        0   100.00   spannung
-       3        0   100.00   st
+       3        1    66.67   st
        1        0   100.00   stellv
        3        0   100.00   stellv.vors
        1        0   100.00   stiegimgleichen

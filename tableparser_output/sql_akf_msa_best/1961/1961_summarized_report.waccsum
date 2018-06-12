@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1297   Words
-      42   Misrecognized
-   96.76%  Accuracy
+      46   Misrecognized
+   96.45%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,14 +12,14 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       62        4    93.55        1
-      83        4    95.18        2
+      83        6    92.77        2
       48        0   100.00        3
       92        1    98.91        4
       57        0   100.00        5
       87        2    97.70        6
-      74        2    97.30        7
+      74        3    95.95        7
       54        3    94.44        8
-      65        2    96.92        9
+      65        3    95.38        9
       71        5    92.96       10
       52        1    98.08       11
       40        1    97.50       12
@@ -51,11 +51,11 @@ Non-stopwords
        4        0   100.00       38
        2        0   100.00       39
        1        0   100.00       40
-    1295       42    96.76    Total
+    1295       46    96.45    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     932       33    96.46        1
+     932       35    96.24        1
       54        1    98.15        2
       20        0   100.00        3
       10        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        2        0   100.00      >10
-    1036       34    96.72    Total
+    1036       36    96.53    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1297       42    96.76        1
-    1294       76    94.13        2
-    1291      106    91.79        3
-    1288      133    89.67        4
-    1285      159    87.63        5
-    1282      185    85.57        6
-    1279      209    83.66        7
-    1276      232    81.82        8
+    1297       46    96.45        1
+    1294       82    93.66        2
+    1291      114    91.17        3
+    1288      143    88.90        4
+    1285      171    86.69        5
+    1282      199    84.48        6
+    1279      225    82.41        7
+    1276      249    80.49        8
 
 Stopwords
    Count   Missed   %Right   
@@ -125,7 +125,7 @@ Non-stopwords
        1        0   100.00   15.3.1957erhöhungum
        1        0   100.00   16
        1        0   100.00   1605
-       1        0   100.00   1605inh
+       1        1     0.00   1605inh
        1        0   100.00   18
        1        0   100.00   18.5.1956erhöhungaufdm2625000
        1        0   100.00   1845
@@ -200,7 +200,7 @@ Non-stopwords
        1        0   100.00   2625inh
        1        0   100.00   27.3.1958erhöhungum
        1        0   100.00   270000
-       1        0   100.00   270000inh
+       1        1     0.00   270000inh
        1        0   100.00   29.4.1960erhöhungauf
        3        1    66.67   3
        4        0   100.00   30
@@ -830,7 +830,7 @@ Non-stopwords
        1        0   100.00   spannung
        1        0   100.00   sperrkonsortiumdr.dr.h.c.josefwin
        1        0   100.00   sprochenelabilitätdesmarktes
-       7        0   100.00   st
+       7        2    71.43   st
        1        0   100.00   stellungen3481341099
        3        0   100.00   stellv
        4        0   100.00   stellv.vors

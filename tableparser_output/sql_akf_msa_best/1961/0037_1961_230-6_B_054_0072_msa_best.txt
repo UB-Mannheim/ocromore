@@ -124,7 +124,7 @@ ten und elektrisch betriebene Kleinge-
 räte.
 Werke in:
 Berlin, Belecke, Essen, Hameln, Heili-
-genhaus, Kassel, Kirchheim-Teck, Men-
+genhaus, Kassel, Kirchheim/Teck, Men-
 den, Mülheim/Ruhr, Mülheim-Saarn,
 Neumünster, Nürnberg, Oldenburg, Stutt-
 gart
@@ -228,7 +228,7 @@ in Hamburg:
 Dresdner Bank AG; Deutsche Bank AG;
 Brinckmann, Wirtz & Co.; Commerzbank
 AG; Delbrück Schickler & Co.; Hambur-
-gische Landesbank -Girozentrale-;
+gische Landesbank -Girozentrale-,
 in Hannover:
 Dresdner Bank AG; Deutsche Bank AG;
 Commerzbank AG;
@@ -275,7 +275,7 @@ Berlin, Bremen, Düsseldorf, Frankfurt
 Stuttgart, Basel und Zürich
 Ordnungsnr.d.Aktien: 503800
 Stückelung:
-270 000 Inh. -St.-Akt. zu je DM 1 000.-
+270 000 Inh. St.-Akt. zu je DM 1 000.-
 (Nr. 1 - 270 000)
 398 000 Inh. -St.-Akt. zujeDM 100.-
 (Nr. 400 001 - 798 000)

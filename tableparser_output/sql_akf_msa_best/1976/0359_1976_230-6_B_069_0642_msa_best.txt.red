@@ -10,7 +10,7 @@ WerkAugsburg:(0821)3221
 WerkHamburg:(040)74091
 WerkNürnberg:(0911)181
 WerkMünchen:(089)14801
-WerkGustavsburg:Mainz-Kastel(06143)
+WerkGustavsburg.Mainz-Kastel(06143)
 551H
 Telex:
 WerkAugsburg:53751
@@ -26,8 +26,8 @@ AdolfSchiff,Augsburg;
 WolframThiele,Oberhausen;
 OttoVoisard,München;
 FriedrichLaußermair,München,stellv.;
-WolfgangMüller,München,stellv.;;
-HerbertRedlich,Gustavsburg,stellv.
+WolfgangMüller,München,stellv.;
+HerbertRedlich,Gustavsburg.stellv.
 Aufsichtsrat:
 ManfredLennings,Kettwig,Vors.;
 UlrichNeumann,Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ DietrichWilhelmvonMenges,Essen-
 Bredeney;
 SiegfriedSchiffbauer,Kiel;
 Arbeitnehmervertreter::
-FranzKlemmer,Augsburg;;
+FranzKlemmer,Augsburg);
 RudolfRhein,Mainz-Kostheim;;
 EduardSchleinkofer,München;
 FerdinandWolinsky,Oberhausen
@@ -57,7 +57,7 @@ Maschinen-undStahlbaumitdenWerken
 NürnbergundGustavsburg.Unternehmens-
 bereichNutzfahrzeugemitdenWerken
 München,Watenstedt,Braunschweigund
-Penzberg.
+Penzburg.
 Maschinen-undAnlagenbauderGHH
 STERKRADEAGmitdenWerkenSterk-
 rade,Düsseldorf,RheinwerftWalsum
@@ -126,7 +126,7 @@ Dividendenab1969:18,18,14,7
 W.TümmelsBuchdruckereiundVerlag
 GmbH,Nürnberg
 Kapital:DM1200000.-(100%)
-BüssingAutomobilwerteGmbH,Braun-
+BüssingAutomobilwerkeGmbH,Braun-
 schweig
 Kapital:DM42000000.-(97,62%;Be-
 triebspachtvertrag)
@@ -211,7 +211,7 @@ DM102,54undVorz.-Akt.DM87,15
 14(Vorz.-Akt.)
 1969ErhöhungaufDM170000000.-
 1970Bezugsrecht10:1zu190%auf
-DM187000000.-,rechn.WertSt.--Akt.
+DM187000000.-,rechn.WertSt.-Akt.
 undVorz.-Akt.DM5,09(10.7.),
 Div.Sch.Nr.23(St.-Akt.)und17(Vorz.-
 Akt.)ErhöhungaufDM197505000.-
@@ -235,8 +235,8 @@ Wertpapier-Kenn-Nr.:
 506300(St.-Akt.);506303(Vorz.-Akt.)
 Stückelung:
 143900Inh.-St.-Akt.zujeDM1000.-
-35000Inh.-St.-Akt.zujeDM100.-
-52000Inh.-St.-Akt.zujeDM50.-
+35000Inh.St.-Akt.zujeDM100.-
+52000Inh.St.-Akt.zujeDM50.-
 91295Inh.-Vorz.-Akt.zujeDM1000,-
 59500Inh.-Vorz.-Akt.zujeDM100.-
 55100Inh.-Vorz.-Akt.zujeDM50.-

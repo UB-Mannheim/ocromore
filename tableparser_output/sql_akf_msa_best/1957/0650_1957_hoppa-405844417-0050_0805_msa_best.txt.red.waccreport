@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      385   Words
-       9   Misrecognized
-   97.66%  Accuracy
+      10   Misrecognized
+   97.40%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,7 +22,7 @@ Non-stopwords
       18        0   100.00        9
       24        0   100.00       10
       16        0   100.00       11
-      19        0   100.00       12
+      19        1    94.74       12
       13        0   100.00       13
       13        1    92.31       14
        6        1    83.33       15
@@ -48,7 +48,7 @@ Non-stopwords
        5        0   100.00       35
        5        0   100.00       36
        2        0   100.00       37
-     383        9    97.65    Total
+     383       10    97.39    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -63,14 +63,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     385        9    97.66        1
-     384       13    96.61        2
-     383       15    96.08        3
-     382       17    95.55        4
-     381       19    95.01        5
-     380       21    94.47        6
-     379       23    93.93        7
-     378       25    93.39        8
+     385       10    97.40        1
+     384       15    96.09        2
+     383       18    95.30        3
+     382       21    94.50        4
+     381       24    93.70        5
+     380       27    92.89        6
+     379       30    92.08        7
+     378       33    91.27        8
 
 Stopwords
    Count   Missed   %Right   
@@ -360,7 +360,7 @@ Non-stopwords
        1        0   100.00   vors
        1        0   100.00   vorstand
        2        0   100.00   vorz
-       2        0   100.00   vorzugsaktie
+       2        1    50.00   vorzugsaktie
        1        0   100.00   walddörferbahn
        1        0   100.00   walterheinze
        1        0   100.00   werbung

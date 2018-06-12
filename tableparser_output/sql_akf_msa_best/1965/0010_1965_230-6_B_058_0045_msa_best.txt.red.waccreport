@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      374   Words
-      12   Misrecognized
-   96.79%  Accuracy
+      15   Misrecognized
+   95.99%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,12 +12,12 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
        7        0   100.00        1
-      19        1    94.74        2
+      19        2    89.47        2
       12        0   100.00        3
       28        1    96.43        4
       17        1    94.12        5
-      25        2    92.00        6
-      39        3    92.31        7
+      25        3    88.00        6
+      39        4    89.74        7
       30        1    96.67        8
       11        0   100.00        9
       18        0   100.00       10
@@ -48,27 +48,27 @@ Non-stopwords
        1        0   100.00       35
        5        0   100.00       36
        1        0   100.00       38
-     373       12    96.78    Total
+     373       15    95.98    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     293       12    95.90        1
+     293       14    95.22        1
       27        0   100.00        2
        3        0   100.00        3
        1        0   100.00        4
        1        0   100.00      >10
-     325       12    96.31    Total
+     325       14    95.69    Total
 
 Phrases
    Count   Missed   %Right   Length
-     374       12    96.79        1
-     373       20    94.64        2
-     372       28    92.47        3
-     371       36    90.30        4
-     370       44    88.11        5
-     369       52    85.91        6
-     368       58    84.24        7
-     367       63    82.83        8
+     374       15    95.99        1
+     373       25    93.30        2
+     372       35    90.59        3
+     371       45    87.87        4
+     370       55    85.14        5
+     369       65    82.38        6
+     368       73    80.16        7
+     367       80    78.20        8
 
 Stopwords
    Count   Missed   %Right   
@@ -148,7 +148,7 @@ Non-stopwords
        1        1     0.00   7887
        1        0   100.00   7aufdm7000000
        1        0   100.00   8045ismaningbeimün
-       1        0   100.00   8400inh
+       1        1     0.00   8400inh
        1        0   100.00   8münchen15
        1        0   100.00   ab10.1.1956kursfürdm
        1        0   100.00   abschlag20
@@ -295,7 +295,7 @@ Non-stopwords
        1        0   100.00   martinbirkel
        2        0   100.00   mauerziegel
        1        0   100.00   mitglatterundgehämmerteroberfläche
-       1        0   100.00   mittel
+       1        1     0.00   mittel
        1        0   100.00   mosaik
       13        0   100.00   münchen
        1        0   100.00   münchen05
@@ -328,7 +328,7 @@ Non-stopwords
        1        0   100.00   sitz
        1        0   100.00   sohabendievorzugsak
        1        0   100.00   sonstigesteuern26882504
-       3        0   100.00   st
+       3        1    66.67   st
        1        0   100.00   staats
        2        0   100.00   stammaktien
        1        0   100.00   steine

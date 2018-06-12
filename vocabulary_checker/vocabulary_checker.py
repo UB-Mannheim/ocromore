@@ -66,9 +66,6 @@ class VocabularyChecker():
 
             return acc_conf, acc_conf / (len(wsplit)-len_start-len_trail), True, word_starting_borders, word_trailing_borders, word_reduced
 
-
-
-
     def remove_and_give_borders(self, input_text):
 
         start_sc_text = ""
@@ -132,6 +129,7 @@ class VocabularyChecker():
                 lines_doc.append(line)
 
         return lines_doc
+
     def initialize_spellchecker(self):
         if self.dict_lines == None:
             self.cpr.printw("can't initialize spellchecker, please first call initialize_lines")

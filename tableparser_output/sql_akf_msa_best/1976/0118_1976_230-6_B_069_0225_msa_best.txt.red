@@ -23,9 +23,9 @@ RudolfvonBennigsen-Foerder,Düsseldorf;,
 Dr.Dr.h.c.KurtBirrenbach,Düsseldorf;;
 FriedrichCarlErasmus,Essen;
 AlfredFreiherrvonOppenheim,Köln;
-HeinzPferdmenges,Rheydt;
+HeinzPferdmenges;Rheydt;
 AlbertVahle,Aachen;
-HansAbschlag,Köln;
+HansAbschlag;Köln;
 Karl-HeinzBette,Dortmund;
 HorstGrimm,Bensberg;
 HeinrichPaus,Köln

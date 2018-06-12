@@ -57,9 +57,9 @@ b) Steinkohlenbergwerk Friedrich der
 Grosse AG mit den Kohlenzechen in Herne
 und Minden und der Untergesellschaft
 Bergarbeiterwohnungsgesellschaft mbH
-"Glückauf", Herne.
+"Gjückauf", Herne.
 c) Industrie- und Handels-AG, Peine mit
-7 Tochtergesellschaften;
+7 Tochtergesellschaften:
 d) Gewerkschaft Konrad, die 1954 von der
 Ilseder Hütte und der AG für Berg- und
 Hüttenbetriebe, Berlin, als Gewerken
@@ -140,7 +140,7 @@ Verlustübernahmverträge.
 Peine
 Die Gesellschaft, die mit einem Grund-
 kapital von DM 10 224 000.- ausge-
-stattet ist, ist eine reine Obergesellschaft.
+stattet ist, ist eine reine Obergesellschaft,
 Ihre Tochtergesellschaften sind:
 die Norddeutsche Schrauben- und Muttern-
 werke AG, Peine, mit einem Grund-
@@ -188,7 +188,7 @@ von DM 136 000.- (Stand 30.9.1955) zu
 je 50 % der Ilseder Hütte und der AG für
 Berg- und Hüttenbetriebe, Berlin, gehört,
 befindet sich noch im Aufbau.
-Geschäftsjahr: Kalenderjahr.
+Geschäftsjahr: Kalenderjahr;
 Stimmrecht d.Aktien i.d.H.-V.:
 Je nom. DM 100.- = 1 Stimme.
 Zahlstellen:
