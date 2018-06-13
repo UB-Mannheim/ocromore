@@ -28,7 +28,7 @@ Querum;
 OttoMöhle,Langenhagen;
 Dr.KarlRöhrs,Bonn;
 FriedrichSchiwon,Herne;
-JohannSmentek,Dürnten.
+JohannSmentek,Dörnten.
 Gründung:1858.
 Tätigkeitsgebiet:
 Erzeugungvon:Erze,Kohle,Strom,
@@ -57,7 +57,7 @@ b)SteinkohlenbergwerkFriedrichder
 GrosseAGmitdenKohlenzecheninHerne
 undMindenundderUntergesellschaft
 BergarbeiterwohnungsgesellschaftmbH
-"Glückauf",Herne.
+"Gjückauf",Herne.
 c)Industrie-undHandels-AG,Peinemit
 7Tochtergesellschaften;
 d)GewerkschaftKonrad,die1954vonder

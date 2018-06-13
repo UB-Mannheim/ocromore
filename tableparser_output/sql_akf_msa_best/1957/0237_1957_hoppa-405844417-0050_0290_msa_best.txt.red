@@ -7,7 +7,7 @@ Vorstand:
 Dipl.-Kfm.KarlBarich,Dillnhütten,Vors.;
 Dr.ErichDudziak,Dortmund:
 Dipl.-Ing.RudolfSchäfer,Geisweid;
-HeinzGolbach,Hagen,stellv.
+HeinzSolbach,Hagen,stellv.
 Aufsichtsrat:
 HubertBiernat,Strickherdicke,Vors.;
 Dr.RudolfHaus,Detmold,1.stellv.Vors.;

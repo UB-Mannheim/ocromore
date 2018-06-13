@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      304   Words
-       5   Misrecognized
-   98.36%  Accuracy
+       4   Misrecognized
+   98.68%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,7 +21,7 @@ Non-stopwords
       13        1    92.31        9
       12        0   100.00       10
       17        0   100.00       11
-      15        1    93.33       12
+      15        0   100.00       12
       13        0   100.00       13
        7        1    85.71       14
        5        0   100.00       15
@@ -45,28 +45,28 @@ Non-stopwords
        1        0   100.00       36
        1        0   100.00       37
        1        0   100.00       38
-     304        5    98.36    Total
+     304        4    98.68    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     210        5    97.62        1
+     210        4    98.10        1
       21        0   100.00        2
        8        0   100.00        3
        3        0   100.00        5
        1        0   100.00        6
        1        0   100.00        7
-     244        5    97.95    Total
+     244        4    98.36    Total
 
 Phrases
    Count   Missed   %Right   Length
-     304        5    98.36        1
-     303        9    97.03        2
-     302       13    95.70        3
-     301       17    94.35        4
-     300       21    93.00        5
-     299       25    91.64        6
-     298       29    90.27        7
-     297       33    88.89        8
+     304        4    98.68        1
+     303        7    97.69        2
+     302       10    96.69        3
+     301       13    95.68        4
+     300       16    94.67        5
+     299       19    93.65        6
+     298       22    92.62        7
+     297       25    91.58        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -213,7 +213,7 @@ Non-stopwords
        1        0   100.00   hamburgerkreditbankag
        1        0   100.00   hannover
        1        0   100.00   hardy
-       1        1     0.00   heinzsolbach
+       1        0   100.00   heinzsolbach
        1        0   100.00   hofen
        1        0   100.00   hubertbiernat
        1        0   100.00   in1000dm

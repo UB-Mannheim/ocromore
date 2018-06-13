@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      642   Words
-      20   Misrecognized
-   96.88%  Accuracy
+      16   Misrecognized
+   97.51%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,11 +20,11 @@ Non-stopwords
       44        0   100.00        5
       27        0   100.00        6
       36        0   100.00        7
-      45        2    95.56        8
+      45        1    97.78        8
       23        1    95.65        9
       34        1    97.06       10
       27        0   100.00       11
-      34        2    94.12       12
+      34        1    97.06       12
       14        0   100.00       13
       21        0   100.00       14
       17        1    94.12       15
@@ -38,22 +38,22 @@ Non-stopwords
        5        1    80.00       23
        8        0   100.00       24
        3        0   100.00       25
-       8        2    75.00       26
+       8        1    87.50       26
        7        0   100.00       27
        3        1    66.67       28
        2        0   100.00       29
        3        0   100.00       30
        3        0   100.00       31
-       4        1    75.00       32
+       4        0   100.00       32
        3        1    66.67       33
        4        0   100.00       34
        1        0   100.00       35
        1        0   100.00       37
-     636       19    97.01    Total
+     636       15    97.64    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     413       19    95.40        1
+     413       15    96.37        1
       40        0   100.00        2
        8        0   100.00        3
        4        0   100.00        4
@@ -62,18 +62,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        3        0   100.00      >10
-     477       19    96.02    Total
+     477       15    96.86    Total
 
 Phrases
    Count   Missed   %Right   Length
-     642       20    96.88        1
-     641       36    94.38        2
-     640       50    92.19        3
-     639       64    89.98        4
-     638       77    87.93        5
-     637       88    86.19        6
-     636       99    84.43        7
-     635      110    82.68        8
+     642       16    97.51        1
+     641       28    95.63        2
+     640       39    93.91        3
+     639       50    92.18        4
+     638       60    90.60        5
+     637       70    89.01        6
+     636       80    87.42        7
+     635       90    85.83        8
 
 Stopwords
    Count   Missed   %Right   
@@ -277,7 +277,7 @@ Non-stopwords
        1        0   100.00   buenos
        1        0   100.00   burg
        1        0   100.00   börsennotiz
-       1        1     0.00   büssingautomobilwerkegmbh
+       1        0   100.00   büssingautomobilwerkegmbh
        1        0   100.00   büttnerlagersystemegmbh
        1        0   100.00   co
        1        0   100.00   co.gmbh
@@ -326,7 +326,7 @@ Non-stopwords
        1        0   100.00   flüssigemittel
        2        0   100.00   frank
        1        0   100.00   frankfurt
-       1        1     0.00   franzklemmer
+       1        0   100.00   franzklemmer
        1        0   100.00   freiv
        1        0   100.00   fremdkapital19494072294616
        1        0   100.00   friedrichlaußermair
@@ -456,7 +456,7 @@ Non-stopwords
        1        0   100.00   ottovoisard
        2        0   100.00   paris
        1        0   100.00   partenkirchen
-       1        1     0.00   penzburg
+       1        0   100.00   penzburg
        1        0   100.00   personalaufwand9040121042442
        1        0   100.00   postfach
        1        0   100.00   printprojektdruckereiberatungs
@@ -542,7 +542,7 @@ Non-stopwords
        1        0   100.00   vorstand
       11        0   100.00   vorz
        2        0   100.00   vorzugsaktien
-       1        1     0.00   w.tümmelsbuchdruckereiundverlag
+       1        0   100.00   w.tümmelsbuchdruckereiundverlag
        1        0   100.00   wagnerhochdruck
        1        0   100.00   watenstedt
        2        0   100.00   werkaugsburg

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1411   Words
-      37   Misrecognized
-   97.38%  Accuracy
+      35   Misrecognized
+   97.52%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -33,14 +33,14 @@ Non-stopwords
       16        0   100.00       20
       13        0   100.00       21
       18        0   100.00       22
-      18        1    94.44       23
+      18        0   100.00       23
       13        1    92.31       24
       15        2    86.67       25
       11        0   100.00       26
       13        0   100.00       27
       12        1    91.67       28
        7        0   100.00       29
-       5        2    60.00       30
+       5        1    80.00       30
        7        0   100.00       31
        9        0   100.00       32
        6        0   100.00       33
@@ -50,11 +50,11 @@ Non-stopwords
        2        0   100.00       37
        5        0   100.00       38
        1        0   100.00       50
-    1410       37    97.38    Total
+    1410       35    97.52    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     950       34    96.42        1
+     950       32    96.63        1
       82        1    98.78        2
       19        0   100.00        3
       12        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1086       35    96.78    Total
+    1086       33    96.96    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1411       37    97.38        1
-    1408       69    95.10        2
-    1405      100    92.88        3
-    1402      129    90.80        4
-    1399      157    88.78        5
-    1396      185    86.75        6
-    1393      210    84.92        7
-    1390      234    83.17        8
+    1411       35    97.52        1
+    1408       65    95.38        2
+    1405       94    93.31        3
+    1402      121    91.37        4
+    1399      147    89.49        5
+    1396      173    87.61        6
+    1393      196    85.93        7
+    1390      218    84.32        8
 
 Stopwords
    Count   Missed   %Right   
@@ -872,7 +872,7 @@ Non-stopwords
        1        0   100.00   steuernu.lag22312754
        1        0   100.00   steuernu.lag275253277644
        1        0   100.00   stillgelegt
-       3        1    66.67   stimmrechtd.aktieni.d.h
+       3        0   100.00   stimmrechtd.aktieni.d.h
        1        0   100.00   stimmrechtloseinhaber
        1        0   100.00   straßenmarkierungsklinker
        1        0   100.00   streifen
@@ -940,7 +940,7 @@ Non-stopwords
        3        0   100.00   undverlust
        1        0   100.00   undwasserbauklinker
        3        0   100.00   undwechsel
-       1        1     0.00   undösterreichinengeremverbund
+       1        0   100.00   undösterreichinengeremverbund
        1        0   100.00   unterföh
        5        0   100.00   v
       13        0   100.00   v.v

@@ -63,12 +63,12 @@ N.V.,Rotterdam
 AandeeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 '"'Marga'',MaatschappijtotBeheervan
-AandeleninIndustrieeleOndernemingen
+AandeeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 Mavibel(MaatschappijvoorInternationale
 Beleggingen)N.V.,Rotterdam
 "Lipoma'',MaatschappijtotBeheervan
-AandeeleninIndustrielleOndernemingen
+AandeeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 HandelsmaatschappijNoordaN.V.,
 Amsterdam

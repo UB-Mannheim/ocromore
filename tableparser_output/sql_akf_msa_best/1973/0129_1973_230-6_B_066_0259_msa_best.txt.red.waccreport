@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      741   Words
-      22   Misrecognized
-   97.03%  Accuracy
+      21   Misrecognized
+   97.17%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -38,7 +38,7 @@ Non-stopwords
       10        0   100.00       26
        5        0   100.00       27
        4        0   100.00       28
-       9        1    88.89       29
+       9        0   100.00       29
        6        0   100.00       30
        2        0   100.00       31
        3        0   100.00       32
@@ -49,11 +49,11 @@ Non-stopwords
        2        0   100.00       37
        1        0   100.00       39
        1        0   100.00       40
-     741       22    97.03    Total
+     741       21    97.17    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     443       22    95.03        1
+     443       21    95.26        1
       53        0   100.00        2
       13        0   100.00        3
        6        0   100.00        4
@@ -62,18 +62,18 @@ Distinct Non-stopwords
        6        0   100.00        7
        1        0   100.00        8
        3        0   100.00      >10
-     530       22    95.85    Total
+     530       21    96.04    Total
 
 Phrases
    Count   Missed   %Right   Length
-     741       22    97.03        1
-     740       39    94.73        2
-     739       52    92.96        3
-     738       61    91.73        4
-     737       70    90.50        5
-     736       79    89.27        6
-     735       87    88.16        7
-     734       95    87.06        8
+     741       21    97.17        1
+     740       37    95.00        2
+     739       49    93.37        3
+     738       57    92.28        4
+     737       65    91.18        5
+     736       73    90.08        6
+     735       80    89.12        7
+     734       87    88.15        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -549,7 +549,7 @@ Non-stopwords
        1        0   100.00   stuttgarterversicherungsdienstgmbh
        1        0   100.00   stückelung
        1        0   100.00   sungüberbesetzungdesaufsichtsrats
-       1        1     0.00   supremestarengineeringptc.ltd
+       1        0   100.00   supremestarengineeringptc.ltd
        1        0   100.00   sämtl.berlin
        1        0   100.00   sämtl.saar
        1        0   100.00   sämtl.stuttgart

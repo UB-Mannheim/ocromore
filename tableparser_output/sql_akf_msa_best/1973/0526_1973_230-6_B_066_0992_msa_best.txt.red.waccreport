@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      382   Words
-      13   Misrecognized
-   96.60%  Accuracy
+      11   Misrecognized
+   97.12%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -45,12 +45,12 @@ Non-stopwords
        1        0   100.00       33
        1        0   100.00       34
        4        0   100.00       35
-       7        3    57.14       36
+       7        1    85.71       36
        1        0   100.00       37
        1        1     0.00       38
        2        0   100.00       39
        2        0   100.00       40
-     382       13    96.60    Total
+     382       11    97.12    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -65,14 +65,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     382       13    96.60        1
-     381       24    93.70        2
-     380       33    91.32        3
-     379       41    89.18        4
-     378       49    87.04        5
-     377       56    85.15        6
-     376       62    83.51        7
-     375       68    81.87        8
+     382       11    97.12        1
+     381       20    94.75        2
+     380       27    92.89        3
+     379       33    91.29        4
+     378       39    89.68        5
+     377       45    88.06        6
+     376       50    86.70        7
+     375       55    85.33        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -126,7 +126,7 @@ Non-stopwords
        1        0   100.00   a.i.anderson
        1        0   100.00   a.w.j.caron
        1        0   100.00   a.w.p.stenham
-       4        2    50.00   aandeeleninindustrieeleondernemingen
+       4        0   100.00   aandeeleninindustrieeleondernemingen
        6        0   100.00   akt
        1        0   100.00   aktienkapitalsinformvoninhaberpapie
        1        0   100.00   aktienkurse

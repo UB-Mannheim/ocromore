@@ -22,13 +22,13 @@ Dr.-Ing.Dr.-Ing.E.h.FriedricnhHämmer-
 ling,Königstein;
 Dipl.-Ing.PaulHarke,Königstein;
 Dr.phil.ErhardLöwe,Ulm;
-OttoWössner,Ulm;
+OttoMössner,Ulm;
 Prof.Dr.-Ing.Dr.-Ing.E.h.Werner
 Nestel,Ulm;
 CarlW.Röder,Königstein;
 Prof.Dr.rer.pol.MatthiasSchmitt,Berlin;
 RechtsanwaltJohannesSemler,Oberursel;
-HeinzHickler,Oberhöchstadt;
+HeinzZickler,Oberhöchstadt;
 StellvertretendeMitglieder:
 JosefFuchs,Langen;
 Dr.-Ing.EnnoKoch,Ulm;
@@ -114,7 +114,7 @@ Sickingerstr.(AnlagenHochfrequenz),Groß-
 maschinenfabrik,Kleinmaschinenfabrik,
 Stromrichterfabrik,Turbinenfabrik.
 imBundesgebiet37Werke
-FabrikBacknang;FabrikBenecke;Fabrik
+FabrikBacknang;FabrikBelecke;Fabrik
 Celle;FabrikEiweiler;FabrikEssen;
 FabrikEßlingen;FabrikGräfenberg;Be-
 triebSchenefeldundWerkSchulau,Ham-
@@ -358,7 +358,7 @@ Bezugsrechte:
 1954:i.V.4:1zu100%;Abschlag15,12%
 (20.10.);Div.Sch.Nr.3
 1955:i.V.2:1zu135%;Abschlag34,33%
-(21.4:10.);Div.-Sch.;Nr.5
+(21.4:10.);Div.;Sch.;Nr.5
 1956:i.V.3:1zu100%;Abschlag22,33%
 (9.211.5);Div.Sch.Nr.7
 1957:i.V.4:1zu120%;Abschlag10,84%

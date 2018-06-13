@@ -40,7 +40,7 @@ DietrichWilhelmvonMenges,Essen-
 Bredeney;
 SiegfriedSchiffbauer,Kiel;
 Arbeitnehmervertreter::
-FranzSlemmer,Augsburg;;
+FranzKlemmer,Augsburg;;
 RudolfRhein,Mainz-Kostheim;;
 EduardSchleinkofer,München;
 FerdinandWolinsky,Oberhausen
@@ -57,7 +57,7 @@ Maschinen-undStahlbaumitdenWerken
 NürnbergundGustavsburg.Unternehmens-
 bereichNutzfahrzeugemitdenWerken
 München,Watenstedt,Braunschweigund
-Penzberg.
+Penzburg.
 Maschinen-undAnlagenbauderGHH
 STERKRADEAGmitdenWerkenSterk-
 rade,Düsseldorf,RheinwerftWalsum
@@ -123,10 +123,10 @@ SchleicherAG,Offenbach(M)
 Kapital:DM26000000.-(50,62%)
 Dividendenab1969:18,18,14,7
 (1.1.-30,6,),16,14%
-W.TemmelsBuchdruckereiundVerlag
+W.TümmelsBuchdruckereiundVerlag
 GmbH,Nürnberg
 Kapital:DM1200000.-(100%)
-GüssingAutomobilwerteGmbH,Braun-
+BüssingAutomobilwerkeGmbH,Braun-
 schweig
 Kapital:DM42000000.-(97,62%;Be-
 triebspachtvertrag)

@@ -1,37 +1,37 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
   108787   Characters
-     780   Errors
-   99.28%  Accuracy
+     763   Errors
+   99.30%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.28%  Accuracy After Correction
+   99.30%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     154      205      421      780   Unmarked
-     154      205      421      780   Total
+     151      191      421      763   Unmarked
+     151      191      421      763   Total
 
    Count   Missed   %Right
       18       18     0.00   Unassigned
     4185        5    99.88   ASCII Spacing Characters
    11939      211    98.23   ASCII Special Symbols
    14693       31    99.79   ASCII Digits
-   11115       20    99.82   ASCII Uppercase Letters
-   65448       45    99.93   ASCII Lowercase Letters
+   11115       14    99.87   ASCII Uppercase Letters
+   65448       36    99.94   ASCII Lowercase Letters
        1        1     0.00   Latin1 Special Symbols
       11        2    81.82   Latin1 Uppercase Letters
-    1364       24    98.24   Latin1 Lowercase Letters
+    1364       22    98.39   Latin1 Lowercase Letters
       13        2    84.62   General Punctuation
-  108787      359    99.67   Total
+  108787      342    99.69   Total
 
   Errors   Marked   Correct-Generated
       63        0   {"}-{}
-      36        0   {.}-{,}
-      27        0   {}-{;}
+      35        0   {.}-{,}
+      28        0   {}-{;}
       24        0   {}-{,}
       19        0   {152}-{»eu<\n>SonstigeSteuern}
       18        0   {<FEFF>}-{�<\n>}
@@ -41,8 +41,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       16        0   {}-{WestfalenbankAG,}
       15        0   {}-{:}
       14        0   {tfalenbankAG,B}-{}
-      14        0   {}-{-}
       13        0   {,}-{.}
+      13        0   {}-{-}
       13        0   {é}-{e}
       12        0   {}-{.}
       12        0   {ÜD}-{itz:l..Sisun}
@@ -105,6 +105,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {+)}-{#}
        2        0   {+}-{'’}
        2        0   {,—}-{.-}
+       2        0   {.-}-{,=}
        2        0   {3}-{5}
        2        0   {48}-{56}
        2        0   {4}-{}
@@ -112,7 +113,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {:}-{}
        2        0   {II}-{11}
        2        0   {We}-{}
-       2        0   {e}-{}
        2        0   {l}-{.1}
        2        0   {l}-{1'}
        2        0   {l}-{I}
@@ -153,7 +153,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {%}-{m}
        1        0   {,}-{;}
        1        0   {-}-{+}
-       1        0   {-}-{/}
        1        0   {-}-{}
        1        0   {.}-{;}
        1        0   {0}-{}
@@ -171,29 +170,16 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {<FEFF>}-{}
        1        0   {<\n>}-{l}
        1        0   {B}-{E}
-       1        0   {B}-{G}
-       1        0   {H}-{F}
-       1        0   {K}-{S}
        1        0   {L}-{E}
-       1        0   {M}-{W}
-       1        0   {S}-{G}
-       1        0   {Z}-{H}
        1        0   {b}-{6}
        1        0   {b}-{h}
-       1        0   {c}-{e}
-       1        0   {d}-{e}
-       1        0   {e}-{l}
        1        0   {i}-{l}
        1        0   {i}-{t}
-       1        0   {k}-{t}
        1        0   {l}-{1}
-       1        0   {l}-{n}
-       1        0   {m}-{n}
+       1        0   {l}-{j}
        1        0   {n}-{r}
        1        0   {s}-{S}
        1        0   {t}-{i}
-       1        0   {t}-{}
-       1        0   {u}-{e}
        1        0   {}-{!}
        1        0   {}-{"}
        1        0   {}-{(}
@@ -225,8 +211,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {è}-{e}
        1        0   {é}-{&}
        1        0   {ó}-{ö}
-       1        0   {ö}-{ü}
-       1        0   {ü}-{e}
 
    Count   Missed   %Right
     4185        5    99.88   {<\n>}
@@ -256,52 +240,52 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      860       20    97.67   {;}
       28        0   100.00   {=}
     1034        1    99.90   {A}
-     836        3    99.64   {B}
+     836        2    99.76   {B}
      207        0   100.00   {C}
     1271        1    99.92   {D}
      469        0   100.00   {E}
      390        0   100.00   {F}
      861        1    99.88   {G}
-     727        1    99.86   {H}
+     727        0   100.00   {H}
      297        6    97.98   {I}
       96        0   100.00   {J}
-     586        1    99.83   {K}
+     586        0   100.00   {K}
      272        1    99.63   {L}
-    1006        1    99.90   {M}
+    1006        0   100.00   {M}
      415        0   100.00   {N}
      136        0   100.00   {O}
      185        0   100.00   {P}
       10        0   100.00   {Q}
      243        0   100.00   {R}
-     860        2    99.77   {S}
+     860        1    99.88   {S}
      200        0   100.00   {T}
      131        0   100.00   {U}
      463        0   100.00   {V}
      319        1    99.69   {W}
        1        0   100.00   {X}
       10        0   100.00   {Y}
-      90        1    98.89   {Z}
+      90        0   100.00   {Z}
     4587        2    99.96   {a}
     1493        3    99.80   {b}
-    1970        2    99.90   {c}
-    2401        1    99.96   {d}
-    9378        5    99.95   {e}
+    1970        1    99.95   {c}
+    2401        0   100.00   {d}
+    9378        2    99.98   {e}
     1270        1    99.92   {f}
     2171        0   100.00   {g}
     2668        1    99.96   {h}
     4632        3    99.94   {i}
      195        0   100.00   {j}
-    1461        2    99.86   {k}
+    1461        1    99.93   {k}
     3166       10    99.68   {l}
-    1707        2    99.88   {m}
+    1707        1    99.94   {m}
     6473        3    99.95   {n}
     1858        1    99.95   {o}
      669        0   100.00   {p}
       22        0   100.00   {q}
     6023        0   100.00   {r}
     3682        2    99.95   {s}
-    4510        4    99.91   {t}
-    2961        2    99.93   {u}
+    4510        3    99.93   {t}
+    2961        1    99.97   {u}
      781        0   100.00   {v}
      454        0   100.00   {w}
       39        0   100.00   {x}
@@ -318,8 +302,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        1     0.00   {è}
       33       14    57.58   {é}
        1        1     0.00   {ó}
-     241        1    99.59   {ö}
-     629        1    99.84   {ü}
+     241        0   100.00   {ö}
+     629        0   100.00   {ü}
        2        2     0.00   {—}
       11        0   100.00   {’}
       18       18     0.00   {<FEFF>}

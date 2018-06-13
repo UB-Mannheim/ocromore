@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1489   Words
-      38   Misrecognized
-   97.45%  Accuracy
+      34   Misrecognized
+   97.72%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,11 +20,11 @@ Non-stopwords
      115        0   100.00        5
       77        1    98.70        6
       73        0   100.00        7
-      77        2    97.40        8
+      77        1    98.70        8
       64        2    96.88        9
      110        2    98.18       10
       57        0   100.00       11
-      75        2    97.33       12
+      75        1    98.67       12
       37        1    97.30       13
       54        0   100.00       14
       44        1    97.73       15
@@ -38,24 +38,24 @@ Non-stopwords
        8        1    87.50       23
       24        1    95.83       24
        6        1    83.33       25
-      16        2    87.50       26
+      16        1    93.75       26
       22        0   100.00       27
        6        2    66.67       28
        3        0   100.00       29
        3        0   100.00       30
        4        0   100.00       31
-       7        1    85.71       32
+       7        0   100.00       32
        5        1    80.00       33
        6        1    83.33       34
        3        0   100.00       35
        1        0   100.00       36
        2        0   100.00       37
        1        0   100.00       38
-    1482       37    97.50    Total
+    1482       33    97.77    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     974       31    96.82        1
+     974       27    97.23        1
       81        0   100.00        2
       29        0   100.00        3
        9        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        4        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1118       31    97.23    Total
+    1118       27    97.58    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1489       38    97.45        1
-    1486       70    95.29        2
-    1483       99    93.32        3
-    1480      128    91.35        4
-    1477      156    89.44        5
-    1474      182    87.65        6
-    1471      207    85.93        7
-    1468      231    84.26        8
+    1489       34    97.72        1
+    1486       62    95.83        2
+    1483       88    94.07        3
+    1480      114    92.30        4
+    1477      139    90.59        5
+    1474      164    88.87        6
+    1471      188    87.22        7
+    1468      211    85.63        8
 
 Stopwords
    Count   Missed   %Right   
@@ -441,7 +441,7 @@ Non-stopwords
        1        0   100.00   burggude
        1        0   100.00   burgundmünchen
        3        0   100.00   börsennotiz
-       1        1     0.00   büssingautomobilwerkegmbh
+       1        0   100.00   büssingautomobilwerkegmbh
        1        0   100.00   büttnerlagersystemegmbh
        1        0   100.00   cataloggesellschaftfürbausystemembh
        2        0   100.00   cherung
@@ -576,7 +576,7 @@ Non-stopwords
        1        0   100.00   forderungenaus
        2        0   100.00   frank
        8        0   100.00   frankfurt
-       1        1     0.00   franzklemmer
+       1        0   100.00   franzklemmer
        2        0   100.00   freiv
        1        0   100.00   fremdkapital19494072294616
        1        0   100.00   fremdkapital749400869825
@@ -822,7 +822,7 @@ Non-stopwords
        1        0   100.00   partenkirchen
        1        0   100.00   passiva
        1        0   100.00   paullichtenberg
-       1        1     0.00   penzburg
+       1        0   100.00   penzburg
        1        0   100.00   personalaufwand463114459017
        1        0   100.00   personalaufwand9040121042442
        1        0   100.00   perstück
@@ -1017,7 +1017,7 @@ Non-stopwords
        3        0   100.00   vorstand
       11        0   100.00   vorz
        2        0   100.00   vorzugsaktien
-       1        1     0.00   w.tümmelsbuchdruckereiundverlag
+       1        0   100.00   w.tümmelsbuchdruckereiundverlag
        1        0   100.00   waffen
        1        0   100.00   wagnerhochdruck
        1        0   100.00   walterkoppenburgkg

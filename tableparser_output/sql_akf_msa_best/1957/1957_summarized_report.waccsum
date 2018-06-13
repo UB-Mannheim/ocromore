@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1221   Words
-      25   Misrecognized
-   97.95%  Accuracy
+      24   Misrecognized
+   98.03%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -19,11 +19,11 @@ Non-stopwords
       57        1    98.25        5
       88        5    94.32        6
       81        1    98.77        7
-      79        4    94.94        8
-      52        1    98.08        9
+      79        3    96.20        8
+      52        2    96.15        9
       58        1    98.28       10
       57        1    98.25       11
-      55        1    98.18       12
+      55        0   100.00       12
       36        0   100.00       13
       39        2    94.87       14
       34        1    97.06       15
@@ -50,11 +50,11 @@ Non-stopwords
       11        0   100.00       36
        3        0   100.00       37
        2        0   100.00       38
-    1217       25    97.95    Total
+    1217       24    98.03    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     881       23    97.39        1
+     881       21    97.62        1
       73        0   100.00        2
       27        0   100.00        3
        4        0   100.00        4
@@ -63,18 +63,18 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        1        0   100.00      >10
-     998       23    97.70    Total
+     998       21    97.90    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1221       25    97.95        1
-    1218       43    96.47        2
-    1215       58    95.23        3
-    1212       73    93.98        4
-    1209       87    92.80        5
-    1206      101    91.63        6
-    1203      115    90.44        7
-    1200      129    89.25        8
+    1221       24    98.03        1
+    1218       41    96.63        2
+    1215       55    95.47        3
+    1212       69    94.31        4
+    1209       82    93.22        5
+    1206       95    92.12        6
+    1203      108    91.02        7
+    1200      121    89.92        8
 
 Stopwords
    Count   Missed   %Right   
@@ -437,7 +437,7 @@ Non-stopwords
        1        0   100.00   dr.wolfgangbode
        1        0   100.00   drütte
        1        0   100.00   dustrie
-       1        1     0.00   dörnten
+       1        0   100.00   dörnten
        1        0   100.00   düssel
        9        0   100.00   düsseldorf
        1        0   100.00   eigenenschleppfahrzeugenbetrieben
@@ -515,7 +515,7 @@ Non-stopwords
        1        0   100.00   gewinnnachvortrag73429475
        1        0   100.00   girozen
        1        0   100.00   gitter
-       2        0   100.00   glückauf
+       2        1    50.00   glückauf
        3        0   100.00   gmbh
        1        0   100.00   goss
        3        0   100.00   gossler
@@ -557,7 +557,7 @@ Non-stopwords
        1        0   100.00   heinrichfreiherrvonberenberg
        1        0   100.00   heinrichmahler
        1        0   100.00   heinrichwulff
-       1        1     0.00   heinzsolbach
+       1        0   100.00   heinzsolbach
        1        0   100.00   helmuthheintzmann
        1        0   100.00   herabgesetzt
        1        0   100.00   herbertspiesen

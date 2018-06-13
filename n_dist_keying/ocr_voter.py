@@ -39,6 +39,8 @@ class OCRVoter(object):
                                     self.config.PRINT_WARNING_LEVEL)
         self.cpr_vocab_check = ConditionalPrint(self.config.PRINT_VOCABULARY_CHECKER, self.config.PRINT_EXCEPTION_LEVEL,
                                     self.config.PRINT_WARNING_LEVEL)
+        self.cpr_sc_predict = ConditionalPrint(self.config.PRINT_SPECIALCHAR_PREDICTOR, self.config.PRINT_EXCEPTION_LEVEL,
+                                    self.config.PRINT_WARNING_LEVEL)
 
         self.filo_last_chars = Filo(250)
         self.predictor = None
@@ -595,10 +597,10 @@ class OCRVoter(object):
                 if predicted_char != voted_char and (
                         one_char_sc or voted_char_sc) and voted_char != wildcard_character:
                     # print("FiloContent:", filo_content)
-                    # print("pc:", predicted_char, "vc:", voted_char, "vc_acc", voted_acc_conf)
+                    self.cpr_sc_predict.print("pc:", predicted_char, "vc:", voted_char, "vc_acc", voted_acc_conf)
                     if voted_acc_conf <= 90.0:
                         if voted_char != '\f':  # don't swap formfeeds, they don't get predicted at all
-                            # print("swap")
+                            self.cpr_sc_predict.print("swap")
                             voted_char = predicted_char
 
         return voted_char

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      492   Words
-      14   Misrecognized
-   97.15%  Accuracy
+      13   Misrecognized
+   97.36%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -23,7 +23,7 @@ Non-stopwords
       18        0   100.00       10
       19        0   100.00       11
       16        0   100.00       12
-      19        1    94.74       13
+      19        0   100.00       13
        9        0   100.00       14
       20        0   100.00       15
       13        0   100.00       16
@@ -49,11 +49,11 @@ Non-stopwords
        1        0   100.00       38
        1        0   100.00       39
        1        0   100.00       40
-     490       14    97.14    Total
+     490       13    97.35    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     312       13    95.83        1
+     312       12    96.15        1
       17        0   100.00        2
       14        0   100.00        3
        3        0   100.00        4
@@ -61,18 +61,18 @@ Distinct Non-stopwords
        2        0   100.00        6
        2        0   100.00        8
        3        0   100.00      >10
-     357       13    96.36    Total
+     357       12    96.64    Total
 
 Phrases
    Count   Missed   %Right   Length
-     492       14    97.15        1
-     491       25    94.91        2
-     490       33    93.27        3
-     489       40    91.82        4
-     488       47    90.37        5
-     487       53    89.12        6
-     486       59    87.86        7
-     485       65    86.60        8
+     492       13    97.36        1
+     491       23    95.32        2
+     490       30    93.88        3
+     489       36    92.64        4
+     488       42    91.39        5
+     487       47    90.35        6
+     486       52    89.30        7
+     485       57    88.25        8
 
 Stopwords
    Count   Missed   %Right   
@@ -176,7 +176,7 @@ Non-stopwords
        1        0   100.00   aktienkurse
        1        0   100.00   aktionsgemeinschaftdeutschesteinkoh
        1        0   100.00   aktionäre
-       1        1     0.00   alfredhaymann
+       1        0   100.00   alfredhaymann
        1        0   100.00   allgemeinegesellschaftfürindustriebetei
        1        0   100.00   amtl
        1        0   100.00   anlagevermögen168235164230

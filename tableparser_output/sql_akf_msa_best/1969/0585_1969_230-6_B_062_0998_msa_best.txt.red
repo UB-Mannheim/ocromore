@@ -11,7 +11,7 @@ Dr.jur.HorstPavel,BadHomburgv.d.H.,
 stellv.Vors.;
 Dipl.-Ing.FritzAlf,BadHomburgv.d.H.;
 WalterBuchholz,BadHomburgv.d.H.;
-AlfredFaymann,BadHomburgv.d.H.;
+AlfredHaymann,BadHomburgv.d.H.;
 Dr.rer.nat.GerhardLander,Falken-
 stein(Ts.)
 Aufsichtsrat:

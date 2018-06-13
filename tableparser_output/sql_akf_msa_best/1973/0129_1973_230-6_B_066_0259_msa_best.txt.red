@@ -199,7 +199,7 @@ Kapital:Rp.567000000.-(33,3%)
 P.T.StarMotorsIndonesia,Djakarta
 (Indonesien)
 Kapital:Rp.189000000.-(51,0%)
-SupremeStarEngineeringPte.Ltd.,
+SupremeStarEngineeringPtc.Ltd.,
 Singapur
 Kapital:S$2000000.-(26%)
 AußerdembesitztdieGesellschaftnoch

@@ -69,7 +69,7 @@ undHochspannungsnetzeineVielzahlan-
 dererVersorgungsunternehmendesBun-
 desgebietesundderangrenzendenLänder
 Holland,Belgien,Frankreich,Schweiz
-undÖsterreichinengerenVerbund,wo-
+undÖsterreichinengeremVerbund,wo-
 beiinsbesonderediesüddeutschenUnter-
 nehmeningroßemUmfangaufGrundlang-
 fristigerAbmachungenlaufendelektrische
@@ -271,7 +271,7 @@ dende((Div.Sch.Nr.11)
 1962/63:16%(Div.Sch.Nr.18)
 Bezugsrechteund
 Berichtigungsaktien::
-1955:St,-Akt.i.V.4:1zu120%Ab-
+1955:St,=Akt.i.V.4:1zu120%Ab-
 ‚schlag20,33%(25.5.);
 Div.Sch.Nr.3
 Vorz.-Akt.i.V.4:1zu120%Ab-

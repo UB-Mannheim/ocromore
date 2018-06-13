@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1756   Words
-      55   Misrecognized
-   96.87%  Accuracy
+      51   Misrecognized
+   97.10%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -23,8 +23,8 @@ Non-stopwords
       89        0   100.00        9
       79        2    97.47       10
       76        0   100.00       11
-      69        3    95.65       12
-      61        3    95.08       13
+      69        1    98.55       12
+      61        1    98.36       13
       41        0   100.00       14
       56        2    96.43       15
       51        0   100.00       16
@@ -52,11 +52,11 @@ Non-stopwords
        4        1    75.00       38
        1        0   100.00       39
        2        0   100.00       40
-    1751       55    96.86    Total
+    1751       51    97.09    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    1131       46    95.93        1
+    1131       42    96.29        1
       91        1    98.90        2
       37        0   100.00        3
       14        0   100.00        4
@@ -67,18 +67,18 @@ Distinct Non-stopwords
        1        0   100.00        9
        1        0   100.00       10
       10        0   100.00      >10
-    1303       47    96.39    Total
+    1303       43    96.70    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1756       55    96.87        1
-    1753       96    94.52        2
-    1750      133    92.40        3
-    1747      166    90.50        4
-    1744      196    88.76        5
-    1741      223    87.19        6
-    1738      249    85.67        7
-    1735      273    84.27        8
+    1756       51    97.10        1
+    1753       88    94.98        2
+    1750      121    93.09        3
+    1747      150    91.41        4
+    1744      176    89.91        5
+    1741      199    88.57        6
+    1738      221    87.28        7
+    1735      241    86.11        8
 
 Stopwords
    Count   Missed   %Right   
@@ -380,7 +380,7 @@ Non-stopwords
        3        0   100.00   aktienkurse
        1        0   100.00   aktionsgemeinschaftdeutschesteinkoh
        1        0   100.00   aktionäre
-       1        1     0.00   alfredhaymann
+       1        0   100.00   alfredhaymann
        1        0   100.00   allengrößerenstädtendesbundesgebietes
        1        0   100.00   allgemeinegesellschaftfürindustriebetei
        1        0   100.00   altena
@@ -631,7 +631,7 @@ Non-stopwords
        1        0   100.00   fabrikackerstraße
        1        0   100.00   fabrikag
        1        0   100.00   fabrikbacknang
-       1        1     0.00   fabrikbelecke
+       1        0   100.00   fabrikbelecke
        1        0   100.00   fabrikcurtgorschalki
        1        0   100.00   fabrikeiweiler
        2        0   100.00   fabrikenhameln
@@ -743,7 +743,7 @@ Non-stopwords
        1        0   100.00   heinzdürrbeck
        1        0   100.00   heinzosterwind
        1        0   100.00   heinzquandt
-       1        1     0.00   heinzzickler
+       1        0   100.00   heinzzickler
        1        0   100.00   herbertpavel
        1        0   100.00   herstellung
        1        0   100.00   herstellungundvertriebvonakkumula
@@ -949,7 +949,7 @@ Non-stopwords
        1        0   100.00   originalhanauquarzlampengesellschaft
        1        0   100.00   osnabrück
        1        0   100.00   osramgmbh
-       1        1     0.00   ottomössner
+       1        0   100.00   ottomössner
        1        0   100.00   pachtung
        1        0   100.00   papierfabrikgmbhvorm.brüderkäm
        2        0   100.00   paris

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1297   Words
-      43   Misrecognized
-   96.68%  Accuracy
+      42   Misrecognized
+   96.76%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -21,7 +21,7 @@ Non-stopwords
       54        3    94.44        8
       65        2    96.92        9
       71        5    92.96       10
-      52        2    96.15       11
+      52        1    98.08       11
       40        1    97.50       12
       42        3    92.86       13
       64        0   100.00       14
@@ -51,11 +51,11 @@ Non-stopwords
        4        0   100.00       38
        2        0   100.00       39
        1        0   100.00       40
-    1295       43    96.68    Total
+    1295       42    96.76    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     932       34    96.35        1
+     932       33    96.46        1
       54        1    98.15        2
       20        0   100.00        3
       10        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        2        0   100.00      >10
-    1036       35    96.62    Total
+    1036       34    96.72    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1297       43    96.68        1
-    1294       78    93.97        2
-    1291      109    91.56        3
-    1288      137    89.36        4
-    1285      164    87.24        5
-    1282      191    85.10        6
-    1279      216    83.11        7
-    1276      240    81.19        8
+    1297       42    96.76        1
+    1294       76    94.13        2
+    1291      106    91.79        3
+    1288      133    89.67        4
+    1285      159    87.63        5
+    1282      185    85.57        6
+    1279      209    83.66        7
+    1276      232    81.82        8
 
 Stopwords
    Count   Missed   %Right   
@@ -890,7 +890,7 @@ Non-stopwords
        1        0   100.00   umstellung14
        1        0   100.00   umtauschrechtjeweilszum15
        3        0   100.00   und
-       1        1     0.00   undauslande
+       1        0   100.00   undauslande
        1        0   100.00   undauslandezuerrichten
        1        0   100.00   undauslandmitausnahme
        1        0   100.00   undfarbig

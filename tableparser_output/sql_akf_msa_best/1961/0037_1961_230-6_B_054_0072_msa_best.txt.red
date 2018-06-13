@@ -57,7 +57,7 @@ Tätigkeitsgebiet:
 GegenstanddesUnternehmensistjedeArt
 gewerblicherAusnutzungderElektrizität
 undjedesonstigeBetätigungaufindustriel-
-lemGebieteimIn-undAusland,nament-
+lemGebieteimIn-undAuslande,nament-
 lichHerstellung,VertrieboderVerwertung
 industriellerErzeugnisse,Herstellung,
 Einrichtung,Erwerb,Pachtung,Bewirt-
@@ -124,7 +124,7 @@ tenundelektrischbetriebeneKleinge-
 räte.
 Werkein:
 Berlin,Belecke,Essen,Hameln,Heili-
-genhaus,Kassel,Kirchheim/Teck,Men-
+genhaus,Kassel,Kirchheim-Teck,Men-
 den,Mülheim/Ruhr,Mülheim-Saarn,
 Neumünster,Nürnberg,Oldenburg,Stutt-
 gart

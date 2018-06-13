@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     8573   Words
-     242   Misrecognized
-   97.18%  Accuracy
+     226   Misrecognized
+   97.36%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,46 +20,46 @@ Non-stopwords
      468       12    97.44        5
      522       12    97.70        6
      528       14    97.35        7
-     462       15    96.75        8
-     433       10    97.69        9
+     462       13    97.19        8
+     433       11    97.46        9
      460       10    97.83       10
-     391        6    98.47       11
-     349       10    97.13       12
-     272        8    97.06       13
+     391        5    98.72       11
+     349        6    98.28       12
+     272        6    97.79       13
      280        4    98.57       14
      232        9    96.12       15
      225        3    98.67       16
      219        4    98.17       17
-     209       11    94.74       18
+     209       10    95.22       18
      128        5    96.09       19
      119        2    98.32       20
      106        2    98.11       21
       90        6    93.33       22
-     100        5    95.00       23
+     100        4    96.00       23
       98        6    93.88       24
       80        8    90.00       25
-      82        5    93.90       26
+      82        4    95.12       26
       97        0   100.00       27
       62        4    93.55       28
-      45        2    95.56       29
-      61        3    95.08       30
+      45        1    97.78       29
+      61        2    96.72       30
       45        0   100.00       31
-      63        4    93.65       32
+      63        3    95.24       32
       60        3    95.00       33
       65        2    96.92       34
       56        1    98.21       35
-      52        4    92.31       36
+      52        2    96.15       36
       17        0   100.00       37
       19        2    89.47       38
        6        0   100.00       39
        7        0   100.00       40
        1        0   100.00       49
        1        0   100.00       50
-    8554      241    97.18    Total
+    8554      225    97.37    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    5819      208    96.43        1
+    5819      193    96.68        1
      462        3    99.35        2
      154        0   100.00        3
       58        0   100.00        4
@@ -70,18 +70,18 @@ Distinct Non-stopwords
       11        0   100.00        9
        4        0   100.00       10
       30        0   100.00      >10
-    6625      211    96.82    Total
+    6625      196    97.04    Total
 
 Phrases
    Count   Missed   %Right   Length
-    8573      242    97.18        1
-    8555      436    94.90        2
-    8537      607    92.89        3
-    8519      763    91.04        4
-    8501      912    89.27        5
-    8483     1055    87.56        6
-    8465     1189    85.95        7
-    8447     1318    84.40        8
+    8573      226    97.36        1
+    8555      404    95.28        2
+    8537      560    93.44        3
+    8519      701    91.77        4
+    8501      835    90.18        5
+    8483      966    88.61        6
+    8465     1088    87.15        7
+    8447     1205    85.73        8
 
 Stopwords
    Count   Missed   %Right   
@@ -249,7 +249,7 @@ Non-stopwords
        1        0   100.00   15.7
        1        0   100.00   15.8
        1        0   100.00   150
-       1        1     0.00   1500kumulativevort
+       1        0   100.00   1500kumulativevort
        1        0   100.00   151
        1        0   100.00   152622265873
        1        0   100.00   1535nam
@@ -1104,7 +1104,7 @@ Non-stopwords
        1        0   100.00   a965000
        8        0   100.00   aachen
        1        0   100.00   aachenerundmünchenerversicherung
-       4        2    50.00   aandeeleninindustrieeleondernemingen
+       4        0   100.00   aandeeleninindustrieeleondernemingen
        9        0   100.00   ab
        3        0   100.00   ab1.1
        1        0   100.00   ab1.1.1972
@@ -1229,7 +1229,7 @@ Non-stopwords
        1        0   100.00   albertschwidden
        1        0   100.00   albertvahle
        1        0   100.00   alfredfreiherrvonoppenheim
-       1        1     0.00   alfredhaymann
+       1        0   100.00   alfredhaymann
        1        0   100.00   alfredhenze
        1        0   100.00   alfredroth
        1        0   100.00   alge
@@ -1659,7 +1659,7 @@ Non-stopwords
        1        0   100.00   börsennotiz:münchen
        1        0   100.00   börsennotiz:stuttgart
        1        0   100.00   börsenumsatz
-       1        1     0.00   büssingautomobilwerkegmbh
+       1        0   100.00   büssingautomobilwerkegmbh
        1        0   100.00   büttnerlagersystemegmbh
        2        0   100.00   c
        5        0   100.00   c.g.trinkaus
@@ -2098,7 +2098,7 @@ Non-stopwords
        1        0   100.00   durchwahl302
        1        0   100.00   dustrie
        1        0   100.00   dustrieöfen
-       1        1     0.00   dörnten
+       1        0   100.00   dörnten
        1        0   100.00   düren
        1        0   100.00   dürwiss
        5        0   100.00   düs
@@ -2274,7 +2274,7 @@ Non-stopwords
        1        0   100.00   fabrikackerstraße
        1        0   100.00   fabrikag
        1        0   100.00   fabrikbacknang
-       1        1     0.00   fabrikbelecke
+       1        0   100.00   fabrikbelecke
        1        0   100.00   fabrikcurtgorschalki
        1        0   100.00   fabrikeiweiler
        2        0   100.00   fabrikenhameln
@@ -2370,7 +2370,7 @@ Non-stopwords
        3        0   100.00   frankreich
        1        0   100.00   franzfock
        2        0   100.00   franzheinrichulrich
-       1        1     0.00   franzklemmer
+       1        0   100.00   franzklemmer
        1        0   100.00   franzlechner
        3        0   100.00   freiburg
        1        0   100.00   freiburgi.br
@@ -2522,7 +2522,7 @@ Non-stopwords
        1        0   100.00   glasiertetrennwandsteine
        1        0   100.00   glasierteundunglasier
        1        0   100.00   gleichedividendewiestamm
-       2        0   100.00   glückauf
+       2        1    50.00   glückauf
       15        0   100.00   gmbh
        1        0   100.00   gnvgesellschaftfürnukleareverfahrens
        1        0   100.00   goss
@@ -2678,8 +2678,8 @@ Non-stopwords
        1        0   100.00   heinzpferdmenges
        1        0   100.00   heinzquandt
        1        0   100.00   heinzschmidt
-       1        1     0.00   heinzsolbach
-       1        1     0.00   heinzzickler
+       1        0   100.00   heinzsolbach
+       1        0   100.00   heinzzickler
        1        0   100.00   heits
        1        0   100.00   heizkraftwerkstuttgartgmbh
        1        0   100.00   heiß
@@ -3573,7 +3573,7 @@ Non-stopwords
        1        0   100.00   ottojacob
        1        0   100.00   ottokieffer
        1        0   100.00   ottomöhle
-       1        1     0.00   ottomössner
+       1        0   100.00   ottomössner
        1        0   100.00   ottovoisard
        1        0   100.00   p.t.germanmotormanufacturing
        1        0   100.00   p.t.starmotorsindonesia
@@ -3600,7 +3600,7 @@ Non-stopwords
        1        0   100.00   peinerträger
        2        0   100.00   pelbesteuerungsabkommenwerdenan
        1        0   100.00   penheim
-       1        1     0.00   penzburg
+       1        0   100.00   penzburg
        2        0   100.00   perlon
        1        0   100.00   personalaufwand22431132410558
        1        0   100.00   personalaufwand463114459017
@@ -4037,7 +4037,7 @@ Non-stopwords
        1        0   100.00   stigenmineralien
        1        0   100.00   stillgelegt
        1        0   100.00   stimmrecht
-      12        1    91.67   stimmrechtd.aktieni.d.h
+      12        0   100.00   stimmrechtd.aktieni.d.h
        6        0   100.00   stimmrechtderaktien
        2        0   100.00   stimmrechtloseinhaber
        1        0   100.00   stoffe
@@ -4072,7 +4072,7 @@ Non-stopwords
        1        0   100.00   sungenimin
        1        0   100.00   sungüberbesetzungdesaufsichtsrats
        1        0   100.00   suppen
-       1        1     0.00   supremestarengineeringptc.ltd
+       1        0   100.00   supremestarengineeringptc.ltd
        1        0   100.00   swf
        1        0   100.00   swfsüddeutschewinden
        1        0   100.00   sydney
@@ -4273,7 +4273,7 @@ Non-stopwords
        1        0   100.00   undappa
        2        0   100.00   undaus
        2        0   100.00   undausland
-       1        1     0.00   undauslande
+       1        0   100.00   undauslande
        1        0   100.00   undauslandezuerrichten
        1        0   100.00   undauslandmitausnahme
        1        0   100.00   undauslandsowiezumab
@@ -4375,7 +4375,7 @@ Non-stopwords
        6        0   100.00   undwechsel
        1        0   100.00   undwinterverkehrmitzwei
        1        0   100.00   undzwarvondenerzgrubenzum
-       1        1     0.00   undösterreichinengeremverbund
+       1        0   100.00   undösterreichinengeremverbund
        1        0   100.00   unfall
        1        0   100.00   unilevern.v
        1        0   100.00   unimogfahrzeuge
@@ -4522,7 +4522,7 @@ Non-stopwords
        1        0   100.00   vorzugsdividendemitnach
        1        0   100.00   w.b.blaisse
        1        0   100.00   w.holtrop
-       1        1     0.00   w.tümmelsbuchdruckereiundverlag
+       1        0   100.00   w.tümmelsbuchdruckereiundverlag
        1        0   100.00   wachsrohpapiere
        1        0   100.00   waffen
        1        0   100.00   wagenallerarteinschließlichderen

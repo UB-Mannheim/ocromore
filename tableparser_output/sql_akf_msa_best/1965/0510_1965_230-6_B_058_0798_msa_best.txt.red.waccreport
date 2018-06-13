@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      737   Words
-      17   Misrecognized
-   97.69%  Accuracy
+      16   Misrecognized
+   97.83%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -39,7 +39,7 @@ Non-stopwords
        5        0   100.00       27
        4        0   100.00       28
        6        0   100.00       29
-       3        2    33.33       30
+       3        1    66.67       30
        3        0   100.00       31
        4        0   100.00       32
        4        0   100.00       33
@@ -49,11 +49,11 @@ Non-stopwords
        1        0   100.00       37
        4        0   100.00       38
        1        0   100.00       50
-     737       17    97.69    Total
+     737       16    97.83    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     432       14    96.76        1
+     432       13    96.99        1
       40        1    97.50        2
       14        0   100.00        3
        9        0   100.00        4
@@ -64,18 +64,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        4        0   100.00      >10
-     513       15    97.08    Total
+     513       14    97.27    Total
 
 Phrases
    Count   Missed   %Right   Length
-     737       17    97.69        1
-     736       33    95.52        2
-     735       49    93.33        3
-     734       64    91.28        4
-     733       79    89.22        5
-     732       94    87.16        6
-     731      109    85.09        7
-     730      124    83.01        8
+     737       16    97.83        1
+     736       31    95.79        2
+     735       46    93.74        3
+     734       60    91.83        4
+     733       74    89.90        5
+     732       88    87.98        6
+     731      102    86.05        7
+     730      116    84.11        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -555,7 +555,7 @@ Non-stopwords
        1        0   100.00   undtiefbauten
        1        0   100.00   undverlust
        1        0   100.00   undwechsel
-       1        1     0.00   undösterreichinengeremverbund
+       1        0   100.00   undösterreichinengeremverbund
        3        0   100.00   v
        5        0   100.00   v.v
        1        0   100.00   vereinbarung

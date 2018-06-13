@@ -6,7 +6,6 @@ from os import listdir
 from os.path import isfile, join
 import os
 import shutil
-from machine_learning_components.special_character_predictor import SpecialCharPredictor
 from vocabulary_checker.vocabulary_checker import VocabularyChecker
 
 
@@ -106,6 +105,7 @@ class TableParser(object):
 
         predictor = None
         if self._config.PREDICTOR_AUFSICHTSRAT_ENABLED:
+            from machine_learning_components.special_character_predictor import SpecialCharPredictor
             predictor = SpecialCharPredictor()
             predictor.load_prediction_model()
 
