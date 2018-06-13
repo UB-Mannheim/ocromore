@@ -922,7 +922,8 @@ class MsaHandler(object):
                 update_word(line_1, current_word_index, words_aligned[0])
                 update_word(line_2, current_word_index, words_aligned[1])
                 update_word(line_3, current_word_index, words_aligned[2])
-
+                #if "COLONIA" in words_aligned[0]:
+                #    stop="STOP"
                 #Creates the segment counter for wordbbox
                 seg_counter.extend([current_word_index]*(max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])])))
                 if current_word_index < max_range_word-1 and max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])]) > 0:
@@ -943,7 +944,7 @@ class MsaHandler(object):
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
-                if len(best) == len(seg_counter) and best != "¦":
+                if len(best) == len(seg_counter) and len(best.replace("¦","").strip()) != 0:
                     #seg_counter = np.array(seg_counter)
                     #Delete all wc
                     wc_pos = [number for number, symbol in enumerate(best) if symbol == "¦"]

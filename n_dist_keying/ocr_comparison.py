@@ -304,14 +304,23 @@ class OCRcomparison:
     def _write_line_infos(self,dataset_bbox, dataset_text,set_index, other_set,lidx, current_set):
         dtext = f'''            <span class ='ocr_line' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' ><br/>\n'''
         if other_set == "msa_best":
-            for number, word in current_set._text_seg.items():
-                if number != -1.0:
-                    set_index = 2
-                    if number in current_set._set_lines[1].word["UID"].keys() and current_set._set_lines[1].data["word_x0"]: set_index = 1
-                    elif number in current_set._set_lines[0].word["UID"].keys() and current_set._set_lines[0].data["word_x0"]: set_index = 0
-                    dataset_bbox = self._get_wbbox_new(dataset_bbox,number,current_set._set_lines[set_index].data)
-                dtext += f'''                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{word}</span >\n'''
-                set_index= 0
+            if current_set._text_seg == None:
+                dtext += f'''                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{dataset_text}</span >\n'''
+            else:
+                for number, word in current_set._text_seg.items():
+                    if number != -1.0:
+                        set_index = 2
+                        if number in current_set._set_lines[1].word["UID"].keys() and \
+                                max(current_set._set_lines[1].word["UID"][number])>=0 and \
+                                current_set._set_lines[1].data["word_x0"]:
+                            set_index = 1
+                        elif  number in current_set._set_lines[0].word["UID"].keys() and \
+                                max(current_set._set_lines[0].word["UID"][number])>=0 and \
+                                current_set._set_lines[0].data["word_x0"]:
+                            set_index = 0
+                        dataset_bbox = self._get_wbbox_new(dataset_bbox,number,current_set._set_lines[set_index].data)
+                    dtext += f'''                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{word}</span >\n'''
+                    set_index= 0
         else:
             for number, word in current_set._set_lines[set_index].word["text"].items():
                 dataset_bbox = self._get_wbbox(dataset_bbox,number,current_set._set_lines[set_index].word["UID"],current_set._set_lines[set_index].data)

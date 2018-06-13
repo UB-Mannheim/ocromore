@@ -306,8 +306,16 @@ class DFObjectifier(object):
                 old_lidx = None
                 old_idx = None
                 offset = 0
+                engine_stat = None
                 for idx in np.nonzero(con)[0].tolist():
-                    if old_lidx is None: old_lidx = linedict["line_idx"][idx]
+                    if pparam.lineIdx == 95:
+                        stop="STOP"
+                    if engine_stat is None: engine_stat = (linedict["ocr"][idx],linedict["ocr_profile"][idx])
+                    if engine_stat != (linedict["ocr"][idx],linedict["ocr_profile"][idx]):
+                        offset = 0
+                        engine_stat = (linedict["ocr"][idx], linedict["ocr_profile"][idx])
+                    if old_lidx is None:
+                        old_lidx = linedict["line_idx"][idx]
                     if linedict["line_idx"][idx] != old_lidx:
                         old_lidx = linedict["line_idx"][idx]
                         offset += linedict["word_idx"][old_idx]+1

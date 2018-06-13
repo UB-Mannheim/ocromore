@@ -53,6 +53,11 @@ def get_xml_document(fpath):
                     if not GETLINECOORDS and COW:
                         line.coordinates = (None, None, None, None)
                         COW = False
+                    if line.coordinates != (None, None, None, None) and len(doc.page)>1:
+                        if line.coordinates[0] < doc.page[-2].coordinates[2]:
+                            if item.attrib["b"] <= doc.page[-2].coordinates[3]:
+                                item.attrib["t"] = line.coordinates[1]
+                                item.attrib["b"] = line.coordinates[3]
                     word.update_coordinates(item.attrib)
                     word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
