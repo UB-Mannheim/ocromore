@@ -1,14 +1,6 @@
 import keras.preprocessing
 import json
 import nltk
-from sklearn.cross_validation import train_test_split
-from keras.preprocessing import sequence, text
-from keras.models import Sequential
-from keras.layers import (Dense, Dropout, Activation, Embedding, LSTM,
-Convolution1D, MaxPooling1D)
-
-
-
 
 DICTIONARY_FILE = "/media/sf_Transfer/dictionary_created.txt"
 REMOVE_BORDER_SPECIAL_CHARS = True

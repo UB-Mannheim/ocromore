@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      304   Words
-       4   Misrecognized
-   98.68%  Accuracy
+      23   Misrecognized
+   92.43%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -15,58 +15,58 @@ Non-stopwords
        9        1    88.89        3
       30        0   100.00        4
       19        0   100.00        5
-      27        0   100.00        6
-      15        1    93.33        7
+      27        6    77.78        6
+      15        3    80.00        7
       20        0   100.00        8
       13        1    92.31        9
       12        0   100.00       10
       17        0   100.00       11
-      15        0   100.00       12
-      13        0   100.00       13
-       7        1    85.71       14
+      15        2    86.67       12
+      13        2    84.62       13
+       7        2    71.43       14
        5        0   100.00       15
        3        0   100.00       16
        4        0   100.00       17
-      10        0   100.00       18
-       4        0   100.00       19
+      10        1    90.00       18
+       4        1    75.00       19
        2        0   100.00       20
        5        0   100.00       21
        8        0   100.00       22
-       3        0   100.00       23
+       3        1    66.67       23
        1        0   100.00       24
-       6        0   100.00       25
+       6        1    83.33       25
        1        0   100.00       26
        3        0   100.00       27
-       2        0   100.00       28
+       2        1    50.00       28
        2        0   100.00       30
        3        0   100.00       32
        1        0   100.00       33
        5        0   100.00       34
-       1        0   100.00       36
+       1        1     0.00       36
        1        0   100.00       37
        1        0   100.00       38
-     304        4    98.68    Total
+     304       23    92.43    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     210        4    98.10        1
+     210       18    91.43        1
       21        0   100.00        2
        8        0   100.00        3
-       3        0   100.00        5
+       3        1    66.67        5
        1        0   100.00        6
        1        0   100.00        7
-     244        4    98.36    Total
+     244       19    92.21    Total
 
 Phrases
    Count   Missed   %Right   Length
-     304        4    98.68        1
-     303        7    97.69        2
-     302       10    96.69        3
-     301       13    95.68        4
-     300       16    94.67        5
-     299       19    93.65        6
-     298       22    92.62        7
-     297       25    91.58        8
+     304       23    92.43        1
+     303       43    85.81        2
+     302       62    79.47        3
+     301       79    73.75        4
+     300       95    68.33        5
+     299      110    63.21        6
+     298      125    58.05        7
+     297      139    53.20        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -88,7 +88,7 @@ Non-stopwords
        1        0   100.00   1954163
        1        0   100.00   1955180
        1        0   100.00   1956168,5
-       1        0   100.00   1stimme
+       1        1     0.00   1stimme
        3        0   100.00   2
        1        0   100.00   20000000
        1        0   100.00   200001
@@ -126,22 +126,22 @@ Non-stopwords
        1        0   100.00   aufdm40000000
        1        0   100.00   aufsichtsrat
        1        0   100.00   ausdenbilanzen
-       1        0   100.00   ausdengewinn
+       1        1     0.00   ausdengewinn
        1        0   100.00   band
        1        0   100.00   bank
        2        0   100.00   bankag
-       1        0   100.00   bankfürhandelundindustrieag
+       1        1     0.00   bankfürhandelundindustrieag
        1        0   100.00   bankvereinag
        1        1     0.00   barmittel
        1        0   100.00   bayerischehypotheken
        1        0   100.00   ber1953
-       5        0   100.00   berlin
+       5        5     0.00   berlin
        1        0   100.00   berlinercommerzbankag
        1        0   100.00   berlinerdiscontobankag
        1        0   100.00   berlinerhandels
-       1        0   100.00   berlinundfrank
+       1        1     0.00   berlinundfrank
        1        0   100.00   blankmaterial
-       1        0   100.00   bleche
+       1        1     0.00   bleche
        1        0   100.00   bochum
        1        0   100.00   brück
        1        0   100.00   burg
@@ -157,7 +157,7 @@ Non-stopwords
        1        0   100.00   dembereichdervereinigtenstahlwerke
        1        0   100.00   demvorangegangenengeschäftsjahrum
        1        0   100.00   den.dabeierhöhtesichwiederumbeson
-       1        0   100.00   dersderanteilhochwertigeredelstähle
+       1        1     0.00   dersderanteilhochwertigeredelstähle
        1        0   100.00   derumsatz1954
        1        0   100.00   detmold
        1        0   100.00   deutschebankagwest
@@ -180,7 +180,7 @@ Non-stopwords
        7        0   100.00   düsseldorf
        1        0   100.00   eigenkapital7046070460
        1        0   100.00   elektrostahl
-       1        0   100.00   erhöht
+       1        1     0.00   erhöht
        1        1     0.00   erichpachnicke
        1        0   100.00   ernstschulte
        1        0   100.00   erzeugungvon:stahleisen
@@ -198,14 +198,14 @@ Non-stopwords
        1        0   100.00   geschmiedetesmaterial
        1        0   100.00   geschäftsjahr
        2        0   100.00   gesellschaft
-       1        0   100.00   gewinnnachvortrag24003200
+       1        1     0.00   gewinnnachvortrag24003200
        1        0   100.00   gmbh
        1        0   100.00   greven
        1        0   100.00   grevenbrückerkalkwerkegmbh
        1        0   100.00   großaktionäre
        1        0   100.00   grundkapital:dm40000000
        1        0   100.00   gründung
-       1        0   100.00   gustavtriebel
+       1        1     0.00   gustavtriebel
        3        0   100.00   hagen
        1        0   100.00   halbzeug
        1        0   100.00   ham
@@ -213,15 +213,15 @@ Non-stopwords
        1        0   100.00   hamburgerkreditbankag
        1        0   100.00   hannover
        1        0   100.00   hardy
-       1        0   100.00   heinzsolbach
+       1        1     0.00   heinzsolbach
        1        0   100.00   hofen
-       1        0   100.00   hubertbiernat
+       1        1     0.00   hubertbiernat
        1        0   100.00   in1000dm
        1        0   100.00   infolgederanhaltendgutenmarktlage
        1        0   100.00   ing.friedrichriekeberg
        1        0   100.00   ing.heinrichvandeloo
        1        0   100.00   ing.karlneuenhofer
-       1        0   100.00   ing.rudolfschäfer
+       1        1     0.00   ing.rudolfschäfer
        1        0   100.00   jahresertrag6769786795
        1        0   100.00   jenom.dm100
        1        0   100.00   k
@@ -256,7 +256,7 @@ Non-stopwords
        1        0   100.00   okt
        1        0   100.00   oktoberbis30
        1        0   100.00   opribahandels
-       1        0   100.00   ordnungsnr.d.aktien
+       1        1     0.00   ordnungsnr.d.aktien
        1        0   100.00   poensgen
        1        0   100.00   rechnungen
        1        0   100.00   reichelbräuaktien
@@ -274,7 +274,7 @@ Non-stopwords
        1        0   100.00   stellv
        2        0   100.00   stellv.vors
        1        0   100.00   steuern1240223352
-       1        0   100.00   stimmrechtd.aktieni.d.h
+       1        1     0.00   stimmrechtd.aktieni.d.h
        1        0   100.00   strickherdicke
        1        0   100.00   stuttgart
        1        0   100.00   stückelung
