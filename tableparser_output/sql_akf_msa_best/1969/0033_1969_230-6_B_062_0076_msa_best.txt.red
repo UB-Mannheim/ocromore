@@ -22,13 +22,13 @@ Dr.-Ing.Dr.-Ing.E.h.FriedricnhHämmer-
 ling,Königstein;
 Dipl.-Ing.PaulHarke,Königstein;
 Dr.phil.ErhardLöwe,Ulm;
-OttoMössner,Ulm;
+OttoWössner,Ulm;
 Prof.Dr.-Ing.Dr.-Ing.E.h.Werner
 Nestel,Ulm;
 CarlW.Röder,Königstein;
 Prof.Dr.rer.pol.MatthiasSchmitt,Berlin;
 RechtsanwaltJohannesSemler,Oberursel;
-HeinzZickler,Oberhöchstadt;
+HeinzHickler,Oberhöchstadt;
 StellvertretendeMitglieder:
 JosefFuchs,Langen;
 Dr.-Ing.EnnoKoch,Ulm;
@@ -67,7 +67,7 @@ Tätigkeitsgebiet:
 ArtgewerblicherAusnutzungderElek-
 trizitätundjedesonstigeBetätigungauf
 industriellemGebietimIn-undAus-
-land,namentlichHerstellung,Vertrieb
+land,namentlichHerstellung.Vertrieb
 oderVerwertungindustriellerErzeug-
 nisse,Herstellung,Einrichtung,Er-
 werb,Pachtung,Bewirtschaftungoder
@@ -114,7 +114,7 @@ Sickingerstr.(AnlagenHochfrequenz),Groß-
 maschinenfabrik,Kleinmaschinenfabrik,
 Stromrichterfabrik,Turbinenfabrik.
 imBundesgebiet37Werke
-FabrikBacknang;FabrikBelecke;Fabrik
+FabrikBacknang;FabrikBenecke;Fabrik
 Celle;FabrikEiweiler;FabrikEssen;
 FabrikEßlingen;FabrikGräfenberg;Be-
 triebSchenefeldundWerkSchulau,Ham-
@@ -190,7 +190,7 @@ NationaleAutomobil-GesellschaftAG,
 Berlin
 Kapital:DM3000000.-(100%)
 Dividendenab1960/61:12,12,12;ab
-1963(1.7.31.12.):,1214,16,16.%
+1963(1.7.-31.12.):,1214,16,16.%
 BetefaBerlinerTelefonschnur-Fabrik
 GmbH,Berlin
 Kapital:DM100000.-(100%)
@@ -298,7 +298,7 @@ DM275000000.-,1958auf
 DM310000000.-,1962auf
 DM380000000.-,1963auf
 DM402134000.-(UmtauschvonWandel-
-sSchuldverschreibungeninAktien),1964
+SchuldverschreibungeninAktien),1964
 aufDM414899900.-(Umtauschvon
 WandelschuldverschreibungeninAktien).
 1965aufDM459899900.-und1968auf
@@ -358,7 +358,7 @@ Bezugsrechte:
 1954:i.V.4:1zu100%;Abschlag15,12%
 (20.10.);Div.Sch.Nr.3
 1955:i.V.2:1zu135%;Abschlag34,33%
-(21.4:10.);Div.;Sch.;Nr.5
+(21.4:10.);Div.-Sch.;Nr.5
 1956:i.V.3:1zu100%;Abschlag22,33%
 (9.211.5);Div.Sch.Nr.7
 1957:i.V.4:1zu120%;Abschlag10,84%
@@ -367,7 +367,7 @@ Bezugsrechte:
 (20.5.);2Div.’Sch.Nr.11
 i.V.11:2zu100%;Abschlag6,08%
 (20.5.);Div.Sch.Nr.12+)
-1962:i.V.5:1zu200%;Abschlag43,125%
+196:i.V.5:1zu200%;Abschlag43,125%
 (30.4.);Div.Sch.Nr.171)
 i.V.50:7zu200%;Abschlag43,125%
 (30.4.);Ber.Sch.I++)1])

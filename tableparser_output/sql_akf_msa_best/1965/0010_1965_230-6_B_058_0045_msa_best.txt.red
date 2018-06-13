@@ -33,7 +33,7 @@ Gründung:
 Tätigkeitsgebiet:
 Produktionsprogramm:
 WerkSinzigamRhein:Steinzeug-Boden-
-fliesen,Klein-,Mitteln,Streifen-und
+fliesen,Klein-,Mittel-,Streifen-und
 Kombi-Mosaik,Labortischfliesen;
 WerkEhrangbeiTrier:Hochspannungs-
 isolatorenfürFreileitungen,Geräteisola-
@@ -79,7 +79,7 @@ Kapital:can.$225125.-(23,32%)
 FrontenacFloor&WallTileLtd.,
 Kingston,Ontario(Kanada)
 Kapital:can.$2900000.-(über67%)
-AGEROBInvestmentsLtd.,Nassau(Ba-
+AGROBInvestmentsLtd.,Nassau(Ba-
 hamaIslands)
 Kapital:300005.-(100%)
 Geschäftsjahr:Kalenderjahr
@@ -108,7 +108,7 @@ Börsennotiz:München(amtl.)
 Wertpapier-Kenn-Nr.:
 501900(St.-Akt.);501903(Vorz.-Akt.)
 Stückelung:
-8400Inh.St.-Akt.zujeDM1000.-
+8400Inh.-St.-Akt.zujeDM1000.-
 5000Inh.-St.-Akt.zujeDM100.-
 4250Inh.-Vorz.-Akt.zujeDM1000.-
 2000Inh.-Vorz.-Akt.zujeDM100.-
@@ -131,9 +131,9 @@ München(25%)
 Anleihe:
 7%Teilschuldverschreibungenvon1958
 Emissionsbetrag:DM10000000.-
-Aktienkurse(München),
+Aktienkurse(München):
 Stammaktien:
-ultimo1948445%
+ultimo194845%
 4194970%
 5195076%
 195196%

@@ -14,7 +14,7 @@ Non-stopwords
       53        1    98.11        2
       60        0   100.00        3
       61        5    91.80        4
-      30        6    80.00        5
+      30        5    83.33        5
       33        1    96.97        6
       56        4    92.86        7
       49        0   100.00        8
@@ -38,7 +38,7 @@ Non-stopwords
       10        0   100.00       26
        5        0   100.00       27
        4        0   100.00       28
-       9        0   100.00       29
+       9        1    88.89       29
        6        0   100.00       30
        2        0   100.00       31
        3        0   100.00       32
@@ -69,11 +69,11 @@ Phrases
      741       22    97.03        1
      740       39    94.73        2
      739       52    92.96        3
-     738       59    92.01        4
-     737       66    91.04        5
-     736       73    90.08        6
-     735       80    89.12        7
-     734       87    88.15        8
+     738       61    91.73        4
+     737       70    90.50        5
+     736       79    89.27        6
+     735       87    88.16        7
+     734       95    87.06        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -170,7 +170,7 @@ Non-stopwords
        1        1     0.00   5183
        1        1     0.00   5276
        1        1     0.00   53130
-       1        1     0.00   54243
+       1        0   100.00   54243
        1        0   100.00   550000
        1        0   100.00   550003
        1        1     0.00   55398
@@ -549,7 +549,7 @@ Non-stopwords
        1        0   100.00   stuttgarterversicherungsdienstgmbh
        1        0   100.00   stückelung
        1        0   100.00   sungüberbesetzungdesaufsichtsrats
-       1        0   100.00   supremestarengineeringptc.ltd
+       1        1     0.00   supremestarengineeringptc.ltd
        1        0   100.00   sämtl.berlin
        1        0   100.00   sämtl.saar
        1        0   100.00   sämtl.stuttgart

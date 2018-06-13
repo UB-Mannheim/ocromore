@@ -21,8 +21,8 @@ Heinrich Mahler, Hamburg (Arbeitnehmer-
 vertreter);
 Dr. Joachim Riehle, Hamburg;
 Adolph Schönfelder, Hamburg;
-iWilhelm Schröder, Hamburg;
-lHerbert Spiesen, Hamburg;
+Wilhelm Schröder, Hamburg;
+Herbert Spiesen, Hamburg;
 Franz Heinrich Ulrich, Hamburg;
 Claus Wiebusch, Hamburg (von der Ge-
 werkschaft gestellter Arbeitnehmer-
@@ -84,7 +84,7 @@ Kapital: DM 833 000. - (100 %)
 Zentral-Omnibusbahnhof "'ZOB''" GmbH,
 Hamburg
 Beteil.: 51 %.
-Geschäftsjahr: Kalenderjahr;
+Geschäftsjahr: Kalenderjahr.
 Stimmrecht d. Aktien i.d.H.-V.:
 Je DM 100.- jeder A-Aktie, jeder
 B-Stamm-Aktie und jeder C-Aktie
@@ -124,7 +124,7 @@ DM 200. -
 DM 36 008 600. - A-Aktien
 DM 21 961 600. - B-Aktien
 DM 10 898 400. - C-Aktien
-DM 166 400. - B-Vorzugsaktien
+DM 166 400. - B-Vorzugsaktie.
 Börsennotiz:
 Hamburg, Berlin, Düsseldorf, Frank-
 furt, Hannover, München (amtl!.).
@@ -153,7 +153,7 @@ Emissionsbetrag: $ 8 000 000.-.
 Aktienkurse:
 ultimo 1948118,‚25 %
 1194959 %
-2.1950441 %
+2.195041 %
 N1951558 %
 1952667 %
 195373 %

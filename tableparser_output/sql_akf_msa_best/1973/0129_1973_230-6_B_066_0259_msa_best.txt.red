@@ -199,7 +199,7 @@ Kapital:Rp.567000000.-(33,3%)
 P.T.StarMotorsIndonesia,Djakarta
 (Indonesien)
 Kapital:Rp.189000000.-(51,0%)
-SupremeStarEngineeringPtc.Ltd.,
+SupremeStarEngineeringPte.Ltd.,
 Singapur
 Kapital:S$2000000.-(26%)
 AußerdembesitztdieGesellschaftnoch
@@ -274,7 +274,7 @@ ab15.10.1968StücknotizfürDM50.-
 51183%602530%669424DM
 52276%611520%70385DM
 533130%621030%71328DM
-544243%63898%72385DM
+54243%63898%72385DM
 555398%64761%(29.9.)
 566306%65500%
 DividendenaufStammakiten:

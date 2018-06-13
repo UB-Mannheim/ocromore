@@ -93,7 +93,7 @@ Düsseldorf
 Kapital: DM 240 000. - (4,17 %)
 Hochtief Chilena Ltda.,, Santiago
 Kapital: chilEsc 10 000. - (100 %)
-Hochtief Socié&té&/Iranienne, Teheran
+Hochtief Soci&té&/Iranienne, Teheran
 Kapital: Rials 5 000 000. - (100 %)
 Hochtief do Brasil SA, Säo Paulo
 Kapital: Cr$ 10 000 000. - (94 %)
@@ -134,7 +134,7 @@ Berlin, Düsseldorf, Frankfurt (M), Ham-
 burg und München (amtl.)
 Wertpapier-Kenn-Nr.: 607000
 Stückelung:
-25 150 Inh. St.-Akt. zu je DM 1 000. -
+25 150 Inh. -St.-Akt. zu je DM 1 000. -
 17 500 Inh.-St.-Akt. zuje DM 100.-
 392 000 Inh. -St.-Akt. zu je DM 50. -
 Aktienkurse (ultimo abgerundet):

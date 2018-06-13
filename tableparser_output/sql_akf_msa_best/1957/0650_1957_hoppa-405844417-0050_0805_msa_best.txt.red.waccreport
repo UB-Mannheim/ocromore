@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      385   Words
-      10   Misrecognized
-   97.40%  Accuracy
+       7   Misrecognized
+   98.18%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,11 +22,11 @@ Non-stopwords
       18        0   100.00        9
       24        0   100.00       10
       16        0   100.00       11
-      19        1    94.74       12
+      19        0   100.00       12
       13        0   100.00       13
-      13        1    92.31       14
+      13        0   100.00       14
        6        1    83.33       15
-      10        1    90.00       16
+      10        0   100.00       16
        3        0   100.00       17
        8        0   100.00       18
        4        0   100.00       19
@@ -48,29 +48,29 @@ Non-stopwords
        5        0   100.00       35
        5        0   100.00       36
        2        0   100.00       37
-     383       10    97.39    Total
+     383        7    98.17    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     266        9    96.62        1
+     266        7    97.37        1
       18        0   100.00        2
        9        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        2        0   100.00        7
        1        0   100.00      >10
-     300        9    97.00    Total
+     300        7    97.67    Total
 
 Phrases
    Count   Missed   %Right   Length
-     385       10    97.40        1
-     384       15    96.09        2
-     383       18    95.30        3
-     382       21    94.50        4
-     381       24    93.70        5
-     380       27    92.89        6
-     379       30    92.08        7
-     378       33    91.27        8
+     385        7    98.18        1
+     384        9    97.66        2
+     383       10    97.39        3
+     382       11    97.12        4
+     381       12    96.85        5
+     380       13    96.58        6
+     379       14    96.31        7
+     378       15    96.03        8
 
 Stopwords
    Count   Missed   %Right   
@@ -270,7 +270,7 @@ Non-stopwords
        1        0   100.00   hanseatischesiedlungs
        1        0   100.00   heinrichmahler
        1        0   100.00   heinrichwulff
-       1        1     0.00   herbertspiesen
+       1        0   100.00   herbertspiesen
        1        0   100.00   hornerbahn
        1        0   100.00   hugoscharnberg
        1        0   100.00   imsommer
@@ -360,13 +360,13 @@ Non-stopwords
        1        0   100.00   vors
        1        0   100.00   vorstand
        2        0   100.00   vorz
-       2        1    50.00   vorzugsaktie
+       2        0   100.00   vorzugsaktie
        1        0   100.00   walddörferbahn
        1        0   100.00   walterheinze
        1        0   100.00   werbung
        1        0   100.00   werkschaftgestellterarbeitnehmer
        1        0   100.00   wilhelmjoost
-       1        1     0.00   wilhelmschröder
+       1        0   100.00   wilhelmschröder
        1        0   100.00   wirtz
        1        0   100.00   wohldorf
        1        0   100.00   wurdevondergesell

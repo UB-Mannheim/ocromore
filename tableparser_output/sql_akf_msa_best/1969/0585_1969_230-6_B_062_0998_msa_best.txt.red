@@ -11,7 +11,7 @@ Dr.jur.HorstPavel,BadHomburgv.d.H.,
 stellv.Vors.;
 Dipl.-Ing.FritzAlf,BadHomburgv.d.H.;
 WalterBuchholz,BadHomburgv.d.H.;
-AlfredHaymann,BadHomburgv.d.H.;
+AlfredFaymann,BadHomburgv.d.H.;
 Dr.rer.nat.GerhardLander,Falken-
 stein(Ts.)
 Aufsichtsrat:
@@ -222,7 +222,7 @@ Personalaufwand990878g089063
 ErträgeausGewinn-
 abführungsver-
 trägen153451627
-Beteiligungserträge9992301017
+Beteiligungserträge99921017
 Abschreibungen2571825217
 EEV-Steuern295483452
 Jahresüberschuß2285525855

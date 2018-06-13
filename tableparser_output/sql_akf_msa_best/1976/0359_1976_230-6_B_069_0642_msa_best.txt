@@ -10,7 +10,7 @@ Werk Augsburg: (08 21) 32 21
 Werk Hamburg: (0 40) 7 40 91
 Werk Nürnberg: (09 11) 1 81
 Werk München: (0 89) 1 48 01
-Werk Gustavsburg. Mainz-Kastel (0 61 43)
+Werk Gustavsburg: Mainz-Kastel (0 61 43)
 551H
 Telex:
 Werk Augsburg: 5 3 751
@@ -26,8 +26,8 @@ Adolf Schiff, Augsburg;
 Wolfram Thiele, Oberhausen;
 Otto Voisard, München;
 Friedrich Laußermair, München, stellv. ;
-Wolfgang Müller, München, stellv.;
-Herbert Redlich, Gustavsburg. stellv.
+Wolfgang Müller, München, stellv.;;
+Herbert Redlich, Gustavsburg, stellv.
 Aufsichtsrat:
 Manfred Lennings, Kettwig, Vors.;
 Ulrich Neumann, Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ Dietrich Wilhelm von Menges, Essen-
 Bredeney;
 Siegfried Schiffbauer, Kiel;
 Arbeitnehmervertreter::
-Franz Klemmer, Augsburg);
+Franz Slemmer, Augsburg;;
 Rudolf Rhein, Mainz-Kostheim;;
 Eduard Schleinkofer, München;
 Ferdinand Wolinsky, Oberhausen
@@ -57,7 +57,7 @@ Maschinen- und Stahlbau mit den Werken
 Nürnberg und Gustavsburg. Unternehmens-
 bereich Nutzfahrzeuge mit den Werken
 München, Watenstedt, Braunschweig und
-Penzburg.
+Penzberg.
 Maschinen- und Anlagenbau der GHH
 STERKRADE AG mit den Werken Sterk-
 rade, Düsseldorf, Rheinwerft Walsum
@@ -123,10 +123,10 @@ Schleicher AG, Offenbach (M)
 Kapital: DM 26 000 000. - (50,62 %)
 Dividenden ab 1969: 18,18, 14,7
 (1.1.-30,6,), 16,14 %
-W. Tümmels Buchdruckerei und Verlag
+W. Temmels Buchdruckerei und Verlag
 GmbH, Nürnberg
 Kapital: DM 1 200 000. - (100 %)
-Büssing Automobilwerke GmbH, Braun-
+Güssing Automobilwerte GmbH, Braun-
 schweig
 Kapital: DM 42 000 000. - (97,62 %; Be-
 triebspachtvertrag)
@@ -157,7 +157,7 @@ Sydney
 Kapital: $A 965 000. - (91,7 %)
 M.A.N. Kamyon ve Otobüs Sanayi Anonim
 Sirketi, Istanbul
-Kapital: TkE. 27 000 000.- (über 25 %)
+Kapital: TE. 27 000 000.- (über 25 %)
 M.A.N. Truck and Bus S.A. (Pty) Ltd.,
 Johannesburg
 Kapital: R 300.000. - (100 %)
@@ -235,8 +235,8 @@ Wertpapier-Kenn-Nr.:
 506300 (St. -Akt.); 506303 (Vorz.-Akt.)
 Stückelung:
 143 900 Inh.-St.-Akt. zu je DM 1 000. -
-35 000 Inh. St.-Akt. zu je DM 100.-
-52 000 Inh. St.-Akt. zu je DM 50. -
+35 000 Inh. -St.-Akt. zu je DM 100.-
+52 000 Inh. -St.-Akt. zu je DM 50. -
 91 295 Inh.-Vorz.-Akt.zu jeDM 1 000, -
 59 500 Inh. -Vorz.-Akt.zu je DM 100.-
 55 100 Inh.-Vorz.-Akt.zu je DM 50.-

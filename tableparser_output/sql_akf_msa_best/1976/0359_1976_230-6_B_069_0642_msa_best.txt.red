@@ -10,7 +10,7 @@ WerkAugsburg:(0821)3221
 WerkHamburg:(040)74091
 WerkNürnberg:(0911)181
 WerkMünchen:(089)14801
-WerkGustavsburg.Mainz-Kastel(06143)
+WerkGustavsburg:Mainz-Kastel(06143)
 551H
 Telex:
 WerkAugsburg:53751
@@ -26,8 +26,8 @@ AdolfSchiff,Augsburg;
 WolframThiele,Oberhausen;
 OttoVoisard,München;
 FriedrichLaußermair,München,stellv.;
-WolfgangMüller,München,stellv.;
-HerbertRedlich,Gustavsburg.stellv.
+WolfgangMüller,München,stellv.;;
+HerbertRedlich,Gustavsburg,stellv.
 Aufsichtsrat:
 ManfredLennings,Kettwig,Vors.;
 UlrichNeumann,Garmisch-Partenkirchen,
@@ -40,7 +40,7 @@ DietrichWilhelmvonMenges,Essen-
 Bredeney;
 SiegfriedSchiffbauer,Kiel;
 Arbeitnehmervertreter::
-FranzKlemmer,Augsburg);
+FranzSlemmer,Augsburg;;
 RudolfRhein,Mainz-Kostheim;;
 EduardSchleinkofer,München;
 FerdinandWolinsky,Oberhausen
@@ -57,7 +57,7 @@ Maschinen-undStahlbaumitdenWerken
 NürnbergundGustavsburg.Unternehmens-
 bereichNutzfahrzeugemitdenWerken
 München,Watenstedt,Braunschweigund
-Penzburg.
+Penzberg.
 Maschinen-undAnlagenbauderGHH
 STERKRADEAGmitdenWerkenSterk-
 rade,Düsseldorf,RheinwerftWalsum
@@ -123,10 +123,10 @@ SchleicherAG,Offenbach(M)
 Kapital:DM26000000.-(50,62%)
 Dividendenab1969:18,18,14,7
 (1.1.-30,6,),16,14%
-W.TümmelsBuchdruckereiundVerlag
+W.TemmelsBuchdruckereiundVerlag
 GmbH,Nürnberg
 Kapital:DM1200000.-(100%)
-BüssingAutomobilwerkeGmbH,Braun-
+GüssingAutomobilwerteGmbH,Braun-
 schweig
 Kapital:DM42000000.-(97,62%;Be-
 triebspachtvertrag)
@@ -157,7 +157,7 @@ Sydney
 Kapital:$A965000.-(91,7%)
 M.A.N.KamyonveOtobüsSanayiAnonim
 Sirketi,Istanbul
-Kapital:TkE.27000000.-(über25%)
+Kapital:TE.27000000.-(über25%)
 M.A.N.TruckandBusS.A.(Pty)Ltd.,
 Johannesburg
 Kapital:R300.000.-(100%)
@@ -235,8 +235,8 @@ Wertpapier-Kenn-Nr.:
 506300(St.-Akt.);506303(Vorz.-Akt.)
 Stückelung:
 143900Inh.-St.-Akt.zujeDM1000.-
-35000Inh.St.-Akt.zujeDM100.-
-52000Inh.St.-Akt.zujeDM50.-
+35000Inh.-St.-Akt.zujeDM100.-
+52000Inh.-St.-Akt.zujeDM50.-
 91295Inh.-Vorz.-Akt.zujeDM1000,-
 59500Inh.-Vorz.-Akt.zujeDM100.-
 55100Inh.-Vorz.-Akt.zujeDM50.-

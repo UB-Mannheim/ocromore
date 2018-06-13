@@ -1,39 +1,39 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     5817   Characters
-      40   Errors
-   99.31%  Accuracy
+      38   Errors
+   99.35%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.31%  Accuracy After Correction
+   99.35%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       1       20       19       40   Unmarked
-       1       20       19       40   Total
+       1       19       18       38   Unmarked
+       1       19       18       38   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
      232        0   100.00   ASCII Spacing Characters
-     711       17    97.61   ASCII Special Symbols
+     711       15    97.89   ASCII Special Symbols
     1022        1    99.90   ASCII Digits
-     585        1    99.83   ASCII Uppercase Letters
+     585        2    99.66   ASCII Uppercase Letters
     3183        1    99.97   ASCII Lowercase Letters
        1        0   100.00   Latin1 Uppercase Letters
       82        0   100.00   Latin1 Lowercase Letters
-    5817       21    99.64   Total
+    5817       20    99.66   Total
 
   Errors   Marked   Correct-Generated
        8        0   {.}-{,}
        7        0   {}-{,}
        5        0   {}-{;}
        4        0   {,}-{.}
-       3        0   {,}-{;}
-       2        0   {I}-{11}
+       2        0   {II}-{11}
        2        0   {}-{l-}
+       1        0   {,}-{;}
        1        0   {1}-{7}
        1        0   {:}-{}
        1        0   {;}-{:}
@@ -50,7 +50,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   100.00   {&}
       48        0   100.00   {(}
       50        0   100.00   {)}
-     150        7    95.33   {,}
+     150        5    96.67   {,}
      156        0   100.00   {-}
      168        8    95.24   {.}
        2        0   100.00   {/}
@@ -75,7 +75,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       13        0   100.00   {F}
       28        0   100.00   {G}
       17        0   100.00   {H}
-      10        1    90.00   {I}
+      10        2    80.00   {I}
        3        0   100.00   {J}
       53        0   100.00   {K}
        9        0   100.00   {L}

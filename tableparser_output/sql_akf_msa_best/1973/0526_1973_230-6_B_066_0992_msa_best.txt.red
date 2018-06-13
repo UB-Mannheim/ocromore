@@ -63,12 +63,12 @@ N.V.,Rotterdam
 AandeeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 '"'Marga'',MaatschappijtotBeheervan
-AandeeleninIndustrieeleOndernemingen
+AandeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 Mavibel(MaatschappijvoorInternationale
 Beleggingen)N.V.,Rotterdam
 "Lipoma'',MaatschappijtotBeheervan
-AandeeleninIndustrieeleOndernemingen
+AandeeleninIndustrielleOndernemingen
 N.V.,Rotterdam
 HandelsmaatschappijNoordaN.V.,
 Amsterdam
@@ -85,7 +85,7 @@ MM.Pierson;Heldring&Pierson;beide
 AmsterdamundDenHaag;
 Kredietbank;BankvanBrussel;Bankvan
 Antwerpen;Handelsbank;sämtl.Antwerpen;
-BankvandeSocieteGeneraledeBelgique,
+BankvandeSocieteGeneraledeBelgique;
 SocieteBelgedeBanque;BankLambert;
 CreditGeneraldeBelgique;sämtl.Brüssel;
 CreditCommercialdeMons,Mons;
@@ -162,7 +162,7 @@ DividendenaufStammaktien:
 1969:hfl5,43+hfl0,73Sonderdividende
 (Div.Sch.Nr.82/83/84)
 1970:hfl5,43(Div.Sch.Nr.85/86)
-1971:hfl6,20Div.Sch.Nr.87/88)
+1971:hfl6,20(Div.Sch.Nr.87/88)
 DieBardividendenunterliegenindenNie-
 derlandeneinerDividendensteuer(Quel-
 lensteuer)vonz.Zt.25%.

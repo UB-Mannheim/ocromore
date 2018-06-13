@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1756   Words
-      59   Misrecognized
-   96.64%  Accuracy
+      55   Misrecognized
+   96.87%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -13,23 +13,23 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       89        0   100.00        1
-     115        6    94.78        2
-     107        2    98.13        3
-     152        7    95.39        4
-     126        6    95.24        5
+     115        5    95.65        2
+     107        1    99.07        3
+     152        8    94.74        4
+     126        5    96.03        5
      118        0   100.00        6
-      75        2    97.33        7
-      92        4    95.65        8
+      75        1    98.67        7
+      92        3    96.74        8
       89        0   100.00        9
       79        2    97.47       10
       76        0   100.00       11
-      69        1    98.55       12
-      61        2    96.72       13
+      69        3    95.65       12
+      61        3    95.08       13
       41        0   100.00       14
       56        2    96.43       15
       51        0   100.00       16
       48        3    93.75       17
-      42        4    90.48       18
+      42        3    92.86       18
       22        2    90.91       19
       26        1    96.15       20
       22        0   100.00       21
@@ -40,8 +40,8 @@ Non-stopwords
       16        1    93.75       26
       19        0   100.00       27
       11        1    90.91       28
-      11        2    81.82       29
-      10        1    90.00       30
+      11        1    90.91       29
+      10        0   100.00       30
        6        0   100.00       31
       16        0   100.00       32
        9        0   100.00       33
@@ -52,11 +52,11 @@ Non-stopwords
        4        1    75.00       38
        1        0   100.00       39
        2        0   100.00       40
-    1751       59    96.63    Total
+    1751       55    96.86    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    1131       49    95.67        1
+    1131       46    95.93        1
       91        1    98.90        2
       37        0   100.00        3
       14        0   100.00        4
@@ -67,18 +67,18 @@ Distinct Non-stopwords
        1        0   100.00        9
        1        0   100.00       10
       10        0   100.00      >10
-    1303       50    96.16    Total
+    1303       47    96.39    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1756       59    96.64        1
-    1753      100    94.30        2
-    1750      136    92.23        3
-    1747      169    90.33        4
-    1744      199    88.59        5
-    1741      225    87.08        6
-    1738      250    85.62        7
-    1735      274    84.21        8
+    1756       55    96.87        1
+    1753       96    94.52        2
+    1750      133    92.40        3
+    1747      166    90.50        4
+    1744      196    88.76        5
+    1741      223    87.19        6
+    1738      249    85.67        7
+    1735      273    84.27        8
 
 Stopwords
    Count   Missed   %Right   
@@ -100,7 +100,7 @@ Non-stopwords
        1        0   100.00   1.10
        1        0   100.00   1.3
        1        0   100.00   1.4
-       1        1     0.00   1.7
+       1        0   100.00   1.7
        7        0   100.00   10
        1        0   100.00   10,10,14,16,16,16
        1        0   100.00   10,5
@@ -165,7 +165,7 @@ Non-stopwords
        3        0   100.00   1959
        3        0   100.00   1960
        2        0   100.00   1961
-       3        0   100.00   1962
+       3        1    66.67   1962
        1        0   100.00   1962424
        1        0   100.00   1962610
        1        0   100.00   1962auf
@@ -225,7 +225,7 @@ Non-stopwords
        4        2    50.00   30.9
        1        0   100.00   304136470303
        1        0   100.00   31
-       3        1    66.67   31.12
+       3        0   100.00   31.12
        3        1    66.67   31.12.196631.12.1967
        1        0   100.00   31250inh
        1        0   100.00   34,4
@@ -240,7 +240,7 @@ Non-stopwords
        2        0   100.00   49
        1        0   100.00   49100
        1        0   100.00   4933
-       1        1     0.00   4934inh
+       1        0   100.00   4934inh
        1        0   100.00   4953
        4        0   100.00   5
        9        0   100.00   50
@@ -380,7 +380,7 @@ Non-stopwords
        3        0   100.00   aktienkurse
        1        0   100.00   aktionsgemeinschaftdeutschesteinkoh
        1        0   100.00   aktionäre
-       1        0   100.00   alfredhaymann
+       1        1     0.00   alfredhaymann
        1        0   100.00   allengrößerenstädtendesbundesgebietes
        1        0   100.00   allgemeinegesellschaftfürindustriebetei
        1        0   100.00   altena
@@ -631,7 +631,7 @@ Non-stopwords
        1        0   100.00   fabrikackerstraße
        1        0   100.00   fabrikag
        1        0   100.00   fabrikbacknang
-       1        0   100.00   fabrikbelecke
+       1        1     0.00   fabrikbelecke
        1        0   100.00   fabrikcurtgorschalki
        1        0   100.00   fabrikeiweiler
        2        0   100.00   fabrikenhameln
@@ -743,7 +743,7 @@ Non-stopwords
        1        0   100.00   heinzdürrbeck
        1        0   100.00   heinzosterwind
        1        0   100.00   heinzquandt
-       1        0   100.00   heinzzickler
+       1        1     0.00   heinzzickler
        1        0   100.00   herbertpavel
        1        0   100.00   herstellung
        1        0   100.00   herstellungundvertriebvonakkumula
@@ -918,7 +918,7 @@ Non-stopwords
        1        0   100.00   märkischedrahtwerkegmbh
        1        0   100.00   mögen
        7        0   100.00   münchen
-       1        1     0.00   namentlichherstellung.vertrieb
+       1        0   100.00   namentlichherstellung.vertrieb
        1        0   100.00   nationaleautomobil
        1        0   100.00   nen
        3        0   100.00   nennwert
@@ -949,7 +949,7 @@ Non-stopwords
        1        0   100.00   originalhanauquarzlampengesellschaft
        1        0   100.00   osnabrück
        1        0   100.00   osramgmbh
-       1        0   100.00   ottomössner
+       1        1     0.00   ottomössner
        1        0   100.00   pachtung
        1        0   100.00   papierfabrikgmbhvorm.brüderkäm
        2        0   100.00   paris
@@ -968,7 +968,7 @@ Non-stopwords
        1        0   100.00   prof.dr.phil.dr
        1        0   100.00   prof.dr.phil.nat.bernhardtimm
        1        0   100.00   prof.dr.rer.pol.matthiasschmitt
-       1        1     0.00   profilen
+       1        0   100.00   profilen
        1        0   100.00   provinzialbank
        1        0   100.00   radial
        1        0   100.00   rastatt
@@ -1007,11 +1007,11 @@ Non-stopwords
        1        0   100.00   schlußvoninteressengemeinschaftsver
        1        0   100.00   schreibungen
        1        0   100.00   schuldverschreibungendembezugs
-       1        1     0.00   schuldverschreibungeninaktien
+       1        0   100.00   schuldverschreibungeninaktien
        1        0   100.00   schungsvertrag
        1        1     0.00   schweizerischekreditanstalt:schweizeri
        1        0   100.00   schäftsführungsgesellschaftenvarta
-       1        1     0.00   seilenusw.aus
+       1        0   100.00   seilenusw.aus
        1        0   100.00   selb
        2        0   100.00   seldorf
        1        0   100.00   seligenstadt
@@ -1025,7 +1025,7 @@ Non-stopwords
        1        0   100.00   sowieauf
        1        0   100.00   sowiefolgendebankenin
        1        0   100.00   spanien
-       9        1    88.89   st
+       9        0   100.00   st
        1        0   100.00   staatsbank
        3        0   100.00   stammaktien
        1        0   100.00   stammwerk
@@ -1133,7 +1133,7 @@ Non-stopwords
        1        0   100.00   vonhalbfabrikaten
        1        0   100.00   vontochtergesellschaftenundzweig
        1        0   100.00   vorm.gebr.helfmann
-       1        1     0.00   vorräte1383312378
+       1        0   100.00   vorräte1383312378
        1        0   100.00   vorräte524205364777
        1        0   100.00   vorräte6879057495
        7        0   100.00   vors

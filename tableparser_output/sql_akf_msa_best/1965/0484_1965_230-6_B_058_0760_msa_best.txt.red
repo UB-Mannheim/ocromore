@@ -61,7 +61,7 @@ Kapital:DM4000000.-(100%)
 Textil-AusstattungGmbH,Hamburg
 Kapital:DM250000.-(100%)
 Geschäftsjahr:Kalenderjahr
-Stimmrechtd.Aktieni.d.H.-V.:
+Stimmrechte.Aktieni.d.H.-V.:
 Jenom.DM100.-=1Stimme
 Zahlstellen:
 CommerzbankAG;DresdnerBankAG;

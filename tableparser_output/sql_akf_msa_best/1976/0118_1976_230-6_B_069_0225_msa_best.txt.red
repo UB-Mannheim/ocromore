@@ -23,9 +23,9 @@ RudolfvonBennigsen-Foerder,Düsseldorf;,
 Dr.Dr.h.c.KurtBirrenbach,Düsseldorf;;
 FriedrichCarlErasmus,Essen;
 AlfredFreiherrvonOppenheim,Köln;
-HeinzPferdmenges;Rheydt;
+HeinzPferdmenges,Rheydt;
 AlbertVahle,Aachen;
-HansAbschlag;Köln;
+HansAbschlag,Köln;
 Karl-HeinzBette,Dortmund;
 HorstGrimm,Bensberg;
 HeinrichPaus,Köln
@@ -177,7 +177,7 @@ DM50,-
 1975209DM
 (30.9.)
 DividendenaufStammaktien:;
-11I/1948/49-1969:insgesamt202%
+11/1948/49-1969:insgesamt202%
 1970:8%(Div.Sch.Nr.3)
 1971:10%(Div.Sch.Nr.4)
 1972:14%(Div.Sch.Nr.6)

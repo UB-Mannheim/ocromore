@@ -7,7 +7,7 @@ Vorstand:
 Dipl.-Kfm.KarlBarich,Dillnhütten,Vors.;
 Dr.ErichDudziak,Dortmund:
 Dipl.-Ing.RudolfSchäfer,Geisweid;
-HeinzSolbach,Hagen,stellv.
+HeinzGolbach,Hagen,stellv.
 Aufsichtsrat:
 HubertBiernat,Strickherdicke,Vors.;
 Dr.RudolfHaus,Detmold,1.stellv.Vors.;
@@ -102,7 +102,7 @@ Akt.zujeDM100.-=DM1000.-
 SämtlicheStammaktiensindlieferbar.
 Großaktionäre:
 Merck,Finck&Co.,München)
-OPRIBAHandels-undVerwal-)(maßgeblich')
+OPRIBAHandels-undVerwal-)(maßgeblich)
 tungs-KG,Hannover.)
 Aktienkurse:NotierungseitNovem-
 ber1953.

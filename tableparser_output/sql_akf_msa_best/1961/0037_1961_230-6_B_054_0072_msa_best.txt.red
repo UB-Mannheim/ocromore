@@ -57,7 +57,7 @@ Tätigkeitsgebiet:
 GegenstanddesUnternehmensistjedeArt
 gewerblicherAusnutzungderElektrizität
 undjedesonstigeBetätigungaufindustriel-
-lemGebieteimIn-undAuslande,nament-
+lemGebieteimIn-undAusland,nament-
 lichHerstellung,VertrieboderVerwertung
 industriellerErzeugnisse,Herstellung,
 Einrichtung,Erwerb,Pachtung,Bewirt-
@@ -228,7 +228,7 @@ inHamburg:
 DresdnerBankAG;DeutscheBankAG;
 Brinckmann,Wirtz&Co.;Commerzbank
 AG;DelbrückSchickler&Co.;Hambur-
-gischeLandesbank-Girozentrale-,
+gischeLandesbank-Girozentrale-;
 inHannover:
 DresdnerBankAG;DeutscheBankAG;
 CommerzbankAG;
@@ -275,7 +275,7 @@ Berlin,Bremen,Düsseldorf,Frankfurt
 Stuttgart,BaselundZürich
 Ordnungsnr.d.Aktien:503800
 Stückelung:
-270000Inh.St.-Akt.zujeDM1000.-
+270000Inh.-St.-Akt.zujeDM1000.-
 (Nr.1-270000)
 398000Inh.-St.-Akt.zujeDM100.-
 (Nr.400001-798000)
@@ -300,7 +300,7 @@ Rentenführer"ersichtlich)
 Aktienkurse:1948-1951:Hamburg;
 1952und1953:Frankfurt(M);ab1954:
 Berlin
-ultimou0,imo194810,25%
+ultimou0imo194810,25%
 =194933,5%
 195025%
 1951”41951

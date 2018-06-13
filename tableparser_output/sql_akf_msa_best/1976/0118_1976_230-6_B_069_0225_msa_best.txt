@@ -23,9 +23,9 @@ Rudolf von Bennigsen-Foerder, Düsseldorf;,
 Dr.Dr.h.c.Kurt Birrenbach, Düsseldorf;;
 Friedrich Carl Erasmus, Essen;
 Alfred Freiherr von Oppenheim, Köln;
-Heinz Pferdmenges; Rheydt;
+Heinz Pferdmenges, Rheydt;
 Albert Vahle, Aachen;
-Hans Abschlag; Köln;
+Hans Abschlag, Köln;
 Karl-Heinz Bette, Dortmund;
 Horst Grimm, Bensberg;
 Heinrich Paus, Köln
@@ -177,7 +177,7 @@ DM 50, -
 1975 209 DM
 (30.9. )
 Dividenden auf Stammaktien:;
-11I/1948/49-1969: insgesamt 202 %
+11/1948/49-1969: insgesamt 202 %
 1970: 8 % (Div. Sch. Nr. 3)
 1971: 10 % (Div. Sch. Nr. 4)
 1972: 14 % (Div. Sch. Nr. 6)

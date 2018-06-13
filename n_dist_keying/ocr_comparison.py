@@ -336,7 +336,7 @@ class OCRcomparison:
                 #    print("asd")
 
                 if self.config.KEYING_RESULT_VC_IGNORE_SEPERATE_WRITING_CORRECTION:
-                    if store_last_entry !=None:
+                    if store_last_entry != None:
                         # don't correct first follow up line word to seperation word
                         store_last_entry = None
                         msa_best_text_corrected += " " + word
@@ -350,21 +350,21 @@ class OCRcomparison:
                             continue
 
                 word_wo_sc, ratio = self.vocabulary_checker.without_special_chars(word)
-                if ratio==0 or len(word_wo_sc)<=2:
+                if ratio == 0 or len(word_wo_sc) <= 2:
                     msa_best_text_corrected += " " + word
                     continue
 
                 word_wb, bstart, btrail, changeb = self.vocabulary_checker.remove_and_give_borders(word)
                 if changeb:
-                    word_correct_vc, suggestions = self.vocabulary_checker.correct_text(word_wb)
-                    if word_correct_vc == None:
+                    word_correct_vc, suggestions, first_letter_high = self.vocabulary_checker.correct_text(word_wb)
+                    if word_correct_vc is None:
                         word_correct = word
                     else:
                         word_correct = bstart + word_correct_vc + btrail
                 else:
-                    word_correct, suggestions = self.vocabulary_checker.correct_text(word)
+                    word_correct, suggestions, first_letter_high = self.vocabulary_checker.correct_text(word)
 
-                if word_correct == None:
+                if word_correct is None:
                     msa_best_text_corrected += " " + word
                 else:
                     msa_best_text_corrected += " " + word_correct

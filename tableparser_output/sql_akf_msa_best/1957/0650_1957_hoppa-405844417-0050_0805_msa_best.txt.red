@@ -21,8 +21,8 @@ HeinrichMahler,Hamburg(Arbeitnehmer-
 vertreter);
 Dr.JoachimRiehle,Hamburg;
 AdolphSchönfelder,Hamburg;
-iWilhelmSchröder,Hamburg;
-lHerbertSpiesen,Hamburg;
+WilhelmSchröder,Hamburg;
+HerbertSpiesen,Hamburg;
 FranzHeinrichUlrich,Hamburg;
 ClausWiebusch,Hamburg(vonderGe-
 werkschaftgestellterArbeitnehmer-
@@ -84,7 +84,7 @@ Kapital:DM833000.-(100%)
 Zentral-Omnibusbahnhof"'ZOB''"GmbH,
 Hamburg
 Beteil.:51%.
-Geschäftsjahr:Kalenderjahr;
+Geschäftsjahr:Kalenderjahr.
 Stimmrechtd.Aktieni.d.H.-V.:
 JeDM100.-jederA-Aktie,jeder
 B-Stamm-AktieundjederC-Aktie
@@ -124,7 +124,7 @@ DM200.-
 DM36008600.-A-Aktien
 DM21961600.-B-Aktien
 DM10898400.-C-Aktien
-DM166400.-B-Vorzugsaktien
+DM166400.-B-Vorzugsaktie.
 Börsennotiz:
 Hamburg,Berlin,Düsseldorf,Frank-
 furt,Hannover,München(amtl!.).
@@ -153,7 +153,7 @@ Emissionsbetrag:$8000000.-.
 Aktienkurse:
 ultimo1948118,‚25%
 1194959%
-2.1950441%
+2.195041%
 N1951558%
 1952667%
 195373%

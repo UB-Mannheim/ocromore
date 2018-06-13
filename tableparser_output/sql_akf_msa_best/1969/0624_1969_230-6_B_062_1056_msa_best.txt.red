@@ -20,7 +20,7 @@ GerhardKuhle,Lüdenscheid
 Gründung:1898
 Tätigkeitsgebiet:
 ErzeugungvonBlechen,Bändern,Dräh-
-ten,Stangen,Profilen.Seilenusw.aus
+ten,Stangen,Profilen,Seilenusw.aus
 Aluminium,Kupfer,Bronze,Messing,
 Tombak,indenverschiedenstenLegierun-
 gen.
@@ -68,7 +68,7 @@ DüsseldorfundBerlin(Freiv.)
 Wertpapier-Kenn-Nr.:
 777900(St.-Akt.);777903(Vorz.-Akt.)
 Stückelung:
-4934Inh.St.-Akt.zujeDM1000.-
+4934Inh.-St.-Akt.zujeDM1000.-
 660Inh.-St.-Akt.zujeDM100.-
 1950Inh.-Vorz.-Akt.zujeDM1000.-
 500Inh.-Vorz.-Akt.zujeDM100.-
@@ -80,7 +80,7 @@ RheinischeNadelfabrikenGmbH,Aachen
 (73%);
 IndustrieholdingundHandelsgesellschaft
 mbH,Aachen
-Aktienkurse(Düsseldorf),
+Aktienkurse(Düsseldorf):
 (ultimoabgerundet)
 a)Stammaktien
 194846%1956265%1964356%
@@ -99,7 +99,7 @@ b)Vorzugsaktien(Notierungseit8.1.1965)
 Dividenden:
 a)Stammaktien
 11I/1948/49-1958:insgesamt73,5%
-1959:11%Div.Sch.Nr.9)
+1959:11%(Div.Sch.Nr.9)
 1960:14%(Div.Sch.Nr..10)
 1961-1963:je16%(Div.Sch.Nr.11-138)
 1964:11%(Div.Sch.Nr.16)
@@ -107,7 +107,7 @@ a)Stammaktien
 1966:8%(Div.Sch.Nr.18)
 1967:0%
 b)Vorzugsaktien
-1965:12%Div.Sch.Nr.17)
+1965:12%(Div.Sch.Nr.17)
 1966:10%(Div.Sch.Nr.18)
 1967:7%(Div.Sch.Nr.19)
 Bezugsrechteund
@@ -127,7 +127,7 @@ Anlagevermögen1474118802
 Beteiligungen)14225653
 Umlaufvermögen22535320530
 (darunter
-Vorräte13833112378
+Vorräte1383312378
 Lieferforderungen24182282
 Barmitteleinschl.
 Wertpapiere)50413881

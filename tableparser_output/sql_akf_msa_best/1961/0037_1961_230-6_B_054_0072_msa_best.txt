@@ -57,7 +57,7 @@ Tätigkeitsgebiet:
 Gegenstand des Unternehmens ist jede Art
 gewerblicher Ausnutzung der Elektrizität
 und jede sonstige Betätigung auf industriel-
-lem Gebiete im In- und Auslande, nament-
+lem Gebiete im In- und Ausland, nament-
 lich Herstellung, Vertrieb oder Verwertung
 industrieller Erzeugnisse, Herstellung,
 Einrichtung, Erwerb, Pachtung, Bewirt-
@@ -228,7 +228,7 @@ in Hamburg:
 Dresdner Bank AG; Deutsche Bank AG;
 Brinckmann, Wirtz & Co.; Commerzbank
 AG; Delbrück Schickler & Co.; Hambur-
-gische Landesbank -Girozentrale-,
+gische Landesbank -Girozentrale-;
 in Hannover:
 Dresdner Bank AG; Deutsche Bank AG;
 Commerzbank AG;
@@ -275,7 +275,7 @@ Berlin, Bremen, Düsseldorf, Frankfurt
 Stuttgart, Basel und Zürich
 Ordnungsnr.d.Aktien: 503800
 Stückelung:
-270 000 Inh. St.-Akt. zu je DM 1 000.-
+270 000 Inh. -St.-Akt. zu je DM 1 000.-
 (Nr. 1 - 270 000)
 398 000 Inh. -St.-Akt. zujeDM 100.-
 (Nr. 400 001 - 798 000)
@@ -300,7 +300,7 @@ Rentenführer" ersichtlich)
 Aktienkurse: 1948-1951: Hamburg;
 1952 und 1953: Frankfurt (M); ab 1954:
 Berlin
-ultimou0,imo 1948 10,25%
+ultimou0imo 1948 10,25%
 = 1949 33,5 %
 1950 25 %
 1951”41951

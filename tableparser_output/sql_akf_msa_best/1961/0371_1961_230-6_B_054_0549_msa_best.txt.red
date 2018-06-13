@@ -43,9 +43,9 @@ DM3937500.-ausGesellschaftsmitteln.
 Börsennotiz:Stuttgart(amtl.)
 Ordnungsnr.d.Aktien:629600
 Stückelung:
-2625Inh,St.-Akt.zujeDM1000.-
+2625Inh,-St.-Akt.zujeDM1000.-
 (Nr.1-2625)
-1605Inh.St.-Akt.zujeDM500.-
+1605Inh.-St.-Akt.zujeDM500.-
 (Nr.1-1605)
 5100Inh.-St.-Akt.zujeDML100.-
 (Nr.1-5100)

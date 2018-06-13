@@ -97,10 +97,10 @@ class VocabularyChecker():
             return False
 
     def initialize_lines(self, dict_file_path, remove_special_border_chars):
+        # add the lines from a dictionary path to dict_lines
         doc = self._load_doc(dict_file_path)
         lines_doc = self._get_lines(doc, remove_special_border_chars)
         self.dict_lines.extend(lines_doc)
-        print("asd")
 
     def _get_lines(self, doc, remove_special_border_chars):
         lines_doc = []

@@ -43,9 +43,9 @@ DM 3 937 500.- aus Gesellschaftsmitteln.
 Börsennotiz: Stuttgart (amtl.)
 Ordnungsnr.d.Aktien: 629600
 Stückelung:
-2 625 Inh, St.-Akt. zu je DM 1 000. -
+2 625 Inh, -St.-Akt. zu je DM 1 000. -
 (Nr. 1 - 2 625)
-1 605 Inh. St.-Akt. zuje DM 500.-
+1 605 Inh. -St.-Akt. zuje DM 500.-
 (Nr. 1 -1 605)
 5 100 Inh.-St.-Akt. zuje DM L100.-
 (Nr. 1-5 100)
@@ -59,7 +59,7 @@ ultimo 1948 34%
 1950 94%
 "1951 142%
 1952 132%
-"1953 126,5 %+)
+"1953 126,5%+)
 1954 215%
 1955 260%
 1956 260%

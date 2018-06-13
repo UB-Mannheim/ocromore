@@ -28,7 +28,7 @@ Querum;
 OttoMöhle,Langenhagen;
 Dr.KarlRöhrs,Bonn;
 FriedrichSchiwon,Herne;
-JohannSmentek,Dörnten.
+JohannSmentek,Dürnten.
 Gründung:1858.
 Tätigkeitsgebiet:
 Erzeugungvon:Erze,Kohle,Strom,
@@ -57,9 +57,9 @@ b)SteinkohlenbergwerkFriedrichder
 GrosseAGmitdenKohlenzecheninHerne
 undMindenundderUntergesellschaft
 BergarbeiterwohnungsgesellschaftmbH
-"Gjückauf",Herne.
+"Glückauf",Herne.
 c)Industrie-undHandels-AG,Peinemit
-7Tochtergesellschaften:
+7Tochtergesellschaften;
 d)GewerkschaftKonrad,die1954vonder
 IlsederHütteundderAGfürBerg-und
 Hüttenbetriebe,Berlin,alsGewerken
@@ -100,7 +100,7 @@ SonstigerBesitz:
 2131werkseigenesowie722werksge-
 bundeneWohnungen.
 Beteiligung:
-93,75%desStammkapitalsderKalk-
+93,75desStammkapitalsderKalk-
 werkMarienhagenGmbH
 40%desStammkapitalsderSüntel-
 schotterwerkeDr.Schmidt&Co.,K.-G.,
@@ -140,7 +140,7 @@ Verlustübernahmverträge.
 Peine
 DieGesellschaft,diemiteinemGrund-
 kapitalvonDM10224000.-ausge-
-stattetist,isteinereineObergesellschaft,
+stattetist,isteinereineObergesellschaft.
 IhreTochtergesellschaftensind:
 dieNorddeutscheSchrauben-undMuttern-
 werkeAG,Peine,miteinemGrund-
@@ -188,7 +188,7 @@ vonDM136000.-(Stand30.9.1955)zu
 je50%derIlsederHütteundderAGfür
 Berg-undHüttenbetriebe,Berlin,gehört,
 befindetsichnochimAufbau.
-Geschäftsjahr:Kalenderjahr;
+Geschäftsjahr:Kalenderjahr.
 Stimmrechtd.Aktieni.d.H.-V.:
 Jenom.DM100.-=1Stimme.
 Zahlstellen:

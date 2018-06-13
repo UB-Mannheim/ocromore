@@ -943,8 +943,8 @@ class MsaHandler(object):
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
-                if "DM 10" in best_stripped:
-                    print("beep")
+                #if "DM 10" in best_stripped:
+                #    print("beep")
 
 
 

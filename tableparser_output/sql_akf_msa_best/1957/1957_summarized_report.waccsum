@@ -16,25 +16,25 @@ Non-stopwords
       63        0   100.00        2
       32        1    96.88        3
       89        0   100.00        4
-      57        0   100.00        5
+      57        1    98.25        5
       88        5    94.32        6
       81        1    98.77        7
-      79        3    96.20        8
-      52        2    96.15        9
+      79        4    94.94        8
+      52        1    98.08        9
       58        1    98.28       10
       57        1    98.25       11
       55        1    98.18       12
       36        0   100.00       13
-      39        3    92.31       14
+      39        2    94.87       14
       34        1    97.06       15
-      20        1    95.00       16
+      20        0   100.00       16
       18        0   100.00       17
       33        0   100.00       18
       22        1    95.45       19
       15        0   100.00       20
       22        1    95.45       21
       18        0   100.00       22
-      23        0   100.00       23
+      23        1    95.65       23
       21        1    95.24       24
       18        0   100.00       25
        9        0   100.00       26
@@ -54,7 +54,7 @@ Non-stopwords
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     881       21    97.62        1
+     881       23    97.39        1
       73        0   100.00        2
       27        0   100.00        3
        4        0   100.00        4
@@ -63,18 +63,18 @@ Distinct Non-stopwords
        3        0   100.00        7
        1        0   100.00        9
        1        0   100.00      >10
-     998       21    97.90    Total
+     998       23    97.70    Total
 
 Phrases
    Count   Missed   %Right   Length
     1221       25    97.95        1
-    1218       44    96.39        2
-    1215       59    95.14        3
-    1212       74    93.89        4
-    1209       88    92.72        5
-    1206      102    91.54        6
-    1203      116    90.36        7
-    1200      130    89.17        8
+    1218       43    96.47        2
+    1215       58    95.23        3
+    1212       73    93.98        4
+    1209       87    92.80        5
+    1206      101    91.63        6
+    1203      115    90.44        7
+    1200      129    89.25        8
 
 Stopwords
    Count   Missed   %Right   
@@ -220,7 +220,7 @@ Non-stopwords
        1        0   100.00   8952124qm
        1        0   100.00   9
        1        0   100.00   92,6
-       1        0   100.00   93,75
+       1        1     0.00   93,75
        1        0   100.00   99856
        1        0   100.00   99856st
        1        0   100.00   abschreibungen1212413183
@@ -369,7 +369,7 @@ Non-stopwords
        1        0   100.00   derumsatz1954
        1        0   100.00   derverbindungderwerksanlagenunter
        1        0   100.00   desstammkapitalsderbergarbeiter
-       1        0   100.00   desstammkapitalsderkalk
+       1        1     0.00   desstammkapitalsderkalk
        1        0   100.00   desstammkapitalsdersüntel
        1        0   100.00   detmold
        1        0   100.00   detwurde
@@ -437,7 +437,7 @@ Non-stopwords
        1        0   100.00   dr.wolfgangbode
        1        0   100.00   drütte
        1        0   100.00   dustrie
-       1        0   100.00   dörnten
+       1        1     0.00   dörnten
        1        0   100.00   düssel
        9        0   100.00   düsseldorf
        1        0   100.00   eigenenschleppfahrzeugenbetrieben
@@ -515,7 +515,7 @@ Non-stopwords
        1        0   100.00   gewinnnachvortrag73429475
        1        0   100.00   girozen
        1        0   100.00   gitter
-       2        1    50.00   glückauf
+       2        0   100.00   glückauf
        3        0   100.00   gmbh
        1        0   100.00   goss
        3        0   100.00   gossler
@@ -557,10 +557,10 @@ Non-stopwords
        1        0   100.00   heinrichfreiherrvonberenberg
        1        0   100.00   heinrichmahler
        1        0   100.00   heinrichwulff
-       1        0   100.00   heinzsolbach
+       1        1     0.00   heinzsolbach
        1        0   100.00   helmuthheintzmann
        1        0   100.00   herabgesetzt
-       1        1     0.00   herbertspiesen
+       1        0   100.00   herbertspiesen
        1        0   100.00   hermannbeermann
        3        0   100.00   herne
        2        0   100.00   hochofenwerk
@@ -865,7 +865,7 @@ Non-stopwords
        5        0   100.00   vors
        3        0   100.00   vorstand
        2        0   100.00   vorz
-       2        1    50.00   vorzugsaktie
+       2        0   100.00   vorzugsaktie
        1        0   100.00   walddörferbahn
        1        0   100.00   waldthausen
        1        0   100.00   walterheinze
@@ -889,7 +889,7 @@ Non-stopwords
        1        0   100.00   wetzlar
        1        0   100.00   wilhelmgerbershagen
        1        0   100.00   wilhelmjoost
-       1        1     0.00   wilhelmschröder
+       1        0   100.00   wilhelmschröder
        1        0   100.00   wilhelmvonthelemann
        1        0   100.00   wirtz
        1        0   100.00   wohldorf

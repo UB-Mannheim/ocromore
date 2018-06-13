@@ -87,7 +87,7 @@ Wertpapier-Kenn-Nr.:860027
 (St.-Akt.)
 -Stückelung:
 134018522St.-Akt.zujehfl20.-
-1500kumulativeVort.-Akt.zu
+1500kumulativeVor.-Akt.zu
 jehfl1000.-
 DieStammaktiensindinUrkundenüberje
 1,5und50Aktienzujehfl20.-,verse-

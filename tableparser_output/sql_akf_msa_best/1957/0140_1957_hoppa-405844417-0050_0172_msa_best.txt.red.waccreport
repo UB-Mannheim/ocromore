@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      532   Words
-      11   Misrecognized
-   97.93%  Accuracy
+      13   Misrecognized
+   97.56%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -16,11 +16,11 @@ Non-stopwords
       21        0   100.00        2
       14        0   100.00        3
       31        0   100.00        4
-      24        0   100.00        5
+      24        1    95.83        5
       32        1    96.88        6
       29        0   100.00        7
-      34        1    97.06        8
-      21        1    95.24        9
+      34        2    94.12        8
+      21        0   100.00        9
       22        1    95.45       10
       24        1    95.83       11
       21        0   100.00       12
@@ -34,7 +34,7 @@ Non-stopwords
       10        0   100.00       20
       12        1    91.67       21
        5        0   100.00       22
-      10        0   100.00       23
+      10        1    90.00       23
       16        1    93.75       24
        7        0   100.00       25
        7        0   100.00       26
@@ -49,28 +49,28 @@ Non-stopwords
        9        0   100.00       35
        5        0   100.00       36
        1        0   100.00       38
-     530       11    97.92    Total
+     530       13    97.55    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     405        8    98.02        1
+     405       11    97.28        1
       34        0   100.00        2
       10        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        1        0   100.00        9
-     454        8    98.24    Total
+     454       11    97.58    Total
 
 Phrases
    Count   Missed   %Right   Length
-     532       11    97.93        1
-     531       22    95.86        2
-     530       31    94.15        3
-     529       40    92.44        4
-     528       48    90.91        5
-     527       56    89.37        6
-     526       64    87.83        7
-     525       72    86.29        8
+     532       13    97.56        1
+     531       25    95.29        2
+     530       35    93.40        3
+     529       45    91.49        4
+     528       54    89.77        5
+     527       63    88.05        6
+     526       72    86.31        7
+     525       81    84.57        8
 
 Stopwords
    Count   Missed   %Right   
@@ -145,7 +145,7 @@ Non-stopwords
        1        0   100.00   8952124qm
        1        0   100.00   9
        1        0   100.00   92,6
-       1        0   100.00   93,75
+       1        1     0.00   93,75
        1        0   100.00   99856
        1        0   100.00   99856st
        1        0   100.00   abschreibungen863
@@ -233,7 +233,7 @@ Non-stopwords
        1        0   100.00   derpeine
        1        0   100.00   derverbindungderwerksanlagenunter
        1        0   100.00   desstammkapitalsderbergarbeiter
-       1        0   100.00   desstammkapitalsderkalk
+       1        1     0.00   desstammkapitalsderkalk
        1        0   100.00   desstammkapitalsdersüntel
        1        0   100.00   detwurde
        1        0   100.00   deutschebankagwest
@@ -269,7 +269,7 @@ Non-stopwords
        1        0   100.00   dr.kurtrasch
        1        0   100.00   dr.wolfgangbode
        1        0   100.00   drütte
-       1        0   100.00   dörnten
+       1        1     0.00   dörnten
        1        0   100.00   eigenkapital206874206869
        1        0   100.00   eineeigenegicht
        1        0   100.00   eisenbahnen.siedieneninersterlinie
@@ -305,7 +305,7 @@ Non-stopwords
        2        0   100.00   gewerkschaftkonrad
        1        0   100.00   gewinnnachvortrag73429475
        1        0   100.00   gitter
-       2        1    50.00   glückauf
+       2        0   100.00   glückauf
        2        0   100.00   gossler
        1        0   100.00   grossaktionär
        1        0   100.00   grosseagmitdenkohlenzecheninherne

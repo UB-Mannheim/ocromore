@@ -93,7 +93,7 @@ Düsseldorf
 Kapital:DM240000.-(4,17%)
 HochtiefChilenaLtda.,,Santiago
 Kapital:chilEsc10000.-(100%)
-HochtiefSocié&té&/Iranienne,Teheran
+HochtiefSoci&té&/Iranienne,Teheran
 Kapital:Rials5000000.-(100%)
 HochtiefdoBrasilSA,SäoPaulo
 Kapital:Cr$10000000.-(94%)
@@ -134,7 +134,7 @@ Berlin,Düsseldorf,Frankfurt(M),Ham-
 burgundMünchen(amtl.)
 Wertpapier-Kenn-Nr.:607000
 Stückelung:
-25150Inh.St.-Akt.zujeDM1000.-
+25150Inh.-St.-Akt.zujeDM1000.-
 17500Inh.-St.-Akt.zujeDM100.-
 392000Inh.-St.-Akt.zujeDM50.-
 Aktienkurse(ultimoabgerundet):

@@ -9,16 +9,16 @@ Vorstand:
 Dr.h.c.HellmuthGreinert,Essen;
 HelmutMeysenburg,Heiligenhaus;
 Dr.AlfredEinnatz,Essen;;
-WilhelmGutmann,Essen,stellv.;
+WilhelmGutmann,Essen,stellv.;;
 ProfessorDr.Dr.HeinrichMandel,Es-
 sen,stellv.
 Aufsichtsrat:
 Dr.h.c.HermannJ.Abs,Frankfurt(M),
 Vors,;
-Dr.HannsSinzig,Altenkirchen;1.stellv.
+Dr.HannsSinzig,Altenkirchen,1.stellv.
 Vors.;
 PaulCullmann,Essen,2.stellv.Vors.;
-HeinrichSchöller;Essen,3.stellv.Vors.;
+HeinrichSchöller,Essen,3.stellv.Vors.;
 KarlPosthofer,Essen,4.stellv.Vors.;
 Dr.GustavMertens,Geldern,5.stellv.
 Vors,;
@@ -42,7 +42,7 @@ HeinzHeiderhoff,Mülheim(Ruhr);
 Dr.-Ing.E.h.FranzHellberg,Köln;;
 KurtHoffmann,Hannover;
 WernerHoffmann,Essen;
-HansHülsmann,Gelsenkirchen);
+HansHülsmann,Gelsenkirchen;;
 PeterJammers,BadGodesberg;;
 Dr,OttoKorn,Aachen;
 Dr.-Ing.E.h,.HeinrichKost,Homberg
@@ -69,7 +69,7 @@ undHochspannungsnetzeineVielzahlan-
 dererVersorgungsunternehmendesBun-
 desgebietesundderangrenzendenLänder
 Holland,Belgien,Frankreich,Schweiz
-undÖsterreichinengeremVerbund,wo-
+undÖsterreichinengerenVerbund,wo-
 beiinsbesonderediesüddeutschenUnter-
 nehmeningroßemUmfangaufGrundlang-
 fristigerAbmachungenlaufendelektrische
@@ -178,7 +178,7 @@ Burkhardt&Co,.,Essen;
 GrunGrunelius&Co.,Frankfurt(M);
 LandesbankfürWestfalenGirozentrale,
 Münster(Westf.);
-Merck,Finck&Co.,München;
+Merck,Finck&Co.,München;;
 National-BankAG,Essen;
 NiedersächsischeLandesbank-Girozen-
 trale-,Hannover;
@@ -214,9 +214,9 @@ Stuttgart,Zürich,GenfundBasel(amtl.)
 Wertpapier-Kenn-Nr.:
 703700(St.-Akt.);703703(Vorz.-Akt.)
 Stückelung:
-851125Inh.St.-Akt.zujeDM400;-
-467375Inh.St.-Akt.zujeDM100.-
-232500Inh,St.-Akt.zujeDM1000.-
+851125Inh.-St.-Akt.zujeDM400;-
+467375Inh.-St.-Akt.zujeDM100.-
+232500Inh,-St.-Akt.zujeDM1000.-
 40625Inh.-Namens-Akt.zujeDM400.-
 40625Inh.-Namens-Akt.zujeDM100,-
 425750Inh.-Vorz.-Akt.zujeDM400.-
@@ -239,7 +239,7 @@ Emissionsbetrag:DM68000000.-
 Emissionsbetrag:DM75000000.-
 6%Teilschuldverschreibungenvon1963
 Emissionsbetrag:DM100000000.-
-Aktienkurse(Düsseldorf),
+Aktienkurse(Düsseldorf):
 St.-Akt.
 ultimo194836,25%
 194981,50%
@@ -271,7 +271,7 @@ dende((Div.Sch.Nr.11)
 1962/63:16%(Div.Sch.Nr.18)
 Bezugsrechteund
 Berichtigungsaktien::
-1955:St,=Akt.i.V.4:1zu120%Ab-
+1955:St,-Akt.i.V.4:1zu120%Ab-
 ‚schlag20,33%(25.5.);
 Div.Sch.Nr.3
 Vorz.-Akt.i.V.4:1zu120%Ab-
@@ -281,7 +281,7 @@ Div.Sch.Nr.4
 schlag85,375%(31.3.);
 Div.Sch.Nr.10)
 Vorz.-Akt.i.V.4:1zu150%Ab-
-schlag81,500%(31.3.);;
+schlag81,500%(31.3.);
 Div.Sch.Nr.10
 1961:St.-Akt.i.V.8:1zu250%Ab-
 schlag45,375%(2.3.);
@@ -298,7 +298,7 @@ Div.Sch.Nr.14
 1963:St.-Akt.i.V.5:1zu150%Ab-
 schlag62,5%(7.3.);
 Div.Sch.Nr.17
-Vorz.-Akt.i.V.5:1zu150%:Ab-
+Vorz.-Akt.i.V.5:1zu150%Ab-
 schlag59%(7.3.);;
 Div.Sch.Nr.17
 ZurGeschäftslage:
