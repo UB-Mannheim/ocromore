@@ -21,6 +21,18 @@ class Random:
             return True
 
     @staticmethod
+    def has_special_character(text):
+        text_list = list(text)
+        for char in text_list:
+            is_sc = Random.is_special_character(char)
+            if is_sc:
+                return True
+
+        return False
+
+
+
+    @staticmethod
     def printc(*args, print_output):
         """
         Print conditionally if print_output is True 
