@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      532   Words
-      12   Misrecognized
-   97.74%  Accuracy
+      11   Misrecognized
+   97.93%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -22,7 +22,7 @@ Non-stopwords
       34        1    97.06        8
       21        1    95.24        9
       22        0   100.00       10
-      24        1    95.83       11
+      24        0   100.00       11
       21        0   100.00       12
       10        0   100.00       13
       19        0   100.00       14
@@ -30,7 +30,7 @@ Non-stopwords
        7        0   100.00       16
       11        0   100.00       17
       15        0   100.00       18
-      14        1    92.86       19
+      14        0   100.00       19
       10        0   100.00       20
       12        1    91.67       21
        5        0   100.00       22
@@ -41,7 +41,7 @@ Non-stopwords
        5        0   100.00       27
        5        0   100.00       28
        4        0   100.00       29
-      10        0   100.00       30
+      10        1    90.00       30
        6        0   100.00       31
        6        2    66.67       32
        8        0   100.00       33
@@ -49,7 +49,7 @@ Non-stopwords
        9        0   100.00       35
        5        0   100.00       36
        1        0   100.00       38
-     530       12    97.74    Total
+     530       11    97.92    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -63,14 +63,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     532       12    97.74        1
-     531       22    95.86        2
-     530       30    94.34        3
-     529       38    92.82        4
-     528       46    91.29        5
-     527       54    89.75        6
-     526       62    88.21        7
-     525       70    86.67        8
+     532       11    97.93        1
+     531       19    96.42        2
+     530       27    94.91        3
+     529       34    93.57        4
+     528       41    92.23        5
+     527       48    90.89        6
+     526       55    89.54        7
+     525       62    88.19        8
 
 Stopwords
    Count   Missed   %Right   
@@ -323,7 +323,7 @@ Non-stopwords
        1        0   100.00   hannoverundimfreiverkehrberlin
        1        0   100.00   hat
        1        0   100.00   haupterzeugnisse
-       1        1     0.00   hedwigshüttekohlen
+       1        0   100.00   hedwigshüttekohlen
        1        0   100.00   heinrichfreiherrvonberenberg
        1        0   100.00   helmuthheintzmann
        1        0   100.00   herabgesetzt
@@ -480,13 +480,13 @@ Non-stopwords
        1        0   100.00   undcredit
        1        0   100.00   undderpeine
        1        0   100.00   undderüberschussankoke
-       2        1    50.00   unddisconto
+       2        0   100.00   unddisconto
        1        0   100.00   undgewinn
        1        0   100.00   undgleit
        1        0   100.00   undhamburg
        2        0   100.00   undhandels
        1        0   100.00   undhüttenbetriebe
-       1        0   100.00   undkokswerkeaktiengesellschaft
+       1        1     0.00   undkokswerkeaktiengesellschaft
        1        0   100.00   undmindenundderuntergesellschaft
        1        0   100.00   undmuttern
        1        0   100.00   undmünchen

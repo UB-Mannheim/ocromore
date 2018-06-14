@@ -27,7 +27,7 @@ Papierfabrik in Lindenburg bei
 Lambrecht (Pfalz)
 Geschäftsjahr: Kalenderjahr
 Stimmrecht d. Aktieni.d.H.-V.:
-Je nom. DM 100.- St. -Akt.= 1 Stimme
+Je nom. DM 100.- St.-Akt.= 1 Stimme
 Zahlstellen:
 Gesellschaftskasse, Lambrecht (Pfalz);
 Dresdner Bank AG, Neustadt a.d.Wein-
@@ -43,7 +43,7 @@ DM 3 937 500.- aus Gesellschaftsmitteln.
 Börsennotiz: Stuttgart (amtl.)
 Ordnungsnr.d.Aktien: 629600
 Stückelung:
-2 625 Inh, -St.-Akt. zu je DM 1 000. -
+2 625 Inh,-St.-Akt. zu je DM 1 000. -
 (Nr. 1 - 2 625)
 1 605 Inh.-St.-Akt. zuje DM 500.-
 (Nr. 1 -1 605)
@@ -55,21 +55,21 @@ Sperrkonsortium Dr.Dr.h.c. Josef Win-
 schuh (Mehrheit)
 Aktienkurse (Stuttgart):
 ultimo 1948 34 %
-"1949 59 %
+" 1949 59 %
 1950 94 %
-"1951 142 %
-"1952 132 %
-"1953 126,5 %+)
-"1954 215 %
+" 1951 142 %
+" 1952 132 %
+" 1953 126,5 %+)
+" 1954 215 %
 1955 260 %
-"1956 260 %
-‘1957 290 %
-"1958 535 %
-"1959 815 %
-30.Sept. 1960 1 290%
+" 1956 260 %
+‘ 1957 290 %
+" 1958 535 %
+" 1959 815 %
+30.Sept. 1960 1 290 %
 +) ab 2.3.1953 Kurs für DM-Nennwert
 Dividenden auf Stammaktien:
-11II/1948/49-1951: je 6 % (Div.Sch.Nr.18-20)
+II11/1948/49-1951: je 6 % (Div.Sch.Nr.18-20)
 1952: 7% (Div.Sch.Nr.1)
 1953-1957: je 12 % (Div.Sch.Nr.2,3,6,8,9)
 1958: 12% + 3% Bonus (Div.Sch.Nr.10)

@@ -12,10 +12,10 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
        7        0   100.00        1
-      19        1    94.74        2
-      12        0   100.00        3
-      28        1    96.43        4
-      17        1    94.12        5
+      19        2    89.47        2
+      12        1    91.67        3
+      28        0   100.00        4
+      17        0   100.00        5
       25        3    88.00        6
       39        2    94.87        7
       30        0   100.00        8
@@ -35,13 +35,13 @@ Non-stopwords
        8        0   100.00       22
        6        0   100.00       23
        5        0   100.00       24
-       6        1    83.33       25
+       6        0   100.00       25
        2        0   100.00       26
        6        0   100.00       27
        4        0   100.00       28
        1        1     0.00       29
        1        0   100.00       30
-       3        0   100.00       31
+       3        1    66.67       31
        4        0   100.00       32
        1        0   100.00       33
        5        0   100.00       34
@@ -52,12 +52,12 @@ Non-stopwords
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     293       10    96.59        1
+     293        8    97.27        1
       27        0   100.00        2
        3        0   100.00        3
        1        0   100.00        4
        1        0   100.00      >10
-     325       10    96.92    Total
+     325        8    97.54    Total
 
 Phrases
    Count   Missed   %Right   Length
@@ -65,10 +65,10 @@ Phrases
      373       18    95.17        2
      372       26    93.01        3
      371       34    90.84        4
-     370       42    88.65        5
-     369       50    86.45        6
-     368       57    84.51        7
-     367       64    82.56        8
+     370       41    88.92        5
+     369       48    86.99        6
+     368       55    85.05        7
+     367       62    83.11        8
 
 Stopwords
    Count   Missed   %Right   
@@ -78,7 +78,7 @@ Non-stopwords
    Count   Missed   %Right   
        1        0   100.00   04
        1        0   100.00   08
-       2        0   100.00   10
+       2        1    50.00   10
        2        0   100.00   100
        1        0   100.00   1335013350
        1        0   100.00   1867
@@ -118,7 +118,7 @@ Non-stopwords
        1        0   100.00   2000inh
        1        0   100.00   21.9
        1        0   100.00   21442243
-       1        1     0.00   22189
+       1        0   100.00   22189
        1        0   100.00   225125
        1        0   100.00   23,32
        1        0   100.00   25
@@ -129,7 +129,7 @@ Non-stopwords
        1        0   100.00   30.3.1961gem.ermächtigunglt.h
        1        0   100.00   30.6.1950
        1        1     0.00   300005
-       1        0   100.00   31.12.1960gem.ermächtigunglt.h
+       1        1     0.00   31.12.1960gem.ermächtigunglt.h
        2        0   100.00   31.12.196231.12.1963
        1        0   100.00   31.7.1955
        1        0   100.00   4
@@ -145,7 +145,7 @@ Non-stopwords
        1        0   100.00   61856
        1        0   100.00   7
        1        0   100.00   7,9u
-       1        1     0.00   7887
+       1        0   100.00   7887
        1        0   100.00   7aufdm7000000
        1        0   100.00   8045ismaningbeimün
        1        0   100.00   8400inh
@@ -207,7 +207,7 @@ Non-stopwords
        1        0   100.00   dm8900000
        1        0   100.00   dr.antonernstberger
        1        0   100.00   dr.jur.friedrichwilhelmkärcher
-       1        1     0.00   dr.jur.herbertvonmalaisé
+       1        0   100.00   dr.jur.herbertvonmalaisé
        1        0   100.00   dr.jur.richardringelmann
        1        0   100.00   durch
        1        0   100.00   durchdiewitterung
@@ -372,7 +372,7 @@ Non-stopwords
        2        0   100.00   undwechsel
        1        0   100.00   unterföh
        1        0   100.00   v
-       4        0   100.00   v.v
+       4        1    75.00   v.v
        1        0   100.00   verteilungdesgewinnsineinemjahr
        1        0   100.00   verwaltung
        1        0   100.00   vorjahreserzielt.fürdasgeschäftsjahr

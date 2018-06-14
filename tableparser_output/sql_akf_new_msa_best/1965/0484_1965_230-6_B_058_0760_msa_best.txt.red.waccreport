@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      300   Words
-       6   Misrecognized
-   98.00%  Accuracy
+       7   Misrecognized
+   97.67%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,7 +12,7 @@ Non-stopwords
    Count   Missed   %Right   Length
       15        0   100.00        1
        8        1    87.50        2
-      18        0   100.00        3
+      18        1    94.44        3
       25        0   100.00        4
        9        0   100.00        5
       18        0   100.00        6
@@ -45,29 +45,29 @@ Non-stopwords
        1        0   100.00       35
        1        0   100.00       36
        1        0   100.00       37
-     300        6    98.00    Total
+     300        7    97.67    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     225        6    97.33        1
+     225        7    96.89        1
       15        0   100.00        2
        2        0   100.00        3
        2        0   100.00        4
        2        0   100.00        5
        1        0   100.00        9
        1        0   100.00      >10
-     248        6    97.58    Total
+     248        7    97.18    Total
 
 Phrases
    Count   Missed   %Right   Length
-     300        6    98.00        1
-     299       11    96.32        2
-     298       16    94.63        3
-     297       20    93.27        4
-     296       23    92.23        5
-     295       26    91.19        6
-     294       29    90.14        7
-     293       32    89.08        8
+     300        7    97.67        1
+     299       13    95.65        2
+     298       19    93.62        3
+     297       24    91.92        4
+     296       28    90.54        5
+     295       32    89.15        6
+     294       36    87.76        7
+     293       40    86.35        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -223,7 +223,7 @@ Non-stopwords
        1        0   100.00   in1000dm
        1        0   100.00   ing.hellmutley
        1        0   100.00   insgesamt15
-       1        0   100.00   je8
+       1        1     0.00   je8
        1        0   100.00   jenom.dm100
        1        0   100.00   jungeaktien
        1        0   100.00   k

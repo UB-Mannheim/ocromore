@@ -24,7 +24,7 @@ Dr.jur.KurtSchneider,Berlin;
 Arbeitnehmervertreter:
 AdolfBorsum,Hannover;
 WilhelmReinke,Dortmund-Brechten
-Gründung:1887;AGseit1890
+Grüündung:1887;AGseit1890
 Tätigkeitsgebiet:
 HerstellungundVertriebvonAkkumula-
 torenundBatterienderverschiedensten
@@ -97,7 +97,7 @@ Kapital:DM5000.-(100%)
 CEAGConcordiaElektrizitäts-AG,
 Dortmund
 Kapital:DM6000000.-(78,4%)
-Dividendenab1962:18,18,18,20,20,18%
+Dividendenab1962:18,18,18,20,20,1818%
 Accumulatoren-FabrikTudorGmbH,
 Frankfurt(M)
 Kapital:DM20000.-(100%)
@@ -139,7 +139,7 @@ ver,Hamburg,DüsseldorfundMünchen;
 BerlinerDiscontoBankAG,Berlin;Saar-
 ländischeKreditbankAG,Saarbrücken;
 DresdnerBankAG,Frankfurt(M),Hanno-
-ver,Hamburg,DüsseldorfundSaarbrückenr
+ver,Hamburg,DüsseldorfundSaarbrücken
 BankfürHandelundIndustrieAG,Berlin;
 CommerzbankAG,Frankfurt(M),Hanno-
 ver,Hamburg,DüsseldorfundSaar-
@@ -151,7 +151,7 @@ WestfalenbankAG,Bochum;BerlinerBank
 AG,Berlin;C.G.Trinkaus,Düsseldorf
 Grundkapital:DM88000000.-
 1951Umstellung1:1,5aufDM70125000.-.
-1965ErhöhungaufDM88000000.-.
+1965ErhöhungaufDM88000000.-.-.
 Börsennotiz:Frankfurt(M),Berlin
 undDüsseldorf(amtl.);Bremenund
 München(Freiv.)
@@ -187,7 +187,7 @@ DividendenaufStammaktien:
 1961:16%(Div.Sch.Nr.8)
 1962:16m+2%Bonus(Div.Sch.Nr.1)
 1963:18%(Div.Sch.Nr.2)
-1964:18%+1,61%+)(Div.Sch.Nr.3)
+1964:18%+1,61%+)(Div.Sch.Nr.3)3)
 1965-1967:je19%(Div.Sch.Nr.5-7)
 -+)AusschüttungausdemTreuhandver-
 mögen,.
@@ -215,8 +215,8 @@ Anzahlungen)403119558
 Bilanzgewinn1685516855
 AusdenGewinn-undVerlust-
 rechnungen
-1966193067
-Umsatzerlöse293°348:303443
+1966301967
+Umsatzerlöse293°:348303443
 Materialaufwand{120079120999
 Personalaufwand9078089063
 ErträgeausGewinn-

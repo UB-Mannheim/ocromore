@@ -7,7 +7,6 @@
 from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
 from utils.database_handler import DatabaseHandler
-from utils.df_objectifier import DFObjectifier
 
 CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
 PRINT_SUSPICIOUSLINES = True

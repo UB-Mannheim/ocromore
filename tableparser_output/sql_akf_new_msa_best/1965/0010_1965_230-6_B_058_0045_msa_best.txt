@@ -10,9 +10,9 @@ Fernruf: München 36 85 55
 Remagen 82 02-04
 Trier 60 46-48,60 44
 Fernschreiber:
-München 05/22189München
+München 05/22189
 Sinzig (Rhein) 08/61856
-Ehrang 04/7887Ehrang
+Ehrang 04/7887
 Vorstand:
 Dipl. -Kfm. Karl Heinz Jacobs, München;
 Hans Kröner, München;
@@ -23,7 +23,7 @@ Dr. Anton Ernstberger, München, Vors.;
 Dr.jur. Friedrich Wilhelm Kärcher,
 München, stellv. Vors.;
 Julius Hirsch, München;
-Dr. jur. Herbert von Malaisée, Neuried;
+Dr. jur. Herbert von Malaisé, Neuried;
 Dipl.-Ing. Heinz Noris, München;
 Dr. jur. Richard Ringelmann, Staats-
 sekretär a.D., München;
@@ -98,12 +98,12 @@ Berliner Handels-Gesellschaft; Hardy &
 Co. GmbH; beide Frankfurt (M)
 Grundkapital: DM 13 350 000. -
 Umstellung 10:7 auf DM 7 000 000. - durch
-H.-V.v. 30.6.1950. Lt.H. -V.v. 31. 7.1955
+H.-V.v. 30.6.1950. Lt.H. -V.v. v. 31. 7.1955
 Erhöhung auf DM 10 000 000.-, am
-31.12.1960 gem. Ermächtigung lt.H.-V.v.
+31.12.1960 gem. Ermächtigung 1lt.H.-V.v.
 29.7.1960 auf DM 10 350 000. - und am
 30.3.1961 gem. Ermächtigung lt.H.-V.v.
-29.7.1960 auf DM 13 350 000. -.
+29.7.1960 auf DM 13 350 000.-. -.
 DM 8 900 000. - Inhaber-Stammaktien
 DM 4 450 000. - stimmrechtlose Inhaber-
 Vorzugsaktien
@@ -111,7 +111,7 @@ Börsennotiz: München (amtl.)
 Wertpapier-Kenn-Nr.:
 501900 (St.-Akt.); 501903 (Vorz.-Akt.)
 Stückelung:
-8 400 Inh. -St.-Akt. zu je DM 1 000. -
+8 400 Inh.-St.-Akt. zu je DM 1 000. -
 5 000 Inh. -St. -Akt. zu je DM 100.-
 4 250 Inh.-Vorz.-Akt. zu je DM 1 000. -
 2 000 Inh.-Vorz.-Akt. zuje DM 100.-
@@ -139,28 +139,28 @@ Stammaktien:
 ultimo 1948 45 %
 1949 70 %
 1950 76 %
-"1951 96 %
-71952 72 %
-21953 75 %
+" 1951 96 %
+7 1952 72 %
+2 1953 75 %
 1954 120 %
-"1955 180 %
+" 1955 180 %
 1956 215 %+)
-1957 194%
+1957 194 %
 " 1958 270 %
 1959 490 %
 " 1960 540 %
 1961 483 %
 " 1962 380 %
-"1963 378%
+" 1963 378 %
 30. Sept. 1964 361 %
 +) ab 10.1.1956 Kurs für DM-Nennwert
 Vorzugsaktien: Notierung seit 10.1.1956
 ultimo 1956 213 % +)
-"1957 192 %
-"1958 265 %
+" 1957 192 %
+" 1958 265 %
 " 1959 485 %
 1960 535 %
-R1961 478 %
+R 1961 478 %
 1962 380 %
 1963 380 %
 30. Sept. 1964 360 %
@@ -172,7 +172,7 @@ Dividenden auf Stammaktien:
 10)
 Bezugsrechte:
 1955: i.V. 4:1 zu 130 %; Abschlag 20 %
-(21.9.); Div.Sch.Nr. 10
+(21.9.); Div.Sch.Nr.10 10
 Zur Geschäftslage:
 In den ersten Monaten des neuen Ge-
 schäftsjahres wurden, durch die Witterung
@@ -195,7 +195,7 @@ Barmittel einschl.
 Wertpapiere) 2 144 2 243
 31.12.1962 31.12.1963
 Eigenkapital 35 375 35 196
-(davon A. -K.) 13 350 13 350
+(davon A.-K.) -K.) 13 350 13 350
 Fremdkapital 33 348 31 871
 Gewinnnach Vortrag 2 055 2 062
 Aus den Gewinn- und Verlust-

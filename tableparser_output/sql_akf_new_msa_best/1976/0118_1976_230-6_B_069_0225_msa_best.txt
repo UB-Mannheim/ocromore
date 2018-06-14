@@ -13,14 +13,14 @@ Dr. Hans Dieter Grell, Köln;
 Claas Kleyboldt, Köln;
 Dr. Franz Kratz, Köln;
 Hans Werner Staunau, Köln;
-Hellmuth von Stockhausen, Rodenkirchen;;
+Hellmuth von Stockhausen, Rodenkirchen;
 Dipl. -Ing. Otto Vossen, Köln
 Aufsichtsrat:
 Dr. Nikolaus Graf Strasoldo, Burg Gude-
 nau bei Bad Godesberg, Vors.;
 Hermann Heusch, Aachen, stellv. Vors.;
-Rudolf von Bennigsen-Foerder, Düsseldorf;,
-Dr.Dr.h.c.Kurt Birrenbach, Düsseldorf;;
+Rudolf von Bennigsen-Foerder, Düsseldorf,
+Dr.Dr.h.c.Kurt Birrenbach, Düsseldorf;
 Friedrich Carl Erasmus, Essen;
 Alfred Freiherr von Oppenheim, Köln;
 Heinz Pferdmenges, Rheydt;
@@ -45,16 +45,16 @@ sicherung (Waren- und Kasko-, Wasser-
 sportfahrzeug-, Reisegepäck-, Reiseaus-
 fallkosten-Valoren-Versicherung); Ein-
 heits-Versicherung; Tier-Versicherung;
-Haftpflicht- und Unfall-Versicherung;;
+Haftpflicht- und Unfall-Versicherung;
 Kraftfahr-Haftpflicht-, Unfall- und
 -Fahrzeug-Versicherung; Kredit-Versi-
 cherung; Sonstige Versicherungen, Aus-
 stellungs-, Automaten-, Betriebsschlie-
-ßRungs-, Fahrrad-, Filmausfall-, Film-
+Rßungs-, Fahrrad-, Filmausfall-, Film-
 theater-, Garderobe-, Jagd- und Sport-
 waffen-, Kühlgüter-, Reiserücktritts-
 kosten-, Tank- und Faßleckage-, Tief-
-kühlgutversicherung; Luftfahrt (indirekt);;
+kühlgutversicherung; Luftfahrt (indirekt);
 Lebens- und Hagel-Versicherung nur in-
 direkt; Rechtsschutz nur in Österreich
 Beteiligungen:
@@ -62,10 +62,10 @@ COLONIA LEBENSVERSICHERUNG AG,
 Köln
 Kapital: DM 12 000 000. - (über 25 %)
 Dividenden ab 1969: 14, 14, 14,14, 14,14 %
-Kölnische Rückversicherungs-Gesell-l-
+Kölnische Rückversicherungs-Gesell-
 schaft, Köln
 Kapital: DM 32 000 000. - (über 50 %)
-Dividenden ab 1969: 14, 10,10, 15,17 %
+Dividenden ab 1969: 14, 10,10, 10, 15,17 %
 Nordstern Allgemeine Versicherungs-AG,
 Berlin
 Kapital: DM 55 000 000. - (über 50 %)
@@ -78,7 +78,7 @@ Kölnische Hagel-Versicherungs-Gesell-
 schaft, Köln
 Kapital: DM 1 500 000, - (über 50 %; Ge-
 winnabführungsvertrag)
-Dividenden ab 1969: 8, 6,8, 0,0,0 %
+Dividenden ab 1969: 8, 6,8,0, 0,0,0 %
 Kölnische Verwaltungs-AG für Versiche-
 rungswerte, Köln
 Kapital: DM 20 000 000. - (25 %)
@@ -93,7 +93,7 @@ Dividenden ab 1969: 14, 14, 12, 12,12, 12 %
 COLONIA Bausparkasse AG, Dortmund
 Kapital: DM 6 000 000. - (über 25 %)
 Dividenden ab 1969: 10,10, 10, 10, 12,10 %
-COLONIA Krankenversicherungs-AG,ö
+COLONIA Krankenversicherungs-AG,
 Köln
 Kapital: DM 3 000 000. - (50 %)
 Dividenden ab 1969: 4, 4, 4,4,0,0 %
@@ -102,10 +102,10 @@ Stimmrecht der Aktien:
 Je DM 12,50 = 1 Stimme
 Kapitalentwicklung und
 Bezugsrechte:
-Grundkapital: DM 100 000 000, -
+Grundkapital: DM 100 000 000,-
 DM 80 000 000. - (voll eingezahlt)
 DM 20 000 000, - (mit 50 % eingezahlt)
-1955 Umstellung 10:3 auf DM 4 800 000. -
+1955 Umstellung 10:3 auf DM 4 800 000.-
 1959 Bezugsrecht 2:1 zu 100 % auf
 DM 7 200 000. -, rechn., Wert DM 733,-
 (21.8.), Div.Sch.Nr. 5
@@ -124,7 +124,7 @@ DM 12 000 000. -, rechn. Wert DM 280, -
 DM 15 000 000. -, rechn. Wert DM 360, -
 (10.8.), Div.Sch.Nr. 13
 1965 Bezugsrecht 3:1 zu 100 % auf
-DM 20 000 000. -, rechn. Wert DM 255, 75
+DM 20 000 000.-, -, rechn. Wert DM 255, 75
 (19.7.), Div.Sch.Nr. 18
 1969 Erhöhung auf DM 28 141 000. -
 1970 Kapitalberichtigung 19:1 auf
@@ -178,9 +178,9 @@ DM 50, -
 (30.9. )
 Dividenden auf Stammaktien:
 11/1948/49-1969: insgesamt 202 %
-1970: 8 % (Div. Sch. Nr., 3)
-1971: 10 % (Div., Sch. Nr. 4)
-1972: 14 % (Div. Sch. Nr. 6)
+1970: 8 % (Div. Sch. Nr.,3)
+1971: 10 % (Div., Sch. Nr.4)
+1972: 14 % (Div. Sch. Nr.6) 6)
 1973: 9 % (Div. Sch. Nr.1)
 1974: 10 % (Div.Sch.Nr. 3)
 Aus den Bilanzen (in1 000 DM)
@@ -231,5 +231,5 @@ Kapitalanlagen 35 693 22 193
 u. Wertberichti-
 gungen) 28 299 13 350
 Steuern 13 080 7541
-Jahresüberschuß 20 674 20 005
+JJahresüberschuß 20 674 20 005
 

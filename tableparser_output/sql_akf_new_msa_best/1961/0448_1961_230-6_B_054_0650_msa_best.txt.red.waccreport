@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      292   Words
-      16   Misrecognized
-   94.52%  Accuracy
+      18   Misrecognized
+   93.84%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -33,7 +33,7 @@ Non-stopwords
        5        0   100.00       21
        3        1    66.67       22
        6        0   100.00       23
-       2        0   100.00       24
+       2        1    50.00       24
        3        0   100.00       25
        2        1    50.00       26
        7        0   100.00       27
@@ -44,13 +44,13 @@ Non-stopwords
        3        0   100.00       34
        3        0   100.00       35
        1        0   100.00       36
-       1        0   100.00       37
+       1        1     0.00       37
        1        0   100.00       40
-     292       16    94.52    Total
+     292       18    93.84    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     216       14    93.52        1
+     216       16    92.59        1
       16        1    93.75        2
        2        0   100.00        3
        2        0   100.00        4
@@ -58,18 +58,18 @@ Distinct Non-stopwords
        1        0   100.00        6
        1        0   100.00        7
        1        0   100.00      >10
-     240       15    93.75    Total
+     240       17    92.92    Total
 
 Phrases
    Count   Missed   %Right   Length
-     292       16    94.52        1
-     291       28    90.38        2
-     290       39    86.55        3
-     289       49    83.04        4
-     288       59    79.51        5
-     287       68    76.31        6
-     286       75    73.78        7
-     285       82    71.23        8
+     292       18    93.84        1
+     291       32    89.00        2
+     290       45    84.48        3
+     289       57    80.28        4
+     288       69    76.04        5
+     287       79    72.47        6
+     286       86    69.93        7
+     285       92    67.72        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -144,7 +144,7 @@ Non-stopwords
        1        0   100.00   anderenversicherungsunternehmungenzu
        1        0   100.00   anlagevermögen3609746012
        1        0   100.00   arbeitnehmervertreter
-       1        0   100.00   auchdasgeschäftsjahr1960läßteinebe
+       1        1     0.00   auchdasgeschäftsjahr1960läßteinebe
        1        0   100.00   aufsichtsrat
        1        0   100.00   ausdenbilanzen
        1        0   100.00   ausdengewinn
@@ -153,7 +153,7 @@ Non-stopwords
        1        1     0.00   barmittel1194410330
        1        0   100.00   beck
        1        0   100.00   beitragseinnahmen5882065747
-       1        0   100.00   beitragseinnahmestiegvon
+       1        1     0.00   beitragseinnahmestiegvon
        1        0   100.00   beiträge2783230402
        4        0   100.00   berlin
        1        0   100.00   beteiligensowieansolchenunternehmun

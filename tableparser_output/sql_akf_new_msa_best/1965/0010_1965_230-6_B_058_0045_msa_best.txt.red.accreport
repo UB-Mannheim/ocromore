@@ -1,19 +1,19 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     5087   Characters
-      40   Errors
-   99.21%  Accuracy
+      37   Errors
+   99.27%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.21%  Accuracy After Correction
+   99.27%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      11        5       24       40   Unmarked
-      11        5       24       40   Total
+      11        5       21       37   Unmarked
+      11        5       21       37   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
@@ -29,19 +29,21 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
 
   Errors   Marked   Correct-Generated
       10        0   {"}-{}
-       7        0   {}-{München}
-       6        0   {}-{Ehrang}
        4        0   {<FEFF>}-{�<\n>�<\n>}
+       4        0   {}-{-K.)}
+       2        0   {}-{-.}
+       2        0   {}-{10}
        2        0   {}-{11}
+       2        0   {}-{v.}
        2        0   {}-{�<\n>}
        1        0   {"}-{2}
        1        0   {"}-{7}
        1        0   {"}-{R}
        1        0   {(}-{}
        1        0   {}-{.}
+       1        0   {}-{1}
        1        0   {}-{;}
        1        0   {}-{<\n>}
-       1        0   {}-{e}
        1        0   {£}-{L}
 
    Count   Missed   %Right

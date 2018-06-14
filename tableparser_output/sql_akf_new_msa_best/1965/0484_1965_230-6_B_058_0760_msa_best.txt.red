@@ -84,7 +84,7 @@ ErhöhungaufDM42500000.-.ImOkto-
 ber1955gem.Ermächtigunglt.H.-V.v.
 17.8.1955ErhöhungaufDM55000000.-
 undlt.H.-V.v.2.6.1964auf
-DM77000000.-.
+DM77000000.-.-.
 Börsennotiz:
 Hamburg,BerlinundDüsseldorf(Freiv.)
 Wertpapier-Kenn-Nr.:692100
@@ -113,12 +113,12 @@ ultimo194815
 +)ab16.1.1956KursfürDM-Nennwert
 DividendenaufStammaktien:
 11I/1948/49-1958:insgesamt15%
-1959:6%(Div.Sch.Nr.4)
-1960-1962:je8%(Div.Sch.Nr.5-7)
-1963:10%(Div.Sch.Nr.8)
+1959:6%(Div.Sch.Nr.)4)
+1960-1962:jeje8%(Div.Sch.Nr.5-7)
+1963:10%(Div.Sch.Nr.)8)
 Bezugsrechte:
 1955:i.V.4:1zu110%;Abschlag3,2%
-(16.9.);Div.Sch.Nr.2
+(16.9.););Div.Sch.Nr.2
 1964:i.V.5:2zu175%;Abschlag10,5%
 (26.6.);Div.Sch.Nr.9
 ZurGeschäftslage:
@@ -150,7 +150,7 @@ rechnungen
 19621963
 LöhneundGehälter5885462740
 Abschreibungen1242414290
-EEV-Steuernu.LAGlSonstigeSteuernh2»
+EEV-Steuernu.LAGSonstigeSteuernh2»
 SonstigeSteuern1457
 Umsatzerlöse235732258352
 Beteiligungserträge41944933

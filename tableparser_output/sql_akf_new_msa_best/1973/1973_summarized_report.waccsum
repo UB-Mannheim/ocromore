@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1399   Words
-      30   Misrecognized
-   97.86%  Accuracy
+      34   Misrecognized
+   97.57%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -18,10 +18,10 @@ Non-stopwords
       79        1    98.73        6
       97        2    97.94        7
       70        0   100.00        8
-     105        2    98.10        9
+     105        3    97.14        9
       80        0   100.00       10
-      80        1    98.75       11
-      50        1    98.00       12
+      80        3    96.25       11
+      50        2    96.00       12
       47        2    95.74       13
       42        1    97.62       14
       35        4    88.57       15
@@ -29,8 +29,8 @@ Non-stopwords
       39        0   100.00       17
       27        2    92.59       18
       19        0   100.00       19
-      14        1    92.86       20
-      18        0   100.00       21
+      14        0   100.00       20
+      18        1    94.44       21
       15        3    80.00       22
       15        1    93.33       23
       13        0   100.00       24
@@ -51,11 +51,11 @@ Non-stopwords
        3        0   100.00       39
        4        0   100.00       40
        1        0   100.00       49
-    1399       30    97.86    Total
+    1399       34    97.57    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     951       28    97.06        1
+     951       32    96.64        1
       81        0   100.00        2
       22        0   100.00        3
        9        0   100.00        4
@@ -64,18 +64,18 @@ Distinct Non-stopwords
        6        0   100.00        7
        1        0   100.00        8
        5        0   100.00      >10
-    1084       28    97.42    Total
+    1084       32    97.05    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1399       30    97.86        1
-    1396       55    96.06        2
-    1393       75    94.62        3
-    1390       93    93.31        4
-    1387      111    92.00        5
-    1384      129    90.68        6
-    1381      146    89.43        7
-    1378      163    88.17        8
+    1399       34    97.57        1
+    1396       63    95.49        2
+    1393       87    93.75        3
+    1390      109    92.16        4
+    1387      131    90.56        5
+    1384      152    89.02        6
+    1381      172    87.55        7
+    1378      191    86.14        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -232,7 +232,7 @@ Non-stopwords
        1        0   100.00   611520
        1        0   100.00   621030
        1        0   100.00   62150dm6693dm7089dm
-       1        0   100.00   62175dm67172dm72120dm
+       1        1     0.00   62175dm67172dm72120dm
        1        0   100.00   63
        1        0   100.00   63152dm67120dm71118dm
        1        0   100.00   63195dm68202dm
@@ -273,7 +273,7 @@ Non-stopwords
        1        0   100.00   95,1
        1        0   100.00   99,9
        1        0   100.00   9daimler
-       1        0   100.00   a.i.anderson
+       1        1     0.00   a.i.anderson
        1        1     0.00   a.p.j.bénard
        1        0   100.00   a.w.j.caron
        1        0   100.00   a.w.p.stenham
@@ -649,7 +649,7 @@ Non-stopwords
        1        0   100.00   iraniandieselenginemanufacturing
        1        0   100.00   istanbul
        1        0   100.00   j.j.h.nagel
-       1        0   100.00   j.p.erbé
+       1        1     0.00   j.p.erbé
        1        0   100.00   jacobplein1
        1        0   100.00   jahresüberschuß246003206535
        1        0   100.00   je50stückezuhfl
@@ -749,7 +749,7 @@ Non-stopwords
        1        0   100.00   mietanlagenindustrievertriebs
        1        0   100.00   mitteln
        1        0   100.00   mm.pierson
-       1        1     0.00   mmlazardfréresetcie
+       1        0   100.00   mmlazardfréresetcie
        1        0   100.00   mons
        1        0   100.00   morganguarantytrustcompanyof
        1        0   100.00   moto
@@ -999,7 +999,7 @@ Non-stopwords
        1        0   100.00   württembergischelandeskommunalbank
        1        0   100.00   z.z
        1        0   100.00   z.zt
-       3        0   100.00   zahlstellen
+       3        2    33.33   zahlstellen
        1        0   100.00   zahn
        2        0   100.00   zujehfl
        1        1     0.00   zujehfl1000

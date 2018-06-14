@@ -37,7 +37,7 @@ folgende Verkehrsunternehmungen:
 burg, bestehend aus einer Ringlinie mit
 Abzweigungen nach Eimsbüttel, Ohlsdorf
 und Jungfernstieg. Bahnlänge 30, 049 km.
-2. das Straßenbahnnetz 203, 818 km.
+2. das Straßenbahnnetz 203,818 km.
 3. die Personenschiffahrt auf der Alster
 im Sommer- und Winterverkehr mit zwei
 Linien und einer Fähre, Linienlänge 12,4
@@ -132,12 +132,12 @@ Ordnungsnr.d.Aktien:
 82470 (A-Aktien).
 Stückelung:
 33 000 Stücke A-Akt. zu DM 1 000.-
-30 086 Stücke A-Akt. zu DM 100.-
-21 760 Stücke B-Akt. zu DM 1 000.-
-2 016 Stücke C-Akt. zu DM 100.-
+30 086 Stücke A-Akt. zu DM 100. -
+21 760 Stücke B-Akt.zu DM 1 000.-
+2 016 Stücke C-Akt. zu DM 100. -
 10 898 Stücke C-Akt. zu DM 1 000.-
 4 Stücke C-Akt. zu DM 100. -
-1 Stück B-Vorz. -Akt.zu DM 166 400. -.
+1 Stück B-Vorz. -Akt.zu DM 166 400.-.
 Sämtliche Stammaktien sind lieferbar.
 Großaktionär:
 Freie und Hansestadt Hamburg (sämt-
@@ -152,23 +152,23 @@ Emissionsbetrag: DM 10 000 000.-
 Emissionsbetrag: $ 8 000 000.-.
 Aktienkurse:
 ultimo 1948 18,‚25 %
-11949 59 %
-.1950 41 %
+1 1949 59 %
+. 1950 41 %
 1951 58 %
 1952 67 %
 1953 73 %
-" 1954 %96,5 %
-1955 %91,5 %
+" 1954 96,5 %
+1955 91,5 %
 10.Okt. 1956 81,5 % +)
 +) Kurs für DM-Nennwert.
 Dividenden auf A-Aktien:
 1948/49: 7,64 % (Div.Sch.Nr. 39)
 1950: 5 % (Div.Sch.Nr. 40)
-1951:5: % (Div.Sch.Nr. 41)
-1952:5: % (Div.Sch.Nr. 42)
-1953:5: % (Div.Sch.Nr. 43)
-1954:5: % (Div.Sch.Nr. 44)
-1955:5: % (Div.Sch.Nr. 45)
+1951: 5 % (Div.Sch.Nr. 41)
+1952: 5 % (Div.Sch.Nr. 42)
+1953: 5 % (Div.Sch.Nr. 43)
+1954: 5 % (Div.Sch.Nr. 44)
+1955:5 % (Div.Sch.Nr. 45)
 Zur Geschäftslage:
 Zunahme der Verkehrsnachfrage.
 Aus den Bilanzen

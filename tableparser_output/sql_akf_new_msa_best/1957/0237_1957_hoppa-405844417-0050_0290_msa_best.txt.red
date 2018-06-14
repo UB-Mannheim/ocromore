@@ -1,5 +1,5 @@
 �
-Sitz:l..SissunWESTFALEN(216)Geisweid
+..SissunWESTFALEN(216)Geiswei
 r(Krs.Siegen).
 Fernruf:SiegenSa.-Nr.5181.
 Fernschreiber:031827.
@@ -35,7 +35,7 @@ AGimZugederNeuordnungderMontanin-
 dustrie.
 Werke:WerksgruppeGeisweid,
 WerksgruppeHagenundWerkFriedrich
-Thomée.e,
+Thomée.
 NamhafteBeteiligungen:
 StahlwerkeBrüninghausGmbH,West-
 hofen
@@ -75,7 +75,7 @@ undFrankfurt(Main);
 Burkhardt&Co.,Essen;
 Hardy&Co.,GmbH,BerlinundFrank-
 furt(Main);
-Sal.Oppenheimjr.&Cie.,Köln;
+Sal.Oppenheimjr.&Cie.,Cie.,Köln;
 Poensgen,Marx&Co.,Düsseldorf;
 C.G.Trinkaus,Düsseldorf;
 WestfalenbankAG,Bochum;
@@ -108,7 +108,7 @@ Aktienkurse:NotierungseitNovem-
 ber1953.
 ultimo1953115%
 "1954163%
-"1955180%I
+"1955180I%
 10.Okt.1956168,5%+)
 +)KursfürDM-Nennwert.
 DividendenaufStammaktien:

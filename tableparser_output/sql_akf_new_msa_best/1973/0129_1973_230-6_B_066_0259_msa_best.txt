@@ -133,10 +133,10 @@ INVAL S.R.L., Buenos Aires (Argentinien)
 Kapital: $a 9 283 790. - (100 %)
 Mercedes-Benz do Brasil S.A., Sao
 Bernardo do Campo
-Kapital: Cr$ 305 300 000. - (100 %, davon
+Kapital: Cr$ $ 305 300 000. - (100 %, davon
 ein Teil über Brasfinanz AG und über
 Daimler-Benz Holding A.G.)
-Sociedade Té&cnicä de Fundicaes Gerais
+Sociedade Técnicä de Fundicaes Gerais
 S.A., Sao Paulo (Brasilien)
 Kapital: Cr$ 28 000 000. - (100 %; über
 Mercedes-Benz do Brasil S.A.)
@@ -212,7 +212,7 @@ jedoch 30 Stimmen bei der Beschlußfas-
 sung über Besetzung des Aufsichtsrats,
 Satzungsänderungen und Auflösung der Ge-
 sellschaft.
-Zahlstellen:
+ZZahlstellen:
 Deutsche Bank AG; Commerzbank AG;
 Dresdner Bank AG;sämtl. Stuttgart, Düssel-
 dorf, Frankfurt (M), Hamburg, Mannheim
@@ -227,7 +227,7 @@ Württembergische Landeskommunalbank
 -Girozentrale- (nur für Dividenden),
 Stuttgart
 Grundkapital: DM 951 269 000.-
-1951 Umstellung 5:3 auf DM 72 155 520. -.
+1951 Umstellung 5:3 auf DM 72 155 520.-. -.
 1960 Erhöhung aus Gesellschaftsmitteln
 auf DM 180 388 800. -, 1961 aus Gesell-
 schaftsmitteln auf DM 270 583 200. -, 1963

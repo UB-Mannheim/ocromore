@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      642   Words
-      17   Misrecognized
-   97.35%  Accuracy
+      18   Misrecognized
+   97.20%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -20,21 +20,21 @@ Non-stopwords
       44        1    97.73        5
       27        0   100.00        6
       36        0   100.00        7
-      45        1    97.78        8
+      45        2    95.56        8
       23        1    95.65        9
       34        1    97.06       10
       27        0   100.00       11
-      34        1    97.06       12
+      34        2    94.12       12
       14        0   100.00       13
       21        0   100.00       14
       17        1    94.12       15
       22        1    95.45       16
       20        0   100.00       17
-      14        2    85.71       18
+      14        1    92.86       18
        4        0   100.00       19
        5        0   100.00       20
        7        0   100.00       21
-       4        0   100.00       22
+       4        1    75.00       22
        5        1    80.00       23
        8        0   100.00       24
        3        0   100.00       25
@@ -45,11 +45,11 @@ Non-stopwords
        3        0   100.00       30
        3        0   100.00       31
        4        0   100.00       32
-       3        1    66.67       33
+       3        0   100.00       33
        4        0   100.00       34
        1        0   100.00       35
        1        0   100.00       37
-     636       16    97.48    Total
+     636       17    97.33    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -66,14 +66,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     642       17    97.35        1
-     641       29    95.48        2
-     640       40    93.75        3
-     639       51    92.02        4
-     638       61    90.44        5
-     637       71    88.85        6
-     636       81    87.26        7
-     635       91    85.67        8
+     642       18    97.20        1
+     641       32    95.01        2
+     640       44    93.12        3
+     639       56    91.24        4
+     638       67    89.50        5
+     637       78    87.76        6
+     636       89    86.01        7
+     635      100    84.25        8
 
 Stopwords
    Count   Missed   %Right   
@@ -172,7 +172,7 @@ Non-stopwords
        1        0   100.00   52000inh
        1        0   100.00   528333
        1        0   100.00   53751
-       1        0   100.00   55100inh
+       1        1     0.00   55100inh
        1        0   100.00   56
        1        1     0.00   5851
        1        0   100.00   59500inh
@@ -214,7 +214,7 @@ Non-stopwords
        1        0   100.00   97,62
        1        0   100.00   a965000
        1        0   100.00   ab16.6.1969stücknotizfürdm100
-       1        1     0.00   ab6.7.1970fürdm50
+       1        0   100.00   ab6.7.1970fürdm50
        1        0   100.00   abschreibungen9869782194
        1        0   100.00   adolfschiff
        1        0   100.00   aires
@@ -228,7 +228,7 @@ Non-stopwords
        1        0   100.00   akt.und
        2        0   100.00   akt.zujedm100
        2        0   100.00   akt.zujedm1000
-       2        0   100.00   akt.zujedm50
+       2        1    50.00   akt.zujedm50
        1        0   100.00   aktien
        1        0   100.00   aktiengesellschaft
        1        0   100.00   aktienkurse
@@ -345,7 +345,7 @@ Non-stopwords
        3        0   100.00   gmbh
        1        0   100.00   gnvgesellschaftfürnukleareverfahrens
        1        0   100.00   great
-       1        1     0.00   groupeeuropéenpourlatechniquedes
+       1        0   100.00   groupeeuropéenpourlatechniquedes
        1        0   100.00   grundkapital
        1        0   100.00   grundkapital:dm250000000
        1        0   100.00   gründung
@@ -557,6 +557,6 @@ Non-stopwords
        1        0   100.00   wolfgangcurtius
        1        0   100.00   wolfgangmüller
        1        0   100.00   wolframthiele
-       1        0   100.00   zahnräderfabrikrenkag
+       1        1     0.00   zahnräderfabrikrenkag
        2        0   100.00   über25
        5        0   100.00   über50

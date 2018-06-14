@@ -33,8 +33,8 @@ Non-stopwords
       11        1    90.91       20
       13        0   100.00       21
        6        0   100.00       22
-       9        1    88.89       23
-       5        1    80.00       24
+       9        0   100.00       23
+       5        2    60.00       24
       10        1    90.00       25
       11        0   100.00       26
        8        0   100.00       27
@@ -66,13 +66,13 @@ Distinct Non-stopwords
 Phrases
    Count   Missed   %Right   Length
      942       32    96.60        1
-     941       54    94.26        2
-     940       74    92.13        3
-     939       92    90.20        4
-     938      108    88.49        5
-     937      124    86.77        6
-     936      139    85.15        7
-     935      153    83.64        8
+     941       53    94.37        2
+     940       72    92.34        3
+     939       89    90.52        4
+     938      104    88.91        5
+     937      119    87.30        6
+     936      133    85.79        7
+     935      146    84.39        8
 
 Stopwords
    Count   Missed   %Right   
@@ -467,7 +467,7 @@ Non-stopwords
        1        0   100.00   groß
        1        0   100.00   großaktionär
        1        0   100.00   großwelzheim
-       1        0   100.00   grundkapital:dm509899900
+       1        1     0.00   grundkapital:dm509899900
        1        0   100.00   gründung
        1        0   100.00   ham
        4        0   100.00   hamburg
@@ -566,7 +566,7 @@ Non-stopwords
        1        0   100.00   kernenergie
        1        0   100.00   kernkraftwerklingengmbh
        1        0   100.00   kleinmaschinenfabrik
-       1        1     0.00   krtkernreaktorteilegmbh
+       1        0   100.00   krtkernreaktorteilegmbh
        2        0   100.00   kupfer
        2        0   100.00   köln
        4        0   100.00   königstein

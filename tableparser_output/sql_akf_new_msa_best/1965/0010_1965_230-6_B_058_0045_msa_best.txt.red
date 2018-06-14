@@ -10,9 +10,9 @@ Fernruf:München368555
 Remagen8202-04
 Trier6046-48,6044
 Fernschreiber:
-München05/22189München
+München05/22189
 Sinzig(Rhein)08/61856
-Ehrang04/7887Ehrang
+Ehrang04/7887
 Vorstand:
 Dipl.-Kfm.KarlHeinzJacobs,München;
 HansKröner,München;
@@ -23,7 +23,7 @@ Dr.AntonErnstberger,München,Vors.;
 Dr.jur.FriedrichWilhelmKärcher,
 München,stellv.Vors.;
 JuliusHirsch,München;
-Dr.jur.HerbertvonMalaisée,Neuried;
+Dr.jur.HerbertvonMalaisé,Neuried;
 Dipl.-Ing.HeinzNoris,München;
 Dr.jur.RichardRingelmann,Staats-
 sekretära.D.,München;
@@ -98,12 +98,12 @@ BerlinerHandels-Gesellschaft;Hardy&
 Co.GmbH;beideFrankfurt(M)
 Grundkapital:DM13350000.-
 Umstellung10:7aufDM7000000.-durch
-H.-V.v.30.6.1950.Lt.H.-V.v.31.7.1955
+H.-V.v.30.6.1950.Lt.H.-V.v.v.31.7.1955
 ErhöhungaufDM10000000.-,am
-31.12.1960gem.Ermächtigunglt.H.-V.v.
+31.12.1960gem.Ermächtigung1lt.H.-V.v.
 29.7.1960aufDM10350000.-undam
 30.3.1961gem.Ermächtigunglt.H.-V.v.
-29.7.1960aufDM13350000.-.
+29.7.1960aufDM13350000.-.-.
 DM8900000.-Inhaber-Stammaktien
 DM4450000.-stimmrechtloseInhaber-
 Vorzugsaktien
@@ -172,7 +172,7 @@ DividendenaufStammaktien:
 10)
 Bezugsrechte:
 1955:i.V.4:1zu130%;Abschlag20%
-(21.9.);Div.Sch.Nr.10
+(21.9.);Div.Sch.Nr.1010
 ZurGeschäftslage:
 IndenerstenMonatendesneuenGe-
 schäftsjahreswurden,durchdieWitterung
@@ -195,7 +195,7 @@ Barmitteleinschl.
 Wertpapiere)21442243
 31.12.196231.12.1963
 Eigenkapital3537535196
-(davonA.-K.)1335013350
+(davonA.-K.)-K.)1335013350
 Fremdkapital3334831871
 GewinnnachVortrag20552062
 AusdenGewinn-undVerlust-

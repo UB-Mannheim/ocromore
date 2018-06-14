@@ -30,28 +30,28 @@ Vors.; +)
 Dr Clemens Plassmann, Düsseldorf,
 stellv. Vors.; +)
 Professor Dr. phil. Otto Dahl, Berlin;+)
-Heinz Dürrbeck, Frankfurt (M); '’)
+Heinz Dürrbeck, Frankfurt (M); ’')
 Irene Fleischhauer, Berlin; '’)
 Dr. Friedrich Flick, Düsseldorf; +)
 Walter Franke, Berlin; '’)
 Ernst Gamper, Zürich; +)
-Alfred Henze, Eerlin; '’)
+Alfred Henze, Eerlin; ’')
 Professor Dr. Dr.-Ing. Dr. oec. h.c.
 Waldemar Koch, Berlin; +)
 Eugen Löffler, Stuttgart; +)
-Josef Michaely, Köln; '’)
+Josef Michaely, Köln; ’')
 Dr. h.c. Robert Pferdmenges, Köln; +)
 Dr. phil. Hermann Reusch, Oberhausen
 (Rheinl.); +)
 Ernst Rieche, Frankfurt (M); +)
-Hans Ruckdäschel, Nürnberg; '’)
+Hans Ruckdäschel, Nürnberg; ’')
 Dr. Matthias Schmitt, Berlin; +)
-Friedrich Schön, Duisburg; '’)
+Friedrich Schön, Duisburg; ’')
 Dr. Eduard von Schwartzkoppen, Frank-
 furt (M); +)
 Dr.-Ing. Hermann Winkhaus, Düsseldorf#
 +) Von der Hauptversammlung gewählt
-'”) Von der Belegschaft gewählt
+”') Von der Belegschaft gewählt
 Gründung: 1883
 Tätigkeitsgebiet:
 Gegenstand des Unternehmens ist jede Art
@@ -203,7 +203,7 @@ in Berlin:
 Bank für Handel und Industrie AG; Berli-
 ner Disconto Bank AG; Berliner Handels-
 Gesellschaft; Berliner Bank AG; Berliner
-Commerzbank AG; Dellbrück Schickler &
+Commerzbank AG; Delbrück Schickler &
 Co.; Hardy & Co. GmbH;
 in Bremen:
 Bremer Bank Niederlassung der Dresdner
@@ -245,7 +245,7 @@ bank AG; Merck, Finck & Co.;
 in Saarbrücken:
 Dresdner Bank AG; Saarländische Kredit-
 bank AG; Commerzbank AG;
-in Stuttgart:.
+in Stuttgart: .
 Dresdner Bank AG; Deutsche Bank AG;
 Commerzbank AG; Württ. Girozentrale
 -Württ. Landeskommunalbank-;
@@ -262,7 +262,7 @@ auf DM 88 000 000. - gemäß H.-V. v.
 Lt. ao. H.-V. v. 22.9.1954 Erhöhung um
 DM 22 000 000. - auf DM 110 000 000.-.
 Lt. ao. H.-V. v. 22.9.1955 Erhöhung um
-DM 55 000 000. - auf DM 165 000 000. -.
+DM 55 000 000. - auf DM 165 000 000.-. -.
 Lt. ao. H.-V. v. 10.10.1956 Erhöhungum
 DM 55 000 000. - auf DM 220 000 000. -.
 Lt. o. H.-V. v. 15.3.1957 Erhöhung um
@@ -296,15 +296,15 @@ Emissionsbetrag: DM 50 000 000. -
 Umtauschrecht jeweils zum 15. Juni der
 Jahre 1963-1968 im Verhältnis 10:7
 (Einzelheiten sind aus unserem Werk "Der
-Rentenführer" ersichtlich)
+Rentenführer"'' ersichtlich)
 Aktienkurse: 1948-1951: Hamburg;
 1952 und 1953: Frankfurt (M); ab 1954:
 Berlin
-ultimo 1948 10,25 %
+ultimo 1948 10, 25 %
 = 1949 33,5 %
 1950 25 %
-1951"41951
-1952" 31%952
+" 1951 45 %
+" 1952 31 %
 1953 11975 %)
 " 1954 185,75 %
 1955 220,5 %
@@ -353,7 +353,7 @@ funken GmbH wesentlichen Anteil. Der
 Gesamtumsatz der AEG einschließlich
 dieser Tochtergesellschaften - jedoch
 unter Abzug der gegenseitigen Lieferun-
-gen - erreichte im Berichtsjahr DM2 153
+gen - erreichte im Berichtsjahr DM2153
 Mio gegenüber DM 1 955 Mio im Vorjahr.
 Der Auftragseingang lag sowohl im In-
 lands- als auch im Auslandsgeschäft et-
@@ -383,7 +383,7 @@ Geschäftsjahr 1959/60 wieder auf ein
 angemessenes Ergebnis.
 Aus den Bilanzen
 30.9.1958 30.9.1959
-(in 1 000- DM)
+(in1000-DM)
 Anlagevermögen 477 595 517 166
 Umlaufvermögen 771 151 726 913
 (darunter

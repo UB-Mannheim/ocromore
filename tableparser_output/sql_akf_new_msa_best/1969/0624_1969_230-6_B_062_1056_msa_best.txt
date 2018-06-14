@@ -59,14 +59,14 @@ Grundkapital: DM 7 000 000. -
 1950 Umstellung 1:1 auf DM 2 500 000. -.
 1964 Erhöhung aus Gesellschaftsmitteln
 auf DM 5 000 000. - sowie auf
-DM 7 000 000. -.
+DM 7 000 000.-.
 DM 5 000 000. - Inhaber-Stammaktien
 DM 2 000 000. - stimmrechtlose Inhaber-
 Vorzugsaktien
 Börsennotiz:
 Düsseldorf und Berlin (Freiv.)
 Wertpapier-Kenn-Nr.:
-777900 (St. - Akt.); 777903 (Vorz. -Akt.)
+777900 (St. -Akt.); 777903 (Vorz. -Akt.)
 Stückelung:
 4 934 Inh. -St.-Akt. zu je DM 1 000. -
 660 Inh. -St.-Akt. zu je DM 100. -
@@ -87,8 +87,8 @@ a) Stammaktien
 49 100 % 587305%9 65265 %
 50 102 % 58 475 % 66 -
 51721385%4 59 600 % 67 288 %
-52 102 %+) 601110 % 68 181%
-53 102 % 61- (30.9.)
+52 102 %+) 601110 % 68 181 %
+53 102 % 61 - (30.9.)
 54 197 % 62 600 %
 55 265 % 63 655 %
 +) ab 6.10.1952 Kurs für DM-Nennwert
@@ -100,10 +100,10 @@ Dividenden:
 a) Stammaktien
 11I/1948/49-1958: insgesamt 73,5 %
 1959: 11 % (Div.Sch.Nr. 9)
-1960: 14 % (Div. Sch. Nr.. 10)
-1961-1963: je 16 % (Div.Sch.Nr. 11-13 8)
-1964: 11 % (Div. Sch. Nr. 16)
-1965: 12 % (Div. Sch. Nr. 17)
+1960: 14 % (Div. Sch. Nr... 10)
+1961-1963: je 16 % (Div.Sch.Nr.11-13) 8)
+1964: 11 % (Div.Sch. Nr. 16)
+1965: 12 % (Div.Sch.Nr.17)
 1966: 8 % (Div.Sch.Nr. 18)
 1967: 0%
 b) Vorzugsaktien
@@ -111,18 +111,18 @@ b) Vorzugsaktien
 1966: 10 % (Div.Sch. Nr.18)
 1967: 7% (Div.Sch.Nr. 19)
 Bezugsrechte und
-Berichtigungsaktien::
-1964: St. -Akt.: i. V.1:1,BA; rechn.
+Berichtigungsaktien:
+1964: St.-Akt.: -Akt.: i. V.1:1,BA; rechn.
 Abschlag 383 %, Notiz
 ex BA ab 7.12.;
-Div. Sch. Nr. 14
+Div. Sch. Nr.14
 1965: Vorz.-Akt.: i. V.5:2 zu 225 %;
 rechn. Wert 20 % (8.1.);
 Div.Sch.Nr. 15
 Aus den Bilanzen
 31.12.1966 31.12.1967
 (in 1 000 DM)
-Anlagevermögen 14 741 18 802
+Anlagevermögen 14 741 18ö802
 (darunter
 Beteiligungen) 1 422 5 653
 Umlaufvermögen 25 353 20 530
@@ -135,7 +135,7 @@ Eigenkapital 14 763 14 525
 (davon A.-K.) 7 000 7 000
 Wertberichtigungen 353 114
 Fremdkapital 25 184 24 892
-Bilanzgewinn 612 1729
+Bilanzgewinn 612 1279
 Aus den Gewinn- und Verlust-
 rechnungen
 1966 1967
@@ -145,6 +145,6 @@ Personalaufwand 8 871 7 499
 Beteiligungserträge 1 003 504
 Abschreibungen 1 842 1 474
 EEV-Steuern 344 350
-Jahresüberschuß 471-
+Jahresüberschuß 471 -
 Jahresfehlbetrag 24
 

@@ -73,11 +73,11 @@ Sal. Oppenheim jr. & Cie., Köln;
 Bank für Handel und Industrie AG, Berlin
 Grundkapital; DM 5 000 000, -
 Umstellung 14:5 auf DM 3 750 000. -d.
-H.-=V.v.13,12, 1955; 1t.ao.H. -V.v.20.11,
-1959 Erhöhung auf DM 5 000 000. -.
+H.-=V.v.13,12,1955; 1t.ao.H. -V.v.20.11,
+1959 Erhöhung auf DM 5 000 000.-. -.
 Börsennotiz:
-Hamburg, Düsseldorf und Berlin (amtl.,)
-Ordnungsnr.d, Aktien: 843100
+Hamburg, Düsseldorf und Berlin (amtl., )
+Ordnungsnr.d,Aktien: 843100
 Stückelung:
 10 000 St.-Akt. zu je DM 500. - (einge-
 zahlt mit DM 340. - (Nr. 1-10 000)
@@ -93,14 +93,14 @@ per Stück
 ultimo 1949 65 DM
 1950 63 DM
 1951 85 DM
-41952 150 DM
-"1953 175 DM
-"1954 275 DM
+4 1952 150 DM
+" 1953 175 DM
+" 1954 275 DM
 1955 846 DM
 1956 900 DM +)
 1957 915 DM
 1958 1700 DM
-"1959 3700 DM
+" 1959 3700 DM
 30.Sept. 1960 3500 DM
 +) ab 17.10. 1956 Kurs für DM-Nennwert
 Dividenden auf Stammaktien:
@@ -120,23 +120,23 @@ seit 21.6, 1948: DM 1 075, -
 Zur Geschäftslage:
 Das Geschäftsjahr 1959 zeigt wiederum
 einen zufriedenstellenden Verlauf. Die
-Brutto-Beitragseinnahme stieg von
+Brutto-Beitragseirnnahme stieg von
 DM 58,820 Mio auf DM 65,747 Mio, das
 sind DM 6,93 Mio oder 11,8 % mehr.
-Auch das Geschäftsjahr 1960 läßt eine be-r
+Auch das Geschäftsjahr 1960 läßt eine ber
 friedigende Geschäftsentwicklung erwarten
 Aus den Bilanzen
 31.12.1958 31.12.1959
 Aktiva (in 1 000 DM)
 Ausstehende Ein-
 lagcen auf das
-Grundkapital1 200 1 600
+Grundkapital 1 200 1 600
 Anlagevermögen 36 097 46 012
 Kurzfristige For-
 derungen 12 792 14 701
 Barmiittel 11 944 10 330
 Sonstige Aktiva 744 1 055
-:31.12.1958 31.12.1959
+: 31.12.1958 31.12.1959
 
 Passivaeee
 Eigenkapital 7 700 9 450
@@ -154,7 +154,7 @@ rechnungen
 31.12.1958 31.12.1959
 Beitragseinnahmen 58 820 65 747
 Verwaltungskosten 9 493 10 879
-Steuern u. öÖffent-
+Steuern u. Ööffent-
 liche Abgaben 623 660
 Zahlungen für Ver-
 sicherungsfälle 33 694 39 744

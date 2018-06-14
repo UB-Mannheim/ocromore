@@ -69,7 +69,7 @@ ultimo194834%
 30.Sept.19601290%
 +)ab2.3.1953KursfürDM-Nennwert
 DividendenaufStammaktien:
-11II/1948/49-1951:je6%(Div.Sch.Nr.18-20)
+II11/1948/49-1951:je6%(Div.Sch.Nr.18-20)
 1952:7%(Div.Sch.Nr.1)
 1953-1957:je12%(Div.Sch.Nr.2,3,6,8,9)
 1958:12%+3%Bonus(Div.Sch.Nr.10)

@@ -40,7 +40,7 @@ Breitflanschträger,Universaleisen.
 Haupterzeugnisse:
 Form-undStabstahl.
 Spezialitäten:
-Breitflanschträger("'PeinerTräger"),
+Breitflanschträger("'PeinerTräger"''),
 Spundbohlen,Spantenprofilefürden
 Schiffbau.
 OrganisatorischbietetdieGesellschaft
@@ -124,7 +124,7 @@ mit9562mstreichenderLängeund4
 Geviertfeldermit5350000qm.Dane-
 benbestehteinPachtvertragmitder
 Preussag.
-Schachtanlagen:NoithornundRöcke.
+Schachtanlagen:NoitthornundRöcke.
 KokereiinHerne:53Öfen;Kapazität
 1150ta/to.
 SonstigerBesitz:
@@ -173,7 +173,7 @@ dieHubertJosefHeineEisenhandels-KG,
 Dortmund,vonderenKapital(DM423000.-)
 dieIHAGeinenKommanditanteilinHöhe
 vonDM300000.-besitzt;
-dieIlsederBank,Sandow&&Co.,Peine,
+dieIlsederBank,Sandow&Co.,Peine,
 diezu100%imIHAG-Besitzistsowie
 dieBraunschweigerHüttenwerkGmbH,
 Braunschweig,anderenStammkapital
@@ -194,7 +194,7 @@ Jenom.DM100.-=1Stimme.
 Zahlstellen:
 Gesellschaftskasse;
 IlsederBank,Sandow&Co.;
-Commerz-undDiasconto-BankAG;
+Commerz-undDisconto-BankAG;
 sämtlichPeine;
 NorddeutscheBankAG;
 Commerz-undDisconto-BankAG;
@@ -253,7 +253,7 @@ Emissionsbetrag:sfrs.8000000.-.
 Aktienkurse:
 ultimo194819,5%
 2194973%
-1950713,5%
+1950173,5%
 „1951179%
 1952145%
 "1953140%
@@ -290,6 +290,6 @@ rechnungen
 LöhneundGehälter568620
 Abschreibungen863
 Steuern566316519
-Jahresertrag7711226342
+Jahresertrag7171226342
 Beteiligungserträge20-
-HHedwigshütteKohlen-undKokswerkeAktiengesellschaft
+HedwigshütteKohlen-unddKokswerkeAktiengesellschaft

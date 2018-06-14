@@ -8,12 +8,12 @@ Verwaltungsrat:
 Ir.G.D.A.Klijnstra, London, Vors.;
 Dr. E.G.Woodroofe, London, stellv. Vors.;
 A.W.J.Caron, Rotterdam, stellv. Vors.;
-A.I. Anderson, London;
+A. A.I. Anderson, London;
 M.R.Angus, London;
 W.B.Blaisse, London;
 E.Brough, London;
 Dr. J.G.Collingwood, London;
-J. P.Erbé&, Rotterdam;
+J.P. P.Erbé, Rotterdam;
 R.H. Del Mar, London;
 Dr. J. M. Goudswaard, Rotterdam;
 G.E.Graham, London;
@@ -72,12 +72,12 @@ Aandeelen in Industrieele Ondernemingen
 N.V., Rotterdam
 Handelsmaatschappij Noorda N.V.,
 Amsterdam
-Van den Bergh'’s en Jurgens'’ Fabrieken
+Van den Bergh’'s en Jurgens'’ Fabrieken
 N.V., Rotterdam
 Geschäftsjahr: Kalenderjahr
 Stimmrecht der Aktien:
 Je nom. hfl 20. - = 1 Stimme
-Zahlstellen:
+ZZahlstellen:
 Amsterdam-Rotterdam Bank N.V.; Alge-
 mene Bank Nederland N.V.; beide Amster-
 dam, Rotterdam und Den Haag;
@@ -96,7 +96,7 @@ und Großhandlungshaus; sämtl. Wien;
 Schweizerischer Bankverein, Basel;
 Schweizerische Kreditanstalt; Schweizeri-
 sche Bankgesellschaft; beide Zürich;
-Dresdner Bank AG; Deutsche Bank AG;;
+Dresdner Bank AG; Deutsche Bank AG;
 beide Frankfurt (M), Düsseldorf und Ham-
 burg;
 Bank für Handel und Industrie AG; Berliner
@@ -126,7 +126,7 @@ zu je hfl. 1 000. -
 75 000 4 % kumulative Vorz. -Akt.
 zu je hfl. 1 000. -
 2 400 Stammaktien zu je hfl. 1 000. -
-(je 50 Stücke zu hfl.20. -)
+(je 50 Stücke zu hfl.20.-) -)
 6 401 650 Stammaktien zu je hfl 100. -
 (je 5 Stücke zu hfl 20. -)
 Von der Dresdner Bank AG zum Handel an
@@ -159,10 +159,10 @@ Dividenden auf Stammaktien:
 1952-1966: insgesamt hfl 185, 19
 1967: hfl 4, 67
 1968: hfl 4, 70
-1969: hfl 5,43 + hfl 0,73 Sonderdividende
+1969: hfl 5,43 +hfl 0,73 Sonderdividende
 (Div. Sch. Nr. 82/83/84)
 1970: hfl 5,43 (Div.Sch.Nr. 85/86)
-1971: hfl 6, 20 (Div.Sch.Nr. 87/88)
+1971: hfl 6,20 (Div.Sch.Nr. 87/88)
 Die Bardividenden unterliegen in den Nie-
 derlanden einer Dividendensteuer (Quel-
 lensteuer) von z. Zt. 25%.
@@ -185,7 +185,7 @@ Umlaufvermögen 8 480 433 8 959 333
 (darunter
 Vorräte 4 335 598 4 341 577
 Debitoren 2 871 385 2 777 953
-Barmittel) 875 4731 586 172
+Barmittel) 875 473 1 586 172
 Eigenkapital 7 136 173 7 290 813
 (davon A.-K.) 1 499 112 1 497 913
 Fremdkapital 7 493 787 7 811 952

@@ -239,9 +239,7 @@ class MsaHandler(object):
 
 
     def msa_alignment_skbio(self, text_1, text_2, text_3):
-        from skbio import TabularMSA, DNA
-        from skbio.sequence import GrammaredSequence
-        from skbio.alignment import local_pairwise_align_ssw, local_pairwise_align, global_pairwise_align, make_identity_substitution_matrix
+        from skbio.alignment import global_pairwise_align, make_identity_substitution_matrix
 
         from multi_sequence_alignment.scikit_custom_sequence_ocr import CustomSequence
 
@@ -896,6 +894,7 @@ class MsaHandler(object):
         m2 = get_max_wordlen(line_2)
         m3 = get_max_wordlen(line_3)
         max_range_word = int(max(m1, m2, m3)+1)  # add a one because it starts with zero
+        dash_there = False
         try:
             for current_word_index in range(0, max_range_word):
                 word1 = get_word_from_line(line_1, current_word_index)
@@ -904,8 +903,9 @@ class MsaHandler(object):
                 self.cpr.print("word   1:", word1)
                 self.cpr.print("word   2:", word2)
                 self.cpr.print("word   3:", word3)
-                #if "Dill" in word1:
-                #    print("asd")
+
+
+
                 # sort by length (longest has index 1)
                 words_sorted, wlongest_index = sort_words_longest_mid(word1, word2, word3)
                 # if wildcard_character is True or wildcard_character is False:
@@ -918,10 +918,41 @@ class MsaHandler(object):
                 words_aligned = reverse_mid_sort(word1_al, word2_al, word3_al, wlongest_index)
                 if len(words_aligned[0]) != len(words_aligned[1]) or len(words_aligned[1]) != len(words_aligned[2]):
                     self.cpr.print("shouldn't be")
+                else:
+                    deletion_marker = "¡"
+                    deletion_needed = False
+                    word_len_aligned = len(words_aligned[0])
+                    for i in range(0, word_len_aligned):
+                        only_wildcards_at_index = True
+                        for word_current in words_aligned:
+                            current_letter = list(word_current)[i]
+                            if current_letter != wildcard_character:
+                                only_wildcards_at_index = False
+
+                        if only_wildcards_at_index:
+                            for word_index, word_current in enumerate(words_aligned):
+                                deletion_needed = True
+                                word_c_list = list(word_current)
+                                word_c_list[i] = deletion_marker
+                                words_aligned[word_index] = "".join(word_c_list)
+
+                    if deletion_needed is True:
+                        for word_index, word_current in enumerate(words_aligned):
+                            words_aligned[word_index] = words_aligned[word_index].replace(deletion_marker,"")
+
+                        print("adfs")
+
+
 
                 self.cpr.print("word_al 1:", words_aligned[0])
                 self.cpr.print("word_al 2:", words_aligned[1])
                 self.cpr.print("word_al 3:", words_aligned[2])
+
+
+                if "-" in word1 or "-" in word2 or "-" in word3:
+                    print("a wild dash appears")
+                    dash_there = True
+
 
                 update_word(line_1, current_word_index, words_aligned[0])
                 update_word(line_2, current_word_index, words_aligned[1])
@@ -940,9 +971,13 @@ class MsaHandler(object):
 
             if PRINT_RESULTS:
 
+
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
+
+                if dash_there == True:
+                    print("dashresult")
                 #if "DM 10" in best_stripped:
                 #    print("beep")
 

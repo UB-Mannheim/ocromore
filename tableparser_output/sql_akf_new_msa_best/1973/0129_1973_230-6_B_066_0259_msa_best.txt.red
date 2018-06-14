@@ -133,10 +133,10 @@ INVALS.R.L.,BuenosAires(Argentinien)
 Kapital:$a9283790.-(100%)
 Mercedes-BenzdoBrasilS.A.,Sao
 BernardodoCampo
-Kapital:Cr$305300000.-(100%,davon
+Kapital:Cr$$305300000.-(100%,davon
 einTeilüberBrasfinanzAGundüber
 Daimler-BenzHoldingA.G.)
-SociedadeTé&cnicädeFundicaesGerais
+SociedadeTécnicädeFundicaesGerais
 S.A.,SaoPaulo(Brasilien)
 Kapital:Cr$28000000.-(100%;über
 Mercedes-BenzdoBrasilS.A.)
@@ -212,7 +212,7 @@ jedoch30StimmenbeiderBeschlußfas-
 sungüberBesetzungdesAufsichtsrats,
 SatzungsänderungenundAuflösungderGe-
 sellschaft.
-Zahlstellen:
+ZZahlstellen:
 DeutscheBankAG;CommerzbankAG;
 DresdnerBankAG;sämtl.Stuttgart,Düssel-
 dorf,Frankfurt(M),Hamburg,Mannheim
@@ -227,7 +227,7 @@ WürttembergischeLandeskommunalbank
 -Girozentrale-(nurfürDividenden),
 Stuttgart
 Grundkapital:DM951269000.-
-1951Umstellung5:3aufDM72155520.-.
+1951Umstellung5:3aufDM72155520.-.-.
 1960ErhöhungausGesellschaftsmitteln
 aufDM180388800.-,1961ausGesell-
 schaftsmittelnaufDM270583200.-,1963

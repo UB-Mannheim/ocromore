@@ -100,8 +100,8 @@ Dividenden:
 a)Stammaktien
 11I/1948/49-1958:insgesamt73,5%
 1959:11%(Div.Sch.Nr.9)
-1960:14%(Div.Sch.Nr..10)
-1961-1963:je16%(Div.Sch.Nr.11-138)
+1960:14%(Div.Sch.Nr...10)
+1961-1963:je16%(Div.Sch.Nr.11-13)8)
 1964:11%(Div.Sch.Nr.16)
 1965:12%(Div.Sch.Nr.17)
 1966:8%(Div.Sch.Nr.18)
@@ -111,8 +111,8 @@ b)Vorzugsaktien
 1966:10%(Div.Sch.Nr.18)
 1967:7%(Div.Sch.Nr.19)
 Bezugsrechteund
-Berichtigungsaktien::
-1964:St.-Akt.:i.V.1:1,BA;rechn.
+Berichtigungsaktien:
+1964:St.-Akt.:-Akt.:i.V.1:1,BA;rechn.
 Abschlag383%,Notiz
 exBAab7.12.;
 Div.Sch.Nr.14
@@ -122,7 +122,7 @@ Div.Sch.Nr.15
 AusdenBilanzen
 31.12.196631.12.1967
 (in1000DM)
-Anlagevermögen1474118802
+Anlagevermögen1474118ö802
 (darunter
 Beteiligungen)14225653
 Umlaufvermögen2535320530
@@ -135,7 +135,7 @@ Eigenkapital1476314525
 (davonA.-K.)70007000
 Wertberichtigungen353114
 Fremdkapital2518424892
-Bilanzgewinn6121729
+Bilanzgewinn6121279
 AusdenGewinn-undVerlust-
 rechnungen
 19661967

@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1297   Words
-      38   Misrecognized
-   97.07%  Accuracy
+      37   Misrecognized
+   97.15%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -16,7 +16,7 @@ Non-stopwords
       48        0   100.00        3
       92        1    98.91        4
       57        0   100.00        5
-      87        2    97.70        6
+      87        0   100.00        6
       74        2    97.30        7
       54        3    94.44        8
       65        2    96.92        9
@@ -28,13 +28,13 @@ Non-stopwords
       23        0   100.00       15
       27        1    96.30       16
       35        0   100.00       17
-      28        2    92.86       18
+      28        1    96.43       18
       25        2    92.00       19
       27        0   100.00       20
       15        0   100.00       21
       13        1    92.31       22
       21        0   100.00       23
-      14        1    92.86       24
+      14        2    85.71       24
       13        0   100.00       25
       11        1    90.91       26
       16        0   100.00       27
@@ -47,11 +47,11 @@ Non-stopwords
       22        1    95.45       34
       14        0   100.00       35
       13        0   100.00       36
-       4        0   100.00       37
+       4        1    75.00       37
        4        0   100.00       38
        2        0   100.00       39
        1        0   100.00       40
-    1295       38    97.07    Total
+    1295       37    97.14    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -70,13 +70,13 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-    1297       38    97.07        1
+    1297       37    97.15        1
     1294       67    94.82        2
-    1291       95    92.64        3
-    1288      122    90.53        4
-    1285      147    88.56        5
-    1282      171    86.66        6
-    1279      193    84.91        7
+    1291       96    92.56        3
+    1288      124    90.37        4
+    1285      150    88.33        5
+    1282      174    86.43        6
+    1279      195    84.75        7
     1276      215    83.15        8
 
 Stopwords
@@ -142,12 +142,12 @@ Non-stopwords
        1        0   100.00   195094
        4        0   100.00   1951
        1        0   100.00   1951142
-       1        1     0.00   195145
+       1        0   100.00   195145
        1        0   100.00   195185dm
        3        0   100.00   1952
        1        0   100.00   1952132
        1        1     0.00   1952150dm
-       1        1     0.00   195231
+       1        0   100.00   195231
        1        0   100.00   1952und1953
        3        0   100.00   1953
        1        1     0.00   1953119,75
@@ -302,7 +302,7 @@ Non-stopwords
        1        0   100.00   arbeitetwerdenkonnte
        2        0   100.00   arbeitnehmervertreter
        1        0   100.00   asbestpapier
-       1        0   100.00   auchdasgeschäftsjahr1960läßteinebe
+       1        1     0.00   auchdasgeschäftsjahr1960läßteinebe
        1        0   100.00   auchgeprägt
        1        0   100.00   aufdm110000000
        1        0   100.00   aufdm1377mioerhöht.infolgeder
@@ -334,7 +334,7 @@ Non-stopwords
        1        0   100.00   beck
        1        0   100.00   bei22
        1        0   100.00   beitragseinnahmen5882065747
-       1        0   100.00   beitragseinnahmestiegvon
+       1        1     0.00   beitragseinnahmestiegvon
        1        0   100.00   beiträge2783230402
        1        0   100.00   belecke
        1        0   100.00   berli
@@ -392,7 +392,7 @@ Non-stopwords
        1        0   100.00   dasjahr1959warbisindenfrühsommer
        3        0   100.00   davona
        1        0   100.00   daßesgelingt
-       2        1    50.00   delbrückschickler
+       2        0   100.00   delbrückschickler
        1        0   100.00   demwertzuwachs.derüberwiegendeteil
        1        0   100.00   den
        1        0   100.00   denhauptsortendergesellschaftauchein

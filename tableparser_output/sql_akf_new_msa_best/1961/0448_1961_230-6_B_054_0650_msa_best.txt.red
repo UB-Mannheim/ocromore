@@ -74,7 +74,7 @@ BankfürHandelundIndustrieAG,Berlin
 Grundkapital;DM5000000,-
 Umstellung14:5aufDM3750000.-d.
 H.-=V.v.13,12,1955;1t.ao.H.-V.v.20.11,
-1959ErhöhungaufDM5000000.-.
+1959ErhöhungaufDM5000000.-.-.
 Börsennotiz:
 Hamburg,DüsseldorfundBerlin(amtl.,)
 Ordnungsnr.d,Aktien:843100
@@ -120,10 +120,10 @@ seit21.6,1948:DM1075,-
 ZurGeschäftslage:
 DasGeschäftsjahr1959zeigtwiederum
 einenzufriedenstellendenVerlauf.Die
-Brutto-Beitragseinnahmestiegvon
+Brutto-Beitragseirnnahmestiegvon
 DM58,820MioaufDM65,747Mio,das
 sindDM6,93Miooder11,8%mehr.
-AuchdasGeschäftsjahr1960läßteinebe-r
+AuchdasGeschäftsjahr1960läßteineber
 friedigendeGeschäftsentwicklungerwarten
 AusdenBilanzen
 31.12.195831.12.1959
@@ -153,7 +153,7 @@ rechnungen
 31.12.195831.12.1959
 Beitragseinnahmen5882065747
 Verwaltungskosten949310879
-Steuernu.öÖffent-
+Steuernu.Ööffent-
 licheAbgaben623660
 ZahlungenfürVer-
 sicherungsfälle3369439744

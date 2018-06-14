@@ -8,12 +8,12 @@ Verwaltungsrat:
 Ir.G.D.A.Klijnstra,London,Vors.;
 Dr.E.G.Woodroofe,London,stellv.Vors.;
 A.W.J.Caron,Rotterdam,stellv.Vors.;
-A.I.Anderson,London;
+A.A.I.Anderson,London;
 M.R.Angus,London;
 W.B.Blaisse,London;
 E.Brough,London;
 Dr.J.G.Collingwood,London;
-J.P.Erbé&,Rotterdam;
+J.P.P.Erbé,Rotterdam;
 R.H.DelMar,London;
 Dr.J.M.Goudswaard,Rotterdam;
 G.E.Graham,London;
@@ -72,12 +72,12 @@ AandeeleninIndustrieeleOndernemingen
 N.V.,Rotterdam
 HandelsmaatschappijNoordaN.V.,
 Amsterdam
-VandenBergh'’senJurgens'’Fabrieken
+VandenBergh’'senJurgens'’Fabrieken
 N.V.,Rotterdam
 Geschäftsjahr:Kalenderjahr
 StimmrechtderAktien:
 Jenom.hfl20.-=1Stimme
-Zahlstellen:
+ZZahlstellen:
 Amsterdam-RotterdamBankN.V.;Alge-
 meneBankNederlandN.V.;beideAmster-
 dam,RotterdamundDenHaag;
@@ -96,7 +96,7 @@ undGroßhandlungshaus;sämtl.Wien;
 SchweizerischerBankverein,Basel;
 SchweizerischeKreditanstalt;Schweizeri-
 scheBankgesellschaft;beideZürich;
-DresdnerBankAG;DeutscheBankAG;;
+DresdnerBankAG;DeutscheBankAG;
 beideFrankfurt(M),DüsseldorfundHam-
 burg;
 BankfürHandelundIndustrieAG;Berliner
@@ -126,7 +126,7 @@ zujehfl.1000.-
 750004%kumulativeVorz.-Akt.
 zujehfl.1000.-
 2400Stammaktienzujehfl.1000.-
-(je50Stückezuhfl.20.-)
+(je50Stückezuhfl.20.-)-)
 6401650Stammaktienzujehfl100.-
 (je5Stückezuhfl20.-)
 VonderDresdnerBankAGzumHandelan

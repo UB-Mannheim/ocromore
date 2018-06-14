@@ -1,19 +1,19 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
    17570   Characters
-     223   Errors
-   98.73%  Accuracy
+     225   Errors
+   98.72%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   98.73%  Accuracy After Correction
+   98.72%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      84       28      111      223   Unmarked
-      84       28      111      223   Total
+      86       26      113      225   Unmarked
+      86       26      113      225   Total
 
    Count   Missed   %Right
        3        3     0.00   Unassigned
@@ -29,36 +29,45 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
    17570      112    99.36   Total
 
   Errors   Marked   Correct-Generated
-      29        0   {"}-{}
+      30        0   {"}-{}
       17        0   {152}-{»<\n>SonstigeSteuern}
       16        0   {%}-{}
       16        0   {}-{WestfalenbankAG,}
       14        0   {tfalenbankAG,B}-{}
-      14        0   {}-{;}
        9        0   {;}-{}
        8        0   {chum;<\n>so}-{}
-       8        0   {}-{,}
        8        0   {}-{ochum;<\n>B}
        7        0   {.}-{,}
-       7        0   {}-{München}
-       6        0   {}-{Ehrang}
+       7        0   {}-{,}
+       6        0   {}-{-.}
        4        0   {<FEFF>}-{�<\n>�<\n>}
        4        0   {I}-{11}
-       4        0   {}-{Grun}
+       4        0   {}-{-K.)}
        3        0   {}-{.}
+       3        0   {}-{30.}
+       3        0   {}-{537}
        3        0   {}-{<\n>}
        2        0   {+}-{}
        2        0   {.-}-{,=}
        2        0   {<FEFF>}-{�<\n>}
        2        0   {We}-{}
-       2        0   {}-{'}
+       2        0   {}-{);}
+       2        0   {}-{)}
+       2        0   {}-{,4}
+       2        0   {}-{-)}
+       2        0   {}-{-,}
        2        0   {}-{-}
+       2        0   {}-{.A}
+       2        0   {}-{10}
        2        0   {}-{11}
-       2        0   {}-{e}
+       2        0   {}-{85}
+       2        0   {}-{9)}
+       2        0   {}-{;}
+       2        0   {}-{je}
+       2        0   {}-{v.}
        2        0   {}-{�<\n>}
        1        0   {"}-{2}
        1        0   {"}-{7}
-       1        0   {"}-{9}
        1        0   {"}-{R}
        1        0   {(}-{}
        1        0   {.}-{;}
@@ -68,15 +77,13 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {6}-{}
        1        0   {:}-{;}
        1        0   {<FEFF>}-{�}
-       1        0   {<\n>}-{l}
+       1        0   {<\n>}-{}
        1        0   {l}-{I}
        1        0   {t}-{f}
        1        0   {}-{"}
-       1        0   {}-{%}
-       1        0   {}-{&}
        1        0   {}-{(}
+       1        0   {}-{1}
        1        0   {}-{4}
-       1        0   {}-{:}
        1        0   {}-{D}
        1        0   {}-{_}
        1        0   {}-{n}

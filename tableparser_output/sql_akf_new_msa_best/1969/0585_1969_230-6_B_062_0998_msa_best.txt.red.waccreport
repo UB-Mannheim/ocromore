@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      492   Words
-      13   Misrecognized
-   97.36%  Accuracy
+      14   Misrecognized
+   97.15%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -19,7 +19,7 @@ Non-stopwords
       25        0   100.00        6
       23        0   100.00        7
       39        3    92.31        8
-      30        0   100.00        9
+      30        1    96.67        9
       18        0   100.00       10
       19        0   100.00       11
       16        0   100.00       12
@@ -27,7 +27,7 @@ Non-stopwords
        9        0   100.00       14
       20        0   100.00       15
       13        0   100.00       16
-      17        2    88.24       17
+      17        3    82.35       17
        5        0   100.00       18
        3        0   100.00       19
        9        1    88.89       20
@@ -36,7 +36,7 @@ Non-stopwords
        2        0   100.00       23
        6        1    83.33       24
        4        1    75.00       25
-       4        1    75.00       26
+       4        0   100.00       26
        7        1    85.71       27
        4        0   100.00       28
        2        1    50.00       29
@@ -49,11 +49,11 @@ Non-stopwords
        1        0   100.00       38
        1        0   100.00       39
        1        0   100.00       40
-     490       13    97.35    Total
+     490       14    97.14    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     312       12    96.15        1
+     312       13    95.83        1
       17        0   100.00        2
       14        0   100.00        3
        3        0   100.00        4
@@ -61,18 +61,18 @@ Distinct Non-stopwords
        2        0   100.00        6
        2        0   100.00        8
        3        0   100.00      >10
-     357       12    96.64    Total
+     357       13    96.36    Total
 
 Phrases
    Count   Missed   %Right   Length
-     492       13    97.36        1
-     491       22    95.52        2
-     490       29    94.08        3
-     489       36    92.64        4
-     488       42    91.39        5
-     487       47    90.35        6
-     486       52    89.30        7
-     485       57    88.25        8
+     492       14    97.15        1
+     491       24    95.11        2
+     490       32    93.47        3
+     489       40    91.82        4
+     488       47    90.37        5
+     487       53    89.12        6
+     486       59    87.86        7
+     485       65    86.60        8
 
 Stopwords
    Count   Missed   %Right   
@@ -94,7 +94,7 @@ Non-stopwords
        1        0   100.00   15.7
        2        1    50.00   16
        2        0   100.00   18
-       1        0   100.00   18,18,18,20,20,18
+       1        1     0.00   18,18,18,20,20,18
        1        0   100.00   1887
        2        0   100.00   1948
        1        0   100.00   194821
@@ -256,7 +256,7 @@ Non-stopwords
        3        0   100.00   düsseldorf
        1        0   100.00   düsseldorfundmünchen
        1        0   100.00   düsseldorfundsaar
-       1        1     0.00   düsseldorfundsaarbrücken
+       1        0   100.00   düsseldorfundsaarbrücken
        1        0   100.00   ebellchemischefabrik
        1        0   100.00   eev
        1        0   100.00   eigenkapital164464164241
@@ -289,7 +289,7 @@ Non-stopwords
        3        0   100.00   gmbh
        1        0   100.00   grundkapital:dm88000000
        1        0   100.00   gruppequandt
-       1        0   100.00   gründung
+       1        1     0.00   gründung
        1        0   100.00   guldenlombergchemischefabrik
        5        0   100.00   hagen
        6        0   100.00   hamburg

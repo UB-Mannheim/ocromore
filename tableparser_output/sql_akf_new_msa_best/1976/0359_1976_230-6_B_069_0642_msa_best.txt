@@ -26,22 +26,22 @@ Adolf Schiff, Augsburg;
 Wolfram Thiele, Oberhausen;
 Otto Voisard, München;
 Friedrich Laußermair, München, stellv.;
-Wolfgang Müller, München, stellv.;;
+Wolfgang Müller, München, stellv.;
 Herbert Redlich, Gustavsburg, stellv.
 Aufsichtsrat:
 Manfred Lennings, Kettwig, Vors.;
 Ulrich Neumann, Garmisch-Partenkirchen,
 stellv.Vors.;
-Alois Alzheimer, Starnberg;;
+Alois Alzheimer, Starnberg;
 Arno Paul Bäumer, Stuttgart;
-Wolfgang Curtius, Krefeld;;
-Klaus Haniel, Oberhausen (Rhld.);;
+Wolfgang Curtius, Krefeld;
+Klaus Haniel, Oberhausen (Rhld.);
 Dietrich Wilhelm von Menges, Essen-
 Bredeney;
 Siegfried Schiffbauer, Kiel;
-Arbeitnehmervertreter::
-Franz Klemmer, Augsburg;;
-Rudolf Rhein, Mainz-Kostheim;;
+Arbeitnehmervertreter:
+Franz Klemmer, Augsburg;
+Rudolf Rhein, Mainz-Kostheim;
 Eduard Schleinkofer, München;
 Ferdinand Wolinsky, Oberhausen
 Gründung: 1898
@@ -72,7 +72,7 @@ M.A.N.-Verwaltungsgesellschaft mbH,
 München
 Kapital: DM 1 950 000.- (94 %)
 Drei Mohren AG, Augsburg
-Kapital: DM 2 000 000. - (49, 97 %)
+Kapital: DM 2 000 000. - (49,97 %)
 Dividenden ab 1969: 0,0,0,0,0,0%
 Jul. Wolff & Co. GmbH, Heilbronn
 Kapital: DM 3 000 000.- (93, 3 %)
@@ -89,13 +89,13 @@ Wagner Hochdruck-Dampfturbinen GmbH,
 Hamburg
 Kapital: DM 100 000. - (100 %)
 Der Geschäftsbetrieb ruht
-Zahnräderfabrik RENK AG, Augsburg
+ZZahnräderfabrik RENK AG, Augsburg
 Kapital: DM 9 000 000. - (25,49 %)
 Dividenden ab 1968/69:10,10,10,12,14,14%
 Motoren- und Turbinen-Union München
 GmbH, München
 Kapital: DM 100 000 000.- (50 %)
-Baugesellschaft Gerberau mbH, Gustavs-
+Baugesellschaft Gerberau mbH,Gustavs-
 burg/Hessen
 Kapital: DM 100 000.- (100 %; Organver-
 trag)
@@ -111,18 +111,18 @@ Kapital: DM 900 000. - (66,67 %)
 Energie- und Verfahrenstechnik GmbH,
 Stuttgart
 Kapital: DM 10 000 000. - (33 1/3 %)
-MAN International Gesellschaft mbH,
+MANInternational Gesellschaft mbH,
 Augsburg
 Kapital: DM 100 000. - (100 %)
 PRINTPROJEKT Druckereiberatungs- und
--projektierungs-Gesellschaft mbH, Frank-
+-projektierungs-Gesellschaft mbH,Frank-
 furt (M)
 Kapital: DM 250 000. - (36 %)
 Roland Offsetmaschinenfabrik Faber &
 Schleicher AG, Offenbach (M)
 Kapital: DM 26 000 000. - (50,62 %)
 Dividenden ab 1969: 18,18, 14,7
-(1.1.-30,6,), 16,14 %
+(1.1.-30,6,), ), 16,14 %
 W. Tümmels Buchdruckerei und Verlag
 GmbH, Nürnberg
 Kapital: DM 1 200 000. - (100 %)
@@ -149,10 +149,10 @@ Kapital: öS 52 000 000. - (über 50 %)
 Industrias Argentinas M.A.N. Sociedad
 Anönima Industrial y Comercial, Buenos
 Aires
-Kapital: argent.$3 19 600 000. - (50 %)
+Kapital: argent.3 19 600 000. - (50 %)
 Mecänica Pesada S.A., Säo Paulo
 Kapital: Cr$ 61 500 000.- (25 %)
-M.A.N.-Automotive (Australia) Pty. Ltd.,
+M.A.N.-Automotive (Australia) Pty.Ltd.,
 Sydney
 Kapital: $A 965 000. - (91,7 %)
 M.A.N. Kamyon ve Otobüs Sanayi Anonim
@@ -169,7 +169,7 @@ M.A.N.-GHH France S.A., Paris
 Kapital: FF 1 518 000.- (über 50 %)
 M.A.N. (Japan) Ltd., Tokio (Japan)
 Kapital: Yen 9 000 000. - (über 50 %)
-Groupe Europé&en pour la Technique des
+Groupe Européen pour la Technique des
 Turbines A vapeur, S.A., Paris (Frank-
 reich)
 Kapital: FF 200 000.- (über 25 %)
@@ -181,26 +181,26 @@ ben geringen Umfang oder bestehen bei
 Gesellschaften von untergeordneter Be-
 deutung
 Geschäftsjahr: 1. Juli - 30. Juni
-Stimmrecht der Aktien::
+Stimmrecht der Aktien:
 Jenom. DM 50.- St.-Akt. = 1 Stimme
 Vorz.-Akt. ohne Stimmrecht
 Kapitalentwicklung und
 Bezugsrechte:
-Grundkapital: DM 250 000 000.-
+Grundkapital: DM 250 000 000. -
 DM 150 000 000. - Inh. -St. -Akt.
 DM 100 000 000.- Inh.-Vorz.-Akt. (ohne
 Stimmrecht; gleiche Dividende wie Stamm-
 aktien, mindestens DM 4.- kumulativ)
 1951 Umstellung 1:1 auf DM 40 000 000. -
 1955 Bezugsrecht 4:1 zu 125 % auf
-DM 55 000 000. -, rechn. Wert St.-Akt. und
+DM 55 000 000.-,rechn. Wert St.-Akt.und
 Vorz.-Akt. DM 16,06 (20.6.),Div.Sch.Nr.
 Erhöhung auf DM 60 633 200. - (Umtausch
 von Wandelschuldverschreibungen)
 1956 Erhöhung auf DM 62 008 300. -
 1957 Erhöhung auf DM 75 000 000. -
 1963 Bezugsrecht 5:2 zu 100 % auf
-DM 105 000 000. -,rechn. Wert St.-Akt.
+DM 105 000 000.-,rechn. Wert St.-Akt.
 DM 75,50 und Vorz.-Akt. DM 63,62
 (7.1.),Div.Sch.Nr.13 (St.-Akt.) und
 8 (Vorz.-Akt.)
@@ -217,13 +217,13 @@ Div.Sch.Nr. 23 (St.-Akt.) und 17 (Vorz.-
 Akt.) Erhöhung auf DM 197 505 000. -
 1972 Erhöhung auf DM 200 000 000. -
 1975 Bezugsrecht 4:1 zu 190 % auf
-DM 250 000 000. -,rechn. Wert St.-Akt.
+DM 250 000 000.-,rechn. Wert St.-Akt.
 DM 10,94 und Vorz.-Akt. DM 9,50
 (1.4.), dividendenberechtigt ab 1.4.,
 Div.Sch.Nr. 29 (St.-Akt.) und 25
 (Vorz.-Akt.)
-Aktionäre::
-Gutehoffnungshütte Aktienverein, Nürn-
+Aktionäre:
+Gutehoffnungshütte Aktienverein,Nürn-
 berg/Oberhausen (rd. 75,23 % der Stamm-
 aktien und 91,09 % der Vorzugsaktien);
 Rest Streubesitz
@@ -239,10 +239,10 @@ Stückelung:
 52 000 Inh.-St.-Akt. zu je DM 50. -
 91 295 Inh.-Vorz.-Akt.zu jeDM 1 000, -
 59 500 Inh.-Vorz.-Akt.zuje DM 100.-
-55 100 Inh.-Vorz.-Akt.zu je DM 50.-
+5 55100 100Inh. Inh.-Vorz.-Akt.zuje DMje DM 50.-
 Aktienkurse (ultimo abgerundet):
 ab 16.6.1969 Stücknotiz für DM 100.- und
-aab 6.7.1970 für DM 50.-
+ab 6.7.1970 für DM 50.-
 a) Stammaktien
 1948 36 % 1968 507% 1972 168DM
 65 460 % 69 481DM 73 118DM

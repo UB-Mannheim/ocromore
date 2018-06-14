@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      304   Words
-       2   Misrecognized
-   99.34%  Accuracy
+       3   Misrecognized
+   99.01%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -17,7 +17,7 @@ Non-stopwords
       19        0   100.00        5
       27        0   100.00        6
       15        1    93.33        7
-      20        0   100.00        8
+      20        1    95.00        8
       13        0   100.00        9
       12        0   100.00       10
       17        0   100.00       11
@@ -45,7 +45,7 @@ Non-stopwords
        1        0   100.00       36
        1        0   100.00       37
        1        0   100.00       38
-     304        2    99.34    Total
+     304        3    99.01    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -59,14 +59,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     304        2    99.34        1
-     303        3    99.01        2
-     302        4    98.68        3
-     301        5    98.34        4
-     300        6    98.00        5
-     299        7    97.66        6
-     298        8    97.32        7
-     297        9    96.97        8
+     304        3    99.01        1
+     303        4    98.68        2
+     302        5    98.34        3
+     301        6    98.01        4
+     300        7    97.67        5
+     299        8    97.32        6
+     298        9    96.98        7
+     297       10    96.63        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -86,7 +86,7 @@ Non-stopwords
        1        0   100.00   1953
        1        0   100.00   1954
        1        0   100.00   1954163
-       1        0   100.00   1955180
+       1        1     0.00   1955180
        1        0   100.00   1956168,5
        1        0   100.00   1stimme
        3        0   100.00   2
@@ -194,7 +194,7 @@ Non-stopwords
        1        0   100.00   freiv
        1        0   100.00   fremdkapital7260994925
        2        0   100.00   furt
-       2        0   100.00   geisweid
+       2        1    50.00   geisweid
        1        0   100.00   geschmiedetesmaterial
        1        0   100.00   geschäftsjahr
        2        0   100.00   gesellschaft
@@ -280,7 +280,7 @@ Non-stopwords
        1        0   100.00   stückelung
        1        0   100.00   sämtlichestammaktiensindlieferbar
        1        0   100.00   süddeutschebankag
-       1        1     0.00   thomée
+       1        0   100.00   thomée
        1        0   100.00   tigerzeugnissenbeachtlichgesteigertwer
        1        0   100.00   trupbachüber
        1        0   100.00   tungs

@@ -1,44 +1,44 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     3708   Characters
-      28   Errors
-   99.24%  Accuracy
+      26   Errors
+   99.30%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.24%  Accuracy After Correction
+   99.30%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       6        5       17       28   Unmarked
-       6        5       17       28   Total
+       6        7       13       26   Unmarked
+       6        7       13       26   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
-     147        1    99.32   ASCII Spacing Characters
+     147        2    98.64   ASCII Spacing Characters
      414        2    99.52   ASCII Special Symbols
      421        0   100.00   ASCII Digits
      407        2    99.51   ASCII Uppercase Letters
-    2264        4    99.82   ASCII Lowercase Letters
+    2264        5    99.78   ASCII Lowercase Letters
        1        1     0.00   Latin1 Uppercase Letters
       53        0   100.00   Latin1 Lowercase Letters
-    3708       11    99.70   Total
+    3708       13    99.65   Total
 
   Errors   Marked   Correct-Generated
-      13        0   {ÜD}-{itz:l..Sissun}
        6        0   {Sitz:<\n>}-{}
-       2        0   {<FEFF>}-{�<\n>}
-       2        0   {}-{e,}
+       5        0   {}-{Cie.,}
+       5        0   {ÜD}-{issun}
+       4        0   {<FEFF>}-{�<\n>..}
+       2        0   {d<\n>}-{<\n>r}
        1        0   {;}-{:}
        1        0   {b}-{6}
        1        0   {}-{<\n>}
        1        0   {}-{I}
-       1        0   {}-{r}
 
    Count   Missed   %Right
-     147        1    99.32   {<\n>}
+     147        2    98.64   {<\n>}
        2        0   100.00   {"}
       14        0   100.00   {%}
        7        0   100.00   {&}
@@ -88,7 +88,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      156        0   100.00   {a}
       43        1    97.67   {b}
       63        0   100.00   {c}
-      92        0   100.00   {d}
+      92        1    98.91   {d}
      324        0   100.00   {e}
       42        0   100.00   {f}
       71        0   100.00   {g}

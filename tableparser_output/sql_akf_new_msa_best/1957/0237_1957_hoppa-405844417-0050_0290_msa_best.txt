@@ -1,5 +1,5 @@
 �
-Sitz: l.. Si s sunWESTFALEN (216) Geisweid
+..SissunWESTFALEN(216)Geiswei
 r (Krs. Siegen).
 Fernruf: Siegen Sa.-Nr. 51 81.
 Fernschreiber: 031 827.
@@ -35,7 +35,7 @@ AG im Zuge der Neuordnung der Montanin-
 dustrie.
 Werke: Werksgruppe Geisweid,
 Werksgruppe Hagen und Werk Friedrich
-Thomée.e,
+Thomée.
 Namhafte Beteiligungen:
 Stahlwerke Brüninghaus GmbH, West-
 hofen
@@ -75,7 +75,7 @@ und Frankfurt (Main);
 Burkhardt & Co., Essen;
 Hardy & Co., GmbH, Berlin und Frank-
 furt (Main);
-Sal. Oppenheim jr. & Cie., Köln;
+Sal. Oppenheim jr. &Cie., Cie., Köln;
 Poensgen, Marx & Co., Düsseldorf;
 C.G. Trinkaus, Düsseldorf;
 Westfalenbank AG, Bochum;
@@ -107,8 +107,8 @@ tungs- KG, Hannover. )
 Aktienkurse: Notierung seit Novem-
 ber 1953.
 ultimo 1953 115 %
-"1954 163 %
-"1955 180 %I
+" 1954 163 %
+" 1955 180 I%
 10. Okt. 1956 168,5 %+)
 +) Kurs für DM-Nennwert.
 Dividenden auf Stammaktien:

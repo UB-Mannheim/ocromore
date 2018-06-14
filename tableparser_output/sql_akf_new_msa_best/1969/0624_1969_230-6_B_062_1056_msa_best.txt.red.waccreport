@@ -12,7 +12,7 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       15        0   100.00        1
-      37        3    91.89        2
+      37        2    94.59        2
       15        0   100.00        3
       31        1    96.77        4
       25        4    84.00        5
@@ -35,7 +35,7 @@ Non-stopwords
        4        0   100.00       22
        4        0   100.00       23
        2        0   100.00       24
-       5        0   100.00       25
+       5        1    80.00       25
        1        0   100.00       26
        4        0   100.00       27
        1        0   100.00       28
@@ -80,7 +80,7 @@ Non-stopwords
        3        0   100.00   100
        3        0   100.00   11
        2        0   100.00   12
-       1        1     0.00   13
+       1        0   100.00   13
        2        0   100.00   14
        1        0   100.00   14225653
        1        0   100.00   15
@@ -166,7 +166,7 @@ Non-stopwords
        1        0   100.00   altenaer
        1        0   100.00   altroggenrahmede
        1        0   100.00   aluminium
-       1        0   100.00   anlagevermögen1474118802
+       1        1     0.00   anlagevermögen1474118802
        1        0   100.00   arbeitnehmervertreter
        1        0   100.00   aufdm5000000
        1        0   100.00   aufsichtsrat

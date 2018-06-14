@@ -9,7 +9,7 @@ Vorstand:
 Dr.G.A.Wagner,Präsident;
 Dipl.-Ing.E.G.G.Werner;
 Dipl.-Ing.K.Swart;
-A.P.J.Béenard
+A.P.J.Benard
 Aufsichtsrat:
 JonkheerDr.J.H.Loudon,Vors.;
 Dipl.-Ing.L.E.J.Brouwer;Dipl.-Ing.P.M.
@@ -52,7 +52,7 @@ Niemandkannmehrals300Stimmenfür
 sichselbstabgeben.
 Zahlstellen:
 AllegroßenholländischenBanken;
-MMLazardFréeresetCie,Paris;
+MMLazardFréresetCie,Paris;
 DeutscheBankAG,Frankfurt(M),Düssel-
 dorf,Hamburg,München;
 BerlinerDiscontoBankAG;BankfürHan-
@@ -63,7 +63,7 @@ brücken;
 SaarländischeKreditbankAG,Saarbrücken;
 TheChaseManhattanBank,NewYork;
 N.M.Rothschild&Sons,London;
-SchweizerischeKreditanstalt,Züriıch;
+SchweizerischeKreditanstalt,Zürıich;
 Soc.GeneraledeBanque,Brüssel;
 CreditLyonnais,Brüssel;
 BanqueInternationale&Luxembourg,
@@ -94,11 +94,11 @@ DieStammaktiensindinUrkundenüberje
 henmiteinerNummer,lieferbar.
 Aktienkurse(ultimoabgerundet):
 perStückzuhfl20.-;Notierungseit
-23.9.:1959
+23.9:.1959
 1959188DM1964174DM1969146DM
 60136DM65164DM70146DM
 61140DM66-71116DM
-62175DM67172DM72120DM
+62175DM67172DDM72120DM
 63195DM68202DM(29.9.)
 DividendenaufStammaktien:
 1952-1966:insgesamthfl76,20+52%+)

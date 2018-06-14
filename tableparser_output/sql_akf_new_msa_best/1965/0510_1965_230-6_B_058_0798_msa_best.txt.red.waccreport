@@ -11,16 +11,16 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       46        0   100.00        1
-      76        3    96.05        2
+      76        6    92.11        2
       37        2    94.59        3
       57        0   100.00        4
       36        0   100.00        5
       30        0   100.00        6
       60        0   100.00        7
       38        0   100.00        8
-      31        2    93.55        9
+      31        0   100.00        9
       24        0   100.00       10
-      32        2    93.75       11
+      32        1    96.88       11
       35        0   100.00       12
       29        1    96.55       13
       21        0   100.00       14
@@ -36,10 +36,10 @@ Non-stopwords
        5        2    60.00       24
        3        0   100.00       25
        9        0   100.00       26
-       5        1    80.00       27
+       5        2    60.00       27
        4        0   100.00       28
        6        0   100.00       29
-       3        1    66.67       30
+       3        0   100.00       30
        3        0   100.00       31
        4        0   100.00       32
        4        0   100.00       33
@@ -53,7 +53,7 @@ Non-stopwords
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     432       13    96.99        1
+     432       10    97.69        1
       40        1    97.50        2
       14        0   100.00        3
        9        0   100.00        4
@@ -64,7 +64,7 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        4        0   100.00      >10
-     513       14    97.27    Total
+     513       11    97.86    Total
 
 Phrases
    Count   Missed   %Right   Length
@@ -72,10 +72,10 @@ Phrases
      736       33    95.52        2
      735       49    93.33        3
      734       64    91.28        4
-     733       79    89.22        5
-     732       94    87.16        6
-     731      109    85.09        7
-     730      123    83.15        8
+     733       78    89.36        5
+     732       92    87.43        6
+     731      106    85.50        7
+     730      119    83.70        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -100,7 +100,7 @@ Non-stopwords
        1        0   100.00   12,14,16,18,18,18
        1        0   100.00   1250000000
        4        0   100.00   13
-       2        0   100.00   14
+       2        1    50.00   14
        1        0   100.00   14,16,20,16,20,18
        1        0   100.00   15u
        2        0   100.00   16
@@ -112,7 +112,7 @@ Non-stopwords
        1        0   100.00   1948
        1        0   100.00   194981,50
        1        0   100.00   195071,75
-       1        1     0.00   1951137,5
+       1        0   100.00   1951137,5
        1        0   100.00   1952106
        1        0   100.00   1954215
        1        0   100.00   1955
@@ -159,7 +159,7 @@ Non-stopwords
        1        0   100.00   29.5.1951
        3        0   100.00   3
        1        0   100.00   3,25
-       2        0   100.00   30
+       2        1    50.00   30
        1        0   100.00   30.6.196230.6.1963
        1        0   100.00   302000inh
        2        0   100.00   31.3
@@ -350,7 +350,7 @@ Non-stopwords
        1        0   100.00   fremdkapital15864261638059
        1        0   100.00   friedrichdugel
        1        0   100.00   fristigerabmachungenlaufendelektrische
-       1        1     0.00   fritzandré
+       1        0   100.00   fritzandré
        1        0   100.00   gasundwasser
        1        0   100.00   geldern
        1        0   100.00   gelsenkirchen
@@ -364,7 +364,7 @@ Non-stopwords
        1        0   100.00   großaktionäre
        1        0   100.00   großwelzheim
        1        0   100.00   grundkapital:dm960000000
-       1        1     0.00   grunelius
+       1        0   100.00   grunelius
        1        0   100.00   gründung
        1        0   100.00   gummersbach
        1        0   100.00   gundremmingen
@@ -515,11 +515,11 @@ Non-stopwords
        1        0   100.00   sen
        1        0   100.00   sept
        1        0   100.00   sitz
-       1        1     0.00   societéelectriquedel’ours.a
+       1        0   100.00   societéelectriquedel’ours.a
        1        0   100.00   sonstigesteuern7215282718
        1        1     0.00   sowiesämtlicheniederlassungendieser
        1        0   100.00   sowieweitere
-      12        0   100.00   st
+      12        1    91.67   st
        1        0   100.00   stammaktien
        5        0   100.00   stellv
        6        0   100.00   stellv.vors
@@ -544,7 +544,7 @@ Non-stopwords
        1        0   100.00   ultimo194836,25
        1        0   100.00   ultimo1953135
        1        0   100.00   umgestellt10
-       1        0   100.00   umlaufvermögen537858574620
+       1        1     0.00   umlaufvermögen537858574620
        1        0   100.00   umsatzerlöse21502582423689
        1        0   100.00   umstellung1
        1        0   100.00   undhochspannungsnetzeinevielzahlan

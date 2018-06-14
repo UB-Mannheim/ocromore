@@ -3,7 +3,7 @@ M
 >
 ALLGEMEINE ELEKTRICITATS-GESELLSCHAFT
 AEG-TELEFUNKEN
-Sitz :1000 Berlin 33, Hohenzollerndamm 150
+Sitz:1000 Berlin 33,Hohenzollerndamm 150
 6000 Frankfurt (M) 70, AEG-Hochhaus
 Fernruf:
 Berlin (03 11) 8 86 20 81;
@@ -76,7 +76,7 @@ kehrsanlagen und Betrieben sowie die
 Schaffung von Unternehmungen zur Aus-
 nutzung solcher Anlagen.
 2. Die Gesellschaft ist zu allen Geschäften
-und Maßnahmen berechtigt, die der Er--
+und Maßnahmen berechtigt, die der Er-
 reichung des Gesellschaftszwecks die-
 nen, insbesondere auch zur Errichtung
 von Tochtergesellschaften und Zweig-
@@ -124,7 +124,7 @@ Zweigwerk Springe; Fabrik Hannover I
 nover II (Geräte Rundfunk-Fernsehen Fa-
 brik Hannover (Geräte Mechanik); Fabrik
 Heilbronn; Fabrik Ingolstadt; Fahrkarten-
-druckerfabrik, Kassel; Hochspannungs -
+druckerfabrik, Kassel; Hochspannungs-
 schaltgerätefabrik, Kassel; Isolierstoff-
 fabrik, Kassel; Kühlschrankfabrik, Kassel;
 Fabrik Kirchheim; Fabrik Konstanz; Fabrik
@@ -176,8 +176,8 @@ Kapital: DM 5 600 000. - (100 %)
 Deutsche Werft AG, Hamburg
 Kapital: DM 16 000 000.- (rd. 31 % über
 Elektrofinanz AG. Berlin)
-Dividenden ab 1961: 14, 9, 4,4, 4,4 %
-"Hirsch" Kupfer- und Messingwerke
+Dividenden ab 1961: 14,9,4,4, 4,4 %
+"Hirsch"'' Kupfer- und Messingwerke
 GmbH, Frankfurt (M)
 Kapital: DM 800 000.- (100 %)
 Hydrawerk AG, Berlin
@@ -237,7 +237,7 @@ Mechanik GmbH)
 Vereinigte Draht- und Kabelwerke AG,
 Berlin/Duisburg
 Kapital: DM 19 000 000. - (100 %)
-KKRT Kernreaktorteile GmbH, Frankfurt (M)
+KRT Kernreaktorteile GmbH, Frankfurt (M)
 Kapital: DM 8 000 000. - (55 %)
 F.Küppersbusch & Söhne AG, Gelsenkir-
 chen
@@ -249,7 +249,7 @@ Kupfer-Walzwerk Berlin GmbH, Berlin
 Kapital: DM 1 000 000. - (50 %)
 Steatit-Magnesia AG, Lauf/Pegnitz
 Kapital: DM 10 000 000. - (27,1 %)
-Dividenden ab 1962; 16, 14, 15,15, 11,8 %
+Dividenden ab 1962; 16,14, 15,15, 11,8 %
 AEG International AG. Zürich
 Kapital: sfr. 45 000 000. - (100 %)
 Geschäftsjahr: Kalenderjahr
@@ -265,7 +265,7 @@ Köln, München, Saarbrücken, Stuttgart,
 Basel, Genf, Zürich, Paris, Dresdner
 Bank AG; Bank für Handel und Industrie
 AG; Deutsche Bank AG; Berliner Disconto
-Bank AG; Berliner Handels-Gesellschaftt;
+Bank AG; Berliner Handels-Gesellschatft;
 Bayerische Hypotheken- und Wechsel-Bank;
 Bankhaus Gebrüder Bethmann; Bayerische
 Staatsbank; Bayerische Vereinsbank; Ber-
@@ -283,13 +283,13 @@ Provinzialbank; Saarländische Kreditbank
 AG; C.G. Trinkaus; Westfalenbank AG;
 Württ. Landeskommunalbank -Girozentrale-;
 Schweizerische Kreditanstalt; Schweizeri-
-sScher Bankverein; Banque de 'Paris et des
+Sscher Bankverein; Banque de 'Paris et des
 Pays-Bas; Banque Nationale de Paris;
-Cré&dit Lyonnais; Socié&té& Géené&rale; MM.
-Lazard Freres et Cie.; Banque de 1'’ Union
+Cr&dit Lyonnais; Sociét& Gén&rale; MM.
+Lazard Freres et Cie.; Banque de 1’' Union
 Parisienne; Banque Rotschild; Société Gé-
 néerala Alsacienne de Banque
-Grundkapital: DM 509 899 900. -
+Grundkapital: DM509 509 899 900. -
 1951 Umstellung 3:1 auf DM 88 000 000.-.
 1954 Erhöhung auf DM 110 000 000. -,
 1955 auf DM 165 000 000.-, 1965 auf
@@ -329,7 +329,7 @@ Umtauschrecht: Vom 2.1.1969 bis zum
 15.bis 31.12. der Jahre 1969-1977
 Umtauschverhältnis 3:1; Zuzahlung für
 jede aus der Wandlung hervorgehende Ak-
-tie im Nennbetrag von DM 100. -:
+tie im Nennbetrag von DM 100.-: -:
 DM 50.- in der Zeit 1969 - 1971
 DM 75.- in der Zeit 1972 - 1974
 DM 100. - in der Zeit 1975 - 1978
@@ -340,10 +340,10 @@ Frankfurt (M); ab 1954: Berlin
 49 33% 56 194 % 63 466 %
 50 25% 57 187% 64 501%
 51.45% 58 300 % 65 444 %
-5D2 731%, 59 449 % 66 293 %
+D52 731%, 59 449 % 66 293 %
 53 119 % +) 60 446 % 67 438 %
 54 185 % 61 472 % 68 520 %
-(30.9.5)
+(30.95.)
 +) ab 27.4.1953 Kurs für DM-Nennwert
 Dividenden:
 1949/50-1957/58: insgesamt 65 %
@@ -358,17 +358,17 @@ Bezugsrechte:
 1954: i.V. 4:1 zu 100 %; Abschlag 15,12 %
 (20.10.); Div. Sch. Nr. 3
 1955: i.V. 2:1 zu 135 %; Abschlag 34, 33 %
-(21.4:10.); Div.;Sch.; Nr.5
+(21.4:10.); Div;.Sch;. Nr.5
 1956: i.V. 3:1 zu 100 %; Abschlag 22, 33 %
-(9.211.); Div.sSch.Nr.+7
+(92.11.); Div.sSch.Nr.+7
 1957: i.V. 4:1 zu 120 %; Abschlag 10, 84 %
 (12. 4.); Div.Sch.Nr. 9
 1958: i.V. 8:1 zu 100 %; Abschlag 13, 75 %
-(20.5.);2 Div.’Sch. Nr.11
+(20.5.); )2 Div.’Sch. Nr.11
 i.V.11:2 zu 100 %; Abschlag 6,08 %
 (20. 5.); Div. Sch. Nr. 12+)
 196: i.V. 5:1 zu 200 %; Abschlag 43, 125 %
-(30. 4.); Div.Sch.Nr. 171)
+(30. 4.); Div.Sch.Nr. 171) )
 i. V.50:7 zu 200 %; Abschlag 43, 125 %
 (30. 4.); Ber.Sch.I ++) 1)
 1965: i.V. 10:1 zu 240 %; rechn. Wert
@@ -419,7 +419,7 @@ rechnungen
 1966 1967
 Umsatzerlöse 2 846 236 3 980 546
 Materialaufwand 1 406 841 1 844 763
-Personalaufwand 904 9801 281 886
+Personalaufwand 904 980 1 281 886
 Beteiligungserträge 56 690 80 577
 Abschreibungen 131 229 114 164
 EEV-Steuern 47 219 46 316

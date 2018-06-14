@@ -12,8 +12,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       0        6        7       13   Unmarked
-       0        6        7       13   Total
+       0        7        6       13   Unmarked
+       0        7        6       13   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
@@ -22,18 +22,18 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      489        0   100.00   ASCII Digits
      363        0   100.00   ASCII Uppercase Letters
     2463        1    99.96   ASCII Lowercase Letters
-      53        4    92.45   Latin1 Lowercase Letters
-    3886        6    99.85   Total
+      53        5    90.57   Latin1 Lowercase Letters
+    3886        7    99.82   Total
 
   Errors   Marked   Correct-Generated
-       3        0   {é}-{e}
-       2        0   {}-{e}
+       4        0   {é}-{e}
        1        0   {<FEFF>}-{�}
        1        0   {f}-{i}
        1        0   {}-{-}
        1        0   {}-{.}
        1        0   {}-{:}
        1        0   {}-{<\n>}
+       1        0   {}-{D}
        1        0   {}-{ı}
        1        0   {à}-{&}
 
@@ -115,7 +115,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   100.00   {ß}
        1        1     0.00   {à}
       15        0   100.00   {ä}
-       5        3    40.00   {é}
+       5        4    20.00   {é}
        8        0   100.00   {ö}
       22        0   100.00   {ü}
        1        1     0.00   {<FEFF>}

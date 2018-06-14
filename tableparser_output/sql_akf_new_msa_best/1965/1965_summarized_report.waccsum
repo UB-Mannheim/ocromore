@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1411   Words
-      33   Misrecognized
-   97.66%  Accuracy
+      34   Misrecognized
+   97.59%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,16 +12,16 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       68        0   100.00        1
-     103        5    95.15        2
-      67        2    97.01        3
-     110        1    99.09        4
-      62        1    98.39        5
+     103        9    91.26        2
+      67        4    94.03        3
+     110        0   100.00        4
+      62        0   100.00        5
       73        3    95.89        6
      128        2    98.44        7
       90        1    98.89        8
-      58        3    94.83        9
+      58        1    98.28        9
       62        0   100.00       10
-      69        2    97.10       11
+      69        1    98.55       11
       60        1    98.33       12
       49        1    97.96       13
       40        1    97.50       14
@@ -35,13 +35,13 @@ Non-stopwords
       18        0   100.00       22
       18        0   100.00       23
       13        2    84.62       24
-      15        2    86.67       25
+      15        1    93.33       25
       11        0   100.00       26
-      13        1    92.31       27
+      13        2    84.62       27
       12        0   100.00       28
        7        1    85.71       29
-       5        1    80.00       30
-       7        0   100.00       31
+       5        0   100.00       30
+       7        1    85.71       31
        9        0   100.00       32
        6        0   100.00       33
        8        0   100.00       34
@@ -50,11 +50,11 @@ Non-stopwords
        2        0   100.00       37
        5        0   100.00       38
        1        0   100.00       50
-    1410       33    97.66    Total
+    1410       34    97.59    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     950       29    96.95        1
+     950       25    97.37        1
       82        1    98.78        2
       19        0   100.00        3
       12        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1086       30    97.24    Total
+    1086       26    97.61    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1411       33    97.66        1
-    1408       62    95.60        2
-    1405       91    93.52        3
-    1402      118    91.58        4
-    1399      144    89.71        5
-    1396      170    87.82        6
-    1393      195    86.00        7
-    1390      219    84.24        8
+    1411       34    97.59        1
+    1408       64    95.45        2
+    1405       94    93.31        3
+    1402      122    91.30        4
+    1399      147    89.49        5
+    1396      172    87.68        6
+    1393      197    85.86        7
+    1390      221    84.10        8
 
 Stopwords
    Count   Missed   %Right   
@@ -91,7 +91,7 @@ Non-stopwords
        1        0   100.00   0857851
        2        0   100.00   1
        1        0   100.00   1.3.1955
-       5        0   100.00   10
+       5        1    80.00   10
        1        0   100.00   10,12,13,14,14,14
        1        0   100.00   10,12,13,14,15,15
        1        0   100.00   10,12,14,10,14,14
@@ -110,7 +110,7 @@ Non-stopwords
        1        0   100.00   1265112651
        4        0   100.00   13
        1        0   100.00   1335013350
-       2        0   100.00   14
+       2        1    50.00   14
        1        0   100.00   14,16,20,16,20,18
        1        0   100.00   15u
        2        0   100.00   16
@@ -132,7 +132,7 @@ Non-stopwords
        1        0   100.00   195040,5
        1        0   100.00   195071,75
        1        0   100.00   195076
-       1        1     0.00   1951137,5
+       1        0   100.00   1951137,5
        1        0   100.00   195148,5
        1        0   100.00   195196
        1        0   100.00   1952106
@@ -214,7 +214,7 @@ Non-stopwords
        1        0   100.00   20stim
        1        0   100.00   21.9
        1        0   100.00   21442243
-       1        1     0.00   22189
+       1        0   100.00   22189
        1        0   100.00   225125
        1        0   100.00   23,32
        1        0   100.00   232500inh
@@ -234,13 +234,13 @@ Non-stopwords
        1        0   100.00   2zu175
        3        0   100.00   3
        1        0   100.00   3,25
-       5        0   100.00   30
+       5        1    80.00   30
        1        0   100.00   30.3.1961gem.ermächtigunglt.h
        1        0   100.00   30.6.1950
        1        0   100.00   30.6.196230.6.1963
        1        1     0.00   300005
        1        0   100.00   302000inh
-       1        0   100.00   31.12.1960gem.ermächtigunglt.h
+       1        1     0.00   31.12.1960gem.ermächtigunglt.h
        3        0   100.00   31.12.196231.12.1963
        2        0   100.00   31.3
        1        0   100.00   31.7.1955
@@ -298,7 +298,7 @@ Non-stopwords
        1        0   100.00   703703
        1        0   100.00   72000inh
        1        0   100.00   75
-       1        1     0.00   7887
+       1        0   100.00   7887
        1        0   100.00   795000960000
        1        0   100.00   7aufdm7000000
        5        0   100.00   8
@@ -478,7 +478,7 @@ Non-stopwords
        1        0   100.00   dr.hannsdeuss
        1        0   100.00   dr.hannssinzig
        1        0   100.00   dr.jur.friedrichwilhelmkärcher
-       1        1     0.00   dr.jur.herbertvonmalaisé
+       1        0   100.00   dr.jur.herbertvonmalaisé
        1        0   100.00   dr.jur.richardringelmann
        1        1     0.00   dr.ottokorn
        2        0   100.00   dresdnerbankag
@@ -551,7 +551,7 @@ Non-stopwords
        1        0   100.00   friedrichdugel
        1        0   100.00   friedrichshafen
        1        0   100.00   fristigerabmachungenlaufendelektrische
-       1        1     0.00   fritzandré
+       1        0   100.00   fritzandré
        1        0   100.00   frontenacfloor
        1        0   100.00   frostsichere
        2        0   100.00   furt
@@ -587,7 +587,7 @@ Non-stopwords
        1        0   100.00   grundkapital:dm13350000
        1        0   100.00   grundkapital:dm77000000
        1        0   100.00   grundkapital:dm960000000
-       1        1     0.00   grunelius
+       1        0   100.00   grunelius
        3        0   100.00   gründung
        1        0   100.00   gummersbach
        1        0   100.00   gundremmingen
@@ -643,7 +643,7 @@ Non-stopwords
        2        0   100.00   ismaningbeimünchen
        1        0   100.00   isolatorenfürfreileitungen
        2        0   100.00   je14
-       1        0   100.00   je8
+       1        1     0.00   je8
        4        0   100.00   jenom.dm100
        1        0   100.00   josefharnisch
        1        0   100.00   juli
@@ -850,7 +850,7 @@ Non-stopwords
        1        0   100.00   siegburg
        1        0   100.00   sinzig
        3        0   100.00   sitz
-       1        1     0.00   societéelectriquedel’ours.a
+       1        0   100.00   societéelectriquedel’ours.a
        1        0   100.00   sodaßdieproduktionsanlagenbefriedi
        1        0   100.00   sohabendievorzugsak
        1        1     0.00   sonstigesteuern1215214057
@@ -858,7 +858,7 @@ Non-stopwords
        1        0   100.00   sonstigesteuern7215282718
        1        1     0.00   sowiesämtlicheniederlassungendieser
        1        0   100.00   sowieweitere
-      15        0   100.00   st
+      15        1    93.33   st
        1        0   100.00   staats
        3        0   100.00   stammaktien
        1        0   100.00   steine
@@ -912,7 +912,7 @@ Non-stopwords
        1        0   100.00   ultimo1956213
        1        0   100.00   umgestellt10
        1        0   100.00   umlaufvermögen2319120742
-       1        0   100.00   umlaufvermögen537858574620
+       1        1     0.00   umlaufvermögen537858574620
        1        0   100.00   umlaufvermögen6922070790
        1        0   100.00   umsatzerlöse21502582423689
        1        0   100.00   umsatzerlöse235732258352
@@ -943,7 +943,7 @@ Non-stopwords
        1        0   100.00   undösterreichinengeremverbund
        1        0   100.00   unterföh
        5        0   100.00   v
-      13        0   100.00   v.v
+      13        1    92.31   v.v
        1        0   100.00   verarbeitungundvertrieb
        1        0   100.00   vereinbarung
        1        0   100.00   vereinigtesaar

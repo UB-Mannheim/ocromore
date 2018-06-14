@@ -1,9 +1,6 @@
-from n_dist_keying.distance_storage import DistanceStorage
-from n_dist_keying.text_comparator import TextComparator
 from n_dist_keying.text_unspacer import TextUnspacer
 from n_dist_keying.n_distance_voter import NDistanceVoter
 import numpy as np
-from multi_sequence_alignment.msa_handler import MsaHandler
 from utils.random import Random
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
@@ -33,7 +30,7 @@ class OCRset:
         self._refspaced = False # indicates the set_lines was reference spaced
         self._text_unspacer = TextUnspacer()
         self.shortest_distance_line = None  # holder element for recognized shortest distance line
-        self._best_msa_text =""
+        self._best_msa_text = ""
         self._is_origin_database = False
         self._database_handler = None
         config_handler = ConfigurationHandler(first_init=False)

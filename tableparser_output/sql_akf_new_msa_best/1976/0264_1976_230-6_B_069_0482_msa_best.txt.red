@@ -16,7 +16,7 @@ Dr.-Ing.HeinrichNagel,Frankfurt(M),
 stellv.;
 Dr.jur.HaraldPeipers,Essen,stellv.
 Aufsichtsrat:
-Dipl.-Ing.Dr.-Ing.E.h.HelmutMeysen-
+Dipl.-Ing.Dr.-Ing.-Ing.E.h.HelmutMeysen-
 burg,Heiligenhaus,Vors.;
 AugustvonFinck,München,stellv.Vors.;
 PaulLichtenberg,Frankfurt(M),
@@ -35,7 +35,7 @@ HeinrichMandel,Essen
 Gründung:1875;AGseit1896
 Tätigkeitsgebiet:
 DieGesellschaft,einschließlichihrer
-SonderabteilungenundBeteiligungsgesell-l-
+SonderabteilungenundBeteiligungsgesell-
 schaften,betätigtsichimIn-undAusland
 aufallenGebietendesHoch-,Ingenieur-
 undTiefbaus;konventionelleKraftwerke
@@ -76,10 +76,10 @@ Kapital:DM20000.-(50%)
 HochtiefNassbaggergesellschaftmbH,
 Bremen
 Kapital:DM2000000.-(100%)
-"DEUMO2000"MontagebauGmbH&Co.
+"DEUMO2000"''MontagebauGmbH&Co.
 KG,Bremen
 Kapital:DM314819.-(46,66%)
-""'DEUMO2000''MontagebauGmbH,
+""'DEUMO2000'''MontagebauGmbH,
 Bremen
 Kapital:DM32000.-(43,75%)
 StreifFertigbauGmbH&Co.KG,
@@ -93,7 +93,7 @@ Düsseldorf
 Kapital:DM240000.-(4,17%)
 HochtiefChilenaLtda.,,Santiago
 Kapital:chilEsc10000.-(100%)
-HochtiefSoci&té&/Iranienne,Teheran
+HochtiefSoci&t&/Iranienne,Teheran
 Kapital:Rials5000000.-(100%)
 HochtiefdoBrasilSA,SäoPaulo
 Kapital:Cr$10000000.-(94%)
@@ -118,8 +118,8 @@ DM37200000.-,rechn.Abschlag
 DM111,33(14.8.),dividendenberechtigt
 ab1.1.1972,Div.Sch.Nr.25
 Bezugsrecht3:1zu100%auf
-DM46500000.-,rechn.WertDM94,67
-(14.8.),dividendenberechtigtab1.l..,
+DM4646500000.-,rechn.WertDM94,67
+(14.8.),dividendenberechtigtab1.1l.,
 Div.Sch.Nr.26
 Aktionäre:
 Rheinisch-WestfälischesElektrizitätswerk
@@ -169,4 +169,4 @@ Materialaufwand668471707143
 Personalaufwand463114459017
 Abschreibungen4985051798
 EEV-Steuern4711218027
-Jahresüberschuß142409940
+Jahresüberschußß142409940
