@@ -1,0 +1,6 @@
+[submodule "pysymspell"]
+	path = pysymspell
+	url = https://github.com/Hyper-Node/pysymspell
+[submodule "hocr-parser"]
+	path = hocr-parser
+	url = https://github.com/Hyper-Node/hocr-parser.git
