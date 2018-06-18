@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+        <head>
+            <title>OCR Results</title>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+            <meta name='AKF-OCR' content='msa-combined' />
+            <meta name='ocr-capabilities' content='ocr_line ocrx_word'/>
+        </head>
+        <body>
+            <div class='ocr_page' title='image None; bbox 0 0 2086 10064'>
+            <span class ='ocr_line' title='bbox 0 0 1060 10064' ><br/>
+                <span  class ='ocrx_word' title='bbox 0 0 1060 10064' ></span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 40 934 80' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 40 934 80' >Sitz: (24a) Hamburg 1, Steinstraße 20.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 109 736 143' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 109 736 143' >Fernruf: Sa.-Nr. 33 91 41.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 179 743 212' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 179 743 212' >Fernschreiber: 021 2158.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 257 344 288' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 257 344 288' >Vorstand:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 303 942 341' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 303 942 341' >Dr. -Ing. Dr. -Ing.E.h. Friedrich Lade-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 348 430 386' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 348 430 386' >mann, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 395 558 433' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 395 558 433' >Max Mross, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 440 623 480' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 440 623 480' >Walter Heinze, Hamburg.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 508 447 540' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 508 447 540' >Aufsichtsrat:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 554 734 594' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 554 734 594' >Ernst Plate, Hamburg, Vors.;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 599 1026 640' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 599 1026 640' >Hugo Scharnberg, Hamburg, 1. stellv.Vors.;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 653 900 693' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 653 900 693' >Franz Fock, Hamburg, 2. stellv. Vors.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 698 613 736' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 698 613 736' >(Arbeitnehmervertreter);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 745 868 784' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 745 868 784' >Dr. Günther von Berenberg-Gossler,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 792 277 829' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 792 277 829' >Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 837 710 876' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 837 710 876' >Dr. Kurt Glässing, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 882 957 921' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 882 957 921' >Wilhelm Joost, Hamburg (Arbeitnehmer-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 926 301 962' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 926 301 962' >vertreter);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 972 1005 1012' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 972 1005 1012' >Heinrich Mahler, Hamburg (Arbeitnehmer-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 1016 301 1053' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 1016 301 1053' >vertreter);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 1130 715 1171' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 1130 715 1171' >Dr. Joachim Riehle, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 47 1175 698 1216' ><br/>
+                <span  class ='ocrx_word' title='bbox 47 1175 698 1216' >Adolph Schönfelder, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 37 1221 674 1263' ><br/>
+                <span  class ='ocrx_word' title='bbox 37 1221 674 1263' >Wilhelm Schröder, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 38 1260 634 1309' ><br/>
+                <span  class ='ocrx_word' title='bbox 38 1260 634 1309' >Herbert Spiesen, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 1316 767 1357' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 1316 767 1357' >Franz Heinrich Ulrich, Hamburg;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 1362 896 1403' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 1362 896 1403' >Claus Wiebusch, Hamburg (von der Ge-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 1408 832 1448' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 1408 832 1448' >werkschaft gestellter Arbeitnehmer-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 1453 271 1490' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 1453 271 1490' >vertreter);</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 1500 937 1541' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 1500 937 1541' >Heinrich Wulff, Hamburg (Arbeitnehmer-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 1545 270 1579' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 1545 270 1579' >vertreter).</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 1615 472 1653' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 1615 472 1653' >Gründung: 1911.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 1697 527 1738' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 1697 527 1738' >Tätigkeitsgebiet:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 1742 936 1775' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 1742 936 1775' >Die Gesellschaft besitzt und betreibt z. Z.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 1788 793 1828' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 1788 793 1828' >folgende Verkehrsunternehmungen:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 1834 951 1874' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 1834 951 1874' >1. Die Hoch- und Untergrundbahn in Ham-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 1880 897 1919' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 1880 897 1919' >burg, bestehend aus einer Ringlinie mit</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 1926 923 1965' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 1926 923 1965' >Abzweigungen nach Eimsbüttel, Ohlsdorf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 1971 928 2012' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 1971 928 2012' >und Jungfernstieg. Bahnlänge 30, 049 km.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 2017 815 2053' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 2017 815 2053' >2. das Straßenbahnnetz 203,818 km.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 2063 914 2094' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 2063 914 2094' >3. die Personenschiffahrt auf der Alster</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 2108 930 2140' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 2108 930 2140' >im Sommer- und Winterverkehr mit zwei</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 2205 967 2244' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 2205 967 2244' >Linien und einer Fähre, Linienlänge 12,4</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 70 2251 960 2289' ><br/>
+                <span  class ='ocrx_word' title='bbox 70 2251 960 2289' >km. Die Schleppschiffahrt wird durch die</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 70 2298 856 2336' ><br/>
+                <span  class ='ocrx_word' title='bbox 70 2298 856 2336' >Firma Lütgens & Reimers mit ihren</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 71 2344 870 2383' ><br/>
+                <span  class ='ocrx_word' title='bbox 71 2344 870 2383' >eigenen Schleppfahrzeugen betrieben.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 2389 929 2428' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 2389 929 2428' >Die Gesellschaft erhält eine Abgabe von</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 70 2434 670 2473' ><br/>
+                <span  class ='ocrx_word' title='bbox 70 2434 670 2473' >der Bruttoschleppeinnahme;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 71 2481 968 2519' ><br/>
+                <span  class ='ocrx_word' title='bbox 71 2481 968 2519' >4. einen Autobusbetrieb von 17 Taglinien,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 2526 1008 2565' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 2526 1008 2565' >gesamte Streckenlänge 108,500 km, außer-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 72 2572 929 2608' ><br/>
+                <span  class ='ocrx_word' title='bbox 72 2572 929 2608' >dem Gesellschaftsfahrten; 2 Obuslinien,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 2618 261 2654' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 2618 261 2654' >13,6 km;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 73 2664 920 2695' ><br/>
+                <span  class ='ocrx_word' title='bbox 73 2664 920 2695' >5. der Obusbetrieb als neuer Betriebs-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 2710 859 2749' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 2710 859 2749' >zweig wurde nach Fertigstellung der</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 2755 916 2794' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 2755 916 2794' >ersten Baustrecke Harburg-Eissendorf</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 73 2802 253 2837' ><br/>
+                <span  class ='ocrx_word' title='bbox 73 2802 253 2837' >eröffnet;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 2847 1019 2879' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 2847 1019 2879' >6. die Walddörferbahn. Der Betrieb auf der</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 73 2893 978 2924' ><br/>
+                <span  class ='ocrx_word' title='bbox 73 2893 978 2924' >Strecke Barmbek-Volksdorf-Gross-Hans-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 2937 931 2972' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 2937 931 2972' >dorf und Volksdorf-Wohldorf (Staatliche</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 73 2984 922 3019' ><br/>
+                <span  class ='ocrx_word' title='bbox 73 2984 922 3019' >Walddörferbahn) wurde von der Gesell-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 3030 982 3068' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 3030 982 3068' >schaft während der Zeit vom 6. September</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 3076 948 3114' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 3076 948 3114' >1920 bis 31. März 1934 für Rechnung des</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 3122 966 3162' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 3122 966 3162' >Hamburgischen Staates geführt. Seit dem</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 3168 983 3207' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 3168 983 3207' >1. April 1934 führt die Gesellschaft diesen</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 3213 949 3253' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 3213 949 3253' >Betrieb mit Zuschußgewährung der Stadt</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 74 3260 1021 3300' ><br/>
+                <span  class ='ocrx_word' title='bbox 74 3260 1021 3300' >für eigene Rechnung. Bahnlänge 30,980 km.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 3306 893 3345' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 3306 893 3345' >7. die Langenhorner Bahn, Bahnlänge</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 3352 918 3389' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 3352 918 3389' >7,748 km. Der Betrieb auf der Strecke</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 3396 948 3435' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 3396 948 3435' >Ohlsdorf-Ochsenzoll (Staatliche Langen-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 75 3442 958 3478' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 3442 958 3478' >horner Bahn) wurde von der Gesellschaft</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 3489 885 3521' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 3489 885 3521' >während der Zeit vom 1.Juli 1921 bis</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 3534 974 3573' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 3534 974 3573' >22. Mai 1925 für Rechnung des Hamburgi-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 3580 911 3620' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 3580 911 3620' >schen Staates geführt. Seit dieser Zeit</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 76 3626 928 3658' ><br/>
+                <span  class ='ocrx_word' title='bbox 76 3626 928 3658' >führt die Gesellschaft diesen Betrieb in</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 77 3671 977 3704' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 3671 977 3704' >Tarifeinheit mit dem Hochbahnbetrieb für</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 3720 444 3759' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 3720 444 3759' >eigene Rechnung.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 3790 487 3829' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 3790 487 3829' >Beteiligungen:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 79 3837 876 3875' ><br/>
+                <span  class ='ocrx_word' title='bbox 79 3837 876 3875' >Hamburger Verkehrsmittel-Werbung</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 80 3883 441 3921' ><br/>
+                <span  class ='ocrx_word' title='bbox 80 3883 441 3921' >GmbH, Hamburg</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 3926 736 3967' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 3926 736 3967' >Kapital: DM 100 000. - (100 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 3997 867 4037' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 3997 867 4037' >Hanseatische Siedlungs-Gesellschaft</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 4045 410 4083' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 4045 410 4083' >mbH, Hamburg</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 4087 737 4129' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 4087 737 4129' >Kapital: DM 833 000. - (100 %)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 85 4154 931 4199' ><br/>
+                <span  class ='ocrx_word' title='bbox 85 4154 931 4199' >Zentral-Omnibusbahnhof '"'ZOB''" GmbH,</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 82 4205 274 4244' ><br/>
+                <span  class ='ocrx_word' title='bbox 82 4205 274 4244' >Hamburg</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 85 4248 385 4284' ><br/>
+                <span  class ='ocrx_word' title='bbox 85 4248 385 4284' >Beteil.: 51 %.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 84 4318 836 4358' ><br/>
+                <span  class ='ocrx_word' title='bbox 84 4318 836 4358' >Geschäftsjahr: Kalenderjahr.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 85 4387 990 4420' ><br/>
+                <span  class ='ocrx_word' title='bbox 85 4387 990 4420' >Stimmrecht d. Aktien i.d.H.-V.:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 85 4433 824 4473' ><br/>
+                <span  class ='ocrx_word' title='bbox 85 4433 824 4473' >Je DM 100.- jeder A-Aktie, jeder</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 4479 822 4519' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 4479 822 4519' >B-Stamm-Aktie und jeder C-Aktie</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 4527 339 4561' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 4527 339 4561' >= 1 Stimme;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 4571 934 4610' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 4571 934 4610' >die B-Vorzugsaktie = 156 480 Stimmen.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 4642 428 4672' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 4642 428 4672' >Zahlstellen:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 4687 293 4725' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 4687 293 4725' >Hamburg:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 88 4732 938 4767' ><br/>
+                <span  class ='ocrx_word' title='bbox 88 4732 938 4767' >Gesellschaftskasse; Norddeutsche Bank</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 4778 968 4816' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 4778 968 4816' >AG; Hamburgische Landesbank-Girozen-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 4823 945 4904' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 4823 945 4904' >trale; Hamburger Kreditbank AG; Com-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 4869 945 4904' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 4869 945 4904' >merz- und Disconto-Bank AG; Vereins-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 37 4963 930 5002' ><br/>
+                <span  class ='ocrx_word' title='bbox 37 4963 930 5002' >bank in Hamburg; Joh. Berenberg, Goss-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 38 5009 850 5045' ><br/>
+                <span  class ='ocrx_word' title='bbox 38 5009 850 5045' >ler & Co.; Brinckmann, Wirtz & Co.;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 38 5054 603 5090' ><br/>
+                <span  class ='ocrx_word' title='bbox 38 5054 603 5090' >Schröder Gebrüder & Co.;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 39 5101 187 5132' ><br/>
+                <span  class ='ocrx_word' title='bbox 39 5101 187 5132' >Berlin:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 40 5146 839 5182' ><br/>
+                <span  class ='ocrx_word' title='bbox 40 5146 839 5182' >Berliner Disconto Bank AG; Bank für</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 39 5191 909 5227' ><br/>
+                <span  class ='ocrx_word' title='bbox 39 5191 909 5227' >Handel und Industrie AG; Berliner Com-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 41 5238 910 5274' ><br/>
+                <span  class ='ocrx_word' title='bbox 41 5238 910 5274' >merzbank AG; Berliner Handels-Gesell-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 5283 181 5319' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 5283 181 5319' >schaft;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 5330 287 5361' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 5330 287 5361' >Düsseldorf:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 5376 834 5411' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 5376 834 5411' >Deutsche Bank AG West; Rhein-Ruhr</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 43 5421 920 5457' ><br/>
+                <span  class ='ocrx_word' title='bbox 43 5421 920 5457' >Bank AG; Commerzbank-Bankverein AG;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 5466 416 5501' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 5466 416 5501' >Frankfurt (Main):</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 5513 899 5549' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 5513 899 5549' >Süddeutsche Bank AG; Rhein-Main Bank</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 44 5559 833 5594' ><br/>
+                <span  class ='ocrx_word' title='bbox 44 5559 833 5594' >AG; Commerz- und Credit-Bank AG;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 45 5606 257 5636' ><br/>
+                <span  class ='ocrx_word' title='bbox 45 5606 257 5636' >Hannover:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 5651 923 5689' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 5651 923 5689' >Norddeutsche Bank AG; Hamburger Kre-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 46 5696 852 5732' ><br/>
+                <span  class ='ocrx_word' title='bbox 46 5696 852 5732' >ditbank AG; Commerz- und Disconto-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 5742 242 5777' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 5742 242 5777' >Bank AG;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 50 5788 244 5819' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 5788 244 5819' >München:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 48 5833 904 5869' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 5833 904 5869' >Süddeutsche Bank AG; Rhein-Main Bank</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 5879 838 5915' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 5879 838 5915' >AG; Commerz- und Credit-Bank AG.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 49 5948 831 5986' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 5948 831 5986' >Grundkapital: DM 69 035 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 51 5993 887 6032' ><br/>
+                <span  class ='ocrx_word' title='bbox 51 5993 887 6032' >Umstellung 10:6,4 durch H. -V.v.23.5.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 54 6040 899 6078' ><br/>
+                <span  class ='ocrx_word' title='bbox 54 6040 899 6078' >1951; lt. H.-V.Kapitalherabsetzung um</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 52 6085 255 6117' ><br/>
+                <span  class ='ocrx_word' title='bbox 52 6085 255 6117' >DM 200. -</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6131 619 6163' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6131 619 6163' >DM 36 008 600. - A-Aktien</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6177 620 6208' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6177 620 6208' >DM 21 961 600. - B-Aktien</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6223 620 6254' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6223 620 6254' >DM 10 898 400. - C-Aktien</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 54 6270 778 6307' ><br/>
+                <span  class ='ocrx_word' title='bbox 54 6270 778 6307' >DM 166 400. - B-Vorzugsaktie.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6348 409 6379' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6348 409 6379' >Börsennotiz:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 54 6393 883 6433' ><br/>
+                <span  class ='ocrx_word' title='bbox 54 6393 883 6433' >Hamburg, Berlin, Düsseldorf, Frank-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 53 6437 779 6475' ><br/>
+                <span  class ='ocrx_word' title='bbox 53 6437 779 6475' >furt, Hannover, München (amtl.).</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 54 6508 676 6547' ><br/>
+                <span  class ='ocrx_word' title='bbox 54 6508 676 6547' >Ordnungsnr.d.Aktien:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 57 6552 427 6587' ><br/>
+                <span  class ='ocrx_word' title='bbox 57 6552 427 6587' >82470 (A-Aktien).</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 55 6623 371 6662' ><br/>
+                <span  class ='ocrx_word' title='bbox 55 6623 371 6662' >Stückelung:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 57 6668 821 6700' ><br/>
+                <span  class ='ocrx_word' title='bbox 57 6668 821 6700' >33 000 Stücke A-Akt. zu DM 1 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 57 6715 821 6747' ><br/>
+                <span  class ='ocrx_word' title='bbox 57 6715 821 6747' >30 086 Stücke A-Akt. zu DM 100.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 58 6761 821 6792' ><br/>
+                <span  class ='ocrx_word' title='bbox 58 6761 821 6792' >21 760 Stücke B-Akt.zu DM 1 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 81 6806 821 6838' ><br/>
+                <span  class ='ocrx_word' title='bbox 81 6806 821 6838' >2 016 Stücke C-Akt. zu DM 100.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 59 6853 822 6884' ><br/>
+                <span  class ='ocrx_word' title='bbox 59 6853 822 6884' >10 898 Stücke C-Akt. zu DM 1 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 170 6898 823 6930' ><br/>
+                <span  class ='ocrx_word' title='bbox 170 6898 823 6930' >4 Stücke C-Akt. zu DM 100. -</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 173 6945 1014 6976' ><br/>
+                <span  class ='ocrx_word' title='bbox 173 6945 1014 6976' >1 Stück B-Vorz. -Akt.zu DM 166 400.-.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 57 7013 878 7045' ><br/>
+                <span  class ='ocrx_word' title='bbox 57 7013 878 7045' >Sämtliche Stammaktien sind lieferbar.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 59 7121 448 7153' ><br/>
+                <span  class ='ocrx_word' title='bbox 59 7121 448 7153' >Großaktionär:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 61 7165 881 7205' ><br/>
+                <span  class ='ocrx_word' title='bbox 61 7165 881 7205' >Freie und Hansestadt Hamburg (sämt-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 61 7211 890 7243' ><br/>
+                <span  class ='ocrx_word' title='bbox 61 7211 890 7243' >liche B- und C-Aktien und die B-Vorz.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 60 7258 844 7296' ><br/>
+                <span  class ='ocrx_word' title='bbox 60 7258 844 7296' >Akt. sowie A-Aktien im Betrage von</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 62 7303 425 7337' ><br/>
+                <span  class ='ocrx_word' title='bbox 62 7303 425 7337' >DM5921000.-).</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 61 7373 321 7405' ><br/>
+                <span  class ='ocrx_word' title='bbox 61 7373 321 7405' >Anleihen:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 62 7414 812 7459' ><br/>
+                <span  class ='ocrx_word' title='bbox 62 7414 812 7459' >6 1/2 % Teilschuldverschreibungen</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 60 7464 242 7494' ><br/>
+                <span  class ='ocrx_word' title='bbox 60 7464 242 7494' >von 1950</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 62 7510 819 7553' ><br/>
+                <span  class ='ocrx_word' title='bbox 62 7510 819 7553' >Emissionsbetrag: DM 10 000 000.-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 62 7572 804 7620' ><br/>
+                <span  class ='ocrx_word' title='bbox 62 7572 804 7620' >4 1/2 % Amerika-Anleihe von 1928</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 63 7622 778 7664' ><br/>
+                <span  class ='ocrx_word' title='bbox 63 7622 778 7664' >Emissionsbetrag: $ 8 000 000.-.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 88 7718 442 7748' ><br/>
+                <span  class ='ocrx_word' title='bbox 88 7718 442 7748' >Aktienkurse:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 87 7761 691 7817' ><br/>
+                <span  class ='ocrx_word' title='bbox 87 7761 691 7817' >ultimo 1948 18,‚25 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 122 7805 691 7843' ><br/>
+                <span  class ='ocrx_word' title='bbox 122 7805 691 7843' >1 1949 59 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 122 7851 691 7892' ><br/>
+                <span  class ='ocrx_word' title='bbox 122 7851 691 7892' >. 1950 41 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 122 7896 691 7934' ><br/>
+                <span  class ='ocrx_word' title='bbox 122 7896 691 7934' >1951 58 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 122 7942 691 7980' ><br/>
+                <span  class ='ocrx_word' title='bbox 122 7942 691 7980' >1952 67 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 122 7987 691 8026' ><br/>
+                <span  class ='ocrx_word' title='bbox 122 7987 691 8026' >1953 73 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 122 8033 691 8072' ><br/>
+                <span  class ='ocrx_word' title='bbox 122 8033 691 8072' >" 1954 96,5 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 122 8079 691 8119' ><br/>
+                <span  class ='ocrx_word' title='bbox 122 8079 691 8119' >1955 91,5 %</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 90 8127 744 8164' ><br/>
+                <span  class ='ocrx_word' title='bbox 90 8127 744 8164' >10.Okt. 1956 81,5 % +)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 86 8198 648 8232' ><br/>
+                <span  class ='ocrx_word' title='bbox 86 8198 648 8232' >+) Kurs für DM-Nennwert.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 88 8266 803 8297' ><br/>
+                <span  class ='ocrx_word' title='bbox 88 8266 803 8297' >Dividenden auf A-Aktien:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8309 831 8352' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8309 831 8352' >1948/49: 7,64 % (Div.Sch.Nr. 39)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8355 832 8392' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8355 832 8392' >1950: 5 % (Div.Sch.Nr. 40)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8402 832 8438' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8402 832 8438' >1951: 5 % (Div.Sch.Nr. 41)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8448 831 8484' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8448 831 8484' >1952: 5 % (Div.Sch.Nr. 42)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8493 831 8529' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8493 831 8529' >1953: 5 % (Div.Sch.Nr. 43)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8540 831 8576' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8540 831 8576' >1954: 5 % (Div.Sch.Nr. 44)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8585 831 8621' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8585 831 8621' >1955:5 % (Div.Sch.Nr. 45)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 89 8656 623 8695' ><br/>
+                <span  class ='ocrx_word' title='bbox 89 8656 623 8695' >Zur Geschäftslage:</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 88 8701 798 8740' ><br/>
+                <span  class ='ocrx_word' title='bbox 88 8701 798 8740' >Zunahme der Verkehrsnachfrage.</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 259 8798 743 8828' ><br/>
+                <span  class ='ocrx_word' title='bbox 259 8798 743 8828' >Aus den Bilanzen</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 469 8866 980 8898' ><br/>
+                <span  class ='ocrx_word' title='bbox 469 8866 980 8898' >31.12.1954 31.12.1955</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 595 8910 875 8945' ><br/>
+                <span  class ='ocrx_word' title='bbox 595 8910 875 8945' >(in 1 000 DM)</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 35 8980 927 9020' ><br/>
+                <span  class ='ocrx_word' title='bbox 35 8980 927 9020' >Anlagevermögen 112 557 115 998</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 36 9025 925 9064' ><br/>
+                <span  class ='ocrx_word' title='bbox 36 9025 925 9064' >Umlaufvermögen 23 232 24 482</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 70 9071 264 9106' ><br/>
+                <span  class ='ocrx_word' title='bbox 70 9071 264 9106' >(darunter</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 68 9116 924 9148' ><br/>
+                <span  class ='ocrx_word' title='bbox 68 9116 924 9148' >Vorräte 7617 7585</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 70 9162 925 9202' ><br/>
+                <span  class ='ocrx_word' title='bbox 70 9162 925 9202' >Lieferforderungen 921 892</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 68 9208 922 9242' ><br/>
+                <span  class ='ocrx_word' title='bbox 68 9208 922 9242' >Barmittel) 8 292 4 241</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 36 9254 926 9293' ><br/>
+                <span  class ='ocrx_word' title='bbox 36 9254 926 9293' >Eigenkapital 83 149 82 992</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 71 9299 923 9334' ><br/>
+                <span  class ='ocrx_word' title='bbox 71 9299 923 9334' >(davon A. -K.) 69 035 69 035</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 38 9345 923 9384' ><br/>
+                <span  class ='ocrx_word' title='bbox 38 9345 923 9384' >Fremdkapital 68 870 57 435</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 36 9391 924 9430' ><br/>
+                <span  class ='ocrx_word' title='bbox 36 9391 924 9430' >Gewinn nach Vortrag 30 53</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 36 9530 893 9561' ><br/>
+                <span  class ='ocrx_word' title='bbox 36 9530 893 9561' >Aus den Gewinn- und Verlust-</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 301 9577 608 9616' ><br/>
+                <span  class ='ocrx_word' title='bbox 301 9577 608 9616' >rechnungen</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 37 9644 925 9683' ><br/>
+                <span  class ='ocrx_word' title='bbox 37 9644 925 9683' >Abschreibungen 12 124 13 183</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 37 9690 925 9721' ><br/>
+                <span  class ='ocrx_word' title='bbox 37 9690 925 9721' >Steuern 1 937 2 245</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 36 9735 924 9766' ><br/>
+                <span  class ='ocrx_word' title='bbox 36 9735 924 9766' >Jahreseinnahmen 84 230 93 105</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 37 9781 922 9821' ><br/>
+                <span  class ='ocrx_word' title='bbox 37 9781 922 9821' >Beteiligungserträge 10 11</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 685 9988 1384 10035' ><br/>
+                <span  class ='ocrx_word' title='bbox 685 9988 1384 10035' >Basalt-Actien-Gesellschaft</span > 
+            </span>
+		</div>
+	</body>
+</html>

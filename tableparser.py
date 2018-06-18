@@ -6,7 +6,7 @@ from os import listdir
 from os.path import isfile, join
 import os
 import shutil
-from machine_learning_components.special_character_predictor import SpecialCharPredictor
+from vocabulary_checker.vocabulary_checker import VocabularyChecker
 
 
 class TableParser(object):
@@ -19,6 +19,17 @@ class TableParser(object):
             dbpath = config.DB_DIR_VOTER
         else:
             dbpath = config.DB_DIR_READER
+
+        self.vocab_checker = None
+        if config.KEYING_RESULT_VOCABULARY_CORRECTION_POST or config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
+            # initialize spellchecker, if one of the vote modes is active
+            self.vocab_checker = VocabularyChecker()
+            self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH,
+                                                config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
+            self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH_2,
+                                                    config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
+
+            self.vocab_checker.initialize_spellchecker()
 
         self._base_db_dir = os.path.basename(os.path.normpath(dbpath))
 
@@ -94,12 +105,20 @@ class TableParser(object):
 
         predictor = None
         if self._config.PREDICTOR_AUFSICHTSRAT_ENABLED:
+            from machine_learning_components.special_character_predictor import SpecialCharPredictor
             predictor = SpecialCharPredictor()
             predictor.load_prediction_model()
 
         dataframe_wrapper = DFObjectifier(dbdir_abs, table)
-        database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS, predictor)
+        database_handler = DatabaseHandler(dataframe_wrapper, self._config.NUMBER_OF_INPUTS, predictor, self.vocab_checker)
+
+
         ocr_comparison = database_handler.create_ocr_comparison(predictor=predictor)
+
+        if self._config.KEYING_RESULT_VOCABULARY_CORRECTION_POST or self._config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
+            # hand over vocabulary checker if spellchecking is enabled
+            ocr_comparison.set_vocabulary_checker(self.vocab_checker)
+
         ocr_comparison.sort_set()
         # print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
         # ocr_comparison.print_sets(False)
@@ -147,6 +166,12 @@ class TableParser(object):
                                            self._config.MSA_BEST_USE_WORDWISE_MSA,
                                            self._config.MSA_BEST_USE_SEARCHSPACE,
                                            self._config.KEYING_RESULT_POSTCORRECTION)
+
+
+
+            if self._config.KEYING_RESULT_VOCABULARY_CORRECTION_POST:
+                ocr_comparison.do_vocabulary_correction()
+
 
             if self._config.KEYING_RESULT_POSTCORRECTION:
                 ocr_comparison.do_postcorrection(True,postcorrect_msa=True)

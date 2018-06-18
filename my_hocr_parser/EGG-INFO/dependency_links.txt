@@ -1,1 +1,0 @@
-bzr+lp:beautifulsoup#egg=beautifulsoup-4.0

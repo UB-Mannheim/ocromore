@@ -2,7 +2,6 @@ from configuration.configuration_handler import ConfigurationHandler
 from utils.conditional_print import ConditionalPrint
 
 
-from random import randint
 from pickle import load
 from keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences
@@ -24,8 +23,8 @@ class SpecialCharPredictor():
         # load model and tokenizer for aufsichtsrat prediction
         self.model_aufsichtsrat = load_model(self.config.PREDICTOR_AUFSICHTSRAT_MODEL)
         self.tokenizer_aufsichtsrat = load(open(self.config.PREDICTOR_AUFSICHTSRAT_TOKENIZER, 'rb'))
-        self.generate_prediction_seq(self.model_aufsichtsrat, self.tokenizer_aufsichtsrat, 19,'jens ƿ sturm ƿ ( arbeitnehmervertreter ) aufsichtsrat : bernhard ƿ garbe ƿ ( vors . ) , ƿ hamburg',1)
-        self.generate_prediction_seq(self.model_aufsichtsrat, self.tokenizer_aufsichtsrat, 19,'jens ƿ sturm ƿ ( arbeitnehmervertreter ) aufsichtsrat :',1)
+        # self.generate_prediction_seq(self.model_aufsichtsrat, self.tokenizer_aufsichtsrat, 19, 'jens ƿ sturm ƿ ( arbeitnehmervertreter ) aufsichtsrat : bernhard ƿ garbe ƿ ( vors . ) , ƿ hamburg',1)
+        # self.generate_prediction_seq(self.model_aufsichtsrat, self.tokenizer_aufsichtsrat, 19, 'jens ƿ sturm ƿ ( arbeitnehmervertreter ) aufsichtsrat :',1)
 
 
     def generate_prediction_seq(self, model, tokenizer, seq_length, seed_text, n_words):

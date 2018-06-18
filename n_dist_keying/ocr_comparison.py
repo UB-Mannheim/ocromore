@@ -16,7 +16,7 @@ class OCRcomparison:
         Storage class for multiple Ocr_Sets
     """
 
-    def __init__(self, predictor = None):
+    def __init__(self, predictor = None, vocabulary_checker = None):
         self.ocr_sets = []
         self.line_height_information = []
         config_handler = ConfigurationHandler(first_init=False)
@@ -25,6 +25,7 @@ class OCRcomparison:
                                     self.config.PRINT_WARNING_LEVEL)
 
         self.predictor = predictor
+        self.vocabulary_checker = vocabulary_checker
 
     def load_predictor(self, predictor):
         self.predictor = predictor
@@ -37,6 +38,9 @@ class OCRcomparison:
 
     def set_dataframe_wrapper(self, dataframe_wrapper):
         self._dataframe_wrapper = dataframe_wrapper
+
+    def set_vocabulary_checker(self, vocabulary_checker):
+        self.vocabulary_checker = vocabulary_checker
 
     def sort_set(self):
         """
@@ -375,6 +379,63 @@ class OCRcomparison:
                 return_list.append(sd_line)
 
         return return_list
+
+
+    def do_vocabulary_correction(self):
+        store_last_entry = None
+        for current_set in self.ocr_sets:
+            msa_best_text = current_set.get_msa_best_text()
+            msa_best_text_corrected = ""
+            msa_best_ttokenized = msa_best_text.split()
+
+            len_tokens = len(msa_best_ttokenized)
+            for word_index, word in enumerate(msa_best_ttokenized):
+                #if "Tee" in word:
+                #    print("asd")
+
+                if self.config.KEYING_RESULT_VC_IGNORE_SEPERATE_WRITING_CORRECTION:
+                    if store_last_entry != None:
+                        # don't correct first follow up line word to seperation word
+                        store_last_entry = None
+                        msa_best_text_corrected += " " + word
+                        continue
+
+                    if len_tokens-1 == word_index:
+                        tdash = self.vocabulary_checker.word_trails_with_dash(word)
+                        if tdash:
+                            store_last_entry = word
+                            msa_best_text_corrected += " " + word
+                            continue
+
+                word_wo_sc, ratio = self.vocabulary_checker.without_special_chars(word)
+                if ratio == 0 or len(word_wo_sc) <= 2:
+                    msa_best_text_corrected += " " + word
+                    continue
+
+                word_wb, bstart, btrail, changeb = self.vocabulary_checker.remove_and_give_borders(word)
+                if changeb:
+                    word_correct_vc, suggestions, first_letter_high = self.vocabulary_checker.correct_text(word_wb)
+                    if word_correct_vc is None:
+                        word_correct = word
+                    else:
+                        word_correct = bstart + word_correct_vc + btrail
+                else:
+                    word_correct, suggestions, first_letter_high = self.vocabulary_checker.correct_text(word)
+
+                if word_correct is None:
+                    msa_best_text_corrected += " " + word
+                else:
+                    msa_best_text_corrected += " " + word_correct
+
+            msa_best_text_corrected = msa_best_text_corrected.lstrip(" ")
+
+            if self.config.KEYING_RESULT_VC_PRINTDIFF and msa_best_text_corrected != msa_best_text:
+                print("vocab in :", msa_best_text)
+                print("vocab out:", msa_best_text_corrected)
+
+            current_set.set_msa_best_text(msa_best_text_corrected)
+
+
 
     def do_postcorrection(self, postcorrect_keying=False, postcorrect_ndist=False,
                           postcorrect_msa=False , postcorrect_other=False,

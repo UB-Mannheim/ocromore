@@ -1,5 +1,7 @@
 import os
-from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
+
+
+from hocr_parser.src.hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
 from utils.abbyyXML_parser import get_xml_document
 import pandas as pd
 

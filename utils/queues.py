@@ -61,6 +61,14 @@ class Filo(Stack):
             if size_difference > 1:
                 print("Filo: More then one item was popped, shouldn't happen!")
 
+    def pop_multi(self, number):
+        accumulated_pop = []
+        for i in range(0,number):
+            popped =  self.items.popleft()
+            accumulated_pop.append(popped)
+
+
+        return accumulated_pop
 
 
 class Ranged_Filo(Filo):

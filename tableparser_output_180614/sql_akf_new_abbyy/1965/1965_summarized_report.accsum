@@ -1,0 +1,423 @@
+UNLV-ISRI OCR Accuracy Report Version 6.1
+-----------------------------------------
+   17570   Characters
+    5958   Errors
+   66.09%  Accuracy
+
+       0   Reject Characters
+       2   Suspect Markers
+       1   False Marks
+    0.01%  Characters Marked
+   66.11%  Accuracy After Correction
+
+     Ins    Subst      Del   Errors
+       1        2        0        3   Marked
+    5784      142       29     5955   Unmarked
+    5785      144       29     5958   Total
+
+   Count   Missed   %Right
+       3        3     0.00   Unassigned
+     698      220    68.48   ASCII Spacing Characters
+    2107      962    54.34   ASCII Special Symbols
+    2743     1158    57.78   ASCII Digits
+    1718      597    65.25   ASCII Uppercase Letters
+   10074     2919    71.02   ASCII Lowercase Letters
+       1        1     0.00   Latin1 Special Symbols
+       2        2     0.00   Latin1 Uppercase Letters
+     223       66    70.40   Latin1 Lowercase Letters
+       1        1     0.00   General Punctuation
+   17570     5929    66.25   Total
+
+  Errors   Marked   Correct-Generated
+     198        0   {pannungsnetzeineVielzahl...}-{}
+     189        0   {Kapital:DM12000000.-(üb...}-{}
+     159        0   {von34,763MrdkWhimVorjahr...}-{}
+     155        0   {HannsSinzig,Altenkirchen...}-{}
+     119        0   {302000Inh.-Vorz.-Akt.zuj...}-{}
+     114        0   {Kapital:DM23250000.-(üb...}-{}
+     109        0   {7.stellv.Vors.;<\n>Dr.Dr...}-{}
+      99        0   {<FEFF><\n>Rheinisch-West...}-{}
+      98        0   {Grundkapital:DM960000000...}-{}
+      95        0   {Beteiligungen:<\n>Gewerk...}-{}
+      92        0   {5,6,6,6,6,6%<\n>Schluchs...}-{}
+      92        0   {Tochterunternehmenum-...}-{}
+      86        0   {BayerischeHypotheken-und...}-{}
+      84        0   {;<\n>BerlinerDiscontoBan...}-{}
+      80        0   {<FEFF>AGROBAKTIENGESELLS...}-{}
+      73        0   {Höchst<\n>Kapital:DM280...}-{}
+      70        0   {Div.Sch.Nr.17<\n>ZurGesc...}-{}
+      68        0   {RheinischeBraunkohlenwer...}-{}
+      66        0   {Jenom.DM100.-St.-Akt.=1S...}-{}
+      66        0   {Kapital:DM31500000.-(üb...}-{}
+      66        0   {dBankfirmen;fernereineAn...}-{}
+      60        0   {.<\n>H.-V.v.27.10.1959au...}-{}
+      59        0   {zitätswerkeAG,Augsburg...}-{}
+      53        0   {1960:St.-Akt.i.V.4:1zu15...}-{}
+      52        0   {1961:St.-Akt.i.V.8:1zu25...}-{}
+      52        0   {30000000.-(331/3%)<\n>Di...}-{}
+      51        0   {Stimmrechtd.Aktieni.d.H....}-{}
+      50        0   {61/2%bzw.51/2%Teilschuld...}-{S}
+      50        0   {WestfalenbankAG,Bochum;...}-{}
+      50        0   {brücken<\n>Kapital:DM60...}-{}
+      49        0   {Vorz.-Akt.i.V.4:1zu120%;...}-{}
+      49        0   {Vorz.-Akt.i.V.8:1zu250%;...}-{}
+      48        0   {Aufsichtsrat:<\n>Dr.h.c....}-{}
+      46        0   {uern7215282718<\n>Umsatz...}-{}
+      45        0   {entlicheTeilederBundesl...}-{}
+      45        0   {trale-,Hannover;<\n>Sal....}-{}
+      43        0   {EEV-Steuernu.LAG<\n>Sons...}-{}
+      40        0   {burg<\n>Kapital:lfrs.125...}-{}
+      39        0   {11)<\n>1960/61u.1961/62:...}-{}
+      39        0   {51/2%Teilschuldverschrei...}-{}
+      39        0   {ruf:<\n>Sa.-Nr.20191(Hau...}-{}
+      37        0   {327%<\n>"1961287%<\n>"19...}-{}
+      37        0   {Stückelung:<\n>851125In...}-{}
+      36        0   {,<\n>Waldshut(Baden)<\n>...}-{}
+      36        0   {b1958:10,12,13,14,14,14%...}-{}
+      35        0   {6%Teilschuldverschreibun...}-{}
+      34        0   {Idar-Oberstein<\n>Kapita...}-{}
+      33        0   {denab1958:12,13,13,15,15...}-{}
+      32        0   {Kapital:can.$2900000.-(...}-{}
+      32        0   {len,Rheinland-PfalzundNi...}-{}
+      31        0   {-}-{¬}
+      31        0   {1955:i.V.4:1zu130%;Absch...}-{}
+      31        0   {;<\n>ProfessorDr.Dr.Hein...}-{}
+      31        0   {Emissionsbetrag:RM112000...}-{}
+      31        0   {Inh.-Namens-Akt.zujeDM10...}-{}
+      31        0   {St.-Akt.zujeDM1000.-<\n>...}-{}
+      31        0   {oblenz<\n>Kapital:DM1200...}-{}
+      30        0   {10500000.-(über25%)<\n>...}-{}
+      30        0   {30.6.196230.6.1963<\n>(i...}-{}
+      30        0   {Kapital:can.$225125.-(23...}-{}
+      30        0   {Werke:SinzigamRhein;Ehra...}-{}
+      30        0   {ndenab1958:11.25,11.7;ab...}-{}
+      29        0   {8400Inh.-St-Akt.zujeDM10...}-{}
+      29        0   {Emissionsbetrag:DM100000...}-{}
+      29        0   {ng2:1durchH.-V.v.26.5.19...}-{}
+      29        0   {v.20.9.1955aufDM42800000...}-{}
+      28        0   {DividendenautStammaktien...}-{11}
+      28        0   {Grunelius&Co.,Frankfurt(...}-{}
+      28        0   {Vorz.-Akt.i.V.4:1zu150%;...}-{}
+      27        0   {1959/60:13%+3,25%Ausglei...}-{}
+      27        0   {72000Inh.-Akt.zujeDM1000...}-{}
+      27        0   {Abschreibungen3209633619...}-{}
+      27        0   {Eigenkapital124972215068...}-{}
+      27        0   {Fremdkapital158642616380...}-{}
+      27        0   {bank,Düsseldorf;<\n>Saa...}-{}
+      27        0   {ichKost,Homberg<\n>(Nied...}-{}
+      27        0   {undWasser,<\n>DasElektri...}-{}
+      26        0   {Grundkapital:DM13350000....}-{}
+      26        0   {Kapital:DM1500000.-(100%...}-{}
+      26        0   {pital:DM77000000.-<\n>Um...}-{}
+      25        0   {apital:DM1000000.-(80%)...}-{}
+      24        0   {;(Notizex<\n>BA}-{}
+      24        0   {Kapital:£300005.-(100%)...}-{}
+      24        0   {b1958:6,6.5,7,7,7,7%<\n>...}-{}
+      23        0   {hGreinert,Essen;<\n>Helm...}-{*}
+      22        0   {(in1000DM)<\n>}-{}
+      22        0   {Fernschreiber:0211239...}-{}
+      22        0   {Inh.-Vorz.-Akt.zujeDM1}-{}
+      22        0   {Jenom.DM100.-=1Stimme...}-{}
+      22        0   {M18000000.-(über50%)...}-{}
+      22        0   {tiertenVorzugsaktien:...}-{}
+      21        0   {Akt.i.V.4:1zu120%;Ab-}-{}
+      21        0   {Wertpapier-Kenn-Nr.:<\n>}-{}
+      21        0   {dorf,6.stellv.Vors.;<\n>}-{}
+      20        0   {"}-{}
+      20        0   {59:13%(Div.Sch.Nr.9)}-{o}
+      20        0   {<FEFF>PHRIX-WERKEAKTIENG...}-{}
+      20        0   {Wertpapier-Kenn-Nr.:}-{}
+      19        0   {365%3477/8%<\n>"195961}-{}
+      18        0   {AG,Rheydt<\n>Kapital:}-{}
+      18        0   {M10000000.-(50%)<\n>D}-{}
+      18        0   {RWEausseinemumfang}-{?}
+      18        0   {Tätigkeitsgebiet:<\n>}-{}
+      18        0   {ZurGeschäftslage:<\n>}-{}
+      18        0   {inihremBesitzbefin}-{}
+      18        0   {nausschluß-<\n>verein}-{}
+      18        0   {undlang-<\n>fristiger}-{}
+      17        0   {;<\n>National-BankAG}-{}
+      17        0   {Vorstand:<\n>Dr.h.c.}-{}
+      17        0   {Vorz.-Akt.i.V.4:1}-{}
+      16        0   {lschaftsmit-<\n>tel}-{}
+      15        0   {%<\n>"19}-{}
+      15        0   {,Saarbrücken;<\n>C}-{}
+      15        0   {0%ab1959/60:<\n>11}-{}
+      15        0   {1961/621962/63<\n>}-{}
+      15        0   {50%)<\n>Dividenden}-{}
+      15        0   {St.-Akt.i.V.4:1}-{}
+      15        0   {endieser<\n>Banken}-{}
+      15        0   {ki,Bergheim(Erf}-{}
+      15        0   {v.Sch.Nr.15u.16}-{l}
+      14        0   {Gründung:1941<\n>}-{}
+      14        0   {burg<\n>Kapital:D}-{}
+      14        0   {nter-<\n>nehmenin}-{}
+      13        0   {);<\n>WilliKowal}-{}
+      13        0   {;<\n>Dr.OttoKorn}-{}
+      13        0   {Börsennotiz:<\n>}-{}
+      13        0   {heKreditbankA}-{}
+      13        0   {vereinbarung)}-{¬}
+      12        0   {"}-{ti}
+      12        0   {5%+)<\n>"195711}-{}
+      12        0   {Anleihen:<\n>4%}-{}
+      12        0   {Essen;}-{}
+      12        0   {beliefertdas}-{}
+      11        0   {);<\n>Dr.Ernst}-{}
+      11        0   {;<\n>EugenMork}-{}
+      11        0   {ELLSCHAFT<\n>S}-{}
+      11        0   {eichenHöchs}-{}
+      11        0   {fast100%)<\n>(}-{}
+      11        0   {ganschaftsv}-{}
+      11        0   {mUmfangaufG}-{}
+      10        0   {(darunter<\n>}-{}
+      10        0   {-(über50%)}-{}
+      10        0   {:<\n>1955:St.}-{}
+      10        0   {chtd.Aktie}-{}
+      10        0   {i.d.H.-V.:}-{}
+      10        0   {k-Girozen-}-{}
+       9        0   {,25%<\n>"196}-{}
+       9        0   {-<\n>undHoch}-{}
+       9        0   {331,5%<\n>"1}-{}
+       9        0   {Kapital:D}-{}
+       8        0   {"1956208}-{}
+       8        0   {-}-{}
+       8        0   {.h,.Hein}-{}
+       8        0   {0.-<\n>2000}-{}
+       8        0   {589,5%<\n>"}-{••}
+       8        0   {;}-{,}
+       8        0   {Düren);<\n>}-{}
+       8        0   {Kapital:}-{}
+       8        0   {Verlust-}-{}
+       8        0   {ammak-<\n>t}-{}
+       8        0   {endieSti}-{}
+       8        0   {m}-{rn}
+       7        0   {"195915}-{}
+       7        0   {"196260}-{}
+       7        0   {(Ruhr);}-{}
+       7        0   {.}-{}
+       7        0   {1953135}-{}
+       7        0   {5%+)<\n>"1}-{}
+       7        0   {963609%}-{,}
+       7        0   {Aachen;}-{}
+       7        0   {Berlin;}-{}
+       7        0   {Höhevon}-{}
+       7        0   {Sonstig}-{R}
+       7        0   {Vors.;<\n>}-{}
+       6        0   {"19562}-{ti}
+       6        0   {%<\n>1958}-{}
+       6        0   {,}-{.}
+       6        0   {00.-<\n>4}-{}
+       6        0   {0868%8}-{}
+       6        0   {194,5%}-{}
+       6        0   {200%<\n>"}-{ii}
+       6        0   {232500}-{}
+       6        0   {36,25%}-{}
+       6        0   {551,5%}-{}
+       6        0   {7%<\n>"19}-{}
+       6        0   {8%206%}-{5}
+       6        0   {958:0,}-{}
+       6        0   {Grundk}-{}
+       6        0   {ZurGes}-{}
+       6        0   {ivi-<\n>d}-{}
+       6        0   {rtragm}-{}
+       5        0   {-Ing.}-{}
+       5        0   {0<\n>692}-{}
+       5        0   {148,5}-{}
+       5        0   {86%<\n>"}-{}
+       5        0   {RWEun}-{}
+       5        0   {tGewi}-{}
+       5        0   {z.-Ak}-{}
+       4        0   {%672}-{9}
+       4        0   {%}-{7o}
+       4        0   {%}-{}
+       4        0   {,}-{}
+       4        0   {-und}-{}
+       4        0   {1955}-{}
+       4        0   {226,}-{}
+       4        0   {5455}-{}
+       4        0   {8100}-{}
+       4        0   {l}-{i}
+       4        0   {urse}-{i}
+       3        3   {für}-{r"}
+       3        0   {"19}-{}
+       3        0   {%<\n>"}-{}
+       3        0   {%}-{°lo}
+       3        0   {,Ga}-{}
+       3        0   {110}-{HO}
+       3        0   {14%}-{/»}
+       3        0   {172}-{}
+       3        0   {192}-{}
+       3        0   {194}-{}
+       3        0   {196}-{3}
+       3        0   {196}-{}
+       3        0   {41,}-{}
+       3        0   {421}-{313}
+       3        0   {7/5}-{}
+       3        0   {:}-{;}
+       3        0   {AG,}-{}
+       3        0   {Es-}-{}
+       3        0   {Sti}-{}
+       3        0   {ine}-{}
+       3        0   {ini}-{tof}
+       3        0   {mit}-{}
+       3        0   {roß}-{}
+       3        0   {run}-{s}
+       3        0   {ung}-{}
+       3        0   {}-{<\n>}
+       2        0   {"}-{ri}
+       2        0   {"}-{»i}
+       2        0   {-<\n>}-{}
+       2        0   {0,}-{}
+       2        0   {01}-{}
+       2        0   {06}-{}
+       2        0   {11}-{n}
+       2        0   {19}-{}
+       2        0   {1}-{}
+       2        0   {4}-{}
+       2        0   {55}-{}
+       2        0   {61}-{}
+       2        0   {80}-{}
+       2        0   {:}-{<\n>•}
+       2        0   {<\n>"}-{}
+       2        0   {G.}-{}
+       2        0   {G;}-{L,}
+       2        0   {II}-{11}
+       2        0   {II}-{H}
+       2        0   {Vo}-{Ai}
+       2        0   {ch}-{}
+       2        0   {d}-{ci}
+       2        0   {id}-{}
+       2        0   {il}-{ü}
+       2        0   {in}-{m}
+       2        0   {i}-{l}
+       2        0   {kf}-{W}
+       2        0   {l}-{}
+       2        0   {l’}-{1*}
+       2        0   {mr}-{}
+       2        0   {nn}-{im}
+       2        0   {r.}-{l\}
+       2        0   {se}-{}
+       2        0   {s}-{S}
+       2        0   {ul}-{L}
+       2        0   {v.}-{}
+       2        0   {}-{*}
+       2        0   {}-{•<\n>}
+       2        0   {é}-{d}
+       1        0   {"}-{%}
+       1        0   {)}-{1}
+       1        0   {.}-{,}
+       1        0   {0}-{}
+       1        0   {2}-{}
+       1        0   {5}-{4}
+       1        0   {5}-{}
+       1        0   {9}-{}
+       1        0   {:}-{.}
+       1        0   {;}-{»}
+       1        0   {<\n>}-{}
+       1        0   {B}-{i}
+       1        0   {R}-{H}
+       1        0   {S}-{}
+       1        0   {c}-{e}
+       1        0   {d}-{}
+       1        0   {g}-{e}
+       1        0   {i}-{r}
+       1        0   {i}-{t}
+       1        0   {n}-{}
+       1        0   {n}-{„}
+       1        0   {s}-{}
+       1        0   {u}-{a}
+       1        0   {z}-{Z}
+       1        0   {}-{;}
+       1        0   {}-{i}
+       1        0   {}-{’}
+       1        0   {}-{■}
+       1        0   {ä}-{a}
+       1        0   {é}-{ö}
+       1        0   {ö}-{o}
+
+   Count   Missed   %Right
+     698      220    68.48   {<\n>}
+      51       51     0.00   {"}
+       2        2     0.00   {$}
+     169       93    44.97   {%}
+      13        3    76.92   {&}
+     127       46    63.78   {(}
+     138       46    66.67   {)}
+      14        4    71.43   {+}
+     323      129    60.06   {,}
+     323      167    48.30   {-}
+     604      252    58.28   {.}
+      30       16    46.67   {/}
+     656      307    53.20   {0}
+     498      234    53.01   {1}
+     228      106    53.51   {2}
+     178       59    66.85   {3}
+     145       51    64.83   {4}
+     328      136    58.54   {5}
+     197       78    60.41   {6}
+     130       39    70.00   {7}
+     142       53    62.68   {8}
+     241       95    60.58   {9}
+     170       88    48.24   {:}
+     139       61    56.12   {;}
+       4        4     0.00   {=}
+     150       59    60.67   {A}
+     102       32    68.63   {B}
+      26        8    69.23   {C}
+     181       74    59.12   {D}
+      93       36    61.29   {E}
+      48       12    75.00   {F}
+     123       38    69.11   {G}
+     121       30    75.21   {H}
+      51       25    50.98   {I}
+      15        4    73.33   {J}
+     103       43    58.25   {K}
+      38       10    73.68   {L}
+     170       55    67.65   {M}
+      62       20    67.74   {N}
+      23        6    73.91   {O}
+      26        6    76.92   {P}
+      44       16    63.64   {R}
+     123       43    65.04   {S}
+      34       10    70.59   {T}
+      15        5    66.67   {U}
+     105       44    58.10   {V}
+      51       16    68.63   {W}
+       1        1     0.00   {X}
+      13        4    69.23   {Z}
+     686      203    70.41   {a}
+     241       71    70.54   {b}
+     293       78    73.38   {c}
+     334      109    67.37   {d}
+    1439      390    72.90   {e}
+     195       47    75.90   {f}
+     323       63    80.50   {g}
+     434      119    72.58   {h}
+     732      237    67.62   {i}
+      37       15    59.46   {j}
+     228       74    67.54   {k}
+     499      151    69.74   {l}
+     263       70    73.38   {m}
+     994      289    70.93   {n}
+     289       86    70.24   {o}
+      92       41    55.43   {p}
+       3        1    66.67   {q}
+     925      246    73.41   {r}
+     612      188    69.28   {s}
+     676      202    70.12   {t}
+     415      118    71.57   {u}
+     125       48    61.60   {v}
+      72       17    76.39   {w}
+      11        3    72.73   {x}
+      19        4    78.95   {y}
+     137       49    64.23   {z}
+       1        1     0.00   {£}
+       1        1     0.00   {Ö}
+       1        1     0.00   {Ü}
+      15        6    60.00   {ß}
+      62       18    70.97   {ä}
+       3        3     0.00   {é}
+      39       11    71.79   {ö}
+     104       28    73.08   {ü}
+       1        1     0.00   {’}
+       3        3     0.00   {<FEFF>}

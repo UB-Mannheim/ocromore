@@ -8,7 +8,7 @@ Also requires meld
 
 
 """
-from subprocess import call, Popen
+from subprocess import Popen
 import os
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler

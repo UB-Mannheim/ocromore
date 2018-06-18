@@ -20,7 +20,7 @@ dh.set_dirpos(tablename_pos=config.TABLENAME_POS, ocr_profile_pos=config.OCR_PRO
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)
 if config.VISUALIZE_MSA:
-    dh.fetch_outputfiles(config.OUTPUT_ROOT_PATH,"sql_akf_msa_best")
+    dh.fetch_outputfiles(config.OUTPUT_ROOT_PATH,"sql_akf_new_msa_best")
 if config.VISUALIZE_NDIST:
     dh.fetch_outputfiles(config.OUTPUT_ROOT_PATH,"sql_akf_ndist_keying")
 
@@ -35,7 +35,7 @@ for db in filestructs_output:
     files = filestructs_output[db]
     files_gt = filestructs_gt[db]
 
-    #if db != "1957": continue
+    if db != "1965": continue
 
 
     for file in files:
