@@ -11,6 +11,7 @@ from utils.df_objectifier import DFObjectifier
 
 CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
 PRINT_SUSPICIOUSLINES = True
+CLEAN_ABBYY = False
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, coded_configuration_paths=[CODED_CONFIGURATION_PATH])
 config = config_handler.get_config()
@@ -44,7 +45,7 @@ dh.update_db()
 
 if config.PREPROCESSING:
     #TODO: Add verbose to configfiles
-    report_prep = dh.preprocess_dbdata(force = True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES, VERBOSE = False, VERBOSEPATH= "/media/sf_ShareVB/AFKII/verbose/")
+    report_prep = dh.preprocess_dbdata(force = True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES, CLEAN_ABBYY=CLEAN_ABBYY, VERBOSE = False, VERBOSEPATH= "/media/sf_ShareVB/AFKII/verbose/")
 #dh.print_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
 if config.WORKWITHOBJ:
