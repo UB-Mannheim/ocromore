@@ -1,4 +1,4 @@
-�
+
 Daimler-Benz Aktiengesellschaft
 Sitz: 7000 Stuttgart
 Verwaltung: 7000
@@ -250,12 +250,12 @@ Wertpapier-Kenn-Nr.:
 550000 (Inh. -St. -Akt.);
 550003 (Nam. -Vorz.-Akt.)
 Stückelung:
-898 000 Inh. -St. -Akt. zu je DM 1 000. -
+898 000 Inh. -St. -Akt. zu je DM 1 000.-
 397 854 Inh.-St.-Akt. zuje DM 100.-
 238 927 Inh. -St.-Akt. zu je DM 50. -
-1535 Nam.-Vorz.-Akt.zu jeDM1 000. -
+1535 Nam.-Vorz.-Akt.zu jeDM1 000.-
 22 Nam.-Vorz.-Akt.zujeDM 100.-
-1 Nam.-Vorz.-Akt.zu DM 50. -
+1 Nam.-Vorz.-Akt.zu DM 50.-
 (Urkunden über die Vorz.-Akt. sind nicht
 ausgegeben)
 Großaktionäre:

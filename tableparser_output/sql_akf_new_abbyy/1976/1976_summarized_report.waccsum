@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1489   Words
-     432   Misrecognized
-   70.99%  Accuracy
+     424   Misrecognized
+   71.52%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -14,26 +14,26 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       33        4    87.88        1
-     110       36    67.27        2
+     110       35    68.18        2
       99       41    58.59        3
      131       50    61.83        4
-     115       30    73.91        5
+     115       29    74.78        5
       77       17    77.92        6
-      73       26    64.38        7
+      73       25    65.75        7
       77       24    68.83        8
-      64       11    82.81        9
+      64       10    84.38        9
      110       26    76.36       10
       57       13    77.19       11
-      75       17    77.33       12
+      75       16    78.67       12
       37       11    70.27       13
-      54       13    75.93       14
+      54       12    77.78       14
       44        8    81.82       15
       60       17    71.67       16
       47       16    65.96       17
-      41       12    70.73       18
+      41       11    73.17       18
       14        1    92.86       19
       21        2    90.48       20
-      16        2    87.50       21
+      16        1    93.75       21
       10        3    70.00       22
        8        4    50.00       23
       24        8    66.67       24
@@ -51,11 +51,11 @@ Non-stopwords
        1        0   100.00       36
        2        1    50.00       37
        1        1     0.00       38
-    1482      431    70.92    Total
+    1482      423    71.46    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     974      284    70.84        1
+     974      278    71.46        1
       81       15    81.48        2
       29        3    89.66        3
        9        0   100.00        4
@@ -66,18 +66,18 @@ Distinct Non-stopwords
        4        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1118      302    72.99    Total
+    1118      296    73.52    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1489      432    70.99        1
-    1486      554    62.72        2
-    1483      659    55.56        3
-    1480      744    49.73        4
-    1477      814    44.89        5
-    1474      877    40.50        6
-    1471      927    36.98        7
-    1468      966    34.20        8
+    1489      424    71.52        1
+    1486      545    63.32        2
+    1483      650    56.17        3
+    1480      735    50.34        4
+    1477      805    45.50        5
+    1474      867    41.18        6
+    1471      916    37.73        7
+    1468      955    34.95        8
 
 Stopwords
    Count   Missed   %Right   
@@ -340,7 +340,7 @@ Non-stopwords
        1        0   100.00   abschreibungen4985051798
        1        0   100.00   abschreibungen9869782194
        1        0   100.00   adolfschiff
-       5        2    60.00   ag
+       5        1    80.00   ag
        2        0   100.00   agfürversiche
        1        0   100.00   agseit1896
        1        1     0.00   aires
@@ -427,7 +427,7 @@ Non-stopwords
        1        1     0.00   bilanzsumme8823411006168
        1        0   100.00   bonus
        1        1     0.00   braun
-       1        1     0.00   braunschweig
+       1        0   100.00   braunschweig
        1        1     0.00   braunschweigund
        1        1     0.00   bredeney
        3        0   100.00   bremen
@@ -545,7 +545,7 @@ Non-stopwords
        5        1    80.00   eingezahlt
        1        0   100.00   einschließlichihrer
        1        0   100.00   energie
-       1        1     0.00   energietechnik
+       1        0   100.00   energietechnik
        1        0   100.00   entwicklungsgesellschaftfürturbo
        1        0   100.00   ergebnis
        1        1     0.00   erhöhungaufdm197505000
@@ -598,7 +598,7 @@ Non-stopwords
        1        1     0.00   gesellschaftenvonuntergeordneterbe
        2        1    50.00   gesellschaftmbh
        1        0   100.00   gesellschaftzurvermittlungvonbauver
-       1        1     0.00   gewinnung
+       1        0   100.00   gewinnung
        1        0   100.00   ghh
        1        1     0.00   ghhfrances.a
        1        0   100.00   glas
@@ -744,7 +744,7 @@ Non-stopwords
        1        0   100.00   kiel
        1        1     0.00   klaushaniel
        1        0   100.00   klausköpe
-       1        1     0.00   kommunikationstechnik
+       1        0   100.00   kommunikationstechnik
        1        0   100.00   konventionellekraftwerke
        1        0   100.00   kosten
        1        0   100.00   kostheim
@@ -753,7 +753,7 @@ Non-stopwords
        2        0   100.00   krefeld
        1        1     0.00   kumulativ
        1        0   100.00   kurtbrunner
-      19        3    84.21   köln
+      19        2    89.47   köln
        1        0   100.00   kölnischehagel
        1        0   100.00   kölnischerückversicherungs
        2        0   100.00   kölnischeverwaltungs
@@ -977,7 +977,7 @@ Non-stopwords
        1        0   100.00   undhagel
        1        0   100.00   undkasko
        1        0   100.00   undkernkraftwerke
-       1        1     0.00   undlufttechnikgmbh
+       1        0   100.00   undlufttechnikgmbh
        1        0   100.00   undmontage
        1        0   100.00   undsiedlungs
        1        0   100.00   undsport
@@ -1001,7 +1001,7 @@ Non-stopwords
        1        0   100.00   ver
        1        0   100.00   verbunde
        1        0   100.00   verbundenehausrat
-       1        1     0.00   verkehr
+       1        0   100.00   verkehr
        2        0   100.00   versi
        6        0   100.00   versicherung
        1        0   100.00   versicherungnurin

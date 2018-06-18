@@ -69,6 +69,7 @@ Gesellschaftskasse,Essen,
 DeutscheBankAG;DresdnerBankAL,
 CommerzbankAG;sämtl.Düsseldorf.
 HamburgundFranWurt(M).
+Berliner*Handels-Gesellschaft.Berlinund
 Frankfurt(M);
 Burkhardt&Co.,Essen;
 Landesbank^r"WestfalenGirozentrale,
@@ -78,6 +79,8 @@ NiedersächsischeLandesban
 PoensgenMarx&Co.,Düsseldorf,
 RhetofscheGirozentraleundProvtnzial-
 cG.Trinkaus,Düsseldorf;
+WestfalenbankAG,Bochum,dieser
+sowiesämtlicheNiederlassungendieser
 gungsgebietdesRWE
 ErhöhungaufDM369000000.-,lt.H.-V.
 telnaufDM718750000.-sowieweitere

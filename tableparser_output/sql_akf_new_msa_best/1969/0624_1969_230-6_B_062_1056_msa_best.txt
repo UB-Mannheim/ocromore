@@ -1,4 +1,4 @@
-�
+
 Westfälische Kupfer- und Messingwerke Akt.-Ges. vorm. Casp. Noell
 Sitz: 5880 Lüdenscheid, Altenaer
 Straße 38-52, Postfach 187
@@ -87,7 +87,7 @@ a) Stammaktien
 49 100 % 587305%9 65265 %
 50 102 % 58 475 % 66 -
 51721385%4 59 600 % 67 288 %
-52 102 %+) 601110 % 68 181 %
+52 102 %+) 601110 % 68 181
 53 102 % 61 - (30.9.)
 54 197 % 62 600 %
 55 265 % 63 655 %
@@ -145,6 +145,6 @@ Personalaufwand 8 871 7 499
 Beteiligungserträge 1 003 504
 Abschreibungen 1 842 1 474
 EEV-Steuern 344 350
-Jahresüberschuß 471 -
+Jahresüberschuß 471
 Jahresfehlbetrag 24
 

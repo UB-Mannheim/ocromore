@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2054 18213'>
             <span class ='ocr_line' title='bbox 0 0 1036 18212' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1036 18212' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1036 18212' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 308 276 1746 349' ><br/>
                 <span  class ='ocrx_word' title='bbox 308 276 1746 349' >Daimler-Benz Aktiengesellschaft</span > 
@@ -767,7 +767,7 @@
                 <span  class ='ocrx_word' title='bbox 75 13757 385 13794' >Stückelung:</span > 
             </span>
             <span class ='ocr_line' title='bbox 75 13800 924 13836' ><br/>
-                <span  class ='ocrx_word' title='bbox 75 13800 924 13836' >898 000 Inh. -St. -Akt. zu je DM 1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 75 13800 924 13836' >898 000 Inh. -St. -Akt. zu je DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 75 13845 924 13881' ><br/>
                 <span  class ='ocrx_word' title='bbox 75 13845 924 13881' >397 854 Inh.-St.-Akt. zuje DM 100.-</span > 
@@ -776,13 +776,13 @@
                 <span  class ='ocrx_word' title='bbox 75 13890 925 13927' >238 927 Inh. -St.-Akt. zu je DM 50. -</span > 
             </span>
             <span class ='ocr_line' title='bbox 125 13935 987 13971' ><br/>
-                <span  class ='ocrx_word' title='bbox 125 13935 987 13971' >1535 Nam.-Vorz.-Akt.zu jeDM1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 125 13935 987 13971' >1535 Nam.-Vorz.-Akt.zu jeDM1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 186 13980 988 14017' ><br/>
                 <span  class ='ocrx_word' title='bbox 186 13980 988 14017' >22 Nam.-Vorz.-Akt.zujeDM 100.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 212 14027 988 14057' ><br/>
-                <span  class ='ocrx_word' title='bbox 212 14027 988 14057' >1 Nam.-Vorz.-Akt.zu DM 50. -</span > 
+                <span  class ='ocrx_word' title='bbox 212 14027 988 14057' >1 Nam.-Vorz.-Akt.zu DM 50.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 75 14094 951 14132' ><br/>
                 <span  class ='ocrx_word' title='bbox 75 14094 951 14132' >(Urkunden über die Vorz.-Akt. sind nicht</span > 

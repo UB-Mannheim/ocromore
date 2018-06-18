@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2034 20632'>
             <span class ='ocr_line' title='bbox 0 0 1036 180' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1036 180' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1036 180' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 888 57 1150 139' ><br/>
                 <span  class ='ocrx_word' title='bbox 888 57 1150 139' >AEG</span > 
@@ -20,7 +20,7 @@
                 <span  class ='ocrx_word' title='bbox 183 175 1859 236' >ALLGEMEINE ELEKTRICITATS-GESELLSCHAFT</span > 
             </span>
             <span class ='ocr_line' title='bbox 0 180 1036 20628' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 180 1036 20628' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 180 1036 20628' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 50 323 921 360' ><br/>
                 <span  class ='ocrx_word' title='bbox 50 323 921 360' >Sitz: (1) Berlin-Grunewald, Hohenzol-</span > 
@@ -752,7 +752,7 @@
                 <span  class ='ocrx_word' title='bbox 56 12386 660 12423' >bank AG; Commerzbank AG;</span > 
             </span>
             <span class ='ocr_line' title='bbox 51 12507 722 12547' ><br/>
-                <span  class ='ocrx_word' title='bbox 51 12507 722 12547' >in Stuttgart: .</span > 
+                <span  class ='ocrx_word' title='bbox 51 12507 722 12547' >in Stuttgart:</span > 
             </span>
             <span class ='ocr_line' title='bbox 49 12552 891 12590' ><br/>
                 <span  class ='ocrx_word' title='bbox 49 12552 891 12590' >Dresdner Bank AG; Deutsche Bank AG;</span > 
@@ -779,7 +779,7 @@
                 <span  class ='ocrx_word' title='bbox 51 12876 421 12916' >geführten Banken</span > 
             </span>
             <span class ='ocr_line' title='bbox 49 12963 851 13003' ><br/>
-                <span  class ='ocrx_word' title='bbox 49 12963 851 13003' >Grundkapital: DM 310 000 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 49 12963 851 13003' >Grundkapital: DM 310 000 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 49 13009 923 13049' ><br/>
                 <span  class ='ocrx_word' title='bbox 49 13009 923 13049' >(Nach Umstellung des RM-Grundkapitals</span > 
@@ -919,11 +919,14 @@
             <span class ='ocr_line' title='bbox 45 15398 686 15451' ><br/>
                 <span  class ='ocrx_word' title='bbox 45 15398 686 15451' >ultimo 1948 10, 25 %</span > 
             </span>
-            <span class ='ocr_line' title='bbox 93 15436 685 15482' ><br/>
-                <span  class ='ocrx_word' title='bbox 93 15436 685 15482' >= 1949 33,5 %</span > 
+            <span class ='ocr_line' title='bbox 93 15435 363 15474' ><br/>
+                <span  class ='ocrx_word' title='bbox 93 15435 363 15474' >= 1949</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 272 15445 685 15482' ><br/>
+                <span  class ='ocrx_word' title='bbox 272 15445 685 15482' >1949 33,5 %</span > 
             </span>
             <span class ='ocr_line' title='bbox 92 15482 685 15527' ><br/>
-                <span  class ='ocrx_word' title='bbox 92 15482 685 15527' >1950 25 %</span > 
+                <span  class ='ocrx_word' title='bbox 92 15482 685 15527' >1950 25</span > 
             </span>
             <span class ='ocr_line' title='bbox 92 15529 684 15574' ><br/>
                 <span  class ='ocrx_word' title='bbox 92 15529 684 15574' >" 1951 45 %</span > 
@@ -935,22 +938,22 @@
                 <span  class ='ocrx_word' title='bbox 91 15621 737 15667' >1953 11975 %)</span > 
             </span>
             <span class ='ocr_line' title='bbox 91 15667 683 15712' ><br/>
-                <span  class ='ocrx_word' title='bbox 91 15667 683 15712' >" 1954 185,75 %</span > 
+                <span  class ='ocrx_word' title='bbox 91 15667 683 15712' >" 1954 185,75</span > 
             </span>
             <span class ='ocr_line' title='bbox 90 15713 681 15759' ><br/>
-                <span  class ='ocrx_word' title='bbox 90 15713 681 15759' >1955 220,5 %</span > 
+                <span  class ='ocrx_word' title='bbox 90 15713 681 15759' >1955 220,5</span > 
             </span>
             <span class ='ocr_line' title='bbox 90 15759 682 15803' ><br/>
-                <span  class ='ocrx_word' title='bbox 90 15759 682 15803' >1956 194 %</span > 
+                <span  class ='ocrx_word' title='bbox 90 15759 682 15803' >1956 194</span > 
             </span>
             <span class ='ocr_line' title='bbox 89 15804 682 15849' ><br/>
-                <span  class ='ocrx_word' title='bbox 89 15804 682 15849' >1957 18725 %</span > 
+                <span  class ='ocrx_word' title='bbox 89 15804 682 15849' >1957 18725</span > 
             </span>
             <span class ='ocr_line' title='bbox 89 15851 681 15896' ><br/>
-                <span  class ='ocrx_word' title='bbox 89 15851 681 15896' >% 1958 30025 %</span > 
+                <span  class ='ocrx_word' title='bbox 89 15851 681 15896' >% 1958 30025</span > 
             </span>
             <span class ='ocr_line' title='bbox 89 15896 681 15942' ><br/>
-                <span  class ='ocrx_word' title='bbox 89 15896 681 15942' >1959 449,5 %</span > 
+                <span  class ='ocrx_word' title='bbox 89 15896 681 15942' >1959 449,5</span > 
             </span>
             <span class ='ocr_line' title='bbox 45 15948 680 15988' ><br/>
                 <span  class ='ocrx_word' title='bbox 45 15948 680 15988' >30. Sept. 1960 449 %</span > 

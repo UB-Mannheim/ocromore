@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     3841   Characters
-      55   Errors
-   98.57%  Accuracy
+      54   Errors
+   98.59%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   98.57%  Accuracy After Correction
+   98.59%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       6       27       22       55   Unmarked
-       6       27       22       55   Total
+       7       27       20       54   Unmarked
+       7       27       20       54   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
      159        1    99.37   ASCII Spacing Characters
-     382       25    93.46   ASCII Special Symbols
+     382       26    93.19   ASCII Special Symbols
      606        2    99.67   ASCII Digits
      357        0   100.00   ASCII Uppercase Letters
     2268        2    99.91   ASCII Lowercase Letters
       66        0   100.00   Latin1 Lowercase Letters
        2        2     0.00   General Punctuation
-    3841       33    99.14   Total
+    3841       34    99.11   Total
 
   Errors   Marked   Correct-Generated
        7        0   {.}-{,}
@@ -33,16 +33,17 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        4        0   {—}-{-.-.}
        3        0   {,}-{.}
        3        0   {;<\n>}-{<\n>11}
-       3        0   {}-{,}
        3        0   {}-{eee}
        2        0   {,—}-{.-}
-       2        0   {<FEFF>}-{�<\n>}
        2        0   {l}-{.1}
        2        0   {}-{+)}
+       2        0   {}-{,}
        1        0   {"}-{4}
+       1        0   {)}-{,}
        1        0   {-}-{r}
        1        0   {5}-{8}
        1        0   {8}-{9}
+       1        0   {<FEFF>}-{}
        1        0   {l}-{1}
        1        0   {}-{-}
        1        0   {}-{:}
@@ -59,7 +60,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       20        0   100.00   {%}
        1        0   100.00   {&}
       22        0   100.00   {(}
-      22        0   100.00   {)}
+      22        1    95.45   {)}
        1        0   100.00   {+}
       86        4    95.35   {,}
       54        1    98.15   {-}

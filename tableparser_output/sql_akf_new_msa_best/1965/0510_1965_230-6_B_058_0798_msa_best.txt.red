@@ -1,4 +1,3 @@
-�
 Rheinisch-WestfälischesElektrizitätswerkAktiengesellschaft
 Sitz:43Essen,Kruppstraße5,Postfach
 27
@@ -27,7 +26,7 @@ dorf,6.stellv.Vors.;
 WalterHesselbach,Frankfurt(M),
 7.stellv.Vors.;
 Dr.Dr.h.c.WaltherHensel,Düsseldorf,
-8.stellv.Vors.;"
+8.stellv.Vors.;
 Dr.BernhardHeun,Krefeld,9,stellv.
 Vors.;
 FritzAndré,Rottach-Egern;
@@ -162,7 +161,7 @@ Stimmrechtd.Aktieni.d.H.-V.:
 Jenom.DM100,-St.-Akt.=1Stimme;
 jenom.DM100.-Nam.-Akt.,=20Stim-
 men
-Zahlstellen:_
+Zahlstellen:
 Gesellschaftskasse,Essen;
 DeutscheBankAG;DresdnerBankAG;
 CommerzbankAG;sämtl.Düsseldorf,
@@ -188,8 +187,8 @@ RheinischeGirozentraleundProvinzial-
 bank,Düsseldorf;
 SaarländischeKreditbankAG,Saarbrücken;
 C.G.Trinkaus,Düsseldorf;
-sowiesämtlicheNiederlassungendieser
 WestfalenbankAG,Bochum;
+sowiesämtlicheNiederlassungendieser
 BankenundBankfirmen;fernereineAnzahl
 vonStadt-undKreissparkassenimVersor-
 gungsgebietdesRWE
@@ -241,7 +240,7 @@ Emissionsbetrag:DM75000000.-
 Emissionsbetrag:DM100000000.-
 Aktienkurse(Düsseldorf):
 .ASt.-Akt.
-ultimo194836,25%
+ultimo194836,25
 "194981,50%
 195071,75%
 1951137,5%

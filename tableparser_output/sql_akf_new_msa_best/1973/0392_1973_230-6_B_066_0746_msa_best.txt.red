@@ -1,4 +1,3 @@
-�
 N.V.KoninklijkeNederlandschePetroleumMaatschappij
 (RoyalDutchPetroleumCompany)
 Sitz:DenHaag,CarelvanBylandtlaan

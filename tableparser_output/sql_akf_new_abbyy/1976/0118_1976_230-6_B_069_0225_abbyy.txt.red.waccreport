@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      488   Words
-      58   Misrecognized
-   88.11%  Accuracy
+      56   Misrecognized
+   88.52%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -12,10 +12,10 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
       16        0   100.00        1
-      26        5    80.77        2
+      26        4    84.62        2
       22        6    72.73        3
       40        6    85.00        4
-      40        5    87.50        5
+      40        4    90.00        5
       31        6    80.65        6
       25        4    84.00        7
       16        1    93.75        8
@@ -44,7 +44,7 @@ Non-stopwords
        1        0   100.00       33
        1        1     0.00       34
        1        1     0.00       37
-     487       58    88.09    Total
+     487       56    88.50    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
@@ -61,14 +61,14 @@ Distinct Non-stopwords
 
 Phrases
    Count   Missed   %Right   Length
-     488       58    88.11        1
-     487       90    81.52        2
-     486      120    75.31        3
-     485      147    69.69        4
-     484      172    64.46        5
-     483      194    59.83        6
-     482      215    55.39        7
-     481      232    51.77        8
+     488       56    88.52        1
+     487       87    82.14        2
+     486      116    76.13        3
+     485      142    70.72        4
+     484      166    65.70        5
+     483      187    61.28        6
+     482      207    57.05        7
+     481      224    53.43        8
 
 Stopwords
    Count   Missed   %Right   
@@ -165,7 +165,7 @@ Non-stopwords
        1        0   100.00   ab1.7
        1        0   100.00   ab29.9.1969stücknotizfür
        1        0   100.00   abschreibungen
-       4        2    50.00   ag
+       4        1    75.00   ag
        2        0   100.00   agfürversiche
        3        3     0.00   akt
        1        0   100.00   aktienkurse
@@ -313,7 +313,7 @@ Non-stopwords
        1        0   100.00   kosten
        1        0   100.00   kraftfahr
        1        0   100.00   kredit
-      19        3    84.21   köln
+      19        2    89.47   köln
        1        0   100.00   kölnischehagel
        1        0   100.00   kölnischerückversicherungs
        2        0   100.00   kölnischeverwaltungs

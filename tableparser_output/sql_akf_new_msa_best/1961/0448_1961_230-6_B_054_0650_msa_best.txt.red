@@ -1,4 +1,3 @@
-�
 NATIONALAllgemeineVersicherungs-Aktien-Gesellschaft
 Sitz:(24a)Lübeck,TravemünderAllee9
 Fernruf:Sa.-Nr.25321
@@ -76,7 +75,7 @@ Umstellung14:5aufDM3750000.-d.
 H.-=V.v.13,12,1955;1t.ao.H.-V.v.20.11,
 1959ErhöhungaufDM5000000.-.-.
 Börsennotiz:
-Hamburg,DüsseldorfundBerlin(amtl.,)
+Hamburg,DüsseldorfundBerlin(amtl.,
 Ordnungsnr.d,Aktien:843100
 Stückelung:
 10000St.-Akt.zujeDM500.-(einge-

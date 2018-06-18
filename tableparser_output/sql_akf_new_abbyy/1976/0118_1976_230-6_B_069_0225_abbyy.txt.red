@@ -86,7 +86,8 @@ Dividendenab1969:14,14,12,12,12,12%
 COLONIABausparkasseAG,Dortmund
 Kapital:DM6000000.-(über25%)
 Dividendenab1969:10,10,10,10,12,10%
-COLONIAKrankenversicherungs-AGKöln‘
+COLONIAKrankenversicherungs-AG
+Köln‘
 Kapital:DM3000000.-(50%)
 Dividendenab1969:4,4,4,4,0,0%
 Geschäftsjahr:Kalenderjahr

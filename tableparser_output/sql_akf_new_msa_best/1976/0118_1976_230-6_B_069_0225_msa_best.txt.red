@@ -1,4 +1,3 @@
-�
 COLONIAVERSICHERUNGAktiengesellschaft
 Sitz:5000Köln1,Oppenheimstraße11,
 Postfach140129

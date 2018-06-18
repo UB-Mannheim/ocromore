@@ -894,7 +894,7 @@ class MsaHandler(object):
         m2 = get_max_wordlen(line_2)
         m3 = get_max_wordlen(line_3)
         max_range_word = int(max(m1, m2, m3)+1)  # add a one because it starts with zero
-        dash_there = False
+
         try:
             for current_word_index in range(0, max_range_word):
                 word1 = get_word_from_line(line_1, current_word_index)
@@ -940,18 +940,30 @@ class MsaHandler(object):
                         for word_index, word_current in enumerate(words_aligned):
                             words_aligned[word_index] = words_aligned[word_index].replace(deletion_marker,"")
 
-                        print("adfs")
+                if self.config.MSA_BEST_WORDWISE_DROP_LAST_WORD_SC:
+                    # filter out last word only special char
+                    if current_word_index == max_range_word-1:
+                        if len(words_aligned[0]) == 1:
+                            wc_count = 0  # number of wildcards
+                            sc_count = 0  # number of special characters
+                            for word in words_aligned:
+                                if word == wildcard_character:
+                                    wc_count += 1
+                                elif Random.is_special_character(word):
+                                    sc_count += 1
 
-
+                            if wc_count == 2 and sc_count == 1:
+                                print("won't update last word because seems wrong")
+                                break  # just don't update the last word
 
                 self.cpr.print("word_al 1:", words_aligned[0])
                 self.cpr.print("word_al 2:", words_aligned[1])
                 self.cpr.print("word_al 3:", words_aligned[2])
 
 
-                if "-" in word1 or "-" in word2 or "-" in word3:
-                    print("a wild dash appears")
-                    dash_there = True
+                # if "-" in word1 or "-" in word2 or "-" in word3:
+                #    print("a wild dash appears")
+                #    dash_there = True
 
 
                 update_word(line_1, current_word_index, words_aligned[0])
@@ -976,14 +988,10 @@ class MsaHandler(object):
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
 
-                if dash_there == True:
-                    print("dashresult")
+                #if dash_there == True:
+                #    print("dashresult")
                 #if "DM 10" in best_stripped:
                 #    print("beep")
-
-
-
-
 
             return best_stripped_non_multi_whitespace
         except Exception as ex:

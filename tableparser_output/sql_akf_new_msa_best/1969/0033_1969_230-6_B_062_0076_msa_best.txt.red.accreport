@@ -1,19 +1,19 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
    11965   Characters
-      75   Errors
-   99.37%  Accuracy
+      71   Errors
+   99.41%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.37%  Accuracy After Correction
+   99.41%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       1       13       61       75   Unmarked
-       1       13       61       75   Total
+       1       13       57       71   Unmarked
+       1       13       57       71   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
@@ -28,7 +28,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
    11965       14    99.88   Total
 
   Errors   Marked   Correct-Generated
-       6        0   {<FEFF>}-{�<\n>M<\n>><\n>}
        4        0   {}-{''}
        4        0   {}-{'}
        3        0   {}-{,)3}
@@ -40,6 +39,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {.}-{,}
        2        0   {3}-{5}
        2        0   {:}-{;}
+       2        0   {<FEFF>}-{M<\n>}
        2        0   {}-{)2}
        2        0   {}-{-:}
        2        0   {}-{0.}

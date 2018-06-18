@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     7762   Characters
-      52   Errors
-   99.33%  Accuracy
+      50   Errors
+   99.36%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.33%  Accuracy After Correction
+   99.36%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-       5        4       43       52   Unmarked
-       5        4       43       52   Total
+       6        4       40       50   Unmarked
+       6        4       40       50   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
      293        0   100.00   ASCII Spacing Characters
-     587        6    98.98   ASCII Special Symbols
+     587        7    98.81   ASCII Special Symbols
      529        0   100.00   ASCII Digits
      711        0   100.00   ASCII Uppercase Letters
     5533        2    99.96   ASCII Lowercase Letters
        3        0   100.00   Latin1 Uppercase Letters
      105        0   100.00   Latin1 Lowercase Letters
-    7762        9    99.88   Total
+    7762       10    99.87   Total
 
   Errors   Marked   Correct-Generated
       29        0   {}-{93,75desStammkapitalsder...}
@@ -33,15 +33,14 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {}-{-}
        2        0   {}-{1}
        2        0   {}-{i}
-       2        0   {}-{�<\n>}
        1        0   {"}-{2}
        1        0   {"}-{„}
        1        0   {%}-{}
+       1        0   {-}-{}
        1        0   {<FEFF>}-{}
        1        0   {l}-{i}
        1        0   {l}-{j}
        1        0   {}-{'}
-       1        0   {}-{.}
        1        0   {}-{<\n>}
        1        0   {}-{d}
 
@@ -55,7 +54,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       27        0   100.00   {)}
        2        0   100.00   {+}
      122        0   100.00   {,}
-     105        0   100.00   {-}
+     105        1    99.05   {-}
      145        0   100.00   {.}
        8        0   100.00   {/}
      104        0   100.00   {0}

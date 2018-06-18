@@ -11,10 +11,10 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2086 11175'>
             <span class ='ocr_line' title='bbox 0 0 1062 11172' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1062 11172' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1062 11172' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 435 182 987 190' ><br/>
-                <span  class ='ocrx_word' title='bbox 435 182 987 190' >�</span > 
+                <span  class ='ocrx_word' title='bbox 435 182 987 190' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 1072 187 1870 259' ><br/>
                 <span  class ='ocrx_word' title='bbox 1072 187 1870 259' >AGROB AKTIENGESELLSCHAFT</span > 
@@ -23,7 +23,7 @@
                 <span  class ='ocrx_word' title='bbox 1074 305 1869 377' >FÜR GROB- UND FEINKERAMIK</span > 
             </span>
             <span class ='ocr_line' title='bbox 251 380 990 387' ><br/>
-                <span  class ='ocrx_word' title='bbox 251 380 990 387' >�</span > 
+                <span  class ='ocrx_word' title='bbox 251 380 990 387' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 83 503 917 541' ><br/>
                 <span  class ='ocrx_word' title='bbox 83 503 917 541' >Sitz: 8 München 15, Lessingstraße 10</span > 
@@ -305,7 +305,7 @@
                 <span  class ='ocrx_word' title='bbox 94 5272 767 5311' >Co. GmbH; beide Frankfurt (M)</span > 
             </span>
             <span class ='ocr_line' title='bbox 94 5342 847 5380' ><br/>
-                <span  class ='ocrx_word' title='bbox 94 5342 847 5380' >Grundkapital: DM 13 350 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 94 5342 847 5380' >Grundkapital: DM 13 350 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 94 5387 1000 5427' ><br/>
                 <span  class ='ocrx_word' title='bbox 94 5387 1000 5427' >Umstellung 10:7 auf DM 7 000 000. - durch</span > 
@@ -350,13 +350,13 @@
                 <span  class ='ocrx_word' title='bbox 98 6050 414 6091' >Stückelung:</span > 
             </span>
             <span class ='ocr_line' title='bbox 99 6099 883 6137' ><br/>
-                <span  class ='ocrx_word' title='bbox 99 6099 883 6137' >8 400 Inh.-St.-Akt. zu je DM 1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 99 6099 883 6137' >8 400 Inh.-St.-Akt. zu je DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 99 6143 899 6182' ><br/>
                 <span  class ='ocrx_word' title='bbox 99 6143 899 6182' >5 000 Inh. -St. -Akt. zu je DM 100.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 97 6189 963 6226' ><br/>
-                <span  class ='ocrx_word' title='bbox 97 6189 963 6226' >4 250 Inh.-Vorz.-Akt. zu je DM 1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 97 6189 963 6226' >4 250 Inh.-Vorz.-Akt. zu je DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 98 6232 964 6271' ><br/>
                 <span  class ='ocrx_word' title='bbox 98 6232 964 6271' >2 000 Inh.-Vorz.-Akt. zuje DM 100.-</span > 
@@ -416,7 +416,7 @@
                 <span  class ='ocrx_word' title='bbox 46 7157 901 7197' >7 % Teilschuldverschreibungen von 1958</span > 
             </span>
             <span class ='ocr_line' title='bbox 45 7205 789 7243' ><br/>
-                <span  class ='ocrx_word' title='bbox 45 7205 789 7243' >Emissionsbetrag: DM 10 000 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 45 7205 789 7243' >Emissionsbetrag: DM 10 000 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 43 7255 638 7293' ><br/>
                 <span  class ='ocrx_word' title='bbox 43 7255 638 7293' >Aktienkurse (München):</span > 
@@ -470,7 +470,7 @@
                 <span  class ='ocrx_word' title='bbox 97 7985 715 8023' >" 1962 380 %</span > 
             </span>
             <span class ='ocr_line' title='bbox 96 8030 720 8068' ><br/>
-                <span  class ='ocrx_word' title='bbox 96 8030 720 8068' >" 1963 378 %</span > 
+                <span  class ='ocrx_word' title='bbox 96 8030 720 8068' >" 1963 378</span > 
             </span>
             <span class ='ocr_line' title='bbox 51 8076 716 8120' ><br/>
                 <span  class ='ocrx_word' title='bbox 51 8076 716 8120' >30. Sept. 1964 361 %</span > 

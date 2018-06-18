@@ -1,8 +1,5 @@
-�
-�
 AGROBAKTIENGESELLSCHAFT
 FÜRGROB-UNDFEINKERAMIK
-�
 Sitz:8München15,Lessingstraße10
 Verwaltung:8045IsmaningbeiMün-
 chen,MünchenerStraße101
@@ -151,7 +148,7 @@ ultimo194845%
 "1960540%
 1961483%
 "1962380%
-"1963378%
+"1963378
 30.Sept.1964361%
 +)ab10.1.1956KursfürDM-Nennwert
 Vorzugsaktien:Notierungseit10.1.1956

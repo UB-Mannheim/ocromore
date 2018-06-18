@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     5817   Characters
-     530   Errors
-   90.89%  Accuracy
+     529   Errors
+   90.91%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   90.89%  Accuracy After Correction
+   90.91%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     474       51        5      530   Unmarked
-     474       51        5      530   Total
+     473       51        5      529   Unmarked
+     473       51        5      529   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
-     232       20    91.38   ASCII Spacing Characters
+     232       19    91.81   ASCII Spacing Characters
      711       94    86.78   ASCII Special Symbols
     1022      113    88.94   ASCII Digits
      585       60    89.74   ASCII Uppercase Letters
     3183      229    92.81   ASCII Lowercase Letters
        1        0   100.00   Latin1 Uppercase Letters
       82        8    90.24   Latin1 Lowercase Letters
-    5817      525    90.97   Total
+    5817      524    90.99   Total
 
   Errors   Marked   Correct-Generated
       74        0   {<FEFF><\n>COLONIAVERSICH...}-{}
@@ -53,9 +53,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        5        0   {.}-{}
        5        0   {fälle}-{}
        4        0   {,}-{.}
+       4        0   {,}-{}
        4        0   {;}-{-}
-       3        0   {,}-{}
-       2        0   {,<\n>}-{}
        2        0   {.-}-{}
        2        0   {.}-{,}
        2        0   {DM}-{}
@@ -75,7 +74,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {}-{‘}
 
    Count   Missed   %Right
-     232       20    91.38   {<\n>}
+     232       19    91.81   {<\n>}
       42        6    85.71   {%}
        1        0   100.00   {&}
       48        4    91.67   {(}

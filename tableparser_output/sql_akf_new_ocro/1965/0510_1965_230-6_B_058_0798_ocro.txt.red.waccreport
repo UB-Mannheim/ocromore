@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      737   Words
-      33   Misrecognized
-   95.52%  Accuracy
+      32   Misrecognized
+   95.66%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -45,15 +45,15 @@ Non-stopwords
        4        0   100.00       33
        2        0   100.00       34
        6        0   100.00       35
-       5        1    80.00       36
+       5        0   100.00       36
        1        0   100.00       37
        4        0   100.00       38
        1        1     0.00       50
-     737       33    95.52    Total
+     737       32    95.66    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     432       19    95.60        1
+     432       18    95.83        1
       40        1    97.50        2
       14        0   100.00        3
        9        0   100.00        4
@@ -64,18 +64,18 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        4        0   100.00      >10
-     513       20    96.10    Total
+     513       19    96.30    Total
 
 Phrases
    Count   Missed   %Right   Length
-     737       33    95.52        1
-     736       56    92.39        2
-     735       79    89.25        3
-     734      100    86.38        4
-     733      121    83.49        5
-     732      139    81.01        6
-     731      157    78.52        7
-     730      174    76.16        8
+     737       32    95.66        1
+     736       54    92.66        2
+     735       76    89.66        3
+     734       96    86.92        4
+     733      116    84.17        5
+     732      133    81.83        6
+     731      150    79.48        7
+     730      166    77.26        8
 
 Non-stopwords
    Count   Missed   %Right   
@@ -517,7 +517,7 @@ Non-stopwords
        1        0   100.00   sitz
        1        1     0.00   societéelectriquedel’ours.a
        1        0   100.00   sonstigesteuern7215282718
-       1        1     0.00   sowiesämtlicheniederlassungendieser
+       1        0   100.00   sowiesämtlicheniederlassungendieser
        1        0   100.00   sowieweitere
       12        3    75.00   st
        1        0   100.00   stammaktien

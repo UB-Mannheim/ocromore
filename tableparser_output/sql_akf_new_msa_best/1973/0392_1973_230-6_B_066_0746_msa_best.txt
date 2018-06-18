@@ -1,4 +1,4 @@
-�
+
 N.V. Koninklijke Nederlandsche Petroleum Maatschappij
 (Royal Dutch Petroleum Company)
 Sitz: Den Haag, Carel van Bylandtlaan
@@ -46,7 +46,7 @@ port.
 Geschäftsjahr: Kalenderjahr
 Stimmrecht der Aktien:
 Je nom. hfl. 20.- St.-Akt. = 1 Stimme;
-je nom. hfl. 1 000. - kumulative Vorz. -
+je nom. hfl. 1 000. - kumulative Vorz.-
 Akt. = 50 Stimmen
 Niemand kann mehr als 300 Stimmen für
 sich selbst abgeben.
@@ -88,7 +88,7 @@ Wertpapier-Kenn-Nr.: 860027
 -Stückelung:
 134 018 522 St.-Akt. zu je hfl 20. -
 1 500 kumulative Vort.-Akt. zu
-je hfl1 000. -
+je hfl1 000.-
 Die Stammaktien sind in Urkunden über je
 1, 5 und 50 Aktien zu je hfl 20.-, verse-
 hen mit einer Nummer, lieferbar.

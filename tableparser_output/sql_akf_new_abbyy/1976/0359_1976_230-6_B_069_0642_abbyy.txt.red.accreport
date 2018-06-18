@@ -1,30 +1,30 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     7428   Characters
-    3487   Errors
-   53.06%  Accuracy
+    3415   Errors
+   54.03%  Accuracy
 
        0   Reject Characters
        1   Suspect Markers
        1   False Marks
     0.01%  Characters Marked
-   53.06%  Accuracy After Correction
+   54.03%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-    3435       46        6     3487   Unmarked
-    3435       46        6     3487   Total
+    3362       46        7     3415   Unmarked
+    3362       46        7     3415   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
-     290      136    53.10   ASCII Spacing Characters
-     955      531    44.40   ASCII Special Symbols
+     290      133    54.14   ASCII Spacing Characters
+     955      528    44.71   ASCII Special Symbols
     1298      527    59.40   ASCII Digits
-     889      415    53.32   ASCII Uppercase Letters
-    3915     1834    53.15   ASCII Lowercase Letters
+     889      411    53.77   ASCII Uppercase Letters
+    3915     1771    54.76   ASCII Lowercase Letters
        1        1     0.00   Latin1 Uppercase Letters
       79       36    54.43   Latin1 Lowercase Letters
-    7428     3481    53.14   Total
+    7428     3408    54.12   Total
 
   Errors   Marked   Correct-Generated
      226        0   {1Umstellung1:1aufDM40000...}-{}
@@ -58,7 +58,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       40        0   {aftenvonuntergeordneterB...}-{}
       37        0   {:<\n>Gutehoffnungshütte...}-{}
       37        0   {Kapital:DM1500000.-(25%)...}-{}
-      37        0   {ikationstechnik,Industri...}-{}
       34        0   {nzen(in1000DM)<\n>1972/7...}-{}
       33        0   {143900Inh.-St.-Akt.zujeD...}-{}
       33        0   {4(Vorz.-Akt.)<\n>1969Erh...}-{}
@@ -82,7 +81,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       21        0   {ngeringenUmfangoderbe}-{}
       20        0   {1950000.-(94%)<\n>DreiM}-{}
       20        0   {Vorz.-Akt.zujeDM50.-}-{}
-      20        0   {echnik,Verkehr,<\n>Komm}-{}
       20        0   {idendenberechtigtab1}-{}
       20        0   {inenfabrikFaber&<\n>Sch}-{}
       20        0   {triebspachtvertrag)<\n>}-{}
@@ -94,7 +92,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       18        0   {Kapital:D}-{}
       17        0   {(Vorz.-Akt.)<\n>1968}-{}
       17        0   {Aktienkurse(ultim}-{a}
-      17        0   {gewinnung,Energie}-{}
       16        0   {Kapital:}-{}
       16        0   {RolandOffsetmasc}-{}
       16        0   {tehenbei<\n>Gesells}-{}
@@ -115,29 +112,28 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       11        0   {.}-{}
       11        0   {1973/74:je1}-{}
       11        0   {b)Vorzugsak}-{}
+       9        0   {,}-{}
        9        0   {-(50%)<\n>M.}-{}
        9        0   {0.-<\n>59500}-{}
        9        0   {1)<\n>1971/7}-{}
        8        0   {4.,<\n>Div.}-{}
        8        0   {48/49-19}-{}
        7        0   {(Vorz.-}-{}
-       7        0   {,}-{}
        7        0   {1000000}-{}
        7        0   {1949407}-{}
        7        0   {Direkte}-{}
+       6        0   {-}-{}
        6        0   {.)<\n>Akt}-{}
        6        0   {.;}-{•}
        6        0   {100.-<\n>}-{}
        6        0   {100000}-{}
        6        0   {200000}-{}
        6        0   {Stimme}-{<3+-}
-       5        0   {-}-{}
        5        0   {118DM}-{}
        5        0   {;}-{-}
        5        0   {Wien<\n>}-{}
        5        0   {tal:D}-{}
        4        0   {%auf}-{}
-       4        0   {,<\n>}-{}
        4        0   {-}-{¬}
        4        0   {.,}-{}
        4        0   {0Inh}-{}
@@ -151,6 +147,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        3        0   {:}-{;}
        3        0   {II/}-{}
        3        0   {m<\n>u}-{}
+       2        0   {,<\n>}-{}
        2        0   {-1}-{}
        2        0   {.-}-{}
        2        0   {.=}-{-}
@@ -165,6 +162,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {;}-{•}
        2        0   {Bi}-{}
        2        0   {Vo}-{}
+       2        0   {}-{’}
        2        0   {á}-{ä}
        1        0   {$}-{}
        1        0   {)}-{}
@@ -184,20 +182,19 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {}-{'}
        1        0   {}-{<\n>}
        1        0   {}-{r}
-       1        0   {}-{’}
        1        0   {ä}-{ü}
        1        0   {é}-{ä}
        1        0   {ö}-{Ö}
        1        0   {ü}-{u}
 
    Count   Missed   %Right
-     290      136    53.10   {<\n>}
+     290      133    54.14   {<\n>}
        4        3    25.00   {$}
       63       27    57.14   {%}
        4        2    50.00   {&}
       86       42    51.16   {(}
       90       46    48.89   {)}
-     131       76    41.98   {,}
+     131       73    44.27   {,}
      170       95    44.12   {-}
      274      162    40.88   {.}
       22       14    36.36   {/}
@@ -218,13 +215,13 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       40       18    55.00   {B}
        8        3    62.50   {C}
      101       51    49.50   {D}
-      26       11    57.69   {E}
+      26       10    61.54   {E}
       24        7    70.83   {F}
       55       21    61.82   {G}
       40       16    60.00   {H}
-      19       14    26.32   {I}
+      19       13    31.58   {I}
        9        3    66.67   {J}
-      54       25    53.70   {K}
+      54       24    55.56   {K}
       14        7    50.00   {L}
      123       57    53.66   {M}
       46       24    47.83   {N}
@@ -234,33 +231,33 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       73       35    52.05   {S}
       17       10    41.18   {T}
       15       13    13.33   {U}
-      34       17    50.00   {V}
+      34       16    52.94   {V}
       38       15    60.53   {W}
        2        0   100.00   {Y}
        1        0   100.00   {Z}
-     293      132    54.95   {a}
+     293      131    55.29   {a}
      125       52    58.40   {b}
-     116       58    50.00   {c}
-     115       54    53.04   {d}
-     485      237    51.13   {e}
+     116       55    52.59   {c}
+     115       53    53.91   {d}
+     485      228    52.99   {e}
       79       32    59.49   {f}
-     157       65    58.60   {g}
-     164       82    50.00   {h}
-     245      118    51.84   {i}
+     157       62    60.51   {g}
+     164       78    52.44   {h}
+     245      109    55.51   {i}
       12        8    33.33   {j}
-      99       51    48.48   {k}
+      99       47    52.53   {k}
      164       62    62.20   {l}
-      97       52    46.39   {m}
-     364      187    48.63   {n}
-     112       51    54.46   {o}
+      97       50    48.45   {m}
+     364      177    51.37   {n}
+     112       49    56.25   {o}
       55       25    54.55   {p}
        1        0   100.00   {q}
-     350      152    56.57   {r}
-     195       86    55.90   {s}
-     309      155    49.84   {t}
-     248      104    58.06   {u}
+     350      147    58.00   {r}
+     195       84    56.92   {s}
+     309      151    51.13   {t}
+     248      101    59.27   {u}
       44       27    38.64   {v}
-      18        8    55.56   {w}
+      18        7    61.11   {w}
        2        1    50.00   {x}
       10        8    20.00   {y}
       56       27    51.79   {z}

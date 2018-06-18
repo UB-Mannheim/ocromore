@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2024 12290'>
             <span class ='ocr_line' title='bbox 0 0 1024 12290' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1024 12290' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1024 12290' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 378 152 1637 210' ><br/>
                 <span  class ='ocrx_word' title='bbox 378 152 1637 210' >COLONIA VERSICHERUNG Aktiengesellschaft</span > 
@@ -295,11 +295,11 @@
             <span class ='ocr_line' title='bbox 49 4961 927 4999' ><br/>
                 <span  class ='ocrx_word' title='bbox 49 4961 927 4999' >Dividenden ab 1969: 10,10, 10, 10, 12,10 %</span > 
             </span>
-            <span class ='ocr_line' title='bbox 48 5028 835 5103' ><br/>
-                <span  class ='ocrx_word' title='bbox 48 5028 835 5103' >COLONIA Krankenversicherungs-AG,</span > 
+            <span class ='ocr_line' title='bbox 48 5028 835 5067' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 5028 835 5067' >COLONIA Krankenversicherungs-AG,</span > 
             </span>
-            <span class ='ocr_line' title='bbox 48 5072 142 5102' ><br/>
-                <span  class ='ocrx_word' title='bbox 48 5072 142 5102' >Köln</span > 
+            <span class ='ocr_line' title='bbox 48 5053 835 5103' ><br/>
+                <span  class ='ocrx_word' title='bbox 48 5053 835 5103' >Köln</span > 
             </span>
             <span class ='ocr_line' title='bbox 48 5118 695 5157' ><br/>
                 <span  class ='ocrx_word' title='bbox 48 5118 695 5157' >Kapital: DM 3 000 000. - (50 %)</span > 
@@ -488,7 +488,7 @@
                 <span  class ='ocrx_word' title='bbox 99 8248 812 8285' >80 000 vink. Nam. -St. -Akt. zu je</span > 
             </span>
             <span class ='ocr_line' title='bbox 704 8292 943 8323' ><br/>
-                <span  class ='ocrx_word' title='bbox 704 8292 943 8323' >DM 1 000, -</span > 
+                <span  class ='ocrx_word' title='bbox 704 8292 943 8323' >DM 1 000,-</span > 
             </span>
             <span class ='ocr_line' title='bbox 79 8337 812 8373' ><br/>
                 <span  class ='ocrx_word' title='bbox 79 8337 812 8373' >120 000 vink. Nam. -St. -Akt, zu je</span > 

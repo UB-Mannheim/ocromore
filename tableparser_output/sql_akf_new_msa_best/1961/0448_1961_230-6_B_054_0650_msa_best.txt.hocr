@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2044 9414'>
             <span class ='ocr_line' title='bbox 0 0 1030 9412' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1030 9412' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1030 9412' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 231 180 1820 241' ><br/>
                 <span  class ='ocrx_word' title='bbox 231 180 1820 241' >NATIONAL Allgemeine Versicherungs-Aktien-Gesellschaft</span > 
@@ -230,7 +230,7 @@
                 <span  class ='ocrx_word' title='bbox 63 4521 962 4556' >Bank für Handel und Industrie AG, Berlin</span > 
             </span>
             <span class ='ocr_line' title='bbox 61 4631 820 4668' ><br/>
-                <span  class ='ocrx_word' title='bbox 61 4631 820 4668' >Grundkapital; DM 5 000 000, -</span > 
+                <span  class ='ocrx_word' title='bbox 61 4631 820 4668' >Grundkapital; DM 5 000 000,-</span > 
             </span>
             <span class ='ocr_line' title='bbox 65 4675 893 4714' ><br/>
                 <span  class ='ocrx_word' title='bbox 65 4675 893 4714' >Umstellung 14:5 auf DM 3 750 000. -d.</span > 
@@ -245,7 +245,7 @@
                 <span  class ='ocrx_word' title='bbox 63 4871 420 4905' >Börsennotiz:</span > 
             </span>
             <span class ='ocr_line' title='bbox 61 4916 934 4956' ><br/>
-                <span  class ='ocrx_word' title='bbox 61 4916 934 4956' >Hamburg, Düsseldorf und Berlin (amtl., )</span > 
+                <span  class ='ocrx_word' title='bbox 61 4916 934 4956' >Hamburg, Düsseldorf und Berlin (amtl.,</span > 
             </span>
             <span class ='ocr_line' title='bbox 67 5033 868 5076' ><br/>
                 <span  class ='ocrx_word' title='bbox 67 5033 868 5076' >Ordnungsnr.d,Aktien: 843100</span > 
@@ -365,7 +365,7 @@
                 <span  class ='ocrx_word' title='bbox 43 7036 917 7076' >Bezugsrechtabschläge insgesamt</span > 
             </span>
             <span class ='ocr_line' title='bbox 44 7081 639 7116' ><br/>
-                <span  class ='ocrx_word' title='bbox 44 7081 639 7116' >seit 21.6, 1948: DM 1 075, -</span > 
+                <span  class ='ocrx_word' title='bbox 44 7081 639 7116' >seit 21.6, 1948: DM 1 075,-</span > 
             </span>
             <span class ='ocr_line' title='bbox 43 7150 587 7190' ><br/>
                 <span  class ='ocrx_word' title='bbox 43 7150 587 7190' >Zur Geschäftslage:</span > 

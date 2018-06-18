@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     1411   Words
-      34   Misrecognized
-   97.59%  Accuracy
+      33   Misrecognized
+   97.66%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -46,15 +46,15 @@ Non-stopwords
        6        0   100.00       33
        8        0   100.00       34
        8        0   100.00       35
-      11        1    90.91       36
+      11        0   100.00       36
        2        0   100.00       37
        5        0   100.00       38
        1        0   100.00       50
-    1410       34    97.59    Total
+    1410       33    97.66    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     950       25    97.37        1
+     950       24    97.47        1
       82        1    98.78        2
       19        0   100.00        3
       12        0   100.00        4
@@ -65,18 +65,18 @@ Distinct Non-stopwords
        3        0   100.00        9
        1        0   100.00       10
        6        0   100.00      >10
-    1086       26    97.61    Total
+    1086       25    97.70    Total
 
 Phrases
    Count   Missed   %Right   Length
-    1411       34    97.59        1
-    1408       64    95.45        2
-    1405       94    93.31        3
-    1402      122    91.30        4
-    1399      147    89.49        5
-    1396      172    87.68        6
-    1393      197    85.86        7
-    1390      221    84.10        8
+    1411       33    97.66        1
+    1408       62    95.60        2
+    1405       91    93.52        3
+    1402      118    91.58        4
+    1399      142    89.85        5
+    1396      166    88.11        6
+    1393      190    86.36        7
+    1390      213    84.68        8
 
 Stopwords
    Count   Missed   %Right   
@@ -856,7 +856,7 @@ Non-stopwords
        1        1     0.00   sonstigesteuern1215214057
        1        0   100.00   sonstigesteuern26882504
        1        0   100.00   sonstigesteuern7215282718
-       1        1     0.00   sowiesämtlicheniederlassungendieser
+       1        0   100.00   sowiesämtlicheniederlassungendieser
        1        0   100.00   sowieweitere
       15        1    93.33   st
        1        0   100.00   staats

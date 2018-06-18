@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2020 8087'>
             <span class ='ocr_line' title='bbox 0 0 1018 584' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1018 584' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1018 584' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 250 418 1779 480' ><br/>
                 <span  class ='ocrx_word' title='bbox 250 418 1779 480' >N.V. Koninklijke Nederlandsche Petroleum Maatschappij</span > 
@@ -155,7 +155,7 @@
                 <span  class ='ocrx_word' title='bbox 71 3082 907 3116' >Je nom. hfl. 20.- St.-Akt. = 1 Stimme;</span > 
             </span>
             <span class ='ocr_line' title='bbox 70 3127 913 3169' ><br/>
-                <span  class ='ocrx_word' title='bbox 70 3127 913 3169' >je nom. hfl. 1 000. - kumulative Vorz. -</span > 
+                <span  class ='ocrx_word' title='bbox 70 3127 913 3169' >je nom. hfl. 1 000. - kumulative Vorz.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 73 3175 461 3207' ><br/>
                 <span  class ='ocrx_word' title='bbox 73 3175 461 3207' >Akt. = 50 Stimmen</span > 
@@ -281,7 +281,7 @@
                 <span  class ='ocrx_word' title='bbox 207 5128 853 5159' >1 500 kumulative Vort.-Akt. zu</span > 
             </span>
             <span class ='ocr_line' title='bbox 328 5175 607 5214' ><br/>
-                <span  class ='ocrx_word' title='bbox 328 5175 607 5214' >je hfl1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 328 5175 607 5214' >je hfl1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 66 5259 950 5294' ><br/>
                 <span  class ='ocrx_word' title='bbox 66 5259 950 5294' >Die Stammaktien sind in Urkunden über je</span > 

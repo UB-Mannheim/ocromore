@@ -4,7 +4,7 @@ Fernruf: Peine 26 41, 26 09 und
 Grossilsede 5 41.
 Fernschreiber:
 02 39 65/66 huettenw peine.
-Vorstand: .
+Vorstand:
 Diedrich Dännemark, Peine;
 Helmuth Heintzmann, Herne;
 Paul Möllenberg, Neu-Ölsburg;
@@ -236,7 +236,7 @@ Hannover und im Freiverkehr Berlin
 und Hamburg.
 Ordnungsnr.d.Aktien: 620200.
 Stückelung:
-99 856 St.-Akt. zu je DM 1 000. -
+99 856 St.-Akt. zu je DM 1 000.-
 (Nr. 1 - 99 856)
 124 640 St.-Akt. zu je DM 100.-
 (Nr. 300 001 - 424 640)
@@ -284,14 +284,14 @@ Eigenkapital 206 874 206 869
 (davon A.-K.) 102 240 102 240
 Fremdkapital 26 696 21 165
 Gewinn nach Vortrag 7 342 9 475
-�
+
 Aus den Gewinn- und Verlust-
 rechnungen
 Löhne und Gehälter 568 620
 Abschreibungen 8 63
 Steuern 5 663 16 519
 Jahresertrag 7 1712 26 342
-Beteiligungserträge 20 -
+Beteiligungserträge 20
 
 Hedwigshütte Kohlen-undd Kokswerke Aktiengesellschaft
 

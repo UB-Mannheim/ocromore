@@ -1,7 +1,7 @@
-�
+
 AEG
 ALLGEMEINE ELEKTRICITATS-GESELLSCHAFT
-�
+
 Sitz: (1) Berlin-Grunewald, Hohenzol-
 lerndamm 150
 (16) Frankfurt (M)-Süd, AEG-Hochhaus
@@ -245,7 +245,7 @@ bank AG; Merck, Finck & Co.;
 in Saarbrücken:
 Dresdner Bank AG; Saarländische Kredit-
 bank AG; Commerzbank AG;
-in Stuttgart: .
+in Stuttgart:
 Dresdner Bank AG; Deutsche Bank AG;
 Commerzbank AG; Württ. Girozentrale
 -Württ. Landeskommunalbank-;
@@ -254,7 +254,7 @@ Schweizerische Kreditanstalt; Schweize-
 rischer Bankverein;
 sowie alle Zweigniederlassungen der auf-
 geführten Banken
-Grundkapital: DM 310 000 000. -
+Grundkapital: DM 310 000 000.-
 (Nach Umstellung des RM-Grundkapitals
 von RM 264 000 000. - im Verhältnis 3:1
 auf DM 88 000 000. - gemäß H.-V. v.
@@ -301,17 +301,18 @@ Aktienkurse: 1948-1951: Hamburg;
 1952 und 1953: Frankfurt (M); ab 1954:
 Berlin
 ultimo 1948 10, 25 %
-= 1949 33,5 %
-1950 25 %
+= 1949
+1949 33,5 %
+1950 25
 " 1951 45 %
 " 1952 31 %
 1953 11975 %)
-" 1954 185,75 %
-1955 220,5 %
-1956 194 %
-1957 18725 %
-% 1958 30025 %
-1959 449,5 %
+" 1954 185,75
+1955 220,5
+1956 194
+1957 18725
+% 1958 30025
+1959 449,5
 30. Sept. 1960 449 %
 +) ab 27.4.1953 Kurs für DM-Nennwert
 Dividenden:

@@ -188,8 +188,8 @@ RheinischeGirozentraleundProvinzial-
 bank,Düsseldorf;
 SaarländischeKreditbankAG,Saarbrücken;
 C.G.Trinkaus,Düsseldorf;
-sowiesämtlicheNiederlassungendieser
 WestfalenbankAG,Bochum;
+sowiesämtlicheNiederlassungendieser
 BankenundBankfirmen;fernereineAnzahl
 vonStadt-undKreissparkassenimVersor-
 gungsgebietdesRWE

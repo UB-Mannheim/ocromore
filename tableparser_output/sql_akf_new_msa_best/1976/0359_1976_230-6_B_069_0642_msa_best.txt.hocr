@@ -11,13 +11,13 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2024 15497'>
             <span class ='ocr_line' title='bbox 0 0 1032 301' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1032 301' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1032 301' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 797 202 1219 268' ><br/>
                 <span  class ='ocrx_word' title='bbox 797 202 1219 268' >M +A+ IN</span > 
             </span>
             <span class ='ocr_line' title='bbox 0 301 694 464' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 301 694 464' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 301 694 464' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 362 323 1652 369' ><br/>
                 <span  class ='ocrx_word' title='bbox 362 323 1652 369' >MASCHINENFABRIK AUGSBURG-NÜRNBERG</span > 
@@ -157,11 +157,11 @@
             <span class ='ocr_line' title='bbox 50 2688 899 2725' ><br/>
                 <span  class ='ocrx_word' title='bbox 50 2688 899 2725' >Anlagen und Einrichtung zur Grundstoff-</span > 
             </span>
-            <span class ='ocr_line' title='bbox 50 2734 838 2770' ><br/>
-                <span  class ='ocrx_word' title='bbox 50 2734 838 2770' >gewinnung, Energietechnik, Verkehr,</span > 
+            <span class ='ocr_line' title='bbox 50 2734 838 2771' ><br/>
+                <span  class ='ocrx_word' title='bbox 50 2734 838 2771' >gewinnung, Energietechnik, Verkehr,</span > 
             </span>
-            <span class ='ocr_line' title='bbox 49 2779 938 2813' ><br/>
-                <span  class ='ocrx_word' title='bbox 49 2779 938 2813' >Kommunikationstechnik, Industrieeinrich-</span > 
+            <span class ='ocr_line' title='bbox 49 2758 938 2813' ><br/>
+                <span  class ='ocrx_word' title='bbox 49 2758 938 2813' >Kommunikationstechnik, Industrieeinrich-</span > 
             </span>
             <span class ='ocr_line' title='bbox 49 2823 846 2861' ><br/>
                 <span  class ='ocrx_word' title='bbox 49 2823 846 2861' >tungen, Bautechnik, Dienstleistungen.</span > 
@@ -322,11 +322,11 @@
             <span class ='ocr_line' title='bbox 83 5574 730 5618' ><br/>
                 <span  class ='ocrx_word' title='bbox 83 5574 730 5618' >Kapital: DM 1 000 000. - (50 %)</span > 
             </span>
-            <span class ='ocr_line' title='bbox 84 5642 935 5729' ><br/>
-                <span  class ='ocrx_word' title='bbox 84 5642 935 5729' >M.A.N. Wärme- und Lufttechnik GmbH,</span > 
+            <span class ='ocr_line' title='bbox 84 5642 934 5678' ><br/>
+                <span  class ='ocrx_word' title='bbox 84 5642 934 5678' >M.A.N. Wärme- und Lufttechnik GmbH,</span > 
             </span>
-            <span class ='ocr_line' title='bbox 85 5693 371 5728' ><br/>
-                <span  class ='ocrx_word' title='bbox 85 5693 371 5728' >Braunschweig</span > 
+            <span class ='ocr_line' title='bbox 85 5663 935 5729' ><br/>
+                <span  class ='ocrx_word' title='bbox 85 5663 935 5729' >Braunschweig</span > 
             </span>
             <span class ='ocr_line' title='bbox 84 5731 754 5775' ><br/>
                 <span  class ='ocrx_word' title='bbox 84 5731 754 5775' >Kapital: DM 2 800 000. - (100 %)</span > 
@@ -575,7 +575,7 @@
                 <span  class ='ocrx_word' title='bbox 83 10173 471 10209' >Bezugsrechte:</span > 
             </span>
             <span class ='ocr_line' title='bbox 82 10217 752 10254' ><br/>
-                <span  class ='ocrx_word' title='bbox 82 10217 752 10254' >Grundkapital: DM 250 000 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 82 10217 752 10254' >Grundkapital: DM 250 000 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 82 10262 754 10294' ><br/>
                 <span  class ='ocrx_word' title='bbox 82 10262 754 10294' >DM 150 000 000. - Inh. -St. -Akt.</span > 
@@ -590,7 +590,7 @@
                 <span  class ='ocrx_word' title='bbox 84 10398 886 10434' >aktien, mindestens DM 4.- kumulativ)</span > 
             </span>
             <span class ='ocr_line' title='bbox 87 10442 948 10480' ><br/>
-                <span  class ='ocrx_word' title='bbox 87 10442 948 10480' >1951 Umstellung 1:1 auf DM 40 000 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 87 10442 948 10480' >1951 Umstellung 1:1 auf DM 40 000 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 87 10487 804 10524' ><br/>
                 <span  class ='ocrx_word' title='bbox 87 10487 804 10524' >1955 Bezugsrecht 4:1 zu 125 % auf</span > 
@@ -644,7 +644,7 @@
                 <span  class ='ocrx_word' title='bbox 90 11203 418 11239' >14 (Vorz.-Akt.)</span > 
             </span>
             <span class ='ocr_line' title='bbox 89 11249 857 11284' ><br/>
-                <span  class ='ocrx_word' title='bbox 89 11249 857 11284' >1969 Erhöhung auf DM 170 000 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 89 11249 857 11284' >1969 Erhöhung auf DM 170 000 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 89 11290 831 11328' ><br/>
                 <span  class ='ocrx_word' title='bbox 89 11290 831 11328' >1970 Bezugsrecht 10:1 zu 190 % auf</span > 
@@ -719,16 +719,16 @@
                 <span  class ='ocrx_word' title='bbox 64 12481 375 12519' >Stückelung:</span > 
             </span>
             <span class ='ocr_line' title='bbox 69 12527 899 12563' ><br/>
-                <span  class ='ocrx_word' title='bbox 69 12527 899 12563' >143 900 Inh.-St.-Akt. zu je DM 1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 69 12527 899 12563' >143 900 Inh.-St.-Akt. zu je DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 91 12571 899 12608' ><br/>
                 <span  class ='ocrx_word' title='bbox 91 12571 899 12608' >35 000 Inh.-St.-Akt. zu je DM 100.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 91 12617 899 12653' ><br/>
-                <span  class ='ocrx_word' title='bbox 91 12617 899 12653' >52 000 Inh.-St.-Akt. zu je DM 50. -</span > 
+                <span  class ='ocrx_word' title='bbox 91 12617 899 12653' >52 000 Inh.-St.-Akt. zu je DM 50.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 91 12661 946 12698' ><br/>
-                <span  class ='ocrx_word' title='bbox 91 12661 946 12698' >91 295 Inh.-Vorz.-Akt.zu jeDM 1 000, -</span > 
+                <span  class ='ocrx_word' title='bbox 91 12661 946 12698' >91 295 Inh.-Vorz.-Akt.zu jeDM 1 000,-</span > 
             </span>
             <span class ='ocr_line' title='bbox 91 12706 946 12744' ><br/>
                 <span  class ='ocrx_word' title='bbox 91 12706 946 12744' >59 500 Inh.-Vorz.-Akt.zuje DM 100.-</span > 

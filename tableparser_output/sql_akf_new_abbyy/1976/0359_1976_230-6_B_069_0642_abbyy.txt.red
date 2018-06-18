@@ -29,6 +29,8 @@ EduardSchleinkofer,München-’
 FerdinandWolinsky,Oberhausen
 Gründung:1898
 nlagenundEinrichtungzurGrundstoff¬
+gewinnung,Energietechnik,Verkehr
+Kommunikationstechnik,Industrieein’rich
 tungen,Bautechnik,Dienstleistungen
 Maschinen-undStahlbaumitdenWerken
 STERKRADEAGmitdenWerkenSterk-
@@ -52,7 +54,8 @@ Dividendenab1968/69:10,10,10,12,1414%
 Kapital:DM100000000.-(50%)
 M.A.N.-Ferrostaal-BauunionGmbH
 Gustavsburg/Hessen
-M.A.N.Wärme-undLufttechnikGmbHBraunschweig'
+M.A.N.Wärme-undLufttechnikGmbH
+Braunschweig'
 Kapital:DM2800000.-(100%)
 FahrzeugwerkeNord,FlensburgerSchiffs¬
 bau-Gesellschaft&Co.,Flensburg

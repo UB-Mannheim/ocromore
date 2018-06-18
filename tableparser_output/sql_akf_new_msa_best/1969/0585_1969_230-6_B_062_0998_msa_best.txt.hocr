@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2126 12564'>
             <span class ='ocr_line' title='bbox 0 0 1070 12564' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1070 12564' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1070 12564' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 588 25 1577 71' ><br/>
                 <span  class ='ocrx_word' title='bbox 588 25 1577 71' >VARTA AKTIENGESELLSCHAFT</span > 
@@ -488,7 +488,7 @@
                 <span  class ='ocrx_word' title='bbox 41 8486 350 8523' >Stückelung:</span > 
             </span>
             <span class ='ocr_line' title='bbox 44 8527 853 8565' ><br/>
-                <span  class ='ocrx_word' title='bbox 44 8527 853 8565' >84 875 Inh. -St.-Akt. zu je DM 1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 44 8527 853 8565' >84 875 Inh. -St.-Akt. zu je DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 44 8572 853 8610' ><br/>
                 <span  class ='ocrx_word' title='bbox 44 8572 853 8610' >31 250 Inh. -St. -Akt. zu je DM 100.-</span > 

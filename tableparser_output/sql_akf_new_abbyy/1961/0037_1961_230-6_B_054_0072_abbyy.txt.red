@@ -275,6 +275,8 @@ Aktienkurse:1948-1951:Hamburg;
 1952und1953:Frankfurt(M);ab1954:
 Berlin
 ultimo10,25%1948
+lt1949
+33,5%
 45%1951
 31%1952
 30.Sept.1960449%

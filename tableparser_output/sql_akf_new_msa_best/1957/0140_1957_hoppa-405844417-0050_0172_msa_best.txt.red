@@ -4,7 +4,7 @@ Fernruf:Peine2641,2609und
 Grossilsede541.
 Fernschreiber:
 023965/66huettenwpeine.
-Vorstand:.
+Vorstand:
 DiedrichDännemark,Peine;
 HelmuthHeintzmann,Herne;
 PaulMöllenberg,Neu-Ölsburg;
@@ -284,12 +284,11 @@ Eigenkapital206874206869
 (davonA.-K.)102240102240
 Fremdkapital2669621165
 GewinnnachVortrag73429475
-�
 AusdenGewinn-undVerlust-
 rechnungen
 LöhneundGehälter568620
 Abschreibungen863
 Steuern566316519
 Jahresertrag7171226342
-Beteiligungserträge20-
+Beteiligungserträge20
 HedwigshütteKohlen-unddKokswerkeAktiengesellschaft

@@ -1,4 +1,3 @@
-�
 ..SissunWESTFALEN(216)Geiswei
 r(Krs.Siegen).
 Fernruf:SiegenSa.-Nr.5181.

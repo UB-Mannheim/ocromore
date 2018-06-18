@@ -301,7 +301,8 @@ Aktienkurse: 1948-1951: Hamburg;
 1952 und 1953: Frankfurt (M); ab 1954:
 Berlin
 ultimo 10,25 % 1948
-
+lt 1949
+33,5 %
 
 45 % 1951
 31 % 1952

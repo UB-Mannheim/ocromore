@@ -1,5 +1,3 @@
-�
-�
 HochtiefAktiengesellschaftfürHoch-undTiefbauten
 vorm.Gebr.Helfmann
 Sitz:4300Essen1,Hochtiefhaus,Rel-

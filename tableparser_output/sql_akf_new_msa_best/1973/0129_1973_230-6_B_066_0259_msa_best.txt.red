@@ -1,4 +1,3 @@
-�
 Daimler-BenzAktiengesellschaft
 Sitz:7000Stuttgart
 Verwaltung:7000

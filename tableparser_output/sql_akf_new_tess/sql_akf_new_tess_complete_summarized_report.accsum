@@ -1,32 +1,32 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
   108787   Characters
-    1122   Errors
-   98.97%  Accuracy
+    1074   Errors
+   99.01%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   98.97%  Accuracy After Correction
+   99.01%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-     447      456      219     1122   Unmarked
-     447      456      219     1122   Total
+     423      456      195     1074   Unmarked
+     423      456      195     1074   Total
 
    Count   Missed   %Right
       18       18     0.00   Unassigned
-    4185        5    99.88   ASCII Spacing Characters
-   11939      431    96.39   ASCII Special Symbols
+    4185        4    99.90   ASCII Spacing Characters
+   11939      429    96.41   ASCII Special Symbols
    14693      308    97.90   ASCII Digits
-   11115       43    99.61   ASCII Uppercase Letters
-   65448       49    99.93   ASCII Lowercase Letters
+   11115       39    99.65   ASCII Uppercase Letters
+   65448       32    99.95   ASCII Lowercase Letters
        1        1     0.00   Latin1 Special Symbols
       11        2    81.82   Latin1 Uppercase Letters
     1364       43    96.85   Latin1 Lowercase Letters
       13        3    76.92   General Punctuation
-  108787      903    99.17   Total
+  108787      879    99.19   Total
 
   Errors   Marked   Correct-Generated
      152        0   {.}-{,}
@@ -36,10 +36,8 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       22        0   {II}-{11}
       21        0   {é}-{e}
       19        0   {:}-{;}
-      16        0   {}-{WestfalenbankAG,}
       15        0   {}-{<\n>}
       14        0   {<FEFF>}-{�<\n>}
-      14        0   {tfalenbankAG,B}-{}
       13        0   {;}-{}
       13        0   {}-{.}
       12        0   {"}-{''}
@@ -57,9 +55,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        8        0   {132,5%+)}-{}
        8        0   {15214057}-{»Munl}
        8        0   {5}-{}
-       8        0   {chum;<\n>so}-{}
        8        0   {}-{'}
-       8        0   {}-{ochum;<\n>B}
        7        0   {185,75%}-{}
        7        0   {2}-{}
        7        0   {300,25%}-{}
@@ -182,7 +178,6 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        2        0   {;}-{,}
        2        0   {<\n>"}-{}
        2        0   {<\n>}-{}
-       2        0   {We}-{}
        2        0   {lt}-{11}
        2        0   {l}-{.1}
        2        0   {l}-{i}
@@ -296,7 +291,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {’}-{”}
 
    Count   Missed   %Right
-    4185        5    99.88   {<\n>}
+    4185        4    99.90   {<\n>}
      125       63    49.60   {"}
       19        2    89.47   {$}
      785       85    89.17   {%}
@@ -305,7 +300,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      822        1    99.88   {(}
      903        7    99.22   {)}
       73       11    84.93   {+}
-    1885       28    98.51   {,}
+    1885       27    98.57   {,}
     1941       12    99.38   {-}
     3296      173    94.75   {.}
      142        0   100.00   {/}
@@ -320,15 +315,15 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      757       19    97.49   {8}
     1306       22    98.32   {9}
      991       25    97.48   {:}
-     860       23    97.33   {;}
+     860       22    97.44   {;}
       28        0   100.00   {=}
-    1034        1    99.90   {A}
-     836        2    99.76   {B}
+    1034        0   100.00   {A}
+     836        1    99.88   {B}
      207        0   100.00   {C}
     1271        7    99.45   {D}
      469        0   100.00   {E}
      390        0   100.00   {F}
-     861        1    99.88   {G}
+     861        0   100.00   {G}
      727        0   100.00   {H}
      297       22    92.59   {I}
       96        0   100.00   {J}
@@ -344,31 +339,31 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
      200        0   100.00   {T}
      131        0   100.00   {U}
      463        0   100.00   {V}
-     319        2    99.37   {W}
+     319        1    99.69   {W}
        1        0   100.00   {X}
       10        0   100.00   {Y}
       90        0   100.00   {Z}
-    4587        2    99.96   {a}
-    1493        3    99.80   {b}
-    1970        1    99.95   {c}
+    4587        0   100.00   {a}
+    1493        2    99.87   {b}
+    1970        0   100.00   {c}
     2401        0   100.00   {d}
-    9378        2    99.98   {e}
-    1270        3    99.76   {f}
+    9378        0   100.00   {e}
+    1270        2    99.84   {f}
     2171        0   100.00   {g}
-    2668        1    99.96   {h}
+    2668        0   100.00   {h}
     4632        4    99.91   {i}
      195        0   100.00   {j}
-    1461        1    99.93   {k}
-    3166       16    99.49   {l}
-    1707        1    99.94   {m}
-    6473        3    99.95   {n}
-    1858        1    99.95   {o}
+    1461        0   100.00   {k}
+    3166       15    99.53   {l}
+    1707        0   100.00   {m}
+    6473        1    99.98   {n}
+    1858        0   100.00   {o}
      669        0   100.00   {p}
       22        0   100.00   {q}
     6023        0   100.00   {r}
-    3682        3    99.92   {s}
-    4510        6    99.87   {t}
-    2961        1    99.97   {u}
+    3682        2    99.95   {s}
+    4510        5    99.89   {t}
+    2961        0   100.00   {u}
      781        0   100.00   {v}
      454        0   100.00   {w}
       39        0   100.00   {x}

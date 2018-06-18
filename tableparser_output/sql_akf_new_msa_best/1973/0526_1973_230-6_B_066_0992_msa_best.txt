@@ -1,4 +1,4 @@
-�
+
 UNILEVER N.V.
 Sitz: Rotterdam, Burgemeester'’s
 Jacobplein 1, Postfach 760
@@ -104,7 +104,7 @@ Disconto-Bank AG; beide Berlin;
 Morgan Guaranty Trust Company of
 New York, New York
 Grundkapital:
-Autorisiertes Kapital: hfl 1 352 400 000, -
+Autorisiertes Kapital: hfl 1 352 400 000,-
 Ausgegebenes Kapital:hfl 907 625 000.-
 hfl 29 000 000. - 7 % kumulative Vorz.-Akt.
 hfl 161 060 000. - 6 % kumulative Vorz.-Akt.
@@ -120,12 +120,12 @@ Wertpapier-Kenn-Nr.:
 8600238 (St.-Akt.)
 Stückelung:
 29 000 7 % kumulative Vorz.-Akt.
-zu je hfl. 1 000. -
+zu je hfl. 1 000.-
 161 060 6 % kumulative Vorz.-Akt.
-zu je hfl. 1 000. -
+zu je hfl. 1 000.-
 75 000 4 % kumulative Vorz. -Akt.
-zu je hfl. 1 000. -
-2 400 Stammaktien zu je hfl. 1 000. -
+zu je hfl. 1 000.-
+2 400 Stammaktien zu je hfl. 1 000.-
 (je 50 Stücke zu hfl.20.-) -)
 6 401 650 Stammaktien zu je hfl 100. -
 (je 5 Stücke zu hfl 20. -)

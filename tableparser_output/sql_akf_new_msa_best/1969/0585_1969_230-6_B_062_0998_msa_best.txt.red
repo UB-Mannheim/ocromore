@@ -1,4 +1,3 @@
-�
 VARTAAKTIENGESELLSCHAFT
 Sitz:6000Frankfurt(M),NeueMainzer
 Straße54,Postfach5029(Frankfurt/M1)

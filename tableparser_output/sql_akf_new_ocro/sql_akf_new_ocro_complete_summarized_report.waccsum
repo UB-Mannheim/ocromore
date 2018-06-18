@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     8573   Words
-     304   Misrecognized
-   96.45%  Accuracy
+     303   Misrecognized
+   96.47%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -48,18 +48,18 @@ Non-stopwords
       60        4    93.33       33
       65        6    90.77       34
       56        2    96.43       35
-      52        4    92.31       36
+      52        3    94.23       36
       17        2    88.24       37
       19        1    94.74       38
        6        0   100.00       39
        7        0   100.00       40
        1        1     0.00       49
        1        1     0.00       50
-    8554      302    96.47    Total
+    8554      301    96.48    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    5819      219    96.24        1
+    5819      218    96.25        1
      462        6    98.70        2
      154        2    98.70        3
       58        0   100.00        4
@@ -70,18 +70,18 @@ Distinct Non-stopwords
       11        0   100.00        9
        4        0   100.00       10
       30        0   100.00      >10
-    6625      227    96.57    Total
+    6625      226    96.59    Total
 
 Phrases
    Count   Missed   %Right   Length
-    8573      304    96.45        1
-    8555      500    94.16        2
-    8537      684    91.99        3
-    8519      860    89.90        4
-    8501     1027    87.92        5
-    8483     1183    86.05        6
-    8465     1330    84.29        7
-    8447     1467    82.63        8
+    8573      303    96.47        1
+    8555      498    94.18        2
+    8537      681    92.02        3
+    8519      856    89.95        4
+    8501     1022    87.98        5
+    8483     1177    86.13        6
+    8465     1323    84.37        7
+    8447     1459    82.73        8
 
 Stopwords
    Count   Missed   %Right   
@@ -3957,7 +3957,7 @@ Non-stopwords
        1        0   100.00   sowieersatzteilezudie
        1        0   100.00   sowiefolgendebankenin
        1        0   100.00   sowiesämt
-       1        1     0.00   sowiesämtlicheniederlassungendieser
+       1        0   100.00   sowiesämtlicheniederlassungendieser
        1        0   100.00   sowieweitere
        1        0   100.00   spaght
        2        0   100.00   spanien

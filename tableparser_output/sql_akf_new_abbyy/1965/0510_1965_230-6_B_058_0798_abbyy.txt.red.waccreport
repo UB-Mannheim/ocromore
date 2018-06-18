@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
      737   Words
-     474   Misrecognized
-   35.69%  Accuracy
+     471   Misrecognized
+   36.09%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -15,7 +15,7 @@ Non-stopwords
       37       26    29.73        3
       57       40    29.82        4
       36       19    47.22        5
-      30       21    30.00        6
+      30       20    33.33        6
       60       48    20.00        7
       38       22    42.11        8
       31       18    41.94        9
@@ -24,7 +24,7 @@ Non-stopwords
       35       18    48.57       12
       29       13    55.17       13
       21        8    61.90       14
-      16       10    37.50       15
+      16        9    43.75       15
       26       18    30.77       16
       18       16    11.11       17
       28       19    32.14       18
@@ -45,15 +45,15 @@ Non-stopwords
        4        4     0.00       33
        2        2     0.00       34
        6        6     0.00       35
-       5        5     0.00       36
+       5        4    20.00       36
        1        1     0.00       37
        4        2    50.00       38
        1        1     0.00       50
-     737      474    35.69    Total
+     737      471    36.09    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-     432      271    37.27        1
+     432      268    37.96        1
       40       22    45.00        2
       14        3    78.57        3
        9        3    66.67        4
@@ -64,13 +64,13 @@ Distinct Non-stopwords
        2        0   100.00        9
        1        0   100.00       10
        4        0   100.00      >10
-     513      302    41.13    Total
+     513      299    41.72    Total
 
 Phrases
    Count   Missed   %Right   Length
-     737      474    35.69        1
-     736      552    25.00        2
-     735      610    17.01        3
+     737      471    36.09        1
+     736      550    25.27        2
+     735      609    17.14        3
      734      644    12.26        4
      733      665     9.28        5
      732      683     6.69        6
@@ -261,7 +261,7 @@ Non-stopwords
        2        1    50.00   beteiligungen
        1        1     0.00   beteiligungser
        1        0   100.00   bezugsrechteund
-       1        1     0.00   bochum
+       1        0   100.00   bochum
        1        1     0.00   bonus
        1        0   100.00   brandbeiaachen
        1        1     0.00   breisgau
@@ -517,7 +517,7 @@ Non-stopwords
        1        1     0.00   sitz
        1        1     0.00   societéelectriquedel’ours.a
        1        1     0.00   sonstigesteuern7215282718
-       1        1     0.00   sowiesämtlicheniederlassungendieser
+       1        0   100.00   sowiesämtlicheniederlassungendieser
        1        0   100.00   sowieweitere
       12        7    41.67   st
        1        0   100.00   stammaktien
@@ -580,7 +580,7 @@ Non-stopwords
        1        1     0.00   wesentlicheteilederbundesländernord
        1        0   100.00   westf
        1        1     0.00   westfalen
-       1        1     0.00   westfalenbankag
+       1        0   100.00   westfalenbankag
        1        1     0.00   westfälischeselektrizitätswerkaktiengesellschaft
        1        0   100.00   wilhelmgoldenbogen
        1        0   100.00   wilhelmgutmann

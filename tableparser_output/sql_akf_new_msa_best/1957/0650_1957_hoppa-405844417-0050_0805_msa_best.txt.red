@@ -1,4 +1,3 @@
-�
 Sitz:(24a)Hamburg1,Steinstraße20.
 Fernruf:Sa.-Nr.339141.
 Fernschreiber:0212158.

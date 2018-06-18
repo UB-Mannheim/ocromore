@@ -1,8 +1,8 @@
 UNLV-ISRI OCR Word Accuracy Report Version 6.1
 ----------------------------------------------
     8573   Words
-    1701   Misrecognized
-   80.16%  Accuracy
+    1690   Misrecognized
+   80.29%  Accuracy
 
 Stopwords
    Count   Missed   %Right   Length
@@ -14,26 +14,26 @@ Stopwords
 Non-stopwords
    Count   Missed   %Right   Length
      358       80    77.65        1
-     551      149    72.96        2
+     551      148    73.14        2
      445      105    76.40        3
      690      162    76.52        4
-     468       75    83.97        5
-     522       74    85.82        6
-     528      158    70.08        7
+     468       74    84.19        5
+     522       73    86.02        6
+     528      157    70.27        7
      462       88    80.95        8
-     433       53    87.76        9
+     433       52    87.99        9
      460       87    81.09       10
      391       65    83.38       11
-     349       62    82.23       12
+     349       61    82.52       12
      272       48    82.35       13
-     280       48    82.86       14
-     232       34    85.34       15
+     280       47    83.21       14
+     232       33    85.78       15
      225       54    76.00       16
      219       62    71.69       17
-     209       42    79.90       18
+     209       41    80.38       18
      128       20    84.38       19
      119       13    89.08       20
-     106        9    91.51       21
+     106        8    92.45       21
       90       16    82.22       22
      100       18    82.00       23
       98       25    74.49       24
@@ -48,18 +48,18 @@ Non-stopwords
       60       10    83.33       33
       65       10    84.62       34
       56       10    82.14       35
-      52        7    86.54       36
+      52        6    88.46       36
       17        2    88.24       37
       19        5    73.68       38
        6        0   100.00       39
        7        0   100.00       40
        1        1     0.00       49
        1        1     0.00       50
-    8554     1699    80.14    Total
+    8554     1688    80.27    Total
 
 Distinct Non-stopwords
    Count   Missed   %Right   Occurs
-    5819     1137    80.46        1
+    5819     1128    80.62        1
      462       56    87.88        2
      154       10    93.51        3
       58        3    94.83        4
@@ -70,18 +70,18 @@ Distinct Non-stopwords
       11        0   100.00        9
        4        0   100.00       10
       30        0   100.00      >10
-    6625     1209    81.75    Total
+    6625     1200    81.89    Total
 
 Phrases
    Count   Missed   %Right   Length
-    8573     1701    80.16        1
-    8555     2260    73.58        2
-    8537     2751    67.78        3
-    8519     3161    62.89        4
-    8501     3504    58.78        5
-    8483     3810    55.09        6
-    8465     4076    51.85        7
-    8447     4310    48.98        8
+    8573     1690    80.29        1
+    8555     2249    73.71        2
+    8537     2741    67.89        3
+    8519     3152    63.00        4
+    8501     3495    58.89        5
+    8483     3800    55.20        6
+    8465     4065    51.98        7
+    8447     4299    49.11        8
 
 Stopwords
    Count   Missed   %Right   
@@ -1175,7 +1175,7 @@ Non-stopwords
        1        0   100.00   aegumfaßtdasgesamtegebietderstark
        1        0   100.00   aegundtelefunken
        1        0   100.00   afinagummi
-      30        5    83.33   ag
+      30        4    86.67   ag
        1        0   100.00   agabgegeben.eigenehafenanlagen
        1        0   100.00   agcolonia
        1        0   100.00   agfürenergiewirtschaft
@@ -1588,7 +1588,7 @@ Non-stopwords
        1        0   100.00   blankmaterial
        1        0   100.00   bleche
        1        0   100.00   bleihütteluisebeikrautscheid
-       4        1    75.00   bochum
+       4        0   100.00   bochum
        2        0   100.00   boden
        2        0   100.00   bodensee
        1        0   100.00   bohrmaschinen
@@ -1601,7 +1601,7 @@ Non-stopwords
        1        0   100.00   brasilien
        2        1    50.00   braun
        1        0   100.00   brauneisenerze
-       4        1    75.00   braunschweig
+       4        0   100.00   braunschweig
        1        0   100.00   braunschweigischestaatsbank
        1        1     0.00   braunschweigund
        1        0   100.00   brechten
@@ -2198,7 +2198,7 @@ Non-stopwords
        1        0   100.00   ende1963guteauftragsbeständevor
        1        0   100.00   energie
        1        1     0.00   energieerzeugung
-       1        1     0.00   energietechnik
+       1        0   100.00   energietechnik
        1        0   100.00   energieverteilung
        1        0   100.00   energievomrwebeziehen
        1        0   100.00   entspricht
@@ -2507,7 +2507,7 @@ Non-stopwords
        1        0   100.00   gewinnnachvortrag638762
        1        0   100.00   gewinnnachvortrag73429475
        1        0   100.00   gewinnohnevortrag
-       2        1    50.00   gewinnung
+       2        0   100.00   gewinnung
        1        0   100.00   gewinnvortrag182567159957
        1        0   100.00   gewisserimportdruckbemerkbar.etwa
        1        0   100.00   ghh
@@ -3158,7 +3158,7 @@ Non-stopwords
        1        0   100.00   kombinationskraftwagen
        1        0   100.00   kommen
        1        0   100.00   kommensteuerfürdieseeinkünfteanre
-       1        1     0.00   kommunikationstechnik
+       1        0   100.00   kommunikationstechnik
        1        0   100.00   kondensatoren
        1        0   100.00   konntenin1954
        1        0   100.00   konradkaletsch
@@ -3196,7 +3196,7 @@ Non-stopwords
        1        0   100.00   kurtvonoswald
        1        0   100.00   kurzfristigefor
        1        0   100.00   kurzfristigever
-      36        6    83.33   köln
+      36        5    86.11   köln
        1        0   100.00   kölnischehagel
        2        0   100.00   kölnischerückversicherungs
        2        0   100.00   kölnischeverwaltungs
@@ -3957,7 +3957,7 @@ Non-stopwords
        1        0   100.00   sowieersatzteilezudie
        1        0   100.00   sowiefolgendebankenin
        1        0   100.00   sowiesämt
-       1        1     0.00   sowiesämtlicheniederlassungendieser
+       1        0   100.00   sowiesämtlicheniederlassungendieser
        1        0   100.00   sowieweitere
        1        0   100.00   spaght
        2        0   100.00   spanien
@@ -4325,7 +4325,7 @@ Non-stopwords
        1        0   100.00   undlastkraftwagen
        1        0   100.00   undlt
        1        0   100.00   undlt.h
-       1        1     0.00   undlufttechnikgmbh
+       1        0   100.00   undlufttechnikgmbh
        1        0   100.00   undlötapparatefabrikernst
        1        0   100.00   undmaßnahmenberechtigt
        1        0   100.00   undmessingwerke
@@ -4423,7 +4423,7 @@ Non-stopwords
        1        0   100.00   verkaufsbürosundgeschäfts
        1        0   100.00   verkaufsbürosundgeschäftsstellen
        1        0   100.00   verkaufshäuser
-       1        1     0.00   verkehr
+       1        0   100.00   verkehr
        1        0   100.00   verkehrstechnik
        1        0   100.00   verkäufean
        1        0   100.00   verlustübernahmverträge
@@ -4620,7 +4620,7 @@ Non-stopwords
        1        0   100.00   westdeutschewohnhäuserag
        7        0   100.00   westf
        1        1     0.00   westfalen
-       4        1    75.00   westfalenbankag
+       4        0   100.00   westfalenbankag
        1        0   100.00   westfälischebau
        1        0   100.00   westfälischeboden
        1        0   100.00   westfälischeselektrizitätswerk

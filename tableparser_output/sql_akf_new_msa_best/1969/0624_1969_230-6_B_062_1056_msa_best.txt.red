@@ -1,4 +1,3 @@
-�
 WestfälischeKupfer-undMessingwerkeAkt.-Ges.vorm.Casp.Noell
 Sitz:5880Lüdenscheid,Altenaer
 Straße38-52,Postfach187
@@ -87,7 +86,7 @@ a)Stammaktien
 49100%587305%965265%
 50102%58475%66-
 51721385%459600%67288%
-52102%+)601110%68181%
+52102%+)601110%68181
 53102%61-(30.9.)
 54197%62600%
 55265%63655%
@@ -145,5 +144,5 @@ Personalaufwand88717499
 Beteiligungserträge1003504
 Abschreibungen18421474
 EEV-Steuern344350
-Jahresüberschuß471-
+Jahresüberschuß471
 Jahresfehlbetrag24

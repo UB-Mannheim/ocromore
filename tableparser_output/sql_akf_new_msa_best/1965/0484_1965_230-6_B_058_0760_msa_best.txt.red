@@ -1,4 +1,3 @@
-�
 PHRIX-WERKEAKTIENGESELLSCHAFT
 Sitz:2Hamburg36,Stephansplatz10,
 Postfach44

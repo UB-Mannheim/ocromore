@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2108 8416'>
             <span class ='ocr_line' title='bbox 0 0 1076 8416' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1076 8416' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1076 8416' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 144 2 1964 68' ><br/>
                 <span  class ='ocrx_word' title='bbox 144 2 1964 68' >Westfälische Kupfer- und Messingwerke Akt.-Ges. vorm. Casp. Noell</span > 
@@ -278,7 +278,7 @@
                 <span  class ='ocrx_word' title='bbox 85 4952 905 4988' >51721385%4 59 600 % 67 288 %</span > 
             </span>
             <span class ='ocr_line' title='bbox 84 4997 904 5033' ><br/>
-                <span  class ='ocrx_word' title='bbox 84 4997 904 5033' >52 102 %+) 601110 % 68 181 %</span > 
+                <span  class ='ocrx_word' title='bbox 84 4997 904 5033' >52 102 %+) 601110 % 68 181</span > 
             </span>
             <span class ='ocr_line' title='bbox 84 5041 856 5081' ><br/>
                 <span  class ='ocrx_word' title='bbox 84 5041 856 5081' >53 102 % 61 - (30.9.)</span > 
@@ -452,7 +452,7 @@
                 <span  class ='ocrx_word' title='bbox 41 8257 903 8289' >EEV-Steuern 344 350</span > 
             </span>
             <span class ='ocr_line' title='bbox 43 8303 900 8333' ><br/>
-                <span  class ='ocrx_word' title='bbox 43 8303 900 8333' >Jahresüberschuß 471 -</span > 
+                <span  class ='ocrx_word' title='bbox 43 8303 900 8333' >Jahresüberschuß 471</span > 
             </span>
             <span class ='ocr_line' title='bbox 44 8347 898 8385' ><br/>
                 <span  class ='ocrx_word' title='bbox 44 8347 898 8385' >Jahresfehlbetrag 24</span > 

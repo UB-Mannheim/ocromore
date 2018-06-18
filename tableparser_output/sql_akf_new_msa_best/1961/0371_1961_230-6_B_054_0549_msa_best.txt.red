@@ -1,4 +1,3 @@
-�
 Knoeckel,Schmidt&Cie.PapierfabrikenAktiengesellschaft
 Sitz:(22b)Lambrecht(Pfalz)
 Fernruf:Sa.-Nr.216

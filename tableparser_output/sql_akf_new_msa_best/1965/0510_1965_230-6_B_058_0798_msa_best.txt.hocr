@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2054 17643'>
             <span class ='ocr_line' title='bbox 0 0 1054 17636' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1054 17636' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1054 17636' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 205 95 1844 158' ><br/>
                 <span  class ='ocrx_word' title='bbox 205 95 1844 158' >Rheinisch- Westfälisches Elektrizitätswerk Aktiengesellschaft</span > 
@@ -98,7 +98,7 @@
                 <span  class ='ocrx_word' title='bbox 42 1546 929 1601' >Dr.Dr.h.c. Walther Hensel, Düsseldorf,</span > 
             </span>
             <span class ='ocr_line' title='bbox 46 1595 739 1627' ><br/>
-                <span  class ='ocrx_word' title='bbox 46 1595 739 1627' >8. stellv. Vors.; "</span > 
+                <span  class ='ocrx_word' title='bbox 46 1595 739 1627' >8. stellv. Vors.;</span > 
             </span>
             <span class ='ocr_line' title='bbox 42 1639 865 1676' ><br/>
                 <span  class ='ocrx_word' title='bbox 42 1639 865 1676' >Dr.Bernhard Heun, Krefeld, 9, stellv.</span > 
@@ -503,7 +503,7 @@
                 <span  class ='ocrx_word' title='bbox 69 8698 156 8722' >men</span > 
             </span>
             <span class ='ocr_line' title='bbox 75 8774 478 8811' ><br/>
-                <span  class ='ocrx_word' title='bbox 75 8774 478 8811' >Zahlstellen: _</span > 
+                <span  class ='ocrx_word' title='bbox 75 8774 478 8811' >Zahlstellen:</span > 
             </span>
             <span class ='ocr_line' title='bbox 71 8814 659 8855' ><br/>
                 <span  class ='ocrx_word' title='bbox 71 8814 659 8855' >Gesellschaftskasse, Essen;</span > 
@@ -532,8 +532,8 @@
             <span class ='ocr_line' title='bbox 75 9188 267 9221' ><br/>
                 <span  class ='ocrx_word' title='bbox 75 9188 267 9221' >München;</span > 
             </span>
-            <span class ='ocr_line' title='bbox 77 9230 992 9265' ><br/>
-                <span  class ='ocrx_word' title='bbox 77 9230 992 9265' >Berliner Handels-Gesellschaft, Berlin und</span > 
+            <span class ='ocr_line' title='bbox 77 9209 994 9265' ><br/>
+                <span  class ='ocrx_word' title='bbox 77 9209 994 9265' >Berliner Handels-Gesellschaft, Berlin und</span > 
             </span>
             <span class ='ocr_line' title='bbox 73 9273 381 9313' ><br/>
                 <span  class ='ocrx_word' title='bbox 73 9273 381 9313' >Frankfurt (M);</span > 
@@ -580,11 +580,14 @@
             <span class ='ocr_line' title='bbox 77 9918 662 9955' ><br/>
                 <span  class ='ocrx_word' title='bbox 77 9918 662 9955' >C.G. Trinkaus, Düsseldorf;</span > 
             </span>
-            <span class ='ocr_line' title='bbox 78 10006 938 10045' ><br/>
-                <span  class ='ocrx_word' title='bbox 78 10006 938 10045' >sowie sämtliche Niederlassungen dieser</span > 
+            <span class ='ocr_line' title='bbox 75 9962 938 10037' ><br/>
+                <span  class ='ocrx_word' title='bbox 75 9962 938 10037' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 76 9963 678 9998' ><br/>
                 <span  class ='ocrx_word' title='bbox 76 9963 678 9998' >Westfalenbank AG, Bochum;</span > 
+            </span>
+            <span class ='ocr_line' title='bbox 78 10006 938 10045' ><br/>
+                <span  class ='ocrx_word' title='bbox 78 10006 938 10045' >sowie sämtliche Niederlassungen dieser</span > 
             </span>
             <span class ='ocr_line' title='bbox 79 10052 1012 10087' ><br/>
                 <span  class ='ocrx_word' title='bbox 79 10052 1012 10087' >Banken und Bankfirmen; ferner eine Anzahl</span > 
@@ -596,7 +599,7 @@
                 <span  class ='ocrx_word' title='bbox 75 10145 528 10186' >gungsgebiet des RWE</span > 
             </span>
             <span class ='ocr_line' title='bbox 47 10249 842 10288' ><br/>
-                <span  class ='ocrx_word' title='bbox 47 10249 842 10288' >Grundkapital: DM 960 000 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 47 10249 842 10288' >Grundkapital: DM 960 000 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 50 10295 983 10335' ><br/>
                 <span  class ='ocrx_word' title='bbox 50 10295 983 10335' >Umstellung 1:1 auf DM 246 000 000. - durch</span > 
@@ -659,19 +662,19 @@
                 <span  class ='ocrx_word' title='bbox 43 11271 360 11309' >Stückelung:</span > 
             </span>
             <span class ='ocr_line' title='bbox 45 11316 894 11355' ><br/>
-                <span  class ='ocrx_word' title='bbox 45 11316 894 11355' >851 125 Inh.-St.-Akt. zuje DM 400; -</span > 
+                <span  class ='ocrx_word' title='bbox 45 11316 894 11355' >851 125 Inh.-St.-Akt. zuje DM 400;-</span > 
             </span>
             <span class ='ocr_line' title='bbox 44 11361 894 11402' ><br/>
                 <span  class ='ocrx_word' title='bbox 44 11361 894 11402' >467 375 Inh.-St.-Akt. zujeDM 100.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 43 11407 894 11447' ><br/>
-                <span  class ='ocrx_word' title='bbox 43 11407 894 11447' >232 500 Inh,-St.-Akt. zu je DM 1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 43 11407 894 11447' >232 500 Inh,-St.-Akt. zu je DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 68 11453 958 11494' ><br/>
-                <span  class ='ocrx_word' title='bbox 68 11453 958 11494' >40 625 Inh.-Namens-Akt. zu je DM 400. -</span > 
+                <span  class ='ocrx_word' title='bbox 68 11453 958 11494' >40 625 Inh.-Namens-Akt. zu je DM 400.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 68 11498 958 11539' ><br/>
-                <span  class ='ocrx_word' title='bbox 68 11498 958 11539' >40 625 Inh.-Namens-Akt. zu je DM 100, -</span > 
+                <span  class ='ocrx_word' title='bbox 68 11498 958 11539' >40 625 Inh.-Namens-Akt. zu je DM 100,-</span > 
             </span>
             <span class ='ocr_line' title='bbox 44 11546 958 11585' ><br/>
                 <span  class ='ocrx_word' title='bbox 44 11546 958 11585' >425 750 Inh.-Vorz.-Akt. zu je DM 400.-</span > 
@@ -680,7 +683,7 @@
                 <span  class ='ocrx_word' title='bbox 45 11591 958 11631' >302 000 Inh.-Vorz.-Akt. zuje DM 100.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 46 11637 958 11677' ><br/>
-                <span  class ='ocrx_word' title='bbox 46 11637 958 11677' >119 500 Inh.-Vorz.-Akt. zu je DM 1 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 46 11637 958 11677' >119 500 Inh.-Vorz.-Akt. zu je DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 42 11708 465 11738' ><br/>
                 <span  class ='ocrx_word' title='bbox 42 11708 465 11738' >Großaktionäre:</span > 
@@ -704,10 +707,10 @@
                 <span  class ='ocrx_word' title='bbox 47 12011 910 12056' >4 % Teilschuldverschreibungen von 1944</span > 
             </span>
             <span class ='ocr_line' title='bbox 44 12060 818 12099' ><br/>
-                <span  class ='ocrx_word' title='bbox 44 12060 818 12099' >Emissionsbetrag: RM 112 000. 000, -</span > 
+                <span  class ='ocrx_word' title='bbox 44 12060 818 12099' >Emissionsbetrag: RM 112 000. 000,-</span > 
             </span>
             <span class ='ocr_line' title='bbox 49 12103 860 12146' ><br/>
-                <span  class ='ocrx_word' title='bbox 49 12103 860 12146' >(umgestellt 10:1 auf DM 11 200 000.-) - )</span > 
+                <span  class ='ocrx_word' title='bbox 49 12103 860 12146' >(umgestellt 10:1 auf DM 11 200 000.-) -)</span > 
             </span>
             <span class ='ocr_line' title='bbox 48 12170 954 12215' ><br/>
                 <span  class ='ocrx_word' title='bbox 48 12170 954 12215' >61/2 % bzw.5 1/2 % Teilschuldverschrei-</span > 
@@ -740,7 +743,7 @@
                 <span  class ='ocrx_word' title='bbox 47 12662 656 12762' >. A St.-Akt.</span > 
             </span>
             <span class ='ocr_line' title='bbox 47 12700 656 12743' ><br/>
-                <span  class ='ocrx_word' title='bbox 47 12700 656 12743' >ultimo 1948 36,25 %</span > 
+                <span  class ='ocrx_word' title='bbox 47 12700 656 12743' >ultimo 1948 36,25</span > 
             </span>
             <span class ='ocr_line' title='bbox 96 12746 657 12789' ><br/>
                 <span  class ='ocrx_word' title='bbox 96 12746 657 12789' >" 1949 81,50 %</span > 

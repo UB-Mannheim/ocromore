@@ -301,6 +301,7 @@ Aktienkurse: 1948-1951: Hamburg;
 1952 und 1953: Frankfurt (M); ab 1954:
 Berlin
 ul(imo 1948 10,25 %
+
 1949 33,5 %
 1950 25 %
 1951 45 %

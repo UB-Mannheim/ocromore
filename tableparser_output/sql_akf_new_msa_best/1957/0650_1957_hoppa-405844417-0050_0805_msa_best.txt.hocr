@@ -11,7 +11,7 @@
         <body>
             <div class='ocr_page' title='image None; bbox 0 0 2086 10064'>
             <span class ='ocr_line' title='bbox 0 0 1060 10064' ><br/>
-                <span  class ='ocrx_word' title='bbox 0 0 1060 10064' >�</span > 
+                <span  class ='ocrx_word' title='bbox 0 0 1060 10064' ></span > 
             </span>
             <span class ='ocr_line' title='bbox 79 40 934 80' ><br/>
                 <span  class ='ocrx_word' title='bbox 79 40 934 80' >Sitz: (24a) Hamburg 1, Steinstraße 20.</span > 
@@ -368,7 +368,7 @@
                 <span  class ='ocrx_word' title='bbox 49 5879 838 5915' >AG; Commerz- und Credit-Bank AG.</span > 
             </span>
             <span class ='ocr_line' title='bbox 49 5948 831 5986' ><br/>
-                <span  class ='ocrx_word' title='bbox 49 5948 831 5986' >Grundkapital: DM 69 035 000. -</span > 
+                <span  class ='ocrx_word' title='bbox 49 5948 831 5986' >Grundkapital: DM 69 035 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 51 5993 887 6032' ><br/>
                 <span  class ='ocrx_word' title='bbox 51 5993 887 6032' >Umstellung 10:6,4 durch H. -V.v.23.5.</span > 
@@ -413,13 +413,13 @@
                 <span  class ='ocrx_word' title='bbox 57 6668 821 6700' >33 000 Stücke A-Akt. zu DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 57 6715 821 6747' ><br/>
-                <span  class ='ocrx_word' title='bbox 57 6715 821 6747' >30 086 Stücke A-Akt. zu DM 100. -</span > 
+                <span  class ='ocrx_word' title='bbox 57 6715 821 6747' >30 086 Stücke A-Akt. zu DM 100.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 58 6761 821 6792' ><br/>
                 <span  class ='ocrx_word' title='bbox 58 6761 821 6792' >21 760 Stücke B-Akt.zu DM 1 000.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 81 6806 821 6838' ><br/>
-                <span  class ='ocrx_word' title='bbox 81 6806 821 6838' >2 016 Stücke C-Akt. zu DM 100. -</span > 
+                <span  class ='ocrx_word' title='bbox 81 6806 821 6838' >2 016 Stücke C-Akt. zu DM 100.-</span > 
             </span>
             <span class ='ocr_line' title='bbox 59 6853 822 6884' ><br/>
                 <span  class ='ocrx_word' title='bbox 59 6853 822 6884' >10 898 Stücke C-Akt. zu DM 1 000.-</span > 
