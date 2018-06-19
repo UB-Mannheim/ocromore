@@ -37,8 +37,8 @@ if config.PREPROCESSING:
     #TODO: Add verbose to configfiles
     report_prep = dh.preprocess_dbdata(force=True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES, CLEAN_ABBYY=CLEAN_ABBYY, VERBOSE=VERBOSE, VERBOSEPATH=VERBOSEPATH)
 
-if config.WORKWITHOBJ:
-    dh.work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
+#if config.WORKWITHOBJ:
+#    dh._work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
 # Plot DF (not working atm)
 #if config.PLOT:
