@@ -46,10 +46,10 @@ PeterJammers,BadGodesberg;
 Dr.,OttoKorn,Aachen;
 Dr.-Ing.E.h,.HeinrichKost,Homberg
 (Niederrhein);
-WwilliKowalski,Bergheim(Erft);
+williKowalski,Bergheim(Erft);
 Dr.ErnstMawick,Nordhorn;
 EugenMork,Essen;
-KarlSchirner,Freiburgi.Br.;;
+KarlSchirner,Freiburgi.Br.;
 BernhardWeiss,DahlbruchüberKreuz-
 tal(Krs.Siegen)
 Gründung:1898

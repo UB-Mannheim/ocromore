@@ -49,7 +49,10 @@ class SearchSpaceProcessor(object):
         self.similar_chars.append(['C', "G","c"])
         # just for testing ...
         self.similar_chars.append(['.', ','])
+        self.similar_chars.append([',', ';'])
         self.similar_chars.append(['v', 'V'])
+        self.similar_chars.append(['w', 'W'])
+
         self.similar_chars.append(['i', 'l', 't', '1', '.']) # 1 l i also possible
         self.similar_chars.append(['r', 'n'])
         self.similar_chars.append(['%', 'm'])

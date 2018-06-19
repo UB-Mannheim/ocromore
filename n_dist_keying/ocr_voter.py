@@ -112,6 +112,11 @@ class OCRVoter(object):
             pass  # todo maybe cover this case (cause wildcard has no confidence i.e if the two otherchars are very low prob, take wildcard)
         elif char1 == '' and same_ctr == 0:
             pass  # todo maybe cover this case (cause space has no confidence ...
+        elif self.config.MSA_BEST_VOTING_DOWNSCALE_ONLY_SC \
+            and Random.is_special_character(char1) and same_ctr == 0 \
+            and char2 == wildcard_char and char3 == wildcard_char:
+            # lower the confidence of special characters which stand without any other chars
+            return same_ctr, cconf_ctr*0.9
 
         return same_ctr, cconf_ctr
 

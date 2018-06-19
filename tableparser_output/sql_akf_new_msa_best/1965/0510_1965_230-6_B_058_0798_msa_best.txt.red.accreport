@@ -1,31 +1,31 @@
 UNLV-ISRI OCR Accuracy Report Version 6.1
 -----------------------------------------
     8833   Characters
-      77   Errors
-   99.13%  Accuracy
+      76   Errors
+   99.14%  Accuracy
 
        0   Reject Characters
        0   Suspect Markers
        0   False Marks
     0.00%  Characters Marked
-   99.13%  Accuracy After Correction
+   99.14%  Accuracy After Correction
 
      Ins    Subst      Del   Errors
        0        0        0        0   Marked
-      24       13       40       77   Unmarked
-      24       13       40       77   Total
+      24       14       38       76   Unmarked
+      24       14       38       76   Total
 
    Count   Missed   %Right
        1        1     0.00   Unassigned
      339        1    99.71   ASCII Spacing Characters
     1172       32    97.27   ASCII Special Symbols
     1439        0   100.00   ASCII Digits
-     865        1    99.88   ASCII Uppercase Letters
+     865        2    99.77   ASCII Uppercase Letters
     4909        2    99.96   ASCII Lowercase Letters
        1        0   100.00   Latin1 Uppercase Letters
      106        0   100.00   Latin1 Lowercase Letters
        1        0   100.00   General Punctuation
-    8833       37    99.58   Total
+    8833       38    99.57   Total
 
   Errors   Marked   Correct-Generated
       11        0   {"}-{}
@@ -49,15 +49,14 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
        1        0   {%}-{}
        1        0   {+}-{}
        1        0   {.}-{;}
+       1        0   {W}-{w}
        1        0   {l}-{I}
        1        0   {t}-{f}
        1        0   {}-{(}
        1        0   {}-{4}
-       1        0   {}-{;}
        1        0   {}-{<\n>}
        1        0   {}-{D}
        1        0   {}-{r}
-       1        0   {}-{w}
        1        0   {}-{‚}
 
    Count   Missed   %Right
@@ -106,7 +105,7 @@ UNLV-ISRI OCR Accuracy Report Version 6.1
       11        0   100.00   {T}
        5        0   100.00   {U}
       55        0   100.00   {V}
-      26        0   100.00   {W}
+      26        1    96.15   {W}
        4        0   100.00   {Z}
      329        0   100.00   {a}
      123        0   100.00   {b}
