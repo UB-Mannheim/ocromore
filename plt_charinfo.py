@@ -8,27 +8,18 @@ from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
 from utils.database_handler import DatabaseHandler
 
-CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
+CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest_jk.conf"
 PRINT_SUSPICIOUSLINES = False
 CLEAN_ABBYY = False
+VERBOSE = False
+VERBOSEPATH = "/media/sf_ShareVB/AFKII/verbose/"
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, coded_configuration_paths=[CODED_CONFIGURATION_PATH])
 config = config_handler.get_config()
 
 # Read hocr and create sql-db
-
 dbdir = str(Path(config.DBDIR_READER).absolute())
-
-
-# TABLENAME_POS   = 1 #necessary
-# OCR_PROFILE_POS = 4
-# OCR_POS         = 2
-# DBPATH_POS      = 3 #necessary
-
-
 dh = DatabaseHandler(dbdir=dbdir)
-#dh.tablefilter = "0359_1976_230-6_B_069_0642"
-#dh.dbfilter = "1976"
 dh.set_dirpos(tablename_pos=config.TABLENAME_POS,ocr_profile_pos=config.OCR_PROFILE_POS,\
               ocr_pos=config.OCR_POS,dbname_pos=config.DBPATH_POS)
 
@@ -44,12 +35,11 @@ dh.update_db()
 
 if config.PREPROCESSING:
     #TODO: Add verbose to configfiles
-    report_prep = dh.preprocess_dbdata(force = True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES, CLEAN_ABBYY=CLEAN_ABBYY, VERBOSE = False, VERBOSEPATH= "/media/sf_ShareVB/AFKII/verbose/")
-#dh.print_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
+    report_prep = dh.preprocess_dbdata(force=True, PRINT_SUSPICIOUSLINES = PRINT_SUSPICIOUSLINES, CLEAN_ABBYY=CLEAN_ABBYY, VERBOSE=VERBOSE, VERBOSEPATH=VERBOSEPATH)
 
 if config.WORKWITHOBJ:
     dh.work_with_object(dh.dburlscheme+dh.db[0],dh.tablefilter)
 
 # Plot DF (not working atm)
-if config.PLOT:
-    dh.plot_charinfo()
+#if config.PLOT:
+#    dh._plot_charinfo()
