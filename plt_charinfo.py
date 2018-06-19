@@ -9,7 +9,7 @@ from configuration.configuration_handler import ConfigurationHandler
 from utils.database_handler import DatabaseHandler
 
 CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
-PRINT_SUSPICIOUSLINES = True
+PRINT_SUSPICIOUSLINES = False
 CLEAN_ABBYY = False
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, coded_configuration_paths=[CODED_CONFIGURATION_PATH])

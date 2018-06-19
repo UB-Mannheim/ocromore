@@ -1013,10 +1013,8 @@ class MsaHandler(object):
                 else:
                     text_seg[-1.0] = best_stripped_non_multi_whitespace
 
+            return best_stripped_non_multi_whitespace, text_seg
 
-
-
-            return best_stripped_non_multi_whitespace
         except Exception as ex:
             tr = inspect.trace()
             self.cpr.printex("msa_handler.py exception", ex)
