@@ -5,3 +5,4 @@ custom_ocropus_scripts
 Testfiles/charconfs/
 Testfiles/sql/
 Testfiles/sql_akf/
+tableparser_output/

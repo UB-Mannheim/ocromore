@@ -26,7 +26,7 @@ class MsaSimilarities(object):
     # similarity_1_uclist = TypeCasts.convert_string_to_unicode_list(similarity_1)
     # sims.append(similarity_1_uclist)
 
-    similarities_texts = ["l1j"]
+    similarities_texts = ["l1j",",;"]
 
     for sim in similarities_texts:
         sim_uclist = TypeCasts.convert_string_to_unicode_list(sim)
