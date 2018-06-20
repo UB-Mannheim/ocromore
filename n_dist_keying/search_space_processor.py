@@ -4,6 +4,7 @@ from utils.random import Random
 from enum import Enum, unique
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
+import operator
 
 @unique
 class ColumnFeatures(Enum):  # todo this can be normal class
@@ -11,13 +12,16 @@ class ColumnFeatures(Enum):  # todo this can be normal class
     ONE_CHAR_REST_WILDCARDS = 1
     ONE_CHAR_REST_WHITESPACE = 2
     ONLY_NONE = 3
-    MOSTLY_REFERENCE_CHAR = 4  # reference char is in there one or more times
+    MOSTLY_REFERENCE_CHAR = 4                           # reference char is in there one or more times
     ONLY_WHITESPACE = 5
     ONLY_WILDCARD = 6
     ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS = 7
     ONLY_WHITESPACE_OR_WILDCARD = 8
     CONTAINS_REFERENCE_CHAR = 9
-
+    ONE_SPECIALCHAR_REST_WILDCARDS = 10
+    ONE_SPECIALCHAR_REST_WHITESPACE_OR_WILDCARDS = 11
+    MOSTLY_SAME_SPECIAL_CHAR = 12                       # mostly special char with maximum 1 wildcard or whitespace
+    ONLY_SAME_SPECIAL_CHAR = 13                         # only special characters of the same kind
 
 class SearchSpaceProcessor(object):
 
@@ -101,6 +105,11 @@ class SearchSpaceProcessor(object):
         counter_nones = 0
         counter_characters = 0
         counter_reference_char = 0
+        counter_same_characters = 0
+        counter_dict = {}
+        counter_special_characters = 0
+        most_occuring_char = None
+
         otherchar = None
         otherchar_y_index = None
         simchars = None
@@ -134,18 +143,47 @@ class SearchSpaceProcessor(object):
                 otherchar = column_item
                 otherchar_y_index = y_index
 
+            if column_item != None:
+                if column_item != self._wildcard_character and \
+                    column_item != " ":
+                    if not column_item in counter_dict.keys():
+                        counter_dict.update({column_item: 1})
+                    else:
+                        counter_dict[column_item] += 1
+            if Random.is_special_character(column_item):
+                counter_special_characters += 1
+
+        # the highest amount of same characters in this column
+        if len(counter_dict.items()) >= 1:
+            most_occuring_char, counter_same_characters = max(counter_dict.items(), key=operator.itemgetter(1))
+
         # extract features
         features = []
-        counter_whitespace_and_wildcards =  counter_whitespaces + counter_wildcards
+        counter_whitespace_and_wildcards = counter_whitespaces + counter_wildcards
 
         if counter_nones == self.get_y_size():
             features.append(ColumnFeatures.ONLY_NONE.value)
         if counter_wildcards == self.get_y_size()-1 and counter_characters == 1:
             features.append((ColumnFeatures.ONE_CHAR_REST_WILDCARDS).value)
+            # additional feature, the only char is a special character
+            if Random.is_special_character(otherchar):
+                features.append(ColumnFeatures.ONE_SPECIALCHAR_REST_WILDCARDS.value)
+
         if counter_whitespaces == self.get_y_size()-1 and counter_characters == 1:
             features.append(ColumnFeatures.ONE_CHAR_REST_WHITESPACE.value)
         if counter_whitespace_and_wildcards == self.get_y_size()-1 and counter_characters == 1:
             features.append(ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value)
+            # additional feature, the only char is a special character
+            if otherchar != self._wildcard_character and otherchar != " "\
+                    and Random.is_special_character(otherchar):
+                #print("feature extraction")
+
+                #print(search_space[0])
+                #print(search_space[1])
+                #print(search_space[2])
+                #print("x-index",x_index)
+                features.append(ColumnFeatures.ONE_SPECIALCHAR_REST_WHITESPACE_OR_WILDCARDS.value)
+
         if counter_reference_char == self.get_y_size()-1 and (counter_whitespaces == 1 or counter_wildcards == 1):
             features.append(ColumnFeatures.MOSTLY_REFERENCE_CHAR.value)
         if counter_whitespaces == self.get_y_size():
@@ -156,7 +194,15 @@ class SearchSpaceProcessor(object):
             features.append(ColumnFeatures.ONLY_WHITESPACE_OR_WILDCARD.value)
         if counter_reference_char >= 1:
             features.append(ColumnFeatures.CONTAINS_REFERENCE_CHAR.value)
+        if counter_same_characters == self.get_y_size():
+            if counter_special_characters == self.get_y_size():
+                features.append(ColumnFeatures.ONLY_SAME_SPECIAL_CHAR.value)
+        if Random.is_special_character(most_occuring_char) \
+            and counter_same_characters == self.get_y_size()-1 \
+            and most_occuring_char != self._wildcard_character \
+            and counter_whitespace_and_wildcards == 1:
 
+            features.append(ColumnFeatures.MOSTLY_SAME_SPECIAL_CHAR.value)
 
         return features, otherchar, otherchar_y_index
 
@@ -226,15 +272,20 @@ class SearchSpaceProcessor(object):
 
         mid_column_feats, otherchar_mid, oc_mid_index = self.validate_column_features(search_space, self.get_middle_index())
 
+
+
         if self._config.MSA_BEST_SEARCHSPACE_MITIGATE_SPACE_HOPS:
-            # some char 'hopped' over a whitespace, get the characters back together
 
             if ColumnFeatures.ONLY_WHITESPACE_OR_WILDCARD.value in mid_column_feats:
 
+                # some char 'hopped' over a whitespace, get the characters back together
                 pre_column_feats, otherchar_pre, oc_pre_index = self.validate_column_features(search_space, \
-                                                                            self.get_pre_middle_index(), reference_char=None)
+                                                                                              self.get_pre_middle_index(),
+                                                                                              reference_char=None)
                 nex_column_feats, otherchar_nex, oc_nex_index = self.validate_column_features(search_space, \
-                                                                            self.get_nex_middle_index(), reference_char=None)
+                                                                                              self.get_nex_middle_index(),
+                                                                                              reference_char=None)
+
                 if ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in pre_column_feats and \
                     ColumnFeatures.ONE_CHAR_REST_WHITESPACE_OR_WILDCARDS.value in nex_column_feats:
 
@@ -349,6 +400,68 @@ class SearchSpaceProcessor(object):
                         processed_space_confs, shifted_confs_longtrangs = self.shift_from_to(search_space_confs, \
                                                                       reference_char_y_index, check_index_from, check_index, 0)
                         change_done = True
+
+
+
+        if self._config.MSA_BEST_SEARCHSPACE_DROP_SINGLE_CH_NEAR_SC:
+            #print("processed space")
+            #print(processed_space[0])
+            #print(processed_space[1])
+            #print(processed_space[2])
+
+            mid_column_feats2, otherchar_mid2, oc_mid_index2 = self.validate_column_features(processed_space,
+                                                                                          self.get_middle_index())
+
+            pre_column_feats2, otherchar_pre2, oc_pre_index2 = self.validate_column_features(processed_space, \
+                                                                                          self.get_pre_middle_index(),
+                                                                                          reference_char=None)
+            nex_column_feats2, otherchar_nex2, oc_nex_index2 = self.validate_column_features(processed_space, \
+                                                                                          self.get_nex_middle_index(),
+                                                                                          reference_char=None)
+            if ColumnFeatures.MOSTLY_SAME_SPECIAL_CHAR.value in mid_column_feats2:
+
+
+                if ColumnFeatures.ONE_SPECIALCHAR_REST_WHITESPACE_OR_WILDCARDS.value in pre_column_feats2:
+                    mid_char_at_oc_index = search_space[oc_pre_index2][self.get_middle_index()]
+                    if mid_char_at_oc_index == self.get_wildcard_char() or \
+                        mid_char_at_oc_index == " ":
+
+                        processed_space2, shiftedD3= self.shift_from_to(processed_space,oc_pre_index2,self.get_pre_middle_index(),self.get_middle_index(),self.get_wildcard_char())
+                        processed_space_confs2, shiftedD3= self.shift_from_to(processed_space_confs,oc_pre_index2,self.get_pre_middle_index(),self.get_middle_index(),0)
+
+                        #processed_space2, shiftedD3= self.set_space_to_value(processed_space,oc_pre_index2,self.get_pre_middle_index(),self.get_wildcard_char())
+                        #processed_space_confs2, shiftedD3= self.set_space_to_value(processed_space_confs,oc_pre_index2,self.get_pre_middle_index(),0)
+
+                        #processed_space2, shiftedD3 =self.shift_from_to(processed_space,oc_pre_index,self.get_pre_middle_index(), self.get_middle_index(),self._wildcard_character)
+                        #print("cool")
+                        #if shiftedD3:
+                        #    print("ssp corrected")
+                        processed_space = processed_space2
+                        processed_space_confs = processed_space_confs2
+
+                if ColumnFeatures.ONE_SPECIALCHAR_REST_WHITESPACE_OR_WILDCARDS.value in nex_column_feats2:
+                    mid_char_at_oc_index = search_space[oc_nex_index2][self.get_middle_index()]
+                    if mid_char_at_oc_index == self.get_wildcard_char() or \
+                            mid_char_at_oc_index == " ":
+
+                        processed_space2, shiftedD3= self.shift_from_to(processed_space,oc_nex_index2,self.get_nex_middle_index(),self.get_middle_index(),self.get_wildcard_char())
+                        processed_space_confs2, shiftedD3= self.shift_from_to(processed_space_confs,oc_nex_index2,self.get_nex_middle_index(),self.get_middle_index(),0)
+
+                        #processed_space2, shiftedD3= self.set_space_to_value(processed_space,oc_nex_index2,self.get_nex_middle_index(),self.get_wildcard_char())
+                        #processed_space_confs2, shiftedD3= self.set_space_to_value(processed_space_confs,oc_nex_index2,self.get_nex_middle_index(), 0)
+                        #print("cool")
+                        #if shiftedD3:
+                            #print("ssp corrected")
+                        processed_space = processed_space2
+                        processed_space_confs = processed_space_confs2
+            #elif ColumnFeatures.ONLY_SAME_SPECIAL_CHAR.value in mid_column_feats:
+                #if ColumnFeatures.ONE_SPECIALCHAR_REST_WHITESPACE_OR_WILDCARDS.value in pre_column_feats2:
+                    #print("asd")
+                #if ColumnFeatures.ONE_SPECIALCHAR_REST_WHITESPACE_OR_WILDCARDS.value in nex_column_feats2:
+                    #print("asd")
+                    #search_space_confs, shiftedD3 = self.set_space_to_value(processed_space, oc_nex_index,
+                    #                                                        delete_index, used_subsitution_value=self._wildcard_character)
+
 
 
         return processed_space, processed_space_confs, change_done

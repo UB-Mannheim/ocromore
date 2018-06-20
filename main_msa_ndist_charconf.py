@@ -55,7 +55,7 @@ for db in dh.db:
         table = file
         dbpath = 'sqlite:////' + db
         print("Parsing table: ", table, "in database: ", dbpath)
-        if "510" not in table: continue
+        if "484" not in table: continue
 
         table_ctr += 1
         path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)
