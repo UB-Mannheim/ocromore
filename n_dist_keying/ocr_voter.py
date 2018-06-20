@@ -15,6 +15,7 @@ class SpecialChars():
     special_chars = "éáó£"
     umlaut_increment = 18
     special_char_increment = 27
+    percentage_increment = 45
 
 class ConfidenceModifications():
     # scaling factors for confidence values of engines
@@ -243,7 +244,7 @@ class OCRVoter(object):
             self.cpr.print("vote_text1", line_1.textstr)
             self.cpr.print("vote_text2", line_2.textstr)
             self.cpr.print("vote_text3", line_3.textstr)
-            #if "1150" in line_1.textstr:
+            #if "ultimo" in line_1.textstr:
             #     self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
@@ -286,19 +287,16 @@ class OCRVoter(object):
                                  line_3.value(key_char, character_index)]
 
 
-                    l_one_is_whitespace = line_vals[0] == ' '
-                    l_two_is_whitespace = line_vals[1] == ' '
-                    l_thr_is_whitespace = line_vals[2] == ' '
+                    line_1_conf = line_1.value(key_confs, character_index, wsval=50.0)
+                    line_2_conf = line_2.value(key_confs, character_index, wsval=50.0)
+                    line_3_conf = line_3.value(key_confs, character_index, wsval=50.0)
 
-                    charconf_1 = self.try_obtain_charconf_searchspace(line_1.value(key_confs, character_index, wsval=50.0),
-                                                     engine_key = line_1.name[0], one_line_empty=one_line_empty,
-                                                     is_whitespace=l_one_is_whitespace)
-                    charconf_2 = self.try_obtain_charconf_searchspace(line_2.value(key_confs, character_index, wsval=50.0),
-                                                     engine_key = line_2.name[0], one_line_empty=one_line_empty,
-                                                     is_whitespace=l_two_is_whitespace)
-                    charconf_3 = self.try_obtain_charconf_searchspace(line_3.value(key_confs, character_index, wsval=50.0),
-                                                     engine_key = line_3.name[0], one_line_empty=one_line_empty,
-                                                     is_whitespace=l_thr_is_whitespace)
+                    charconf_1 = self.try_obtain_charconf_searchspace(line_1_conf, line_vals[0],
+                                                     engine_key = line_1.name[0], one_line_empty=one_line_empty)
+                    charconf_2 = self.try_obtain_charconf_searchspace(line_2_conf, line_vals[1],
+                                                     engine_key = line_2.name[0], one_line_empty=one_line_empty)
+                    charconf_3 = self.try_obtain_charconf_searchspace(line_3_conf, line_vals[2],
+                                                     engine_key = line_3.name[0], one_line_empty=one_line_empty)
                     charconf_vals = [charconf_1, charconf_2, charconf_3]
                 else:
                     # if the character is within padding range just give none values for characters and confidences
@@ -509,24 +507,30 @@ class OCRVoter(object):
 
         return accumulated_chars
 
-    def try_obtain_charconf_searchspace(self, value, undef_value=0, engine_key=None, one_line_empty=False,
-                                        is_whitespace=False):
-        if value is None or value is False or value is True:
+    def try_obtain_charconf_searchspace(self, value_confidence, value, undef_value=0, engine_key=None, one_line_empty=False,
+                                        ):
+        if value_confidence is None or value_confidence is False or value_confidence is True:
             return undef_value
 
-        returnvalue = value
+        returnvalue = value_confidence
 
         if self.config.MSA_BEST_VOTER_SCALE_ENGINE_CONFIDENCES and engine_key is not None:
             if engine_key == 'Abbyy':
-                returnvalue = ConfidenceModifications.abby_factor * value
+                if self.config.MSA_BEST_INCREASE_CONFIDENCE_OF_SOME_ABBYY_CHARS:
+                    if value == "%": # improve ocropus in confidence of % because it was trained
+                        value_confidence = value_confidence + 80
+
+                returnvalue = ConfidenceModifications.abby_factor * value_confidence
             elif engine_key == 'Tess':
-                returnvalue = ConfidenceModifications.tesseract_factor * value
+                returnvalue = ConfidenceModifications.tesseract_factor * value_confidence
 
             elif engine_key == 'Ocro':
-                returnvalue = ConfidenceModifications.ocropus_factor * value
+
+
+                returnvalue = ConfidenceModifications.ocropus_factor * value_confidence
 
         if self.config.MSA_BEST_VOTER_PUSH_LESS_LINES_WHITESPACE_CONFS and one_line_empty \
-                and is_whitespace:
+                and value == " ":
             returnvalue += ConfidenceModifications.whitespace_push
 
         return returnvalue
