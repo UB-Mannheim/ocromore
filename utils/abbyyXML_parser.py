@@ -33,7 +33,7 @@ def get_xml_document(fpath):
             #print(clean_tag)
             if clean_tag == "line":
                 if doc.page != [] and line is not None:
-                    if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.575:
+                    if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.6:
                         DELLINE = True
                     line.words.append(word)
                 COW = True
@@ -41,11 +41,11 @@ def get_xml_document(fpath):
                     del doc.page[-1]
                     DELLINE = False
                 line = Line(item.attrib)
-                word= Word()
+                word = Word()
                 doc.page.append(line)
             if clean_tag == "charParams":
                 if item.text == " ":
-                    if len(word.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) > 0.575:
+                    if len(word.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) > 0.6:    #0.575
                         DELLINE = True
                     line.words.append(word)
                     word = Word()
@@ -53,6 +53,11 @@ def get_xml_document(fpath):
                     if not GETLINECOORDS and COW:
                         line.coordinates = (None, None, None, None)
                         COW = False
+                    if line.coordinates != (None, None, None, None) and len(doc.page)>1:
+                        if line.coordinates[0] < doc.page[-2].coordinates[2]:
+                            if item.attrib["b"] <= doc.page[-2].coordinates[3]:
+                                item.attrib["t"] = line.coordinates[1]
+                                item.attrib["b"] = line.coordinates[3]
                     word.update_coordinates(item.attrib)
                     word._xconfs.append(item.attrib["charConfidence"])
                     word.ocr_text.append(item.text)
@@ -61,7 +66,7 @@ def get_xml_document(fpath):
                         word.suspicouscount += 1
         if word is not None:
             line.words.append(word)
-            if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.575:
+            if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.6:
                 DELLINE = True
             if DELLINE:
                 del doc.page[-1]

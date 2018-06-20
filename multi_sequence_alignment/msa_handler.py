@@ -896,6 +896,8 @@ class MsaHandler(object):
         max_range_word = int(max(m1, m2, m3)+1)  # add a one because it starts with zero
 
         try:
+            seg_counter = []
+            text_seg = {}
             for current_word_index in range(0, max_range_word):
                 word1 = get_word_from_line(line_1, current_word_index)
                 word2 = get_word_from_line(line_2, current_word_index)
@@ -963,16 +965,15 @@ class MsaHandler(object):
                 self.cpr.print("word_al 2:", words_aligned[1])
                 self.cpr.print("word_al 3:", words_aligned[2])
 
-
-                # if "-" in word1 or "-" in word2 or "-" in word3:
-                #    print("a wild dash appears")
-                #    dash_there = True
-
-
                 update_word(line_1, current_word_index, words_aligned[0])
                 update_word(line_2, current_word_index, words_aligned[1])
                 update_word(line_3, current_word_index, words_aligned[2])
-
+                #if "COLONIA" in words_aligned[0]:
+                #    stop="STOP"
+                #Creates the segment counter for wordbbox
+                seg_counter.extend([current_word_index]*(max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])])))
+                if current_word_index < max_range_word-1 and max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])]) > 0:
+                    seg_counter.append(-1)
 
             if use_charconfs:
                 if use_searchspaces is False:
@@ -986,17 +987,37 @@ class MsaHandler(object):
 
             if PRINT_RESULTS:
 
-
                 self.cpr.print("best         ", best)
                 self.cpr.print("best_stripped", best_stripped)
                 self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
+                if len(best) == len(seg_counter) and len(best.replace("¦","").strip()) != 0:
+                    #seg_counter = np.array(seg_counter)
+                    #Delete all wc
+                    wc_pos = [number for number, symbol in enumerate(best) if symbol == "¦"]
+                    for pos in reversed(wc_pos): del seg_counter[pos]
+                    # Delete the ws if the first or the second word was deleted
+                    if seg_counter[0] == -1: del seg_counter[0]
+                    if seg_counter[-1] == -1: del seg_counter[-1]
+                    # Delete the ws if a word in the middle was delete
+                    wc_pos = [number for number, symbol in enumerate(best_stripped.replace("  ","¦")) if symbol == "¦"]
+                    for pos in reversed(wc_pos): del seg_counter[pos]
+                    #seg_counter = [number for number in seg_counter if number != -1]
 
-                #if dash_there == True:
-                #    print("dashresult")
-                #if "DM 10" in best_stripped:
-                #    print("beep")
+                    if len(best_stripped_non_multi_whitespace) == len(seg_counter):
+                        ws_pos = np.where(np.array(seg_counter) == -1)
+                        ws_pos = np.ndarray.tolist(ws_pos[0])
+                        ws_pos.append(len(seg_counter))
+                        last_pos = 0
+                        for ws in ws_pos:
+                            text_seg[float(seg_counter[ws-1])]=best_stripped_non_multi_whitespace[last_pos:ws]
+                            last_pos = ws+1
+                    else:
+                        text_seg[-1.0] = best_stripped_non_multi_whitespace
+                else:
+                    text_seg[-1.0] = best_stripped_non_multi_whitespace
 
-            return best_stripped_non_multi_whitespace
+            return best_stripped_non_multi_whitespace, text_seg
+
         except Exception as ex:
             tr = inspect.trace()
             self.cpr.printex("msa_handler.py exception", ex)

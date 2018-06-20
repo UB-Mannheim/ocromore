@@ -306,11 +306,17 @@ class DFObjectifier(object):
                 old_lidx = None
                 old_idx = None
                 offset = 0
+                engine_stat = None
                 for idx in np.nonzero(con)[0].tolist():
-                    if old_lidx is None: old_lidx = linedict["line_idx"][idx]
+                    if engine_stat is None: engine_stat = (linedict["ocr"][idx],linedict["ocr_profile"][idx])
+                    if engine_stat != (linedict["ocr"][idx],linedict["ocr_profile"][idx]):
+                        offset = 0
+                        engine_stat = (linedict["ocr"][idx], linedict["ocr_profile"][idx])
+                    if old_lidx is None:
+                        old_lidx = linedict["line_idx"][idx]
                     if linedict["line_idx"][idx] != old_lidx:
                         old_lidx = linedict["line_idx"][idx]
-                        offset += linedict["word_idx"][old_idx]+1
+                        offset = linedict["word_idx"][old_idx]+1
                     linedict["calc_line_idx"][idx] = pparam.lineIdx
                     linedict["word_idx"][idx] = linedict["word_idx"][idx]+offset
                     linedict["line_y0"][idx] = pparam.y1_max
@@ -470,10 +476,12 @@ class DFObjectifier(object):
         print("Unspace lines ✓")
         return
 
-    def match_words(self, force=False,pad=1):
+    def match_words(self, force=False,pad=1.0, diffmul=2.175):
         """
         Matches the words together this can also meant that one word is match on two for a different dataset
         :param force: Force the process
+        :pad: 1.0 default
+        :diffmul: 2.0 default
         :return:
         """
         self.df["word_match"]=-1
@@ -524,7 +532,7 @@ class DFObjectifier(object):
                     curline["word_x0"][idx] = maxx1
                     if curline["word_x1"][idx] > lmaxx1: lmaxx1 = curline["word_x1"][idx]
                     curline["word_x1"][idx] = maxx1        
-                if lmaxx1-2*diff > minx1:
+                if lmaxx1-diffmul*diff > minx1:
                     resultmax1 = np.where(np.array(list(curline["word_x1"])) < lmaxx1+diff)[0]
                     for idx in reversed(resultmax1):
                         linedict[line]["calc"]["word_match"][idx] = widx

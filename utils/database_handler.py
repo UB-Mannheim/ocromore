@@ -1,16 +1,11 @@
 from utils.hocr_converter import HocrConverter
-from utils.hocr_charinfo import merge_charinfo
 from utils.df_tools import get_con
 from utils.df_objectifier import DFObjectifier
 import glob
 from itertools import chain
 import inspect
-
 import numpy as np
 from sqlalchemy import create_engine
-#import matplotlib.pyplot as plt
-#import seaborn as sns
-#import pandas as pd
 import os
 import shutil
 from pathlib import Path
@@ -47,7 +42,6 @@ class DatabaseHandler(object):
 
     def get_files(self):
         return self.files
-
 
     def set_dirpos(self,tablename_pos=1, ocr_profile_pos=2,ocr_pos=3,dbname_pos=4):
         self.dirpos = {"tablename":tablename_pos,"ocr_profile":ocr_profile_pos,"ocr":ocr_pos,"dbname":dbname_pos}
@@ -127,7 +121,6 @@ class DatabaseHandler(object):
             self.gtfiles[fstruct.dbname][fstruct.name.split(".")[0]] = fstruct
         return
 
-
     def fetch_outputfiles(self, outputfileglob, prefix):
         self.outputfiles = {}
         filetype = "txt"
@@ -175,7 +168,7 @@ class DatabaseHandler(object):
 
         return exceptions
 
-    def preprocess_dbdata(self, force = True, PRINT_SUSPICIOUSLINES=False, CLEAN_ABBYY = True, VERBOSE = False, VERBOSEPATH=None):
+    def preprocess_dbdata(self, force=True, PRINT_SUSPICIOUSLINES=False, CLEAN_ABBYY=False, VERBOSE=False, VERBOSEPATH=None):
         if VERBOSE and VERBOSEPATH is None:
             VERBOSEPATH = "./Testfiles/"
         print("Preprocess the data")
@@ -239,8 +232,6 @@ class DatabaseHandler(object):
                                                     print(items.word["text"][word] + "\t", end="")
                                                 print("\n")
                                             break
-
-
 
                         # Write the calulated values into the db
                         dataframe_wrapper.write2sql()
@@ -325,7 +316,7 @@ class DatabaseHandler(object):
         return exceptions
 
     @staticmethod
-    def do_preprocessing(dbs_and_files):
+    def _do_preprocessing(dbs_and_files):
         print("doing preprocessing")
         exceptions = []
 
@@ -376,7 +367,7 @@ class DatabaseHandler(object):
                 print("\n")
 
     @staticmethod
-    def work_with_object(con, tablename):
+    def _work_with_object(con, tablename):
         # get first db and first table/filename for the operation
         #my_db = list(dbs_and_files.keys())[0]
         #filename, somestuff = dbs_and_files[my_db][0]
@@ -464,7 +455,7 @@ class DatabaseHandler(object):
         dfXO.update(dfSelO)
 
     @staticmethod
-    def plot_charinfo(charinfo, date, GROUPS=False, years=False, plot="Histo"):
+    def _plot_charinfo(charinfo, date, GROUPS=False, years=False, plot="Histo"):
         # Plot Group
         if years:
             groupmembers = ["Zeichen", "Buchstaben", "Zahlen", "Satzzeichen"]
@@ -566,7 +557,7 @@ class DatabaseHandler(object):
 
     ### TEST FUNCTION
     @staticmethod
-    def test_word(items):
+    def _test_word(items):
         try:
             word1 = items.word["text"].get(1.0, None)
             if word1 != None:
@@ -587,7 +578,7 @@ class DatabaseHandler(object):
             print("TEST WORD PASSED!")
 
     @staticmethod
-    def test_linematching(dfXO):
+    def _test_linematching(dfXO):
         max_line = dfXO.df["calc_line"].max()
         grps = dfXO.df.groupby(["ocr", "ocr_profile"])
         for lidx in np.arange(0.0, max_line):

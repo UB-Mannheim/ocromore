@@ -4,6 +4,7 @@ from n_dist_keying.text_corrector import TextCorrector
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 import glob
+import numpy as np
 from itertools import chain
 
 import os
@@ -297,14 +298,71 @@ class OCRcomparison:
         <body>
             <div class='ocr_page' title='image {imgdir}; bbox 0 0 {int(file_cords["line_x1"][0])} {int(file_cords["line_y1"][0])}'>\n'''
                     file.write(hocr_header)
-                dtext = f'''            <span class ='ocr_line' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' ><br/>
-                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{dataset_text}</span > 
-            </span>\n'''
+                dtext = self._write_line_infos(dataset_bbox, dataset_text, set_index, other_set, lidx, current_set)
                 file.write(dtext)
             if lidx == len(self.ocr_sets)-2:
                 file.write("\t\t</div>\n\t</body>\n</html>")
                 break
         file.close()
+
+    def _write_line_infos(self,dataset_bbox, dataset_text,set_index, other_set,lidx, current_set):
+        dtext = f'''            <span class ='ocr_line' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' ><br/>\n'''
+        if other_set == "msa_best":
+            if current_set._text_seg == None:
+                dtext += f'''                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{dataset_text}</span >\n'''
+            else:
+                for number, word in current_set._text_seg.items():
+                    if number != -1.0:
+                        set_index = 2
+                        if number in current_set._set_lines[1].word["UID"].keys() and \
+                                max(current_set._set_lines[1].word["UID"][number])>=0 and \
+                                current_set._set_lines[1].data["word_x0"]:
+                            set_index = 1
+                        elif  number in current_set._set_lines[0].word["UID"].keys() and \
+                                max(current_set._set_lines[0].word["UID"][number])>=0 and \
+                                current_set._set_lines[0].data["word_x0"]:
+                            set_index = 0
+                        dataset_bbox = self._get_wbbox_new(dataset_bbox,number,current_set._set_lines[set_index].data)
+                    dtext += f'''                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{word}</span >\n'''
+                    set_index= 0
+        else:
+            for number, word in current_set._set_lines[set_index].word["text"].items():
+                dataset_bbox = self._get_wbbox(dataset_bbox,number,current_set._set_lines[set_index].word["UID"],current_set._set_lines[set_index].data)
+                dtext +=f'''                <span  class ='ocrx_word' title='bbox {int(dataset_bbox[0])} {int(dataset_bbox[1])} {int(dataset_bbox[2])} {int(dataset_bbox[3])}' >{word}</span >\n'''
+        dtext += f'''            </span>\n'''
+        return dtext
+
+    def _get_wbbox(self,bbox, number, nb_dict, data, avg=True):
+        wbbox_pos = 0
+        for nbkey in nb_dict:
+            if nbkey != number:
+                if wbbox_pos == 0: wbbox_pos=-1
+                wbbox_pos += len(nb_dict[nbkey])
+            else:
+                wbbox_pos += len(nb_dict[nbkey])/2
+                break
+        if wbbox_pos != 0:
+            if number != 0.0:
+                bbox[0] = data["word_x0"][int(wbbox_pos)]
+            bbox[2] = data["word_x1"][int(wbbox_pos)]
+        return bbox
+
+    def _get_wbbox_new(self,bbox, number, data, avg=True):
+        uid_arr = np.array(data["UID"])
+        wc_arr = np.where(uid_arr == -1)
+        nb_arr = np.array(data["word_match"])
+        nb_arr = np.delete(nb_arr,wc_arr)
+        #for wc_pos in wc_arr[0]:
+        #    del nb_arr[wc_pos]
+        nb_pos = np.where(nb_arr==number)
+        if len(nb_pos[0]) == 0:
+            stop="STOP"
+        wbbox_pos = nb_pos[0][int(len(nb_pos[0])/2)]
+        if wbbox_pos != 0:
+            bbox[0] = data["word_x0"][int(nb_pos[0][0])]
+            bbox[2] = data["word_x1"][int(nb_pos[0][-1])]
+        return bbox
+
 
     def export_text_lines(self):
         """
