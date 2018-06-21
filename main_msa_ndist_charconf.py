@@ -7,8 +7,8 @@ import os
 
 
 # fetch configurations
-CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_jk.conf'  # configuration which is not given with cli args
-CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest_jk.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest_js.conf'  # configuration which is not given with cli args
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
                                       coded_configuration_paths=[CODED_CONFIGURATION_PATH_VOTER, CODED_CONFIGURATION_PATH_DB_READER])
@@ -46,7 +46,7 @@ for db in dh.db:
     temp = os.path.splitext(db)[0]
     db_keyname = os.path.basename(temp)  # this returns just the filename (wildlife)
 
-   #if "1965" != db_keyname: continue
+    #if "1965" != db_keyname: continue
 
     files_gt = filestructs_gt[db_keyname]
     for file in files:
@@ -55,7 +55,8 @@ for db in dh.db:
         table = file
         dbpath = 'sqlite:////' + db
         print("Parsing table: ", table, "in database: ", dbpath)
-        #if "510" not in table: continue
+
+        #if "484" not in table: continue
 
         table_ctr += 1
         path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)

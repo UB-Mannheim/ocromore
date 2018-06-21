@@ -948,15 +948,18 @@ class MsaHandler(object):
                         if len(words_aligned[0]) == 1:
                             wc_count = 0  # number of wildcards
                             sc_count = 0  # number of special characters
+                            scs_list = []
                             for word in words_aligned:
                                 if word == wildcard_character:
                                     wc_count += 1
                                 elif Random.is_special_character(word):
                                     sc_count += 1
+                                    scs_list.append(word)
 
                             if wc_count == 2 and sc_count == 1:
-                                print("won't update last word because seems wrong")
-                                break  # just don't update the last word
+                                if not "%" in scs_list: # ignore percentages because this case is often in tables
+                                    # print("won't update last word because seems wrong")
+                                    break  # just don't update the last word
 
                 self.cpr.print("word_al 1:", words_aligned[0])
                 self.cpr.print("word_al 2:", words_aligned[1])
