@@ -11,7 +11,6 @@ from vocabulary_checker.vocabulary_checker import VocabularyChecker
 
 class TableParser(object):
 
-
     def __init__(self, config, voter_mode = True):
         self._config = config
         # give the last element in split path
@@ -129,7 +128,7 @@ class TableParser(object):
             output_path_tess = self.get_basic_output_directory(dbdir_abs, "tess") + "/" + table + "_tess.txt"
             output_path_ocro = self.get_basic_output_directory(dbdir_abs, "ocro") + "/" + table + "_ocro.txt"
             #TODO:write to config
-            WRITE_HOCR=True
+            WRITE_HOCR=False
             ocr_comparison.save_dataset_to_file(output_path_abbyy, 0, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_tess, 1, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_ocro, 2, mode_add_linebreaks=False)
@@ -214,7 +213,6 @@ class TableParser(object):
                 ocr_comparison.save_dataset_to_hocr(created_path, 0, self._config.MODE_ADD_LINEBREAKS, "msa_best")
             return created_path, additional_created_files
 
-
     def create_reduced_file(self, filepath, ignore_whitespace, ignore_emptyline, ignore_tabs):
 
 
@@ -244,7 +242,6 @@ class TableParser(object):
         file_new.close()
         file.close()
         return new_filepath_table
-
 
     def validate_table_against_gt(self, filepath_table, filepath_groundtruth, ignore_whitespace=True, ignore_emptyline=True, ignore_tabs=True):
         if self._config.DO_ISRI_VAL is True:
@@ -276,8 +273,6 @@ class TableParser(object):
         isri_handler.accsum(accreports, output_root_path+"/"+basename+"_complete_summarized_report.accsum")
         isri_handler.wordaccsum(waccreports, output_root_path+"/"+basename+"_complete_summarized_report.waccsum")
 
-
-
     def summarize_accuracy_reports(self, root_folder, dbname):
         if self._config.SUMMARIZE_ISRI_REPORTS is False:
             return None, None
@@ -301,7 +296,6 @@ class TableParser(object):
         generated_wacc_report = root_folder+"/"+dbname+"_summarized_report.waccsum"
         isri_handler.accsum(files_accsum, generated_acc_report )
         isri_handler.wordaccsum(files_waccsum, generated_wacc_report)
-
 
         return generated_acc_report, generated_wacc_report
 

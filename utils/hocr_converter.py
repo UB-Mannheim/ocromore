@@ -116,6 +116,9 @@ class HocrConverter(object):
         :return:
         """
         ocr = "Ocro"
+        if ocr_profile is not None and str.lower(ocr_profile) in ["abbyy","tess"]:
+            ocr = str.capitalize(ocr_profile)
+            ocr_profile = "default"
         page = document.pages[0]
         # assign ocropus page
         self._ocropus_page = page
@@ -141,6 +144,10 @@ class HocrConverter(object):
         :return:
         """
         ocr = "Tess"
+        #TODO:Special case delete maybe later
+        if ocr_profile is not None and str.lower(ocr_profile) in ["abbyy","ocro"]:
+            ocr = str.capitalize(ocr_profile)
+            ocr_profile = "default"
         page = document.pages[0]
         # assign tesseract page for further usage
         self._tesseract_page = page
@@ -165,6 +172,9 @@ class HocrConverter(object):
         :return:
         """
         ocr = "Abbyy"
+        if ocr_profile is not None and str.lower(ocr_profile) in ["tess","ocro"]:
+            ocr = str.capitalize(ocr_profile)
+            ocr_profile = "default"
         page = document.pages[0]
 
         # assign abbyy page for further usage

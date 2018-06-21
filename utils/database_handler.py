@@ -161,7 +161,7 @@ class DatabaseHandler(object):
             for file in self.files[dbname]:
                 print(f"\nConvert to sql:\t{file.name}")
                 try:
-                    HocrConverter().hocr2sql(file.path, self.con, file.ocr_profile)
+                    HocrConverter().hocr2sql(file.path, self.con, ocr_profile=file.ocr_profile)
                 except Exception as ex:
                     print(f"Exception parsing file {file.name}:", ex)
                     exceptions.append(ex)
