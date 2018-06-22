@@ -8,7 +8,7 @@ from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
 from utils.database_handler import DatabaseHandler
 
-CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest_js.conf"
+CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest_jk.conf"
 PRINT_SUSPICIOUSLINES = False
 CLEAN_ABBYY = False
 VERBOSE = False

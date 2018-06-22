@@ -80,7 +80,7 @@ class HocrConverter(object):
         """
         document = self.get_hocr_document(filename)
         ocr = document.ocr if not ocr else self._normalize_ocr_(ocr, document.ocr)
-        if not ocr_profile:
+        if not ocr_profile or str.lower(ocr_profile) not in ["abbyy","ocro","tess"]:
             ocr_profile = "default"
         if not index:
             index = ['ocr','ocr_profile','line_idx', 'word_idx', 'char_idx']

@@ -999,8 +999,10 @@ class MsaHandler(object):
                     if seg_counter[0] == -1: del seg_counter[0]
                     if seg_counter[-1] == -1: del seg_counter[-1]
                     # Delete the ws if a word in the middle was delete
+                    if best_stripped[0] == " ": best_stripped = best_stripped[1:]
                     wc_pos = [number for number, symbol in enumerate(best_stripped.replace("  ","¦")) if symbol == "¦"]
-                    for pos in reversed(wc_pos): del seg_counter[pos]
+                    for pos in reversed(wc_pos):
+                        del seg_counter[pos]
                     #seg_counter = [number for number in seg_counter if number != -1]
 
                     if len(best_stripped_non_multi_whitespace) == len(seg_counter):
