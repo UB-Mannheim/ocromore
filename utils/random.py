@@ -1,6 +1,26 @@
-
+import re
 
 class Random:
+
+    @staticmethod
+    def remove_trailing_chars_by_set(input_text, charset):
+        # todo this is not used not tested
+        pattern_trail = re.compile(r"["+charset+"]+$")
+        trailing_chars = pattern_trail.findall(input_text)
+        if len(trailing_chars) >= 1:
+            new_input_text = input_text[0:len(input_text)-len(trailing_chars)]
+            input_text = new_input_text
+        return input_text
+
+    @staticmethod
+    def remove_trailing_chars_by_count(input_text, count):
+        new_input_text = input_text[0:len(input_text)-count]
+        return new_input_text
+
+    @staticmethod
+    def remove_starting_chars_by_count(input_text, count):
+        new_input_text = input_text[count:]
+        return new_input_text
 
     @staticmethod
     def is_special_character(text):

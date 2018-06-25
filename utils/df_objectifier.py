@@ -912,13 +912,21 @@ class DFSelObj(object):
         if cmd == "replace":
             self.data["calc_char"][pos] = val
 
-    def update_textspace(self, text, wc=None, widx=None):
+
+    def update_stuff_at(self, index_from, index_to, new_value):
+
+        self.data["word_match"][index_from:index_to] = [new_value]*(index_to-index_from)
+        self.data["calc_word_idx"][index_from:index_to] = [new_value]*(index_to-index_from)
+
+
+    def update_textspace(self, text, wc=None, widx=None, force_overwrite=False, matching_confusions=None):
 
         # wc = wildcards
         # widx = word index
         # word2text = update text with word elements
         offset = 0
         if widx is not None:
+            # if the given wordindex matches existing word_indices wmidxset is not 0
             wmidxset = set(np.where(np.array(list(self.data["word_match"])) == widx)[0].tolist())
             if len(wmidxset) != 0:
                 offset = min(set(list(wmidxset)))
@@ -949,6 +957,7 @@ class DFSelObj(object):
             if wc in text:
                 self._update_wildcard(text,wc,offset)
         if widx is not None:
+            # create a textarray with new word information and also the existing words
             textarr = []
             for idx in self.word["text"]:
                 if widx != idx:
@@ -956,15 +965,17 @@ class DFSelObj(object):
                 else:
                     textarr.append(text)
                     text = ""
+            # create a text variable from the newly created array seperated by spaces for each word
             text = " ".join(textarr)+" "+text
             text.strip()
         if text != self.textstr:
+            # the new array has different values than the old
             wsarr = np.where(np.array(list(text)) == " ")[0]
             if len(wsarr)>0:
                 if max(wsarr) <= len(self.data["calc_word_idx"]):
                     lidx = 0
                     wscount = 0
-                    for line,idx in enumerate(np.nditer(wsarr)):
+                    for line, idx in enumerate(np.nditer(wsarr)):
                         if idx != 0:
                             self.data["calc_word_idx"][lidx:idx-wscount] = [line]*(idx-lidx-wscount)
                         lidx = idx-wscount
