@@ -961,6 +961,8 @@ class MsaHandler(object):
                                     # print("won't update last word because seems wrong")
                                     break  # just don't update the last word
 
+
+
                 self.cpr.print("word_al 1:", words_aligned[0])
                 self.cpr.print("word_al 2:", words_aligned[1])
                 self.cpr.print("word_al 3:", words_aligned[2])
@@ -975,6 +977,94 @@ class MsaHandler(object):
                 if current_word_index < max_range_word-1 and max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])]) > 0:
                     seg_counter.append(-1)
 
+
+
+            if self.config.MSA_BEST_WORDWISE_CRUNCH_WORDS:
+                def get_other_index_wcs(longest_wcs_counter, oc_index):
+                    for wcs_index, wcs_item in enumerate(longest_wcs_counter):
+                        if oc_index != wcs_index:
+                            return wcs_index
+
+                print("asd")
+                words_and_feats = []
+                for current_word_index in range(0, max_range_word):
+                    word1 = get_word_from_line(line_1, current_word_index)
+                    word2 = get_word_from_line(line_2, current_word_index)
+                    word3 = get_word_from_line(line_3, current_word_index)
+                    feats_word = self.get_word_column_feats(word1,word2,word3, wildcard_character)
+                    words_and_feats.append(([word1, word2, word3], feats_word))
+                if len(words_and_feats) > 1:
+                    for waf_index in range(0, len(words_and_feats)-1):
+                        words = words_and_feats[waf_index][0]
+                        feats = words_and_feats[waf_index][1][0]
+                        oc_index = words_and_feats[waf_index][1][1]
+                        longest_wcs_counter = words_and_feats[waf_index][1][2] # longest wildcard streaks
+                        words_next = words_and_feats[waf_index+1][0]
+                        feats_next = words_and_feats[waf_index+1][1][0]
+                        oc_index_next = words_and_feats[waf_index+1][1][1]
+                        longest_wcs_counter_next = words_and_feats[waf_index+1][1][2] # longest wildcard streaks
+
+
+                        if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats \
+                            and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats_next\
+                            and oc_index == oc_index_next:
+
+                            print(words)
+                            print(words_next)
+                            print("t")
+                        if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats \
+                            and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats_next \
+                            and oc_index == oc_index_next:
+
+                            index_subst = get_other_index_wcs(longest_wcs_counter,oc_index)
+                            wc_substraction_count = longest_wcs_counter_next[index_subst][0]
+                            words_subst = []
+                            words_next_subst = []
+                            words_complete = []
+                            for subst_index in range(0,len(words)):
+                                if subst_index == oc_index:
+                                    word = Random.remove_trailing_chars_by_count(words[subst_index], wc_substraction_count)
+                                    words_subst.append(word)
+                                    words_next_subst.append(words_next[subst_index])
+                                    words_complete.append(word+words_next[subst_index])
+                                else:
+                                    words_subst.append(words[subst_index])
+
+                                    word_next = Random.remove_starting_chars_by_count(words_next[subst_index],wc_substraction_count)
+                                    words_next_subst.append(word_next)
+                                    words_complete.append(words[subst_index]+word_next)
+
+
+                                print("asd")
+
+
+
+                            # how to update confidences ? necessary ?
+                            #line_1.data["word_match"] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0,
+                            #                1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,
+                            #                3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
+
+
+                            line_3.update_stuff_at(11, 15, 1.0)
+                            line_1.update_textspace(words_complete[0], wildcard_character, widx=waf_index)
+                            line_2.update_textspace(words_complete[1], wildcard_character, widx=waf_index)
+                            line_3.update_textspace(words_complete[2], wildcard_character, widx=waf_index)
+
+                            line_1.update_textspace("", wildcard_character, widx=waf_index+1)
+                            line_2.update_textspace("", wildcard_character, widx=waf_index+1)
+                            line_3.update_textspace("", wildcard_character, widx=waf_index+1)
+
+
+
+                            print(words)
+                            print(words_next)
+                            print("t")
+
+
+                        print("asd")
+                        # todo end factory
+
+
             if use_charconfs:
                 if use_searchspaces is False:
                     best, best_stripped = self.ocr_voter.vote_best_of_three_charconfs(line_1, line_2, line_3, 1,
@@ -984,7 +1074,9 @@ class MsaHandler(object):
                                                                                 wildcard_character)
 
                 best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
-
+            else:
+                print("not implemented yet")
+                # todo implement case without charconfs
             if PRINT_RESULTS:
 
                 self.cpr.print("best         ", best)
@@ -1068,3 +1160,181 @@ class MsaHandler(object):
             self.cpr.print("E:", best_stripped)
             self.cpr.print("F:", best_stripped_non_multi_whitespace)
         return best_stripped_non_multi_whitespace
+
+
+    # todo factor this to other function
+    class WordColumnFeats:
+        ONLY_WILDCARDS = 0
+        ONLY_SPACES = 1
+        ALL_SAME_CONTENT = 2
+        MOSTLY_WILDCARDS = 3
+        MOSTLY_SIMILAR_WORDS = 4
+        MOSTLY_SAME_WORDS = 5
+        WILDCARDS_LEFT = 6
+        WILDCARDS_RIGHT = 7
+        HIGH_WILDCARD_RATIO_IN_ONE_ITEM = 8
+        HIGH_WILDCARD_RATIO_IN_MOST_ITEMS = 9
+
+
+    def get_word_column_feats(self, word1, word2, word3, wildcard_character):
+        from n_dist_keying.n_distance_voter import NDistanceVoter
+
+        detected_feats = []
+
+        words_input = [word1, word2, word3]
+        counters_with_chars = {}
+        counters_wildcard_streaks = []
+        counter_only_wildcard_words = 0
+        counter_only_spaces = 0
+        counter_only_nones = 0
+        last_word_index = -1
+        last_wildcard_or_space_index = -1
+
+
+        for word_index, word in enumerate(words_input):
+            if word is None:
+                counter_only_nones+=1
+                continue
+
+            # obtain longest character streak
+            word_as_list = list(word)
+            longest_wildcard_streak = 0
+            streak_broke = False
+            streak_is_lefthanded = True
+            for char_index, char in enumerate(word_as_list):
+                if streak_broke and char == wildcard_character:
+                    streak_broke = False
+                    longest_wildcard_streak = 0 # reset streak
+                if char == wildcard_character:
+                    longest_wildcard_streak+=1
+                if char != wildcard_character:
+                    streak_broke = True
+                if char_index == len(word_as_list)-1 and \
+                    char == wildcard_character:
+                        streak_is_lefthanded = False
+            if len(word_as_list) >= 1:
+                wildcard_ratio = longest_wildcard_streak / len(word_as_list)
+            else:
+                wildcard_ratio = 0
+
+            counters_wildcard_streaks.append((longest_wildcard_streak, wildcard_ratio, streak_is_lefthanded))
+
+            word_only_wildcard = len(word.replace(wildcard_character, "")) == 0 and len(word) >= 1
+            word_only_space = len(word.replace(" ","")) == 0 and len(word) >= 1
+
+            if word_only_wildcard:
+                counter_only_wildcard_words += 1
+                last_wildcard_or_space_index = word_index
+            elif word_only_space:
+                counter_only_spaces += 1
+                last_wildcard_or_space_index = word_index
+            else:
+                last_word_index = word_index
+                if not word in counters_with_chars.keys():
+                    counters_with_chars.update({word: 1})
+                else:
+                    counters_with_chars[word] += 1
+
+        #for key in counters_with_chars.keys():
+        #    value = counters_with_chars[key]
+
+
+
+        ndist_voter = NDistanceVoter(counters_with_chars.keys())
+        ndist_index = ndist_voter.compare_texts(take_longest_on_empty_lines=True)
+
+        #ndist_result = words_input[ndist_index]
+        #ndist_only_wildcard = len(ndist_result.replace(wildcard_character,"")) and len(ndist_result)>=1
+
+        #other_word_index = None
+        #if n_dist_only_wildcard:
+        #    if column_item != None:
+        #        if column_item != self._wildcard_character and \
+        #                column_item != " ":
+        words_are_similar = False
+        counter_similar_words = 0
+        counter_same_words = 0
+        if len(counters_with_chars.keys()) >= 2:
+            acc_vals = 0
+            for key in ndist_voter.d_storage.key_val_dict:
+                value = ndist_voter.d_storage.key_val_dict[key]
+                acc_vals += value
+                if value <= 0.18:
+                    counter_similar_words += 1
+            #average_dist_between_words = acc_vals / len(ndist_voter.d_storage.key_val_dict)
+            #print("asd")
+            #if average_dist_between_words <= 0.35:
+            #    words_are_similar = True
+        if len(counters_with_chars.keys()) == 1:
+            key, value = counters_with_chars.popitem()
+            counter_same_words = value
+
+        high_wildcard_ratio_count = 0
+        wildcards_mostly_left_indicator = 0
+        other_than_wildcard_index = -1
+        only_wildcard_index = -1
+        for row_index, row in enumerate(counters_wildcard_streaks):
+            wildcard_ratio = row[1]
+            wildcards_left = row[2]
+            if wildcard_ratio >= 0.50:
+                only_wildcard_index = row_index
+                high_wildcard_ratio_count += 1
+                if wildcards_left:
+                    wildcards_mostly_left_indicator += 1
+                else:
+                    wildcards_mostly_left_indicator -= 1
+            else:
+                other_than_wildcard_index = row_index
+
+
+        high_ratio = False
+        return_index = -1
+        if high_wildcard_ratio_count==1:
+            high_ratio = True
+            return_index = only_wildcard_index
+            detected_feats.append(self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM)
+        if high_wildcard_ratio_count == len(words_input)-1:
+            high_ratio = True
+            return_index = other_than_wildcard_index
+            detected_feats.append(self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS)
+        if high_ratio:
+            if wildcards_mostly_left_indicator<0:
+                detected_feats.append(self.WordColumnFeats.WILDCARDS_RIGHT)
+            if wildcards_mostly_left_indicator >0:
+                detected_feats.append(self.WordColumnFeats.WILDCARDS_LEFT)
+
+
+        print(counters_wildcard_streaks)
+        print("input:", words_input)
+        print("output:", (detected_feats, return_index))
+        if "Dr." in words_input[0]:
+            print("asd")
+
+        return (detected_feats, return_index, counters_wildcard_streaks)
+
+        return_obj = None
+        # return properties
+        if counter_only_wildcard_words >= len(words_input):
+            detected_feats.append(self.WordColumnFeats.ONLY_WILDCARDS)
+            return_obj = (detected_feats, -1)
+        elif counter_only_spaces >= len(words_input):
+            detected_feats.append(self.WordColumnFeats.ONLY_SPACES)
+            return_obj = (detected_feats, -1)
+        elif counter_only_wildcard_words == len(words_input)-1:
+            detected_feats.append(self.WordColumnFeats.MOSTLY_WILDCARDS)
+            return_obj = (detected_feats, last_word_index)
+        elif counter_similar_words == len(words_input)-1:
+            detected_feats.append(self.WordColumnFeats.MOSTLY_SIMILAR_WORDS)
+            return_obj = (detected_feats, last_wildcard_or_space_index)
+        elif counter_same_words == len(words_input) -1:
+            detected_feats.append(self.WordColumnFeats.MOSTLY_SAME_WORDS)
+            return_obj = (detected_feats, last_wildcard_or_space_index)
+        else:
+            return_obj = (detected_feats, -1)
+
+        if "Dr." in words_input[0]:
+            print("asd")
+        print(counters_wildcard_streaks)
+        print("input:", words_input)
+        print("output:", return_obj)
+        return return_obj
