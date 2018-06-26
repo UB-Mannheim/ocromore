@@ -979,7 +979,7 @@ class MsaHandler(object):
 
 
 
-            if self.config.MSA_BEST_WORDWISE_CRUNCH_WORDS:
+            if False and self.config.MSA_BEST_WORDWISE_CRUNCH_WORDS:
                 def get_other_index_wcs(longest_wcs_counter, oc_index):
                     for wcs_index, wcs_item in enumerate(longest_wcs_counter):
                         if oc_index != wcs_index:

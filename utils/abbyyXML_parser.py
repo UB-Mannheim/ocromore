@@ -33,7 +33,7 @@ def get_xml_document(fpath):
             #print(clean_tag)
             if clean_tag == "line":
                 if doc.page != [] and line is not None:
-                    if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.6:
+                    if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 2.0:
                         DELLINE = True
                     line.words.append(word)
                 COW = True
@@ -44,8 +44,10 @@ def get_xml_document(fpath):
                 word = Word()
                 doc.page.append(line)
             if clean_tag == "charParams":
+                if item.text == "¬":
+                    item.text = "-"
                 if item.text == " ":
-                    if len(word.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) > 0.6:    #0.575
+                    if len(word.ocr_text) > 0 and (word.suspicouscount/len(word.ocr_text)) > 2.0:    #0.575
                         DELLINE = True
                     line.words.append(word)
                     word = Word()
@@ -66,7 +68,7 @@ def get_xml_document(fpath):
                         word.suspicouscount += 1
         if word is not None:
             line.words.append(word)
-            if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 0.6:
+            if len(word.ocr_text) > 0 and (word.suspicouscount / len(word.ocr_text)) > 2.0:
                 DELLINE = True
             if DELLINE:
                 del doc.page[-1]
