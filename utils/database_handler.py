@@ -76,8 +76,9 @@ class DatabaseHandler(object):
         exceptions = self.parse_to_db(delete_and_create_dir=delete_and_create_dir)
         return exceptions
 
-    def fetch_files(self,fileglob, filetypes):
+    def fetch_files(self, fileglob, filetypes):
         self.files = {}
+
         files = chain.from_iterable(glob.iglob(fileglob + filetype, recursive=True) for filetype in filetypes)
         lastdbname = ""
         for file in files:

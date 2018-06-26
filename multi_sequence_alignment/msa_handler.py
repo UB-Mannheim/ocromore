@@ -838,6 +838,8 @@ class MsaHandler(object):
 
 
     def get_best_of_three_wordwise(self, line_1, line_2, line_3, use_charconfs, use_searchspaces):
+
+        lines = [line_1, line_2, line_3]
         wildcard_character = '¦'
         PRINT_RESULTS = True
         PRINT_ALIGNMENT_PROCESS = False
@@ -977,7 +979,8 @@ class MsaHandler(object):
                 if current_word_index < max_range_word-1 and max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])]) > 0:
                     seg_counter.append(-1)
 
-
+            if "14%" in line_1.textstr.replace(" ",""):
+                print("cp reached ")
 
             if self.config.MSA_BEST_WORDWISE_CRUNCH_WORDS:
                 def get_other_index_wcs(longest_wcs_counter, oc_index):
@@ -993,9 +996,11 @@ class MsaHandler(object):
                     word3 = get_word_from_line(line_3, current_word_index)
                     feats_word = self.get_word_column_feats(word1,word2,word3, wildcard_character)
                     words_and_feats.append(([word1, word2, word3], feats_word))
+
                 if len(words_and_feats) > 1:
                     for waf_index in range(0, len(words_and_feats)-1):
                         words = words_and_feats[waf_index][0]
+
                         feats = words_and_feats[waf_index][1][0]
                         oc_index = words_and_feats[waf_index][1][1]
                         longest_wcs_counter = words_and_feats[waf_index][1][2] # longest wildcard streaks
@@ -1009,6 +1014,42 @@ class MsaHandler(object):
                             and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats_next\
                             and oc_index == oc_index_next:
 
+                            wc_substraction_count = longest_wcs_counter_next[oc_index_next][0]
+                            for line_index, line in enumerate(lines):
+                                try:
+                                    if line_index != oc_index:
+                                        # delete wildcards
+                                        word_to_change = line.word["text"][waf_index]
+                                        word_start = line.data["word_match"].index(waf_index)
+                                        start = word_start + len(word_to_change)-wc_substraction_count
+                                        end = start + len(word_to_change) -wc_substraction_count
+                                        line.delete_stuff_at(start, end)
+                                        #print("cp")
+
+                                    else:
+
+
+                                        # shift content from current word to next
+                                        word_to_shift = line.word["text"][waf_index]
+                                        shifted_content = word_to_shift[len(word_to_shift)-wc_substraction_count:]
+
+                                        indexs = line.word["UID"][waf_index+1]
+                                        end = line.data["word_match"].index(waf_index+1)
+                                        start = end-len(shifted_content)
+                                        line.update_stuff_at(start, end, waf_index+1, indexs)
+
+
+                                        # delete wildcards in next word
+                                        word_to_change = line.word["text"][waf_index+1]
+                                        word_start = line.data["word_match"].index(waf_index+1)
+
+                                        start = word_start+len(shifted_content)
+                                        line.delete_stuff_at(start, start+wc_substraction_count)
+                                        #print("cp")
+                                except Exception as ex:
+                                    print("sim")
+
+
                             print(words)
                             print(words_next)
                             print("t")
@@ -1016,8 +1057,39 @@ class MsaHandler(object):
                             and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats_next \
                             and oc_index == oc_index_next:
 
-                            index_subst = get_other_index_wcs(longest_wcs_counter,oc_index)
+                            # get the index which shall get substracted
+                            index_subst = get_other_index_wcs(longest_wcs_counter, oc_index)
                             wc_substraction_count = longest_wcs_counter_next[index_subst][0]
+
+                            for line_index, line in enumerate(lines):
+                                if line_index != oc_index:
+                                    start = line.data["word_match"].index(waf_index + 1)
+                                    line.delete_stuff_at(start, start + wc_substraction_count)
+                                else:
+
+                                    try:
+
+                                        word_base = line.word["text"][waf_index]
+                                        word_to_shift = line.word["text"][waf_index + 1]
+
+                                        # shift content
+                                        indexs = line.word["UID"][waf_index][-1]
+
+                                        start = line.data["word_match"].index(waf_index + 1)
+                                        end = start + wc_substraction_count
+                                        line.update_stuff_at(start, end, waf_index, indexs)
+
+                                        # delete content
+                                        start_del = start-wc_substraction_count
+                                        end_del = start
+                                        line.delete_stuff_at(start_del, end_del)
+
+
+
+                                    except Exception as ex:
+                                        print("exception!", ex)
+
+                            """
                             words_subst = []
                             words_next_subst = []
                             words_complete = []
@@ -1034,8 +1106,7 @@ class MsaHandler(object):
                                     words_next_subst.append(word_next)
                                     words_complete.append(words[subst_index]+word_next)
 
-
-                                print("asd")
+                            """
 
 
 
@@ -1044,21 +1115,40 @@ class MsaHandler(object):
                             #                1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,
                             #                3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
 
-
-                            line_3.update_stuff_at(11, 15, 1.0)
-                            line_1.update_textspace(words_complete[0], wildcard_character, widx=waf_index)
-                            line_2.update_textspace(words_complete[1], wildcard_character, widx=waf_index)
-                            line_3.update_textspace(words_complete[2], wildcard_character, widx=waf_index)
-
-                            line_1.update_textspace("", wildcard_character, widx=waf_index+1)
-                            line_2.update_textspace("", wildcard_character, widx=waf_index+1)
-                            line_3.update_textspace("", wildcard_character, widx=waf_index+1)
+                            # line 1 operations - > delete the 5 left wildcards in next word
+                            #start = line_1.data["word_match"].index(waf_index + 1)
+                            #new_text = line_1.word["text"][waf_index+1][5:]
+                            #line_1.delete_stuff_at(start, start+5)
 
 
 
-                            print(words)
-                            print(words_next)
-                            print("t")
+                            # line 2 operations
+                            #start = line_2.data["word_match"].index(waf_index + 1)
+                            #line_2.delete_stuff_at(start, start + 5)
+
+
+                            # line 3 operations#
+                            #start = line_3.data["word_match"].index(waf_index + 1)
+                            #line_3.delete_stuff_at(start-5, start)
+                            #indexs = line_3.word["UID"][waf_index][-1]
+                            #indexs_2 = line_3.word["UID"][waf_index+1][0]
+                            #start = line_3.data["word_match"].index(waf_index+1)
+                            #end = start + 5
+
+                            #line_3.update_stuff_at(start, end, waf_index, indexs)
+                            #line_1.update_textspace(words_complete[0], wildcard_character, widx=waf_index)
+                            #line_2.update_textspace(words_complete[1], wildcard_character, widx=waf_index)
+                            #line_3.update_textspace(words_complete[2], wildcard_character, widx=waf_index)
+
+                            #line_1.update_textspace("", wildcard_character, widx=waf_index+1)
+                            #line_2.update_textspace("", wildcard_character, widx=waf_index+1)
+                            #line_3.update_textspace("", wildcard_character, widx=waf_index+1)
+
+
+
+                            #print(words)
+                            #print(words_next)
+                            #print("t")
 
 
                         print("asd")
@@ -1314,7 +1404,9 @@ class MsaHandler(object):
 
         return (detected_feats, return_index, counters_wildcard_streaks)
 
+        """
         return_obj = None
+
         # return properties
         if counter_only_wildcard_words >= len(words_input):
             detected_feats.append(self.WordColumnFeats.ONLY_WILDCARDS)
@@ -1339,4 +1431,5 @@ class MsaHandler(object):
         print(counters_wildcard_streaks)
         print("input:", words_input)
         print("output:", return_obj)
-        return return_obj
+        return return_obj   
+        """
