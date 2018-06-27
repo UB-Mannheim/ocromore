@@ -836,6 +836,13 @@ class MsaHandler(object):
 
         return res_final_1, res_final_2, res_final_3
 
+    def get_word_from_line(self, line_to_check, word_index, return_val_empty=""):
+        if line_to_check is None or line_to_check is False or line_to_check is True:
+            return return_val_empty
+
+        word_obtained = line_to_check.word["text"].get(word_index, return_val_empty)
+        return word_obtained
+
 
     def get_best_of_three_wordwise(self, line_1, line_2, line_3, use_charconfs, use_searchspaces):
 
@@ -856,12 +863,7 @@ class MsaHandler(object):
                 highest_word = max(word_indices)
             return highest_word
 
-        def get_word_from_line(line_to_check, word_index, return_val_empty=""):
-            if line_to_check is None or line_to_check is False or line_to_check is True:
-                return return_val_empty
 
-            word_obtained = line_to_check.word["text"].get(word_index, return_val_empty)
-            return word_obtained
 
         def update_word(line_in, word_index, new_value, remove_wildcards=False):
 
@@ -901,9 +903,9 @@ class MsaHandler(object):
             seg_counter = []
             text_seg = {}
             for current_word_index in range(0, max_range_word):
-                word1 = get_word_from_line(line_1, current_word_index)
-                word2 = get_word_from_line(line_2, current_word_index)
-                word3 = get_word_from_line(line_3, current_word_index)
+                word1 = self.get_word_from_line(line_1, current_word_index)
+                word2 = self.get_word_from_line(line_2, current_word_index)
+                word3 = self.get_word_from_line(line_3, current_word_index)
                 self.cpr.print("word   1:", word1)
                 self.cpr.print("word   2:", word2)
                 self.cpr.print("word   3:", word3)
@@ -979,197 +981,12 @@ class MsaHandler(object):
                 if current_word_index < max_range_word-1 and max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])]) > 0:
                     seg_counter.append(-1)
 
-            #if "14%" in line_1.textstr.replace(" ",""):
-            #    print("cp reached ")
+
 
             if self.config.MSA_BEST_WORDWISE_CRUNCH_WORDS:
-                def get_other_index_wcs(longest_wcs_counter, oc_index):
-                    for wcs_index, wcs_item in enumerate(longest_wcs_counter):
-                        if oc_index != wcs_index:
-                            return wcs_index
-
-                #print("asd")
-                words_and_feats = []
-                for current_word_index in range(0, max_range_word):
-                    word1 = get_word_from_line(line_1, current_word_index)
-                    word2 = get_word_from_line(line_2, current_word_index)
-                    word3 = get_word_from_line(line_3, current_word_index)
-                    feats_word = self.get_word_column_feats(word1,word2,word3, wildcard_character)
-                    words_and_feats.append(([word1, word2, word3], feats_word))
-
-                if len(words_and_feats) > 1:
-                    for waf_index in range(0, len(words_and_feats)-1):
-                        words = words_and_feats[waf_index][0]
-
-                        feats = words_and_feats[waf_index][1][0]
-                        oc_index = words_and_feats[waf_index][1][1]
-                        longest_wcs_counter = words_and_feats[waf_index][1][2] # longest wildcard streaks
-                        words_next = words_and_feats[waf_index+1][0]
-                        feats_next = words_and_feats[waf_index+1][1][0]
-                        oc_index_next = words_and_feats[waf_index+1][1][1]
-                        longest_wcs_counter_next = words_and_feats[waf_index+1][1][2] # longest wildcard streaks
-                        #if "Juli" in words:
-                        #    print("asd")
-
-                        if self.WordColumnFeats.FEATURE_WAS_PROCESSED in feats \
-                                or self.WordColumnFeats.FEATURE_WAS_PROCESSED in feats_next:
-                            print("skip_a_feat_cr")
-                            continue
-
-
-                        if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats \
-                            and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats_next\
-                            and oc_index == oc_index_next:
-
-                            wc_substraction_count = longest_wcs_counter_next[oc_index_next][0]
-                            for line_index, line in enumerate(lines):
-                                try:
-                                    if line_index != oc_index:
-                                        # delete wildcards
-                                        word_to_change = line.word["text"][waf_index]
-                                        word_start = line.data["word_match"].index(waf_index)
-                                        start = word_start + len(word_to_change)-wc_substraction_count
-                                        end = start + len(word_to_change) -wc_substraction_count
-                                        line.delete_stuff_at(start, end)
-                                        #print("cp")
-
-                                    else:
-
-
-                                        # shift content from current word to next
-                                        word_to_shift = line.word["text"][waf_index]
-                                        shifted_content = word_to_shift[len(word_to_shift)-wc_substraction_count:]
-
-                                        indexs = line.word["UID"][waf_index+1]
-                                        end = line.data["word_match"].index(waf_index+1)
-                                        start = end-len(shifted_content)
-                                        line.update_stuff_at(start, end, waf_index+1, indexs)
-
-
-                                        # delete wildcards in next word
-                                        word_to_change = line.word["text"][waf_index+1]
-                                        word_start = line.data["word_match"].index(waf_index+1)
-
-                                        start = word_start+len(shifted_content)
-                                        line.delete_stuff_at(start, start+wc_substraction_count)
-                                        #print("cp")
-                                except Exception as ex:
-                                    print("sim")
-                            # mark the current and next feature space as processed
-                            words_and_feats[waf_index][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
-                            words_and_feats[waf_index+1][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
-                            # update current features variables for next condition
-                            feats = words_and_feats[waf_index][1][0]
-                            feats_next = words_and_feats[waf_index + 1][1][0]
-
-                            print(words)
-                            print(words_next)
-                            print("t")
-
-
-                        if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats \
-                            and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats_next \
-                            and oc_index == oc_index_next:
-
-                            # get the index which shall get substracted
-                            index_subst = get_other_index_wcs(longest_wcs_counter, oc_index)
-                            wc_substraction_count = longest_wcs_counter_next[index_subst][0]
-
-                            for line_index, line in enumerate(lines):
-                                if line_index != oc_index:
-                                    start = line.data["word_match"].index(waf_index + 1)
-                                    line.delete_stuff_at(start, start + wc_substraction_count)
-                                else:
-
-                                    try:
-
-                                        word_base = line.word["text"][waf_index]
-                                        word_to_shift = line.word["text"][waf_index + 1]
-
-                                        # shift content
-                                        indexs = line.word["UID"][waf_index][-1]
-
-                                        start = line.data["word_match"].index(waf_index + 1)
-                                        end = start + wc_substraction_count
-                                        line.update_stuff_at(start, end, waf_index, indexs)
-
-                                        # delete content
-                                        start_del = start-wc_substraction_count
-                                        end_del = start
-                                        line.delete_stuff_at(start_del, end_del)
-
-
-
-                                    except Exception as ex:
-                                        print("exception!", ex)
-                            # mark the current and next feature space as processed
-                            words_and_feats[waf_index][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
-                            words_and_feats[waf_index+1][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
-
-                            """
-                            words_subst = []
-                            words_next_subst = []
-                            words_complete = []
-                            for subst_index in range(0,len(words)):
-                                if subst_index == oc_index:
-                                    word = Random.remove_trailing_chars_by_count(words[subst_index], wc_substraction_count)
-                                    words_subst.append(word)
-                                    words_next_subst.append(words_next[subst_index])
-                                    words_complete.append(word+words_next[subst_index])
-                                else:
-                                    words_subst.append(words[subst_index])
-
-                                    word_next = Random.remove_starting_chars_by_count(words_next[subst_index],wc_substraction_count)
-                                    words_next_subst.append(word_next)
-                                    words_complete.append(words[subst_index]+word_next)
-
-                            """
-
-
-
-                            # how to update confidences ? necessary ?
-                            #line_1.data["word_match"] = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0,
-                            #                1.0, 1.0, 1.0, 1.0, 1.0, 1.0, -5.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0, 2.0,
-                            #                3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0, 4.0]
-
-                            # line 1 operations - > delete the 5 left wildcards in next word
-                            #start = line_1.data["word_match"].index(waf_index + 1)
-                            #new_text = line_1.word["text"][waf_index+1][5:]
-                            #line_1.delete_stuff_at(start, start+5)
-
-
-
-                            # line 2 operations
-                            #start = line_2.data["word_match"].index(waf_index + 1)
-                            #line_2.delete_stuff_at(start, start + 5)
-
-
-                            # line 3 operations#
-                            #start = line_3.data["word_match"].index(waf_index + 1)
-                            #line_3.delete_stuff_at(start-5, start)
-                            #indexs = line_3.word["UID"][waf_index][-1]
-                            #indexs_2 = line_3.word["UID"][waf_index+1][0]
-                            #start = line_3.data["word_match"].index(waf_index+1)
-                            #end = start + 5
-
-                            #line_3.update_stuff_at(start, end, waf_index, indexs)
-                            #line_1.update_textspace(words_complete[0], wildcard_character, widx=waf_index)
-                            #line_2.update_textspace(words_complete[1], wildcard_character, widx=waf_index)
-                            #line_3.update_textspace(words_complete[2], wildcard_character, widx=waf_index)
-
-                            #line_1.update_textspace("", wildcard_character, widx=waf_index+1)
-                            #line_2.update_textspace("", wildcard_character, widx=waf_index+1)
-                            #line_3.update_textspace("", wildcard_character, widx=waf_index+1)
-
-
-
-                            #print(words)
-                            #print(words_next)
-                            #print("t")
-
-
-                        #print("asd")
-                        # todo end factory
+                # crunch neighboring words which are similar, this changes the wor assignment in the line objects by reference
+                # if similarity was detected
+                self.crunch_neighbouring_words( max_range_word, wildcard_character, line_1, line_2, line_3)
 
 
             if use_charconfs:
@@ -1224,6 +1041,122 @@ class MsaHandler(object):
             self.cpr.printex("msa_handler.py exception", ex)
             self.cpr.printex("tr", tr)
 
+    def crunch_neighbouring_words(self,max_range_word, wildcard_character, line_1, line_2, line_3):
+        lines = [line_1, line_2, line_3]
+
+        def get_other_index_wcs(longest_wcs_counter, oc_index):
+            for wcs_index, wcs_item in enumerate(longest_wcs_counter):
+                if oc_index != wcs_index:
+                    return wcs_index
+
+        # extract features from each word with current_word_index
+        words_and_feats = []
+        for current_word_index in range(0, max_range_word):
+            word1 = self.get_word_from_line(line_1, current_word_index)
+            word2 = self.get_word_from_line(line_2, current_word_index)
+            word3 = self.get_word_from_line(line_3, current_word_index)
+            feats_word = self.get_word_column_feats(word1, word2, word3, wildcard_character)
+            words_and_feats.append(([word1, word2, word3], feats_word))
+
+        # if there less than two following words, there is nothing to crunch
+        if len(words_and_feats) <= 1:
+            return
+
+        for waf_index in range(0, len(words_and_feats) - 1):
+            # words = words_and_feats[waf_index][0]
+
+            feats = words_and_feats[waf_index][1][0]
+            oc_index = words_and_feats[waf_index][1][1]
+            longest_wcs_counter = words_and_feats[waf_index][1][2]  # longest wildcard streaks
+            # words_next = words_and_feats[waf_index + 1][0]
+            feats_next = words_and_feats[waf_index + 1][1][0]
+            oc_index_next = words_and_feats[waf_index + 1][1][1]
+            longest_wcs_counter_next = words_and_feats[waf_index + 1][1][2]  # longest wildcard streaks
+            # if "Juli" in words:
+            #    print("asd")
+
+            if self.WordColumnFeats.FEATURE_WAS_PROCESSED in feats \
+                    or self.WordColumnFeats.FEATURE_WAS_PROCESSED in feats_next:
+                #print("skip_a_feat_cr")
+                continue
+
+            if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats \
+                    and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats_next \
+                    and oc_index == oc_index_next:
+
+                wc_substraction_count = longest_wcs_counter_next[oc_index_next][0]
+                for line_index, line in enumerate(lines):
+                    if line_index != oc_index:
+                        # delete wildcards
+                        word_to_change = line.word["text"][waf_index]
+                        word_start = line.data["word_match"].index(waf_index)
+                        start = word_start + len(word_to_change) - wc_substraction_count
+                        end = start + len(word_to_change) - wc_substraction_count
+                        line.delete_stuff_at(start, end)
+                        # print("cp")
+
+                    else:
+
+                        # shift content from current word to next
+                        word_to_shift = line.word["text"][waf_index]
+                        shifted_content = word_to_shift[len(word_to_shift) - wc_substraction_count:]
+
+                        indexs = line.word["UID"][waf_index + 1]
+                        end = line.data["word_match"].index(waf_index + 1)
+                        start = end - len(shifted_content)
+                        line.update_stuff_at(start, end, waf_index + 1, indexs)
+
+                        # delete wildcards in next word
+                        word_to_change = line.word["text"][waf_index + 1]
+                        word_start = line.data["word_match"].index(waf_index + 1)
+
+                        start = word_start + len(shifted_content)
+                        line.delete_stuff_at(start, start + wc_substraction_count)
+                        # print("cp")
+
+                # mark the current and next feature space as processed
+                words_and_feats[waf_index][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
+                words_and_feats[waf_index + 1][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
+                # update current features variables for next condition
+                feats = words_and_feats[waf_index][1][0]
+                feats_next = words_and_feats[waf_index + 1][1][0]
+
+                # print(words)
+                # print(words_next)
+                # print("t")
+
+            if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats \
+                    and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats_next \
+                    and oc_index == oc_index_next:
+
+                # get the index which shall get substracted
+                index_subst = get_other_index_wcs(longest_wcs_counter, oc_index)
+                wc_substraction_count = longest_wcs_counter_next[index_subst][0]
+
+                for line_index, line in enumerate(lines):
+                    if line_index != oc_index:
+                        start = line.data["word_match"].index(waf_index + 1)
+                        line.delete_stuff_at(start, start + wc_substraction_count)
+                    else:
+                        # word_base = line.word["text"][waf_index]
+                        # word_to_shift = line.word["text"][waf_index + 1]
+
+                        # shift content
+                        indexs = line.word["UID"][waf_index][-1]
+
+                        start = line.data["word_match"].index(waf_index + 1)
+                        end = start + wc_substraction_count
+                        line.update_stuff_at(start, end, waf_index, indexs)
+
+                        # delete content
+                        start_del = start - wc_substraction_count
+                        end_del = start
+                        line.delete_stuff_at(start_del, end_del)
+
+
+                # mark the current and next feature space as processed
+                words_and_feats[waf_index][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
+                words_and_feats[waf_index + 1][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
 
     def get_best_of_three(self, text_1, text_2, text_3, use_charconfs = False, line_1 = None, line_2 = None, line_3 = None, use_searchspaces=False):
         PRINT_RESULTS = True
