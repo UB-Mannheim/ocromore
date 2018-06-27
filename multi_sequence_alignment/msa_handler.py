@@ -979,8 +979,8 @@ class MsaHandler(object):
                 if current_word_index < max_range_word-1 and max([len(words_aligned[0]),len(words_aligned[1]),len(words_aligned[2])]) > 0:
                     seg_counter.append(-1)
 
-            if "14%" in line_1.textstr.replace(" ",""):
-                print("cp reached ")
+            #if "14%" in line_1.textstr.replace(" ",""):
+            #    print("cp reached ")
 
             if self.config.MSA_BEST_WORDWISE_CRUNCH_WORDS:
                 def get_other_index_wcs(longest_wcs_counter, oc_index):
@@ -988,7 +988,7 @@ class MsaHandler(object):
                         if oc_index != wcs_index:
                             return wcs_index
 
-                print("asd")
+                #print("asd")
                 words_and_feats = []
                 for current_word_index in range(0, max_range_word):
                     word1 = get_word_from_line(line_1, current_word_index)
@@ -1008,6 +1008,13 @@ class MsaHandler(object):
                         feats_next = words_and_feats[waf_index+1][1][0]
                         oc_index_next = words_and_feats[waf_index+1][1][1]
                         longest_wcs_counter_next = words_and_feats[waf_index+1][1][2] # longest wildcard streaks
+                        #if "Juli" in words:
+                        #    print("asd")
+
+                        if self.WordColumnFeats.FEATURE_WAS_PROCESSED in feats \
+                                or self.WordColumnFeats.FEATURE_WAS_PROCESSED in feats_next:
+                            print("skip_a_feat_cr")
+                            continue
 
 
                         if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats \
@@ -1048,11 +1055,18 @@ class MsaHandler(object):
                                         #print("cp")
                                 except Exception as ex:
                                     print("sim")
-
+                            # mark the current and next feature space as processed
+                            words_and_feats[waf_index][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
+                            words_and_feats[waf_index+1][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
+                            # update current features variables for next condition
+                            feats = words_and_feats[waf_index][1][0]
+                            feats_next = words_and_feats[waf_index + 1][1][0]
 
                             print(words)
                             print(words_next)
                             print("t")
+
+
                         if self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_ONE_ITEM in feats \
                             and self.WordColumnFeats.HIGH_WILDCARD_RATIO_IN_MOST_ITEMS in feats_next \
                             and oc_index == oc_index_next:
@@ -1088,6 +1102,9 @@ class MsaHandler(object):
 
                                     except Exception as ex:
                                         print("exception!", ex)
+                            # mark the current and next feature space as processed
+                            words_and_feats[waf_index][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
+                            words_and_feats[waf_index+1][1][0].append(self.WordColumnFeats.FEATURE_WAS_PROCESSED)
 
                             """
                             words_subst = []
@@ -1151,7 +1168,7 @@ class MsaHandler(object):
                             #print("t")
 
 
-                        print("asd")
+                        #print("asd")
                         # todo end factory
 
 
@@ -1256,6 +1273,7 @@ class MsaHandler(object):
 
     # todo factor this to other function
     class WordColumnFeats:
+        FEATURE_WAS_PROCESSED ="processed"
         ONLY_WILDCARDS = 0
         ONLY_SPACES = 1
         ALL_SAME_CONTENT = 2
@@ -1266,6 +1284,8 @@ class MsaHandler(object):
         WILDCARDS_RIGHT = 7
         HIGH_WILDCARD_RATIO_IN_ONE_ITEM = 8
         HIGH_WILDCARD_RATIO_IN_MOST_ITEMS = 9
+
+        
 
 
     def get_word_column_feats(self, word1, word2, word3, wildcard_character):
@@ -1368,7 +1388,7 @@ class MsaHandler(object):
         for row_index, row in enumerate(counters_wildcard_streaks):
             wildcard_ratio = row[1]
             wildcards_left = row[2]
-            if wildcard_ratio >= 0.50:
+            if wildcard_ratio >= 0.40:
                 only_wildcard_index = row_index
                 high_wildcard_ratio_count += 1
                 if wildcards_left:
@@ -1399,8 +1419,8 @@ class MsaHandler(object):
         print(counters_wildcard_streaks)
         print("input:", words_input)
         print("output:", (detected_feats, return_index))
-        if "Dr." in words_input[0]:
-            print("asd")
+        #if "Dr." in words_input[0]:
+        #    print("asd")
 
         return (detected_feats, return_index, counters_wildcard_streaks)
 
