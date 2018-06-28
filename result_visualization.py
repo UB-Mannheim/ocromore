@@ -5,8 +5,8 @@ from tableparser import TableParser
 from time import sleep
 
 
-CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
-CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_jk.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest_jk.conf'  # configuration which is not given with cli args
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
                                       coded_configuration_paths=[CODED_CONFIGURATION_PATH_VOTER, CODED_CONFIGURATION_PATH_DB_READER])
@@ -35,7 +35,7 @@ for db in filestructs_output:
     files = filestructs_output[db]
     files_gt = filestructs_gt[db]
 
-    if db != "1976": continue
+    #if db != "1976": continue
 
 
     for file in files:

@@ -913,13 +913,21 @@ class DFSelObj(object):
             self.data["calc_char"][pos] = val
 
 
-    def update_stuff_at(self, index_from, index_to, new_value):
+    def update_stuff_at(self, index_from, index_to, new_value_wm, new_value_cwi):
 
-        self.data["word_match"][index_from:index_to] = [new_value]*(index_to-index_from)
-        self.data["calc_word_idx"][index_from:index_to] = [new_value]*(index_to-index_from)
+        self.data["word_match"][index_from:index_to] = [new_value_wm]*(index_to-index_from)
+        self.data["calc_word_idx"][index_from:index_to] = [new_value_cwi]*(index_to-index_from)
 
 
-    def update_textspace(self, text, wc=None, widx=None, force_overwrite=False, matching_confusions=None):
+    def delete_stuff_at(self, index_from, index_to):
+        del self.data["word_match"][index_from:index_to]
+        del self.data["calc_word_idx"][index_from:index_to]
+        del self.data["UID"][index_from:index_to]
+        del self.data["calc_char"][index_from:index_to]
+        del self.data["char_weight"][index_from:index_to]
+
+
+    def update_textspace(self, text, wc=None, widx=None):
 
         # wc = wildcards
         # widx = word index
