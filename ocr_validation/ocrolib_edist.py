@@ -5,7 +5,6 @@
 """
 
 from scipy.ndimage import filters
-from pylab import *
 import re
 
 
