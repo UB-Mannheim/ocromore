@@ -1,9 +1,8 @@
 import numpy as np
 import statistics as stats
-from utils import histo_plotter
 from utils.random import Random
 from utils.typecasts import TypeCasts
-from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area, Page
+from hocr_parser.parser import HOCRDocument, Line, Paragraph, Area, Page
 
 
 class LineHeightInformation(object):
@@ -84,6 +83,7 @@ class LineHeightCalculator(object):
 
         if do_analysis_stuff is True:
             # further methods and plots for comparison and analysis of best result
+            from utils import histo_plotter
 
             # plot base histogram
             hp = histo_plotter.HistogramPlotter()

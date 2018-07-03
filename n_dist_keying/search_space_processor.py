@@ -340,7 +340,7 @@ class SearchSpaceProcessor(object):
                     x_middle_index = self.get_middle_index()
                     if left_right is True:
                         delete_index = x_middle_index + 1
-                        shift_index =  x_middle_index - 1
+                        shift_index = x_middle_index - 1
                     else:
                         delete_index = x_middle_index - 1
                         shift_index = x_middle_index + 1

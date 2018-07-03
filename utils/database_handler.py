@@ -125,7 +125,8 @@ class DatabaseHandler(object):
     def fetch_outputfiles(self, outputfileglob, prefix):
         self.outputfiles = {}
         filetype = "txt"
-        files = glob.glob(outputfileglob+"/"+prefix+"/**/*."+filetype)
+        concat_path = outputfileglob+"/"+prefix+"/**/*."+filetype
+        files = glob.glob(concat_path)
         lastdbname = ""
         for file in files:
             fstruct = FileStruct()

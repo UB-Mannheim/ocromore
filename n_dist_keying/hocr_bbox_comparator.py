@@ -1,5 +1,6 @@
 import os
-from my_hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
+
+from hocr_parser.parser import HOCRDocument, Line, Paragraph, Area
 from n_dist_keying.text_comparator import TextComparator
 from n_dist_keying.ocr_comparison import OCRcomparison
 from n_dist_keying.ocr_set import OCRset
