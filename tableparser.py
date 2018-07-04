@@ -104,6 +104,7 @@ class TableParser(object):
 
         predictor = None
         if self._config.PREDICTOR_AUFSICHTSRAT_ENABLED:
+            # care: import statement within condition, cause this causes keras to load
             from machine_learning_components.special_character_predictor import SpecialCharPredictor
             predictor = SpecialCharPredictor()
             predictor.load_prediction_model()
@@ -173,7 +174,9 @@ class TableParser(object):
 
 
             if self._config.KEYING_RESULT_POSTCORRECTION:
-                ocr_comparison.do_postcorrection(True,postcorrect_msa=True)
+                ocr_comparison.do_postcorrection(postcorrect_keying=True,
+                                                 postcorrect_msa=self._config.MSA_BEST_POSTCORRECTION,
+                                                 postcorrect_ndist=self._config.NDIST_KEYING_POSTCORRECTION)
 
             """
             if self._config.MSA_BEST_USE_WORDWISE_MSA:

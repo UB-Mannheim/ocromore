@@ -446,18 +446,19 @@ class OCRcomparison:
         :param postcorrection_index: specifies the list of sets which is postcorrected if pc_keying is false
         :return:
         """
-        if postcorrect_keying is True:
+        if postcorrect_keying is False:
+            return
 
-            for current_set in self.ocr_sets:
-                if postcorrect_ndist:
-                    sd_line_text = current_set.get_shortest_n_distance_text()
-                    if sd_line_text is not None and sd_line_text is not True and sd_line_text is not False:
-                        sd_line_text_corrected = TextCorrector.correct_line_text(sd_line_text)
-                        current_set.set_shortest_n_distance_text(sd_line_text_corrected)
-                if postcorrect_msa:
-                    msa_best_text = current_set.get_msa_best_text()
-                    if msa_best_text is not None and msa_best_text is not True and msa_best_text is not False:
-                        msa_best_text_corrected = TextCorrector.correct_line_text(msa_best_text)
-                        current_set.set_msa_best_text(msa_best_text_corrected)
+        for current_set in self.ocr_sets:
+            if postcorrect_ndist:
+                sd_line_text = current_set.get_shortest_n_distance_text()
+                if sd_line_text is not None and sd_line_text is not True and sd_line_text is not False:
+                    sd_line_text_corrected = TextCorrector.correct_line_text(sd_line_text)
+                    current_set.set_shortest_n_distance_text(sd_line_text_corrected)
+            if postcorrect_msa:
+                msa_best_text = current_set.get_msa_best_text()
+                if msa_best_text is not None and msa_best_text is not True and msa_best_text is not False:
+                    msa_best_text_corrected = TextCorrector.correct_line_text(msa_best_text)
+                    current_set.set_msa_best_text(msa_best_text_corrected)
 
 

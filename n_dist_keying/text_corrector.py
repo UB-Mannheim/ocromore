@@ -12,11 +12,33 @@ class TextCorrector(object):
     @staticmethod
     def correct_line_text(line_text):
         CORRECT_ROMAN_II = True
-
+        CORRECT_EXLAMATIONS = False
 
         if CORRECT_ROMAN_II:
             line_text = TextCorrector.correct_roman_ii(line_text)
+        if CORRECT_EXLAMATIONS:
+            line_text = TextCorrector.correct_exclamation_marks(line_text)
 
+        return line_text
+
+
+    @staticmethod
+    def correct_exclamation_marks(line_text):
+        if line_text is None or line_text is False or line_text is True:
+            return line_text
+
+        DEFAULT_REPLACEMENT = "\""
+        possible_exclamation_combos = \
+            ["'\"", "\"'", "''", "\"\""]
+
+        def do_correction(line_text, pec):
+            line_text_new = line_text.replace(pec, DEFAULT_REPLACEMENT)
+            return line_text_new
+
+        for pec in possible_exclamation_combos:
+
+            if pec in line_text:
+                line_text = do_correction(line_text, pec)
 
         return line_text
 
