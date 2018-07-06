@@ -41,6 +41,26 @@ class Random:
             return True
 
     @staticmethod
+    def is_alphanumerical_character(text):
+        if type(text) == int:
+            return False
+
+        if text is None or text is False or text is True:
+            return False
+
+        if len(text) > 1:
+            return False
+
+        is_alphanumberical = text.isalnum()
+
+        if is_alphanumberical:
+            return True
+        else:
+            return False
+
+
+
+    @staticmethod
     def has_special_character(text):
         text_list = list(text)
         for char in text_list:
@@ -49,7 +69,6 @@ class Random:
                 return True
 
         return False
-
 
 
     @staticmethod

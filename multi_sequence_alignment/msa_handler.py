@@ -7,7 +7,7 @@ import numpy as np
 from utils.typecasts import TypeCasts
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
-
+from n_dist_keying.table_handler import TableHandler
 class GapConfig(object):
 
     def __init__(self, points_identical_char=2, penalty_non_identical_char=-1.3, penalty_opening_gap=-0.5, penalty_extending_gap=-0.4 ):
@@ -47,6 +47,9 @@ class MsaHandler(object):
             self.ocr_voter.add_predictor(self.predictor)
 
         self.vocab_checker = None
+
+        if self.config.TABLE_RECOGNITION_ENABLED:
+            self.table_handler = TableHandler()
 
     def add_predictor(self,predictor):
         self.predictor = predictor
@@ -847,6 +850,12 @@ class MsaHandler(object):
     def get_best_of_three_wordwise(self, line_1, line_2, line_3, use_charconfs, use_searchspaces):
 
         lines = [line_1, line_2, line_3]
+
+        if self.config.TABLE_RECOGNITION_ENABLED:
+            th_info = self.table_handler.recognize_a_line(lines[0])
+
+
+
         wildcard_character = '¦'
         PRINT_RESULTS = True
         PRINT_ALIGNMENT_PROCESS = False

@@ -1,0 +1,622 @@
+1150 ta/to.||| max x_gap: 135.0||| mean x_gap: 135.0||| median x_gap: 135.0
+Ordnungsnr.d.Aktien: 620200.||| max x_gap: 785.0||| mean x_gap: 785.0||| median x_gap: 785.0
+ultimo 1948 19,5 %||| max x_gap: 207.0||| mean x_gap: 168.333333333||| median x_gap: 160.0
+M 1949 73 %||| max x_gap: 276.0||| mean x_gap: 191.333333333||| median x_gap: 154.0
+lt 1950 73,5 %||| max x_gap: 287.0||| mean x_gap: 194.666666667||| median x_gap: 153.0
+lt 1951 179 %||| max x_gap: 273.0||| mean x_gap: 191.0||| median x_gap: 153.0
+«1 1952 145 %||| max x_gap: 285.0||| mean x_gap: 194.666666667||| median x_gap: 153.0
+tt 1953 140 %||| max x_gap: 286.0||| mean x_gap: 194.666666667||| median x_gap: 153.0
+lt 1954 179,25 %||| max x_gap: 286.0||| mean x_gap: 194.666666667||| median x_gap: 159.0
+II 1955 184 %||| max x_gap: 287.0||| mean x_gap: 194.333333333||| median x_gap: 154.0
+lO.Okt. 1956 185,5 %+)||| max x_gap: 183.0||| mean x_gap: 160.333333333||| median x_gap: 161.0
+1950 0%||| max x_gap: 129.0||| mean x_gap: 129.0||| median x_gap: 129.0
+1951 5% (Div.Sch.Nr. 12)||| max x_gap: 262.0||| mean x_gap: 187.666666667||| median x_gap: 167.0
+1952 6 % (Div.Sch.Nr. 13)||| max x_gap: 262.0||| mean x_gap: 139.75||| median x_gap: 124.0
+1954 7% (Div.Sch.Nr. 1)||| max x_gap: 237.0||| mean x_gap: 178.0||| median x_gap: 168.0
+1955 9% (Div.Sch.Nr. 2)||| max x_gap: 237.0||| mean x_gap: 177.666666667||| median x_gap: 167.0
+31.12.1954 31.12.1955||| max x_gap: 271.0||| mean x_gap: 271.0||| median x_gap: 271.0
+Anlagevermögen 234 352 234 570||| max x_gap: 228.0||| mean x_gap: 138.75||| median x_gap: 120.0
+Umlaufvermögen 6 560 2 939||| max x_gap: 550.0||| mean x_gap: 219.25||| median x_gap: 119.0
+Eigenkapital 206 874 206 869||| max x_gap: 316.0||| mean x_gap: 160.5||| median x_gap: 119.0
+(davon A.-K.) 102 240 102 240||| max x_gap: 348.0||| mean x_gap: 147.4||| median x_gap: 89.0
+Fremdkapital 26 696 21 165||| max x_gap: 292.0||| mean x_gap: 154.75||| median x_gap: 120.0
+Gewinn nach Vortrag 7 342 9 475||| max x_gap: 183.0||| mean x_gap: 125.333333333||| median x_gap: 123.0
+Löhne und Gehälter 568 620||| max x_gap: 252.0||| mean x_gap: 194.5||| median x_gap: 219.5
+Steuern 5 663 16 519||| max x_gap: 419.0||| mean x_gap: 185.75||| median x_gap: 118.5
+Jahresertrag 7 712 26 342||| max x_gap: 301.0||| mean x_gap: 156.0||| median x_gap: 119.0
+Gründung:1951. I||| max x_gap: 554.0||| mean x_gap: 554.0||| median x_gap: 554.0
+Kapital: DM 7 000 000. - (100%). I||| max x_gap: 282.0||| mean x_gap: 115.571428571||| median x_gap: 91.0
+Kapital: DM 250 000. - (50%). I||| max x_gap: 353.0||| mean x_gap: 134.5||| median x_gap: 96.5
+Kapital: DM 21 000 000. - (2%) I||| max x_gap: 328.0||| mean x_gap: 115.714285714||| median x_gap: 92.0
+Kapital: DM 18 000 000. - (3%) I||| max x_gap: 356.0||| mean x_gap: 119.714285714||| median x_gap: 90.0
+Dividenden ab 1949/50: 0,0,0,0,0,0%. I||| max x_gap: 328.0||| mean x_gap: 192.75||| median x_gap: 190.5
+Urspr. DM 200 000.-. Lt.H. -V.v.29.9. I||| max x_gap: 300.0||| mean x_gap: 143.5||| median x_gap: 119.0
+101 000 Namens-St.-Akt. zu je DM 100. - I||| max x_gap: 263.0||| mean x_gap: 116.625||| median x_gap: 96.0
+(Nr. 200 001/200 010 - 498 991/499 000). I||| max x_gap: 267.0||| mean x_gap: 131.0||| median x_gap: 120.0
+ber 1953.||| max x_gap: 127.0||| mean x_gap: 127.0||| median x_gap: 127.0
+ultimo 1953 115 %||| max x_gap: 247.0||| mean x_gap: 210.0||| median x_gap: 231.0
+M 1954 %||| max x_gap: 384.0||| mean x_gap: 348.0||| median x_gap: 348.0
+tl 1955 %||| max x_gap: 382.0||| mean x_gap: 353.5||| median x_gap: 353.5
+10. Okt. 1956 168,5 %+)||| max x_gap: 245.0||| mean x_gap: 176.0||| median x_gap: 174.0
+1951/52: 0%||| max x_gap: 193.0||| mean x_gap: 193.0||| median x_gap: 193.0
+1952/53: 4 % (Div.Sch.Nr. 1)||| max x_gap: 241.0||| mean x_gap: 150.0||| median x_gap: 154.5
+1953/54: 6 % (Div.Sch.Nr. 2)||| max x_gap: 240.0||| mean x_gap: 149.75||| median x_gap: 155.0
+1954/55: 8% (Div.Sch.Nr. 3)||| max x_gap: 242.0||| mean x_gap: 199.666666667||| median x_gap: 192.0
+30.9.1954 30.9.1955||| max x_gap: 250.0||| mean x_gap: 250.0||| median x_gap: 250.0
+Anlagevermögen 67 909 71 762||| max x_gap: 311.0||| mean x_gap: 155.75||| median x_gap: 112.0
+Umlaufvermögen 77 560 96 823||| max x_gap: 166.0||| mean x_gap: 119.5||| median x_gap: 112.5
+Vorräte 34 019 47 921||| max x_gap: 328.0||| mean x_gap: 159.25||| median x_gap: 111.5
+Barmittel) 5 627 4 736||| max x_gap: 271.0||| mean x_gap: 145.5||| median x_gap: 112.0
+Eigenkapital 70 460 70 460||| max x_gap: 262.0||| mean x_gap: 143.25||| median x_gap: 112.0
+(davon A.-K.) 40 000 40 000||| max x_gap: 298.0||| mean x_gap: 134.0||| median x_gap: 88.0
+Fremdkapital 72 609 94 925||| max x_gap: 239.0||| mean x_gap: 137.5||| median x_gap: 112.5
+Gewinn nach Vortrag 2400 3 200||| max x_gap: 223.0||| mean x_gap: 137.2||| median x_gap: 113.0
+Löhne und Gehälter 30 333 35 932||| max x_gap: 198.0||| mean x_gap: 118.0||| median x_gap: 100.0
+Abschreibungen 7430 8 095||| max x_gap: 228.0||| mean x_gap: 168.333333333||| median x_gap: 189.0
+Steuern 12 402 23 352||| max x_gap: 365.0||| mean x_gap: 170.0||| median x_gap: 113.5
+Jahresertrag 67 697 86 795||| max x_gap: 247.0||| mean x_gap: 140.25||| median x_gap: 113.5
+13,6 km;||| max x_gap: 130.0||| mean x_gap: 130.0||| median x_gap: 130.0
+82470 (A-Aktien).||| max x_gap: 256.0||| mean x_gap: 256.0||| median x_gap: 256.0
+ultimo 1948 18,25 %||| max x_gap: 214.0||| mean x_gap: 156.666666667||| median x_gap: 150.0
+II 1949 59 %||| max x_gap: 243.0||| mean x_gap: 188.0||| median x_gap: 178.0
+II 1950 41 %||| max x_gap: 244.0||| mean x_gap: 188.0||| median x_gap: 181.0
+II 1951 58 %||| max x_gap: 241.0||| mean x_gap: 188.0||| median x_gap: 176.0
+II 1952 67 %||| max x_gap: 245.0||| mean x_gap: 188.0||| median x_gap: 176.0
+II 1953 73 %||| max x_gap: 244.0||| mean x_gap: 188.333333333||| median x_gap: 178.0
+II 1954 96,5 %||| max x_gap: 245.0||| mean x_gap: 188.333333333||| median x_gap: 190.0
+II 1955 91,5 %||| max x_gap: 242.0||| mean x_gap: 188.0||| median x_gap: 192.0
+lO.Okt. 1956 81,5 % +)||| max x_gap: 191.0||| mean x_gap: 125.5||| median x_gap: 128.5
+1948/49: 7,64 % (Div.Sch.Nr. 39)||| max x_gap: 212.0||| mean x_gap: 141.5||| median x_gap: 137.5
+1950 5 % (Div.Sch.Nr. 40)||| max x_gap: 247.0||| mean x_gap: 163.25||| median x_gap: 144.5
+19515 % (Div.Sch.Nr. 41)||| max x_gap: 294.0||| mean x_gap: 219.0||| median x_gap: 211.0
+19525 % (Div.Sch.Nr. 42)||| max x_gap: 289.0||| mean x_gap: 217.666666667||| median x_gap: 212.0
+1953 5 % (Div.Sch.Nr. 43)||| max x_gap: 247.0||| mean x_gap: 163.25||| median x_gap: 144.5
+1954 5 % (Div.Sch.Nr. 44)||| max x_gap: 289.0||| mean x_gap: 217.666666667||| median x_gap: 248.0
+1955 5 % (Div.Sch.Nr. 45)||| max x_gap: 247.0||| mean x_gap: 163.75||| median x_gap: 145.5
+31.12.1954 31.12.1955||| max x_gap: 278.0||| mean x_gap: 278.0||| median x_gap: 278.0
+Anlagevermögen 112 557 115 998||| max x_gap: 199.0||| mean x_gap: 135.5||| median x_gap: 128.0
+Umlaufvermögen 23 232 24 482||| max x_gap: 189.0||| mean x_gap: 133.0||| median x_gap: 127.5
+Vorräte 7617 7585||| max x_gap: 351.0||| mean x_gap: 303.0||| median x_gap: 303.0
+Lieferforderungen 921 892||| max x_gap: 259.0||| mean x_gap: 234.5||| median x_gap: 234.5
+Barmittel) 8 292 4 241||| max x_gap: 297.0||| mean x_gap: 159.25||| median x_gap: 127.5
+Eigenkapital 83 149 82 992||| max x_gap: 286.0||| mean x_gap: 157.5||| median x_gap: 128.0
+(davon A. -K.) 69 035 69 035||| max x_gap: 216.0||| mean x_gap: 120.5||| median x_gap: 95.5
+Fremdkapital 68 870 57 435||| max x_gap: 263.0||| mean x_gap: 151.0||| median x_gap: 127.5
+Abschreibungen 12 124 13 183||| max x_gap: 215.0||| mean x_gap: 139.25||| median x_gap: 127.0
+Steuern 1 937 2 245||| max x_gap: 386.0||| mean x_gap: 182.75||| median x_gap: 129.0
+Jahreseinnahmen 84 230 93 105||| max x_gap: 526.0||| mean x_gap: 216.75||| median x_gap: 127.0
+lerndamm 150||| max x_gap: 129.0||| mean x_gap: 129.0||| median x_gap: 129.0
+Berlin 018 3581||| max x_gap: 262.0||| mean x_gap: 185.5||| median x_gap: 185.5
+Dividendenab 1953/54: 2.4, 2.4, 2.4, 8,||| max x_gap: 200.0||| mean x_gap: 118.6||| median x_gap: 112.0
+Ordnungsnr.d.Aktien: 503800||| max x_gap: 179.0||| mean x_gap: 179.0||| median x_gap: 179.0
+Jahre 1963-1968 im Verhältnis 10:7||| max x_gap: 241.0||| mean x_gap: 163.75||| median x_gap: 170.0
+ultimo 1948 10, 25 %||| max x_gap: 185.0||| mean x_gap: 126.75||| median x_gap: 132.5
+ii 1949 %||| max x_gap: 323.0||| mean x_gap: 293.0||| median x_gap: 293.0
+ii 1950 %||| max x_gap: 321.0||| mean x_gap: 292.5||| median x_gap: 292.5
+n 1951||| max x_gap: 248.0||| mean x_gap: 248.0||| median x_gap: 248.0
+If 1952 %||| max x_gap: 323.0||| mean x_gap: 292.5||| median x_gap: 292.5
+fl 1953 %+)||| max x_gap: 378.0||| mean x_gap: 320.0||| median x_gap: 320.0
+1954 185,75 %||| max x_gap: 242.0||| mean x_gap: 162.0||| median x_gap: 162.0
+II 1955 %||| max x_gap: 322.0||| mean x_gap: 292.5||| median x_gap: 292.5
+1956 194 %||| max x_gap: 169.0||| mean x_gap: 162.0||| median x_gap: 162.0
+II 1957 %||| max x_gap: 322.0||| mean x_gap: 293.0||| median x_gap: 293.0
+lt 1958 %||| max x_gap: 323.0||| mean x_gap: 293.0||| median x_gap: 293.0
+II 1959 %||| max x_gap: 323.0||| mean x_gap: 293.0||| median x_gap: 293.0
+30. Sept. 1960 449 %||| max x_gap: 169.0||| mean x_gap: 144.5||| median x_gap: 147.0
+1951/52: 5% (Div.Sch.Nr. 1)||| max x_gap: 249.0||| mean x_gap: 164.0||| median x_gap: 169.0
+1952/53: 7% (Div.Sch.Nr. 2)||| max x_gap: 248.0||| mean x_gap: 164.0||| median x_gap: 170.0
+1953/54: 8% (Div.Sch.Nr. 4)||| max x_gap: 248.0||| mean x_gap: 164.0||| median x_gap: 169.0
+1954/55: 9% (Div.Sch.Nr. 6)||| max x_gap: 248.0||| mean x_gap: 163.666666667||| median x_gap: 170.0
+1955/56: 9% (Div.Sch.Nr. 8)||| max x_gap: 249.0||| mean x_gap: 164.0||| median x_gap: 168.0
+1957/58: 12% (Div.Sch.Nr.13)||| max x_gap: 169.0||| mean x_gap: 129.0||| median x_gap: 129.0
+30.9.1958 30.9.1959||| max x_gap: 259.0||| mean x_gap: 259.0||| median x_gap: 259.0
+Anlagevermögen 477 595 517 166||| max x_gap: 180.0||| mean x_gap: 133.75||| median x_gap: 129.5
+Umlaufvermögen 771 151 726 913||| max x_gap: 172.0||| mean x_gap: 132.0||| median x_gap: 130.0
+Vorräte 283 430 296 387||| max x_gap: 340.0||| mean x_gap: 173.25||| median x_gap: 128.0
+Lieferforderungen 242 078 241 023||| max x_gap: 396.0||| mean x_gap: 187.25||| median x_gap: 128.5
+Barmittel) 138 500 105 375||| max x_gap: 283.0||| mean x_gap: 159.0||| median x_gap: 129.0
+Eigenkapital 395 000 395 000||| max x_gap: 270.0||| mean x_gap: 156.0||| median x_gap: 128.5
+(davon A. -K.) 310 000 310 000||| max x_gap: 205.0||| mean x_gap: 120.166666667||| median x_gap: 100.0
+Fremdkapital 818 444 811 488||| max x_gap: 246.0||| mean x_gap: 149.75||| median x_gap: 129.5
+Vortrag) 35 302 37 591||| max x_gap: 321.0||| mean x_gap: 168.0||| median x_gap: 128.5
+Löhne und Gehälter 361 754 365 591||| max x_gap: 202.0||| mean x_gap: 127.0||| median x_gap: 107.5
+Abschreibungen 61 771 66 001||| max x_gap: 195.0||| mean x_gap: 137.0||| median x_gap: 129.0
+Ausweispfl. Steuern 29 501 30 500||| max x_gap: 172.0||| mean x_gap: 129.0||| median x_gap: 118.0
+Sonstige Steuern 31 228 29 522||| max x_gap: 181.0||| mean x_gap: 143.6||| median x_gap: 161.0
+Jahresrohertrag 574 607 583 137||| max x_gap: 420.0||| mean x_gap: 193.25||| median x_gap: 129.0
+Beteiligungserträge 15 160 22 420||| max x_gap: 159.0||| mean x_gap: 117.0||| median x_gap: 105.5
+H.-V.v. 12.9.1950; lt.H.-V.v.12.7.1955||| max x_gap: 255.0||| mean x_gap: 254.5||| median x_gap: 254.5
+it. H.-V.v.29.4.1960 Erhöhung auf||| max x_gap: 426.0||| mean x_gap: 242.333333333||| median x_gap: 219.0
+0rdnungsnr.d.Aktien: 629600||| max x_gap: 766.0||| mean x_gap: 766.0||| median x_gap: 766.0
+ultimo 1948 34 %||| max x_gap: 186.0||| mean x_gap: 169.666666667||| median x_gap: 169.0
+1949 59 %||| max x_gap: 171.0||| mean x_gap: 162.0||| median x_gap: 162.0
+1950 94 %||| max x_gap: 169.0||| mean x_gap: 161.0||| median x_gap: 161.0
+1951 142 %||| max x_gap: 171.0||| mean x_gap: 163.0||| median x_gap: 163.0
+1952 132 %||| max x_gap: 170.0||| mean x_gap: 162.0||| median x_gap: 162.0
+1953 126,5 %+)||| max x_gap: 218.0||| mean x_gap: 190.5||| median x_gap: 190.5
+1954 215 %||| max x_gap: 170.0||| mean x_gap: 162.0||| median x_gap: 162.0
+1955 260 %||| max x_gap: 171.0||| mean x_gap: 162.0||| median x_gap: 162.0
+1956 260 %||| max x_gap: 171.0||| mean x_gap: 162.0||| median x_gap: 162.0
+1957 290 %||| max x_gap: 169.0||| mean x_gap: 161.0||| median x_gap: 161.0
+1958 535 %||| max x_gap: 169.0||| mean x_gap: 161.5||| median x_gap: 161.5
+1959 815 %||| max x_gap: 170.0||| mean x_gap: 162.0||| median x_gap: 162.0
+30.Sept. 1960 1 290 %||| max x_gap: 257.0||| mean x_gap: 145.0||| median x_gap: 123.5
+1952: 7% (Div.Sch.Nr.1)||| max x_gap: 348.0||| mean x_gap: 209.0||| median x_gap: 209.0
+1953-1957: je 12 % (Div.Sch.Nr.2,3,6,8,9)||| max x_gap: 347.0||| mean x_gap: 130.0||| median x_gap: 61.5
+1958: 12% + 3% Bonus (Div.Sch.Nr.10)||| max x_gap: 299.0||| mean x_gap: 138.0||| median x_gap: 90.0
+1959: 15 % (Div.Sch.Nr.il)||| max x_gap: 370.0||| mean x_gap: 162.333333333||| median x_gap: 67.0
+seit 21.6.1948: 115 %||| max x_gap: 245.0||| mean x_gap: 128.666666667||| median x_gap: 91.0
+seit 21.6.1948: 199,9 %||| max x_gap: 245.0||| mean x_gap: 144.666666667||| median x_gap: 108.0
+31.12.1958 31.12.1959||| max x_gap: 290.0||| mean x_gap: 290.0||| median x_gap: 290.0
+Anlagevermögen 5 248 4 596||| max x_gap: 194.0||| mean x_gap: 134.0||| median x_gap: 127.0
+Umlaufvermögen 4 220 4 639||| max x_gap: 247.0||| mean x_gap: 176.0||| median x_gap: 192.0
+Vorräte 1 237 1 382||| max x_gap: 319.0||| mean x_gap: 172.5||| median x_gap: 140.5
+Lieferforderungen 980 952||| max x_gap: 280.0||| mean x_gap: 231.5||| median x_gap: 231.5
+Barmittel) 1 430 1 079||| max x_gap: 262.0||| mean x_gap: 158.5||| median x_gap: 140.5
+Eigenkapital 6 213 6 147||| max x_gap: 255.0||| mean x_gap: 156.5||| median x_gap: 141.5
+(davon A.-K.) 2 625 2 625||| max x_gap: 285.0||| mean x_gap: 144.0||| median x_gap: 89.0
+Fremdkapital 2 617 2 326||| max x_gap: 231.0||| mean x_gap: 150.25||| median x_gap: 140.5
+Gewinn nach Vortrag 638 762||| max x_gap: 281.0||| mean x_gap: 184.0||| median x_gap: 172.5
+Löhne u.Gehälter 2 084 2 344||| max x_gap: 251.0||| mean x_gap: 152.8||| median x_gap: 142.0
+Abschreibungen 642 979||| max x_gap: 283.0||| mean x_gap: 276.0||| median x_gap: 276.0
+Jahresrohertrag 4 363 5 123||| max x_gap: 193.0||| mean x_gap: 134.0||| median x_gap: 127.5
+Dividenden ab 1954: 8,8,8,10,10,10 %||| max x_gap: 349.0||| mean x_gap: 149.25||| median x_gap: 92.5
+Dividenden ab 1954; 8,10,11,12,14,14 %||| max x_gap: 289.0||| mean x_gap: 161.25||| median x_gap: 146.5
+Dividenden ab 1954: 8,10,10,12,14,14 %||| max x_gap: 396.0||| mean x_gap: 161.0||| median x_gap: 96.0
+Dividenden ab 1954; 8,8,8,10,12 %||| max x_gap: 275.0||| mean x_gap: 130.75||| median x_gap: 92.5
+H.-V.v.13.12. 1955; lt.ao.H. -V.v.20.11.||| max x_gap: 458.0||| mean x_gap: 333.5||| median x_gap: 333.5
+Ordnungsnr.d. Aktien: 843100||| max x_gap: 740.0||| mean x_gap: 740.0||| median x_gap: 740.0
+ultimo 1949 65 DM||| max x_gap: 184.0||| mean x_gap: 147.333333333||| median x_gap: 170.0
+1! 1950 63 DM||| max x_gap: 261.0||| mean x_gap: 172.666666667||| median x_gap: 168.0
+t» 1951 85 DM||| max x_gap: 259.0||| mean x_gap: 174.0||| median x_gap: 174.0
+fl 1952 150 DM||| max x_gap: 250.0||| mean x_gap: 170.0||| median x_gap: 171.0
+II 1953 175 DM||| max x_gap: 262.0||| mean x_gap: 173.666666667||| median x_gap: 169.0
+II 1954 275 DM||| max x_gap: 262.0||| mean x_gap: 173.333333333||| median x_gap: 169.0
+tt 1955 846 DM||| max x_gap: 261.0||| mean x_gap: 173.666666667||| median x_gap: 169.0
+II 1956 900 DM +)||| max x_gap: 260.0||| mean x_gap: 143.5||| median x_gap: 130.0
+lt 1957 915 DM||| max x_gap: 261.0||| mean x_gap: 173.666666667||| median x_gap: 171.0
+II 1958 1700 DM||| max x_gap: 263.0||| mean x_gap: 173.666666667||| median x_gap: 180.0
+II 1959 3700 DM||| max x_gap: 263.0||| mean x_gap: 173.666666667||| median x_gap: 178.0
+30.Sept. 1960 3500 DM||| max x_gap: 178.0||| mean x_gap: 134.0||| median x_gap: 145.0
+1956: 11 % (Div.Sch.Nr. 1)||| max x_gap: 276.0||| mean x_gap: 131.25||| median x_gap: 97.5
+1957: 12 % (Div.Sch.Nr. 2)||| max x_gap: 276.0||| mean x_gap: 131.0||| median x_gap: 99.0
+1958: 14 % (Div.Sch.Nr. 3)||| max x_gap: 274.0||| mean x_gap: 130.25||| median x_gap: 99.0
+1959: 14 % (Div.Sch.Nr. 5)||| max x_gap: 274.0||| mean x_gap: 126.75||| median x_gap: 92.0
+seit 21.6.1948; 83 %||| max x_gap: 235.0||| mean x_gap: 121.666666667||| median x_gap: 79.0
+31.12.1958 31.12.1959||| max x_gap: 287.0||| mean x_gap: 287.0||| median x_gap: 287.0
+Grundkapital 1 200 1 600||| max x_gap: 189.0||| mean x_gap: 144.75||| median x_gap: 145.0
+Anlagevermögen 36 097 46 012||| max x_gap: 193.0||| mean x_gap: 132.25||| median x_gap: 120.0
+derungen 12 792 14 701||| max x_gap: 270.0||| mean x_gap: 163.75||| median x_gap: 146.0
+Barmittel 11 944 10 330||| max x_gap: 286.0||| mean x_gap: 168.75||| median x_gap: 146.5
+Sonstige Aktiva 744 1 055||| max x_gap: 264.0||| mean x_gap: 177.25||| median x_gap: 173.0
+31.12.1958 31.12.:1959||| max x_gap: 307.0||| mean x_gap: 307.0||| median x_gap: 307.0
+Eigenkapital 7 700 9 450||| max x_gap: 229.0||| mean x_gap: 154.25||| median x_gap: 146.0
+(davon A.-K.) 3 750 5 000||| max x_gap: 195.0||| mean x_gap: 142.6||| median x_gap: 132.0
+Stellungen 34 813 41 099||| max x_gap: 247.0||| mean x_gap: 157.75||| median x_gap: 144.0
+Rückstellungen 8 453 9 765||| max x_gap: 240.0||| mean x_gap: 175.666666667||| median x_gap: 192.0
+bindlichkeiten 9 449 10 663||| max x_gap: 193.0||| mean x_gap: 137.75||| median x_gap: 132.0
+Sonstige Passiva 1 924 2 193||| max x_gap: 192.0||| mean x_gap: 141.4||| median x_gap: 132.0
+Gewinnnach Vortrag 438 528||| max x_gap: 289.0||| mean x_gap: 243.0||| median x_gap: 281.0
+31.12.]L958 31.12.1959||| max x_gap: 372.0||| mean x_gap: 372.0||| median x_gap: 372.0
+Beitragseinnahmen 58 820 65 747||| max x_gap: 192.0||| mean x_gap: 117.5||| median x_gap: 95.0
+Verwaltungskosten 9 493 10 579||| max x_gap: 193.0||| mean x_gap: 119.75||| median x_gap: 96.0
+liehe Abgaben 623 660||| max x_gap: 289.0||| mean x_gap: 249.0||| median x_gap: 263.0
+sicherungsfälle 33 694 39 744||| max x_gap: 191.0||| mean x_gap: 130.5||| median x_gap: 117.5
+beiträge 27 832 30 402||| max x_gap: 287.0||| mean x_gap: 168.25||| median x_gap: 146.0
+Trier 60 46-48,60 44||| max x_gap: 207.0||| mean x_gap: 135.0||| median x_gap: 135.0
+München 05/22189||| max x_gap: 357.0||| mean x_gap: 357.0||| median x_gap: 357.0
+Sinzig (Rhein) 08/61856||| max x_gap: 247.0||| mean x_gap: 206.0||| median x_gap: 206.0
+Ehrang 04/7887||| max x_gap: 363.0||| mean x_gap: 363.0||| median x_gap: 363.0
+H.-V.v. 30.6.1950. Lt.H. -V.v. 31. 7.1955||| max x_gap: 255.0||| mean x_gap: 231.0||| median x_gap: 240.0
+501900 (St.-Akt.); 501903 (Vorz.-Akt.)||| max x_gap: 294.0||| mean x_gap: 233.666666667||| median x_gap: 247.0
+ultimo 1948 45 %||| max x_gap: 214.0||| mean x_gap: 178.333333333||| median x_gap: 175.0
+ii 1949 70 %||| max x_gap: 291.0||| mean x_gap: 203.666666667||| median x_gap: 176.0
+tf 1950 76 %||| max x_gap: 290.0||| mean x_gap: 204.0||| median x_gap: 176.0
+it 1951 96 %||| max x_gap: 289.0||| mean x_gap: 203.666666667||| median x_gap: 176.0
+ii 1952 72 %||| max x_gap: 278.0||| mean x_gap: 200.333333333||| median x_gap: 176.0
+it 1953 75 %||| max x_gap: 280.0||| mean x_gap: 200.333333333||| median x_gap: 174.0
+ii 1954 120 %||| max x_gap: 292.0||| mean x_gap: 204.333333333||| median x_gap: 176.0
+ti 1955 180 %||| max x_gap: 291.0||| mean x_gap: 204.333333333||| median x_gap: 177.0
+ii 1956 215 %+)||| max x_gap: 292.0||| mean x_gap: 222.666666667||| median x_gap: 202.0
+ti 1957 194 %||| max x_gap: 292.0||| mean x_gap: 204.333333333||| median x_gap: 175.0
+it 1958 270 %||| max x_gap: 279.0||| mean x_gap: 200.0||| median x_gap: 176.0
+ti 1959 490 %||| max x_gap: 291.0||| mean x_gap: 203.666666667||| median x_gap: 176.0
+n 1960 540 %||| max x_gap: 281.0||| mean x_gap: 200.0||| median x_gap: 174.0
+ii 1961 483 %||| max x_gap: 290.0||| mean x_gap: 204.333333333||| median x_gap: 178.0
+ti 1962 380 %||| max x_gap: 290.0||| mean x_gap: 204.0||| median x_gap: 177.0
+1963 378 %||| max x_gap: 176.0||| mean x_gap: 160.5||| median x_gap: 160.5
+30. Sept. 1964 361 %||| max x_gap: 287.0||| mean x_gap: 203.333333333||| median x_gap: 181.0
+ultimo 1956 213 %+)||| max x_gap: 215.0||| mean x_gap: 196.666666667||| median x_gap: 200.0
+ti 1957 192 %||| max x_gap: 291.0||| mean x_gap: 203.666666667||| median x_gap: 198.0
+ti 1958 265 %||| max x_gap: 291.0||| mean x_gap: 203.666666667||| median x_gap: 198.0
+ti 1959 485 %||| max x_gap: 292.0||| mean x_gap: 203.666666667||| median x_gap: 196.0
+ti 1960 535 %||| max x_gap: 291.0||| mean x_gap: 204.0||| median x_gap: 170.0
+ii 1961 478 %||| max x_gap: 286.0||| mean x_gap: 203.333333333||| median x_gap: 202.0
+n 1962 380 %||| max x_gap: 279.0||| mean x_gap: 200.666666667||| median x_gap: 202.0
+ii 1963 380 %||| max x_gap: 290.0||| mean x_gap: 203.666666667||| median x_gap: 199.0
+30. Sept. 1964 360 %||| max x_gap: 203.0||| mean x_gap: 152.25||| median x_gap: 144.5
+(21.9.); Div.Sch.Nr. 10||| max x_gap: 233.0||| mean x_gap: 212.5||| median x_gap: 212.5
+31.12.1962 31.12.1963||| max x_gap: 288.0||| mean x_gap: 288.0||| median x_gap: 288.0
+Anlagevermögen 48 295 48 905||| max x_gap: 240.0||| mean x_gap: 130.75||| median x_gap: 118.0
+Beteiligungen) 19 265 20 656||| max x_gap: 192.0||| mean x_gap: 135.25||| median x_gap: 128.0
+Umlaufvermögen 23 191 20 742||| max x_gap: 192.0||| mean x_gap: 128.25||| median x_gap: 114.0
+Vorräte 12 824 11 362||| max x_gap: 293.0||| mean x_gap: 168.75||| median x_gap: 143.0
+Wertpapiere) 2 144 2 243||| max x_gap: 262.0||| mean x_gap: 183.333333333||| median x_gap: 190.0
+31.12.1962 31.12.1963||| max x_gap: 184.0||| mean x_gap: 184.0||| median x_gap: 184.0
+Eigenkapital 35 375 35 196||| max x_gap: 228.0||| mean x_gap: 153.25||| median x_gap: 144.0
+(davon A. -K.) 13 350 13 350||| max x_gap: 191.0||| mean x_gap: 118.0||| median x_gap: 100.0
+Fremdkapital 33 348 31 871||| max x_gap: 207.0||| mean x_gap: 146.5||| median x_gap: 142.5
+Gewinnnach Vortrag 2 055 2 062||| max x_gap: 339.0||| mean x_gap: 180.25||| median x_gap: 143.5
+1962 1963||| max x_gap: 290.0||| mean x_gap: 290.0||| median x_gap: 290.0
+Löhne und Gehälter 25 671 24 207||| max x_gap: 199.0||| mean x_gap: 125.0||| median x_gap: 96.5
+Abschreibungen 5 842 4 711||| max x_gap: 192.0||| mean x_gap: 134.5||| median x_gap: 125.5
+EEV-Steuern u.LAG 2 231 2 754||| max x_gap: 239.0||| mean x_gap: 156.6||| median x_gap: 159.0
+Sonstige Steuern 2 688 2 504||| max x_gap: 190.0||| mean x_gap: 140.4||| median x_gap: 139.0
+Umsatzerlöse 73 156 71 356||| max x_gap: 199.0||| mean x_gap: 145.5||| median x_gap: 143.5
+17.8.1955 Erhöhung auf DM 55 000 000. -||| max x_gap: 370.0||| mean x_gap: 117.571428571||| median x_gap: 85.0
+und lt.H.-V.v.2.6.1964 auf||| max x_gap: 466.0||| mean x_gap: 263.0||| median x_gap: 263.0
+Wertpapier-Kenn-Nr.: 692100||| max x_gap: 215.0||| mean x_gap: 215.0||| median x_gap: 215.0
+ultimo 1948 15 %||| max x_gap: 213.0||| mean x_gap: 188.333333333||| median x_gap: 199.0
+it 1949 29 %||| max x_gap: 292.0||| mean x_gap: 214.333333333||| median x_gap: 199.0
+m 1950 40,5 %||| max x_gap: 280.0||| mean x_gap: 210.333333333||| median x_gap: 244.0
+ti 1951 48,5 %||| max x_gap: 288.0||| mean x_gap: 214.333333333||| median x_gap: 249.0
+it 1952 26,5 %||| max x_gap: 278.0||| mean x_gap: 210.666666667||| median x_gap: 247.0
+tt 1953 31,5 %||| max x_gap: 291.0||| mean x_gap: 214.333333333||| median x_gap: 245.0
+it 1954 55 %||| max x_gap: 290.0||| mean x_gap: 214.333333333||| median x_gap: 198.0
+ti 1955 59 %||| max x_gap: 290.0||| mean x_gap: 214.0||| median x_gap: 200.0
+it 1956 132,5 %+)||| max x_gap: 279.0||| mean x_gap: 228.333333333||| median x_gap: 246.0
+ti 1957 112 %||| max x_gap: 290.0||| mean x_gap: 213.666666667||| median x_gap: 197.0
+ti 1958 100 %||| max x_gap: 291.0||| mean x_gap: 214.333333333||| median x_gap: 200.0
+ti 1959 153,25 %||| max x_gap: 291.0||| mean x_gap: 214.333333333||| median x_gap: 270.0
+tt 1960 327 %||| max x_gap: 280.0||| mean x_gap: 210.333333333||| median x_gap: 199.0
+tt 1961 287 %||| max x_gap: 277.0||| mean x_gap: 209.666666667||| median x_gap: 200.0
+tt 1962 148 %||| max x_gap: 278.0||| mean x_gap: 210.333333333||| median x_gap: 199.0
+tt 1963 199 %||| max x_gap: 280.0||| mean x_gap: 210.333333333||| median x_gap: 199.0
+30.Sept. 1964 227 %||| max x_gap: 286.0||| mean x_gap: 213.0||| median x_gap: 202.0
+1964: i.V. 5:2 zu 175 %; Abschlag 10,5 %||| max x_gap: 332.0||| mean x_gap: 128.833333333||| median x_gap: 75.5
+31.12.1962 31.12.1963||| max x_gap: 215.0||| mean x_gap: 215.0||| median x_gap: 215.0
+Anlagevermögen 81 875 88 612||| max x_gap: 194.0||| mean x_gap: 130.5||| median x_gap: 117.0
+Beteiligungen) 12 651 12 651||| max x_gap: 191.0||| mean x_gap: 134.75||| median x_gap: 126.5
+Umlaufvermögen 69 220 70 790||| max x_gap: 191.0||| mean x_gap: 128.75||| median x_gap: 114.5
+Vorräte 38 116 38 499||| max x_gap: 295.0||| mean x_gap: 169.75||| median x_gap: 144.5
+Wertpapiere) 5 331 4 041||| max x_gap: 261.0||| mean x_gap: 182.666666667||| median x_gap: 193.0
+Eigenkapital 68 000 69 500||| max x_gap: 230.0||| mean x_gap: 153.25||| median x_gap: 144.0
+(davon A. -K.) 55 000 55 000||| max x_gap: 263.0||| mean x_gap: 141.4||| median x_gap: 97.0
+Fremdkapital 78 688 84 626||| max x_gap: 205.0||| mean x_gap: 147.0||| median x_gap: 144.0
+Gewinnnach Vortrag 4 633 5 500||| max x_gap: 436.0||| mean x_gap: 241.333333333||| median x_gap: 190.0
+1962 1963||| max x_gap: 289.0||| mean x_gap: 289.0||| median x_gap: 289.0
+Löhne und Gehälter 58 854 62 740||| max x_gap: 200.0||| mean x_gap: 125.166666667||| median x_gap: 96.5
+Abschreibungen 12 424 14 290||| max x_gap: 191.0||| mean x_gap: 135.25||| median x_gap: 127.0
+Umsatzerlöse 235 732 258 352||| max x_gap: 199.0||| mean x_gap: 145.0||| median x_gap: 143.5
+Dividenden ab 1958: 6, 6.5, 7,7,7,7 %||| max x_gap: 324.0||| mean x_gap: 142.5||| median x_gap: 96.0
+Dividenden ab 1958: 10,12,13,14,14,14 %||| max x_gap: 397.0||| mean x_gap: 166.75||| median x_gap: 103.0
+Dividenden ab 1958: 12,13,13,15,15,15 %||| max x_gap: 396.0||| mean x_gap: 166.75||| median x_gap: 103.5
+Dividenden ab1958: 11,12,14,14,15,15 %||| max x_gap: 548.0||| mean x_gap: 222.333333333||| median x_gap: 67.0
+Dividenden ab 1958: 10,12,14,10,14,14 %||| max x_gap: 425.0||| mean x_gap: 166.75||| median x_gap: 96.0
+Dividendenab 1957/58:9, 10, 12, 14, 25, 20%||| max x_gap: 316.0||| mean x_gap: 120.4||| median x_gap: 80.0
+Dividenden ab 1957/58: 11,12,14,14,16,||| max x_gap: 367.0||| mean x_gap: 210.666666667||| median x_gap: 201.0
+Dividenden ab 1958: 12,14,16,18,18,18 %||| max x_gap: 395.0||| mean x_gap: 166.75||| median x_gap: 103.5
+Dividenden ab 1958: 10,12,13,14,15,15 %||| max x_gap: 395.0||| mean x_gap: 166.75||| median x_gap: 103.5
+Dividenden ab 1958: 5.5, 7,7,7,7,7 %||| max x_gap: 323.0||| mean x_gap: 143.0||| median x_gap: 96.5
+Dividenden ab 1957/58: 5, 6,6,6,6,6 %||| max x_gap: 276.0||| mean x_gap: 149.0||| median x_gap: 133.0
+Dividendenab 1958: 14,16,20,16,20,18 %||| max x_gap: 366.0||| mean x_gap: 200.0||| median x_gap: 127.0
+H.-V.v.29.5.1951. Lt.H.-V.v.1.3.1955||| max x_gap: 456.0||| mean x_gap: 456.0||| median x_gap: 456.0
+Erhöhung auf DM 369 000 000.-, lt.H.-V.||| max x_gap: 208.0||| mean x_gap: 117.166666667||| median x_gap: 88.0
+v.20.9.1955 auf DM 428 000 000. -, lt.||| max x_gap: 307.0||| mean x_gap: 132.333333333||| median x_gap: 96.5
+H.-V.v.27.10.1959 auf DM 575 000 000.-,||| max x_gap: 259.0||| mean x_gap: 134.4||| median x_gap: 90.0
+H.-V.v.6.2.1963 auf DM 960 000 000. -.||| max x_gap: 410.0||| mean x_gap: 137.333333333||| median x_gap: 87.5
+DM 320 000 000 Inhaber-Vorzugsaktien oh-||| max x_gap: 507.0||| mean x_gap: 170.4||| median x_gap: 88.0
+703700 (St.,-Akt.); 703703 (Vorz.-Akt.)||| max x_gap: 296.0||| mean x_gap: 234.666666667||| median x_gap: 244.0
+425 750 Inh.-Vorz.-Akt. zu je DM 400.-||| max x_gap: 369.0||| mean x_gap: 141.166666667||| median x_gap: 88.5
+ultimo 1948 36,25 %||| max x_gap: 239.0||| mean x_gap: 157.666666667||| median x_gap: 183.0
+II 1949 81,50 %||| max x_gap: 262.0||| mean x_gap: 184.333333333||| median x_gap: 241.0
+lt 1950 71,75 %||| max x_gap: 264.0||| mean x_gap: 185.0||| median x_gap: 240.0
+II 1951 137,5 %||| max x_gap: 259.0||| mean x_gap: 184.666666667||| median x_gap: 220.0
+II 1952 106 %||| max x_gap: 261.0||| mean x_gap: 184.666666667||| median x_gap: 169.0
+ultimo 1953 135 %++)||| max x_gap: 190.0||| mean x_gap: 179.333333333||| median x_gap: 179.0
+II 1954 215 %||| max x_gap: 264.0||| mean x_gap: 184.666666667||| median x_gap: 166.0
+II 1955 218 % 206 %||| max x_gap: 263.0||| mean x_gap: 168.4||| median x_gap: 165.0
+11 1956 208 % 200 .%||| max x_gap: 262.0||| mean x_gap: 168.4||| median x_gap: 165.0
+II 1957 201 % 194,5 %||| max x_gap: 262.0||| mean x_gap: 168.2||| median x_gap: 164.0
+11 1958 365 % 347 7/8 %||| max x_gap: 262.0||| mean x_gap: 140.166666667||| median x_gap: 144.5
+II 1959 610 % 589,5 %||| max x_gap: 262.0||| mean x_gap: 168.2||| median x_gap: 168.0
+lt 1960 868 % 837 %||| max x_gap: 262.0||| mean x_gap: 168.2||| median x_gap: 166.0
+II 1961 720 % 672 %||| max x_gap: 259.0||| mean x_gap: 168.2||| median x_gap: 164.0
+11 1962 605 % 586 %||| max x_gap: 261.0||| mean x_gap: 168.2||| median x_gap: 166.0
+II 1963 609 % 580 %||| max x_gap: 262.0||| mean x_gap: 168.2||| median x_gap: 165.0
+30. Sept. 1964 563,5 % 551,5 %||| max x_gap: 216.0||| mean x_gap: 139.333333333||| median x_gap: 128.5
++) Erste Notierung am 2.11.1955||| max x_gap: 230.0||| mean x_gap: 168.5||| median x_gap: 181.5
+H/1948/49-1957/58: insgesamt 66,5 %||| max x_gap: 231.0||| mean x_gap: 131.333333333||| median x_gap: 113.0
+schlag 20,33 % (25.5.);||| max x_gap: 179.0||| mean x_gap: 121.666666667||| median x_gap: 135.0
+schlag 18,50 % (25.5.);||| max x_gap: 178.0||| mean x_gap: 121.333333333||| median x_gap: 135.0
+schlag 85,375 % (31.3.);||| max x_gap: 178.0||| mean x_gap: 129.333333333||| median x_gap: 159.0
+schlag 81,500 % (31.3.);||| max x_gap: 178.0||| mean x_gap: 129.333333333||| median x_gap: 159.0
+schlag 45,375 % (2.3.);||| max x_gap: 160.0||| mean x_gap: 121.666666667||| median x_gap: 154.0
+schlag 40, 500 % (2.3.);||| max x_gap: 155.0||| mean x_gap: 121.333333333||| median x_gap: 131.0
+30.6.1962 30.6.1963||| max x_gap: 409.0||| mean x_gap: 409.0||| median x_gap: 409.0
+Beteiligungen) 617 656 638 230||| max x_gap: 202.0||| mean x_gap: 138.75||| median x_gap: 128.5
+Umlaufvermögen 537 858 574 620||| max x_gap: 175.0||| mean x_gap: 132.0||| median x_gap: 129.0
+Vorräte 31 107 34 084||| max x_gap: 333.0||| mean x_gap: 172.75||| median x_gap: 130.5
+Lieferforderungen 179 727 185 363||| max x_gap: 209.0||| mean x_gap: 115.75||| median x_gap: 102.5
+Wertpapiere) 172 288 256 370||| max x_gap: 224.0||| mean x_gap: 144.75||| median x_gap: 129.0
+(davon A.-K.) 795 000 960 000||| max x_gap: 306.0||| mean x_gap: 144.2||| median x_gap: 96.0
+Anzahlungen) 11 722 7 592||| max x_gap: 224.0||| mean x_gap: 144.5||| median x_gap: 130.0
+Gewinnnach Vortrag 132 489 136 845||| max x_gap: 382.0||| mean x_gap: 184.0||| median x_gap: 129.0
+1961/62 1962/63||| max x_gap: 258.0||| mean x_gap: 258.0||| median x_gap: 258.0
+Löhne und Gehälter 175 917 190 530||| max x_gap: 200.0||| mean x_gap: 127.0||| median x_gap: 108.5
+Abschreibungen 320 963 361 991||| max x_gap: 200.0||| mean x_gap: 137.5||| median x_gap: 127.5
+EEV-Steuern u.LAG 275 253 277 644||| max x_gap: 161.0||| mean x_gap: 122.2||| median x_gap: 98.0
+Sonstige Steuern 72 152 82 718||| max x_gap: 182.0||| mean x_gap: 142.8||| median x_gap: 161.0
+träge 19 110 17 138||| max x_gap: 392.0||| mean x_gap: 186.5||| median x_gap: 129.0
+Sitz: 1000 Berlin 33, Hohenzollerndamm 150||| max x_gap: 490.0||| mean x_gap: 301.0||| median x_gap: 347.0
+Dividenden ab 1963 (1.4.-31.12.): 10,5,||| max x_gap: 322.0||| mean x_gap: 142.25||| median x_gap: 92.5
+16, 16,16 %||| max x_gap: 177.0||| mean x_gap: 177.0||| median x_gap: 177.0
+1963(1.7.-31.12.):6,12, 14, 16, 16 %||| max x_gap: 660.0||| mean x_gap: 354.0||| median x_gap: 354.0
+Wertpapier-Kenn-Nr. : 503800||| max x_gap: 589.0||| mean x_gap: 378.0||| median x_gap: 378.0
+14, 12.1978 jederzeit, ausgenommen vom||| max x_gap: 398.0||| mean x_gap: 273.333333333||| median x_gap: 320.0
+15.bis 31.12. der Jahre 1969-1977||| max x_gap: 168.0||| mean x_gap: 145.25||| median x_gap: 141.0
+1948-1951: Hamburg; 1952 und 1953:||| max x_gap: 219.0||| mean x_gap: 136.0||| median x_gap: 118.5
+50 25% 57 187% 64 501%||| max x_gap: 215.0||| mean x_gap: 145.8||| median x_gap: 102.0
+5145% 58 300 % 65 444 %||| max x_gap: 319.0||| mean x_gap: 130.666666667||| median x_gap: 102.0
+1949/50-1957/58: insgesamt 65 %||| max x_gap: 413.0||| mean x_gap: 174.666666667||| median x_gap: 63.0
+16, 18, 19)||| max x_gap: 141.0||| mean x_gap: 141.0||| median x_gap: 141.0
+1963 (1.10. -31.12.): 4 % (Div.Sch.Nr. 20)||| max x_gap: 242.0||| mean x_gap: 132.0||| median x_gap: 133.5
+(21.10.); Div.Sch. Nr.5||| max x_gap: 212.0||| mean x_gap: 212.0||| median x_gap: 212.0
+(20.5.); Div.Sch. Nr.11||| max x_gap: 211.0||| mean x_gap: 192.0||| median x_gap: 192.0
+i.V.11:2 zu 100 %; Abschlag 6,08%||| max x_gap: 215.0||| mean x_gap: 149.8||| median x_gap: 179.0
+19,80 % (1.3.); Div. Sch. Nr. 22 2)||| max x_gap: 281.0||| mean x_gap: 161.0||| median x_gap: 148.0
+0,125 % (11.7.); Div. Sch. Nr. 24 +)||| max x_gap: 189.0||| mean x_gap: 115.333333333||| median x_gap: 110.0
+27,55 %(8.7.); Div. Sch. Nr. 27||| max x_gap: 257.0||| mean x_gap: 181.5||| median x_gap: 181.5
+2) außerdem: DM 100 100.- i.V. 10:7 zu||| max x_gap: 239.0||| mean x_gap: 117.285714286||| median x_gap: 87.0
+31.12.1966 31.12.1967||| max x_gap: 284.0||| mean x_gap: 284.0||| median x_gap: 284.0
+Anlagevermögen 936 853 903 050||| max x_gap: 189.0||| mean x_gap: 137.0||| median x_gap: 133.0
+Beteiligungen) 514 080 522 848||| max x_gap: 193.0||| mean x_gap: 142.5||| median x_gap: 142.0
+Vorräte 524 205 364 777||| max x_gap: 322.0||| mean x_gap: 174.0||| median x_gap: 141.5
+Lieferforderungen 684 385 877 360||| max x_gap: 188.0||| mean x_gap: 119.75||| median x_gap: 98.5
+Wertpapiere) 304 136 470 303||| max x_gap: 201.0||| mean x_gap: 144.5||| median x_gap: 142.5
+Eigenkapital 758 169 889 434||| max x_gap: 259.0||| mean x_gap: 159.0||| median x_gap: 142.0
+(davon A. -K.) 459 900 459 900||| max x_gap: 192.0||| mean x_gap: 121.5||| median x_gap: 98.0
+Fremdkapital 2 263 967 1 853 226||| max x_gap: 235.0||| mean x_gap: 122.2||| median x_gap: 94.0
+Bilanzgewinn 74 294 73 584||| max x_gap: 242.0||| mean x_gap: 155.0||| median x_gap: 141.0
+1966 1967||| max x_gap: 284.0||| mean x_gap: 284.0||| median x_gap: 284.0
+Beteiligungserträge 56 690 80 577||| max x_gap: 189.0||| mean x_gap: 119.5||| median x_gap: 98.0
+Abschreibungen 131 229 114 164||| max x_gap: 189.0||| mean x_gap: 141.25||| median x_gap: 140.5
+EEV-Steuern 47 219 46 316||| max x_gap: 240.0||| mean x_gap: 154.5||| median x_gap: 142.0
+Jahresüberschuß 78 580 154753||| max x_gap: 189.0||| mean x_gap: 148.666666667||| median x_gap: 163.0
+Dividenden ab 1962: 18, 18, 18, 20, 20,18 %||| max x_gap: 297.0||| mean x_gap: 130.8||| median x_gap: 105.0
+Wertpapier-Kenn-Nr.: 500100||| max x_gap: 756.0||| mean x_gap: 756.0||| median x_gap: 756.0
+31 250 Inh.-St.-Akt. zu je DM 100.-||| max x_gap: 295.0||| mean x_gap: 128.833333333||| median x_gap: 90.5
+1948 21% 1955 156 % 1962 610%||| max x_gap: 208.0||| mean x_gap: 119.333333333||| median x_gap: 102.0
+50 89% 57 152% 64 586 %||| max x_gap: 206.0||| mean x_gap: 126.666666667||| median x_gap: 101.0
+54 142 %+) 61 825% 68 675%||| max x_gap: 204.0||| mean x_gap: 119.333333333||| median x_gap: 104.5
+11/1948/49-1958: insgesamt 60%||| max x_gap: 230.0||| mean x_gap: 169.5||| median x_gap: 169.5
+1959: 12 % (Div.Sch.Nr. 6)||| max x_gap: 291.0||| mean x_gap: 118.0||| median x_gap: 67.0
+1960: 15 % (Div.Sch.Nr. 7)||| max x_gap: 212.0||| mean x_gap: 118.0||| median x_gap: 107.0
+1961: 16 % (Div.Sch.Nr. 8)||| max x_gap: 289.0||| mean x_gap: 118.0||| median x_gap: 67.0
+1964: 18% +1,61 % +) (Div.Sch.Nr. 3)||| max x_gap: 291.0||| mean x_gap: 116.666666667||| median x_gap: 76.0
+81,40 % (15. 7.); Div.Sch.Nr. 4||| max x_gap: 361.0||| mean x_gap: 133.25||| median x_gap: 70.0
+31.12.1966 31.12.1967||| max x_gap: 283.0||| mean x_gap: 283.0||| median x_gap: 283.0
+Anlagevermögen 168 235 164 230||| max x_gap: 189.0||| mean x_gap: 137.25||| median x_gap: 133.5
+Beteiligungen) 95 585 93 550||| max x_gap: 192.0||| mean x_gap: 142.5||| median x_gap: 142.0
+Umlaufvermögen 253 372 270 486||| max x_gap: 215.0||| mean x_gap: 135.5||| median x_gap: 129.5
+Vorräte 68 790 57 495||| max x_gap: 321.0||| mean x_gap: 175.0||| median x_gap: 142.5
+Lieferforderungen 42 878 69 805||| max x_gap: 189.0||| mean x_gap: 120.25||| median x_gap: 99.0
+Wertpapiere 80 444 99 346||| max x_gap: 211.0||| mean x_gap: 147.25||| median x_gap: 142.0
+Eigenkapital 164 464 164 241||| max x_gap: 258.0||| mean x_gap: 158.5||| median x_gap: 142.0
+(davon A.-K.) 88 000 88 000||| max x_gap: 291.0||| mean x_gap: 146.2||| median x_gap: 95.0
+Wertberichtigungen 1 263 2 099||| max x_gap: 190.0||| mean x_gap: 121.75||| median x_gap: 102.0
+Fremdkapital 256 600 269 485||| max x_gap: 233.0||| mean x_gap: 153.25||| median x_gap: 142.5
+Anzahlungen) 4 031 1558||| max x_gap: 216.0||| mean x_gap: 165.666666667||| median x_gap: 190.0
+Bilanzgewinn 16 855 16 855||| max x_gap: 243.0||| mean x_gap: 155.5||| median x_gap: 141.5
+1966 1967||| max x_gap: 281.0||| mean x_gap: 281.0||| median x_gap: 281.0
+Umsatzerlöse 293 348 303 443||| max x_gap: 227.0||| mean x_gap: 151.0||| median x_gap: 141.5
+Materialaufwand 120 079 120 999||| max x_gap: 189.0||| mean x_gap: 137.0||| median x_gap: 133.0
+Personalaufwand 90 780 89 063||| max x_gap: 189.0||| mean x_gap: 135.0||| median x_gap: 128.5
+trägen 15 345 16 27 3||| max x_gap: 354.0||| mean x_gap: 145.8||| median x_gap: 94.0
+Beteiligungserträge 9 923 10 147||| max x_gap: 188.0||| mean x_gap: 118.75||| median x_gap: 97.5
+Abschreibungen 25 718 25 247||| max x_gap: 190.0||| mean x_gap: 140.5||| median x_gap: 141.0
+EEV-Steuern 29 548 34 522||| max x_gap: 243.0||| mean x_gap: 155.0||| median x_gap: 141.5
+Jahresüberschuß 22 855 25 855||| max x_gap: 188.0||| mean x_gap: 135.25||| median x_gap: 129.5
+Straße 38-52, Postfach 187||| max x_gap: 205.0||| mean x_gap: 146.333333333||| median x_gap: 149.0
+777900 (St.-Akt.); 777903 (Vorz. -Akt.)||| max x_gap: 241.0||| mean x_gap: 165.75||| median x_gap: 152.5
+49 100 % 57305% 65265 %||| max x_gap: 313.0||| mean x_gap: 155.8||| median x_gap: 152.0
+51135% 59 600 % 67 288 %||| max x_gap: 318.0||| mean x_gap: 130.5||| median x_gap: 102.0
+52 102 % +) 601110 % 68 181 %||| max x_gap: 212.0||| mean x_gap: 129.666666667||| median x_gap: 126.0
+53 102 % 61 (30.9.)||| max x_gap: 303.0||| mean x_gap: 152.75||| median x_gap: 130.0
+1965 244% 1967 215%||| max x_gap: 155.0||| mean x_gap: 151.666666667||| median x_gap: 151.0
+11/1948/49-1958: insgesamt 73,5 %||| max x_gap: 244.0||| mean x_gap: 134.0||| median x_gap: 108.0
+1959: 11 % (Div.Sch.Nr. 9)||| max x_gap: 245.0||| mean x_gap: 140.0||| median x_gap: 119.5
+1966: 8 % (Div.Sch.Nr. 18)||| max x_gap: 242.0||| mean x_gap: 185.666666667||| median x_gap: 202.0
+1965: Vorz.-Akt.: i. V.5:2 zu 225 %;||| max x_gap: 332.0||| mean x_gap: 150.8||| median x_gap: 86.0
+31.12.1966 31.12.1967||| max x_gap: 283.0||| mean x_gap: 283.0||| median x_gap: 283.0
+Anlagevermögen 14 741 18 802||| max x_gap: 192.0||| mean x_gap: 129.0||| median x_gap: 117.0
+Beteiligungen) 1 422 5 653||| max x_gap: 250.0||| mean x_gap: 178.333333333||| median x_gap: 190.0
+Umlaufvermögen 25 353 20 530||| max x_gap: 191.0||| mean x_gap: 128.0||| median x_gap: 113.5
+Vorräte 13 833 12 378||| max x_gap: 290.0||| mean x_gap: 167.0||| median x_gap: 142.0
+Wertpapiere) 5 041 3 881||| max x_gap: 191.0||| mean x_gap: 134.75||| median x_gap: 128.5
+Eigenkapital 14 763 14 525||| max x_gap: 226.0||| mean x_gap: 150.75||| median x_gap: 142.0
+(davon A.-K.) 7 000 7 000||| max x_gap: 259.0||| mean x_gap: 140.4||| median x_gap: 96.0
+Wertberichtigungen 353 114||| max x_gap: 284.0||| mean x_gap: 227.5||| median x_gap: 227.5
+Fremdkapital 25 184 24 892||| max x_gap: 201.0||| mean x_gap: 144.5||| median x_gap: 142.5
+Bilanzgewinn 612 179||| max x_gap: 305.0||| mean x_gap: 295.0||| median x_gap: 295.0
+1966 1967||| max x_gap: 283.0||| mean x_gap: 283.0||| median x_gap: 283.0
+Umsatzerlöse 64 906 45 252||| max x_gap: 198.0||| mean x_gap: 143.25||| median x_gap: 141.0
+Materialaufwand 50 921 39 042||| max x_gap: 192.0||| mean x_gap: 128.75||| median x_gap: 117.0
+Personalaufwand 8 871 7 499||| max x_gap: 191.0||| mean x_gap: 127.75||| median x_gap: 114.5
+Beteiligungserträge 1 003 504||| max x_gap: 284.0||| mean x_gap: 149.666666667||| median x_gap: 97.0
+Abschreibungen 1 842 1 474||| max x_gap: 187.0||| mean x_gap: 133.25||| median x_gap: 125.5
+EEV-Steuern 344 350||| max x_gap: 307.0||| mean x_gap: 295.5||| median x_gap: 295.5
+Verwaltung: 7000||| max x_gap: 120.0||| mean x_gap: 120.0||| median x_gap: 120.0
+Sa,-Nr. 30 21||| max x_gap: 175.0||| mean x_gap: 117.5||| median x_gap: 117.5
+Dividenden ab 1966: 0,0,8,7,7,9 %||| max x_gap: 270.0||| mean x_gap: 127.5||| median x_gap: 93.5
+Dividenden ab 1966: 6,6,7,7,7,8 %||| max x_gap: 271.0||| mean x_gap: 127.5||| median x_gap: 93.5
+550000 (Inh. -St. -Akt.);||| max x_gap: 243.0||| mean x_gap: 176.0||| median x_gap: 176.0
+550003 (Nam. -Vorz.-Akt.)||| max x_gap: 150.0||| mean x_gap: 145.5||| median x_gap: 145.5
+ab 15.10.1968 Stücknotiz für DM 50. -||| max x_gap: 402.0||| mean x_gap: 125.166666667||| median x_gap: 78.0
+55 398 % 64 761% (29.9,•)||| max x_gap: 188.0||| mean x_gap: 122.2||| median x_gap: 109.0
+11/1948/49-1966: insgesamt 207 %||| max x_gap: 228.0||| mean x_gap: 120.666666667||| median x_gap: 84.0
+1968: 14 % (Div.Sch.Nr. 24)||| max x_gap: 242.0||| mean x_gap: 117.75||| median x_gap: 91.0
+1970:17 % +1,5 % Bonus (Div.Sch.Nr. 27)||| max x_gap: 367.0||| mean x_gap: 157.8||| median x_gap: 131.0
+1971: 17 % (Div.Sch.Nr. 28)||| max x_gap: 258.0||| mean x_gap: 120.75||| median x_gap: 88.0
+1960: i.V. 2:3 BA; rechn. Abschlag 4632 %,||| max x_gap: 306.0||| mean x_gap: 133.333333333||| median x_gap: 97.0
+1961:i.V. 2:1, BA; rechn. Abschlag 843 %,||| max x_gap: 284.0||| mean x_gap: 159.8||| median x_gap: 150.0
+1963: i.V. 4:1, BA; rechn. Abschlag 281 %,||| max x_gap: 281.0||| mean x_gap: 133.166666667||| median x_gap: 101.5
+(23.8.); Div.Sch.Nr. 15||| max x_gap: 227.0||| mean x_gap: 208.0||| median x_gap: 208.0
+1965: i.V. 8:1, BA; rechn.Abschlag 68,90%||| max x_gap: 350.0||| mean x_gap: 163.8||| median x_gap: 102.0
+i.V. 8:1 zu 100 % rechn.Wert 54,90%||| max x_gap: 258.0||| mean x_gap: 117.166666667||| median x_gap: 85.0
+(17.8.); Div.Sch.Nr. 20||| max x_gap: 189.0||| mean x_gap: 189.0||| median x_gap: 189.0
+31.12.1970 31.12.1971||| max x_gap: 283.0||| mean x_gap: 283.0||| median x_gap: 283.0
+Beteiligungen 371 676 348 811||| max x_gap: 207.0||| mean x_gap: 144.25||| median x_gap: 142.5
+Vorräte 1 010 668 993 489||| max x_gap: 239.0||| mean x_gap: 139.2||| median x_gap: 88.0
+Lieferforderungen. 530 487 432 583||| max x_gap: 196.0||| mean x_gap: 119.75||| median x_gap: 98.5
+Wertpapiere) 307 564 470 239||| max x_gap: 203.0||| mean x_gap: 143.5||| median x_gap: 142.5
+Eigenkapital 1522 417 1 721 447||| max x_gap: 176.0||| mean x_gap: 126.4||| median x_gap: 109.0
+(davon A.-K.) 761 015 761 015||| max x_gap: 296.0||| mean x_gap: 145.4||| median x_gap: 88.0
+Wertberichtigungen 59 600 59 600||| max x_gap: 486.0||| mean x_gap: 214.0||| median x_gap: 141.5
+Fremdkapital 2 376 199 2 688 952||| max x_gap: 239.0||| mean x_gap: 122.0||| median x_gap: 89.0
+Anzahlungen) 30 921 36 041||| max x_gap: 221.0||| mean x_gap: 147.0||| median x_gap: 141.5
+Bilanzgewinn 140 601 205 039||| max x_gap: 249.0||| mean x_gap: 154.5||| median x_gap: 142.0
+1970 1971||| max x_gap: 281.0||| mean x_gap: 281.0||| median x_gap: 281.0
+träge 16 841 21 727||| max x_gap: 380.0||| mean x_gap: 187.5||| median x_gap: 142.0
+Abschreibungen 435 874 603 695||| max x_gap: 195.0||| mean x_gap: 140.5||| median x_gap: 140.0
+EEV-Steuern 418 114 303 485||| max x_gap: 248.0||| mean x_gap: 154.25||| median x_gap: 141.0
+Jahresüberschuß 246 003 206 535||| max x_gap: 196.0||| mean x_gap: 134.75||| median x_gap: 128.0
+30, Postfach 162||| max x_gap: 207.0||| mean x_gap: 146.5||| median x_gap: 146.5
+Wertpapier-Kenn-Nr.: 860027||| max x_gap: 755.0||| mean x_gap: 755.0||| median x_gap: 755.0
+1959 188DM 1964 174DM 1969 146DM||| max x_gap: 182.0||| mean x_gap: 162.4||| median x_gap: 182.0
+60 136 DM 65 164DM 70 146DM||| max x_gap: 214.0||| mean x_gap: 162.2||| median x_gap: 182.0
+61 140 DM 66 71 116DM||| max x_gap: 315.0||| mean x_gap: 163.6||| median x_gap: 132.0
+62 175DM 67 172DM 72 120 DM||| max x_gap: 185.0||| mean x_gap: 135.833333333||| median x_gap: 132.5
+63 195DM 68 202DM (29.9.)||| max x_gap: 183.0||| mean x_gap: 144.25||| median x_gap: 157.5
+1967: hfl 6,85 +10% +) (Div.Sch.Nr.||| max x_gap: 292.0||| mean x_gap: 135.2||| median x_gap: 107.0
+1968: hfl 7,-- +12,5 % +) (Div.Sch.Nr.||| max x_gap: 291.0||| mean x_gap: 144.4||| median x_gap: 73.0
+1969: hfl 7,25 + 11,1% +) (Div.Sch.Nr.||| max x_gap: 292.0||| mean x_gap: 144.6||| median x_gap: 107.0
+1970 u.1971: je hfl 7,25 (Div.Sch.Nr.||| max x_gap: 291.0||| mean x_gap: 139.4||| median x_gap: 107.0
+148/149 u.150/151)||| max x_gap: 241.0||| mean x_gap: 241.0||| median x_gap: 241.0
+31.12.1970 31.12.1971||| max x_gap: 276.0||| mean x_gap: 276.0||| median x_gap: 276.0
+Anlagevermögen 20 990115 21 779 088||| max x_gap: 254.0||| mean x_gap: 141.8||| median x_gap: 107.0
+Umlaufvermögen 635 772 612 088||| max x_gap: 196.0||| mean x_gap: 135.5||| median x_gap: 130.0
+Forderungen 510 477 497 010||| max x_gap: 228.0||| mean x_gap: 149.25||| median x_gap: 142.0
+Barmittel) 125 295 115 078||| max x_gap: 276.0||| mean x_gap: 161.5||| median x_gap: 142.0
+Fremdkapital 515 031 513 958||| max x_gap: 240.0||| mean x_gap: 152.75||| median x_gap: 143.5
+Gewinnvortrag 182 567 159 957||| max x_gap: 217.0||| mean x_gap: 147.25||| median x_gap: 143.0
+1970 1971||| max x_gap: 277.0||| mean x_gap: 277.0||| median x_gap: 277.0
+wendungen 13 136 9295||| max x_gap: 273.0||| mean x_gap: 185.666666667||| median x_gap: 197.0
+Nettoergebnis 975 600 948 833||| max x_gap: 236.0||| mean x_gap: 151.5||| median x_gap: 142.0
+Beteiligungserträge 972 187 947 706||| max x_gap: 197.0||| mean x_gap: 120.25||| median x_gap: 99.0
+Ausgegebenes Kapital:hfl 907 625 000.-||| max x_gap: 190.0||| mean x_gap: 147.5||| median x_gap: 156.0
+Am 31.12.1971 betrug die Anzahl der Ak-||| max x_gap: 327.0||| mean x_gap: 136.166666667||| median x_gap: 89.5
+1952-1966: insgesamt hfl 185, 19||| max x_gap: 247.0||| mean x_gap: 118.5||| median x_gap: 85.5
+1970: hfl 5,43 (Div.Sch.Nr. 85/86)||| max x_gap: 330.0||| mean x_gap: 157.0||| median x_gap: 113.0
+1971: hfl 6, 20 (Div.Sch.Nr. 87/88)||| max x_gap: 330.0||| mean x_gap: 173.25||| median x_gap: 155.5
+31.12.1970 31.12.1971||| max x_gap: 281.0||| mean x_gap: 281.0||| median x_gap: 281.0
+Beteiligungen) 199 063 207 772||| max x_gap: 199.0||| mean x_gap: 142.25||| median x_gap: 142.0
+Vorräte 4 335 598 4 341 577||| max x_gap: 242.0||| mean x_gap: 116.333333333||| median x_gap: 87.0
+Barmittel) 875 473 1 586 172||| max x_gap: 278.0||| mean x_gap: 129.8||| median x_gap: 88.0
+Fremdkapital 7 493 787 7 811 952||| max x_gap: 242.0||| mean x_gap: 122.6||| median x_gap: 88.0
+1970 1971||| max x_gap: 283.0||| mean x_gap: 283.0||| median x_gap: 283.0
+Dritte 24 917 239 26 482 999||| max x_gap: 283.0||| mean x_gap: 123.5||| median x_gap: 88.5
+Betriebsergebnis 1433 141 1 716 740||| max x_gap: 258.0||| mean x_gap: 143.8||| median x_gap: 111.0
+Ertragssteuern 658 960 766 367||| max x_gap: 251.0||| mean x_gap: 155.25||| median x_gap: 142.0
+erträge 41 114 30 992||| max x_gap: 335.0||| mean x_gap: 176.75||| median x_gap: 143.0
+Telefon: (02 21)Sa.-Nr. 772 11||| max x_gap: 225.0||| mean x_gap: 131.25||| median x_gap: 109.5
+Dividenden ab 1969: 16, 0, 12,16, 8,10 %||| max x_gap: 341.0||| mean x_gap: 150.5||| median x_gap: 99.5
+Dividenden ab 1969: 14, 10,10, 12,12,0 %||| max x_gap: 211.0||| mean x_gap: 125.4||| median x_gap: 123.0
+Dividenden ab 1969: 14, 12,12, 12,12,9 %||| max x_gap: 367.0||| mean x_gap: 157.0||| median x_gap: 99.0
+Dividenden ab 1969: 18, 18, 19, 20, 20,20 %||| max x_gap: 390.0||| mean x_gap: 162.75||| median x_gap: 99.0
+Dividenden ab 1969: 10,10, 10, 10, 12,10 %||| max x_gap: 390.0||| mean x_gap: 162.75||| median x_gap: 99.0
+DM 8 400 000. -, rechn. Abschlag DM 500.-||| max x_gap: 217.0||| mean x_gap: 121.857142857||| median x_gap: 103.0
+DM 106. - (2.9.), Div.Sch.Nr. 10||| max x_gap: 246.0||| mean x_gap: 128.2||| median x_gap: 98.0
+(27.1.1961), Div.Sch.Nr. 11||| max x_gap: 290.0||| mean x_gap: 264.5||| median x_gap: 264.5
+(10.8.), Div.Sch.Nr. 13||| max x_gap: 242.0||| mean x_gap: 176.0||| median x_gap: 176.0
+(19.7.), Div.Sch.Nr. 18||| max x_gap: 242.0||| mean x_gap: 176.5||| median x_gap: 176.5
+DM16,50 (5.10.), Div.Sch.Nr. 2||| max x_gap: 218.0||| mean x_gap: 169.0||| median x_gap: 179.0
+H/1948/49-1969: insgesamt 202 %||| max x_gap: 229.0||| mean x_gap: 121.333333333||| median x_gap: 84.0
+1972: 14 % (Div. Sch. Nr. 6)||| max x_gap: 217.0||| mean x_gap: 115.5||| median x_gap: 98.5
+Aktiva 1973 1974||| max x_gap: 423.0||| mean x_gap: 353.0||| median x_gap: 353.0
+rungen u. Darlehen)152 622 265 873||| max x_gap: 369.0||| mean x_gap: 176.25||| median x_gap: 142.0
+schäft 104 090 101 987||| max x_gap: 353.0||| mean x_gap: 180.25||| median x_gap: 140.0
+gensgegenstände 75 014 70 364||| max x_gap: 197.0||| mean x_gap: 123.75||| median x_gap: 106.0
+(Barmittel) 44 497 44 361||| max x_gap: 248.0||| mean x_gap: 153.75||| median x_gap: 141.5
+Eigenkapital 140 500 154 000||| max x_gap: 251.0||| mean x_gap: 155.0||| median x_gap: 141.5
+(Grundkapital) 80 000 80 000||| max x_gap: 196.0||| mean x_gap: 138.5||| median x_gap: 136.0
+lungen 791 604 869 350||| max x_gap: 341.0||| mean x_gap: 178.5||| median x_gap: 142.0
+stellungen 102 071 145 951||| max x_gap: 263.0||| mean x_gap: 157.75||| median x_gap: 142.0
+Bilanzgewinn 11 008 10 313||| max x_gap: 231.0||| mean x_gap: 150.75||| median x_gap: 143.5
+Bilanzsumme 1139 447 1 278 316||| max x_gap: 245.0||| mean x_gap: 140.4||| median x_gap: 109.0
+1973 1974||| max x_gap: 284.0||| mean x_gap: 284.0||| median x_gap: 284.0
+beiträge 374 274 321 552||| max x_gap: 306.0||| mean x_gap: 168.0||| median x_gap: 140.0
+fälle 440 103 542 250||| max x_gap: 385.0||| mean x_gap: 188.5||| median x_gap: 142.0
+rungsbetrieb 156 172 173 148||| max x_gap: 202.0||| mean x_gap: 142.75||| median x_gap: 142.0
+talanlagen 86 899 91 127||| max x_gap: 264.0||| mean x_gap: 158.0||| median x_gap: 141.5
+Kapitalanlagen 35 693 22 193||| max x_gap: 195.0||| mean x_gap: 135.0||| median x_gap: 129.0
+gungen) 28 299 13 350||| max x_gap: 325.0||| mean x_gap: 174.0||| median x_gap: 142.5
+Steuern 13 080 7541||| max x_gap: 351.0||| mean x_gap: 211.0||| median x_gap: 194.0
+Jahresüberschuß 20 674 20 005||| max x_gap: 196.0||| mean x_gap: 131.0||| median x_gap: 122.0
+linghauser Straße 53-57, Postfach 68 69||| max x_gap: 208.0||| mean x_gap: 125.4||| median x_gap: 146.0
+DM 15 500 000. -, rechn. Wert DM 290,87||| max x_gap: 203.0||| mean x_gap: 117.428571429||| median x_gap: 102.0
+(23.7.), Div.Sch.Nr. 16||| max x_gap: 218.0||| mean x_gap: 164.0||| median x_gap: 164.0
+ab 1.1.1972, Div.Sch.Nr. 25||| max x_gap: 244.0||| mean x_gap: 190.333333333||| median x_gap: 228.0
+DM 46 500 000. -, rechn. Wert DM 94, 67||| max x_gap: 205.0||| mean x_gap: 123.666666667||| median x_gap: 114.0
+Wertpapier-Kenn-Nr.: 607000||| max x_gap: 225.0||| mean x_gap: 225.0||| median x_gap: 225.0
+ab 22.12.1969 Stücknotiz für DM 50. -||| max x_gap: 401.0||| mean x_gap: 124.833333333||| median x_gap: 77.5
+65 437% 70 335 DM 75 369 DM||| max x_gap: 179.0||| mean x_gap: 117.0||| median x_gap: 103.0
+11/1948/49-1969: insgesamt 259 %||| max x_gap: 231.0||| mean x_gap: 121.333333333||| median x_gap: 84.0
+1970 u.1971: je 18 % (Div.Sch. Nr.22 u.23)||| max x_gap: 351.0||| mean x_gap: 134.333333333||| median x_gap: 88.5
+1972 u.1973: je 16 % (Div. Sch. Nr. 24 u.27)||| max x_gap: 350.0||| mean x_gap: 134.666666667||| median x_gap: 89.5
+1973 1974||| max x_gap: 284.0||| mean x_gap: 284.0||| median x_gap: 284.0
+Anlagevermögen 197 791 227 692||| max x_gap: 177.0||| mean x_gap: 136.0||| median x_gap: 141.5
+(Beteiligungen) 9 525 10 042||| max x_gap: 243.0||| mean x_gap: 137.0||| median x_gap: 132.5
+Umlaufvermögen 684 370 778 476||| max x_gap: 194.0||| mean x_gap: 134.5||| median x_gap: 129.0
+(flüssige Mittel) 265 016 320 396||| max x_gap: 195.0||| mean x_gap: 136.4||| median x_gap: 154.0
+Eigenkapital 132 941 136 343||| max x_gap: 262.0||| mean x_gap: 157.5||| median x_gap: 142.0
+(Grundkapital) 46 500 46 500||| max x_gap: 199.0||| mean x_gap: 141.75||| median x_gap: 141.5
+Fremdkapital 749 400 869 825||| max x_gap: 239.0||| mean x_gap: 152.0||| median x_gap: 141.5
+Bilanzgewinn 7 440 7 440||| max x_gap: 247.0||| mean x_gap: 154.25||| median x_gap: 141.0
+1973 1974||| max x_gap: 286.0||| mean x_gap: 286.0||| median x_gap: 286.0
+Beteiligungserträge 4 728 3 403||| max x_gap: 195.0||| mean x_gap: 118.75||| median x_gap: 97.5
+Materialaufwand 668 471 707 143||| max x_gap: 197.0||| mean x_gap: 136.5||| median x_gap: 132.5
+Personalaufwand 463 114 459 017||| max x_gap: 195.0||| mean x_gap: 135.0||| median x_gap: 129.0
+Abschreibungen 49 850 51 798||| max x_gap: 195.0||| mean x_gap: 139.75||| median x_gap: 139.0
+EEV-Steuern 47 112 18 027||| max x_gap: 247.0||| mean x_gap: 153.75||| median x_gap: 141.5
+Jahresüberschuß 14 240 9 940||| max x_gap: 196.0||| mean x_gap: 135.0||| median x_gap: 129.0
+Werk Gustavsburg: 4 187 863||| max x_gap: 289.0||| mean x_gap: 125.25||| median x_gap: 86.0
+Dividenden ab 1968/69: 10,10,10,12,14,14%||| max x_gap: 414.0||| mean x_gap: 223.666666667||| median x_gap: 195.0
+(1.1.-30,6,), 16,14 %||| max x_gap: 314.0||| mean x_gap: 208.5||| median x_gap: 208.5
+DM 105 000 000. -,rechn. Wert St.-Akt.||| max x_gap: 300.0||| mean x_gap: 129.2||| median x_gap: 88.0
+DM 75,50 und Vorz.-Akt. DM 63,62||| max x_gap: 215.0||| mean x_gap: 129.0||| median x_gap: 133.0
+DM 150 000 000.-, rechn. Wert St.-Akt.||| max x_gap: 188.0||| mean x_gap: 129.5||| median x_gap: 129.0
+DM 102,54 und Vorz.-Akt. DM 87,15||| max x_gap: 212.0||| mean x_gap: 133.8||| median x_gap: 134.0
+DM 187 000 000.-, rechn. Wert St.-Akt.||| max x_gap: 189.0||| mean x_gap: 129.833333333||| median x_gap: 129.0
+DM 250 000 000.-, rechn. Wert St.-Akt.||| max x_gap: 188.0||| mean x_gap: 126.666666667||| median x_gap: 126.0
+DM 10,94 und Vorz.-Akt. DM 9,50||| max x_gap: 251.0||| mean x_gap: 125.2||| median x_gap: 96.0
+506300 (St.-Akt.); 506303 (Vorz.-Akt.)||| max x_gap: 291.0||| mean x_gap: 230.0||| median x_gap: 242.0
+35 000 Inh.-St.-Akt. zu je DM 100.-||| max x_gap: 298.0||| mean x_gap: 128.0||| median x_gap: 85.5
+59 500 Inh.-Vorz.-Akt.zuje DM 100.-||| max x_gap: 463.0||| mean x_gap: 196.5||| median x_gap: 118.0
+ab 16.6.1969 Stücknotiz für DM 100.- und||| max x_gap: 328.0||| mean x_gap: 139.833333333||| median x_gap: 106.0
+1948 36 % 1968 507% 1972 168DM||| max x_gap: 196.0||| mean x_gap: 129.5||| median x_gap: 124.5
+65 460 % 69 481DM 73 118DM||| max x_gap: 199.0||| mean x_gap: 117.0||| median x_gap: 110.0
+66 400 % 70 163DM 74 130DM||| max x_gap: 197.0||| mean x_gap: 130.0||| median x_gap: 125.0
+67 658 % 71 170DM 75 169DM||| max x_gap: 198.0||| mean x_gap: 130.833333333||| median x_gap: 124.0
+1956 198% 1968 435% 1972 147DM||| max x_gap: 196.0||| mean x_gap: 157.4||| median x_gap: 172.0
+65 435 % 69 423DM 73 103DM||| max x_gap: 195.0||| mean x_gap: 131.333333333||| median x_gap: 122.0
+66 364 % 70 136 DM 74 122DM||| max x_gap: 198.0||| mean x_gap: 131.5||| median x_gap: 120.5
+67 600 % 71 153DM 75 160DM||| max x_gap: 198.0||| mean x_gap: 132.0||| median x_gap: 120.0
+11/1948/49-1968/69: insgesamt 245 %||| max x_gap: 229.0||| mean x_gap: 121.333333333||| median x_gap: 86.0
+1969/70 u.1970/71: je 18 % (Div.Sch.Nr.||| max x_gap: 289.0||| mean x_gap: 139.8||| median x_gap: 64.0
+1955/56-1968/69: insgesamt 213 %||| max x_gap: 339.0||| mean x_gap: 158.0||| median x_gap: 86.0
+1969/70 u. 1970/71; je 18% (Div.Sch.Nr.||| max x_gap: 336.0||| mean x_gap: 174.5||| median x_gap: 153.5
+1972/73 1973/74||| max x_gap: 283.0||| mean x_gap: 283.0||| median x_gap: 283.0
+Anlagevermögen 688 646 733 367||| max x_gap: 197.0||| mean x_gap: 132.5||| median x_gap: 125.0
+(Beteiligungen) 182 906 240 885||| max x_gap: 198.0||| mean x_gap: 133.25||| median x_gap: 125.0
+(flüssige Mittel) 184 941 150 596||| max x_gap: 199.0||| mean x_gap: 132.8||| median x_gap: 142.0
+Eigenkapital 489 929 504 297||| max x_gap: 249.0||| mean x_gap: 154.25||| median x_gap: 141.0
+(Grundkapital) 200 000 200 000||| max x_gap: 195.0||| mean x_gap: 137.5||| median x_gap: 134.0
+Fremdkapital 1 949 407 2 294 616||| max x_gap: 225.0||| mean x_gap: 118.6||| median x_gap: 88.0
+Bilanzgewinn 24 315 24 330||| max x_gap: 234.0||| mean x_gap: 150.75||| median x_gap: 141.5
+1972/73 1973/74||| max x_gap: 282.0||| mean x_gap: 282.0||| median x_gap: 282.0
+Umsatzerlöse 2 511 701 2 635 688||| max x_gap: 269.0||| mean x_gap: 121.0||| median x_gap: 87.5
+träge 21 054 34 691||| max x_gap: 365.0||| mean x_gap: 183.5||| median x_gap: 142.5
+Abschreibungen 98 697 82 194||| max x_gap: 196.0||| mean x_gap: 136.75||| median x_gap: 133.0
+EEV-Steuern 28 658 27 734||| max x_gap: 235.0||| mean x_gap: 150.5||| median x_gap: 140.5
+Jahresüberschuß 24 111 42 386||| max x_gap: 197.0||| mean x_gap: 130.5||| median x_gap: 120.0
