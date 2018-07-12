@@ -11,7 +11,7 @@ class TableHandler(object):
         self.config = config_handler.get_config()
         self.cpr = ConditionalPrint(self.config.PRINT_TABLE_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
                                     self.config.PRINT_WARNING_LEVEL)
-
+        self.PRINT_TO_CHECKFILE = False
         # a line starting with these words can't be in a table
         self.filter_start_words = ["Fernruf:", "Vorstand:", "Fernschreiber:",
                                    "von","Gründung:", "Ordnungsnr.", "Ordnungsnr",
@@ -182,21 +182,24 @@ class TableHandler(object):
             (starts_with_parenthesis and ends_with_parenthesis)) or ultimo_is_first_word:
 
             if first_word_no_table_indicator:
-                return
+                return False
 
             if mean_x_gap <= 115:
-                return
+                return False
             if many_alphabetical_in_last_word:
-                return
+                return False
             if many_alphabetical_in_middle_words and many_numbers_in_first_word:
-                return
+                return False
 
 
             self.cpr.print("possible entry:", whole_text)
 
-
-            with open("checkfile_tables.txt", "a") as myfile:
-                myfile.write(whole_text+ "||| max x_gap: " + str(maximum_x_gap)+"||| mean x_gap: " + str(mean_x_gap) \
+            if self.PRINT_TO_CHECKFILE:
+                with open("checkfile_tables.txt", "a") as myfile:
+                    myfile.write(whole_text+ "||| max x_gap: " + str(maximum_x_gap)+"||| mean x_gap: " + str(mean_x_gap) \
                              + "||| median x_gap: " + str(median_x_gap)+"\n")
 
             print("jab")
+            return True
+
+        return False

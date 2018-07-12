@@ -8,6 +8,7 @@ from utils.typecasts import TypeCasts
 from utils.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 from n_dist_keying.table_handler import TableHandler
+
 class GapConfig(object):
 
     def __init__(self, points_identical_char=2, penalty_non_identical_char=-1.3, penalty_opening_gap=-0.5, penalty_extending_gap=-0.4 ):
@@ -849,16 +850,46 @@ class MsaHandler(object):
 
     def get_best_of_three_wordwise(self, line_1, line_2, line_3, use_charconfs, use_searchspaces):
 
-        lines = [line_1, line_2, line_3]
-
-        if self.config.TABLE_RECOGNITION_ENABLED:
-            th_info = self.table_handler.recognize_a_line(lines[0])
-
-
-
         wildcard_character = '¦'
         PRINT_RESULTS = True
         PRINT_ALIGNMENT_PROCESS = False
+
+        lines = [line_1, line_2, line_3]
+
+        is_table = []
+
+        table_line_preselected = False
+        best = None
+        best_stripped = None
+        if self.config.TABLE_RECOGNITION_ENABLED:
+            is_table_line_0 = self.table_handler.recognize_a_line(lines[0])
+            is_table_line_1 = self.table_handler.recognize_a_line(lines[1])
+            is_table_line_2 = self.table_handler.recognize_a_line(lines[2])
+            is_table.extend([is_table_line_0, is_table_line_1, is_table_line_2])
+            one_is_table = is_table_line_0 or is_table_line_1 or is_table_line_2
+            if one_is_table:
+
+                # define best and best_stripped
+                for line_index, line in enumerate(lines):
+                    # just take abbyy table line # 'Ocro' # 'Tess'
+                    if "Tess" in line.name[0]:
+                        best = line.textstr
+                        best_stripped = best.replace(wildcard_character,"")
+                        table_line_preselected = True
+                        break
+                # if there was a valid table line preselected skip all processing and take the selected line
+                if table_line_preselected:
+                    predef_seg_counter = [] # just a filler array for seg counter
+                    best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
+                    best_stripped_non_multi_whitespace, text_seg = self.do_last_steps(best, best_stripped,
+                                                                                      best_stripped_non_multi_whitespace,
+                                                                                      predef_seg_counter,
+                                                                                      PRINT_RESULTS)
+                    #with open("checkfile_tables.txt", "a") as myfile:
+                    #    myfile.write(
+                    #       best_stripped_non_multi_whitespace+"\n")
+
+                    #return best_stripped_non_multi_whitespace, text_seg
 
         # iterate words
         def get_max_wordlen(line_to_check):
@@ -910,7 +941,6 @@ class MsaHandler(object):
 
         try:
             seg_counter = []
-            text_seg = {}
             for current_word_index in range(0, max_range_word):
                 word1 = self.get_word_from_line(line_1, current_word_index)
                 word2 = self.get_word_from_line(line_2, current_word_index)
@@ -1005,48 +1035,64 @@ class MsaHandler(object):
                                                                                 wildcard_character)
 
                 best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
+                best_stripped_non_multi_whitespace, text_seg = self.do_last_steps(best, best_stripped,
+                                                                             best_stripped_non_multi_whitespace,
+                                                                             seg_counter,
+                                                                             PRINT_RESULTS)
+
+                return best_stripped_non_multi_whitespace, text_seg
+
             else:
                 print("not implemented yet")
                 # todo implement case without charconfs
-            if PRINT_RESULTS:
 
-                self.cpr.print("best         ", best)
-                self.cpr.print("best_stripped", best_stripped)
-                self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
-                if len(best) == len(seg_counter) and len(best.replace("¦","").strip()) != 0:
-                    #seg_counter = np.array(seg_counter)
-                    #Delete all wc
-                    wc_pos = [number for number, symbol in enumerate(best) if symbol == "¦"]
-                    for pos in reversed(wc_pos): del seg_counter[pos]
-                    # Delete the ws if the first or the second word was deleted
-                    if seg_counter[0] == -1: del seg_counter[0]
-                    if seg_counter[-1] == -1: del seg_counter[-1]
-                    # Delete the ws if a word in the middle was delete
-                    if best_stripped[0] == " ": best_stripped = best_stripped[1:]
-                    wc_pos = [number for number, symbol in enumerate(best_stripped.replace("  ","¦")) if symbol == "¦"]
-                    for pos in reversed(wc_pos):
-                        del seg_counter[pos]
-                    #seg_counter = [number for number in seg_counter if number != -1]
-
-                    if len(best_stripped_non_multi_whitespace) == len(seg_counter):
-                        ws_pos = np.where(np.array(seg_counter) == -1)
-                        ws_pos = np.ndarray.tolist(ws_pos[0])
-                        ws_pos.append(len(seg_counter))
-                        last_pos = 0
-                        for ws in ws_pos:
-                            text_seg[float(seg_counter[ws-1])]=best_stripped_non_multi_whitespace[last_pos:ws]
-                            last_pos = ws+1
-                    else:
-                        text_seg[-1.0] = best_stripped_non_multi_whitespace
-                else:
-                    text_seg[-1.0] = best_stripped_non_multi_whitespace
-
-            return best_stripped_non_multi_whitespace, text_seg
 
         except Exception as ex:
             tr = inspect.trace()
             self.cpr.printex("msa_handler.py exception", ex)
             self.cpr.printex("tr", tr)
+
+
+    def do_last_steps(self, best, best_stripped, best_stripped_non_multi_whitespace, seg_counter, PRINT_RESULTS):
+        text_seg = {}
+
+        if PRINT_RESULTS:
+
+            self.cpr.print("best         ", best)
+            self.cpr.print("best_stripped", best_stripped)
+            self.cpr.print("best______nmw", best_stripped_non_multi_whitespace)
+
+        if len(best) == len(seg_counter) and len(best.replace("¦", "").strip()) != 0:
+            # seg_counter = np.array(seg_counter)
+            # Delete all wc
+            wc_pos = [number for number, symbol in enumerate(best) if symbol == "¦"]
+            for pos in reversed(wc_pos): del seg_counter[pos]
+            # Delete the ws if the first or the second word was deleted
+            if seg_counter[0] == -1: del seg_counter[0]
+            if seg_counter[-1] == -1: del seg_counter[-1]
+            # Delete the ws if a word in the middle was delete
+            if best_stripped[0] == " ": best_stripped = best_stripped[1:]
+            wc_pos = [number for number, symbol in enumerate(best_stripped.replace("  ", "¦")) if symbol == "¦"]
+            for pos in reversed(wc_pos):
+                del seg_counter[pos]
+            # seg_counter = [number for number in seg_counter if number != -1]
+
+            if len(best_stripped_non_multi_whitespace) == len(seg_counter):
+                ws_pos = np.where(np.array(seg_counter) == -1)
+                ws_pos = np.ndarray.tolist(ws_pos[0])
+                ws_pos.append(len(seg_counter))
+                last_pos = 0
+                for ws in ws_pos:
+                    text_seg[float(seg_counter[ws - 1])] = best_stripped_non_multi_whitespace[last_pos:ws]
+                    last_pos = ws + 1
+            else:
+                text_seg[-1.0] = best_stripped_non_multi_whitespace
+        else:
+            text_seg[-1.0] = best_stripped_non_multi_whitespace
+
+        return best_stripped_non_multi_whitespace, text_seg
+
+
 
     def crunch_neighbouring_words(self,max_range_word, wildcard_character, line_1, line_2, line_3):
         lines = [line_1, line_2, line_3]

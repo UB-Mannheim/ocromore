@@ -373,7 +373,7 @@ class OCRset:
         # do the msa if there is at least one line ok (confidence vote can be done with one line also :))
         if use_wordwise is True:
             if number_lines_ok != 0:
-                result, self._text_seg  = self._msa_handler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], use_charconfs, use_searchspaces)
+                result, self._text_seg = self._msa_handler.get_best_of_three_wordwise(lines[0], lines[1], lines[2], use_charconfs, use_searchspaces)
             else:
                 result = None
 
