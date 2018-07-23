@@ -1,8 +1,8 @@
 from n_dist_keying.text_unspacer import TextUnspacer
 from n_dist_keying.n_distance_voter import NDistanceVoter
 import numpy as np
-from utils.random import Random
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.random import Random
+from akf_corelib.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 
 

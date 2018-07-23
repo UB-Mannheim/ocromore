@@ -1,5 +1,5 @@
 from configuration.configuration_handler import ConfigurationHandler
-from utils.database_handler import DatabaseHandler
+from akf_corelib.database_handler import DatabaseHandler
 from pathlib import Path
 from tableparser import TableParser
 from time import sleep

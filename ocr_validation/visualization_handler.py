@@ -10,7 +10,7 @@ Also requires meld
 """
 from subprocess import Popen
 import os
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 
 

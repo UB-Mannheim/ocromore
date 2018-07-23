@@ -1,4 +1,4 @@
-from utils.df_objectifier import DFObjectifier
+from akf_corelib.df_objectifier import DFObjectifier
 from n_dist_keying.ocr_comparison import OCRcomparison
 from n_dist_keying.ocr_set import OCRset
 from multi_sequence_alignment.msa_handler import MsaHandler

@@ -1,7 +1,7 @@
 import numpy as np
 import statistics as stats
-from utils.random import Random
-from utils.typecasts import TypeCasts
+from akf_corelib.random import Random
+from akf_corelib.typecasts import TypeCasts
 from hocr_parser.parser import HOCRDocument, Line, Paragraph, Area, Page
 
 

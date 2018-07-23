@@ -1,6 +1,6 @@
-from utils.queues import Ranged_Filo
-from utils.random import Random
-from utils.typecasts import TypeCasts
+from akf_corelib.queues import Ranged_Filo
+from akf_corelib.random import Random
+from akf_corelib.typecasts import TypeCasts
 from n_dist_keying.text_comparator import TextComparator
 
 

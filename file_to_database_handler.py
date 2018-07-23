@@ -1,7 +1,7 @@
-from utils.hocr_converter import HocrConverter
-from utils.hocr_charinfo import merge_charinfo
-from utils.df_tools import get_con
-from utils.df_objectifier import DFObjectifier
+from akf_corelib.hocr_converter import HocrConverter
+from akf_corelib.hocr_charinfo import merge_charinfo
+from akf_corelib.df_tools import get_con
+from akf_corelib.df_objectifier import DFObjectifier
 import glob
 from itertools import chain
 import inspect

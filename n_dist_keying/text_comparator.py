@@ -1,8 +1,8 @@
 import difflib
 #from ocr_validation.ocrolib_edist import Edist3
-from utils.typecasts import TypeCasts
-from utils.random import Random
-from utils.myers import MyersSequenceMatcher
+from akf_corelib.typecasts import TypeCasts
+from akf_corelib.random import Random
+from akf_corelib.myers import MyersSequenceMatcher
 import distance as distpkg
 
 class TextComparator:

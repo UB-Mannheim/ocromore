@@ -9,7 +9,7 @@ Other systems will raise exception
 """
 from subprocess import call
 import os
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 
 

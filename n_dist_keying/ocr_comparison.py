@@ -1,7 +1,7 @@
-from utils.typecasts import TypeCasts
-from utils.random import Random
+from akf_corelib.typecasts import TypeCasts
+from akf_corelib.random import Random
 from n_dist_keying.text_corrector import TextCorrector
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 import glob
 import numpy as np

@@ -1,5 +1,5 @@
 from multi_sequence_alignment.msa_handler import MsaHandler
-from utils.typecasts import TypeCasts
+from akf_corelib.typecasts import TypeCasts
 
 text_A = '" 1953 6 %'
 text_B = 'II 1953 60 %'

@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from pathlib import Path
-from utils.df_objectifier import DFObjectifier
+from akf_corelib.df_objectifier import DFObjectifier
 from n_dist_keying.database_handler import DatabaseHandler
 from dataframe_normalization import NormalizationModes, DataframeNormalizer as dn
 

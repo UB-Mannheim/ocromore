@@ -1,6 +1,6 @@
 from pysymspell.symspell import SymSpell
 from configuration.configuration_handler import ConfigurationHandler
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.conditional_print import ConditionalPrint
 import numpy as np
 import re
 

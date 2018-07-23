@@ -2,10 +2,10 @@ from multi_sequence_alignment.msa_algorithm import MultiSequenceAlignment
 import inspect
 from Bio import pairwise2
 from n_dist_keying.ocr_voter import OCRVoter
-from utils.random import Random
+from akf_corelib.random import Random
 import numpy as np
-from utils.typecasts import TypeCasts
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.typecasts import TypeCasts
+from akf_corelib.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 from n_dist_keying.table_handler import TableHandler
 
@@ -147,7 +147,7 @@ class MsaHandler(object):
 
     def fillup_wildcarded_result(self, line_to_fill, reference_line, wildcard_character='¦'):
         import difflib
-        from utils.random import Random
+        from akf_corelib.random import Random
 
         s = difflib.SequenceMatcher(None, line_to_fill, reference_line)
 

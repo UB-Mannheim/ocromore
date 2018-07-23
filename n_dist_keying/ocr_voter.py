@@ -1,11 +1,11 @@
-from utils.queues import SearchSpace
+from akf_corelib.queues import SearchSpace
 from n_dist_keying.search_space_processor import SearchSpaceProcessor
 import numpy as np
 import inspect
-from utils.conditional_print import ConditionalPrint
-from utils.random import Random
+from akf_corelib.conditional_print import ConditionalPrint
+from akf_corelib.random import Random
 from configuration.configuration_handler import ConfigurationHandler
-from utils.queues import Filo
+from akf_corelib.queues import Filo
 
 class SpecialChars():
     # increment some special characters confidence when recognized
@@ -244,7 +244,7 @@ class OCRVoter(object):
             self.cpr.print("vote_text1", line_1.textstr)
             self.cpr.print("vote_text2", line_2.textstr)
             self.cpr.print("vote_text3", line_3.textstr)
-            #if "ultimo" in line_1.textstr:
+            #if "Beteiligung:" in line_1.textstr:
             #     self.cpr.print("asd")
 
             maximum_char_number = max(len(line_1.textstr), len(line_2.textstr), len(line_3.textstr))
@@ -529,8 +529,10 @@ class OCRVoter(object):
 
                 returnvalue = ConfidenceModifications.ocropus_factor * value_confidence
 
-        if self.config.MSA_BEST_VOTER_PUSH_LESS_LINES_WHITESPACE_CONFS and one_line_empty \
-                and value == " ":
+        if (self.config.MSA_BEST_VOTER_PUSH_LESS_LINES_WHITESPACE_CONFS and one_line_empty and value == " ") \
+            or (self.config.MSA_BEST_VOTER_PUSH_WHITESPACE_IF_MOSTLY_WILDCARD and one_line_empty \
+                and value == " "):
+
             returnvalue += ConfidenceModifications.whitespace_push
 
         return returnvalue
@@ -540,6 +542,11 @@ class OCRVoter(object):
             text_wo_wildcards = line.textstr.replace(wildcard_character, '')
             if text_wo_wildcards == "":
                 return True
+            if self.config.MSA_BEST_VOTER_PUSH_WHITESPACE_IF_MOSTLY_WILDCARD:
+                # also count in high whitecard ratios as empty line
+                wildcard_ratio = 1-(len(text_wo_wildcards) / len(line.textstr))
+                if wildcard_ratio > 0.70:
+                    return True
 
 
     def toggle_predictor(self, filo_content):

@@ -7,3 +7,6 @@
 [submodule "hocr_parser"]
 	path = hocr_parser
 	url = https://github.com/Hyper-Node/hocr_parser.git
+[submodule "akf_corelib"]
+	path = akf_corelib
+	url = https://github.com/Hyper-Node/akf_corelib

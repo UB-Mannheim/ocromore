@@ -1,6 +1,6 @@
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
-from utils.random import Random
+from akf_corelib.random import Random
 import numpy as np
 
 class TableHandler(object):

@@ -1,5 +1,5 @@
 from configuration.configuration_handler import ConfigurationHandler
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.conditional_print import ConditionalPrint
 
 
 from pickle import load

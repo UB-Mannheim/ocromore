@@ -1,8 +1,8 @@
 
 import sys
-from utils.random import Random
+from akf_corelib.random import Random
 from enum import Enum, unique
-from utils.conditional_print import ConditionalPrint
+from akf_corelib.conditional_print import ConditionalPrint
 from configuration.configuration_handler import ConfigurationHandler
 import operator
 
