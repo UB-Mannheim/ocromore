@@ -253,7 +253,10 @@ class OCRcomparison:
         wrote_header = False
         for lidx, current_set in enumerate(self.ocr_sets):
             if lidx == 0:
-                file_cords = self.ocr_sets[len(self.ocr_sets) - 1]._set_lines[0].data
+                for last_set in self.ocr_sets[lidx]._set_lines:
+                    if last_set.data["line_x1"] != []:
+                        file_cords = last_set.data
+                        break
             if other_set == 'msa_best':
                 dataset_text = current_set.get_msa_best_text()
                 dataset_bbox = None
