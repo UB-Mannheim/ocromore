@@ -46,19 +46,13 @@ for db in dh.db:
     temp = os.path.splitext(db)[0]
     db_keyname = os.path.basename(temp)  # this returns just the filename (wildlife)
 
-    #if "1957" not in db_keyname:
-    #   continue
 
     files_gt = filestructs_gt[db_keyname]
     for file in files:
         count += 1
-        #if count == 3: continue
         table = file
         dbpath = 'sqlite:////' + db
         print("Parsing table: ", table, "in database: ", dbpath)
-
-        #if "0140" not in table: continue
-
 
         table_ctr += 1
         path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)
@@ -76,8 +70,6 @@ for db in dh.db:
 
 
 
-        #if table_ctr == 2: #j4t parse 4 tables then done
-        #    break
 
 if config.SUMMARIZE_ISRI_REPORTS is True:
     tableparser.create_isri_reports(dh.db, filestructs_gt, "abbyy")
