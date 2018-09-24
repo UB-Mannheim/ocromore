@@ -8,7 +8,7 @@ from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
 from akf_corelib.database_handler import DatabaseHandler
 
-CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akftest.conf"
+CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akf_usb.conf"
 PRINT_SUSPICIOUSLINES = False
 CLEAN_ABBYY = False
 VERBOSE = False

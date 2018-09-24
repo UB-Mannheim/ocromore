@@ -404,9 +404,6 @@ class MsaHandler(object):
             #text_A = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
             #text_B = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
             #text_C = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
-            if "T I" in text_A:
-                self.cpr.self.cpr.print("T I there")
-                pass
 
             # stringify results to make also empty stuff comparable
             def stringify_results(text):
