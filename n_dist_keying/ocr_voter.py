@@ -200,7 +200,8 @@ class OCRVoter(object):
                     tresh = self.config.MSA_BEST_VOTER_DROPPING_TRESH
                     maximum_conf = max(acc_conf_1,acc_conf_2,acc_conf_3)
                     if maximum_conf <tresh:
-                        continue
+                        if [character_2,character_1,character_3][maxindices] != '¦':
+                            continue
 
 
                 if maxindices == 0:
@@ -357,7 +358,9 @@ class OCRVoter(object):
                     tresh = self.config.MSA_BEST_VOTER_DROPPING_TRESH
                     maximum_conf = max(acc_conf_1,acc_conf_2,acc_conf_3)
                     if maximum_conf < tresh:
-                        continue
+                        if [character_2,character_1,character_3][maxindices] != '¦':
+                            continue
+
 
                 # determine character with the best accumulated confidence
                 voted_char = None
