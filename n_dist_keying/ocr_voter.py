@@ -21,9 +21,9 @@ class ConfidenceModifications():
     # scaling factors for confidence values of engines
     # used if configuration flag MSA_BEST_VOTER_SCALE_ENGINE_CONFIDENCES is active
     # 98,02 in 1969
-    tesseract_factor = 1.00
-    ocropus_factor = 0.96
-    abby_factor = 0.83
+    tesseract_factor = 1.00 #95
+    ocropus_factor = 0.90 #90
+    abby_factor = 0.98    # 1.00 -99,60
 
     # 97,62 in 1969
     #abby_factor = 0.79
@@ -196,6 +196,10 @@ class OCRVoter(object):
                 sc2, acc_conf_2 = self.get_confidence_count(character_2, character_1, character_3, charconf_2, charconf_1, charconf_3)
                 sc3, acc_conf_3 = self.get_confidence_count(character_3, character_2, character_1, charconf_3, charconf_2, charconf_1)
                 maxindices = np.argmax([acc_conf_2, acc_conf_1, acc_conf_3]) # this takes in priorisation in case the chars are same
+                #todo:import to config
+                if character_index ==  maximum_char_number-1 and character_2 == "¦" and character_3 == "¦" and character_1 == "I":
+                    continue
+
                 if self.config.MSA_BEST_VOTER_DROP_CHARS_BELOW_TRESH == True:
                     tresh = self.config.MSA_BEST_VOTER_DROPPING_TRESH
                     maximum_conf = max(acc_conf_1,acc_conf_2,acc_conf_3)
@@ -352,6 +356,9 @@ class OCRVoter(object):
                                                                 charconf_2, charconf_1)
                 maxindices = np.argmax(
                     [acc_conf_2, acc_conf_1, acc_conf_3])  # this takes in priorisation in case the chars are same
+
+                if character_index ==  maximum_char_number+range_extension+1 and character_2 == "¦" and character_3 == "¦" and character_1 == "I":
+                    continue
 
                 # drop chars completely if they fall below a certain dropping treshhold and the setting is active
                 if self.config.MSA_BEST_VOTER_DROP_CHARS_BELOW_TRESH == True:
