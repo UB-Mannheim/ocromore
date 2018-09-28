@@ -318,11 +318,11 @@ class OCRcomparison:
                     if number != -1.0:
                         set_index = 2
                         if number in current_set._set_lines[1].word["UID"].keys() and \
-                                max(current_set._set_lines[1].word["UID"][number])>=0 and \
+                                set(current_set._set_lines[1].word["text"][number]) != set("¦") and \
                                 current_set._set_lines[1].data["word_x0"]:
                             set_index = 1
-                        elif  number in current_set._set_lines[0].word["UID"].keys() and \
-                                max(current_set._set_lines[0].word["UID"][number])>=0 and \
+                        elif number in current_set._set_lines[0].word["UID"].keys() and \
+                                set(current_set._set_lines[0].word["text"][number]) != set("¦") and \
                                 current_set._set_lines[0].data["word_x0"]:
                             set_index = 0
                         dataset_bbox = self._get_wbbox_new(dataset_bbox,number,current_set._set_lines[set_index].data)
@@ -360,6 +360,7 @@ class OCRcomparison:
         nb_pos = np.where(nb_arr==number)
         if len(nb_pos[0]) == 0:
             stop="STOP"
+            #return
         wbbox_pos = nb_pos[0][int(len(nb_pos[0])/2)]
         if wbbox_pos != 0:
             bbox[0] = data["word_x0"][int(nb_pos[0][0])]
