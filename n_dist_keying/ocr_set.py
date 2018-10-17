@@ -16,7 +16,7 @@ class OCRset:
     """
         A storage class for a y_mean value
         and a set of lines which was assigned to each other
-        If the lineset values where not edited, they are intialized with 'False
+        If the lineset values were not edited, they are initialized with 'False
     """
     N_DISTANCE_SHORTEST_TAG = "n_distance_shortest"
 

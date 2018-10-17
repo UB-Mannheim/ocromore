@@ -93,7 +93,7 @@ class TextComparator:
                     tl_2c[char_2_index] = None
                     break # break inner loop
 
-        # all occurences are now tagged, extract difference indices and diffence counter
+        # all occurrences are now tagged, extract difference indices and difference counter
         difference_indices = []
         difference_count = 0
         for char_1_index, char_1 in enumerate(tl_1c):

@@ -101,7 +101,7 @@ class FileToDatabaseHandler():
                         # Match words or segments of words into "word_match"
                         dataframe_wrapper.match_words()
 
-                        # Write the calulated values into the db
+                        # Write the calculated values into the db
                         dataframe_wrapper.write2sql()
                 except Exception as ex:
                     tr = inspect.trace()

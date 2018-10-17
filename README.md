@@ -7,14 +7,14 @@ Originally written by Johannes Stegmüller and Jan Kamlah.
 
 ## Overview
 
-`ocromore` is a command line driven post-processing tool for ocr-outputs.  
+`ocromore` is a command line driven post-processing tool for ocr-outputs.
 
 The main purpose is to combine multiple ocr-outputs for better recognition results.
-It can also be used to find optimal settings for ocr software, to visualize different 
+It can also be used to find optimal settings for ocr software, to visualize different
 information about the ocr results or context, or just query various things.
 
 First, the program parses the different ocr-output files and saves the results to a sqlite-database.
-The purpose of this database is to serve as an exchange and store platform using 
+The purpose of this database is to serve as an exchange and store platform using
 [pandas](https://pandas.pydata.org/) as handler.
 With an objectifier for the [dataframe](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html)
 from pandas a wide-range of performant use-cases is possible.
@@ -29,8 +29,8 @@ The software is currently optimized for the [DFG-Project "Aktienführer II"](htt
 | OCR-Engine |   AKF-II   |  UNLV   |
 |:----------:|:----------:|:-------:|
 | Abbyy      |  84,08 %   | 88.85 % |
-| Ocropus (default en-model)    |     | 87.33 % | 
-| Ocropus  (trained)   |  98,67 %   |  | 
+| Ocropus (default en-model)    |     | 87.33 % |
+| Ocropus  (trained)   |  98,67 %   |  |
 | Tesseract  |  98,79 %   | 96.59 % |
 | MSA        |  99,19 %   | 96.73 % |
 
@@ -40,19 +40,19 @@ The results for UNLV are not optimized but still there is some improvement.
 You can find the UNLV results in [Testfiles/results](./Testfiles/results).
 
 ### Roadmap
-✓  Parse files to the database  
-✓  Preprocess file information    
-✓  Combine file information  
-✓  Evaluate results against groundtruth  
-✓  Visual comparision (result vs. gt) with diff-tool  
-✓  Store results in txt-file   
-✘  Store results in database/hocr-files  
+✓  Parse files to the database
+✓  Preprocess file information
+✓  Combine file information
+✓  Evaluate results against groundtruth
+✓  Visual comparison (result vs. gt) with diff-tool
+✓  Store results in txt-file
+✘  Store results in database/hocr-files
 ✘  Plot results in different ways (with matplotlib)
 
 #### Supported fileformats
-✓  hocr (with confidences)   
+✓  hocr (with confidences)
 ✓  abbyy-xml (with confidences "ASCII")
- 
+
 ## Installation
 
 This installation is tested with [Ubuntu][ubuntu-link] and we expect that it should
@@ -102,15 +102,15 @@ For that you need Python and [Meld][meld-link] installed and add it to environme
 
 ## Developing
 
-The project was written in PyCharm 2017.3 (CE),   
-so if you are a developer it's recommended to use it. 
+The project was written in PyCharm 2017.3 (CE),
+so if you are a developer it's recommended to use it.
 
-Python 3.6.3 (default, Oct  6 2017, 08:44:35)   
-[GCC 5.4.0 20160609] on linux  
+Python 3.6.3 (default, Oct  6 2017, 08:44:35)
+[GCC 5.4.0 20160609] on linux
 Tested on: Ubuntu17.10
 
-Meld is the default diff-tool,  
-but you can easily implemented the diff-tool of your choice. 
+Meld is the default diff-tool,
+but you can easily implemented the diff-tool of your choice.
 
 The ISRI Tools are necessary for the evaluation, but not for the combine process.
 
@@ -126,16 +126,16 @@ The ISRI Tools are necessary for the evaluation, but not for the combine process
 
 ![ocromore-overview](docs/img/process_steps.jpg)
 
-   1. Parsing all ocr-outputfiles to an database  
+   1. Parsing all ocr-outputfiles to an database
       (This step only has to be done once)
-   2. Pre-process the gathered information  
-      The results from the following processes can also 
+   2. Pre-process the gathered information
+      The results from the following processes can also
       be stored directly to the database
-        + Line-matching all files 
-        + Unspacing words in each file  
-          Unspacing means to delete whitespaces in spaced text  
+        + Line-matching all files
+        + Unspacing words in each file
+          Unspacing means to delete whitespaces in spaced text
           (E.g. H e l l o => Hello)
-        + Word-matching all files per line   
+        + Word-matching all files per line
    3. Combine file information
       + Different compare methods
         + Textdistance-Keying
@@ -149,12 +149,12 @@ The ISRI Tools are necessary for the evaluation, but not for the combine process
                 + Matching similar character
                 + Whitespace/Wildcard improvements
             + Adjustable decision parameter
-                + Char confidence 
+                + Char confidence
                 + Best-of-n
-   
-   4. The output can be stored in the database and/or 
+
+   4. The output can be stored in the database and/or
    as *.txt or *.hocr.
-   
+
    5. Evaluate the output against groundtruth files or each other and generate a accuracy report.
    Or compare the files visual via diff-tools.
 
@@ -171,31 +171,31 @@ There are two main config-files in "./configuartion/":
    + voter
         + path to db
         + parameter for combining the information from the ocr-files
-        
-The parameter to perform the examples are set as default.  
+
+The parameter to perform the examples are set as default.
 So you can just run the following commands.
 
 At the current stage it is recommended to use PyCharm to perform the next steps.
-        
+
 Parse files to db and do preprocessing:
 
     # All parameters can set in the to_db_reader config
-    # set HOCR2SQL parse files to db 
-    # set POS parameter, to set the naming of db and tables 
-    # set PREPROCSSING (It is recommended to perform the preprocessing steps directly after parsing  
+    # set HOCR2SQL parse files to db
+    # set POS parameter, to set the naming of db and tables
+    # set PREPROCSSING (It is recommended to perform the preprocessing steps directly after parsing
     # but it is not necassary)
-    
+
     $ python3 ./plt_charinfo.py
-    
+
 Combine files and generate a accuracy report:
 
     # All parameters can set in the voter config
     # set DO_MSA_BEST to perform msa (not Textdistance) method
     # set DO_ISRI_VAL to generate a accuracy report
-    
+
     $ python3 ./main_msa_ndist_charconf.py
-    
-To perform a visual comparision:
+
+To perform a visual comparison:
 
     $ python3 ./result_visualization.py
 

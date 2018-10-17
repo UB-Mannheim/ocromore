@@ -89,7 +89,7 @@ class HocrConverter(object):
               "Abbyy":self.create_dict_abbyy,
               "AbbyyXML":self.create_dict_abbyyxml,
               "Default":{},}.get(ocr,"Default")(document,ocr_profile=ocr_profile)
-        if df_dict == {}: raise IOError(f"The {ocr} document {filename} cant be parsed to dict.\t✗")
+        if df_dict == {}: raise IOError(f"The {ocr} document {filename} can't be parsed to dict.\t✗")
         df = self.dict2df(df_dict,index=index)
         return df
 

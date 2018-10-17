@@ -27,7 +27,7 @@
 from multi_sequence_alignment.longest_common_subsequence import LCS
 
 class SequenceAlignment(object):
-    # Auxiliary function for finding the first index in wich appears a sub-sequence.
+    # Auxiliary function for finding the first index in which appears a sub-sequence.
     @staticmethod
     def findSubList(l=[], sub=[]):
         if len(sub) > len(l):
