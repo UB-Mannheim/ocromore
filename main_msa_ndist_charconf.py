@@ -7,8 +7,8 @@ import os
 
 
 # fetch configurations
-CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
-CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_jk_best_akf.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest_jk.conf'  # configuration which is not given with cli args
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
                                       coded_configuration_paths=[CODED_CONFIGURATION_PATH_VOTER, CODED_CONFIGURATION_PATH_DB_READER])
@@ -23,7 +23,8 @@ dh = DatabaseHandler(dbdir=str(Path(config.DB_DIR_VOTER).absolute()))
 #dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 
 dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)
-filestructs_gt = dh.get_groundtruths()
+if config.DO_ISRI_VAL:
+    filestructs_gt = dh.get_groundtruths()
 tableparser = TableParser(config)
 
 
@@ -46,8 +47,8 @@ for db in dh.db:
     temp = os.path.splitext(db)[0]
     db_keyname = os.path.basename(temp)  # this returns just the filename (wildlife)
 
-
-    files_gt = filestructs_gt[db_keyname]
+    if config.DO_ISRI_VAL:
+        files_gt = filestructs_gt[db_keyname]
     for file in files:
         count += 1
         table = file
@@ -56,17 +57,18 @@ for db in dh.db:
 
         table_ctr += 1
         path_created_file, additional_created_files = tableparser.parse_a_table(dbpath, table)
-        foundgt = None
-        for gt_key in files_gt:
-            gt_file = files_gt[gt_key]
-            if table in gt_key:
-                foundgt = gt_file.path
-                print("found:", foundgt)
-        if foundgt is not None:
-            tableparser.validate_table_against_gt(path_created_file, foundgt)
-            for additional_file in additional_created_files:
-                # this validates the original outputs
-                tableparser.validate_table_against_gt(additional_file,foundgt)
+        if config.DO_ISRI_VAL:
+            foundgt = None
+            for gt_key in files_gt:
+                gt_file = files_gt[gt_key]
+                if table in gt_key:
+                    foundgt = gt_file.path
+                    print("found:", foundgt)
+            if foundgt is not None:
+                tableparser.validate_table_against_gt(path_created_file, foundgt)
+                for additional_file in additional_created_files:
+                    # this validates the original outputs
+                    tableparser.validate_table_against_gt(additional_file,foundgt)
 
 
 
