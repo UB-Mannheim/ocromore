@@ -123,9 +123,6 @@ class TableParser(object):
         # print("Print mean||decision||abbyy||tesseract||ocropus|||| without unspacing-------------------")
         # ocr_comparison.print_sets(False)
 
-        # TODO:write to config
-        #WRITE_HOCR = True
-
         if self._config.SAVE_INPUT_DATASETS_TO_FILE:
 
             output_path_abbyy = self.get_basic_output_directory(dbdir_abs, "abbyy") + "/" + table + "_abbyy.txt"
@@ -135,6 +132,7 @@ class TableParser(object):
             ocr_comparison.save_dataset_to_file(output_path_abbyy, 0, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_tess, 1, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_ocro, 2, mode_add_linebreaks=False)
+
 
             if self._config.WRITE_HOCR:
                 ocr_comparison.save_dataset_to_hocr(output_path_abbyy, 0, mode_add_linebreaks=False)
@@ -308,9 +306,9 @@ class TableParser(object):
 
         pyc_handler = VisualizationHandler()
         if firstcall is True:
-            process =  pyc_handler.show_file_comparison_meld(path_groundtruth, path_file)
+            process = pyc_handler.show_file_comparison_meld(path_groundtruth, path_file)
         else:
-            process =  pyc_handler.show_file_comparison_meld(path_groundtruth, path_file, just_add_tab=True)
+            process = pyc_handler.show_file_comparison_meld(path_groundtruth, path_file, just_add_tab=True)
 
 
         return process

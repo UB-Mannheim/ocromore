@@ -13,6 +13,15 @@ To initialize the git submodules (~git version 2.7.4):
 git submodule update --init --recursive
 `
 
+
+To install the requirements 
+
+`
+pip install -r requirements.txt 
+`
+
+
+
 The project was written in Visual Studio Code 1.81, so if you are a developer it's recomended to use it
 ([Download](https://code.visualstudio.com/ "VSCode"))
 

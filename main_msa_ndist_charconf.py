@@ -7,8 +7,8 @@ import os
 
 
 # fetch configurations
-CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_jk_best_akf.conf'  # configuration which is not given with cli args
-CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest_jk.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest.conf'  # configuration which is not given with cli args
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
                                       coded_configuration_paths=[CODED_CONFIGURATION_PATH_VOTER, CODED_CONFIGURATION_PATH_DB_READER])
@@ -69,9 +69,6 @@ for db in dh.db:
                 for additional_file in additional_created_files:
                     # this validates the original outputs
                     tableparser.validate_table_against_gt(additional_file,foundgt)
-
-
-
 
 if config.SUMMARIZE_ISRI_REPORTS is True:
     tableparser.create_isri_reports(dh.db, filestructs_gt, "abbyy")
