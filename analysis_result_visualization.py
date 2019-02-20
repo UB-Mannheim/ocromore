@@ -1,3 +1,10 @@
+"""
+Visualization of ocromore input, groundtruth and
+results iteratively over files. Can be used for
+output analysis. 
+"""
+
+
 from configuration.configuration_handler import ConfigurationHandler
 from akf_corelib.database_handler import DatabaseHandler
 from pathlib import Path
@@ -8,7 +15,7 @@ from time import sleep
 CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
 CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest.conf'  # configuration which is not given with cli args
 
-config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
+config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True,\
                                       coded_configuration_paths=[CODED_CONFIGURATION_PATH_VOTER, CODED_CONFIGURATION_PATH_DB_READER])
 
 
@@ -50,7 +57,7 @@ for db in filestructs_output:
             print("do comparison here")
 
             fs_path = filestruct.path
-            foundgt_path  = foundgt
+            foundgt_path = foundgt
             if config.SHOW_REDUCED_RESULTS:
                 fs_path += ".red"
                 foundgt_path += ".red"

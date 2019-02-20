@@ -1,3 +1,12 @@
+"""
+The following file contains an LCS Algorithm by Gonzalo Exequiel Pedone,
+there's a test below which shows how to applicate the algorithm and
+use pivot possibilities. This was only implemented for testing purposes,
+the final implementation uses other algorithm.
+"""
+
+import numpy as np
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
@@ -320,7 +329,6 @@ def get_same_count(c1, c2, c3):
 
     return same_ctr
 
-import numpy as np
 
 def best_of_three_simple(line_1, line_2, line_3, index_best, wildcard_character='¦'):
     list_line_1 = list(line_1)
@@ -345,21 +353,21 @@ def best_of_three_simple(line_1, line_2, line_3, index_best, wildcard_character=
         else:
             accumulated_chars += character_3
 
-
-
     accumulated_chars_stripped = accumulated_chars.replace(wildcard_character,'')
 
     return accumulated_chars, accumulated_chars_stripped
 
+
 res_one_1, res_two_1 = compare(list_one, list_two)
 res_two_2, res_three_2 = compare(list_two, list_three)
 
-print("A:",res_one_1)
-print("B:",res_two_2)
-print("C:",res_three_2)
+print("A:", res_one_1)
+print("B:", res_two_2)
+print("C:", res_three_2)
 
-best, best_stripped = best_of_three_simple(res_one_1, res_two_2, res_three_2, 1) #res two is the best element
+best, best_stripped = best_of_three_simple(res_one_1, res_two_2, res_three_2, 1)  # res two is the best element
 best_stripped_non_multi_whitespace = ' '.join(best_stripped.split())
-print("D:",best)
-print("E:",best_stripped)
-print("F:",best_stripped_non_multi_whitespace)
+
+print("D:", best)
+print("E:", best_stripped)
+print("F:", best_stripped_non_multi_whitespace)
