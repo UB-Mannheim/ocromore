@@ -182,7 +182,7 @@ class HocrBBoxComparator(object):
 
     def get_matches_in_other_lists(self, my_list_index, my_ocr_lists, line_element):
 
-        my_current_set = OCRset(len(my_ocr_lists), None)
+        my_current_set = OCRset(len(my_ocr_lists), None, None)
         my_current_set.edit_line_set_value(my_list_index, line_element)
 
         # this is the search loop which finds matches in each list
@@ -204,9 +204,9 @@ class HocrBBoxComparator(object):
         my_current_set.calculate_y_mean()
         return my_current_set
 
-    def compare_lists(self, ocr_lists):
+    def compare_lists(self, ocr_lists, first_config_init=False):
 
-        return_comparison = OCRcomparison()
+        return_comparison = OCRcomparison(first_config_init)
 
         # this is the big loop which goes trough every element
         for list_index, ocr_list in enumerate(ocr_lists):

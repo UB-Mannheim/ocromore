@@ -19,8 +19,15 @@ class IsriHandler(object):
         self.os = os.name.lower()
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
-        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
-                                    self.config.PRINT_WARNING_LEVEL)
+
+        if 'ExceptionInitializing' in self.config.keys():
+            print("Exception initializing config, don't print")
+            self.cpr = ConditionalPrint(False, False, False)
+        else:
+
+            self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
+                                        self.config.PRINT_WARNING_LEVEL)
+
         if self.os != 'linux' and self.os != 'posix':
             raise OSError("Untested operating system adapt code and continue at own risk")
 

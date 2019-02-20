@@ -2,6 +2,7 @@
    This is the starting file for comparing hocr-files to each other
    files are loaded to python-objects here and are then compared
    with different methods. One of them is the n-dist-keying
+   (former plt_charinfo.py)
 """
 
 from pathlib import Path
@@ -20,7 +21,7 @@ dh.set_dirpos(tablename_pos=config.TABLENAME_POS, ocr_profile_pos=config.OCR_PRO
               ocr_pos=config.OCR_POS, dbname_pos=config.DBPATH_POS)
 
 dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
-# test = dh.get_files() # just a simple check if files were read
+test = dh.get_files()  # just a simple check if files were read
 
 
 if config.HOCR2SQL:

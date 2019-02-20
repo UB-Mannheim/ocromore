@@ -33,8 +33,10 @@ class ConfigurationHandler(object):
         else:
             #parser = configargparse.get_argument_parser()
             #options, junk = parser.parse_known_args()
-            self._options = SingleTone.get_value()
-
+            try:
+                self._options = SingleTone.get_value()
+            except:
+                self._options = {"ExceptionInitializing":True}
 
     def add_all_args(self, parser, fill_unkown_args):
 

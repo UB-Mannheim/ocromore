@@ -36,6 +36,8 @@ class NDistanceVoter(object):
             textlens = []
             number_empty = 0
             for text in texts:
+                if text is False or text is True:
+                    text = "" # todo verify this correct j4t 20.02
                 textlens.append(len(text))
                 if text.strip(" ") == "":
                     number_empty += 1

@@ -36,8 +36,15 @@ class OCRset:
         self._database_handler = None
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
-        self._cpr = ConditionalPrint(self._config.PRINT_MSA_HANDLER, self._config.PRINT_EXCEPTION_LEVEL,
-                                    self._config.PRINT_WARNING_LEVEL)
+
+        if 'ExceptionInitializing' in self._config.keys():
+            print("Exception initializing config, don't print")
+            self._cpr = ConditionalPrint(False, False, False)
+        else:
+
+            self._cpr = ConditionalPrint(self._config.PRINT_MSA_HANDLER, self._config.PRINT_EXCEPTION_LEVEL,
+                                        self._config.PRINT_WARNING_LEVEL)
+
         self._msa_handler = msa_handler
 
     def add_predictor(self,predictor):
@@ -157,9 +164,15 @@ class OCRset:
             texts.append(text)
 
         self._n_distance_voter = NDistanceVoter(texts)
-        shortest_dist_index = self._n_distance_voter.compare_texts( \
-                take_longest_on_empty_lines=self._config.NDIST_VOTE_LONGEST_IF_EMPTY_STRINGS, \
-                vote_without_spaces = self._config.NDIST_VOTE_WITHOUT_SPACES)
+        if "ExceptionInitializing" in self._config.keys():
+            print("Exception in initializing config using default in c")
+            shortest_dist_index = self._n_distance_voter.compare_texts( \
+                    take_longest_on_empty_lines = True, \
+                    vote_without_spaces = False)
+        else:
+            shortest_dist_index = self._n_distance_voter.compare_texts( \
+                    take_longest_on_empty_lines = self._config.NDIST_VOTE_LONGEST_IF_EMPTY_STRINGS, \
+                    vote_without_spaces = self._config.NDIST_VOTE_WITHOUT_SPACES)
 
 
         # save the result

@@ -133,7 +133,6 @@ class TableParser(object):
             ocr_comparison.save_dataset_to_file(output_path_tess, 1, mode_add_linebreaks=False)
             ocr_comparison.save_dataset_to_file(output_path_ocro, 2, mode_add_linebreaks=False)
 
-
             if self._config.WRITE_HOCR:
                 ocr_comparison.save_dataset_to_hocr(output_path_abbyy, 0, mode_add_linebreaks=False)
                 ocr_comparison.save_dataset_to_hocr(output_path_tess, 1, mode_add_linebreaks=False)

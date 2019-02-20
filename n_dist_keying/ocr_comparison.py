@@ -16,13 +16,17 @@ class OCRcomparison:
         Storage class for multiple Ocr_Sets
     """
 
-    def __init__(self, predictor = None, vocabulary_checker = None):
+    def __init__(self, predictor = None, vocabulary_checker = None, first_config_init=False):
         self.ocr_sets = []
         self.line_height_information = []
-        config_handler = ConfigurationHandler(first_init=False)
+        config_handler = ConfigurationHandler(first_init=first_config_init)
         self.config = config_handler.get_config()
-        self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
-                                    self.config.PRINT_WARNING_LEVEL)
+
+        if 'ExceptionInitializing' in self.config.keys():
+            self.cpr = ConditionalPrint(False, False, False)
+        else:
+            self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,
+                                        self.config.PRINT_WARNING_LEVEL)
 
         self.predictor = predictor
         self.vocabulary_checker = vocabulary_checker

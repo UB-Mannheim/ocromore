@@ -30,7 +30,7 @@ class TextFileGenerator(object):
 
         ocr_lists = []
         ocr_lists.append(local_lines)
-        ocr_comparison = hocr_comparator.compare_lists(ocr_lists)
+        ocr_comparison = hocr_comparator.compare_lists(ocr_lists, first_config_init=True)
 
         if use_lhi is True:
             local_lhi = cp.copy(line_height_info_normalized)
