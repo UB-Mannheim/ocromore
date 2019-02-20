@@ -1,3 +1,15 @@
+"""
+This part of experiment which checks and normalizes
+confidences of outputs in different engines.
+This shows how histograms can look like to determine
+scalings. (main is test_pandas_normalization_experiment_database.py)
+
+
+This could be used in future implementations to improve
+results, at the moment the confidence scaling is
+done with fixed factors (20.02.2019)
+"""
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

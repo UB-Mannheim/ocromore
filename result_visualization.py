@@ -49,7 +49,6 @@ for db in filestructs_output:
         if foundgt is not None:
             print("do comparison here")
 
-
             fs_path = filestruct.path
             foundgt_path  = foundgt
             if config.SHOW_REDUCED_RESULTS:

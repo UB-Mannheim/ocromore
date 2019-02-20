@@ -1,3 +1,17 @@
+"""
+This is a experiment which checks if the confidence outputs of
+the different engines if they are scaled around different
+median (therefore histogram plotting and stuff) therefore
+the pandas dataframes are used with a Normalization module
+implemented, that provides different methods.
+
+This could be used in future implementations to improve
+results, at the moment the confidence scaling is
+done with fixed factors (20.02.2019)
+"""
+
+
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt

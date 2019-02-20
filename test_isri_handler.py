@@ -11,7 +11,6 @@ DO_ISRI_VAL = True
 if DO_ISRI_VAL is True:
     from ocr_validation.isri_handler import IsriHandler
 
-
     isri_handler = IsriHandler()
     FILEPATH_ACCURACY_REPORT_MSA = "./Testfiles/isri_accreport_msa_best.txt"
     FILEPATH_ACCURACY_REPORT_NDIST = "./Testfiles/isri_accreport_ndist_keying.txt"
