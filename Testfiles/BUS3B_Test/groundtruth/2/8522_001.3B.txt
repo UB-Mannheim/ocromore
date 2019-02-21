@@ -1,0 +1,57 @@
+Ingres					Telephone: 510.769.1400
+The ASK Group, Inc.
+1080 Marina Village Parkway
+Box 4026
+Alameda, CA 94501-1095
+
+
+Ingres
+
+
+June 28, 1993
+
+
+Dear INGRES Support Customer:
+
+
+As a result of suggestions from users like yourself, we are pleased to announce several
+enhancements to Customer Support that will provide you with easier, faster access to
+technical support and product information.
+
+			INGRES/Advisor
+INGRES/Advisor, the on-line source for technical support and product information, has
+been enhanced with new services and features:
+
+~ ProAlert -~ access documents describing known INGRES bugs and anomalies.
+  ProAlert is currently in beta, but will be available to all support contacts soon.
+~ E-mail Call Entry -~ enter and monitor your support calls via electronic mail.
+~ Knowledge Access download -~ send Knowledge Base documents directly to your
+  fax machine, or e-mail them to yourself for local printing and reference.
+~ TSConnect -~ enter and monitor your support calls on-line, now expanded with
+  longer call descriptions and two-way communication capability.
+~ CompuServe Network access -~ get faster response than with Internet or the direct
+  number and you don't have to be a CompuServe member to use it!
+
+If you haven't tried INGRES/Advisor yet, take a tip from the many users who have and
+love it! They especially like entering support calls 24 hours a day. For more
+information, please refer to the new INGRES/Advisor User's Guide enclosed.
+
+		Automatic Call Distribution
+A new call routing system will begin beta testing July 26th. During the test period, you
+will have the option of using the system or going directly to the dispatch operator as you
+do now.
+
+This new system will allow you to route your call directly to the person that can best
+answer your question, saving you time and helping eliminate phone tag. You will be
+prompted to enter your contact ID as well as the product category your call is regarding.
+We hope that you will find this new system to be more responsive to your needs.
+
+We appreciate your suggestions and comments, so please keep them coming; they get
+results and help us make improvements for you!
+
+
+Sincerely,
+
+
+Sue Shields
+Vice President, Customer Support & Services

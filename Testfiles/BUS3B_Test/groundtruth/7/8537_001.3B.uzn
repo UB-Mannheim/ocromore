@@ -1,0 +1,13 @@
+  328   319   330   100 Letterhead
+  283   634   375    64 Dateline
+  298   843   486   154 Inside_Addr
+  298   997   393    58 Attent_line
+  283  1183   681   118 Subject
+  288  1341   285    51 Salutat
+  288  1431  1999   285 Text
+  288  1732   204    73 Closing
+  288  1831   618    73 Company_Sig
+  292  2083   762   114 Signer
+  292  2232   109    64 Sign/Type
+  279  2326   217    78 Enclosure
+  279  2434   226    69 cc

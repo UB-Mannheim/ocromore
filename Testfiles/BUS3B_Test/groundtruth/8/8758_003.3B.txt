@@ -1,0 +1,55 @@
+layer. Then you can easily add or delete any layer, or move it up or down in the "stack" of layers. Take the
+layer out and see what it looks like without it; then return the layer to your plan.
+
+Most importantly, you don't need any skill at all in drafting, design, or drawing to create professional, highly
+accurate, useful designs. I know, because I can barely write legibly, yet I've designed several projects myself
+with TurboCAD, including the home office from which I'm writing to you right now.
+
+			What TurboCAD Is Really Like To Use
+
+Let me "talk you through" what it's like to use TurboCAD yourself. Let's use my back yard project that
+I recently completed. Because I have both the DOS and Windows versions, I tried it on both. Windows
+or DOS, it doesn't make any difference.
+
+But, let me tell you how I did it using the Windows version. First, I took the measurements of my back
+yard directly from the plot plan that came with the title to the house. Next, I talked with the landscaper
+about what he had in mind.
+
+			Then It Was Time To Sit Down at the PC
+
+Using the handy icon ruler on my screen, I simply clicked my mouse to set the scale of the drawing, then
+drew the first property line by moving the mouse. I clicked on a second icon to define the distances and
+angles, which I took from my plot plan. I put in different points using the pre-defined distances, and
+TurboCAD drew complete lines that exactly matched the irregular shape of my lot. Each time I did so, the
+edit bar at the top of my screen told me what my current settings were, and the status bar at the bottom
+told me exactly where I was.
+
+I then used the same points again to set up the dimensions of a standard prefabricated deck...the one the
+contractor could build most economically for me.
+
+I clicked my mouse to open the Construction Details Symbols Library, and put in sliding glass doors to the
+deck. I clicked again to open the Landscaping Symbols Library, and pulled out the bushes and flower bed
+symbols I wanted. Then I started to get slick, and put in a hatching texture on the deck. By now the plan
+began to really look like something, so I called my wife to take a look. Right away, she saw some ways to
+improve the deck and the landscaping so that they fit better with our lifestyle.
+
+I could barely believe it! TurboCAD had made a real difference in my own project, and within hours after
+I started using it.
+
+Just as impressive as TurboCAD's usefulness for personal projects is what it does for professionals. I took
+TurboCAD to my next door neighbor, an electronic engineer who does CAD work all day. Using only his
+home PC and TurboCAD, he read and modified some .DXF files he brought home from his office. He even
+liked a few things about the TurboCAD interface better than the AutoCAD~ he usually uses.
+
+			Try TurboCAD Risk-Free!
+
+Now you and I both know that $149.95, which is TurboCAD's list price, isn't much to spend in today's
+world for a highly featured CAD software package.
+
+But I'd like you to try TurboCAD risk-free for 60 days at the special price of $29.95, plus shipping and
+handling. You've got nothing to lose and everything to gain. You'll get a complete design program that's
+easy to learn and use. And when you buy TurboCAD for just $29.95, nearly 80% off TurboCAD's regular list
+price, I'll even throw in a valuable extra. Here's how it works.
+
+Fill in the enclosed Risk-Free Trial Acceptance Form. Include your payment information, and we'll ship
+TurboCAD to you right away. When you get TurboCAD, try it out on your own PC for 60 days. You'll find it

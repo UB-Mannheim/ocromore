@@ -1,0 +1,67 @@
+Finding eigenvalues and eigenvectors of a real matrix
+
+
+BA
+
+
+Mathcad~
+
+
+Take Advantage of the Mathcad Preferred Engineer/Scientist Discount Program and
+                        Get a Full Working Copy of
+          New Mathcad~ 4.0 for Only $7999       (retail $495)
+                                            You Must Respond by 6/30/93
+
+
+Dear Colleague:
+
+
+I'm pleased to invite you to participate in our new Mathcad Preferred Engineer/Scientist Discount Program during the initial
+sign-up period, which ends on June 30, 1993.
+
+The purpose of the program is simple:  to introduce our newest and most exciting technical calculation tools as they're completed to
+a small, select group of people who will make the best use of them.  Most engineers and scientists have heard of Mathcad, but only a
+fraction have actually used the software, something we expect the Preferred Program to change quickly.
+
+Your participation in the Mathcad Preferred Engineer/Scientist Discount Program starts with a full working copy of our new, faster,
+fully 32-bit version of Mathcad 4.0, the world's most popular math software, for only $79.99.  Yes, it's the same full-feature Mathcad
+that sells in retail stores for $495.
+
+	That's a saving of $415 off the list price.  Of course, your Discount Program purchase is fully guaranteed for 60 days.
+	If you're not amazed with Mathcad, return it for a full refund (less shipping and handling).
+
+A remarkable savings, but more so when I give you a feel for what Mathcad 4.0 is and does.
+
+The "Smart" Math Scratchpad
+
+New Mathcad 4.0 literally turns your computer's screen into a "smart" math scratchpad and is available for Microsoft~ WindowsTM.
+(If you prefer, you can order Macintosh Mathcad 3.1 and PC DOS Mathcad 2.5 which have minor differences.  The PC DOS version
+does not perform symbolic calculations.  UNIX versions are also available once you're a Preferred Program participant.)  Responding
+to your mouse or keyboard, the program writes and solves virtually any mathematical equation, and communicates the answer to
+others without any rewriting.  Here's how easy it is:
+
+
+	Use your mouse to select mathematical symbols and operators from on-screen icons.  (You can
+	see and select 56 operators and symbols with two mouse clicks or keystrokes-~no arcane F keys
+	to learn in new Mathcad 4.0!)  Click on a symbol or operator and it appears on the screen, just
+	where you want it, complete with the blanks for you to fill in.  Here's one as an example:
+
+
+
+	When you've filled in the blanks, type an "=" sign.  Using one of the features based on the
+	new SmartMathTM rules processor, Mathcad simplifies your equations and solves them accurately with
+	its powerful Maple symbolic engine whenever possible.
+
+
+New Mathcad 4.0 gives you the core of Maple, today's most powerful symbolic math tool from the University of Waterloo, Canada.
+With just a menu click, for example, Mathcad can simplify a formula or solve for a variable.  There is no need to learn a programming
+language, just point and click.  The symbolic answer is ready for numerical calculations or further symbolic transformation.
+
+A More Useful Benefit to You Than Even Time Savings
+
+Of course, using your PC to do all the routine work will save you a considerable amount of time.  But new Mathcad 4.0 will do far
+more than that.  It will allow you to solve problems much more effectively and efficiently.
+
+Because math with Mathcad is so much easier, you'll do more of it as part of each problem you solve.  Your answers will be more
+accurate.  And you'll do more "what if" calculating than you bother with now.
+

@@ -9,7 +9,7 @@ from pathlib import Path
 from configuration.configuration_handler import ConfigurationHandler
 from akf_corelib.database_handler import DatabaseHandler
 
-CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_akf_usb.conf"
+CODED_CONFIGURATION_PATH = "./configuration/to_db_reader/config_read_bus3b.conf"
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, coded_configuration_paths=[CODED_CONFIGURATION_PATH])
 config = config_handler.get_config()

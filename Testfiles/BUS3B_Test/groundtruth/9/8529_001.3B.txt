@@ -1,0 +1,58 @@
+SYSTAT, Inc.
+1800 Sherman Avenue
+Evanston, Illinois 60201
+
+708 864.5670
+708 492.3567 FAX
+
+
+SYSTAT
+
+
+Wednesday, March 24, 1993
+
+
+Steve Rice
+Information Science Research Institute
+UNLV College of Engineering
+4507 Maryland Parkway
+Las Vegas, Nevada 89154
+
+
+Dear Mr. Rice:
+
+
+Thank you for your call; it was a pleasure speaking with you. I am delighted to learn of your interest in
+SYSTAT products.
+
+SYSTAT 5.0 for Windows takes full advantage of Windows, with pull-down menus, dialog boxes, sizable
+windows, and the ease of use you expect in a Windows package. Just point and click; SYSTAT's
+QuickStatTM buttons give you simple, single-click shortcuts to common statistical analyses.
+
+SYSTAT output can be viewed on-screen, edited, cut, copied, and pasted to other Windows programs.
+SYSTAT's new comprehensive on-line help system includes explanations of SYSTAT commands,
+functions, and procedures. You can even access information on a particular topic by searching on a
+key word.
+
+Since Windows allows you to open several windows on the desktop at the same time, you'll be able to
+view data and graphics side-by-side. Also, data and graphics are fully integrated in SYSTAT for
+Windows: you'll be able to click on data points and instantly view the cases in your data set that
+correspond to those points.
+
+SYSTAT's interactive graphics let you do more than just calculate statistics. You can explore your
+data in new ways and from a variety of perspectives. For example, you can use the lasso tool to
+select a subset of data and exclude outlying points, and with just a few clicks create a graph of the
+subset. Or, rotate plots to view data from different perspectives, revealing new insights about
+distributions and factors. SYSTAT's analysis is equally interactive. For example, you can substitute
+one variable in an analysis or graph with another to explore data in new ways. To compare results,
+simply display graphic differences.
+
+SYSTAT for Windows runs in standard and 386 enhanced modes and takes advantage of Windows
+advanced memory management. By operating SYSTAT for Windows in extended memory mode, you'll be
+able to analyze very large and complex problems. SYSTAT can handle an unlimited number of records
+and up to 256 variables in a single data file. And, as with all SYSTAT products, SYSTAT for Windows
+command and data files are compatible with SYSTAT for DOS, Mac and VAX/VMS.
+
+SYSTAT requires Windows 3.1 or higher running in standard or extended modes, with a minimum of 2 Mb
+RAM and 6 Mb of available disk space. A mouse, co-processor and additional memory are recommended
+but not required.

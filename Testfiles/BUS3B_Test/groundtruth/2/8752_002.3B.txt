@@ -1,0 +1,51 @@
+Cool Innovation #3:  App Studio.  Visually create the user interface for your application!  This powerful tool
+combines eight Windows resource editors (with the most "WYSIWYGness" ever!), giving you precise
+control over your resources!  Open multiple resource files and drag and drop resources.  Change your mind
+about some edits in creating your menus?  Simply click on the Multi-Level Undo button on the toolbar.
+Support for Visual Basic custom controls allows you to use over 100 prebuilt controls provided by Microsoft
+and third-party developers.  And of course, App Studio is tightly integrated with the Visual Workbench.
+
+Cool Innovation #4:  ClassWizard.  This new and revolutionary tool is the key to integrating App Studio,
+the Microsoft Foundation Class Library, and the Visual Workbench.  Move seamlessly between your user-
+interface elements and application code.  Point and click to connect messages in Windows and interface
+items to C++ code (just like with the Visual Basic programming system!).  ClassWizard automatically takes
+you right into the Visual Workbench editor, and shows you exactly where to place your code.  ClassWizard
+even writes C++ code to create new classes and new member functions as you need them, with lots of
+comments to show you how to tailor them to your own purposes!
+
+You asked for reusable code.  With Microsoft Foundation Class Library 2.0 you can create
+professional Windows-based applications easily and fast!
+
+MAJOR ADVANCE!  Microsoft Foundation Class Library 2.0, the leading Windows API for C++, just
+got better!  Microsoft Foundation Class Library 2.0 extends the building blocks offered in version 1.0 of the
+Library, by providing high-level abstractions for advanced development for Windows.  Prebuilt, reusable, 
+and customizable functionality is provided to assist you in implementing sophisticated Windows-based
+applications with such features as:  MDI support, printing, Print Preview, toolbars, status bars, and much
+more.  You'll be impressed, and your applications will be impressive!  And Microsoft Foundation Class
+Library 2.0 has been rigorously tuned to give you small, fast executables.
+
+Just as important as reusing code is leveraging your existing knowledge base.  You can always go directly
+to the Windows API in C (and, of course, all the integrated tools support C code as well as C++), which is
+especially useful for migrating existing Windows code to the framework.  Since the framework exploits the
+Windows programming idioms, it leverages the vast array of Windows programming knowledge.  If you've
+invested in version 1.0 of the Microsoft Foundation Class Library, then your investment is secure, because
+all your existing Microsoft Foundation Class Library code will recompile smoothly with Microsoft
+Foundation Class Library 2.0.  And your investment will continue to be safe because Microsoft Foundation
+Class Library is scalable to the Win32sTM API and, in the future, to Windows NTTM and other extensions
+to the platform.
+
+And you still want to generate the fastest, smallest code possible.  Count on our fourth-generation
+optimizing compiler!
+
+ENHANCED!  Optimization technology.  We further improved our already proven code generation
+technology.  Visual C++ gives you the most sophisticated code generation technology available today so
+you can create the smallest and fastest applications possible.  And to further enhance the speed of your
+applications, we've added the following support:
+
+	NEW! Smart linking.  This allows you to link in only those library functions that are actually
+        called, thereby reducing link time and .EXE size.
+        NEW! 386 code generation.  Exploit the 386 instruction set and watch your application hit
+        mach speeds!
+
+Visual C++ is available in two versions.  If you would simply like to explore Windows programming in
+C++ and don't need the power that the Professional Edition provides, you may, for a limited time only,

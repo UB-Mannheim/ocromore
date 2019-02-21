@@ -1,0 +1,52 @@
+SYMANTEC.
+
+
+Symantec Peter Norton Group
+10201 Torre Avenue
+Cupertino, CA 95014
+
+
+We've just hit a home run with our
+NEW Norton Backup Version 3.0 for Windows
+and your box seat is only $29!
+
+
+Dear Kevin Grover:
+
+
+	As a Norton Backup user, you already know how important it is to backup your data.
+You also know how to make good choices, since you've already chosen the fastest and
+most reliable backup product on the market.  That's why I'm so eager to tell you about
+the very latest version of an award-winning product that will help you keep all your
+backup bases covered.  It's The Norton Backup Version 3.0 for Windows-~a remarkable
+new standard in Windows backup technology!
+
+Works flawlessly with the backup devices you already have
+and those you're likely to get in the future.
+
+	The Norton Backup Version 3.0 for Windows is a heavy hitter when it comes to back-
+up device support.  You can now backup your valuable data to more devices than ever
+before, including SCSI tape backup devices, Irwin AccuTrak and high-speed tape
+controllers.  With Version 3.0, you now have total flexibility with your backup
+options.
+
+Totally compatible with DOS 6.0 backup.
+
+	Since Symantec created the backup used in DOS 6.0, The Norton Backup Version 3.0
+for Windows offers true compatibility as well as many advantages not found in DOS 6.0.
+But most important, our new upgrade is the only backup that can restore DOS 6.0
+compressed backups.
+
+Some things haven't change-~like its blazing speed!
+
+	Faster backups mean more free time for work ... or play.  So you'll be glad to
+know that the safest and most reliable backup utility is still the fastest!
+The Norton Backup Version 3.0 for Windows features data transfer rates of up to
+5.5 MB per minute when backing up to floppy devices.  In fact, it's up to four times
+faster than the backup technology in DOS 6.0.
+
+And it's still the easiest to use!
+
+	All the automated features you know and love are still here, including a scheduler
+to run automatic backups at your convenience, or unattended, any time of the day or
+night.

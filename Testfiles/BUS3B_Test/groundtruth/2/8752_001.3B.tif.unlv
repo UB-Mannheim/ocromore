@@ -1,0 +1,35 @@
+I^'ve ^w^ant^ed to write a real application in ^C^++ ^fo^r a long time. Fo^r a couple of years, I^'ve known that ^C+^+
+^and ob^ject oriented programming ^ar^e the way to ^g^o, ^an^d that my designs, productivity, ^and code ^re^u^sa^b^il^i^t^y
+could all improve dramatically. Everybody at Microsoft kept ^t^e^ll^i^n^g me that ^C^++ was outstanding, bu^t, to
+^t^ell you the truth, the transition seemed too hard. The learning ^c^u^r^v^e seemed too long ^and the payoff too ^far
+in the future. I like mor^e immediate gratification. Also, there haven^'t been any compelling objects
+available ^fo^r my reuse, so I^'ve held o^f^f on my personal use of ^C^+^+.
+^B^ut recently I created my first ^C^+^+ application ^for Windows^m. It does ^some number crunching ^a^nd chart-
+ing^, ^and you^'d be impressed with its level of functionality: it's an ^M^DI ^app^, with a toolbar^, status help, a
+standard W^indow^s-style menu interface, printing ^and Print Preview, scroll bars, splitter-views, great
+support ^f^or standard File Open, Save ^and Save As, ^a^nd a really handy Visual Basic^m custom control (a
+^s^p^r^e^a^d^sh^e^e^t-l^i^k^e grid). I was able to reuse a bunch of my old ^C code ^an^d^, mos^t important, this application
+screams with the lightning performance I demand.
+I created my application in less than an h^ou^r using the Microsoft^f Visual ^C++^T^M development s^ystem^!
+So let me ^t^e^ll you about Visual ^C^+^+, the successor to Microsoft ^C/^C^+^+ 7.0. It^'s going to significantly
+change the way applications ^f^or Windows ^a^re created in ^C^+^+^. Visual ^C^++ combines the power of reusable,
+prebu^ilt code with an incredibly ^w^ell-^d^e^s^i^g^n^e^d^, totally integrated, visual development environment. Visual
+^C^+^+ includes the Microsoft Foundation Class Library version 2.0, a breathtaking design achievement
+that captures the best Windows development expertise we have to offer at Microsoft, ^a^nd ^pu^t^s it ^r^i^gh^t at
+your ^f^i^n^ge^r^t^i^p^s^. Innovative w^iz^ards^, serving as your programming ^ass^is^t^a^n^ts, help you leverage the power
+of the Microsoft Foundation Classes.
+^And because you a^r^e a registered user of Microsoft ^C/^C^+^+ |7.0, you ^qualify ^for this special upgrade offer^:
+Visual ^C++, Professional Edition, ^fo^r only ^$139^*-less than one-third of the suggested retail price of
+$499.
+You w^anted a tightly integrated, easy-to-use, Windows-hoste^d development environment, ^and we
+went overboard on your request. Visual ^C++^, with its elegant, streamlined integration, is ^o^u^r
+response!
+We ^ar^e especially proud of ^fou^r^, very ^c^o^ol i^n^n^ov^a^t^i^o^n^s in Visual ^C++^:
+^Cool Innovation #1: Visual Workbench. The cornerstone of Visual ^C++^, Visual Workbench provides an
+unparalleled integrated ^t^ool^s^e^t^. ^S^e^a^ml^e^s^sl^y edit ^and browse while you debug or build your application (in
+the background, if you wan^t^!). Or ^run ^o^u^r ^W^i^n^d^o^w^s-^h^o^s^t^e^d debugger directly in your edit window ^and set
+^br^e^a^k^p^o^i^n^t^s with a simple click of a mouse even while your application is ^not running^!
+^C^o^ol Innovation #2: A^p^pWizard. It's never been so easy to get started developing in ^C^++^! Use
+^AppWi^za^rd to customize the Microsoft Foundation Classes ^for your own needs. Simply click on a list of
+options ^a^nd^, within seconds, AppWi^zard will create a ready-to-build ^W^i^n^d^o^w^s-^b^a^s^e^d application with
+features such as an ^M^DI^, ^t^o^ol^b^a^r, Print Preview, ^O^L^E^, ^an^d context-sensitive Help.

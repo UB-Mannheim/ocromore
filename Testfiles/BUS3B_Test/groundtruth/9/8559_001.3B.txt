@@ -1,0 +1,53 @@
+                               Direction des Etudes
+                               et Recherches
+
+
+                               D~~partement Syst~~mes d'Information
+                               et de Documentation
+
+
+                               Clamart, march 9th, 1994.
+
+
+Mr Philippe LEFEVRE
+EDF - DER - B~~t G1
+1, Av du G~~n~~ral de Gaulle
+92141 CLAMART CEDEX
+FRANCE
+tel:     33-1-4765-3942
+fax:     33-1-4765-5007
+e-mail:  philippe.lefevre@der.edf.fr
+
+
+Mr Thomas NARTKER, Stephen RICE,
+Junichi KANAI
+Information Science Research Institute
+University of Nevada at Las Vegas
+LAS VEGAS - NV 89xxx - USA
+
+
+
+Dear sirs
+
+
+I recently read your article published in INFORM, and was very interested in your studies.
+I belong, as project manager, to a Department of EDF (French Electricity Board) Research
+Center, which has in charge documentation problems for our company.
+
+I have been myself dealing with document analysis and recognition for several years, and
+we have developed a document recognition prototype on a SUN workstation.  This prototype
+is based on our own binarization and segmentation modules, and uses several OCR toolkits
+of the market, particularly those of XIS and CAERE.
+
+The job we have to do this year is the evaluation and qualification of our prototype and
+OCR results.  So, I would be very interested to read your reports, quoted at the end of your
+paper.
+Could I also have your e-mail addresses, and the address of ExperVision Inc., that I didn't
+know till now ?
+
+
+Thanks for your answer. Best regards.
+
+
+                        Ph LEFEVRE
+

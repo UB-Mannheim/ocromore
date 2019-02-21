@@ -22,7 +22,7 @@ class OCRcomparison:
         config_handler = ConfigurationHandler(first_init=first_config_init)
         self.config = config_handler.get_config()
 
-        if 'ExceptionInitializing' in self.config.keys():
+        if 'ExceptionInitializing' in self.config:
             self.cpr = ConditionalPrint(False, False, False)
         else:
             self.cpr = ConditionalPrint(self.config.PRINT_MSA_HANDLER, self.config.PRINT_EXCEPTION_LEVEL,

@@ -1,0 +1,58 @@
+09519
+
+
+ASK Group
+
+
+The ASK Group, Inc.		Telephone: 510.769.1400
+1080 Marina Village Parkway
+Box 4026
+Alameda, CA 94501-1095
+
+
+October 29, 1993
+
+
+Mr. Kevin Grover
+School of Engineering
+Univ. of Nevada, Las Vegas
+Information Science Researh Inst.
+4505 Maryland Parkway
+Las Vegas, NV  89154
+
+
+Dear Mr. Grover:
+
+
+If you've been looking for a reporting tool that allows users to create great
+looking reports quickly, as well as providing the control and industrial strength
+features that an IS professional demands...look no further!
+
+The ASK Group is pleased to announce ReportSmith, a new addition to our suite
+of end-user productivity tools. ReportSmith is a client/server query and
+reporting tool that will change the way you think about generating reports.
+
+Here are just some of the ways that ReportSmith addresses your reporting needs:
+
+ ~ Users will be instantly productive with ReportSmith's WYSIWYG
+   interface based on Microsoft standards; there's no lengthy learning
+   curve.
+
+ ~ Reports are created with "live data" not mock-up data such as X's
+   and 9's as with other report writers, and, there's no switching
+   back and forth from report layout mode to report print mode.
+
+ ~ Extensive cross-tab support includes multi-levels and multi-values,
+   direct generation of charts from cross tabs, created by a simple
+   point and click.
+
+ ~ Embedded Visual Basic compatible macro language allows for complete
+   extensibility.
+
+ ~ Security controls allow you to define what your users have access
+   to, as well as a Report Variable feature that lets you create
+   generic reports that prompts user through selection criteria for
+   a customized report.
+
+ ~ SQL can be viewed and edited by users that prefer to have that
+   flexibility.

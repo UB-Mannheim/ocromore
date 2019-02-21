@@ -1,0 +1,70 @@
+E~X~C~A~L~I~B~U~R  T~E~C~H~N~O~L~O~G~I~E~S
+
+
+Mr. Steve Rice
+Unlv
+Information Science Research I.
+4505 S. Maryland Parkway
+Las Vegas, Nevada 89154-9900
+
+
+Dear Mr. Rice:
+
+
+If you're thinking about including document imaging as part of your IS strategy,
+you've probably already discovered how every step in the document imaging process -
+from data entry, to organization, to retrieval - can present bottlenecks and hidden
+costs that may jeopardize the potential success of your system.
+
+Now, PixTex/EFS, from Excalibur Technologies, offers you a simple and powerful
+software solution for these complex document imaging problems by providing:
+
+	~ commercial, off-the-shelf document imaging
+	~ pattern recognition-based retrieval
+	~ automatic indexing
+	~ client/server architecture
+	~ multiple platform operation.
+
+PixTex/EFS uses Excalibur's exclusive Adaptive Pattern Recognition Processing
+(APRP) which makes data clean-up and preprocessing unnecessary.  EFS is OCR-fault
+tolerant, so you don't need costly clerical support for OCR cleanup.  And our
+newest release, PixTex/EFS 3.0, includes OCR-zoning, launch and land, and a
+thesaurus option for even more speed and flexibility.
+
+Also, PixTex/EFS is fast to learn and easy to use.  Our graphical user interface
+models an actual physical filing scenario; anyone who has used a filing cabinet can
+easily understand how to operate this EFS system.
+
+Let us show you how PixTex/EFS offers advantages for document capture, storage and
+retrieval that no other document imaging software can match.  You can find us at:
+
+	~ AIIM, April 6-8, McCormick Center, Chicago, Illinois; Booth 2608
+          also see us in our Partner's booths:  HP, Calera, Xerox, IBS and
+          Intrated.
+	~ FOSE, April 13-15, Washington, D.C. Convention Center.  See us in
+          our Partner's booths:  Oracle, HP, Input Solutions, DEC, Sun, and
+          Xerox Imaging.
+        ~ DB EXPO, May 4-6, Moscone Center, San Francisco, California:
+          Booth 1337
+        ~ AFCEA, June 8-10, Washington, D.C. Convention Center.
+
+We look forward to seeing you.
+
+
+Sincerely,
+
+
+David C. Jones
+Vice President, Marketing
+Excalibur Technologies Corporation
+
+
+P.S.  If you won't be attending any of these shows, or if you just can't wait to
+learn more, give us a call at 1-800-788-7758 and we'll send you a free, 12-minute
+video and executive summary showing you the power of pattern recognition
+technology for document imaging.
+
+
+9255 Towne Centre Drive   San Diego, CA  92121
+Recycled Paper
+Tel (619) 625-7900

@@ -1,0 +1,55 @@
+The NEC booth at Comdex Fall '93
+is the place to go if you want to see
+Windows NTTM really perform.
+
+
+Dear Kevin Grover,
+
+
+You've read all the articles.  You've heard all the amazing claims.  Now your
+chance to test drive Windows NT and experience it for yourself is finally here.
+
+We invite you to come to booth L2636 at Comdex Fall '93, November 15th to the
+19th.  Test drive the new NEC ImageTM RISCstationTM and ExpressTM RISCserverTM
+products running Windows NT.  And experience it the way it was meant to be --
+on the platform it was written on.
+
+NEC RISC systems have the power, speed and flexibility to show you what
+Windows NT can really do.  In fact, these systems, which are powered by the
+NEC VR 4400 64-bit microprocessor, can run Windows NT almost twice as fast
+as PentiumTM, and nearly four times as fast as the i486TM DX2/66 processor
+(according to independent application benchmarks and bitfield Byte portable
+benchmarks, August 1993).
+
+And since Microsoft used this system to develop Windows NT, you're assured
+complete compatibility as well as optimum performance.
+
+Of course, there are other reasons to stop by NEC booth L2636.  First of all,
+you'll receive a special gift, free, just for trying Windows NT on a new Image
+RISCstation.  You can also take part in live benchmark comparisons and see
+how NEC's manufacturing kits can offer you complete solutions for high-
+performance RISC systems design.  In addition, you'll have the opportunity
+to win a MultiSpin~ CD-ROM drive, which will be given away each day, and 
+a fully configured NEC Image RISCstation that will be given away at the
+end of the show.
+
+So don't experience Windows NT on systems that don't have the power to
+demonstrate its full potential.  Stop by NEC booth L2636 at the Las Vegas
+Convention Center, November 15th through the 19th, and test drive it on the
+machine it was written on -- an NEC RISC system.  It'll blow you away.
+
+
+Sincerely,
+
+
+James R. Berrett
+Chief Operating Executive
+NEC Technologies, Inc.
+
+
+Kunishiro Saito
+President & Chief Executive Officer
+NEC Electronics, Inc.
+
+
+NEC

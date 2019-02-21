@@ -1,0 +1,58 @@
+Ingres
+The ASK Group, Inc.
+1080 Marina Village Parkway
+Alameda, CA 94501
+
+
+April 19, 1993
+
+
+Dear INGRES World Attendee,
+
+
+The final details for INGRES World '93 are coming together and this year's conference will certainly
+be one of the most informative and exciting ever. As you scan through the enclosed Agenda and
+Solutions Centre listing, please notice the emphasis on client/server technology, distributed
+computing techniques, and improving productivity with 4GLs and GUIs. That focus is a result of
+your requests and Ingres' ongoing corporate commitment to open systems technology. We think this
+twelfth annual INGRES World Conference is particularly suited to provide the answers that keep
+your INGRES-based systems viable throughout the '90s.
+
+Choose from more than 100 Technical and Birds-of-a-Feather Sessions.
+Review hardware and software options from INGRES Partners.
+
+As you'll see from the enclosed agenda, the scheduled Technical Sessions offer you a broad range of
+practical strategies to maintain the power and flexibility of your information management systems.
+Complementing those strategies are the hardware and software products exhibited by Ingres Partners
+at the Solutions Centre. Enclosed, you'll find the lastest list of exhibitors. There may be last minute
+additions to both the Technical Sessions and the Solutions Centre. You should plan to attend the
+opening Conference Briefing, Sunday, May 9, between 5 and 6 pm, where you'll get a quick overview
+of INGRES World '93 events including any schedule changes and amendments. Birds-of-a-Feather
+Sessions will also be added throughout the conference in response to demand.
+
+Enjoy beautiful San Francisco by night. Sign up for Tuesday's optional tour.
+
+Reservations are now being accepted for this optional evening tour of San Francisco's most beautiful
+sights. This tour may be the most convenient way to squeeze some sightseeing into this year's
+conference agenda. To reserve your place, just complete and return the enclosed registration form.
+
+If you haven't yet registered for INGRES World' 93, call the reservation hotline today.
+
+To register yourself or colleagues, call the Registration Hotline at 1-800-350-4647. (Outside the
+U.S., call 1-805-371-6943.) Hotel accommodations at the preferred rate are going fast. For
+reservations, contact your preferred hotel directly. For rates and additional accommodation
+information, please refer to your INGRES World invitation.
+
+Quality Suites		Days Inn		Santa Clara Mariott Hotel 	Embassy Suites
+Phone: 408/748-9800	Phone: 408/980-1525	Phone: 408/988-1500		Phone: 408/496-6400
+FAX:   408/748-1476	FAX:   408/980-0976	FAX:   408/727-4353		FAX:   408/492-9121
+
+We look forward to seeing you at INGRES World '93!
+
+
+Sincerely,
+
+
+Gina Wu
+Events Program Manager
+Ingres, The ASK Group

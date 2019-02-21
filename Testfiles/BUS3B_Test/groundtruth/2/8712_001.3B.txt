@@ -1,0 +1,62 @@
+Microsoft Corporation            Tel 206 882 8080
+One Microsoft Way                Telex 160520
+Redmond, WA  98052-6399          Fax 206 936 7329
+
+
+Microsoft~
+
+
+Dear Systems Professional,
+
+
+Microsoft~ Windows NTTM is our most powerful operating system ever.  And I'm anxious for you to see it in action.
+
+That's why I'd like to personally invite you to an informative, free seminar:  Understanding and Integrating
+Windows NT.
+
+This full-day seminar will provide the critical technical information you need to evaluate the Windows NT platform
+as a solution for your enterprise-wide information systems needs.
+
+You'll get a close look at Windows NT and understand how you can use it to build, deploy and manage powerful,
+scalable, integrated systems.  Systems that not only leverage your current investment but make you more productive
+and efficient.
+
+Throughout the day, you'll see demonstrations and hear technical discussions of how the Windows NT platform
+delivers scalable architecture, interoperability, integrated security, advanced fault tolerance, remote access services,
+and centralized management.  You'll see how the Windows NT platform integrates into your existing operating
+environment.  Demos and discussions will include:
+
+~  Windows NT and Windows NT Advanced Server
+
+~  SQL Server for Windows NT
+
+~  SNA Server for Windows NT
+
+~  Microsoft's centralized desktop management system
+
+In addition, the seminar has time set aside time to make sure your questions about the Windows NT platform and
+system integration are answered.  For this reason, I've dedicated a voice mailbox at Microsoft to receive your spe-
+cific questions -~ the number is (206) 936-9390.  Our presenters will be listening to your questions and addressing
+them with you in the seminars.
+
+I know how important it is for you to keep abreast of the latest developments in information technology.  So please
+make every effort to attend this event.  To reserve your place, simply call Microsoft toll-free at (800) 557-0800.
+
+I hope you can attend.
+
+
+Sincerely,
+
+
+David Cutler
+Director, Windows NT Development
+
+
+P.S.  When you call to make your reservation for the seminar, please have your personal registration code and
+      seminar code ready for the location you prefer.  You'll find your registration code above your name on the
+      address panel of your envelope.  And the seminar codes are listed in the enclosed brochure.
+
+
+Microsoft Corporation is an equal opportunity employer.
+
+

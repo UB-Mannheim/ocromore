@@ -7,8 +7,8 @@ import os
 
 
 # fetch configurations
-CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_akftest_js.conf'  # configuration which is not given with cli args
-CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_akftest.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_VOTER = './configuration/voter/config_vote_bus3b.conf'  # configuration which is not given with cli args
+CODED_CONFIGURATION_PATH_DB_READER = './configuration/to_db_reader/config_read_bus3b.conf'  # configuration which is not given with cli args
 
 config_handler = ConfigurationHandler(first_init=True, fill_unkown_args=True, \
                                       coded_configuration_paths=[CODED_CONFIGURATION_PATH_VOTER, CODED_CONFIGURATION_PATH_DB_READER])
@@ -22,7 +22,7 @@ dh = DatabaseHandler(dbdir=str(Path(config.DB_DIR_VOTER).absolute()))
 #dh.set_dirpos(tablename_pos=config.TABLENAME_POS,ocr_profile_pos=config.OCR_PROFILE_POS,ocr_pos=config.OCR_POS,dbname_pos=config.DBPATH_POS)
 #dh.fetch_files(config.INPUT_FILEGLOB, config.INPUT_FILETYPES)
 
-dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=True)
+dh.fetch_gtfiles(config.GROUNDTRUTH_FILEGLOB, gtflag=False)
 if config.DO_ISRI_VAL:
     filestructs_gt = dh.get_groundtruths()
 tableparser = TableParser(config)

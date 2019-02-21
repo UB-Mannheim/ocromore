@@ -1,0 +1,67 @@
+	Your "what if" work will be enhanced by Mathcad's range variables and matrices.  With a few keystrokes, you can solve up
+	to 50 simultaneous linear or nonlinear equations and inequalities.  And enjoy new Mathcad 4.0's unlimited matrix and
+	array capacity.
+
+Mathcad enthusiasts tell us they enjoy it most because they feel they're doing more of what they're getting paid to do.
+
+Turning You Into a Communications Expert
+
+Beyond doing all your math calculations, Mathcad makes you a skilled communicator.  Here's how:
+
+	~  Your equations come out in near typeset quality on any printer.  Other people will understand what you were thinking
+	   without needing to know Fortran, C or a program-specific language.
+
+	~  Put fully formatted text with fonts and point sizes you choose anywhere on your Mathcad page.  You can put in an
+           explanatory text block near an equation, or across the top of the page to explain an entire process.  You enter text as easily
+	   as in a word processor, with full editing capabilities.
+
+	~  Use new Mathcad 4.0's increased graphing capabilities to illustrate your functions and plots in two and three dimensions,
+	   including new polar and contour plots.  Add colors, different line types and legends for truly informative displays.
+
+	~  Cut-and-paste anything between Mathcad and other programs, like Excel,~ Lotus 1-2-3~, WordPerfect, Microsoft Word, etc.
+	   New Mathcad 4.0 for Windows supports both OLE Client and Server, Windows' best transfer tools.  Now you can cut-and-
+	   paste, for example, 1-2-3 spreadsheets or Word text into your Mathcad document; Mathcad automatically transforms
+	   spreadsheet cells into matrices or arrays, or vice versa.
+
+Using Mathcad, you'll work more effectively with others because you'll communicate ideas and answers more clearly in less time.
+
+Build on a Solid Platform
+
+Mathcad makes turning to handbooks for ideas and math recipes even easier than before.  No more searching for a book or hand
+copying formulas.
+
+	New Mathcad 4.0 includes a Standard Electronic Handbook.  It gives you instant access to a wealth of standard formulas,
+	useful data, and commonly-used equations.  And it's interactive, so you can make modifications for specific calculations.
+	Change parameters, plots and variables, and let Mathcad automatically calculate your answers within the Electronic
+	Handbook.  Or double-click on a Handbook entry and paste it into your Mathcad document.
+
+For an even wider range of ready-to-use formulas, data, and specialized functionality, you can customize Mathcad with additional
+Electronic Handbooks, created with the leading publishers of technical reference handbooks, and Applications Packs, adaptable
+templates.  Handbooks and Application Packs are available for areas such as Electrical, Mechanical, Civil and Chemical Engineering,
+Physics and Natural Science.  Our soon to be released SmartMath Function Packs will add specialized functionality.
+
+You'll be eligible for remarkable savings on all these additional Mathcad tools when you participate in our new Preferred
+Engineer/Scientist Discount Program.
+
+It's Time to Order Now!
+
+Please take advantage of our new Preferred Engineer/Scientist Discount Program.  Call our toll-free Program Hotline now at 1-800-
+945-5075.  They'll ask you for your Preferred Discount Program Number.  It's printed on the enclosed Preferred Discount Certificate.
+
+Or, you may mail your Preferred Discount Certificate using the enclosed postpaid, pre-addressed reply envelope, or FAX it any time
+to 1-716-873-0906.  Whichever way you order, you must do it by 6/30/93.
+
+We can accommodate only a limited number of people in the program, and we don't want you to miss out.  So please order now.
+And the sooner you do, the sooner you'll be enjoying the significant advantages of Mathcad.
+
+
+Sincerely,
+
+
+Gordon Gossage
+Vice President, Sales & Marketing
+
+
+P.S.  Please remember the few conditions of the Preferred Discount Program.  First, you really must respond by 6/30/93.
+Second, only orders that include your non-transferable Preferred Discount Program Number will be honored; the Number is shown
+on your enclosed Preferred Discount Certificate.  And finally, you may order only one copy of Mathcad at the $79.99 price.

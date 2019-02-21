@@ -1,0 +1,47 @@
+Using Allegro CL\PC, your productivity can improve dramatically. Unlike C++, the tools you
+need are already built in. And you don't have to finish a program before it can be executed.
+Which makes it easier to define and modify program components and immediately debug
+them. So you can build intelligent applications in less time.
+
+Allegro CL\PC's unique features include:
+
+~ An integrated development environment. The system comes complete with a
+  programmable editor, inspector, debugger, tracer, structure editor, time-profiler, stepper and
+  garbage collector-~all designed to give you greater flexibility, reduce errors and speed up
+  your work.
+
+~ A Dynamic Link Library (DLL) interface to code written in other languages, such as C and
+  FORTRAN.
+
+~ A runtime generator for creating royalty-free stand-alone applications.
+
+~ A 32-bit native compiler to make your applications run faster.
+
+~ Common Graphics, an object-oriented layer on top of the Microsoft Windows API, for fast
+  design of standard GUIs.
+
+Don't be surprised if you find just about everything on your wish list in Allegro CL\PC. It was designed by
+developers for developers. We know what you want, because we want it, too.
+
+To order Allegro CL\PC, just call our toll-free number: 1-800-333-7260, Ext. 147. Or mail your completed
+Order Form in the postage-paid envelope provided. Remember, if you call by September 30, 1993, you pay
+only $795-~a $200 savings on the $995 suggested retail price.
+
+I personally urge you not to wait another minute before ordering Allegro CL\PC, because it can make a big
+difference in the way you handle your projects from now on. I know you'll be delighted with what Allegro
+CL\PC can do for your productivity. In fact, I personally guarantee it.
+
+
+Cordially,
+
+
+Fritz Kunze
+President
+
+
+P.S. Remember, there's no risk in ordering, because Allegro CL\PC comes with an unconditional 60-day
+     guarantee. Call 1-800-333-7260, Ext. 147, and order now. (All orders are shipped via Federal Express,
+     so you can expect quick delivery!)
+
+
+1-800-333-7260 (USA)    01-510-548-3600 (International)

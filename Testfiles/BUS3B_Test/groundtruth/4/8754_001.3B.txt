@@ -1,0 +1,51 @@
+FRANZ INC.
+
+
+8932
+
+
+Save $200 on the best Windows
+object-oriented programming
+system available.
+
+Hurry! Offer expires
+September 30, 1993.
+
+
+Dear Software Developer:
+
+
+If you had the luxury of designing your own developer's toolkit, what would it contain?  Advanced object-
+oriented programming, of course.  An interactive environment, definitely.  A native 32-bit Common Lisp
+compiler would be terrific.  And royalty-free runtimes-~is that too much to ask?
+
+	Franz Inc. is pleased to introduce you to Allegro CL\PC, the first full-featured Common Lisp
+	system with CLOS for PCs that gives you everything on your wish list and more-~without
+	costing a mint.
+
+No matter what we tell you about Allegro CL\PC, you won't appreciate the power, speed, control, portability
+and ease of use of this extraordinary product until you try it for yourself.  Which is why we're making you the
+following special offer:
+
+	Order Allegro CL\PC by September 30, 1993, and we'll take $200 off the $995 suggested
+	retail price.  You pay only $795 for a feature-packed, fully integrated, advanced programming
+	system containing tools that were previously available only on UNIX workstations or
+	specialized hardware.
+
+	Best of all, you have absolutely nothing to lose by ordering, because Allegro CL\PC comes
+	with a 60-day, unconditional money-back guarantee.  If for any reason you are not completely
+	satisfied with this product and what it can do for you, simply return it to us within 60 days for
+	a full refund of your purchase price.
+
+Allegro CL\PC's easy-to-use, interactive development environment makes it simpler than ever for you to
+develop knowledge-based systems, scheduling and process control applications, simulation and modeling,
+computer-aided design (CAD) and graphical user interface-based (GUI) systems.
+
+It also allows you to use the programming power and object orientation of CLOS to design, build and
+maintain applications for Microsoft Windows quickly and efficiently.  Your applications in CLOS are portable
+across most major platforms, including PCs, UNIX workstations and Macintoshes.
+        
+                                                                                        (over, please)
+
+
+1995 University Avenue  Berkeley, California  94704

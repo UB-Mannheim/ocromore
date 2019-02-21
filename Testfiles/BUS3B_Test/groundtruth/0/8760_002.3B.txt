@@ -1,0 +1,35 @@
+ ~ Visual Linking allows users to join tables without having to understand
+   the underlying table structure.
+
+ReportSmith is available on MS-Windows and works with ASK INGRES/Net for
+Windows to provide client/server reporting for ASK INGRES data.
+
+Seeing is believing - - - so we've enclosed a Report Sampler that shows the types
+of impressive reports available from ReportSmith.
+
+We're so sure that ReportSmith will answer your reporting requirements that
+we're offering a full development copy for $139~~over 50% off the regular price
+-~so you can start generating new reports today!
+
+Simply fill out the enclosed reply card, include your credit card number, mail it
+back in the postage paid envelope, and we'll ship you a single-user copy of
+ReportSmith today!
+
+Once you've had a chance to use this product, I'm sure you'll see why it was
+voted Byte Best of Comdex "Finalist" Award, and Windows Sources "Experts Pick"
+Award.
+
+For the reporting tool you've been waiting for... send in our reply card or call
+1-800-446-4737 today! This special offer ends December 15th.
+
+
+Regards,
+
+
+George Kellar
+Director Marketing
+North America Operations
+The ASK Group, Inc.
+
+
+*This offer is limited to one user per site.

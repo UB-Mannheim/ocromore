@@ -1,0 +1,44 @@
+THE BENJAMIN/CUMMINGS PUBLISHING COMPANY, INC.
+390 BRIDGE PARKWAY  ~   REDWOOD CITY   ~   CALIFORNIA 94065   ~   1 (800) 950-BOOK
+
+
+Dear Professor,
+
+
+     As software engineering moves the world of computing towards a more
+disciplined approach to software development, the Ada programming language
+is gaining widespread acceptance.  Its capabilities for encapsulation, data
+abstraction, and portability make Ada an important contributor to the emerging
+software culture.
+
+     With the growing importance of this culture, there can be no better time to
+announce that the third edition of Software Engineering with Ada is now
+available.  Written by Grady Booch and his new coauthor Doug Bryan, the best-
+selling text provides a comprehensive look at this powerful language.
+
+     The third edition reflects not only Grady Booch's expertise in complex
+software systems and object-oriented development but also Doug Bryan's
+experience teaching software engineering at Stanford University and his research
+into Ada programming environments.  The new edition also features
+comprehensive, up-to-date coverage and expanded pedagogy, including five
+new large-scale programming examples that implement object-oriented methods.
+
+     Enclosed is a detailed brochure on the third edition.  Once you've had the
+opportunity to review it, I think you'll share my enthusiasm for this classic text
+on maximizing the potential of Ada.  You'll also find a brochure on our other 
+computer science and engineering titles enclosed.  For more information, please
+complete and mail the enclosed reply card or call 800/552-2499.
+
+
+Sincerely,
+
+
+Dan Joraanstad
+Executive Editor
+
+
+P.S.  If you are interested in finding out more about our publishing program (or
+      in writing or reviewing), please contact me via the Internet at danj@bc.aw.com.
+
+
+

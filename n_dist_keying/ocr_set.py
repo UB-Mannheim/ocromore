@@ -37,7 +37,7 @@ class OCRset:
         config_handler = ConfigurationHandler(first_init=False)
         self._config = config_handler.get_config()
 
-        if 'ExceptionInitializing' in self._config.keys():
+        if 'ExceptionInitializing' in self._config:
             print("Exception initializing config, don't print")
             self._cpr = ConditionalPrint(False, False, False)
         else:

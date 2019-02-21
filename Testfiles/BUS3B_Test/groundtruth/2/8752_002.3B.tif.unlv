@@ -1,0 +1,43 @@
+^C^ool Innovation #3: A^p^p Studio. Visually create the user interface ^for your application! This powerful ^t^o^ol
+combines eight Windows resource ^e^di^t^o^r^s (with the ^mos^t "WYSlWYGness^" ever^!), giving you precise
+control ^o^ve^r your resources! Open multiple resource ^f^il^e^s a^n^d drag an^d drop resources. Change your mind
+about ^s^o^m^e edits in creating your menus? Simply click on the Multi-Level Undo button on the ^t^o^ol^b^a^r^.
+Support ^fo^r Visual Basic custom controls allows you to use ov^er 100 ^p^r^e^b^u^il^t controls provided by Microsoft
+an^d third-par^ty developers. ^And of course^, ^App Studio is tightly integrated with the Visual Workbench.
+^Cool Innovation #4: ClassW^izard. This new ^a^nd revolutionary ^t^o^ol is the key to integrating ^App Studio,
+the Microsoft Foundation Class Library, ^and the Visual Workbench. Move ^s^e^a^ml^e^s^sl^y between your user-
+interface elements ^and application code. Po^i^nt a^n^d click to connect m^ess^a^ges in Windows ^an^d interface
+items to ^C^++ code ^{just like with the Visual Basic programming system!). ClassWiz^ard automatically ^t^a^k^es
+you ^ri^g^h^t into the Visual Workbench editor, ^a^nd shows you exactly where to place your code. ^Cl^a^s^sW^i^z^a^r^d
+even writes ^C^++ code to create new classes ^and new member functions as you need them, with l^o^t^s of
+comments to show you how to tailor them to your own purposes!
+You asked ^for reusable code. With Microsoft Foundation Class Library 2.0 you c^an create
+professional ^W^i^n^d^o^w^s-^b^a^s^e^d applications easily ^and fast!
+MA ^[OR ADVANCE! Microsoft Foundation Class Library 2.0, the leading Windows ^A^PI ^for ^C^++^, just
+got better! Microsoft Foundation Class Library 2.0 extends the building ^bl^oc^k^s offered in version 1.0 of the
+Library, by providing high-level ^abs^t^r^a^c^tio^n^s fo^r advanced development ^for Windows. ^P^r^e^b^u^il^t^, reusable,
+a^nd customizable functionality is provided to assist you in implementing sophisticated Wi^n^d^ow^s-^b^a^s^e^d
+applications with such features ^a^s^: M^DI support, printing, Print Preview, t^o^ol^b^a^rs^, status bars, ^and ^m^uch
+^m^o^re. You^'ll be impressed, ^a^nd your applications will be impressive! ^And Microsoft Foundation Class
+Library 2.0 has been rigorously ^tune^d to give you small, fast ^e^x^e^c^u^t^a^bl^e^s^.
+Just as important as reusing code is l^e^v^e^r^a^g^i^n^g your existing knowledge base. You ^c^a^n always go directly
+to the Windows ^API in ^C ^(^and^, of c^ourse, all the integrated ^t^o^ol^s support ^C code as well as C^+^+), which is
+especially useful f^o^r migrating existing Windows code to the framework. Since the framework exploits the
+Windows programming i^di^o^m^s^, it l^e^ve^r^a^g^e^s the vast array of Windows programming knowledge. If you^'ve
+invested in version 1.0 of the Microsoft Foundation Class Library, then your investment is secure, because
+all your existing Microsoft Foundation Class Library code will ^r^e^c^o^m^p^il^e smoothly with Microsoft
+Foundation Class Library 2.0. ^And your investment will continue to be s^a^f^e because Microsoft Foundation
+Class Library is scalable to the W^in^3^2sTM ^API ^a^n^d, in the future, to Windows ^NTTM a^nd other extensions
+to the platform.
+A^n^d you still ^wan^t to generate the fastest, smallest code possible. Count on ^o^u^r fourth-generation
+optimizing compiler!
+^E^N^H^A^N^C^ED^! Optimization technology. We ^further improved ^our already proven code generation
+technology. Visual ^C^++ gives you the ^m^o^st sophisticated code generation technology available today so
+you ^c^a^n create the smallest ^and fastest applications possible. ^And to ^f^u^r^th^e^r enhance the speed of your
+applications, we^'ve added the following suppo^rt^:
+N^EW^! Smart linking. This allows you to link in only those library functions that a^re actually
+called, thereby reducing link time a^n^d .^E^X^E size.
+NEW^! 3^3^6 code generation. Exploit the 3^86 instruction set ^and watch your application hit
+mach speeds!
+Visual ^C^+^+ is available in two versions. If you would simply like to explore Windows programming in
+^C^+^+ ^and don^'t need the power that the Professional Edition provides, you may, ^f^or a limited time only,

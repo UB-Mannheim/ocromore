@@ -1,0 +1,54 @@
+PENNSTATE
+
+
+(814) 865-7667
+
+
+Department of Electrical and
+Computer Engineering
+College of Engineering
+
+
+121 Electrical Engineering East
+The Pennsylvania State University
+University Park, PA 16802
+
+
+October 21, 1992
+
+
+Mr. Stephen Rice
+Information Science Research Inst.
+4505 Maryland Parkway
+Las Vegas, NV 89514
+
+
+Dear Mr. Rice:
+
+
+Enclosed is a copy of the paper "Shape Matching Using LAT and Its Application to Handwritten Numeral
+Recognition", (Ref. # 92-09-14) by Toru Wakahara, which has been submitted for possible publication in the IEEE
+Transactions on Pattern Analysis and Machine Intelligence. Because of your expertise in this area, I kindly request
+that you act as a referee for this paper. If you can serve in this capacity, I would appreciate receiving your review
+within six weeks. If you cannot referee the paper within this time, please return the manuscript to me as soon as
+possible. In that case, it would be helpful if you could suggest one or more alternative referees.
+
+The quality of IEEE Transactions on Pattern Analysis and Machine Intelligence and the respectability of the field as a
+whole are largely functions of the quality of reviewing. I thank you in advance for your consideration of this paper
+and your service to the field.
+
+
+Sincerely,
+
+
+Rangachar Kasturi
+Associate Editor, IEEE PAMI
+
+
+Enclosures
+
+
+RK:tar
+
+
+An Equal Opportunity University

@@ -1,0 +1,55 @@
+Microsoft Corporation
+One Microsoft Way
+Redmond, WA  98052-6399
+
+
+Microsoft~
+
+
+Dear Microsoft Customer,
+
+
+I've wanted to write a real application in C++ for a long time.  For a couple of years, I've known that C++
+and object oriented programming are the way to go, and that my designs, productivity, and code reusability
+could all improve dramatically.  Everybody at Microsoft kept telling me that C++ was outstanding, but, to
+tell you the truth, the transition seemed too hard.  The learning curve seemed too long and the payoff too far
+in the future.  I like more immediate gratification.  Also, there haven't been any compelling objects
+available for my reuse, so I've held off on my personal use of C++.
+
+But recently I created my first C++ application for WindowsTM.  It does some number crunching and chart-
+ing, and you'd be impressed with its level of functionality:  it's an MDI app, with a toolbar, status help, a
+standard Windows-style menu interface, printing and Print Preview, scroll bars, splitter-views, great
+support for standard File Open, Save and Save As, and a really handy Visual BasicTM custom control (a
+spreadsheet-like grid).  I was able to reuse a bunch of my old C code and, most important, this application
+screams with the lightning performance I demand.
+
+I created my application in less than an hour using the Microsoft~ Visual C++TM development system!
+
+So let me tell you about Visual C++, the successor to Microsoft C/C++ 7.0.  It's going to significantly
+change the way applications for Windows are created in C++.  Visual C++ combines the power of reusable,
+prebuilt code with an incredibly well-designed, totally integrated, visual development environment.  Visual
+C++ includes the Microsoft Foundation Class Library version 2.0, a breathtaking design achievement
+that captures the best Windows development expertise we have to offer at Microsoft, and puts it right at
+your fingertips. Innovative wizards, serving as your programming assistants, help you leverage the power
+of the Microsoft Foundation Classes.
+
+And because you are a registered user of Microsoft C/C++ 7.0, you qualify for this special upgrade offer:
+
+Visual C++, Professional Edition, for only $139*-~less than one-third of the suggested retail price of
+$499.
+
+You wanted a tightly integrated, easy-to-use, Windows-hosted development environment, and we
+went overboard on your request.  Visual C++, with its elegant, streamlined integration, is our
+response!
+
+We are especially proud of four, very cool innovations in Visual C++:
+
+Cool Innovation #1:  Visual Workbench.  The cornerstone of Visual C++, Visual Workbench provides an
+unparalleled integrated toolset.  Seamlessly edit and browse while you debug or build your application (in
+the background, if you want!).  Or run our Windows-hosted debugger directly in your edit window and set
+breakpoints with a simple click of a mouse even while your application is not running!
+
+Cool Innovation #2:  AppWizard.  It's never been so easy to get started developing in C++!  Use
+AppWizard to customize the Microsoft Foundation Classes for your own needs.  Simply click on a list of
+options and, within seconds, AppWizard will create a ready-to-build Windows-based application with
+features such as an MDI, toolbar, Print Preview, OLE, and context-sensitive Help.

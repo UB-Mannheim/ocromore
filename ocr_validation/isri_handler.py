@@ -20,7 +20,7 @@ class IsriHandler(object):
         config_handler = ConfigurationHandler(first_init=False)
         self.config = config_handler.get_config()
 
-        if 'ExceptionInitializing' in self.config.keys():
+        if 'ExceptionInitializing' in self.config:
             print("Exception initializing config, don't print")
             self.cpr = ConditionalPrint(False, False, False)
         else:

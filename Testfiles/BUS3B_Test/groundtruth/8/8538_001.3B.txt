@@ -1,0 +1,46 @@
+Yasuaki Nakano, Professor
+Faculty of Engineering
+Shinshu University
+Wakasato 500, Nagano
+380 JAPAN
+
+
+November 1, 1993
+
+
+Referees
+ICDAR'93
+
+
+Dear Contributors
+
+
+I am very pleased in reporting you that ICDAR'93 has gotten great success. Without your
+service and devotion, we could not have had such a success.
+
+ICDAR'93 was held on October 20-22, 1993 at Tsukuba Japan. There were 416 attendees
+from 22 countries. About 40% of attendees were from abroad, so truly international forum was
+constructed.
+
+The quality of presented papers was very good and the discussion was exciting. Not only the oral
+sessions, but also poster session was very crowded by audience, full of questions/answers and
+discussion. Demonstration session, where 23 teams demonstrated their achievement using IBM-
+PC, Sun workstations or their own machines, showed the real performance of their algorithms
+and gave many suggestions for both presenters and audience.
+
+Beside the technical sessions, social events were also fruitful. The technical tour to laboratories
+in Tsukuba area attracted more than 100 participants. Banquet was also memorable.
+
+On behalf of the Program Committee, I want to thank all who served as referees to construct
+this splendid program. Your names are printed on one of the front pages in Proceedings, which
+can be available at IEEE Computer Society Press.
+
+I want to meet you at ICDAR'95 which will be held in Montreal, Canada, on August 14-16,
+1995 and also at ICDAR'97 in Ulm, Germany.
+
+
+Sincerely,
+
+
+Yasuaki Nakano
+Program Co-Chair
