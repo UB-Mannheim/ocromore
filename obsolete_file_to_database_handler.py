@@ -1,4 +1,10 @@
+"""
+This is an obsolete class for handling files and the access to
+database. The content was moved to akf_corelib -> database_handler
+"""
+
 from akf_corelib.hocr_converter import HocrConverter
+
 from akf_corelib.hocr_charinfo import merge_charinfo
 from akf_corelib.df_tools import get_con
 from akf_corelib.df_objectifier import DFObjectifier

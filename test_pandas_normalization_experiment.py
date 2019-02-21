@@ -13,7 +13,7 @@ done with fixed factors (20.02.2019)
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from dataframe_normalization import NormalizationModes, DataframeNormalizer as dn
+from test_pandas_dataframe_normalization import NormalizationModes, DataframeNormalizer as dn
 
 
 # Create an example dataframe with a column of unnormalized data

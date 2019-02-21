@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 from akf_corelib.df_objectifier import DFObjectifier
 from n_dist_keying.database_handler import DatabaseHandler
-from dataframe_normalization import NormalizationModes, DataframeNormalizer as dn
+from test_pandas_dataframe_normalization import NormalizationModes, DataframeNormalizer as dn
 
 
 # Create an example dataframe with a column of unnormalized data
