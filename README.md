@@ -1,11 +1,11 @@
-# ![ocromore](./docs/img/ocromore_logo.png)
+# ![ocromore](./docs/img/ocromore_logo.png "ocromore")
 
 ![license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)
 [![Docker Automated build](https://img.shields.io/docker/automated/ubma/ocropy.svg?maxAge=86400)](https://hub.docker.com/r/ubma/ocromore/)
 
 ## Overview
 
-`ocromore` is a command line driven post-processing tool for ocr-outputs.
+**ocromore** is a command line driven post-processing tool for ocr-outputs.
 The main purpose is to unite the best parts of multiple ocr-outputs to produce an optimal result.   
 It can also be used to find optimal settings for ocr software, to visualize different 
 information about the ocr results or context, or just query various things.
@@ -115,7 +115,7 @@ The ISRI Tools are necessary for the evaluation, but not for the combine process
 
 ## Process steps
 
-![ocromore-overview](docs/img/process_steps.jpg)
+![ocromore-overview](docs/img/process_steps.jpg "process diagram")
 
    1. Parsing all ocr-outputfiles to an database  
       (This step only has to be done once)
@@ -194,15 +194,15 @@ The result are stored in ./Testfiles/tableparser_output/
 
 Originally written by Johannes Stegmüller and Jan Kamlah.
 
-[akf-link]:  https://github.com/UB-Mannheim/Aktienfuehrer-Datenarchiv-Tools
-[dataarchive-link]: https://digi.bib.uni-mannheim.de/aktienfuehrer/
-[pandas-link]: https://pandas.pydata.org/
-[df-link]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html
-[isri-link]: https://github.com/eddieantonio/isri-ocr-evaluation-tools
-[result-akf-link]: ./docs/results
-[result-unlv-link]: ./Testfiles/results
-[ubuntu-link]: https://www.ubuntu.com/
-[python-link]: https://www.anaconda.com/download/
-[pycharm-link]: https://www.jetbrains.com/pycharm/
-[meld-link]: http://meldmerge.org/
-[hocr-tools-link]: https://github.com/tmbdev/hocr-tools
+[akf-link]:  https://github.com/UB-Mannheim/Aktienfuehrer-Datenarchiv-Tools "Aktienfuehrer-Datenarchiv-Tools"
+[dataarchive-link]: https://digi.bib.uni-mannheim.de/aktienfuehrer/ "Aktienfuehrer-Datenarchiv"
+[pandas-link]: https://pandas.pydata.org/ "Pandas"
+[df-link]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html "Dataframe"
+[isri-link]: https://github.com/eddieantonio/isri-ocr-evaluation-tools "ISRI Analytics Tool"
+[result-akf-link]: ./docs/results "akf results"
+[result-unlv-link]: ./Testfiles/results "UNLV results"
+[ubuntu-link]: https://www.ubuntu.com/ "Ubuntu"
+[python-link]: https://www.anaconda.com/download/ "Anaconda"
+[pycharm-link]: https://www.jetbrains.com/pycharm/ "PyCharm"
+[meld-link]: http://meldmerge.org/ "meld"
+[hocr-tools-link]: https://github.com/tmbdev/hocr-tools "hocr-tools"
