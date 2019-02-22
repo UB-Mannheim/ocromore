@@ -94,7 +94,7 @@ docker pull ubma/ocromore
 docker run -it -v `PWD`:/home/developer/coding/ocromore ocromore
 ```
 
-You can then run the scripts for visual results outside docker in your OS.
+You can than run the scripts for visual results outside docker in your OS.
 For that you need Python and [Meld][meld-link] installed and add it to environment variables (ENV):
  - Variable = "Path"
  - Value = {directory to meld}\meld.exe
@@ -105,7 +105,7 @@ The project was written in PyCharm 2017.3 (CE),
 so if you are a developer it's recommended to use it. 
 
 Python 3.6.3 (default, Oct  6 2017, 08:44:35)   
-[GCC 5.4.0 20160609] on linux  
+GCC 5.4.0 20160609 on linux  
 Tested on: Ubuntu17.10
 
 Meld is the default diff-tool,  
@@ -168,7 +168,7 @@ So you can just run the following commands.
 
 At the current stage it is recommended to use PyCharm to perform the next steps.
         
-Parse files to db and do preprocessing:
+Parse files to db and do pre-processing:
 
     # All parameters can set in the to_db_reader config
     # set HOCR2SQL parse files to db 
@@ -176,7 +176,7 @@ Parse files to db and do preprocessing:
     # set PREPROCSSING (It is recommended to perform the preprocessing steps directly after parsing  
     # but it is not necassary)
     
-    $ python3 ./plt_charinfo.py
+    $ python3 ./main_prepare_dataset.py
     
 Combine files and generate a accuracy report:
 
