@@ -6,7 +6,7 @@
 ## Overview
 
 `ocromore` is a command line driven post-processing tool for ocr-outputs.
-The main purpose is to unite the best parts of the individual ocr-output to produce an optimal outcome.   
+The main purpose is to unite the best parts of multiple ocr-outputs to produce an optimal result.   
 It can also be used to find optimal settings for ocr software, to visualize different 
 information about the ocr results or context, or just query various things.
 It is part of the [Aktienführer-Datenarchiv work process][akf-link],
