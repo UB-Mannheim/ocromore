@@ -194,7 +194,7 @@ The result are stored in ./Testfiles/tableparser_output/
 
 Originally written by Johannes Stegmüller and Jan Kamlah.
 
-[akf-link]:  https://github.com/JKamlah/Aktienfuehrer-Datenarchiv-Tools
+[akf-link]:  https://github.com/UB-Mannheim/Aktienfuehrer-Datenarchiv-Tools
 [dataarchive-link]: https://digi.bib.uni-mannheim.de/aktienfuehrer/
 [pandas-link]: https://pandas.pydata.org/
 [df-link]: https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html
