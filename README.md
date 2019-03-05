@@ -27,11 +27,11 @@ Our current character accuracy (ignoring whitespaces) results are:
 
 | OCR-Engine |   AKF-II   |  UNLV   |
 |:----------:|:----------:|:-------:|
-| Abbyy      |  84,08 %   | 88.85 % |
-| Ocropus (default en-model)    |     | 87.33 % | 
-| Ocropus  (trained)   |  98,67 %   |  | 
-| Tesseract  |  98,79 %   | 96.59 % |
-| MSA        |  99,19 %   | 96.73 % |
+| Abbyy      |  99,35 %   | 98,46 % |
+| Ocropus (default en-model)    |     | 92,49 % | 
+| Ocropus  (trained)   |  98,76 %   |  | 
+| Tesseract  |  99,00 %   | 98,23 % |
+| MSA        |  99,60 %   | 98,65 % |
 
 
 You can find the AKF-II result in [docs/results][result-akf-link].
@@ -192,7 +192,28 @@ To perform a visual comparision:
 
 The result are stored in ./Testfiles/tableparser_output/
 
-Originally written by Johannes Stegmüller and Jan Kamlah.
+Copyright and License
+--------
+
+Copyright (c) 2017 Universitätsbibliothek Mannheim
+
+Author: 
+ * [Jan Kamlah](https://github.com/jkamlah)
+ * [Johannes Stegmüller](https://github.com/Hyper-Node) 
+
+**ocromore** is Free Software. You may use it under the terms of the Apache 2.0 License.
+See [LICENSE](./LICENSE) for details.
+
+
+Acknowledgements
+-------
+
+The tools are depending on some third party libraries:
+ * [hocr-parser][hocr-parser-link] parses hocr files into a dictionary structure.
+    Originally written by [Athento][orig-hocr-parser-link].
+ * [ISRI Analytics Tool][isri-link] for measuring the performance of and experimenting with OCR output.
+ * [PySymSpell][pysymspell-link] a pure Python port of SymSpell. 
+    It is an optional submodule for the project (MIT License).
 
 [akf-link]:  https://github.com/UB-Mannheim/Aktienfuehrer-Datenarchiv-Tools "Aktienfuehrer-Datenarchiv-Tools"
 [dataarchive-link]: https://digi.bib.uni-mannheim.de/aktienfuehrer/ "Aktienfuehrer-Datenarchiv"
@@ -206,3 +227,4 @@ Originally written by Johannes Stegmüller and Jan Kamlah.
 [pycharm-link]: https://www.jetbrains.com/pycharm/ "PyCharm"
 [meld-link]: http://meldmerge.org/ "meld"
 [hocr-tools-link]: https://github.com/tmbdev/hocr-tools "hocr-tools"
+[pysymspell-link]: https://github.com/ne3x7/pysymspell "PySymSpell"

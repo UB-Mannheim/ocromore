@@ -36,47 +36,49 @@ for line in doc:
     lines_doc.append(line)
 
 
+try:
+    from pysymspell.symspell import SymSpell
 
-from pysymspell.symspell import SymSpell
+    initial_capacity = len(lines_doc)
+    max_edit_dist = 2
+    sym_spell = SymSpell(max_edit_dist)
 
+    sym_spell.create_dictionary_by_list(lines_doc)
 
-initial_capacity = len(lines_doc)
-max_edit_dist = 2
-sym_spell = SymSpell(max_edit_dist)
+    input_term = "Frankftr"
+    max_edit_distance_lookup = 2
+    suggenstion_verbosity = SymSpell.Verbosity.ALL
+    suggestions1 = sym_spell.lookup("Frankftr", suggenstion_verbosity, max_edit_distance_lookup)
+    suggestions2 = sym_spell.lookup("Hulahu", suggenstion_verbosity, max_edit_distance_lookup)
+    suggestions3 = sym_spell.lookup("Ausrichtsrat", suggenstion_verbosity, max_edit_distance_lookup)
+    suggestions4 = sym_spell.lookup("BASV", suggenstion_verbosity, max_edit_distance_lookup)
 
-sym_spell.create_dictionary_by_list(lines_doc)
+    USE_TOKENIZE = False
+    if USE_TOKENIZE:
+        freq = nltk.FreqDist(lines_doc)  # alt way to get word frequencies
 
-input_term = "Frankftr"
-max_edit_distance_lookup = 2
-suggenstion_verbosity = SymSpell.Verbosity.ALL
-suggestions1 = sym_spell.lookup("Frankftr",suggenstion_verbosity,max_edit_distance_lookup)
-suggestions2 = sym_spell.lookup("Hulahu",suggenstion_verbosity,max_edit_distance_lookup)
-suggestions3 = sym_spell.lookup("Ausrichtsrat",suggenstion_verbosity,max_edit_distance_lookup)
-suggestions4 = sym_spell.lookup("BASV",suggenstion_verbosity,max_edit_distance_lookup)
+        tokenizer = keras.preprocessing.text.Tokenizer(num_words=None, filters='',
+                                                       lower=False, split=' ', char_level=False, oov_token=None)
 
+        tokenizer.fit_on_texts(lines_doc)
+        print("Overall length:", len(tokenizer.word_counts))
 
+        # print lines in ordered way
+        for item in tokenizer.word_index:
+            # index = tokenizer.word_index[item]
+            count = tokenizer.word_counts[item]
+            print(item, ":", count)
 
-USE_TOKENIZE = False
-if USE_TOKENIZE:
-    freq = nltk.FreqDist(lines_doc) #alt way to get word frequencies
+        # for x in range(0, len(tokenizer.word_counts)):
+        #    last = tokenizer.word_counts.popitem()
+        #    print(last)
+        print(json.dumps(tokenizer.word_counts, indent=4))
+except Exception as e:
+    print(
+        "To use the vocabulary checker you must pull PySymSpell from GitHub in the directory (AWARE: MIT License)"
+        "by activate and initalize the submodule (delete the comment symbol: #):\n"
+        ".gitmodule at line: 1-3")
 
-    tokenizer = keras.preprocessing.text.Tokenizer(num_words=None, filters='',
-                                       lower=False, split=' ', char_level=False, oov_token=None)
-
-
-    tokenizer.fit_on_texts(lines_doc)
-    print("Overall length:",len(tokenizer.word_counts))
-
-    # print lines in ordered way
-    for item in tokenizer.word_index:
-        # index = tokenizer.word_index[item]
-        count = tokenizer.word_counts[item]
-        print(item, ":", count)
-
-    #for x in range(0, len(tokenizer.word_counts)):
-    #    last = tokenizer.word_counts.popitem()
-    #    print(last)
-    print(json.dumps(tokenizer.word_counts, indent=4))
 
 # http://norvig.com/spell-correct.html
 import re

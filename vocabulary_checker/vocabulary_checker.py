@@ -1,4 +1,4 @@
-from pysymspell.symspell import SymSpell
+
 from configuration.configuration_handler import ConfigurationHandler
 from akf_corelib.conditional_print import ConditionalPrint
 import numpy as np
@@ -16,7 +16,7 @@ class VocabularyChecker():
         self.dict_lines = []
         self.max_edist = None
         self.suggenstion_verbosity = None
-        self.spellchecker = None
+        #self.spellchecker = None
         self.special_chars_borders = "!¦1234567890,)(;.:\"-"
 
         self.pattern_start = re.compile(r"^["+self.special_chars_borders+"]+")
@@ -131,20 +131,28 @@ class VocabularyChecker():
         return lines_doc
 
     def initialize_spellchecker(self):
-        if self.dict_lines == None:
-            self.cpr.printw("can't initialize spellchecker, please first call initialize_lines")
-            return
+        try:
+            from pysymspell.symspell import SymSpell
+            if self.dict_lines == None:
+                self.cpr.printw("can't initialize spellchecker, please first call initialize_lines")
+                return
 
-        # set paramters
-        self.max_edist = self.config.KEYING_RESULT_VC_EDIT_DISTANCE_LEVEL
-        self.suggenstion_verbosity = SymSpell.Verbosity.CLOSEST
+            # set paramters
+            self.max_edist = self.config.KEYING_RESULT_VC_EDIT_DISTANCE_LEVEL
+            self.suggenstion_verbosity = SymSpell.Verbosity.CLOSEST
 
-        # initialize symspell as spellchecker
-        sym_spell = SymSpell(self.max_edist)
+            # initialize symspell as spellchecker
+            sym_spell = SymSpell(self.max_edist)
 
-        # load dictionary to spellchecker
-        sym_spell.create_dictionary_by_list(self.dict_lines)
-        self.spellchecker = sym_spell
+            # load dictionary to spellchecker
+            sym_spell.create_dictionary_by_list(self.dict_lines)
+            self.spellchecker = sym_spell
+        except:
+            print(
+                "To use the vocabulary checker you must pull PySymSpell from GitHub in the directory (AWARE: MIT License)"
+                "by activate and initalize the submodule (delete the comment symbol: #):\n"
+                ".gitmodule at line: 1-3")
+
 
     def correct_text_at_certain_indices_only(self, input_text, possible_error_indices):
 

@@ -21,14 +21,18 @@ class TableParser(object):
 
         self.vocab_checker = None
         if config.KEYING_RESULT_VOCABULARY_CORRECTION_POST or config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE:
-            # initialize spellchecker, if one of the vote modes is active
-            self.vocab_checker = VocabularyChecker()
-            self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH,
-                                                config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
-            self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH_2,
+            try:
+                # initialize spellchecker, if one of the vote modes is active
+                self.vocab_checker = VocabularyChecker()
+                self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH,
                                                     config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
+                self.vocab_checker.initialize_lines(config.KEYING_RESULT_VC_DICT_PATH_2,
+                                                        config.KEYING_RESULT_VC_DICT_REMOVE_SPECIAL_BORDER_CHARS)
 
-            self.vocab_checker.initialize_spellchecker()
+                self.vocab_checker.initialize_spellchecker()
+            except Exception as e:
+                config.KEYING_RESULT_VOCABULARY_CORRECTION_POST = False
+                config.KEYING_RESULT_VOCABULARY_CORRECTION_VOTE = False
 
         self._base_db_dir = os.path.basename(os.path.normpath(dbpath))
 

@@ -1,12 +1,12 @@
-[submodule "pysymspell"]
-	path = pysymspell
-	url = https://github.com/Hyper-Node/pysymspell
+#[submodule "pysymspell"]
+#	path = pysymspell
+#	url = https://github.com/Hyper-Node/pysymspell
 [submodule "isri-ocr-evaluation-tools"]
 	path = isri-ocr-evaluation-tools
 	url = https://github.com/eddieantonio/isri-ocr-evaluation-tools
 [submodule "hocr_parser"]
 	path = hocr_parser
-	url = https://github.com/Hyper-Node/hocr_parser.git
+	url = https://github.com/UB-Mannheim/hocr_parser
 [submodule "akf_corelib"]
 	path = akf_corelib
-	url = https://github.com/Hyper-Node/akf_corelib
+	url = https://github.com/UB-Mannheim/akf_corelib
