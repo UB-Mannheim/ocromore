@@ -1,4 +1,3 @@
-from multi_sequence_alignment.msa_algorithm import MultiSequenceAlignment
 import inspect
 from Bio import pairwise2
 from n_dist_keying.ocr_voter import OCRVoter
@@ -59,32 +58,6 @@ class MsaHandler(object):
     def add_vocabulary_checker(self, vocab_checker):
         self.vocab_checker = vocab_checker
         self.ocr_voter.add_vocab_checker(vocab_checker)
-
-    def compare(self, item_one, item_two, wildcard_character='¦'):
-        sequences1 = [item_one]
-        sequences2 = [item_two]
-
-        sSequences1, sSequences2 = MultiSequenceAlignment.msa(sequences1, sequences2)
-        """
-        for i in range(len(sSequences1)):
-            s1 = ''.join(['-' if element == '' else element \
-                          for element in sSequences1[i]])
-            s2 = ''.join(['-' if element == '' else element \
-                          for element in sSequences2[i]])
-
-            self.cpr.print(s1)
-            self.cpr.print(s2)
-            self.cpr.print()
-        """
-        s1 = ''.join([wildcard_character if element == '' else element \
-                      for element in sSequences1[0]])
-        s2 = ''.join([wildcard_character if element == '' else element \
-                      for element in sSequences2[0]])
-
-        return s1, s2
-
-
-
 
     def reduce_double_wildcards(self, line_1, line_2, wildcard_character='¦'):
         list_line_1 = list(line_1)
@@ -180,66 +153,6 @@ class MsaHandler(object):
             line_filled = Random.append_pad_values(line_filled, length_diff, wildcard_character)
 
         return line_filled
-
-
-
-    def msa_alignment_gonzalo(self, text_1, text_2, text_3):
-        # list_one = list('1. Wie funktioniert der Algorithmus')
-        # list_two = list('2. Wie funktioniert hier der Algorithmus')  # this is the pivot element
-        # list_three = list('3. Wie der Algorithmus')
-
-        #text_1 = "had I expressed the agony I frequentl felt he would have been taught to long for its alleviation"
-        #text_2 = "had I sed the agony I fefjuently felt he would have been to long for its alleviafcion"
-        #text_3 = "had I expressed tbe agony I frequently felt he would have been taught to long for its alleviation"
-
-        list_one = list(text_1)
-        list_two = list(text_2)  # this is the pivot element
-        list_three = list(text_3)
-
-        res_one_1, res_two_1 = self.compare(list_one, list_two)
-
-
-        res_two_2, res_three_2 = self.compare(list_two, list_three)
-
-        list_res_one_1 = list(res_one_1)
-        list_res_two_1 = list(res_two_1)
-
-        list_res_two_2 = list(res_two_2)
-        list_res_three_2 = list(res_three_2)
-
-        list_pivot_msa = None
-        pivot_msa = None
-        if len(list_res_two_1) >= len(list_res_two_2):
-        #if len(list_res_two_1) > len(list_res_two_2):
-            list_pivot_msa = list_res_two_1
-            pivot_msa = res_two_1
-        else:
-            list_pivot_msa = list_res_two_2
-            pivot_msa = res_two_2
-
-        self.cpr.print(len(res_one_1), res_one_1)
-        self.cpr.print(len(pivot_msa), pivot_msa)
-        self.cpr.print(len(res_three_2), res_three_2)
-        #if res_one_1.__contains__("Sitz:") is True:
-        #    self.cpr.print("asd")
-
-        res_one_1_filled = self.fillup_wildcarded_result(res_one_1, pivot_msa)
-        res_three_2_filled = self.fillup_wildcarded_result(res_three_2, pivot_msa)
-
-        res_final_1 = res_one_1_filled
-        res_final_2 = pivot_msa
-        # res_final_3 = res_three_2
-        res_final_3 = res_three_2_filled
-        """
-        res_final_1, holder1 = self.compare(list_res_one_1, list_pivot_msa)
-        res_final_2 = pivot_msa
-        res_final_3, holder2 = self.compare(list_res_three_2, list_pivot_msa)
-        """
-        #j4t
-        #rres_final_1, rholder1 = self.compare(list_pivot_msa, list_res_one_1)
-        #rres_final_2 = pivot_msa
-        #rres_final_3, rholder2 = self.compare( list_pivot_msa, list_res_three_2)
-        return res_final_1, res_final_2, res_final_3
 
 
     def msa_alignment_skbio(self, text_1, text_2, text_3):
@@ -822,15 +735,10 @@ class MsaHandler(object):
 
 
     def align_three_texts(self, text_1, text_2, text_3, wildcard_character = '¦', print_output=False):
-        MODE_GONZALO = 'gonzalo'
         MODE_SKBIO = 'scikit-bio_alignment'
         MODE_BIOPYTHON = 'biopython'
         MODE = MODE_BIOPYTHON
-
-        if MODE == MODE_GONZALO:
-            res_final_1, res_final_2, res_final_3 = self.msa_alignment_gonzalo(text_1, text_2, text_3)
-
-        elif MODE == MODE_SKBIO:
+        if MODE == MODE_SKBIO:
             res_final_1, res_final_2, res_final_3 = self.msa_alignment_skbio(text_1, text_2, text_3)
         elif MODE == MODE_BIOPYTHON:
             res_final_1, res_final_2, res_final_3 = self.msa_alignment_biopython(text_1, text_2, text_3, wildcard_character, print_output)
