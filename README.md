@@ -228,3 +228,5 @@ The tools are depending on some third party libraries:
 [meld-link]: http://meldmerge.org/ "meld"
 [hocr-tools-link]: https://github.com/tmbdev/hocr-tools "hocr-tools"
 [pysymspell-link]: https://github.com/ne3x7/pysymspell "PySymSpell"
+[hocr-parser-link]: https://github.com/UB-Mannheim/hocr-parser "hocr-parser"
+[orig-hocr-parser-link]: athento/hocr-parser "Athento's hocr-parser"
