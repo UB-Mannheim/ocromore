@@ -1,7 +1,11 @@
 # ![ocromore](./docs/img/ocromore_logo.png "ocromore")
 
-![license](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)
+![license](https://img.shields.io/badge/License-GPLv3-blue.svg)
 [![Docker Automated build](https://img.shields.io/docker/automated/ubma/ocropy.svg?maxAge=86400)](https://hub.docker.com/r/ubma/ocromore/)
+
+## AWARE: GPLv3 License
+This branch depends on some third library with GPL license.
+So this whole branch is under a GPLv3 license.
 
 ## Overview
 
