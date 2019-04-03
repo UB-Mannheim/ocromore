@@ -197,9 +197,9 @@ Copyright and License
 
 Copyright (c) 2017 Universitätsbibliothek Mannheim
 
-Author: 
- * [Jan Kamlah](https://github.com/jkamlah)
+Author:
  * [Johannes Stegmüller](https://github.com/Hyper-Node) 
+ * [Jan Kamlah](https://github.com/jkamlah)
 
 **ocromore** is Free Software. You may use it under the terms of the Apache 2.0 License.
 See [LICENSE](./LICENSE) for details.
