@@ -9,4 +9,4 @@
 	url = https://github.com/UB-Mannheim/hocr_parser
 [submodule "akf_corelib"]
 	path = akf_corelib
-	url = https://github.com/UB-Mannheim/akf_corelib
+	url = https://github.com/UB-Mannheim/akf-corelib
