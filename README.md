@@ -69,6 +69,7 @@ work for other similar environments similarly.
 ```
 git clone https://github.com/UB-Mannheim/ocromore.git
 cd ocromore
+git submodule update --init --recursive
 ```
 
 ### 3. Dependencies can be installed into a Python Virtual Environment:
@@ -84,6 +85,7 @@ If you want to use the CLI commands under windows we recommend to use the docker
 ```sh
 git clone https://github.com/UB-Mannheim/ocromore.git
 cd ocromore
+git submodule update --init --recursive
 
 # build it yourself
 docker build -t ocromore .
