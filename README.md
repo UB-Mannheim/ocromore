@@ -156,7 +156,7 @@ The ISRI Tools are necessary for the evaluation, but not for the combine process
 
 ### Example
 First of all you have to adjust the config-files.
-There are two main config-files in "./configuartion/":
+There are two main config-files in "./configuration/":
    + to_db_reader
         + path to ocr ocr-files (e.g. hocr)
         + parameter for parsing hocr to db
