@@ -12,7 +12,7 @@ lxml==4.1.1
 meld
 pandas==0.22.0
 pathlib==1.0.1
-Pillow==4.3.0
+Pillow==10.3.0
 regex==2017.4.5
 scikit-bio==0.5.1
 scikit-learn==0.19.1
